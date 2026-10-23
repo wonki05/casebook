@@ -4980,6 +4980,32 @@
    "caseNumberId": "2021da303134",
    "caseId": "sc-2021da303134",
    "decisionId": "sc-2021da303134-20220414-judgment"
+  },
+  {
+   "id": "annual-2022-124",
+   "group": "annual",
+   "subject": "civil",
+   "title": "사전처분 과태료재판과 신청인의 즉시항고",
+   "court": "대법원",
+   "caseNumber": "2021정스502",
+   "lookupKey": "2021정스502",
+   "decisionDate": "2022-01-04",
+   "enBanc": false,
+   "tocPath": [],
+   "tags": [],
+   "result": "",
+   "editorial": {},
+   "annual": {
+    "year": 2022,
+    "field": "family",
+    "article": "[2022년 분야별 중요판례분석] (6) 친족법",
+    "url": "https://www.lawtimes.co.kr/news/articleView.html?idxno=186394"
+   },
+   "decisionType": "결정",
+   "courtId": "sc",
+   "caseNumberId": "2021x00c81500c2a4z502",
+   "caseId": "sc-2021x00c81500c2a4z502",
+   "decisionId": "sc-2021x00c81500c2a4z502-20220104-decision"
   }
  ],
  "identityAliases": {
