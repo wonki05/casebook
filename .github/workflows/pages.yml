@@ -44,6 +44,14 @@ jobs:
         run: |
           node tools/test_fulltext.cjs output/casebook.html
           node --test tools/test_web_data.cjs
+      - name: Upload browser screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: casebook-browser-checks
+          path: shots/web-*.png
+          if-no-files-found: ignore
+          retention-days: 14
       - name: Upload offline HTML
         uses: actions/upload-artifact@v4
         with:

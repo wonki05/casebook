@@ -6,6 +6,7 @@ import argparse
 import copy
 import io
 import json
+import sys
 from pathlib import Path
 import tempfile
 import unittest
@@ -143,7 +144,8 @@ class CliAndBuildTests(unittest.TestCase):
                  'lawgo':{'kind':'prec','seq':'123'},'decisionType':'판결','standardSource':source}
             ]}, ensure_ascii=False),encoding='utf-8')
             with patch.multiple(add_cases, REG=str(reg), TOC=str(toc), FETCHED=str(fetched)), redirect_stdout(io.StringIO()):
-                add_cases.cmd_add(argparse.Namespace(from_file=str(candidate), group=None, subject=None))
+                with patch.object(sys, 'argv', ['add_cases.py', 'add', '--from', str(candidate)]):
+                    add_cases.main()
             result = json.loads(reg.read_text(encoding='utf-8'))['cases'][0]
             self.assertEqual(result['lawgo']['seq'], '123')
             self.assertEqual(result['standardSource'], source)
