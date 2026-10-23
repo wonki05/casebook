@@ -61,7 +61,7 @@ async def check_fulltext(page, item, full):
                    if len(normalized(block.get('text', ''))) >= 80)[:80]
     require(passage in actual, f'Wrong or missing official text for {item["id"]}')
 
-async def test_reader(browser, base, data, item, full):
+async def test_reader(browser, base, data, laws, item, full):
     context = await browser.new_context(viewport={'width': 1280, 'height': 900},
                                         accept_downloads=True, locale='ko-KR')
     await context.route('https://fonts.googleapis.com/**', block_fonts)
@@ -108,6 +108,8 @@ async def test_reader(browser, base, data, item, full):
     require(stored.get(item['decisionId']) == changed_note, 'Notes are not keyed by stable decision ID')
     require(stored.get(unknown_id) == '미분류 기록', 'Unknown note was discarded')
     require(await page.locator('#btnBmCase').get_attribute('aria-pressed') == 'true', 'Legacy bookmark not restored')
+    await page.locator('#btnCsClose').click()
+    await page.wait_for_function('!document.querySelector("#cs").classList.contains("show")')
     await page.locator('#btnSet').click()
     async with page.expect_download() as download_info:
         await page.locator('[data-personal-export]').click()
@@ -152,7 +154,20 @@ async def test_reader(browser, base, data, item, full):
     await check_fulltext(page, item, full)
     await page.evaluate('location.hash = "#/laws/civil-code"')
     await page.wait_for_selector('.lw-art', timeout=15000)
-    require(await page.locator('.lw-art').count() > 1000, 'Offline Civil Code did not load completely')
+    offline_laws = await page.evaluate('window.CasebookData.loadLaws()')
+    require(offline_laws == laws, 'Offline laws differ from the complete verified data package')
+    civil = next(law for law in laws['laws'] if law['id'] == 'civil-code')
+    distant_article = next(article for article in civil['articles'] if article['no'] == '제1100조')
+    # The reader appends articles in chunks; navigation must reveal a distant article.
+    await page.locator('.lw-goto').fill('1100')
+    await page.locator('.lw-goto').press('Enter')
+    target = page.locator('#civil-code-art-1100.hit')
+    await target.wait_for(state='visible')
+    displayed = normalized(await target.locator('.lw-art-b').inner_text())
+    require(all(normalized(text) in displayed for _, text in distant_article['b'] if text),
+            'Offline distant article content differs from the verified Civil Code')
+    require(await target.evaluate('(el) => { const r = el.getBoundingClientRect(); return r.top < innerHeight && r.bottom > 0; }'),
+            'Offline article navigation did not scroll the selected article into view')
     require(await page.evaluate('localStorage.getItem("lawbook:notes")') == personal_before,
             'Data cache operation changed personal notes')
     require(not page_errors, 'Offline runtime exceptions: ' + repr(page_errors))
@@ -218,6 +233,8 @@ async def test_mobile(browser, base, item):
     require(await page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'),
             'Mobile reader overflows horizontally')
     await page.screenshot(path=str(ROOT / 'shots' / 'web-mobile.png'))
+    await page.locator('#btnCsClose').click()
+    await page.wait_for_function('!document.querySelector("#cs").classList.contains("show")')
     await page.locator('#btnSet').click()
     await page.wait_for_selector('[data-download-offline]')
     require(await page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'),
@@ -258,7 +275,7 @@ async def run():
             print('webcheck: launching browser', flush=True)
             browser = await asyncio.wait_for(launch_chromium(p), timeout=40)
             try:
-                report.update(await asyncio.wait_for(test_reader(browser, base, data, item, full), timeout=150))
+                report.update(await asyncio.wait_for(test_reader(browser, base, data, laws, item, full), timeout=150))
                 report.update(await asyncio.wait_for(test_update_failures(browser, base, manifest), timeout=90))
                 report.update(await asyncio.wait_for(test_mobile(browser, base, item), timeout=45))
             finally:
