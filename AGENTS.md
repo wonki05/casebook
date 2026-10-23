@@ -46,6 +46,7 @@ cases.json + laws.json + 공통 화면 ── build_web.py ─► output/web/ �
 
 ## 작업 레시피
 ### A. 표준판례를 PDF 에서 채우기 (헌법·행정법·민법·형법·상법 각 과목 페이지)
+- 다섯 PDF 전체를 일괄 전사·검증·등록하는 분업 절차(스크립트 뼈대 → 하위 모델 전사 → 스크립트 대조 → 상위 모델 판정 → `add_cases.py`)는 `spec/TASK-pdf2md.md`(작업 지시서) 와 `spec/PIPELINE-pdf2md.md`(설계) 를 따른다. Claude Code·Codex 어느 쪽이든 같은 문서로 진행하며, 아래 1~7 은 소량·수동 작업 절차다.
 1. PDF 원본은 `data/standard-cases/표준판례(2023년 개정판)_<과목>.pdf` 다(법학전문대학원협의회 발행본 5건이 이미 있다. 다른 판본은 `data/inbox/standard_pdf/` 에 둔다). 과목별 폴더 `data/standard-cases/<과목>/` 는 PDF 를 Markdown 으로 옮긴 중간 산출물 자리다(비어 있어도 된다).
 2. `python3 tools/pdf_standard_cases.py "data/standard-cases/표준판례(2023년 개정판)_상법.pdf" [--subject commercial]`
    → 같은 폴더에 `candidates-<subject>.json` (사건번호·선고일·법원·전원합의체 여부·주변 목차 문맥·표 행). `--subject` 를 생략하면 파일명의 한글 과목명으로 추정한다(id 또는 한글명 모두 허용).

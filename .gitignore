@@ -10,7 +10,8 @@ ouput/
 tmp/
 shots/
 data/inbox/
-data/standard-cases/
+data/standard-cases/*
+!data/standard-cases/*/
 data/cases.json
 data/laws.json
 .env
@@ -20,3 +21,6 @@ data/laws.json
 
 # 병렬 작업용 git worktree (법률신문 연도별 수집 등)
 .worktrees/
+data/standard-cases/*/pages/
+data/standard-cases/*/chunks/
+data/standard-cases/*/md/_prompts/
