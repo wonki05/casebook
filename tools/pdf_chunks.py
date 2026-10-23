@@ -415,9 +415,17 @@ def main():
     if not entries:
         raise SystemExit('항목을 하나도 찾지 못했습니다')
     # 항목 쪽 범위: 다음 항목 시작 쪽까지(같은 쪽이면 한 쪽)
+    def body_end_after(start):
+        end = start
+        for q in range(start + 1, min(npages, start + 6) + 1):
+            lines_q = lines_by_page[q - 1]
+            if not lines_q or is_toc_page(lines_q) or any(re.fullmatch(r'(판례\s*)?(색\s*인|차\s*례)', l) for l in lines_q[:3]):
+                break
+            end = q
+        return end
     for i, e in enumerate(entries):
         start = e['pdfPages'][0]
-        end = entries[i + 1]['pdfPages'][0] if i + 1 < len(entries) else start
+        end = entries[i + 1]['pdfPages'][0] if i + 1 < len(entries) else body_end_after(start)
         e['pdfPages'] = list(range(start, max(start, end) + 1))
 
     # ---- 제안 목차(기존 toc.json 과 안 맞는 과목용): 머리글 로그에서 편›장›절 트리
@@ -487,6 +495,9 @@ def main():
         if best:
             cut = best
         chunks.append([p, cut]); p = cut + 1
+    import glob as _g
+    for stale in _g.glob(os.path.join(out_dir, 'chunks', 'c*.txt')):
+        os.remove(stale)        # 이전 실행의 청크 파일(쪽 범위가 달라진 것)을 치운다
     for i, (s, e) in enumerate(chunks, 1):
         cid = f'c{i:03d}'
         exp = [x for x in entries if s <= x['pdfPages'][0] <= e]
