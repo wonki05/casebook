@@ -33,6 +33,7 @@ cases.json + laws.json + 공통 화면 ── build_web.py ─► output/web/ �
 - 예: 기본 사건 ID `sc-2022do5937`, 개별 재판 ID `sc-2022do5937-20260722-judgment`. `group`, 과목, 연도별 기사 분야는 페이지 배치 속성이며 재판의 정체성을 결정하지 않는다.
 - 병합사건은 표시용 전체 사건번호를 보존하고 검증된 대표 사건번호를 기본 ID에 쓴다. 표기 순서만 바뀐 병합사건·중복 배치는 공식 일련번호 및 날짜·법원·유형을 함께 대조한다. 자동 재번호 부여나 공식 ID만을 근거로 하는 무조건 병합은 금지한다.
 - 기존 등록부의 식별 필드 보완은 `python tools/add_cases.py migrate-identities` 로 수행한다. 신규·수정 등록은 `--court` 와 `--decision-type` 을 명시하고 후보의 `lawgo`·`standardSource` 를 보존한다.
+- 기존 사건의 과목은 `python tools/add_cases.py set <id> --subject <subject>` 로 바꾼다. `id`·`caseId`·`decisionId`·공식 수집 파일과 출처는 유지한다. 표준판례를 다른 과목으로 옮길 때는 대상 과목의 유효한 `--toc` 경로도 함께 지정한다. 법률신문 판례는 `--field` 와 과목이 일치해야 하며, 분야만 바꾸면 과목도 해당 분야에 맞춰진다.
 - 표준판례 출처 필드를 생략하면 다음 출처로 보충하지만, 검증된 빈 배열 `[]` 을 명시하면 그 필드는 비워 둔다. 쪽수는 PDF 기준 1부터 시작하는 정수다. 서로 다른 검증 출처의 동일 필드가 충돌하면 임의로 하나를 고르지 않는다.
 - 기존 `id` 는 페이지 배치·이전 링크·수집 파일명의 호환 키다. 기존 `id`, `fetched/<id>.json`, 링크를 일괄 이름 변경하지 않는다. 개인 메모·북마크는 `decisionId` 로 연결하며 기존 ID 매핑과 내보내기·가져오기로 이전한다. 충돌하는 메모나 알 수 없는 ID의 기록도 버리지 않는다.
 
@@ -86,6 +87,10 @@ cases.json + laws.json + 공통 화면 ── build_web.py ─► output/web/ �
 - 표준판례로 등록하는 전원합의체 판결은 `--enbanc` 를 붙인다(`set <id> --enbanc yes|no` 로 고칠 수 있다).
 - 병합사건은 `--case "2023헌바274·351"` 처럼 표시용 번호를 주면 조회는 첫 번호로 한다.
 - 출처: 대법원 판례속보(https://www.scourt.go.kr → 판례속보), 헌법재판소 최근 주요결정(https://www.ccourt.go.kr → 최근 주요결정). 선고 직후에는 law.go.kr 미게재일 수 있다 → 등록해 두고 나중에 재시도.
+- 헌법재판소 주요결정·대법원 전원합의체 페이지는 과목 칩(**전체분야**·헌법·행정법·민법·형법·상법) 아래 **선고연도 탭**(**전체연도** + 최신 → 과거; 여러 개를 함께 고를 수 있고, 넓은 화면은 줄바꿈·좁은 화면은 가로로 민다)으로 고른다. 칩 필터는 결정·판결의 과목(`--subject`)을 쓴다.
+  - 헌법재판소: 2026 → 2010 한 해씩(`tools/subjects.py` 의 `CCOURT_YEARS`, 현재 2010–2026).
+  - 전원합의체(건국 후 전부 수록 예정): 2026 → 2020 은 한 해씩(`ENBANC_YEARS`, 현재 2020–2026), 그 앞은 2010년대 · 2000년대 · … · 1940년대 10년 단위(`ENBANC_FROM` = 1948 이 든 연대까지).
+  - 탭은 build_data.py 가 `cases.json` 의 `yearTabs` 로 만들며, 등록부 선고일이 범위 밖이면 그쪽으로 넓힌다(전원합의체의 과거 쪽은 연대 탭으로).
 
 ### D. 법령 추가·갱신 (주요법령 페이지)
 - legalize-kr 형식 Markdown(법제처 국가법령정보 미러)을 `data/laws_md/` 에 넣고 `tools/build_laws.py` 의 `LAW_INDEX` 에 (파일명, id, 그룹, 약칭) 추가 → `make laws build check`.
@@ -107,6 +112,7 @@ cases.json + laws.json + 공통 화면 ── build_web.py ─► output/web/ �
 - `make check` 결과의 `errors`(Google Fonts 차단 외) 0, `overflow` 0, `empty` 0, laws 항목 정상.
 - 새 표준판례는 해당 과목 페이지의 목차 아래 보여야 하고(목차 미지정 사건은 "목차 미지정"으로 모임), 인용표시가 `대법원 … 선고 … 판결` 형식으로 나와야 한다.
 - 새 법률신문 판례는 그 연도 버튼을 눌렀을 때 해당 분야 아래 보여야 한다(분야를 정하지 못한 사건은 "분야 미지정"으로 모이고 build_data.py 가 WARN 을 낸다). `make check` 결과의 `annual` 항목(연도·필터·찾기 동작, 오류 없음)도 확인한다.
+- 새 헌법재판소 결정·전원합의체 판례는 그 선고연도 탭(또는 전체연도)을 눌렀을 때 보여야 한다. `make check` 결과의 `ccourt`·`enbanc` 항목(전체연도·연도 탭·과목 칩 동작, 오류 없음)도 확인한다.
 - 화면 확인이 필요하면 `python3 tools/shot_case.py output/casebook.html <page> <caseId> shots/x` 로 스크린샷을 찍어 본다(page: std-constitution | std-administrative | std-civil | std-criminal | std-commercial | annual | enbanc | ccourt).
 
 ## 파일 안내

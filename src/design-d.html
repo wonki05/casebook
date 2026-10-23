@@ -121,6 +121,9 @@ mark.cur{outline:2px solid var(--accent)}
 .astat b{font-weight:600;color:var(--ink-2)}
 .astat .lk{font:500 12.5px/1.6 var(--sans);color:var(--accent-ink);text-decoration:underline;text-underline-offset:3px}
 .annual-note{margin:18px 0 0;padding:16px 18px;border:1px dashed var(--rule-2);border-radius:10px;color:var(--ink-2);font-size:14px}
+/* 헌법재판소 주요결정·대법원 전원합의체: 과목 칩 아래 선고연도 탭(전체연도 + 연도·연대 여러 개 선택) — 넓은 화면은 줄바꿈, 좁은 화면은 가로로 밀기 */
+.ytabs{display:flex;align-items:flex-start;gap:6px;margin:10px 0 0}
+@media(min-width:600px){.years.wrap{flex-wrap:wrap;overflow:visible;-webkit-mask-image:none;mask-image:none}}
 
 /* book-style table of contents (in column) */
 .toc{margin:14px 0 0}
@@ -344,6 +347,7 @@ body.cs-drag{user-select:none;-webkit-user-select:none;cursor:col-resize}
 .panel .entry .m{font-size:12px}
 .panel .laws-nav{padding:4px 4px 0}
 .panel .years{margin:12px 2px 4px}
+.panel .ytabs{margin:12px 2px 4px}.panel .ytabs .years{margin:0}
 
 /* overlays: search & settings */
 .ov{position:fixed;inset:0;z-index:90;display:none}
@@ -392,7 +396,7 @@ body.cs-drag{user-select:none;-webkit-user-select:none;cursor:col-resize}
 .toast{position:fixed;left:50%;bottom:calc(28px + env(safe-area-inset-bottom));transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:999px;font:500 13.5px var(--sans);opacity:0;transition:.2s;z-index:120;pointer-events:none;white-space:nowrap}
 .toast.show{opacity:1;transform:translateX(-50%)}
 @media print{
-  body::before,.topbar,.panel,.scrim,.ov,.tabs,.pn,.bluelight,.toast,.progress,.findbar,.cite .acts,.cs-bar,.cs .bg,.laws-top,.outline,.outline-btn,.cs-handle,.abar,.afilter{display:none!important}
+  body::before,.topbar,.panel,.scrim,.ov,.tabs,.pn,.bluelight,.toast,.progress,.findbar,.cite .acts,.cs-bar,.cs .bg,.laws-top,.outline,.outline-btn,.cs-handle,.abar,.afilter,.ytabs{display:none!important}
   .ft,.lw-text{transform:none;width:auto}
   body,body.cs-open{background:#fff;color:#000;overflow:visible}
   .column{max-width:none;padding:0}
@@ -785,6 +789,13 @@ const YEARS = AN.years || [], FIELDS = AN.fields || [];
 const fieldOf = id => FIELDS.find(f => f.id === id);
 const fieldName = f => !f ? '' : !f.sub ? f.label : f.sub.startsWith(f.label) ? f.sub : `${f.label} ${f.sub}`;
 const annualYear = c => (c.annual && c.annual.year) || +String(c.decisionDate).slice(0, 4);
+/* 헌법재판소 주요결정·대법원 전원합의체: 과목 칩 아래 선고연도 탭 [{id, label, from, to}] (최신 → 과거; tools/subjects.py 의 CCOURT_YEARS·ENBANC_YEARS) */
+const YTABS = DATA.yearTabs || {};
+const tabsOf = page => YTABS[page] || [];
+const decisionYear = c => +String(c.decisionDate).slice(0, 4);
+const tabOf = (page, y) => tabsOf(page).find(t => y >= t.from && y <= t.to);
+const tabName = t => t.from === t.to ? `${t.from}년` : t.label;
+const YNOUN = { ccourt: ['결정이', '결정은'], enbanc: ['판례가', '판례는'] };
 const NUMS = ['I','II','III','IV','V','VI','VII'];
 const MAXIMS = {
   'std-constitution': ['Fiat iustitia, ruat caelum.', '하늘이 무너져도 정의를 세우라'],
@@ -803,8 +814,8 @@ const PAGE_DESC = {
   'std-criminal': '법학전문대학원협의회 표준판례 — 형법 (편·장 목차 구성)',
   'std-commercial': '법학전문대학원협의회 표준판례 — 상법 (분야·편·장 목차 구성)',
   annual: `법률신문 「분야별 중요판례분석」 — 연도별 · 분야별 (${[...new Set(FIELDS.map(f => f.label))].join('·')})`,
-  enbanc: '대법원 전원합의체 판결',
-  ccourt: '헌법재판소 주요결정',
+  enbanc: '대법원 전원합의체 판결 — 분야별 · 선고연도별',
+  ccourt: '헌법재판소 주요결정 — 분야별 · 선고연도별',
   laws: '기본 법령 전문 — 헌법(개정이력 포함)·민사법·형사법·행정법·법원과 국회에 관한 법·경제법'
 };
 const load = (k, d) => { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } };
@@ -820,6 +831,7 @@ const S = {
   page: 'std-constitution', caseId: null, tab: 1, view: 'page',
   filter: { enbanc: 'all', ccourt: 'all' },
   annual: initAnnual(),
+  ytab: initYearTabs(),
   lawId: 'constitution', versionId: null,
   settings: Object.assign({ theme: 'auto', blue: 'off', font: 16, emblem: 50, sheetFull: false, sheetWidth: 0 }, load('lawbook:settings', {})),
   bookmarks: new Set(migratedPersonal.bookmarks),
@@ -931,6 +943,7 @@ function visibleCases(pageId) {
   let arr = CASES.filter(c => c.page === pageId);
   const f = S.filter[pageId];
   if (f && f !== 'all') arr = arr.filter(c => c.subject === f);
+  if (tabsOf(pageId).length) arr = arr.filter(c => yrOn(pageId, decisionYear(c)));
   return arr;
 }
 function tree(pageId) {
@@ -971,11 +984,16 @@ function tree(pageId) {
     if (rest.length) nodes.push(group('af-etc', '분야 미지정', '', rest));
     return nodes;
   }
-  const sorted = cases.slice().sort((a, b) => a.decisionDate < b.decisionDate ? 1 : -1);
+  const sorted = cases.slice().sort((a, b) => a.decisionDate < b.decisionDate ? 1 : a.decisionDate > b.decisionDate ? -1 : 0);
   const months = [];
   sorted.forEach(c => { const k = c.decisionDate.slice(0, 7); let m = months.find(x => x.id === k);
     if (!m) { m = { id: k, label: `${+k.slice(0, 4)}년 ${+k.slice(5, 7)}월`, cases: [], count: 0 }; months.push(m); } m.cases.push(c); m.count++; });
-  return months;
+  // 여러 해의 판례가 함께 보이면 선고연도 › 월로 묶는다
+  if (new Set(months.map(m => m.id.slice(0, 4))).size < 2) return months;
+  const years = [];
+  months.forEach(m => { const k = m.id.slice(0, 4); let y = years.find(x => x.id === k);
+    if (!y) { y = { id: k, label: `${+k}년`, cases: [], children: [], count: 0 }; years.push(y); } y.children.push(Object.assign(m, { label: `${+m.id.slice(5, 7)}월` })); y.count += m.count; });
+  return years;
 }
 function flatten(nodes, out = []) { nodes.forEach(n => { if (n.cases) out.push(...n.cases); if (n.children) flatten(n.children, out); }); return out; }
 function listFor() {
@@ -986,6 +1004,12 @@ function listFor() {
 function navList(c) {
   const l = listFor();
   if (S.view === 'bookmarks' || !c || l.some(x => x.id === c.id)) return l;
+  // 헌법재판소 주요결정·전원합의체: 고른 선고연도 탭의 판례(+ 지금 판례)만, 목록과 같은 최신순 — 이전/다음으로 꺼 둔 탭이 켜지지 않게
+  if (tabsOf(c.page).length) {
+    const visible = new Set(visibleCases(c.page).map(x => x.id));
+    return CASES.filter(x => x.page === c.page && (x.id === c.id || visible.has(x.id)))
+      .sort((a, b) => a.decisionDate < b.decisionDate ? 1 : a.decisionDate > b.decisionDate ? -1 : 0);
+  }
   if (c.page !== 'annual') return CASES.filter(x => x.page === c.page);
   // 주요판례: 고른 연도의 사건(+ 지금 사건)만, 목록과 같은 순서(분야 → 연도 → 선고일) — 이전/다음으로 꺼 둔 연도가 켜지지 않게
   const fi = id => { const i = FIELDS.findIndex(f => f.id === id); return i < 0 ? FIELDS.length : i; };
@@ -1023,13 +1047,16 @@ function treeHTML(pageId) {
     const node = n => `<details class="lv${Math.min(n.depth, 3)}${n.count ? '' : ' empty'}"${n.count ? ' open' : ''}><summary><span class="tri">▶</span><span>${esc(n.label)}</span><span class="lead"></span><span class="cnt">${n.count}</span></summary>${n.cases && n.cases.length ? entries(n.cases) : ''}${n.children && n.children.length ? n.children.map(node).join('') : (n.count ? '' : '<div class="empty-note">수록 예정</div>')}</details>`;
     return `<div class="toc">${nodes.map(node).join('')}</div>`;
   }
-  return `<div class="toc flat">${nodes.map(n => `<details class="lv1" open><summary><span class="tri">▶</span><span>${esc(n.label)}</span>${n.sub ? `<span class="cnt" style="min-width:0;text-align:left;color:var(--accent-ink)">${esc(n.sub)}</span>` : ''}<span class="lead"></span><span class="cnt">${n.count}</span></summary>${entries(n.cases)}</details>`).join('')}</div>`;
+  const nn = YNOUN[pageId];
+  if (nn && !nodes.length) return `<div class="annual-note">${CASES.some(c => c.page === pageId && yrOn(pageId, decisionYear(c))) ? `조건에 맞는 ${nn[0]} 없습니다.` : (S.ytab[pageId] || []).length ? `${esc(yrLabel(pageId))} ${nn[1]} 아직 수록되지 않았습니다.` : `아직 수록된 ${nn[0]} 없습니다.`}</div>`;
+  const month = m => `<details class="lv2" open><summary><span class="tri">▶</span><span>${esc(m.label)}</span><span class="lead"></span><span class="cnt">${m.count}</span></summary>${entries(m.cases)}</details>`;
+  return `<div class="toc flat">${nodes.map(n => `<details class="lv1" open><summary><span class="tri">▶</span><span>${esc(n.label)}</span>${n.sub ? `<span class="cnt" style="min-width:0;text-align:left;color:var(--accent-ink)">${esc(n.sub)}</span>` : ''}<span class="lead"></span><span class="cnt">${n.count}</span></summary>${n.children && n.children.length ? n.children.map(month).join('') : entries(n.cases)}</details>`).join('')}</div>`;
 }
 function chipsHTML(pageId) {
   if (pageId !== 'enbanc' && pageId !== 'ccourt') return '';
   const f = S.filter[pageId];
   const subs = SUBJ.filter(s => s.standard !== false || CASES.some(c => c.page === pageId && c.subject === s.id));   // 지식재산권법은 사건이 있을 때만
-  return `<div class="chips" role="group" aria-label="과목 필터"><button class="chip" data-filter="all" aria-pressed="${f === 'all'}">전체</button>${subs.map(s => `<button class="chip" data-filter="${s.id}" aria-pressed="${f === s.id}">${esc(s.label)}</button>`).join('')}</div>`;
+  return `<div class="chips" role="group" aria-label="과목 필터"><button class="chip" data-filter="all" aria-pressed="${f === 'all'}">전체분야</button>${subs.map(s => `<button class="chip" data-filter="${s.id}" aria-pressed="${f === s.id}">${esc(s.label)}</button>`).join('')}</div>`;
 }
 
 /* ---------- 법률신문 주요판례: 연도(여러 개 선택) · 필터 · 찾기 ---------- */
@@ -1044,7 +1071,7 @@ function initAnnual() {
 }
 function saveAnnual() { const A = S.annual; save('lawbook:annual', { years: A.years, fields: A.fields, court: A.court, enbanc: A.enbanc }); }
 const yearOn = y => !S.annual.years.length || S.annual.years.includes(y);
-const yearsLabel = () => { const sel = YEARS.filter(yearOn); return sel.length > 1 && sel.length === YEARS.length ? '전체 연도' : sel.map(y => y + '년').join(' · '); };
+const yearsLabel = () => { const sel = YEARS.filter(yearOn); return sel.length > 1 && sel.length === YEARS.length ? '전체연도' : sel.map(y => y + '년').join(' · '); };
 const annualTerms = () => S.annual.q.trim().toLowerCase().split(/\s+/).filter(Boolean);
 const annualFilterCount = () => S.annual.fields.length + (S.annual.court !== 'all' ? 1 : 0) + (S.annual.enbanc ? 1 : 0);
 const annualHay = new Map();
@@ -1069,7 +1096,7 @@ const yearsGroup = (id) => `<div class="years"${id ? ` id="${id}"` : ''} role="g
 function annualFilterHTML() {
   const A = S.annual;
   const ch = (attr, v, on, label) => `<button class="chip" ${attr}="${esc(v)}" aria-pressed="${on}">${label}</button>`;
-  return `<div class="fg"><div class="fl">분야</div><div class="chips" role="group" aria-label="분야 필터 (여러 개 선택 가능)">${ch('data-afield', 'all', !A.fields.length, '전체')}${FIELDS.map(f => ch('data-afield', f.id, A.fields.includes(f.id), esc(f.label) + (f.sub ? `<small>${esc(f.sub)}</small>` : ''))).join('')}</div></div>
+  return `<div class="fg"><div class="fl">분야</div><div class="chips" role="group" aria-label="분야 필터 (여러 개 선택 가능)">${ch('data-afield', 'all', !A.fields.length, '전체분야')}${FIELDS.map(f => ch('data-afield', f.id, A.fields.includes(f.id), esc(f.label) + (f.sub ? `<small>${esc(f.sub)}</small>` : ''))).join('')}</div></div>
     <div class="fg"><div class="fl">법원</div><div class="chips" role="group" aria-label="법원 필터">${[['all', '전체'], ['대법원', '대법원'], ['헌법재판소', '헌법재판소']].map(([v, l]) => ch('data-acourt', v, A.court === v, l)).join('')}</div></div>
     <div class="fg"><div class="fl">구분</div><div class="chips">${ch('data-aenbanc', '1', A.enbanc, '전원합의체 판결만')}</div></div>
     <div class="ffoot"><button class="abtn" data-areset>초기화</button><button class="abtn" id="btnAFilterClose">닫기</button></div>`;
@@ -1125,7 +1152,9 @@ function toggleYear(y, btn) {
   const A = S.annual, on = A.years.includes(y);
   if (on && A.years.length === 1) { toast('연도를 하나 이상 선택하세요'); return; }
   A.years = on ? A.years.filter(x => x !== y) : YEARS.filter(x => x === y || A.years.includes(x));
-  saveAnnual(); renderAnnual();
+  saveAnnual(); renderAnnual(); nudgeYear(btn);
+}
+function nudgeYear(btn) {
   const box = btn && btn.isConnected && btn.closest('.years');   // 좁은 화면: 반쯤 가려진 버튼을 누르면 보이게 민다
   if (box) { const r = btn.getBoundingClientRect(), o = box.getBoundingClientRect(); if (r.left < o.left) box.scrollBy({ left: r.left - o.left - 24, behavior: 'smooth' }); else if (r.right > o.right) box.scrollBy({ left: r.right - o.right + 24, behavior: 'smooth' }); }
 }
@@ -1147,13 +1176,60 @@ function ensureAnnualYear() {
   S.annual.years = YEARS.filter(x => x === y || S.annual.years.includes(x)); saveAnnual(); return true;
 }
 
+/* ---------- 헌법재판소 주요결정·대법원 전원합의체: 과목 칩 아래 선고연도 탭(여러 개 선택, 비우면 전체연도) ---------- */
+function initYearTabs() {
+  const out = {};
+  Object.keys(YTABS).forEach(page => {
+    const ids = tabsOf(page).map(t => t.id), st = load('lawbook:' + page, {}) || {};
+    let sel = Array.isArray(st.years) ? ids.filter(id => st.years.map(String).includes(id)) : null;   // 저장된 선택(빈 배열 = 전체연도)
+    if (!sel) { const has = new Set(CASES.filter(c => c.page === page).map(c => (tabOf(page, decisionYear(c)) || {}).id)); sel = [ids.find(id => has.has(id))].filter(Boolean); }   // 처음엔 수록된 최신 탭
+    out[page] = sel.length === ids.length ? [] : sel;
+  });
+  return out;
+}
+const saveYearTabs = page => save('lawbook:' + page, { years: S.ytab[page] });
+const yrOn = (page, y) => { const sel = S.ytab[page]; if (!sel || !sel.length) return true; const t = tabOf(page, y); return !!t && sel.includes(t.id); };
+const yrLabel = page => (S.ytab[page] || []).map(id => tabName(tabsOf(page).find(t => t.id === id))).join(' · ') || '전체연도';
+function yearTabsHTML(id) {
+  const page = S.page, sel = S.ytab[page] || [], cnt = {};
+  CASES.forEach(c => { if (c.page === page) { const t = tabOf(page, decisionYear(c)); if (t) cnt[t.id] = (cnt[t.id] || 0) + 1; } });
+  return `<div class="ytabs"${id ? ` id="${id}"` : ''} role="group" aria-label="선고연도 선택 (여러 개를 함께 고를 수 있습니다)"><button class="yr" data-ytab="all" aria-pressed="${!sel.length}">전체연도</button><div class="years wrap">${tabsOf(page).map(t => `<button class="yr${cnt[t.id] ? '' : ' none'}" data-ytab="${esc(t.id)}" aria-pressed="${sel.includes(t.id)}" title="${t.from === t.to ? t.from : `${t.from}–${t.to}`}년 · ${cnt[t.id] ? cnt[t.id] + '건' : '수록 예정'}">${esc(t.label)}</button>`).join('')}</div></div>`;
+}
+/* 탭을 누르면 그 연도(연대)만 → 더 누르면 함께 표시, 모두 끄거나 모두 켜면 전체연도 */
+function toggleYearTab(id, btn) {
+  const page = S.page, ids = tabsOf(page).map(t => t.id), cur = S.ytab[page] || [];
+  const sel = id === 'all' ? [] : cur.includes(id) ? cur.filter(x => x !== id) : ids.filter(x => x === id || cur.includes(x));
+  S.ytab[page] = sel.length === ids.length ? [] : sel;
+  saveYearTabs(page); renderYearTabs(); nudgeYear(btn);
+}
+/* 과목 칩·연도 줄은 그대로 두고(가로 스크롤 유지) 눌림 상태와 목록만 다시 그린다 */
+function renderYearTabs() {
+  const page = S.page;
+  if (S.view !== 'page' || !tabsOf(page).length || !$('#ylist')) return;
+  const sel = S.ytab[page] || [];
+  document.querySelectorAll('#col [data-ytab], #panelBody [data-ytab]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.ytab === 'all' ? !sel.length : sel.includes(b.dataset.ytab))));
+  $('#ylist').innerHTML = treeHTML(page);
+  const nav = $('#cs .pn'), current = byId.get(S.caseId);
+  if (nav && current && current.page === page) nav.outerHTML = caseNavHTML(current);
+  if ($('#panel').classList.contains('show')) { const pt = $('#panelTree'); if (pt) pt.innerHTML = treeHTML(page); else renderPanel(); }
+}
+/* 링크로 연 판례의 선고연도 탭이 꺼져 있으면 켠다(목록·이전/다음 항목이 그 판례를 포함하도록) */
+function ensureYearTab() {
+  const page = S.page;
+  if (S.view !== 'page' || !tabsOf(page).length || !S.caseId) return false;
+  const c = byId.get(S.caseId); if (!c || c.page !== page) return false;
+  const y = decisionYear(c), t = tabOf(page, y); if (!t || yrOn(page, y)) return false;
+  const ids = tabsOf(page).map(x => x.id), sel = ids.filter(id => id === t.id || S.ytab[page].includes(id));
+  S.ytab[page] = sel.length === ids.length ? [] : sel; saveYearTabs(page); return true;
+}
+
 /* ---------- rendering: page (empty state = 차례) ---------- */
 function pageHTML() {
   const pg = pageOf(S.page); const mx = MAXIMS[S.page];
   return `<div class="runhead"><b>판례집</b><span>›</span><span>${esc(pg.section)}</span><span>›</span><span>${esc(pg.label)}</span></div>
   <div class="pagehead"><h1>${esc(pg.label)}</h1><p>${esc(PAGE_DESC[pg.id] || '')}</p></div>
   ${mx ? `<div class="maxim"><i>${esc(mx[0])}</i><span>${esc(mx[1])}</span></div>` : ''}
-  ${S.page === 'annual' ? `${annualBarHTML()}<div id="annualList">${treeHTML(S.page)}</div>` : chipsHTML(S.page) + treeHTML(S.page)}`;
+  ${S.page === 'annual' ? `${annualBarHTML()}<div id="annualList">${treeHTML(S.page)}</div>` : tabsOf(S.page).length ? `${chipsHTML(S.page)}${yearTabsHTML('ytabs')}<div id="ylist">${treeHTML(S.page)}</div>` : chipsHTML(S.page) + treeHTML(S.page)}`;
 }
 function bookmarksHTML() {
   const list = bookmarkedCases();
@@ -1202,10 +1278,16 @@ async function renderLaws() {
 function lawTitle() { const l = LawsModule.lawById(S.lawId); return (l ? l.name : '주요법령') + ' — 판례집'; }
 
 /* ---------- rendering: case (inside the sheet) ---------- */
-function caseHTML(c) {
-  const pg = pageOf(c.page); const crumbs = [pg.label, ...(pg.group === 'standard' ? tocLabels(c) : pg.group === 'annual' ? annualCrumbs(c) : [subjLabel(c.subject)])];
+function caseNavHTML(c) {
   const list = navList(c); const i = list.findIndex(x => x.id === c.id);
   const prev = i > 0 ? list[i - 1] : null, next = i >= 0 && i < list.length - 1 ? list[i + 1] : null;
+  return `<nav class="pn" aria-label="항목 넘김">
+      ${prev ? `<a href="${caseHref(prev)}"><span class="lbl">‹ 이전 항목</span><span class="t">${esc(prev.title)}</span></a>` : '<span class="dis"><span class="lbl">‹ 이전 항목</span><span class="t">처음 항목입니다</span></span>'}
+      ${next ? `<a class="next" href="${caseHref(next)}"><span class="lbl">다음 항목 ›</span><span class="t">${esc(next.title)}</span></a>` : '<span class="dis next"><span class="lbl">다음 항목 ›</span><span class="t">마지막 항목입니다</span></span>'}
+    </nav>`;
+}
+function caseHTML(c) {
+  const pg = pageOf(c.page); const crumbs = [pg.label, ...(pg.group === 'standard' ? tocLabels(c) : pg.group === 'annual' ? annualCrumbs(c) : [subjLabel(c.subject)])];
   const bm = S.bookmarks.has(recordKey(c));
   const ftLabel = c.decisionType === '결정' || c.court === '헌법재판소' ? '결정문 전문' : '판결문 전문';
   return `<article class="case" aria-label="${esc(c.title)}">
@@ -1225,10 +1307,7 @@ function caseHTML(c) {
       <button class="ol-btn" id="btnFtOutline" aria-label="전문 개요 열기" aria-expanded="false"><svg class="ic"><use href="#i-list"/></svg>개요</button>
     </div>
     <div id="tabpanel" role="tabpanel">${tabHTML(c, S.tab)}</div>
-    <nav class="pn" aria-label="항목 넘김">
-      ${prev ? `<a href="${caseHref(prev)}"><span class="lbl">‹ 이전 항목</span><span class="t">${esc(prev.title)}</span></a>` : '<span class="dis"><span class="lbl">‹ 이전 항목</span><span class="t">처음 항목입니다</span></span>'}
-      ${next ? `<a class="next" href="${caseHref(next)}"><span class="lbl">다음 항목 ›</span><span class="t">${esc(next.title)}</span></a>` : '<span class="dis next"><span class="lbl">다음 항목 ›</span><span class="t">마지막 항목입니다</span></span>'}
-    </nav>
+    ${caseNavHTML(c)}
   </article>`;
 }
 const tabHTML = (c, t) => t === 1 ? summaryHTML(c) : t === 2 ? fullHTML(c) : t === 3 ? refsHTML(c) : memoHTML(c);
@@ -1375,7 +1454,7 @@ function renderPanel() {
   body.innerHTML = pagesListHTML();
   if (S.view === 'bookmarks') return;
   if (S.page === 'laws') { if (lawsNav) body.appendChild(lawsNav); return; }
-  body.insertAdjacentHTML('beforeend', S.page === 'annual' ? `${yearsGroup('')}<div id="panelTree">${treeHTML(S.page)}</div>` : chipsHTML(S.page) + treeHTML(S.page));
+  body.insertAdjacentHTML('beforeend', S.page === 'annual' ? `${yearsGroup('')}<div id="panelTree">${treeHTML(S.page)}</div>` : tabsOf(S.page).length ? `${chipsHTML(S.page)}${yearTabsHTML('')}<div id="panelTree">${treeHTML(S.page)}</div>` : chipsHTML(S.page) + treeHTML(S.page));
   body.querySelectorAll('.years').forEach(revealYears);
   const cur = body.querySelector('.entry.cur'); if (cur) cur.scrollIntoView({ block: 'center' });
 }
@@ -1486,12 +1565,12 @@ function parseHash() {
   S.page = 'std-constitution'; S.caseId = null;
 }
 let renderedKey = null;
-function render() {
+function render(revealCaseYear = true) {
   const col = $('#col');
   const secs = [...new Set(PAGES.map(p => p.section))];
   $('#pagetabs').innerHTML = secs.map(sn => `<div class="sec">${sn === '법령' ? '' : `<span class="sec-l">${esc(sn)}</span>`}${PAGES.filter(p => p.section === sn).map(p => `<button data-go="${p.id}"${S.view === 'page' && S.page === p.id ? ' aria-current="page"' : ''}><span class="l">${esc(p.label)}</span><span class="s">${esc(p.short)}</span></button>`).join('')}</div>`).join('');
   $('#btnBm').classList.toggle('on', S.view === 'bookmarks');
-  const yearAdded = ensureAnnualYear();
+  const yearAdded = revealCaseYear && (ensureAnnualYear() || ensureYearTab());
   const key = S.view === 'bookmarks' ? 'bookmarks' : S.page === 'laws' ? `laws` : `${S.page}|${S.filter[S.page] || ''}`;
   if (key !== renderedKey) {
     renderedKey = key;
@@ -1499,7 +1578,7 @@ function render() {
     col.innerHTML = S.view === 'bookmarks' ? bookmarksHTML() : S.page === 'laws' ? lawsHTML() : pageHTML();
     window.scrollTo(0, 0);
     col.querySelectorAll('.years').forEach(revealYears);
-  } else if (yearAdded) renderAnnual();
+  } else if (yearAdded) { renderAnnual(); renderYearTabs(); }
   if (S.view !== 'bookmarks' && S.page === 'laws') renderLaws();
   if (S.caseId) openCase(byId.get(S.caseId));
   else { closeCaseUI(); if (!(S.page === 'laws' && S.view === 'page')) document.title = (S.view === 'bookmarks' ? '북마크' : pageOf(S.page).label) + ' — 판례집'; }
@@ -1607,7 +1686,9 @@ document.addEventListener('click', e => {
     if (!open) { A.q = ''; $('#aq').value = ''; }
     renderAnnual(); if (open) $('#aq').focus(); return;
   }
-  const f = e.target.closest('[data-filter]'); if (f) { S.filter[S.page] = f.dataset.filter; renderedKey = null; render(); if (e.target.closest('#panelBody')) renderPanel(); return; }
+  /* 헌법재판소 주요결정·전원합의체: 선고연도 탭 */
+  const ytb = e.target.closest('[data-ytab]'); if (ytb) { toggleYearTab(ytb.dataset.ytab, ytb); return; }
+  const f = e.target.closest('[data-filter]'); if (f) { S.filter[S.page] = f.dataset.filter; renderedKey = null; render(!tabsOf(S.page).length); if (e.target.closest('#panelBody')) renderPanel(); return; }
   const tab = e.target.closest('[data-tab]'); if (tab) { setTab(+tab.dataset.tab); return; }
   if (e.target.closest('#btnCopy')) { copyCite(); return; }
   if (e.target.closest('#findPrev')) { jumpFind(-1); return; }

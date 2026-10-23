@@ -7,6 +7,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
+
+class WebAppHandler(SimpleHTTPRequestHandler):
+    # Windows registry MIME overrides can label .js as text/plain, which prevents
+    # service-worker registration. Pin script types for both serving and tests.
+    extensions_map = {
+        **SimpleHTTPRequestHandler.extensions_map,
+        '.js': 'text/javascript',
+        '.mjs': 'text/javascript',
+    }
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--port', type=int, default=8765)
@@ -14,7 +24,7 @@ if __name__ == '__main__':
     target = ROOT / 'output' / 'web'
     if not (target / 'index.html').is_file():
         raise SystemExit('Run python tools/make.py data web first.')
-    server = ThreadingHTTPServer(('127.0.0.1', args.port), partial(SimpleHTTPRequestHandler, directory=str(target)))
+    server = ThreadingHTTPServer(('127.0.0.1', args.port), partial(WebAppHandler, directory=str(target)))
     print(f'판례집 웹앱: http://localhost:{args.port}/index.html', flush=True)
     try:
         server.serve_forever()

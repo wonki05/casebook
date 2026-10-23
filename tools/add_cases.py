@@ -204,6 +204,8 @@ def cmd_set(a):
     c = next((x for x in reg['cases'] if x['id'] == a.id), None)
     if not c:
         raise SystemExit('없는 id: ' + a.id)
+    requested_subject = getattr(a, 'subject', None)
+    old_subject = c['subject']
     if a.title: c['title'] = a.title
     if a.toc is not None:
         path = [p for p in a.toc.split('/') if p]
@@ -235,6 +237,32 @@ def cmd_set(a):
         if a.url is not None: an['url'] = a.url
         if a.field is not None:
             an['field'], c['subject'] = annual_field(a.field, None, an.get('article'))
+    if requested_subject is not None:
+        if requested_subject not in SUBJECTS:
+            raise SystemExit('알 수 없는 과목: ' + requested_subject)
+        if c['group'] == 'annual':
+            an = c.get('annual') or {}
+            if not an.get('field'):
+                raise SystemExit('법률신문 과목 변경에는 --field 또는 기존 annual.field가 필요합니다')
+            _, subject = annual_field(an['field'], requested_subject, an.get('article'))
+            c['subject'] = subject
+        else:
+            c['subject'] = requested_subject
+        if c['group'] == 'standard':
+            if requested_subject not in STANDARD_IDS:
+                raise SystemExit('표준판례 과목이 아닙니다: ' + requested_subject)
+            if requested_subject != old_subject and a.toc is None:
+                raise SystemExit('표준판례 과목 변경에는 새 과목의 --toc 경로가 필요합니다')
+    if requested_subject is not None or a.toc is not None:
+        path = c.get('tocPath') or []
+        if c['group'] == 'standard' and not path:
+            raise SystemExit('표준판례는 비어 있지 않은 --toc 경로가 필요합니다')
+        idx = toc_index(toc)
+        for tid in path:
+            if tid not in idx or idx[tid][0] != c['subject']:
+                raise SystemExit('대상 과목과 맞지 않는 목차 id: ' + tid)
+        if path and idx[path[-1]][1] != path:
+            raise SystemExit('--toc는 상위부터 하위까지 이어지는 전체 경로여야 합니다')
     previous = c.get('decisionId')
     c.update(identity(c, fetched_citation(c['id'])))
     aliases = reg.setdefault('identityAliases', {})
@@ -357,6 +385,7 @@ def main():
     p.add_argument('--decision-type', choices=['판결', '결정'])
     p.set_defaults(fn=cmd_add)
     p = sub.add_parser('set'); p.add_argument('id'); p.add_argument('--title'); p.add_argument('--toc'); p.add_argument('--result'); p.add_argument('--tags'); p.add_argument('--date'); p.add_argument('--enbanc', choices=['yes', 'no'])
+    p.add_argument('--subject', choices=SUBJECTS, help='과목 변경 (표준판례는 새 --toc, 법률신문은 일치하는 --field 필요)')
     p.add_argument('--court'); p.add_argument('--decision-type', choices=['판결', '결정'])
     p.add_argument('--standard-source', help='PDF 원문과 대조한 표준판례 발췌 JSON 파일')
     p.add_argument('--selectionReason'); p.add_argument('--keywords'); p.add_argument('--difficulty'); p.add_argument('--memo')

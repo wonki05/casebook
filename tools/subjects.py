@@ -45,6 +45,12 @@ _norm = lambda s: re.sub(r"[\s()（）\[\]·・.,]", "", s or "")   # noqa: E731
 _DEFAULT_FIELD = {"constitution": "constitution", "administrative": "administrative", "civil": "civil", "commercial": "commercial", "ip": "ip"}
 # 연도 선택 버튼의 범위(화면에는 최신 연도부터 역순). 등록부에 더 최근 연도가 있으면 build_data.py 가 자동으로 늘린다.
 ANNUAL_YEARS = (2020, 2025)
+# 헌법재판소 주요결정 페이지의 선고연도 버튼 범위(2010년 선고 사건부터 수록). 같은 방식으로 등록부의 선고일에 맞춰 자동으로 늘어난다.
+CCOURT_YEARS = (2010, 2026)
+# 대법원 전원합의체 페이지: 최근 해(ENBANC_YEARS)는 한 해씩, 그 앞은 대법원이 처음 선고한 해(ENBANC_FROM)가 든 연대까지
+# 10년 단위 버튼(2010년대 · 2000년대 · … · 1940년대). 등록부 선고일이 범위 밖이면 build_data.py 가 그쪽으로 넓힌다.
+ENBANC_YEARS = (2020, 2026)
+ENBANC_FROM = 1948
 
 
 def label_of(subject_id):
@@ -95,9 +101,11 @@ def resolve_field(name):
 
 
 def article_part(article):
-    """'[2025년 분야별 중요판례분석] (3) 민법(총칙·물권법)' → '민법(총칙·물권법)' (연재 머리·순번 제거)."""
+    """'[2025년 분야별 중요판례분석] (3) 민법(총칙·물권법)' → '민법(총칙·물권법)' (연재 머리·순번 제거).
+    2023년 연재처럼 제목 뒤에 붙은 필자('(22) 언론법 - 김기수 고법판사(특허법원)')도 떼어 낸다 — 소속명이 분야로 오인되지 않게."""
     part = re.sub(r"^\s*\[[^\]]*\]\s*", "", article or "")
-    return re.sub(r"^[\(（]\s*\d+\s*[\)）]\s*|^\d+\s*[.)]\s*", "", part).strip()
+    part = re.sub(r"^[\(（]\s*\d+\s*[\)）]\s*|^\d+\s*[.)]\s*", "", part)
+    return re.sub(r"\s+[-–—?‐]\s+.*$", "", part).strip()
 
 
 def article_year(article):

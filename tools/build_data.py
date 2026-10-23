@@ -10,7 +10,7 @@ import copy, json, re, glob, os, sys, datetime
 from pathlib import Path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from case_identity import identity, decision_type, standard_sources_by_decision, STANDARD_FIELDS
-from subjects import SUBJECTS as SUBJECT_DEFS, STANDARD_SUBJECTS, ANNUAL_FIELDS, ANNUAL_BY_ID, ANNUAL_YEARS, guess_field  # noqa: E402
+from subjects import SUBJECTS as SUBJECT_DEFS, STANDARD_SUBJECTS, ANNUAL_FIELDS, ANNUAL_BY_ID, ANNUAL_YEARS, CCOURT_YEARS, ENBANC_YEARS, ENBANC_FROM, guess_field  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REG = os.path.join(ROOT, 'data', 'registry.json')
@@ -42,6 +42,21 @@ PAGES = [  # 표준판례는 과목마다 한 페이지(std-<subject>); 과목 �
     {"id": "ccourt", "label": "헌법재판소 주요결정", "short": "헌법재판소", "section": "최신판례", "group": "ccourt", "subject": None},
     {"id": "laws", "label": "주요법령", "short": "주요법령", "section": "법령", "group": None, "subject": None},
 ]
+def make_year_tabs(years_in, single, decades_from=None):
+    """선고연도 탭 [{id, label, from, to}] (최신 → 과거). single=(처음, 끝) 해는 한 해씩 두고,
+    그 앞은 decades_from 이 있으면 그 해가 든 연대까지 10년 단위('2010년대'), 없으면 처음 해에서 끝낸다.
+    등록부의 선고연도(years_in)가 범위 밖이면 그쪽으로 넓힌다(연대 탭이 있으면 과거 쪽은 연대로)."""
+    first, last = single[0], max([single[1]] + years_in)
+    if decades_from is None:
+        first = min([first] + years_in)
+    tabs = [{"id": str(y), "label": str(y), "from": y, "to": y} for y in range(last, first - 1, -1)]
+    if decades_from is not None:
+        low = min([decades_from] + years_in) // 10 * 10
+        tabs += [{"id": f"{d}s", "label": f"{d}년대", "from": d, "to": min(d + 9, first - 1)}
+                 for d in range((first - 1) // 10 * 10, low - 1, -10)]
+    return tabs
+
+
 def load_toc():
     return json.loads(Path(TOC_FILE).read_text(encoding='utf-8'))
 
@@ -368,6 +383,10 @@ def build():
     y_from, y_to = min([ANNUAL_YEARS[0]] + years_in), max([ANNUAL_YEARS[1]] + years_in)
     annual = {"years": list(range(y_to, y_from - 1, -1)),
               "fields": [{"id": f["id"], "label": f["label"], "sub": f["sub"], "subject": f["subject"]} for f in ANNUAL_FIELDS]}
+    # 헌법재판소 주요결정·대법원 전원합의체 페이지: 과목 칩 아래 선고연도 탭(최신 → 과거; 범위는 tools/subjects.py)
+    page_years = lambda page: [int(r["decisionDate"][:4]) for r in cases if r["page"] == page and r["decisionDate"][:4].isdigit()]  # noqa: E731
+    year_tabs = {"ccourt": make_year_tabs(page_years('ccourt'), CCOURT_YEARS),
+                 "enbanc": make_year_tabs(page_years('enbanc'), ENBANC_YEARS, ENBANC_FROM)}
 
     data = {
         "meta": {
@@ -382,6 +401,7 @@ def build():
         "groups": GROUPS,
         "subjects": SUBJECTS,
         "annual": annual,
+        "yearTabs": year_tabs,
         "toc": TOC,
         "cases": cases,
         "identityAliases": {**(reg.get('identityAliases') or {}),

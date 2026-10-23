@@ -24,7 +24,7 @@ src/design-d.html         # 확정 템플릿 (데이터 자리: __CASE_DATA_JSON
 AGENTS.md / CLAUDE.md     # Claude Code·Codex 작업 레시피 (표준판례 PDF, 법률신문, 전원합의체·헌법재판소, 법령, 과목 추가)
 Makefile, requirements.txt   # make 가 없는 PC 에서는 python tools/make.py <타깃…>
 tools/subjects.py         # 과목 정의 단일 출처 (헌법·행정법·민법·형법·상법: id·라벨·목차 접두어·PDF 폴더명 → 표준판례 페이지 자동 생성; 지식재산권법 ip 는 표준판례 없음)
-                          #   + 법률신문 분야 ANNUAL_FIELDS(8개) · 연도 버튼 범위 ANNUAL_YEARS(2020–2025)
+                          #   + 법률신문 분야 ANNUAL_FIELDS(8개) · 연도 버튼 범위 ANNUAL_YEARS(2020–2025) · 선고연도 탭 범위 CCOURT_YEARS(헌법재판소 2010–2026) · ENBANC_YEARS/ENBANC_FROM(전원합의체 2020–2026 한 해씩, 그 앞은 1940년대까지 연대)
 data/registry.json        # 사건 등록부 (tools/add_cases.py 로 편집)
 data/toc.json             # 표준판례 목차 트리 (깊이 1~3; 상법은 PDF 목차 그대로 분야›편›장, 나머지는 시안용 초안)
 data/standard-cases/      # 표준판례(2023년 개정판) PDF 5건(헌법·행정법·민법·형법·상법) + 과목별 폴더(PDF→Markdown 중간 산출물 자리)
@@ -81,10 +81,10 @@ Claude Code·Codex 가 동시에 작업할 때는 수정 직전 파일을 다시
 `make web` 은 `output/web/` 에 웹앱을 생성합니다. 로컬에서 확인할 때는 다음처럼 HTTP로 열어야 합니다.
 
 ```powershell
-python -m http.server 8000 --directory output/web
+python tools/serve_web.py --port 8000
 ```
 
-브라우저에서 `http://localhost:8000/` 을 엽니다. `index.html` 을 파일로 직접 여는 방식은 외부 데이터·Service Worker를 사용하는 웹앱 검사가 아닙니다. 파일 하나로 실행하려면 `output/casebook.html` 을 사용합니다.
+브라우저에서 `http://localhost:8000/` 을 엽니다. 이 전용 서버와 `webcheck` 검사 서버는 JavaScript 응답 형식을 고정하여 Windows의 MIME 설정과 무관하게 서비스 워커를 등록할 수 있도록 합니다. `index.html` 을 파일로 직접 여는 방식은 외부 데이터·Service Worker를 사용하는 웹앱 검사가 아닙니다. 파일 하나로 실행하려면 `output/casebook.html` 을 사용합니다.
 
 웹앱은 `data-manifest.json` 으로 데이터 버전과 파일 해시를 확인하고 판례 목록을 먼저 읽습니다. 전문은 해당 사건을 열 때 불러옵니다. 법령도 HTML에 내장하지 않고 별도 파일에서 읽습니다. 같은 데이터 형식 안에서는 새 판례를 반영해도 화면 프로그램을 교체할 필요가 없습니다. 데이터 형식이 바뀔 때는 앱과의 호환성을 함께 검사해야 합니다.
 
@@ -113,6 +113,8 @@ python -m http.server 8000 --directory output/web
 `sc`, `cc`, `hcseoul`, `dcseoulcentral` 등은 프로젝트 내부 코드이며 공식 법원 기관코드가 아닙니다. 하급심·지원도 정확한 법원명과 별도 코드로 구분합니다. 전체 규칙과 법원 등록 방법은 `data/schema.md` §1-2, `tools/case_identity.py` 를 따릅니다. 기존 등록부 보완은 `python tools/add_cases.py migrate-identities` 로 하며, 기존 배치 `id` 와 `fetched/<id>.json` 파일명은 유지합니다.
 
 표준판례와 공식 판시사항·요지 등에 차이가 있으면 **PDF에서 추출하고 원본과 대조한 표준판례 내용을 필드별로 우선**합니다. `standardSource` 에 책명·판본·파일·PDF 쪽수와 `verified: true` 를 기록합니다. 없는 필드는 공식 자료로, 두 출처 모두 없는 필드만 편집 요약으로 보충합니다. 표준판례 출처에 명시한 빈 배열은 의도적인 공란이고, 필드를 생략한 것과 다릅니다. 화면에서 표준판례와 공식 자료의 출처를 구별하며 공식 원문 파일을 덮어쓰거나 의역하지 않습니다. 법원·사건번호·날짜 자체가 다르면 동일 재판인지부터 확인해야 합니다.
+
+기존 사건의 과목은 `python tools/add_cases.py set <id> --subject civil` 처럼 바꿉니다. 실제 분류를 확인한 뒤 실행하며 재판 ID와 수집 파일·출처는 유지됩니다. 표준판례의 과목을 바꿀 때는 새 과목의 `--toc` 도 지정하고, 법률신문 판례는 `--field` 와 과목을 맞춥니다.
 
 ## 개인 메모·북마크와 모바일 확장
 

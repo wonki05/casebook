@@ -9,13 +9,14 @@ from __future__ import annotations
 import asyncio
 from functools import partial
 import hashlib
-from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+from http.server import ThreadingHTTPServer
 import json
 from pathlib import Path
 import re
 import threading
 from playwright.async_api import async_playwright
 from browser_runtime import launch_chromium
+from serve_web import WebAppHandler
 
 ROOT = Path(__file__).resolve().parent.parent
 WEB = ROOT / 'output' / 'web'
@@ -35,7 +36,7 @@ def read_verified(ref):
     require(hashlib.sha256(raw).hexdigest() == ref['sha256'], f'Hash mismatch: {ref["url"]}')
     return json.loads(raw)
 
-class QuietHandler(SimpleHTTPRequestHandler):
+class QuietHandler(WebAppHandler):
     def log_message(self, format, *args):
         pass
 

@@ -46,8 +46,8 @@ jobs:
           printf '%s  %s\n' '194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252' "$HOME/.local/share/fonts/NotoSansKR.ttf" | sha256sum --check
           fc-cache -f "$HOME/.local/share/fonts"
           fc-match -f '%{family}\n' 'Noto Sans KR:lang=ko'
-      - name: Test identities and source precedence
-        run: python -m unittest discover -s tools -p 'test_identity*.py'
+      - name: Test data rules and local server
+        run: python -m unittest discover -s tools -p 'test_*.py'
       - name: Validate and build both editions
         run: python tools/make.py validate data laws build check web webcheck
       - name: Check typography and personal data

@@ -59,6 +59,8 @@
 - 병합사건의 전체 번호는 `caseNumber` 에 남기고 검증된 대표번호를 `lookupKey` 및 ID 산정에 쓴다. 표기 순서가 달라 대표번호가 바뀌는 경우 공식 일련번호·법원·날짜·유형을 함께 확인한 뒤 연결한다.
 - 등록: `add --court "서울중앙지방법원" --decision-type 판결 ...`; 수정: `set <id> --court ... --decision-type ...`. 후보 `--from` 에서도 정확한 `court`, `decisionType`, `lawgo` 를 전달한다. 기존 등록부 보완: `python tools/add_cases.py migrate-identities`.
 
+- 기존 사건의 과목은 `python tools/add_cases.py set <id> --subject <subject>` 로 바꾼다. `id`·`caseId`·`decisionId`·공식 수집 파일과 출처는 유지한다. 표준판례를 다른 과목으로 옮길 때는 대상 과목의 유효한 `--toc` 경로도 함께 지정한다. 법률신문 판례는 `--field` 와 과목이 일치해야 하며, 분야만 바꾸면 과목도 해당 분야에 맞춰진다.
+
 ### 1-3. 표준판례 출처 `standardSource`
 
 표준판례와 공식 자료가 다르면 **검증된 표준판례의 해당 필드를 우선**한다. 이는 학습 화면의 표시 기준이며 공식 원문 파일의 내용을 고치는 작업이 아니다. 같은 `decisionId` 의 다른 페이지 배치에도 이 기준을 적용한다.
@@ -95,7 +97,7 @@
 - 실패 시 `<id>.missing.json` {id, reason, triedUrls}. 미게재(최근 선고)면 나중에 `--retry-missing`.
 
 ## 4. `data/cases.json` — 화면용 정규화 데이터 (tools/build_data.py 산출; 손대지 않음)
-registry + toc + fetched 를 합쳐 만든다. `pages`(표준판례는 standard 과목마다 `std-<subject>` 한 페이지 — tools/subjects.py 순서) · `subjects`([{id, label, standard}]) · `annual`({years: [2025, …, 2020] 최신순, fields: [{id, label, sub, subject}]}) · `toc` · `cases`. 사건 주요 필드: page, citation("대법원 2026. 7. 22. 선고 2022도5937 전원합의체 판결"), citeShort("대판 2022도5937"),
+registry + toc + fetched 를 합쳐 만든다. `pages`(표준판례는 standard 과목마다 `std-<subject>` 한 페이지 — tools/subjects.py 순서) · `subjects`([{id, label, standard}]) · `annual`({years: [2025, …, 2020] 최신순, fields: [{id, label, sub, subject}]}) · `yearTabs`({ccourt|enbanc: [{id: "2026"|"2010s", label: "2026"|"2010년대", from, to}] 최신순 — 헌법재판소 주요결정·대법원 전원합의체 선고연도 탭}) · `toc` · `cases`. 사건 주요 필드: page, citation("대법원 2026. 7. 22. 선고 2022도5937 전원합의체 판결"), citeShort("대판 2022도5937"),
 issues/holdings([{n:"[1]", text}]), statutes, precedents, subjectStatutes, fullText([{heading:"[주 문]", text}]), summaryType(standard|mixed|official|editorial), fieldSources, standardSource, courtId, caseNumberId, caseId, decisionId, result, annual({year, field, series, article, url} — annual 만).
 괄호는 화면용 조판에서 `[ ]` 로 통일된다(【 】 금지). 원출처 파일은 보존한다.
 
