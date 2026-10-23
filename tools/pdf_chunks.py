@@ -26,6 +26,7 @@ FILLERS.update({0x318d: '·', 0x119e: '·', 0x30fb: '·'})
 HEAD_RE = re.compile(r'^제\s*(\d+)\s*(편|장|절|관)\s*(.*)$')
 ROMAN_RE = re.compile(r'^([ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ]+|X{0,1}(?:IX|IV|V?I{0,3}))\s*[.．]\s*(\S.*)$')
 RUNHEAD_RE = re.compile(r'^제\s*\d+\s*편\s+제\s*\d+\s*장\b')
+RUNHEAD2_RE = re.compile(r'^[가-힣]{2,6}(?:\s[가-힣]{1,4}){0,3}\s+제\s*\d+\s*편(\s*제\s*\d+\s*장)?(\s+\S.*)?$')
 ENTRY_RE = re.compile(r'^(\d{1,3})\s*[.．]\s+(\S.*)$')
 ENTRY_NODOT_RE = re.compile(r'^(\d{1,3})\s+([가-힣][^\d]{1,70})$')
 PAGENO_RE = re.compile(r'^(-\s*)?\d{1,4}(\s*-)?$|^-\s*[ivxlc]+\s*-$')
@@ -37,6 +38,7 @@ LEADER_RE = re.compile(r'[·.]{6,}')
 SENT_END = re.compile(r'[다요음함됨임]\s*[.。]?\s*$')
 PART_WORDS = {'총칙·상행위': '총칙·상행위', '회 사': '회사', '회사': '회사', '어음·수표': '어음·수표', '보 험': '보험', '보험': '보험', '해 상': '해상', '해상': '해상',
               '형법총론': '형법총론', '형 법 총 론': '형법총론', '형법각론': '형법각론', '형 법 각 론': '형법각론'}
+PART_KEYS = {k.replace(' ', ''): v for k, v in PART_WORDS.items()}
 
 
 def clean(s):
@@ -80,7 +82,8 @@ def page_lines(text, book_word):
     """쪽 텍스트 → 머리글·쪽번호 제거한 줄 목록."""
     lines = [clean(l) for l in text.split('\n')]
     lines = [l for l in lines if l]
-    while lines and (RUNHEAD_RE.match(lines[0]) or '표준판례연구' in lines[0] or lines[0] == book_word):
+    while lines and (RUNHEAD_RE.match(lines[0]) or '표준판례연구' in lines[0] or lines[0] == book_word
+                     or (RUNHEAD2_RE.match(lines[0]) and len(lines[0]) <= 60 and not SENT_END.search(lines[0]))):
         lines.pop(0)
     while lines and (PAGENO_RE.match(lines[-1]) or '표준판례연구' in lines[-1]):
         lines.pop()
@@ -340,7 +343,7 @@ def main():
         if nhead >= 2 and (len(lines) - nhead) <= 2 and not any(ENTRY_RE.match(l) for l in lines):
             first = [l for l, h in zip(lines, heads_here) if not h]
             if first:
-                ctx['part'] = PART_WORDS.get(first[0].replace(' ', ''), PART_WORDS.get(first[0], first[0]))
+                ctx['part'] = PART_KEYS.get(first[0].replace(' ', ''), first[0])
                 ctx[1] = ctx[2] = ctx[3] = None
                 headings_log.append((pno, 0, ctx['part']))
                 page_first_heading[pno] = 1
@@ -348,8 +351,8 @@ def main():
         k = 0
         while k < len(lines):
             l = lines[k]
-            if l in PART_WORDS and not ENTRY_RE.match(l):
-                ctx['part'] = PART_WORDS[l]; ctx[1] = ctx[2] = ctx[3] = None
+            if l.replace(' ', '') in PART_KEYS and not ENTRY_RE.match(l):
+                ctx['part'] = PART_KEYS[l.replace(' ', '')]; ctx[1] = ctx[2] = ctx[3] = None
                 heading_since_entry = True
                 headings_log.append((pno, 0, ctx['part'])); page_first_heading.setdefault(pno, 1)
                 k += 1; continue
@@ -450,6 +453,28 @@ def main():
         nid = (parent['id'] + '-' if parent else f'{prefix}-') + str(len(siblings) + 1)
         node = {'id': nid, 'label': key[-1], 'children': []}
         siblings.append(node); node_by_path[key] = node
+    # 유령 노드 가지치기: 어떤 항목의 tocLabels 접두어도 아닌 노드(편 표지에 나열된 장 목록 등)는 제거하고 id 를 다시 매긴다
+    used_paths = set()
+    for e in entries:
+        for cut in range(1, min(3, len(e['tocLabels'])) + 1):
+            used_paths.add(tuple(e['tocLabels'][:cut]))
+    def prune(nodes, path):
+        kept = []
+        for n in nodes:
+            my = path + (n['label'],)
+            n['children'] = prune(n.get('children') or [], my)
+            if my in used_paths or n['children']:
+                kept.append(n)
+        return kept
+    proposed = prune(proposed, ())
+    node_by_path = {}
+    def renumber(nodes, parent_id, path):
+        for i, n in enumerate(nodes, 1):
+            n['id'] = f'{parent_id}-{i}' if parent_id else f'{prefix}-{i}'
+            my = path + (n['label'],)
+            node_by_path[my] = n
+            renumber(n['children'], n['id'], my)
+    renumber(proposed, '', ())
     # 제안 id 로 tocPath 보충(기존 toc.json 에서 못 찾은 항목)
     def proposed_path(labels):
         path = []

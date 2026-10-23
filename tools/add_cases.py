@@ -295,6 +295,46 @@ def cmd_toc(a):
     elif a.toc_cmd == 'rename':
         if a.id not in idx: raise SystemExit('없는 id: ' + a.id)
         idx[a.id][2]['label'] = a.label; save(toc=toc); print('이름 변경:', a.id)
+    elif a.toc_cmd == 'replace':
+        if not (a.subject and a.from_file):
+            raise SystemExit('toc replace 에는 --subject 와 --from 이 필요합니다')
+        src = read_json(a.from_file)
+        tree = src.get('proposed') if isinstance(src, dict) else src
+        if not isinstance(tree, list) or not tree:
+            raise SystemExit('--from 파일에 proposed 배열이 없습니다')
+        from subjects import BY_ID as _BY
+        prefix = _BY[a.subject]['tocPrefix'] + '-'
+        ids = []
+        def walk(nodes, depth):
+            for n in nodes:
+                if not isinstance(n, dict) or not n.get('id') or not n.get('label'):
+                    raise SystemExit(f'노드 형식 오류: {n!r}')
+                if not n['id'].startswith(prefix):
+                    raise SystemExit(f'id 접두어가 과목({prefix})과 다릅니다: {n["id"]}')
+                if depth > 3:
+                    raise SystemExit(f'목차 깊이는 3까지입니다: {n["id"]}')
+                ids.append(n['id'])
+                walk(n.get('children') or [], depth + 1)
+        walk(tree, 1)
+        if len(ids) != len(set(ids)):
+            raise SystemExit('제안 목차에 중복 id 가 있습니다')
+        new_ids = set(ids)
+        cleared = []
+        for c in reg['cases']:
+            if c.get('subject') == a.subject and c.get('tocPath') and not all(t in new_ids for t in c['tocPath']):
+                cleared.append((c['id'], c['tocPath']))
+        old_n = len(toc_index({a.subject: toc.get(a.subject, [])}))
+        print(f'[{a.subject}] 목차 교체: 기존 {old_n}개 노드 → 새 {len(ids)}개 노드; 경로를 잃는 사건 {len(cleared)}건')
+        for cid, path in cleared:
+            print('  tocPath 비움 →', cid, path, '(set --toc 로 다시 지정)')
+        if a.dry_run:
+            print('(--dry-run: 저장하지 않음)'); return
+        toc[a.subject] = tree
+        for c in reg['cases']:
+            if c.get('subject') == a.subject and c.get('tocPath') and not all(t in new_ids for t in c['tocPath']):
+                c['tocPath'] = []
+        save(reg=reg, toc=toc)
+        print('저장:', TOC, '및', REG)
 
 
 def fetched_citation(cid):
@@ -391,7 +431,7 @@ def main():
     p.add_argument('--selectionReason'); p.add_argument('--keywords'); p.add_argument('--difficulty'); p.add_argument('--memo')
     p.add_argument('--field', type=resolve_field, help='법률신문 분야 (' + ', '.join(ANNUAL_FIELD_IDS) + ') — 과목도 함께 맞춘다')
     p.add_argument('--year', type=int); p.add_argument('--article'); p.add_argument('--url'); p.set_defaults(fn=cmd_set)
-    p = sub.add_parser('toc'); p.add_argument('toc_cmd', choices=['list', 'add', 'rename']); p.add_argument('--subject', choices=STANDARD_IDS); p.add_argument('--parent'); p.add_argument('--id'); p.add_argument('--label'); p.set_defaults(fn=cmd_toc)
+    p = sub.add_parser('toc'); p.add_argument('toc_cmd', choices=['list', 'add', 'rename', 'replace']); p.add_argument('--from', dest='from_file', help='replace: 제안 목차 JSON({"proposed": [...]} 또는 배열)'); p.add_argument('--dry-run', action='store_true'); p.add_argument('--subject', choices=STANDARD_IDS); p.add_argument('--parent'); p.add_argument('--id'); p.add_argument('--label'); p.set_defaults(fn=cmd_toc)
     p = sub.add_parser('validate'); p.set_defaults(fn=cmd_validate)
     p = sub.add_parser('migrate-identities'); p.set_defaults(fn=cmd_migrate_identities)
     a = ap.parse_args(); a.fn(a)
