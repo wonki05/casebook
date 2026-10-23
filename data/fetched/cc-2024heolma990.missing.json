@@ -1,0 +1,12 @@
+{
+  "id": "cc-2024heolma990",
+  "caseNumber": "2024헌마990·2026헌바197",
+  "lookupKey": "2024헌마990",
+  "kind": "detc",
+  "reason": "law.go.kr pretty URL returned the error page '해당 한글주소명을 찾을 수 없습니다' (no iframe / detcSeq) on two attempts; decision dated 2026-10-22 appears not to be uploaded yet",
+  "triedUrls": [
+    "https://www.law.go.kr/헌재결정례/(2024헌마990)",
+    "https://www.law.go.kr/헌재결정례/(2024헌마990)"
+  ],
+  "checkedAt": "2026-10-24"
+}

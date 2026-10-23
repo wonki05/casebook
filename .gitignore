@@ -1,0 +1,22 @@
+__pycache__/
+shots/*.png
+data/inbox/**/*.candidates.json
+data/inbox/standard_pdf/candidates-*.json
+data/standard-cases/candidates-*.json
+
+output/
+dist/
+ouput/
+tmp/
+shots/
+data/inbox/
+data/standard-cases/
+data/cases.json
+data/laws.json
+.env
+.env.*
+*personal-backup*.json
+*lawbook-backup*.json
+
+# 병렬 작업용 git worktree (법률신문 연도별 수집 등)
+.worktrees/

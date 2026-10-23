@@ -1,0 +1,5 @@
+playwright>=1.45        # 빌드 검사(sweep/shot)와 law.go.kr 수집기. 설치 후 `python -m playwright install chromium`
+pdfplumber>=0.11        # 표준판례 PDF 후보 추출
+requests>=2.31          # fetch_lawgo.py --engine requests
+beautifulsoup4>=4.12
+lxml>=5.0

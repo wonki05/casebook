@@ -1,0 +1,343 @@
+<!doctype html>
+<!--
+  법령 모듈 (공통) — 두 시안이 그대로 복사해 넣는 부분:
+    1) <style id="laws-css">…</style>
+    2) <script id="laws-js">…</script>   → window.LawsModule
+    3) 데이터 자리: <script id="laws-data" type="text/plain">__LAWS_DATA_B64__</script> (tools/build.py 가 gzip+base64 로 채움)
+  이 파일 자체는 모듈을 시험하는 독립 페이지다 (build.py 로 빌드하면 바로 열어볼 수 있다).
+
+  API
+    LawsModule.load()                       → Promise<DATA>   (#laws-data 를 DecompressionStream 으로 풀어 1회 캐시)
+    LawsModule.indexHtml(activeLawId)       → 그룹별 법령 목록 HTML (버튼 data-law="<id>"; 클릭 처리는 호스트가)
+    LawsModule.render({ lawId, versionId, headEl, tocEl, textEl, scrollEl, onChange })
+        headEl: 법령 이름·메타·개정이력(헌법)·조문 바로가기·찾기 / tocEl: 목차 트리 / textEl: 조문 본문
+        scrollEl: 본문이 스크롤되는 요소(없으면 window). onChange({lawId, versionId}) 는 개정이력 선택 시 호출.
+    LawsModule.goto(textEl, '제750조' | '750' | '750의2')
+  사용 CSS 변수: --serif --sans --ink --ink-2 --ink-3 --rule --rule-2 --accent --accent-ink --accent-soft --surface --paper --fs
+-->
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>법령 모듈 시험</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --serif:"Noto Serif KR","Noto Serif CJK KR","KoPubWorld Batang","Nanum Myeongjo","Batang","바탕","AppleMyungjo",Georgia,serif;
+  --sans:"Noto Sans KR","Pretendard",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif;
+  --paper:#FBFAF7; --surface:#FFFFFF; --ink:#1B1A20; --ink-2:#5A5866; --ink-3:#8A8798;
+  --rule:#E6E3EE; --rule-2:#D6D2E0; --accent:#5B3FA6; --accent-ink:#3F2B7A; --accent-soft:#F1EDF9; --fs:16px;
+}
+@media (prefers-color-scheme:dark){:root{--paper:#16151B;--surface:#1D1C24;--ink:#ECEAF2;--ink-2:#A5A2B5;--ink-3:#7F7C8E;--rule:#2C2A38;--rule-2:#3A3748;--accent:#B7A6EC;--accent-ink:#CDC2F4;--accent-soft:#2A2344}}
+*{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font:400 15px/1.6 var(--sans)}
+.demo{display:grid;grid-template-columns:260px 1fr;gap:24px;max-width:1200px;margin:0 auto;padding:20px}
+.demo aside{position:sticky;top:0;align-self:start;max-height:100vh;overflow:auto}
+@media(max-width:800px){.demo{grid-template-columns:1fr}.demo aside{position:static;max-height:none}}
+</style>
+
+<style id="laws-css">
+/* ===== 법령 모듈 ===== */
+.lw-index{font-family:var(--sans)}
+.lw-index .g{margin:0 0 14px}
+.lw-index .g h4{margin:0 0 4px;font:600 11.5px/1.4 var(--sans);letter-spacing:.08em;color:var(--ink-3);text-transform:uppercase}
+.lw-index button{border:0;background:none;cursor:pointer;display:flex;align-items:center;gap:8px;width:100%;text-align:left;padding:7px 10px;border-radius:8px;font:500 14px/1.35 var(--sans);color:var(--ink-2)}
+.lw-index button:hover{background:var(--accent-soft);color:var(--accent-ink)}
+.lw-index button[aria-current=true]{background:var(--accent-soft);color:var(--accent-ink);font-weight:700;box-shadow:inset 3px 0 0 var(--accent)}
+.lw-index button .k{font-size:11px;color:var(--ink-3);font-weight:400;margin-left:auto;white-space:nowrap}
+
+.lw-head{font-family:var(--sans);border-bottom:1px solid var(--rule);padding:0 0 14px;margin:0 0 18px}
+.lw-head .kicker{font:500 12.5px/1.4 var(--sans);color:var(--accent-ink);letter-spacing:.04em;margin:0 0 4px}
+.lw-head h1{margin:0 0 6px;font:700 26px/1.25 var(--sans);letter-spacing:-.01em}
+.lw-head .meta{font:400 13px/1.6 var(--sans);color:var(--ink-2)}
+.lw-head .meta b{font-weight:600;color:var(--ink)}
+.lw-head .old{margin:8px 0 0;padding:8px 12px;border-left:3px solid var(--accent);background:var(--accent-soft);font-size:13px;color:var(--accent-ink);border-radius:0 8px 8px 0}
+.lw-tools{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0;align-items:center}
+.lw-tools label{display:flex;align-items:center;gap:6px;font:500 13px/1 var(--sans);color:var(--ink-2)}
+.lw-tools select,.lw-tools input{font:400 14px/1.2 var(--sans);color:var(--ink);background:var(--surface);border:1px solid var(--rule-2);border-radius:8px;padding:8px 10px;min-height:38px}
+.lw-tools select{max-width:100%}
+.lw-tools input{width:9em}
+.lw-tools input.find{width:12em}
+.lw-tools .cnt{font-size:12.5px;color:var(--ink-3)}
+.lw-tools .ver{font-weight:600;color:var(--accent-ink)}
+
+.lw-toc{font-family:var(--sans)}
+.lw-toc ul{list-style:none;margin:0;padding:0}
+.lw-toc li{margin:0}
+.lw-toc .row{display:flex;align-items:center;gap:4px}
+.lw-toc .tg{width:22px;height:28px;display:inline-flex;align-items:center;justify-content:center;color:var(--ink-3);flex:none}
+.lw-toc .tg svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:2;transition:transform .15s}
+.lw-toc li.open>.row .tg svg{transform:rotate(90deg)}
+.lw-toc .tg.none{visibility:hidden}
+.lw-toc a{flex:1;display:block;padding:5px 8px 5px 2px;border-radius:6px;font:500 13.5px/1.4 var(--sans);color:var(--ink-2);text-decoration:none}
+.lw-toc a:hover{background:var(--accent-soft);color:var(--accent-ink)}
+.lw-toc a.cur{color:var(--accent-ink);font-weight:700}
+.lw-toc .l1>.row a{font-weight:700;color:var(--ink)}
+.lw-toc .l2>.row{padding-left:10px}.lw-toc .l3>.row{padding-left:26px}.lw-toc .l4>.row{padding-left:42px}
+.lw-toc .l3>.row a,.lw-toc .l4>.row a{font-size:13px}
+.lw-toc li>ul{display:none}.lw-toc li.open>ul{display:block}
+.lw-toc .supp a{color:var(--ink-3)}
+
+.lw-text{font-family:var(--serif);font-size:var(--fs,16px);line-height:1.9;word-break:keep-all;overflow-wrap:anywhere}
+.lw-text .pre{margin:0 0 26px;padding:14px 18px;border:1px solid var(--rule);border-radius:10px;background:var(--surface)}
+.lw-text .pre h3{margin:0 0 6px;font:700 13px/1.4 var(--sans);letter-spacing:.1em;color:var(--accent-ink)}
+.lw-text .pre p{margin:0;text-align:left}
+.lw-text h2.lw-h{font-family:var(--sans);margin:34px 0 12px;padding:0 0 8px;border-bottom:1px solid var(--rule);color:var(--ink);scroll-margin-top:var(--lw-scroll-margin,72px)}
+.lw-text h2.lw-h.l1{font-size:20px;font-weight:700;letter-spacing:-.01em;margin-top:40px}
+.lw-text h2.lw-h.l2{font-size:17px;font-weight:700}
+.lw-text h2.lw-h.l3{font-size:15px;font-weight:600;border-bottom:0;color:var(--ink-2);padding-bottom:0}
+.lw-text h2.lw-h.l4{font-size:14px;font-weight:600;border-bottom:0;color:var(--ink-3);padding-bottom:0;margin-top:22px}
+.lw-text h2.lw-h:first-child{margin-top:0}
+.lw-art{margin:0 0 22px;scroll-margin-top:var(--lw-scroll-margin,72px)}
+.lw-art.hit{box-shadow:inset 3px 0 0 var(--accent);padding-left:12px;margin-left:-15px;border-radius:0}
+.lw-art.hide{display:none}
+.lw-art-h{margin:0 0 4px;font:700 15px/1.5 var(--sans);color:var(--ink)}
+.lw-art-h .no{color:var(--accent-ink)}
+.lw-art-h .t{margin-left:6px;font-weight:600;color:var(--ink-2)}
+.lw-art-b p{margin:0 0 .25em;display:grid;grid-template-columns:max-content 1fr;column-gap:.5em;text-align:left}
+@media(min-width:700px){.lw-art-b p,.lw-text .pre p,.lw-supp p{text-align:justify}}
+.lw-art-b p.pl{display:block}
+.lw-art-b p .m{font-family:var(--sans);font-weight:600;color:var(--ink-2);font-size:.92em;line-height:1.9;min-width:1.2em}
+.lw-art-b p.ho{padding-left:1.4em}.lw-art-b p.mok{padding-left:2.9em}.lw-art-b p.sub{padding-left:4.3em}
+.lw-art-b p.del{color:var(--ink-3);display:block}
+.lw-art-b p.note{font-family:var(--sans);font-size:12.5px;color:var(--ink-3);display:block;margin-top:.3em}
+.lw-art-b pre.tbl{font:12.5px/1.5 ui-monospace,Menlo,Consolas,monospace;white-space:pre;overflow:auto;background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:10px 12px;margin:.4em 0}
+.lw-supp{margin:40px 0 0;border-top:1px solid var(--rule);padding-top:14px;font-family:var(--serif)}
+.lw-supp summary{cursor:pointer;font:700 15px/1.5 var(--sans);color:var(--ink-2);list-style:none;display:flex;align-items:center;gap:8px}
+.lw-supp summary::-webkit-details-marker{display:none}
+.lw-supp summary::before{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);transition:transform .15s;margin-left:4px}
+.lw-supp[open] summary::before{transform:rotate(45deg)}
+.lw-supp h3{margin:22px 0 6px;font:600 14px/1.4 var(--sans);color:var(--ink-2)}
+.lw-supp p{margin:0 0 .3em;text-align:left}
+.lw-supp p.ho{padding-left:1.4em}.lw-supp p.mok{padding-left:2.9em}
+.lw-empty{padding:40px 0;color:var(--ink-3);font-family:var(--sans);text-align:center}
+.lw-src{margin:28px 0 0;font:400 12.5px/1.5 var(--sans);color:var(--ink-3)}
+@media print{.lw-tools,.lw-toc{display:none}}
+</style>
+</head>
+<body>
+<div class="demo">
+  <aside>
+    <div id="law-index" class="lw-index"></div>
+    <hr style="border:0;border-top:1px solid var(--rule);margin:14px 0">
+    <nav id="law-toc" class="lw-toc" aria-label="법령 목차"></nav>
+  </aside>
+  <main>
+    <div id="law-head"></div>
+    <div id="law-text" class="lw-text"></div>
+  </main>
+</div>
+
+<script id="laws-data" type="text/plain">__LAWS_DATA_B64__</script>
+<script id="laws-js">
+window.LawsModule = (() => {
+  let DATA = null, loading = null;
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const CHEV = '<svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>';
+
+  async function load(){
+    if (DATA) return DATA;
+    if (loading) return loading;
+    loading = (async () => {
+      const el = document.getElementById('laws-data');
+      if (!el) throw new Error('laws-data 없음');
+      const b64 = el.textContent.trim();
+      if (!b64 || b64.startsWith('__')) throw new Error('법령 데이터가 비어 있습니다 (빌드 필요)');
+      if (typeof DecompressionStream === 'undefined') throw new Error('이 브라우저는 압축 데이터를 풀 수 없습니다 (DecompressionStream 미지원)');
+      const bin = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+      const stream = new Blob([bin]).stream().pipeThrough(new DecompressionStream('gzip'));
+      const text = await new Response(stream).text();
+      DATA = JSON.parse(text);
+      return DATA;
+    })();
+    return loading;
+  }
+  const lawById = id => DATA && DATA.laws.find(l => l.id === id);
+  function versionOf(law, versionId){
+    if (!law.versions) return null;
+    return law.versions.find(v => v.id === versionId) || law.versions.find(v => v.current) || law.versions[0];
+  }
+  const fmtDate = s => { const m = String(s || '').match(/(\d{4})[.\-]\s*(\d{1,2})[.\-]\s*(\d{1,2})/); return m ? `${m[1]}. ${+m[2]}. ${+m[3]}.` : String(s || ''); };
+
+  function indexHtml(activeLawId){
+    if (!DATA) return '';
+    return DATA.groups.map(g => {
+      const laws = DATA.laws.filter(l => l.group === g.id);
+      if (!laws.length) return '';
+      return `<div class="g"><h4>${esc(g.label)}</h4>${laws.map(l => `<button type="button" data-law="${esc(l.id)}" aria-current="${l.id === activeLawId}">${esc(l.name)}<span class="k">${(l.versions ? (l.versions.find(v => v.current) || l.versions[0]).articles.length : l.articles.length) + '개조'}</span></button>`).join('')}</div>`;
+    }).join('');
+  }
+
+  const artSlug = (lawKey, no) => `${lawKey}-art-${no.replace(/[^0-9의]/g, '')}`;
+  function normNo(q){
+    q = String(q || '').trim().replace(/\s+/g, '');
+    if (!q) return '';
+    const m = q.match(/^(?:제)?(\d+)(?:조)?(?:의(\d+))?(?:조)?$/);
+    if (!m) return q;
+    return `제${m[1]}조${m[2] ? '의' + m[2] : ''}`;
+  }
+
+  function lineHtml([m, t]){
+    if (m === 'T') return `<pre class="tbl">${esc(t)}</pre>`;
+    if (m === 'X') return `<p class="del">${esc(t)}</p>`;
+    if (m === 'N') return `<p class="note">${esc(t)}</p>`;
+    if (!m) return `<p class="pl">${esc(t)}</p>`;
+    let cls = 'hang';
+    if (/^\d+(의\d+)?\.$/.test(m)) cls = 'ho';
+    else if (/^[가-힣](의\d+)?\.$/.test(m)) cls = 'mok';
+    else if (/^\(?\d+\)$|^[가-힣]\)$/.test(m)) cls = 'sub';
+    return `<p class="${cls}"><span class="m">${esc(m)}</span><span class="x">${esc(t)}</span></p>`;
+  }
+  function articleHtml(lawKey, a){
+    return `<article class="lw-art" id="${artSlug(lawKey, a.no)}" data-no="${esc(a.no)}"><h4 class="lw-art-h"><span class="no">${esc(a.no)}</span>${a.t ? `<span class="t">(${esc(a.t)})</span>` : ''}</h4><div class="lw-art-b">${a.b.map(lineHtml).join('')}</div></article>`;
+  }
+  // --- progressive text rendering: pieces (heading+article html) appended in chunks so big laws paint fast ---
+  const CHUNK = 60;
+  const pending = new WeakMap();   // textEl -> {pieces, i, tail, token}
+  function buildPieces(law, body, lawKey){
+    const pieces = [];
+    const toc = body.toc || []; let ti = 0;
+    const arts = body.articles || [];
+    for (let i = 0; i < arts.length; i++){
+      let h = '';
+      while (ti < toc.length && toc[ti].a <= i){ const t = toc[ti++]; h += `<h2 class="lw-h l${t.l}" id="${esc(t.id)}">${esc(t.t)}</h2>`; }
+      pieces.push(h + articleHtml(lawKey, arts[i]));
+    }
+    let tail = '';
+    while (ti < toc.length){ const t = toc[ti++]; tail += `<h2 class="lw-h l${t.l}" id="${esc(t.id)}">${esc(t.t)}</h2>`; }
+    if (body.supp && body.supp.length){
+      tail += `<details class="lw-supp" id="${esc(lawKey)}-supp"><summary>부칙 <span style="font-weight:400;color:var(--ink-3)">${body.supp.length}건</span></summary>` +
+        body.supp.map(s => `<h3>${esc(s.t)}</h3>${s.b.map(([m, t]) => m && /^\d+(의\d+)?\.$/.test(m) ? `<p class="ho">${esc(m)} ${esc(t)}</p>` : (m && /^[가-힣]\.$/.test(m) ? `<p class="mok">${esc(m)} ${esc(t)}</p>` : `<p>${m && m !== 'X' && m !== 'N' && m !== 'T' ? esc(m) + ' ' : ''}${esc(t)}</p>`)).join('')}`).join('') + '</details>';
+    }
+    if (law.meta && law.meta.source) tail += `<p class="lw-src">출처: 국가법령정보센터 (${esc(law.meta.source)}) · 기준일 ${esc(law.meta.asof || '')}</p>`;
+    return {pieces, tail};
+  }
+  function startText(textEl, law, body, lawKey){
+    const {pieces, tail} = buildPieces(law, body, lawKey);
+    const st = {pieces, i: 0, tail, token: {}};
+    pending.set(textEl, st);
+    let head = '';
+    if (body.preamble) head += `<div class="pre"><h3>전문</h3>${body.preamble.split('\n').map(p => `<p>${esc(p)}</p>`).join('')}</div>`;
+    if (!pieces.length) head += '<p class="lw-empty">조문이 없습니다.</p>';
+    textEl.innerHTML = head;
+    appendChunk(textEl, st, CHUNK);           // first chunk now
+    const idle = window.requestIdleCallback || (cb => setTimeout(() => cb({timeRemaining: () => 8}), 16));
+    const step = () => { if (pending.get(textEl) !== st) return; if (st.i >= st.pieces.length) return; appendChunk(textEl, st, CHUNK); if (st.i < st.pieces.length) idle(step); };
+    if (st.i < st.pieces.length) idle(step);
+  }
+  function appendChunk(textEl, st, n){
+    const end = Math.min(st.i + n, st.pieces.length);
+    if (end > st.i){ textEl.insertAdjacentHTML('beforeend', st.pieces.slice(st.i, end).join('')); st.i = end; }
+    if (st.i >= st.pieces.length && st.tail){ textEl.insertAdjacentHTML('beforeend', st.tail); st.tail = ''; }
+  }
+  function flush(textEl){ const st = pending.get(textEl); if (st) appendChunk(textEl, st, Infinity); }
+
+  function tocHtml(body, lawKey){
+    const toc = body.toc || [];
+    if (!toc.length && !(body.supp && body.supp.length)) return '<p class="lw-empty" style="padding:12px 0;text-align:left">장·절 구분이 없는 법령입니다.</p>';
+    // build nested tree from levels
+    const root = {children: []}; const stack = [{node: root, l: 0}];
+    toc.forEach(t => {
+      const node = {t, children: []};
+      while (stack.length > 1 && stack[stack.length - 1].l >= t.l) stack.pop();
+      stack[stack.length - 1].node.children.push(node); stack.push({node, l: t.l});
+    });
+    const rec = (nodes, depth) => `<ul>${nodes.map(n => `<li class="l${n.t.l}${depth === 0 ? ' open' : ''}"><div class="row"><button type="button" class="tg${n.children.length ? '' : ' none'}" aria-label="펼치기">${CHEV}</button><a href="#${esc(n.t.id)}" data-h="${esc(n.t.id)}">${esc(n.t.t)}</a></div>${n.children.length ? rec(n.children, depth + 1) : ''}</li>`).join('')}</ul>`;
+    let h = rec(root.children, 0);
+    if (body.supp && body.supp.length) h += `<ul><li class="l1 supp"><div class="row"><span class="tg none"></span><a href="#${esc(lawKey)}-supp" data-h="${esc(lawKey)}-supp">부칙</a></div></li></ul>`;
+    return h;
+  }
+  function headHtml(law, ver){
+    const g = DATA.groups.find(x => x.id === law.group);
+    const m = law.meta || {};
+    let h = `<div class="kicker">${esc(g ? g.label : '')}${ver ? ' · ' + esc(ver.label) : (m.no ? ' · ' + esc(law.kind) + ' 제' + esc(m.no) + '호' : '')}</div><h1>${esc(law.name)}</h1>`;
+    if (ver){
+      h += `<div class="meta"><b>${esc(ver.alias)}</b> · 공포 ${esc(ver.promulgated)} · 시행 ${esc(ver.effective)} · ${esc(ver.form)}${ver.current ? ' · <b>현행</b>' : ''}</div>`;
+      if (!ver.current) h += `<div class="old">구 헌법 판본입니다 — 현행 헌법은 헌법 제10호(1987. 10. 29. 공포)입니다.</div>`;
+    } else {
+      h += `<div class="meta">${m.promulgated ? '공포 ' + esc(fmtDate(m.promulgated)) : ''}${m.no ? ' (' + esc(law.kind) + ' 제' + esc(m.no) + '호)' : ''}${m.effective ? ' · 시행 ' + esc(fmtDate(m.effective)) : ''}${m.dept ? ' · 소관 ' + esc(m.dept) : ''}${m.status && m.status !== '시행' ? ' · ' + esc(m.status) : ''}</div>`;
+    }
+    h += '<div class="lw-tools">';
+    if (law.versions) h += `<label><span class="ver">개정이력</span><select class="lw-ver" aria-label="헌법 판본 선택">${law.versions.map(v => `<option value="${esc(v.id)}" ${ver && v.id === ver.id ? 'selected' : ''}>${esc(v.label)} — ${esc(v.alias)} · ${esc(v.promulgated)}${v.current ? ' (현행)' : ''}</option>`).join('')}</select></label>`;
+    h += `<label>조문<input class="lw-goto" type="search" inputmode="numeric" placeholder="제750조" aria-label="조문 바로가기"></label>`;
+    h += `<label>찾기<input class="lw-find find" type="search" placeholder="이 법령에서 찾기" aria-label="이 법령에서 찾기"><span class="cnt"></span></label>`;
+    h += '</div>';
+    return h;
+  }
+
+  function goto(textEl, q){
+    const no = normNo(q);
+    if (!no) return false;
+    flush(textEl);
+    const el = Array.from(textEl.querySelectorAll('.lw-art')).find(a => a.dataset.no === no);
+    if (!el) return false;
+    textEl.querySelectorAll('.lw-art.hit').forEach(x => x.classList.remove('hit'));
+    el.classList.add('hit');
+    el.scrollIntoView({block: 'start'});
+    return true;
+  }
+  function find(textEl, q, cntEl){
+    q = (q || '').trim();
+    flush(textEl);
+    const arts = textEl.querySelectorAll('.lw-art');
+    let n = 0;
+    arts.forEach(a => { const ok = !q || a.textContent.includes(q); a.classList.toggle('hide', !ok); if (ok && q) n++; });
+    textEl.querySelectorAll('.lw-h').forEach(h => h.style.display = q ? 'none' : '');
+    const pre = textEl.querySelector('.pre'); if (pre) pre.style.display = q ? 'none' : '';
+    const supp = textEl.querySelector('.lw-supp'); if (supp) supp.style.display = q ? 'none' : '';
+    if (cntEl) cntEl.textContent = q ? `${n}개 조문` : '';
+  }
+
+  function render(opts){
+    const law = lawById(opts.lawId);
+    if (!law){ if (opts.textEl) opts.textEl.innerHTML = '<p class="lw-empty">법령을 선택하세요.</p>'; return; }
+    const ver = versionOf(law, opts.versionId);
+    const body = ver || law;
+    const lawKey = ver ? ver.id : law.id;
+    if (opts.headEl){
+      opts.headEl.innerHTML = headHtml(law, ver);
+      opts.headEl.classList.add('lw-head');
+      const sel = opts.headEl.querySelector('.lw-ver');
+      if (sel) sel.addEventListener('change', () => { render({...opts, versionId: sel.value}); if (opts.onChange) opts.onChange({lawId: law.id, versionId: sel.value}); });
+      const gt = opts.headEl.querySelector('.lw-goto');
+      if (gt) gt.addEventListener('keydown', e => { if (e.key === 'Enter'){ e.preventDefault(); if (!goto(opts.textEl, gt.value)) gt.setCustomValidity('없는 조문'); else gt.setCustomValidity(''); gt.reportValidity && gt.value && !goto(opts.textEl, gt.value) && gt.reportValidity(); } });
+      const fd = opts.headEl.querySelector('.lw-find');
+      if (fd){ let t; fd.addEventListener('input', () => { clearTimeout(t); t = setTimeout(() => find(opts.textEl, fd.value, opts.headEl.querySelector('.cnt')), 160); }); }
+    }
+    if (opts.textEl){ opts.textEl.classList.add('lw-text'); startText(opts.textEl, law, body, lawKey); }
+    if (opts.tocEl){
+      opts.tocEl.innerHTML = tocHtml(body, lawKey);
+      opts.tocEl.classList.add('lw-toc');
+      opts.tocEl.querySelectorAll('.tg').forEach(b => b.addEventListener('click', () => b.closest('li').classList.toggle('open')));
+      opts.tocEl.querySelectorAll('a[data-h]').forEach(a => a.addEventListener('click', e => {
+        e.preventDefault();
+        if (opts.textEl) flush(opts.textEl);
+        const target = opts.textEl && opts.textEl.querySelector('#' + CSS.escape(a.dataset.h));
+        if (target){ if (target.tagName === 'DETAILS') target.open = true; target.scrollIntoView({block: 'start'}); }
+        opts.tocEl.querySelectorAll('a.cur').forEach(x => x.classList.remove('cur')); a.classList.add('cur');
+        if (opts.onNav) opts.onNav(a.dataset.h);
+      }));
+    }
+    return {law, version: ver};
+  }
+  return {load, indexHtml, render, goto, find, flush, lawById, normNo};
+})();
+</script>
+
+<script>
+/* ---- 시험용 호스트 코드 (시안에서는 각자 라우팅에 맞게 작성) ---- */
+(async () => {
+  const idx = document.getElementById('law-index');
+  try { await LawsModule.load(); } catch (e) { document.getElementById('law-text').innerHTML = '<p class="lw-empty">' + e.message + '</p>'; return; }
+  let state = {lawId: (location.hash.match(/#law=([^&]+)/) || [])[1] || 'constitution', versionId: (location.hash.match(/ver=([^&]+)/) || [])[1] || null};
+  const draw = () => {
+    idx.innerHTML = LawsModule.indexHtml(state.lawId);
+    idx.querySelectorAll('[data-law]').forEach(b => b.addEventListener('click', () => { state = {lawId: b.dataset.law, versionId: null}; draw(); window.scrollTo(0, 0); }));
+    LawsModule.render({lawId: state.lawId, versionId: state.versionId, headEl: document.getElementById('law-head'), tocEl: document.getElementById('law-toc'), textEl: document.getElementById('law-text'),
+      onChange: s => { state = s; location.hash = `#law=${s.lawId}&ver=${s.versionId}`; }});
+    location.hash = `#law=${state.lawId}${state.versionId ? '&ver=' + state.versionId : ''}`;
+  };
+  draw();
+})();
+</script>
+</body>
+</html>

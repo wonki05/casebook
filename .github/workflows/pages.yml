@@ -1,0 +1,92 @@
+name: Validate and deploy Casebook
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    permissions:
+      contents: read
+      pages: read
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      CASEBOOK_BROWSER_CHANNEL: chrome
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - name: Install validation tools
+        timeout-minutes: 5
+        run: python -m pip install --retries 2 --timeout 30 -r requirements.txt
+      - name: Verify preinstalled Chrome
+        run: google-chrome --version
+      - name: Install Korean fonts for screenshots
+        timeout-minutes: 3
+        run: |
+          install -d "$HOME/.local/share/fonts"
+          curl --fail --location --retry 1 --connect-timeout 15 --max-time 60 \
+            'https://raw.githubusercontent.com/google/fonts/e7db6ca603fd4862010383ff17ffd6cc4ffac1c0/ofl/notosanskr/NotoSansKR%5Bwght%5D.ttf' \
+            --output "$HOME/.local/share/fonts/NotoSansKR.ttf"
+          printf '%s  %s\n' '194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252' "$HOME/.local/share/fonts/NotoSansKR.ttf" | sha256sum --check
+          fc-cache -f "$HOME/.local/share/fonts"
+          fc-match -f '%{family}\n' 'Noto Sans KR:lang=ko'
+      - name: Test data rules and local server
+        run: python -m unittest discover -s tools -p 'test_*.py'
+      - name: Validate and build both editions
+        run: python tools/make.py validate data laws build check web webcheck
+      - name: Check typography and personal data
+        run: |
+          node tools/test_fulltext.cjs output/casebook.html
+          node --test tools/test_web_data.cjs
+      - name: Upload browser screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: casebook-browser-checks
+          path: shots/web-*.png
+          if-no-files-found: ignore
+          retention-days: 14
+      - name: Upload offline HTML
+        uses: actions/upload-artifact@v4
+        with:
+          name: casebook-offline
+          path: output/casebook.html
+          retention-days: 30
+      - name: Configure Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+      - name: Upload public web artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: output/web
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
