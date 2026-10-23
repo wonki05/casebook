@@ -68,7 +68,9 @@ async def check_filtered_navigation(page, page_id, cases, tabs, case_tab, empty_
     await page.wait_for_selector('#cs.show .pn', timeout=5000)
     await page.click('#cs [data-tab="4"]')
     await page.evaluate("window.__qaActivePanel = document.querySelector('#tabpanel')")
-    await page.click('#btnToc')
+    # The detail sheet covers the global toolbar; use its supported TOC shortcut.
+    await page.keyboard.press('t')
+    await page.wait_for_selector('#panel.show', timeout=5000)
     await page.click(f'#panelBody [data-ytab="{other_tab}"]')
     actual = await page.evaluate("""() => ({
         links: [...document.querySelectorAll('#cs .pn a')].map(a => decodeURIComponent(a.hash.split('/').pop())),
