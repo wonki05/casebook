@@ -24,3 +24,5 @@ data/laws.json
 data/standard-cases/*/pages/
 data/standard-cases/*/chunks/
 data/standard-cases/*/md/_prompts/
+data/standard-cases/*/_run.log
+data/standard-cases/*/_batch.json
