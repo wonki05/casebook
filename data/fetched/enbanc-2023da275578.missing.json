@@ -1,0 +1,14 @@
+{
+ "id": "enbanc-2023da275578",
+ "caseNumber": "2023다275578",
+ "lookupKey": "2023다275578",
+ "kind": "prec",
+ "reason": "law.go.kr에 해당 판례가 등재되어 있지 않음. 한글주소 https://www.law.go.kr/판례/(2023다275578) 는 오류페이지('해당 한글주소명을 찾을 수 없습니다')를 반환하였고(2회 시도), 판례 검색(precSc.do)에서 '2023다275578' 및 '275578' 검색 결과 모두 총 0건. 선고일(2026. 9. 29.)이 최근이어서 아직 국가법령정보센터에 수록되지 않은 것으로 보임.",
+ "triedUrls": [
+  "https://www.law.go.kr/판례/(2023다275578)",
+  "https://www.law.go.kr/precSc.do?menuId=7&subMenuId=47&tabMenuId=213&query=2023다275578",
+  "https://www.law.go.kr/precSc.do?menuId=7&subMenuId=47&tabMenuId=213&query=275578",
+  "https://www.law.go.kr/판례/(2023다275578)"
+ ],
+ "checkedAt": "2026-10-24"
+}

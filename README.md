@@ -5,9 +5,15 @@
 - **단일 HTML 보관본:** `output/casebook.html` — 판례 JSON과 gzip+base64 법령 데이터를 내장하므로 파일 하나로 해당 시점의 자료를 보관할 수 있습니다.
 
 판례가 추가되면 원문 수집·검증·데이터 생성·배포를 수행합니다. 화면 코드를 변경할 필요는 없습니다. 원본 PDF·수집 후보·개인 기록은 웹 배포물에 포함하지 않습니다. GitHub에 파일을 보관하는 것과 Pages URL에 배포하는 것은 별개이며, 배포가 완료되기 전에는 공개 사이트가 생긴 것으로 보지 않습니다.
-**에이전트 작업 안내는 `AGENTS.md`(= `CLAUDE.md`)**, 데이터 스키마는 `data/schema.md`, 명령은 `Makefile` 을 보세요.
-빠른 시작: `pip install -r requirements.txt && python -m playwright install chromium && make all`
-`make` 가 없는 Windows에서는 `python tools/make.py validate data build check web webcheck` 를 실행합니다. 단일 HTML 검사는 `output/casebook.html`, 웹앱 검사는 `output/web/` 을 사용합니다. `dist/` 의 기존 HTML 은 백업으로 보존합니다(`clean` 도 백업을 삭제하지 않습니다).
+**에이전트 작업 안내는 `AGENTS.md`와 `CLAUDE.md`**, 데이터 스키마는 `data/schema.md`, 명령은 `Makefile` 을 보세요.
+빠른 시작(처음 복제한 환경에서도 생성 데이터를 다시 만듭니다):
+
+```powershell
+python -m pip install -r requirements.txt
+python -m playwright install chromium
+python tools/make.py validate data laws build check web webcheck
+```
+`make` 가 없는 Windows에서도 위 명령을 그대로 실행합니다. 단일 HTML 검사는 `output/casebook.html`, 웹앱 검사는 `output/web/` 을 사용합니다. `dist/` 의 기존 HTML 은 백업으로 보존합니다(`clean` 도 백업을 삭제하지 않습니다).
 
 ## 구성
 ```
@@ -84,7 +90,21 @@ python -m http.server 8000 --directory output/web
 
 새 버전은 온라인에서 실행하거나 업데이트를 확인할 때 반영합니다. 오프라인에서는 이미 저장한 정상 자료를 사용합니다. 처음부터 저장하지 않은 전문까지 오프라인에 있다고 가정하지 않습니다. 홈 화면 설치는 Android/iOS 브라우저의 설치·홈 화면 추가 메뉴를 이용하며, PWA 설치와 앱스토어용 설치 패키지 제작은 별개입니다.
 
-GitHub Actions 배포는 검증과 웹 빌드 후 `output/web/` 만 Pages에 게시하도록 구성합니다. 저장소 연결과 Pages 설정이 완료되어 실제 배포 결과가 확인되어야 URL 배포가 완료된 것입니다. 원본 표준판례 PDF·inbox를 포함한 작업 폴더 전체를 게시하지 않습니다.
+## GitHub 저장소와 Pages 배포
+
+소스 저장소는 [wonki05/casebook](https://github.com/wonki05/casebook) 입니다. Pages 설정과 워크플로 실행이 성공한 뒤 사용할 주소는 [https://wonki05.github.io/casebook/](https://wonki05.github.io/casebook/) 입니다. 저장소 생성·업로드만으로 배포가 완료된 것은 아닙니다.
+
+최초 설정:
+
+1. 저장소의 **Settings → Pages → Build and deployment → Source** 를 **GitHub Actions** 로 설정합니다.
+2. **Actions → Validate and deploy Casebook → Run workflow** 로 `main` 브랜치의 첫 배포를 실행하거나, `main` 에 변경을 push합니다.
+3. 검사와 `deploy` 작업이 성공하고 배포 URL이 확인되면 웹앱을 엽니다.
+
+이후 `main` 에 반영한 변경은 `.github/workflows/pages.yml` 이 자동으로 검사·빌드·배포합니다. Pull request에서는 검사만 실행하고 공개 배포는 하지 않습니다. 데이터 생성·검사 명령은 `python tools/make.py validate data laws build check web webcheck` 이며, 검증한 `output/web/` 만 Pages에 게시합니다.
+
+단일 HTML은 저장소에 매번 커밋하지 않습니다. 성공한 Actions 실행의 **Artifacts → casebook-offline** 에서 `output/casebook.html` 을 받을 수 있습니다(워크플로 보관 기간 30일). 로컬에서는 같은 빌드 명령으로 언제든 다시 생성할 수 있습니다.
+
+소스 업로드는 필요한 코드·등록부·목차·공식 수집 JSON·법령 Markdown·설정 파일만 포함합니다. `.gitignore` 는 `output/`, `dist/`, 오타 경로 `ouput/`, `tmp/`, `shots/`, `data/inbox/`, `data/standard-cases/`, 생성된 `data/cases.json`·`data/laws.json`, `.env` 계열, 개인 기록 백업을 제외합니다. 원본 표준판례 PDF는 로컬에서 추출·대조에 사용하며 작업 폴더 전체를 저장소나 Pages에 올리지 않습니다. 새 파일을 추가할 때도 이 업로드 범위를 확인합니다.
 
 ## 재판 ID와 표준판례 우선순위
 
