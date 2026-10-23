@@ -61,14 +61,17 @@ def main():
         if not field and not a.all:
             print(f'{idx}: 대상 밖 분야 — 건너뜀 ({title})'); continue
         stem = f'{year}-{field or "other-" + idx}'
-        name, n = f'{stem}.txt', 1
         if idx in done:
             name = done[idx]
         else:
-            while os.path.exists(os.path.join(a.out, name)):
-                n += 1; name = f'{stem}-{n}.txt'
-            if n == 2:   # 같은 분야 두 번째 기사: 첫 기사를 -1 로 바꿔 짝을 맞춘다
-                os.replace(os.path.join(a.out, f'{stem}.txt'), os.path.join(a.out, f'{stem}-1.txt'))
+            # 같은 연도·분야 기사: 첫 기사는 번호 없이, 두 번째부터 -1(첫 기사 이름을 바꿈), -2, -3 … 으로 이어 붙인다
+            nums = [int(m.group(1)) for f in os.listdir(a.out) for m in [re.fullmatch(re.escape(stem) + r'-(\d+)\.txt', f)] if m]
+            plain = os.path.join(a.out, f'{stem}.txt')
+            if os.path.exists(plain):
+                os.replace(plain, os.path.join(a.out, f'{stem}-{max(nums, default=0) + 1}.txt'))
+                nums.append(max(nums, default=0) + 1)
+                done = {k: (f'{stem}-{nums[-1]}.txt' if v == f'{stem}.txt' else v) for k, v in done.items()}
+            name = f'{stem}-{max(nums) + 1}.txt' if nums else f'{stem}.txt'
         open(os.path.join(a.out, name), 'w', encoding='utf-8').write(f'{title}\n{VIEW.format(idx)}\n{body}\n')
         done[idx] = name
         print(f'{idx}: {name} ← {title} ({len(body)}자)')
