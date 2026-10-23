@@ -38,7 +38,14 @@ jobs:
         run: google-chrome --version
       - name: Install Korean fonts for screenshots
         timeout-minutes: 3
-        run: sudo apt-get -o Acquire::Retries=1 -o Acquire::http::Timeout=30 install -y --no-install-recommends fonts-noto-cjk
+        run: |
+          install -d "$HOME/.local/share/fonts"
+          curl --fail --location --retry 1 --connect-timeout 15 --max-time 60 \
+            'https://raw.githubusercontent.com/google/fonts/e7db6ca603fd4862010383ff17ffd6cc4ffac1c0/ofl/notosanskr/NotoSansKR%5Bwght%5D.ttf' \
+            --output "$HOME/.local/share/fonts/NotoSansKR.ttf"
+          printf '%s  %s\n' '194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252' "$HOME/.local/share/fonts/NotoSansKR.ttf" | sha256sum --check
+          fc-cache -f "$HOME/.local/share/fonts"
+          fc-match -f '%{family}\n' 'Noto Sans KR:lang=ko'
       - name: Test identities and source precedence
         run: python -m unittest discover -s tools -p 'test_identity*.py'
       - name: Validate and build both editions
