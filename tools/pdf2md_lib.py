@@ -339,6 +339,7 @@ _SECTION_HEAD = re.compile(r'^\s*[<〈]\s*((?:[가-힣]\s*){2,12}?)\s*(\(\s*[^()
 _HEADING = re.compile(r'^(제\s*\d+\s*(편|장|절|관))(\s+\S.*)?$|^([ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ]+)\s*[.．]\s*\S')
 _ENTRY_LINE = re.compile(r'^\s*(\d{1,3})\s*[.．]\s*(.*)$')   # 'N.' 만 있는 줄(제목이 앞뒤 줄로 갈린 경우)도 항목 머리
 _RUNHEAD = re.compile(r'^제\s*\d+\s*편(\s*제\s*\d+\s*장)?(\s+\S.*)?$')
+_RUNHEAD2 = re.compile(r'^[가-힣]{2,6}(?:\s[가-힣]{1,4}){0,3}\s+제\s*\d+\s*편(\s*제\s*\d+\s*장)?(\s+\S.*)?$')
 _PAGENO = re.compile(r'^[-–—\s]*\d{1,4}[-–—\s]*$|^-\s*[ivxlcIVXLC]+\s*-$')
 _SENT_END = re.compile(r'(다|요|음|함|됨|임)\s*[.。]?\s*$')
 _COURT_WORD = re.compile(r'대법원|헌재|헌법재판소|대판|대결|법원')
@@ -352,9 +353,11 @@ def strip_furniture(raw_lines):
     if out:
         first = light_clean(out[0])
         runhead = _RUNHEAD.match(first)
-        # 쪽 머리글: '…표준판례연구' / '제N편 제N장 …'(장 제목에 쉼표가 있어도 머리글) / '제N편 …'(짧고 구두점 없을 때만)
+        runhead2 = _RUNHEAD2.match(first)      # '형법총론 제1편 서론' 처럼 분야명이 앞에 붙은 머리글
+        # 쪽 머리글: '…표준판례연구' / '제N편 제N장 …'(장 제목에 쉼표가 있어도 머리글) / '<분야> 제N편 …' / '제N편 …'(짧고 구두점 없을 때만)
         if ('표준판례' in first.replace(' ', '') or
                 (runhead and runhead.group(1) and len(first) <= 60 and not _SENT_END.search(first)) or
+                (runhead2 and len(first) <= 60 and not _SENT_END.search(first)) or
                 (runhead and not runhead.group(1) and len(first) <= 40 and not _SENT_END.search(first) and not re.search(r'[,.]', first))):
             out.pop(0)
     while out and not out[-1].strip():
