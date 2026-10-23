@@ -5,6 +5,9 @@ from playwright.async_api import Error
 
 
 async def launch_chromium(playwright):
+    channel = os.environ.get("CASEBOOK_BROWSER_CHANNEL")
+    if channel:
+        return await playwright.chromium.launch(channel=channel)
     try:
         return await playwright.chromium.launch()
     except Error as error:
