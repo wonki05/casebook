@@ -43,6 +43,9 @@ def main(argv=None):
                 rejected.append((f, n, f'대응하는 판정 대기 기록 없음 {key}')); continue
             if base.get('verdict', 'pending') != 'pending' and key in seen:
                 rejected.append((f, n, f'중복 판정 {key}')); continue
+            if base.get('verdict', 'pending') != 'pending' and base.get('verdict') == v.get('verdict') and (base.get('note') or '') == (v.get('note') or '') \
+                    and (base.get('fixedSections') or {}) == (v.get('fixedSections') or {}) and (base.get('title') or '') == (v.get('title') or ''):
+                continue          # 이미 같은 판정이 수거되어 있음(재실행 시 중복 기록 방지)
             if v.get('verdict') not in VERDICTS:
                 rejected.append((f, n, f'verdict 오류 {v.get("verdict")!r} {key}')); continue
             if v.get('reason') != 'title':
