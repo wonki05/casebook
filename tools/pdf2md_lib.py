@@ -321,14 +321,24 @@ def location_parts(location):
     return [p for p in parts if not re.fullmatch(r'\(?\s*(절\s*)?없음\s*\)?', p)]
 
 
+_LOC_CORE = re.compile(r'^(제\s*\d+\s*(편|장|절|관)|[ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫIVX]+\s*[.．])')
+
+
 def location_compatible(location, labels, chunk_location=None):
-    """md 의 '- 위치:' 와 skeleton 의 tocLabels(또는 청크 위치) 가 서로의 부분집합이면 호환."""
-    md = {norm_label(p) for p in location_parts(location)}
+    """md 의 '- 위치:' 와 skeleton 의 tocLabels(또는 청크 위치) 가 서로의 부분집합이면 호환.
+    분야명(총칙·상행위, 형법각론 등 맨 앞 조각)은 청크 생성기가 정하는 값이라 비교에서 뺀다 — 편·장·절(로마숫자 절 포함)만 견준다."""
+    parts = location_parts(location)
+    md = {norm_label(p) for p in parts}
     if not md:
         return False
+    md_core = {norm_label(p) for p in parts if _LOC_CORE.match(p.strip())}
     for ref in (labels or [], location_parts(chunk_location)):
-        sk = {norm_label(p) for p in ref if p}
+        ref = [p for p in ref if p]
+        sk = {norm_label(p) for p in ref}
         if sk and (md <= sk or sk <= md):
+            return True
+        sk_core = {norm_label(p) for p in ref if _LOC_CORE.match(p.strip())}
+        if md_core and sk_core and (md_core <= sk_core or sk_core <= md_core):
             return True
     return False
 
