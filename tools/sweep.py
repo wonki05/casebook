@@ -97,7 +97,8 @@ async def check_filtered_navigation(page, page_id, cases, tabs, case_tab, empty_
     expected = ([selected[pos - 1]['id']] if pos else []) + ([selected[pos + 1]['id']] if pos + 1 < len(selected) else [])
     if after != {'selected': [other_tab], 'links': expected}:
         raise AssertionError(f'filter changed selected year or bypassed subject: {after}')
-    await page.evaluate("openPanel(false)")
+    await page.click('#btnTocClose')
+    await page.wait_for_selector('#panel:not(.show)', state='attached')
     if expected:
         target = expected[0]
         await page.locator('#cs .pn a').first.click()
