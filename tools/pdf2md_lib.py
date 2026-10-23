@@ -351,8 +351,11 @@ def strip_furniture(raw_lines):
         out.pop(0)
     if out:
         first = light_clean(out[0])
-        if '표준판례' in first.replace(' ', '') or (_RUNHEAD.match(first) and len(first) <= 40 and not _SENT_END.search(first)
-                                                   and not re.search(r'[,.]', first)):
+        runhead = _RUNHEAD.match(first)
+        # 쪽 머리글: '…표준판례연구' / '제N편 제N장 …'(장 제목에 쉼표가 있어도 머리글) / '제N편 …'(짧고 구두점 없을 때만)
+        if ('표준판례' in first.replace(' ', '') or
+                (runhead and runhead.group(1) and len(first) <= 60 and not _SENT_END.search(first)) or
+                (runhead and not runhead.group(1) and len(first) <= 40 and not _SENT_END.search(first) and not re.search(r'[,.]', first))):
             out.pop(0)
     while out and not out[-1].strip():
         out.pop()
