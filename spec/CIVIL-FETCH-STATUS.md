@@ -50,7 +50,7 @@ law.go.kr 에서 민법 표준판례 917건의 공식 전문을 `tools/fetch_law
 미게재는 나중에 `python -X utf8 tools/fetch_lawgo.py --all-missing --retry-missing` 로 재시도할 수 있다. 다른 사이트의 텍스트는 규칙 1에 따라 `fetched/` 에 넣지 않았다.
 
 ## 검증
-- `make validate`: 오류 0. `make data build web` 성공(수록 3,236건; 전문 수는 마지막 2건 수집 전 빌드 기준 1,478건). `make webcheck`(HTTP·오프라인·갱신 거부 등) 통과.
+- `make validate`: 오류 0. `make data build web` 성공(수록 3,236건; 전문 수는 마지막 2건 수집 전 빌드 기준 1,478건). `make webcheck`(HTTP·오프라인·갱신 거부 등) 통과. **`make check`(화면 전수 sweep)는 45분 이상 돌았으나 끝나지 않아 중단했다 — 통과로 보고하지 않는다.** 필요하면 사용자가 직접 `python tools/make.py check` 를 실행한다.
 - 공식 인용문 ↔ 등록부 메타 대조(`fetch_unit.py audit`, crosscheck.py 와 같은 4건): 법원·선고일·유형·사건번호 일치 903건, **불일치 4건**은 아래.
 - crosscheck(민법): ok 872 · low-similarity 26 · meta-mismatch 4 · missing 10. low-similarity 26건은 모두 사건번호·선고일·법원·유형이 일치한다. 기존 검토 3건과 이번 23건 모두 같은 재판이며 요지의 서술 범위·표현이 다른 것으로 판정했다(다른 재판 오결합 0).
   - 다만 Haiku 1차 판정은 원문 대조가 필요하다고 따로 적은 곳이 있다: 표준판례 판결요지 문장 누락 의심(std-civil-573, "승낙함으로써 당해 근로관계를" 앞뒤), 오기 의심(std-civil-834 "자(자)"). 표준판례 PDF 원쪽 대조는 하지 않았고 `standardSource` 는 그대로다.
