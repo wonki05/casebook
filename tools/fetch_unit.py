@@ -4,11 +4,14 @@
 수집 자체는 tools/fetch_lawgo.py 가 하고(law.go.kr 에서 추출한 원문만 data/fetched 에 저장), 이 도구는
   - plan : 목차 노드별로 사건 id 를 단원으로 나눈 계획(JSON)을 만든다.
   - run  : 한 단원을 청크 단위로 수집하고, 실패 건을 한 번 더 시도한 뒤, 결과를 검사해 보고서를 남기고 (--commit 이면) 커밋한다.
+  - resolve: 한글주소 조회에 실패한 건을 law.go.kr 검색(사건번호)으로 다시 찾는다. 사건번호와 선고일이 등록부와 모두 일치하는 결과가
+             하나일 때만 그 판례의 공식 페이지를 같은 방식으로 추출한다(선고일이 다르거나 후보가 여럿이면 수집하지 않고 보고서에 남긴다).
   - audit: 단원(또는 계획 전체)의 수집 결과를 읽기 전용으로 검사한다.
 단원마다 별도 git worktree 에서 `run` 을 돌리면 서로 다른 파일만 만들므로 병합 충돌이 없다.
 
   python -X utf8 tools/fetch_unit.py plan --subject civil --spec <units-spec.json> --out spec/fetch-units-civil.json
   python -X utf8 tools/fetch_unit.py run  --plan spec/fetch-units-civil.json --unit u01-general [--chunk 15] [--delay 1.5] [--commit]
+  python -X utf8 tools/fetch_unit.py resolve --plan spec/fetch-units-civil.json --unit u01-general [--commit]
   python -X utf8 tools/fetch_unit.py audit --plan spec/fetch-units-civil.json [--unit u01-general]
 
 spec 파일: {"units": [{"name": "u01-general", "label": "총칙 통칙·인·법인·물건", "nodes": ["mb-1-1", "mb-1-2"]}, ...]}
@@ -32,6 +35,9 @@ FETCHED = os.path.join(ROOT, 'data', 'fetched')
 REPORTS = os.path.join(ROOT, 'spec', 'fetch-reports')
 FETCH = os.path.join(ROOT, 'tools', 'fetch_lawgo.py')
 TRAILER = 'Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>'
+SEARCH_URL = 'https://www.law.go.kr/precSc.do?menuId=7&subMenuId=47&tabMenuId=213&query='
+RESULT_JS = r"""() => Array.from(document.querySelectorAll("a[onclick*='precView']")).map(a => ({
+  text: a.innerText.replace(/\s+/g, ' ').trim(), seq: ((/precView\('(\d+)'/.exec(a.getAttribute('onclick')) || [])[1]) || ''}))"""
 
 # 공식 인용문: [대법원 2003. 7. 24. 선고 2001다48781 전원합의체 판결] / [대법원 2008. 3. 14. 자 2007마123 결정]
 CITE_RE = re.compile(r'\[\s*(?P<court>\S+(?:\s\S+?법원)?)\s+(?P<y>\d{4})\.\s*(?P<m>\d{1,2})\.\s*(?P<d>\d{1,2})\.\s*(?P<kind>선고|자)\s+(?P<num>\S+?)(?P<eb>\s+전원합의체)?\s+(?P<type>판결|결정|명령)\s*\]')
@@ -220,21 +226,115 @@ def cmd_run(a):
     for f in r['flagged']:
         print(f"  FLAG {f['id']} {f['caseNumber']}: {'; '.join(f['flags'])}")
     if a.commit:
-        if r['waiting']:
-            sys.exit(f"수집이 끝나지 않은 건이 있어 커밋하지 않습니다: {r['waiting'][:5]}")
-        paths = [os.path.relpath(p, ROOT).replace(os.sep, '/') for i in u['ids'] for p in (fetched_path(i), missing_path(i)) if os.path.exists(p)]
-        paths.append(os.path.relpath(rep, ROOT).replace(os.sep, '/'))
-        add = git('add', '--pathspec-from-file=-', input_text='\n'.join(paths) + '\n')
-        if add.returncode:
-            sys.exit('git add 실패: ' + add.stderr)
-        msg = f"{plan['subjectLabel']} 표준판례 공식 전문 수집: {u['name']} (성공 {r['ok']}건, 미게재 {len(r['missing'])}건)"
-        body = 'law.go.kr 에서 tools/fetch_lawgo.py 로 추출한 원문만 data/fetched 에 보존.'
-        if r['flagged']:
-            body += f"\n공식 인용문과 등록부 메타가 다른 {len(r['flagged'])}건은 보고서(spec/fetch-reports)에 기록, 판정 대기."
-        cm = git('commit', '-m', msg, '-m', body, '-m', TRAILER)
-        print(cm.stdout.strip() or cm.stderr.strip())
-        if cm.returncode:
-            sys.exit(1)
+        commit_unit(plan, u, r, rep, f"{plan['subjectLabel']} 표준판례 공식 전문 수집: {u['name']} (성공 {r['ok']}건, 미게재 {len(r['missing'])}건)")
+
+
+def commit_unit(plan, u, r, rep, msg):
+    if r['waiting']:
+        sys.exit(f"수집이 끝나지 않은 건이 있어 커밋하지 않습니다: {r['waiting'][:5]}")
+    paths = [os.path.relpath(p, ROOT).replace(os.sep, '/') for i in u['ids'] for p in (fetched_path(i), missing_path(i)) if os.path.exists(p)]
+    paths.append(os.path.relpath(rep, ROOT).replace(os.sep, '/'))
+    add = git('add', '--pathspec-from-file=-', input_text='\n'.join(paths) + '\n')
+    if add.returncode:
+        sys.exit('git add 실패: ' + add.stderr)
+    body = 'law.go.kr 에서 tools/fetch_lawgo.py 로 추출한 원문만 data/fetched 에 보존.'
+    if r['flagged']:
+        body += f"\n공식 인용문과 등록부 메타가 다른 {len(r['flagged'])}건은 보고서(spec/fetch-reports)에 기록, 판정 대기."
+    cm = git('commit', '-m', msg, '-m', body, '-m', TRAILER)
+    print(cm.stdout.strip() or cm.stderr.strip())
+    if cm.returncode:
+        sys.exit(1)
+
+
+BRACKET_RE = re.compile(r'\[([^\[\]]+)\]\s*$')
+DATE_IN_RE = re.compile(r'(\d{4})\.\s*(\d{1,2})\.\s*(\d{1,2})\.')
+
+
+def parse_result(text, key):
+    """검색 결과 한 줄('제목 [대법원 2017. 3. 15. 선고 2013다79887 판결]')에서 법원·선고일과 사건번호 일치 여부를 읽는다."""
+    m = BRACKET_RE.search(text)
+    if not m:
+        return None
+    cite = m.group(1)
+    d = DATE_IN_RE.search(cite)
+    if not d:
+        return None
+    parts = re.split(r'\s(?:선고|자)\s', cite, maxsplit=1)
+    nums = parts[1] if len(parts) > 1 else ''
+    return {'court': cite.split()[0], 'date': f"{int(d[1]):04d}-{int(d[2]):02d}-{int(d[3]):02d}", 'cite': '[' + cite + ']',
+            'numberMatch': bool(re.search(r'(?<![0-9])' + re.escape(key) + r'(?![0-9])', nums))}
+
+
+def resolve_by_search(page, c):
+    """검색 결과에서 사건번호·선고일이 등록부와 모두 같은 판례의 precSeq 를 찾는다. -> (seq 또는 None, 결과 설명)"""
+    from urllib.parse import quote
+    key = c.get('lookupKey') or c['caseNumber']
+    page.goto(SEARCH_URL + quote(key, safe=''), wait_until='domcontentloaded', timeout=60000)
+    try:
+        page.wait_for_selector("a[onclick*='precView']", timeout=15000)
+    except Exception:
+        page.wait_for_timeout(1500)
+    hits = []
+    for r in page.evaluate(RESULT_JS):
+        pr = parse_result(r['text'], key)
+        if pr and pr['numberMatch'] and r['seq']:
+            hits.append({**pr, 'seq': r['seq']})
+    exact = [h for h in hits if h['date'] == c.get('decisionDate')]
+    if len(exact) == 1:
+        return exact[0]['seq'], {'outcome': 'found', 'cite': exact[0]['cite']}
+    if len(exact) > 1:
+        return None, {'outcome': 'ambiguous', 'candidates': exact}
+    if hits:
+        return None, {'outcome': 'date-conflict', 'registryDate': c.get('decisionDate'), 'candidates': hits}
+    return None, {'outcome': 'no-result'}
+
+
+def cmd_resolve(a):
+    import fetch_lawgo
+    from playwright.sync_api import sync_playwright
+    plan = load_plan(a.plan)
+    u = pick_units(plan, a.unit)[0]
+    by_id = {c['id']: c for c in load_registry()}
+    todo = [i for i in u['ids'] if not os.path.exists(fetched_path(i)) and os.path.exists(missing_path(i))]
+    print(f"{u['name']}: 검색으로 다시 찾을 미게재 {len(todo)}건", flush=True)
+    outcomes = {}
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page(user_agent=fetch_lawgo.UA)
+        for cid in todo:
+            c = by_id[cid]
+            try:
+                seq, info = resolve_by_search(page, c)
+                if seq:
+                    t = {'id': cid, 'caseNumber': c['caseNumber'], 'lookupKey': c.get('lookupKey') or c['caseNumber'], 'kind': 'prec', 'seq': seq}
+                    res = fetch_lawgo.fetch_one_pw(page, t)
+                    if res['ok']:
+                        json.dump(res['rec'], open(fetched_path(cid), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+                        os.remove(missing_path(cid))
+                        info['outcome'] = 'fetched'
+                        info['seq'] = seq
+                    else:
+                        info = {'outcome': 'fetch-failed', 'seq': seq, 'reason': res['reason'][:160]}
+            except Exception as e:
+                info = {'outcome': 'error', 'reason': f'{type(e).__name__}: {e}'[:160]}
+            outcomes[cid] = info
+            print(f"  {info['outcome']:<13} {cid} {c['caseNumber']}", flush=True)
+            time.sleep(a.delay)
+        browser.close()
+    rep = os.path.join(REPORTS, f"{plan['subject']}-{u['name']}.json")
+    old = json.load(open(rep, encoding='utf-8')) if os.path.exists(rep) else {}
+    r = audit_unit(plan, u)
+    r['retried'] = old.get('retried', [])
+    r['elapsedSec'] = old.get('elapsedSec')
+    r['search'] = outcomes
+    os.makedirs(REPORTS, exist_ok=True)
+    json.dump(r, open(rep, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    n = sum(1 for v in outcomes.values() if v['outcome'] == 'fetched')
+    print(f"완료 {u['name']}: 검색으로 {n}건 추가 수집 → 성공 {r['ok']} / 미게재·실패 {len(r['missing'])} / 메타 불일치 {len(r['flagged'])} / 대기 {len(r['waiting'])}")
+    for f in r['flagged']:
+        print(f"  FLAG {f['id']} {f['caseNumber']}: {'; '.join(f['flags'])}")
+    if a.commit:
+        commit_unit(plan, u, r, rep, f"{plan['subjectLabel']} 표준판례 공식 전문 수집: {u['name']} 검색 보완 (추가 {n}건, 성공 {r['ok']}건, 미게재 {len(r['missing'])}건)")
 
 
 def main():
@@ -243,9 +343,10 @@ def main():
     p = sub.add_parser('plan'); p.add_argument('--subject', required=True, choices=subjects.STANDARD_IDS); p.add_argument('--spec', required=True); p.add_argument('--out', required=True)
     p = sub.add_parser('run'); p.add_argument('--plan', required=True); p.add_argument('--unit', required=True)
     p.add_argument('--chunk', type=int, default=15); p.add_argument('--delay', type=float, default=1.5); p.add_argument('--commit', action='store_true')
+    p = sub.add_parser('resolve'); p.add_argument('--plan', required=True); p.add_argument('--unit', required=True); p.add_argument('--delay', type=float, default=1.5); p.add_argument('--commit', action='store_true')
     p = sub.add_parser('audit'); p.add_argument('--plan', required=True); p.add_argument('--unit')
     a = ap.parse_args()
-    {'plan': cmd_plan, 'run': cmd_run, 'audit': cmd_audit}[a.cmd](a)
+    {'plan': cmd_plan, 'run': cmd_run, 'resolve': cmd_resolve, 'audit': cmd_audit}[a.cmd](a)
 
 
 if __name__ == '__main__':
