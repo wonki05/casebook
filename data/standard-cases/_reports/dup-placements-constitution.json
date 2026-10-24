@@ -1,0 +1,461 @@
+{
+ "subject": "constitution",
+ "registered": [
+  {
+   "id": "std-constitution-288",
+   "caseNumber": "2008헌바141등",
+   "title": "소급입법금지원칙(2)：친일재산 국가귀속법 사례",
+   "tocPath": [
+    "hb-1",
+    "hb-1-2",
+    "hb-1-2-2"
+   ],
+   "decisionId": "cc-2008heonba141-20110331-decision"
+  },
+  {
+   "id": "std-constitution-289",
+   "caseNumber": "99헌마139등",
+   "title": "헌법상 보장된 기본권의 의미",
+   "tocPath": [
+    "hb-2",
+    "hb-2-1",
+    "hb-2-1-1"
+   ],
+   "decisionId": "cc-99heonma139-20010321-decision"
+  },
+  {
+   "id": "std-constitution-290",
+   "caseNumber": "95헌가16",
+   "title": "법률의 명확성원칙(2)",
+   "tocPath": [
+    "hb-2",
+    "hb-2-1",
+    "hb-2-1-6"
+   ],
+   "decisionId": "cc-95heonga16-19980430-decision"
+  },
+  {
+   "id": "std-constitution-291",
+   "caseNumber": "89헌가95",
+   "title": "과잉금지원칙의 의의와 근거",
+   "tocPath": [
+    "hb-2",
+    "hb-2-1",
+    "hb-2-1-6"
+   ],
+   "decisionId": "cc-89heonga95-19900903-decision"
+  },
+  {
+   "id": "std-constitution-292",
+   "caseNumber": "96헌가18",
+   "title": "소비자의 자기결정권과 자도소주구입명령제도",
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-1"
+   ],
+   "decisionId": "cc-96heonga18-19961226-decision"
+  },
+  {
+   "id": "std-constitution-293",
+   "caseNumber": "89헌가37등",
+   "title": "평등의 입법자 구속 여부",
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-2"
+   ],
+   "decisionId": "cc-89heonga37-19890524-decision"
+  },
+  {
+   "id": "std-constitution-294",
+   "caseNumber": "96헌가18",
+   "title": "비교되는 사실관계의 동일성 판단기준",
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-2"
+   ],
+   "decisionId": "cc-96heonga18-19961226-decision"
+  },
+  {
+   "id": "std-constitution-295",
+   "caseNumber": "98헌마363",
+   "title": "평등의 심사 기준",
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-2"
+   ],
+   "decisionId": "cc-98heonma363-19991223-decision"
+  },
+  {
+   "id": "std-constitution-296",
+   "caseNumber": "2008헌바141등",
+   "title": "헌법 제11조 제1항 후문 사유의 성격",
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-2"
+   ],
+   "decisionId": "cc-2008heonba141-20110331-decision"
+  },
+  {
+   "id": "std-constitution-297",
+   "caseNumber": "96헌가2등",
+   "title": "개별사건법률금지의 원칙과 평등",
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-2"
+   ],
+   "decisionId": "cc-96heonga2-19960216-decision"
+  },
+  {
+   "id": "std-constitution-298",
+   "caseNumber": "2016헌마344등",
+   "title": "디엔에이신원확인정보의 관리",
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-4"
+   ],
+   "decisionId": "cc-2016heonma344-20180830-decision"
+  },
+  {
+   "id": "std-constitution-299",
+   "caseNumber": "95헌가16",
+   "title": "음란과 저속의 구별기준 및 성표현물 출판금지의 위헌 여부",
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-6"
+   ],
+   "decisionId": "cc-95heonga16-19980430-decision"
+  },
+  {
+   "id": "std-constitution-300",
+   "caseNumber": "2011헌바172등",
+   "title": "민간기업에 의한 공용수용",
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-7"
+   ],
+   "decisionId": "cc-2011heonba172-20141030-decision"
+  },
+  {
+   "id": "std-constitution-301",
+   "caseNumber": "2000헌마91등",
+   "title": "기탁금의 위헌 여부(1)",
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-8"
+   ],
+   "decisionId": "cc-2000heonma91-20010719-decision"
+  },
+  {
+   "id": "std-constitution-302",
+   "caseNumber": "95헌바3",
+   "title": "군인․공무원 등의 국가배상청구권 제한",
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-9"
+   ],
+   "decisionId": "cc-95heonba3-19951228-decision"
+  },
+  {
+   "id": "std-constitution-303",
+   "caseNumber": "95헌가6등",
+   "title": "동성동본금혼",
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-11"
+   ],
+   "decisionId": "cc-95heonga6-19970716-decision"
+  },
+  {
+   "id": "std-constitution-304",
+   "caseNumber": "2003헌가5등",
+   "title": "부성(父姓主義)의 원칙",
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-11"
+   ],
+   "decisionId": "cc-2003heonga5-20051222-decision"
+  },
+  {
+   "id": "std-constitution-305",
+   "caseNumber": "2018헌마1162등",
+   "title": "의사공개원칙",
+   "tocPath": [
+    "hb-3",
+    "hb-3-1"
+   ],
+   "decisionId": "cc-2018heonma1162-20220127-decision"
+  },
+  {
+   "id": "std-constitution-306",
+   "caseNumber": "2019헌라6등",
+   "title": "무제한토론",
+   "tocPath": [
+    "hb-3",
+    "hb-3-1"
+   ],
+   "decisionId": "cc-2019heonra6-20200527-decision"
+  },
+  {
+   "id": "std-constitution-307",
+   "caseNumber": "2004헌나1",
+   "title": "국회 탄핵소추사유(1)",
+   "tocPath": [
+    "hb-3",
+    "hb-3-1"
+   ],
+   "decisionId": "cc-2004heonna1-20040514-decision"
+  },
+  {
+   "id": "std-constitution-308",
+   "caseNumber": "2004헌나1",
+   "title": "국회 탄핵소추사유(2)",
+   "tocPath": [
+    "hb-3",
+    "hb-3-1"
+   ],
+   "decisionId": "cc-2004heonna1-20040514-decision"
+  },
+  {
+   "id": "std-constitution-309",
+   "caseNumber": "96헌라2",
+   "title": "국회자율권의 범위와 한계",
+   "tocPath": [
+    "hb-3",
+    "hb-3-1"
+   ],
+   "decisionId": "cc-96heonra2-19970716-decision"
+  },
+  {
+   "id": "std-constitution-310",
+   "caseNumber": "2004헌나1",
+   "title": "대통령의 중요정책 국민투표 부의권의 성격",
+   "tocPath": [
+    "hb-3",
+    "hb-3-2"
+   ],
+   "decisionId": "cc-2004heonna1-20040514-decision"
+  },
+  {
+   "id": "std-constitution-311",
+   "caseNumber": "2006헌마788",
+   "title": "국가의 외교행위에 대한 사법심사",
+   "tocPath": [
+    "hb-3",
+    "hb-3-2"
+   ],
+   "decisionId": "cc-2006heonma788-20110830-decision"
+  },
+  {
+   "id": "std-constitution-312",
+   "caseNumber": "98헌바70",
+   "title": "의회유보의 의미",
+   "tocPath": [
+    "hb-3",
+    "hb-3-2"
+   ],
+   "decisionId": "cc-98heonba70-19990527-decision"
+  },
+  {
+   "id": "std-constitution-313",
+   "caseNumber": "2004헌나1",
+   "title": "탄핵소추와 적법절차",
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-3"
+   ],
+   "decisionId": "cc-2004heonna1-20040514-decision"
+  },
+  {
+   "id": "std-constitution-314",
+   "caseNumber": "2014헌마7",
+   "title": "정당해산심판절차에서 민사소송법의 준용",
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-4"
+   ],
+   "decisionId": "cc-2014heonma7-20140227-decision"
+  },
+  {
+   "id": "std-constitution-315",
+   "caseNumber": "96헌라2",
+   "title": "권한쟁의심판의 당사자능력(1)",
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-5"
+   ],
+   "decisionId": "cc-96heonra2-19970716-decision"
+  },
+  {
+   "id": "std-constitution-316",
+   "caseNumber": "2002헌라1",
+   "title": "권한쟁의심판의 대상적격(4)",
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-5"
+   ],
+   "decisionId": "cc-2002heonra1-20031030-decision"
+  },
+  {
+   "id": "std-constitution-317",
+   "caseNumber": "2009헌라8등",
+   "title": "권한쟁의심판의 당사자적격(4)",
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-5"
+   ],
+   "decisionId": "cc-2009heonra8-20091029-decision"
+  },
+  {
+   "id": "std-constitution-318",
+   "caseNumber": "2022헌라4",
+   "title": "권한쟁의심판의 권한침해가능성",
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-5"
+   ],
+   "decisionId": "cc-2022heonra4-20230323-decision"
+  },
+  {
+   "id": "std-constitution-319",
+   "caseNumber": "2002헌라1",
+   "title": "권한쟁의심판의 권리보호이익(심판의 이익)",
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-5"
+   ],
+   "decisionId": "cc-2002heonra1-20031030-decision"
+  },
+  {
+   "id": "std-constitution-320",
+   "caseNumber": "89헌마221",
+   "title": "헌법재판소법 제68조 제1항과 같은 조 제2항 헌법소원심판의 법적 성격 및 관계",
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-6"
+   ],
+   "decisionId": "cc-89heonma221-19940428-decision"
+  },
+  {
+   "id": "std-constitution-321",
+   "caseNumber": "2004헌바81",
+   "title": "태아의 청구인능력",
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-6"
+   ],
+   "decisionId": "cc-2004heonba81-20080731-decision"
+  },
+  {
+   "id": "std-constitution-322",
+   "caseNumber": "99헌마494",
+   "title": "외국인의 청구인능력",
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-6"
+   ],
+   "decisionId": "cc-99heonma494-20011129-decision"
+  },
+  {
+   "id": "std-constitution-323",
+   "caseNumber": "99헌마139등",
+   "title": "공권력의 행사 또는 불행사",
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-6"
+   ],
+   "decisionId": "cc-99heonma139-20010321-decision"
+  },
+  {
+   "id": "std-constitution-324",
+   "caseNumber": "99헌마139등",
+   "title": "조약의 공권력성",
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-6"
+   ],
+   "decisionId": "cc-99heonma139-20010321-decision"
+  },
+  {
+   "id": "std-constitution-325",
+   "caseNumber": "93헌마186",
+   "title": "통치행위의 공권력성",
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-6"
+   ],
+   "decisionId": "cc-93heonma186-19960229-decision"
+  },
+  {
+   "id": "std-constitution-326",
+   "caseNumber": "92헌마68등",
+   "title": "현재성 요건의 예외",
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-6"
+   ],
+   "decisionId": "cc-92heonma68-19921001-decision"
+  },
+  {
+   "id": "std-constitution-327",
+   "caseNumber": "2001헌마152",
+   "title": "권리보호이익의 의의",
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-6"
+   ],
+   "decisionId": "cc-2001heonma152-20010927-decision"
+  },
+  {
+   "id": "std-constitution-328",
+   "caseNumber": "91헌마111",
+   "title": "예외적인 심판이익의 인정 사유",
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-6"
+   ],
+   "decisionId": "cc-91heonma111-19920128-decision"
+  },
+  {
+   "id": "std-constitution-329",
+   "caseNumber": "91헌마111",
+   "title": "부수적 규범통제",
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-6"
+   ],
+   "decisionId": "cc-91heonma111-19920128-decision"
+  }
+ ],
+ "skipped": [],
+ "note": "배치 정보만 등록(standardSource 없음). 표준판례 텍스트는 같은 decisionId 의 첫 배치 것을 build_data 가 적용한다. 건너뛴 항목에만 있는 문구는 판정 후 합집합으로 더한다."
+}

@@ -1,0 +1,331 @@
+{
+ "subject": "administrative",
+ "registered": [
+  {
+   "id": "std-administrative-457",
+   "caseNumber": "2017두34087",
+   "title": "사인의 공법행위 (10) : 수리의 법적 성질",
+   "tocPath": [
+    "hj-1",
+    "hj-1-1",
+    "hj-1-1-3"
+   ],
+   "decisionId": "sc-2017du34087-20170530-judgment"
+  },
+  {
+   "id": "std-administrative-458",
+   "caseNumber": "2018두44302",
+   "title": "사인의 공법행위 (12)：수리의 법적 성질",
+   "tocPath": [
+    "hj-1",
+    "hj-1-1",
+    "hj-1-1-3"
+   ],
+   "decisionId": "sc-2018du44302-20181025-judgment"
+  },
+  {
+   "id": "std-administrative-459",
+   "caseNumber": "2003두7606",
+   "title": "행정행위의 취소와 철회 (1)",
+   "tocPath": [
+    "hj-1",
+    "hj-1-2",
+    "hj-1-2-1"
+   ],
+   "decisionId": "sc-2003du7606-20040722-judgment"
+  },
+  {
+   "id": "std-administrative-460",
+   "caseNumber": "2018두104",
+   "title": "행정행위의 취소와 철회 (3)",
+   "tocPath": [
+    "hj-1",
+    "hj-1-2",
+    "hj-1-2-1"
+   ],
+   "decisionId": "sc-2018du104-20191017-judgment"
+  },
+  {
+   "id": "std-administrative-461",
+   "caseNumber": "2003다6422",
+   "title": "행정행위의 취소와 철회 (6)",
+   "tocPath": [
+    "hj-1",
+    "hj-1-2",
+    "hj-1-2-1"
+   ],
+   "decisionId": "sc-2003da6422-20030530-judgment"
+  },
+  {
+   "id": "std-administrative-462",
+   "caseNumber": "92누1728",
+   "title": "행정규칙 (5)：법령보충규칙(행정규칙 형식의 법규명령)",
+   "tocPath": [
+    "hj-1",
+    "hj-1-2",
+    "hj-1-2-2"
+   ],
+   "decisionId": "sc-92nu1728-19940308-judgment"
+  },
+  {
+   "id": "std-administrative-463",
+   "caseNumber": "2014두11328",
+   "title": "공법상 계약 (5)：사법상 계약으로 본 경우",
+   "tocPath": [
+    "hj-1",
+    "hj-1-2",
+    "hj-1-2-2"
+   ],
+   "decisionId": "sc-2014du11328-20180213-judgment"
+  },
+  {
+   "id": "std-administrative-464",
+   "caseNumber": "2017두38874",
+   "title": "처분의 방식",
+   "tocPath": [
+    "hj-1",
+    "hj-1-2",
+    "hj-1-2-3"
+   ],
+   "decisionId": "sc-2017du38874-20190711-judgment"
+  },
+  {
+   "id": "std-administrative-465",
+   "caseNumber": "82누420",
+   "title": "절차하자의 효과 (2)",
+   "tocPath": [
+    "hj-1",
+    "hj-1-2",
+    "hj-1-2-3"
+   ],
+   "decisionId": "sc-82nu420-19830726-judgment"
+  },
+  {
+   "id": "std-administrative-466",
+   "caseNumber": "2016다213916",
+   "title": "대집행：대집행의 대상 (1)",
+   "tocPath": [
+    "hj-1",
+    "hj-1-3"
+   ],
+   "decisionId": "sc-2016da213916-20170428-judgment"
+  },
+  {
+   "id": "std-administrative-467",
+   "caseNumber": "2015두35116",
+   "title": "이행강제금 (3)",
+   "tocPath": [
+    "hj-1",
+    "hj-1-3"
+   ],
+   "decisionId": "sc-2015du35116-20180125-judgment"
+  },
+  {
+   "id": "std-administrative-468",
+   "caseNumber": "2003두10251·10268",
+   "title": "대상적격 (9)：조례로 결정할 사항을 개별 결정에 의한 경우",
+   "tocPath": [
+    "hj-2",
+    "hj-2-2",
+    "hj-2-2-3"
+   ],
+   "decisionId": "sc-2003du10251-20041126-judgment"
+  },
+  {
+   "id": "std-administrative-469",
+   "caseNumber": "2003두9015",
+   "title": "대상적격 (11)：지목변경신청에 대한 거부",
+   "tocPath": [
+    "hj-2",
+    "hj-2-2",
+    "hj-2-2-3"
+   ],
+   "decisionId": "sc-2003du9015-20040422-judgment"
+  },
+  {
+   "id": "std-administrative-470",
+   "caseNumber": "2014두42742",
+   "title": "대상적격 (13)：계획변경신청에 대한 거부",
+   "tocPath": [
+    "hj-2",
+    "hj-2-2",
+    "hj-2-2-3"
+   ],
+   "decisionId": "sc-2014du42742-20150326-judgment"
+  },
+  {
+   "id": "std-administrative-471",
+   "caseNumber": "2000두7735",
+   "title": "대상적격 (14)：국립대학교원 재임용 거부",
+   "tocPath": [
+    "hj-2",
+    "hj-2-2",
+    "hj-2-2-3"
+   ],
+   "decisionId": "sc-2000du7735-20040422-judgment"
+  },
+  {
+   "id": "std-administrative-472",
+   "caseNumber": "2015두295",
+   "title": "대상적격 (23)：변경처분이 있는 경우 항고소송의 대상",
+   "tocPath": [
+    "hj-2",
+    "hj-2-2",
+    "hj-2-2-3"
+   ],
+   "decisionId": "sc-2015du295-20151119-judgment"
+  },
+  {
+   "id": "std-administrative-473",
+   "caseNumber": "2006두330",
+   "title": "원고적격 (6)：환경영향평가 대상지역 안의 주민",
+   "tocPath": [
+    "hj-2",
+    "hj-2-2",
+    "hj-2-2-3"
+   ],
+   "decisionId": "sc-2006du330-20060316-judgment"
+  },
+  {
+   "id": "std-administrative-474",
+   "caseNumber": "2018두49130",
+   "title": "소의 이익 (3)：처분의 직권취소",
+   "tocPath": [
+    "hj-2",
+    "hj-2-2",
+    "hj-2-2-3"
+   ],
+   "decisionId": "sc-2018du49130-20190627-judgment"
+  },
+  {
+   "id": "std-administrative-475",
+   "caseNumber": "2005두3554",
+   "title": "소의 이익 (12)：사업양도에 따른 지위승계 신고수리처분",
+   "tocPath": [
+    "hj-2",
+    "hj-2-2",
+    "hj-2-2-3"
+   ],
+   "decisionId": "sc-2005du3554-20051223-judgment"
+  },
+  {
+   "id": "std-administrative-476",
+   "caseNumber": "2013두2518",
+   "title": "피고적격 (3)",
+   "tocPath": [
+    "hj-2",
+    "hj-2-2",
+    "hj-2-2-3"
+   ],
+   "decisionId": "sc-2013du2518-20140926-judgment"
+  },
+  {
+   "id": "std-administrative-477",
+   "caseNumber": "2019두38656",
+   "title": "제소기간 (1)",
+   "tocPath": [
+    "hj-2",
+    "hj-2-2",
+    "hj-2-2-3"
+   ],
+   "decisionId": "sc-2019du38656-20190809-judgment"
+  },
+  {
+   "id": "std-administrative-478",
+   "caseNumber": "2004두619",
+   "title": "제소기간 (2)",
+   "tocPath": [
+    "hj-2",
+    "hj-2-2",
+    "hj-2-2-3"
+   ],
+   "decisionId": "sc-2004du619-20070614-judgment"
+  },
+  {
+   "id": "std-administrative-479",
+   "caseNumber": "2004두9302",
+   "title": "제소기간 (6)",
+   "tocPath": [
+    "hj-2",
+    "hj-2-2",
+    "hj-2-2-3"
+   ],
+   "decisionId": "sc-2004du9302-20070427-judgment"
+  },
+  {
+   "id": "std-administrative-480",
+   "caseNumber": "2005두3554",
+   "title": "관련청구소송의 병합 (3)：제소기간",
+   "tocPath": [
+    "hj-2",
+    "hj-2-2",
+    "hj-2-2-5"
+   ],
+   "decisionId": "sc-2005du3554-20051223-judgment"
+  },
+  {
+   "id": "std-administrative-481",
+   "caseNumber": "2019두63515",
+   "title": "재량행위에 대한 일부취소판결 (2)",
+   "tocPath": [
+    "hj-2",
+    "hj-2-2",
+    "hj-2-2-6"
+   ],
+   "decisionId": "sc-2019du63515-20200514-judgment"
+  },
+  {
+   "id": "std-administrative-482",
+   "caseNumber": "2018두104",
+   "title": "판결의 효력 (2)：원상회복의무",
+   "tocPath": [
+    "hj-2",
+    "hj-2-2",
+    "hj-2-2-6"
+   ],
+   "decisionId": "sc-2018du104-20191017-judgment"
+  },
+  {
+   "id": "std-administrative-483",
+   "caseNumber": "94누4615",
+   "title": "행정권한의 위임의 형식",
+   "tocPath": [
+    "hj-3",
+    "hj-3-1"
+   ],
+   "decisionId": "sc-94nu4615-19950711-judgment"
+  },
+  {
+   "id": "std-administrative-484",
+   "caseNumber": "2008두16155",
+   "title": "공무원 임용처분 취소와 행정절차",
+   "tocPath": [
+    "hj-3",
+    "hj-3-3"
+   ],
+   "decisionId": "sc-2008du16155-20090130-judgment"
+  },
+  {
+   "id": "std-administrative-485",
+   "caseNumber": "95누2036",
+   "title": "공무원관계의 소멸：당연퇴직이 처분에 해당하는지 여부",
+   "tocPath": [
+    "hj-3",
+    "hj-3-3"
+   ],
+   "decisionId": "sc-95nu2036-19951114-judgment"
+  },
+  {
+   "id": "std-administrative-486",
+   "caseNumber": "2017두33985",
+   "title": "공기업이용관계의 내용：이용조건설정과 이용대가징수",
+   "tocPath": [
+    "hj-4",
+    "hj-4-3"
+   ],
+   "decisionId": "sc-2017du33985-20190613-judgment"
+  }
+ ],
+ "skipped": [],
+ "note": "배치 정보만 등록(standardSource 없음). 표준판례 텍스트는 같은 decisionId 의 첫 배치 것을 build_data 가 적용한다. 건너뛴 항목에만 있는 문구는 판정 후 합집합으로 더한다."
+}

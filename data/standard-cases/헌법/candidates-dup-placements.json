@@ -1,0 +1,796 @@
+{
+ "group": "standard",
+ "subject": "constitution",
+ "candidates": [
+  {
+   "caseNumber": "2008헌바141등",
+   "lookupKey": "2008헌바141",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2011-03-31",
+   "enBanc": false,
+   "tocPath": [
+    "hb-1",
+    "hb-1-2",
+    "hb-1-2-2"
+   ],
+   "tags": [],
+   "title": "소급입법금지원칙(2)：친일재산 국가귀속법 사례",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 진정소급입법과 부진정소급입법 (std-constitution-22) — PDF 25번 항목, p.29",
+   "selectionReason": "친일반민족행위의 대가로 취득한 재산을 국가에 귀속하는 법률 조항이 진정소급입법에 해당하지만 헌법 제13조 제2항에 위반되지는 않는다고 판단한 결정이다. 진정소급입법이라도 예외적으로 허용될 수 있는 경우가 있다는 선례(헌재 1996. 2. 16. 96헌가2등)를 재확인하고 우리 헌법이론상 친일재산의 국가귀속이 정당화될 수 있음을 인정하였다는 점에서 중요한 의미를 가진다고 볼 수 있다. 이 결정의 논지는 헌재 2013. 7. 25. 2012헌가1 결정에서도 승계되고 있다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "99헌마139등",
+   "lookupKey": "99헌마139",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2001-03-21",
+   "enBanc": false,
+   "tocPath": [
+    "hb-2",
+    "hb-2-1",
+    "hb-2-1-1"
+   ],
+   "tags": [],
+   "title": "헌법상 보장된 기본권의 의미",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 영토권 (std-constitution-33) — PDF 41번 항목, p.51",
+   "selectionReason": "헌법상 보장된 기본권의 구체적인 의미가 무엇인지, 헌법전에 명문으로 규정되지 않은 권리이지만 기본권으로 인정할 수 있는 권리가 무엇인지에 대하여 판시한 중요한 결정이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "95헌가16",
+   "lookupKey": "95헌가16",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "1998-04-30",
+   "enBanc": false,
+   "tocPath": [
+    "hb-2",
+    "hb-2-1",
+    "hb-2-1-6"
+   ],
+   "tags": [],
+   "title": "법률의 명확성원칙(2)",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 기본권 경합 (std-constitution-51) — PDF 61번 항목, p.66",
+   "selectionReason": "법률의 명확성원칙의 의미가 최소한의 명확성을 요구하는 것이라는 것을 판시한 결정이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "89헌가95",
+   "lookupKey": "89헌가95",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "1990-09-03",
+   "enBanc": false,
+   "tocPath": [
+    "hb-2",
+    "hb-2-1",
+    "hb-2-1-6"
+   ],
+   "tags": [],
+   "title": "과잉금지원칙의 의의와 근거",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 일반적 법률유보와 수권·한계 규정 (std-constitution-53) — PDF 69번 항목, p.71",
+   "selectionReason": "과잉금지원칙의 요소별 내용을 자세하게 언급하고 그 헌법적 근거까지 설명하고 있는 결정이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "96헌가18",
+   "lookupKey": "96헌가18",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "1996-12-26",
+   "enBanc": false,
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-1"
+   ],
+   "tags": [],
+   "title": "소비자의 자기결정권과 자도소주구입명령제도",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 공공복리 (std-constitution-64) — PDF 88번 항목, p.90",
+   "selectionReason": "헌법재판소가 1996년 12월 26일의 96헌가18 결정에서 자도소주 구입명령제에 대해서는 소주판매업자의 직업의 자유 및 평등권과 소비자의 자기결정권을 침해한다는 이유로 위헌선언을 하였으나, 이는 1999년 7월 22일 98헌가5결정에서 탁주의 공급구역제한제도에 대해서는 합헌결정을 한 것과 크게 대비된다. 탁주는 소주에 비해 유통 중 변질가능성이 크다는 점이 이러한 차이를 낳은 주된 요인으로 보인다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "89헌가37등",
+   "lookupKey": "89헌가37",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "1989-05-24",
+   "enBanc": false,
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-2"
+   ],
+   "tags": [],
+   "title": "평등의 입법자 구속 여부",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 평등권의 법적 성격 (std-constitution-84) — PDF 90번 항목, p.92",
+   "selectionReason": "헌법 제11조 제1항 전문은 “법 앞에”라는 한정구를 두고, ‘모든 국민은 평등하다’고 선언하고 있다. 그래서 헌법 제11조 제1항 전문이 입법자를 구속하지 않는다는 주장이 있다. 그러나 헌재는 위 문언에도 불구하고 입법자를 구속하는 효력이 있다고 본다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "96헌가18",
+   "lookupKey": "96헌가18",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "1996-12-26",
+   "enBanc": false,
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-2"
+   ],
+   "tags": [],
+   "title": "비교되는 사실관계의 동일성 판단기준",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 공공복리 (std-constitution-64) — PDF 92번 항목, p.93",
+   "selectionReason": "헌재는 본질적으로 같은 것을 다르게 처우하거나, 본질적으로 다른 것을 같게 처우하는 것을 차별이라고 본다. 이 차별이 정당화되지 아니하면 평등권을 침해하는 것으로 판단된다. 그러므로 평등권 심사는 두 개의 사실관계가 본질적으로 같은 것인가, 다른 것인가를 판단하는 것으로부터 시작된다. ‘당해 법률조항의 의미와 목적’이 위 판단의 기준으로 된다는 점을 판시하였다는 점에서 의의가 있다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "98헌마363",
+   "lookupKey": "98헌마363",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "1999-12-23",
+   "enBanc": false,
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-2"
+   ],
+   "tags": [],
+   "title": "평등의 심사 기준",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 목적의 정당성 (std-constitution-67) — PDF 93번 항목, p.94",
+   "selectionReason": "차별이 존재한다는 점이 확인되었을 때, 그 차별이 정당화되지 아니하면 평등권을 침해하는 것으로 판단된다. 그런데, 헌재는 정당화 심사 기준을 이원화하여 운용하고 있다. 엄격한 심사와 완화된 심사가 그것이다. 헌재는 원칙적으로 완화된 심사 기준을 적용한다고 하면서, 두 가지 경우에 엄격한 심사 기준을 적용한다. 하나는 ‘헌법에서 특별히 평등을 요구하고 있는 경우’이고, 다른 하나는 ‘관련 기본권에 대한 중대한 제한을 초래하는 경우’이다. 전자에 해당하는 것은 헌법 제32조 제4항(헌재 1999. 12. 23. 98헌마363)과 헌법 제36조 제1항(헌재 2002. 8. 29. 2001헌바82)뿐이다. 헌법 제11조 제1항 후문에 게기된 사유도 여기에 포함되지 않는다. 후자에 관하여, 헌재는 문제되는 기본권이 어떤 것인가를 불문하고 기본권 제한의 정도가 심대하면 엄격한 심사 기준을 적용하여야 한다는 것이 주류이다. 헌재 2011. 2. 24. 2008헌바56 결정은 비교적 이 점을 잘 드러내고 있다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "2008헌바141등",
+   "lookupKey": "2008헌바141",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2011-03-31",
+   "enBanc": false,
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-2"
+   ],
+   "tags": [],
+   "title": "헌법 제11조 제1항 후문 사유의 성격",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 진정소급입법과 부진정소급입법 (std-constitution-22) — PDF 94번 항목, p.95",
+   "selectionReason": "헌법이 특별히 평등을 명령하는 경우라면 엄격한 심사 기준을 적용하여야 한다는 것이 헌재의 판례인데, 헌법 제11조 제1항 후문에 열거되어 있는 성별, 종교, 사회적 신분에 기한 차별을 헌법이 특별히 금지하고 있다고 보아야 하는 것인지가 문제된다. 헌재는 그렇게 보지 않는다. 사회적 신분(헌재 2011. 3. 31. 2008헌바141등)과 성별(헌재 2010. 11. 25. 2006헌마328)에 대해서 헌법이 특별히 평등을 명령한 경우, 즉 엄격한 심사 기준을 적용해야 하는 차별 요소가 아니라고 보았다. 아직 종교에 관한 판례는 없다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "96헌가2등",
+   "lookupKey": "96헌가2",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "1996-02-16",
+   "enBanc": false,
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-2"
+   ],
+   "tags": [],
+   "title": "개별사건법률금지의 원칙과 평등",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 공소시효 정지와 소급입법금지원칙 (std-constitution-24) — PDF 98번 항목, p.98",
+   "selectionReason": "법의 일반성을 충족시키지 못하는 법률, 즉 개별사건법률이라 하더라도 이것이 평등권 침해라는 결론에 이르는 충분한 이유로 되는 것은 아니고, 합리적인 이유가 없다고 판단되는 경우에만 위헌이라 판단될 수 있다는 점을 판시한 결정이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "2016헌마344등",
+   "lookupKey": "2016헌마344",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2018-08-30",
+   "enBanc": false,
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-4"
+   ],
+   "tags": [],
+   "title": "디엔에이신원확인정보의 관리",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 적법절차원칙과 공정한 재판받을 권리 (std-constitution-98) — PDF 123번 항목, p.122",
+   "selectionReason": "헌법재판소는 디엔에이신원확인정보의 이용 및 보호에 관한 법률 부칙 제2조 제1항 위헌확인사건(헌재 2014. 8. 28. 2011헌마28등)에서 이 사건 삭제 조항이 개인정보자기결정권을 침해하지 아니한다고 판단하였으며, 위 결정에서 2011헌마28등 사건과 달리 판단해야 할 아무런 사정변경이 없으므로 과거의 결정내용을 그대로 유지하고 있다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "95헌가16",
+   "lookupKey": "95헌가16",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "1998-04-30",
+   "enBanc": false,
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-6"
+   ],
+   "tags": [],
+   "title": "음란과 저속의 구별기준 및 성표현물 출판금지의 위헌 여부",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 기본권 경합 (std-constitution-51) — PDF 137번 항목, p.141",
+   "selectionReason": "이 결정에서 헌법재판소는 우리 헌법질서에서 성인도 볼 수 없는 성표현물이 어떤 것인지 그 헌법적 기준을 처음으로 제시하였다. 인간존엄 혹은 인간성을 왜곡하는 노골적이고 적나라한 성표현으로서 아무런 가치를 지니지 않은 것, 즉 엄격한 의미의 음란은 헌법상 언론자유의 보호대상에속하지 않는다는 점을 분명히 하였다. 그러나 이 결정의 법리는 11년 후인 2009년의 정보통신망음란죄 결정(2006헌바109등)에서 6인의 다수의견에 의하여 명시적으로 깨어지게 된다. 6인의 다수의견은 ‘엄격한 의미의 음란’ 개념은 그대로 수용하면서도, 이런 수준의 음란표현도 언론‧출판의자유의 보호영역에는 해당하고, 다만 헌법 제37조 제2항에 따라 국가안전보장‧질서유지 또는 공공복리를 위하여 제한할 수 있는 것이라는 입장을 취하였다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "2011헌바172등",
+   "lookupKey": "2011헌바172",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2014-10-30",
+   "enBanc": false,
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-7"
+   ],
+   "tags": [],
+   "title": "민간기업에 의한 공용수용",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 공공복리와 공공필요의 관계 (std-constitution-65) — PDF 162번 항목, p.179",
+   "selectionReason": "헌법 제23조 제3항이 규정하고 있는 공용침해 중 공용수용에 대한 권한을 민간기업에게 부여한 것의 헌법 제23조 제3항 위반되지는 않으나, 고급골프장 사업과 같이 공익성이 낮은 사업에 대해서까지도 시행자인 민간개발자에게 수용권한을 부여하는 것은 헌법에 위반된다는 것이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "2000헌마91등",
+   "lookupKey": "2000헌마91",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2001-07-19",
+   "enBanc": false,
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-8"
+   ],
+   "tags": [],
+   "title": "기탁금의 위헌 여부(1)",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 비례대표의석배분 1인 1표제의 위헌성 (std-constitution-11) — PDF 168번 항목, p.185",
+   "selectionReason": "국회의원 후보자등록시 2천만원의 기탁금을 납부토록 하는 것은 평등권과 선거권 등을 침해하고, 기탁금 반환 요건은 너무 엄격하여 피선거권을 침해한다고 한 결정이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "95헌바3",
+   "lookupKey": "95헌바3",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "1995-12-28",
+   "enBanc": false,
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-9"
+   ],
+   "tags": [],
+   "title": "군인․공무원 등의 국가배상청구권 제한",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 헌법 규정 사이의 효력 (std-constitution-03) — PDF 186번 항목, p.207",
+   "selectionReason": "군인․공무원 등의 국가배상청구권을 제한하는 국가배상법 규정이 헌법 제29조에 직접 근거하고 실질적으로 그 내용을 같이 하는 것이므로 헌법에 위반되지 않는다고 본 결정이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "95헌가6등",
+   "lookupKey": "95헌가6",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "1997-07-16",
+   "enBanc": false,
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-11"
+   ],
+   "tags": [],
+   "title": "동성동본금혼",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 동성동본금혼사건 (std-constitution-83) — PDF 203번 항목, p.222",
+   "selectionReason": "동성동본인 혈족 사이의 혼인을 금지하는 것이 혼인의 자유(헌법 제10조, 제36조 제1항), 평등권을 침해하여 위헌이라고 본 결정이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "2003헌가5등",
+   "lookupKey": "2003헌가5",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2005-12-22",
+   "enBanc": false,
+   "tocPath": [
+    "hb-2",
+    "hb-2-2",
+    "hb-2-2-11"
+   ],
+   "tags": [],
+   "title": "부성(父姓主義)의 원칙",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 일반적 인격권 (std-constitution-77) — PDF 205번 항목, p.224",
+   "selectionReason": "부성주의의 원칙 자체는 위헌이 아니나 부성주의를 강요하는 것이 부당한 경우에 대해서도 예외를 규정하지 않은 것이 헌법에 위반된다고 본 결정이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "2018헌마1162등",
+   "lookupKey": "2018헌마1162",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2022-01-27",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-1"
+   ],
+   "tags": [],
+   "title": "의사공개원칙",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 정보위원회 회의 비공개 조항 사건 (std-constitution-136) — PDF 218번 항목, p.236",
+   "selectionReason": "헌법 제50조 제1항이 규정한 의사공개원칙의 의미를 설명한 결정이다. 헌법 제50조 제1항은 의사공개를 원칙으로 하면서도 예외적 비공개의 가능성을 인정하고 있는데, 헌법재판소는 위 결정을 통해 이러한 비공개의 예외는 엄격히 인정되어야 함을 밝혔다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "2019헌라6등",
+   "lookupKey": "2019헌라6",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2020-05-27",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-1"
+   ],
+   "tags": [],
+   "title": "무제한토론",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 수정동의의 범위 (std-constitution-204) — PDF 223번 항목, p.240",
+   "selectionReason": "‘회기결정의 건’은 그 본질상 국회법 제106조의2에 따른 무제한토론의 대상이 되지 않는다고 본 사례이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "2004헌나1",
+   "lookupKey": "2004헌나1",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2004-05-14",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-1"
+   ],
+   "tags": [],
+   "title": "국회 탄핵소추사유(1)",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 인사청문회 견해와 해임건의의 효력 (std-constitution-205) — PDF 225번 항목, p.241",
+   "selectionReason": "헌법이나 법률을 위배한 모든 행위가 탄핵소추사유는 될 수 있으나, 실제 파면을 하기 위해서는 이를 정당화하는 ‘중대한’ 법위반이 있어야 한다고 본 사례이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "2004헌나1",
+   "lookupKey": "2004헌나1",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2004-05-14",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-1"
+   ],
+   "tags": [],
+   "title": "국회 탄핵소추사유(2)",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 인사청문회 견해와 해임건의의 효력 (std-constitution-205) — PDF 226번 항목, p.242",
+   "selectionReason": "정치적 무능력이나 정책결정상의 잘못 등 직책수행의 성실성여부는 그 자체로서 소추사유가 될 수 없어 탄핵심판절차의 판단대상이 되지 않는다고 본 사례이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "96헌라2",
+   "lookupKey": "96헌라2",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "1997-07-16",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-1"
+   ],
+   "tags": [],
+   "title": "국회자율권의 범위와 한계",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 다수결원칙(1) (std-constitution-198) — PDF 227번 항목, p.242",
+   "selectionReason": "법치주의의 원리상 국회의 자율권도 헌법이나 법률을 위반하지 않는 범위 내에서 허용되어야 한다고 본 사례이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "2004헌나1",
+   "lookupKey": "2004헌나1",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2004-05-14",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-2"
+   ],
+   "tags": [],
+   "title": "대통령의 중요정책 국민투표 부의권의 성격",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 인사청문회 견해와 해임건의의 효력 (std-constitution-205) — PDF 229번 항목, p.244",
+   "selectionReason": "이 결정은 중요정책에 관한 대통령의 국민투표부의권의 성격을 분명히 한 것으로 헌법 제72조는 대의제민주주의를 보충하는 직접민주제의 한 형태로서 국민이 국가의 중요정책 결정과정에 능동적으로 참여할 수 있는 기회를 제공하는 레퍼렌덤(referendum)을 정한 것일 뿐, 그 권한을 이용하여 대통령이 국민의 신임을 재확인하고 이를 통해 자신의 정치적 입지를 강화하는 일종의 플레비시트(plebiscite)를 허용한 것은 결코 아님을 명확히 하였다. 과거 권위주의 통치체제에서 국민투표가 대통령의 정치권력을 강화하는 수단으로 악용되었던 사례가 재발하지 않도록 국민투표제도의 헌법적 의미를 분명히 확정한 것이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "2006헌마788",
+   "lookupKey": "2006헌마788",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2011-08-30",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-2"
+   ],
+   "tags": [],
+   "title": "국가의 외교행위에 대한 사법심사",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 헌법 제10조의 의미 (std-constitution-75) — PDF 232번 항목, p.246",
+   "selectionReason": "이 결정은 일본군위안부 문제의 해결을 위한 외교적 노력을 소홀히 한 정부의 부작위가 위헌임을 선언한 것으로, 특정한 외교적 해결방식(한일협정에 따른 중재요청)을 취하지 않은 부작위를 합헌이라 한 참고판례와 달리, 정부가 광범위한 외교상의 경로를 통한 해결을 도모하여야 할 의무를 정한 한일협정 관련 조항에도 불구하고 아무런 조치를 취하지 않음으로써 국민의 기본권을 침해하는 결과를 야기한 것은 비록 외교행위가 폭넓은 재량이 허용되는 영역에 속한다 하더라도 국가기관의 기본권 기속성에 따라 그 위헌여부를 헌법재판소가 판단할 수 있음을 명확히 하였다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "98헌바70",
+   "lookupKey": "98헌바70",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "1999-05-27",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-2"
+   ],
+   "tags": [],
+   "title": "의회유보의 의미",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 의회유보원칙：KBS 방송수신료 사례 (std-constitution-56) — PDF 235번 항목, p.249",
+   "selectionReason": "",
+   "keywords": []
+  },
+  {
+   "caseNumber": "2004헌나1",
+   "lookupKey": "2004헌나1",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2004-05-14",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-3"
+   ],
+   "tags": [],
+   "title": "탄핵소추와 적법절차",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 인사청문회 견해와 해임건의의 효력 (std-constitution-205) — PDF 264번 항목, p.270",
+   "selectionReason": "탄핵소추절차에서 적법절차원칙의 적용 여부를 판단한 결정이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "2014헌마7",
+   "lookupKey": "2014헌마7",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2014-02-27",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-4"
+   ],
+   "tags": [],
+   "title": "정당해산심판절차에서 민사소송법의 준용",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 정당해산심판 가처분과 정당활동의 자유 (std-constitution-239) — PDF 268번 항목, p.274",
+   "selectionReason": "형사재판과 유사한 정당해산심판절차의 특수성에 비추어 탄핵심판절차와 같이 형사소송법을 함께 준용하는 것이 필요하다는 지적에 대한 헌법재판소의 판단이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "96헌라2",
+   "lookupKey": "96헌라2",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "1997-07-16",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-5"
+   ],
+   "tags": [],
+   "title": "권한쟁의심판의 당사자능력(1)",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 다수결원칙(1) (std-constitution-198) — PDF 269번 항목, p.275",
+   "selectionReason": "헌법재판소법 제62조 제1항 제1호는 ‘국가기관 상호 간의 권한쟁의심판’의 당사자가 될 수 있는 국가기관을 예시한 규정에 불과하다는 것과, 이 유형의 권한쟁의심판의 당사자가 될 수 있는 국가기관으로 인정되기 위한 요건들에 관해 판시하고, 국회의원과 국회의장이 이 요건들을 충족하여 ‘국가기관 상호 간의 권한쟁의심판’의 당사자능력을 가진다고 본 결정이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "2002헌라1",
+   "lookupKey": "2002헌라1",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2003-10-30",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-5"
+   ],
+   "tags": [],
+   "title": "권한쟁의심판의 대상적격(4)",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 자유위임원칙(1) (std-constitution-196) — PDF 276번 항목, p.280",
+   "selectionReason": "국회의장이 개별 국회의원의 의사에 반하여 특정한 상임위원회에 사‧보임한 행위는 권한쟁의심판의 대상적격을 가진다고 본 결정이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "2009헌라8등",
+   "lookupKey": "2009헌라8",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2009-10-29",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-5"
+   ],
+   "tags": [],
+   "title": "권한쟁의심판의 당사자적격(4)",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 일사부재의원칙 (std-constitution-200) — PDF 281번 항목, p.284",
+   "selectionReason": "피청구인적격은 처분 또는 부작위를 야기한 기관으로서 법적 책임을 지는 기관에게 인정되는바, 국회부의장은 국회의장과는 달리 그런 법적 책임을 지는 주체에 해당하지 않아 피청구인적격이 부정된다고 본 결정이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "2022헌라4",
+   "lookupKey": "2022헌라4",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2023-03-23",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-5"
+   ],
+   "tags": [],
+   "title": "권한쟁의심판의 권한침해가능성",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 권한쟁의심판의 당사자적격(6) (std-constitution-251) — PDF 284번 항목, p.287",
+   "selectionReason": "검사 수사권과 소추권의 법적 성격을 규명한 결정이다. 헌법재판소는 헌법에 규정되어 있는 검사의 영장신청권을 헌법상 권한으로 평가하면서도, 검사의 수사권과 소추권을 헌법상 권한이 아닌 법률상 권한으로 보고 이 같은 법률상 권한이 입법행위로 제한될 수 없음을 명확히 하였다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "2002헌라1",
+   "lookupKey": "2002헌라1",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2003-10-30",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-5"
+   ],
+   "tags": [],
+   "title": "권한쟁의심판의 권리보호이익(심판의 이익)",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 자유위임원칙(1) (std-constitution-196) — PDF 285번 항목, p.288",
+   "selectionReason": "권한침해 상태가 이미 종료되어 청구인에게 있어서는 주관적인 권리보호이익이 소멸하였더라도, 해당 권한의 침해여부에 관한 헌법적 해명이 필요한 경우에는 심판청구의 이익을 인정할 수 있다고 한 결정이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "89헌마221",
+   "lookupKey": "89헌마221",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "1994-04-28",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-6"
+   ],
+   "tags": [],
+   "title": "헌법재판소법 제68조 제1항과 같은 조 제2항 헌법소원심판의 법적 성격 및 관계",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 국무총리의 헌법상의 지위 (std-constitution-214) — PDF 289번 항목, p.291",
+   "selectionReason": "헌재법 제68조 제1항 및 같은 조 제2항 헌법소원의 법적 성격과 관계를 판단한 결정이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "2004헌바81",
+   "lookupKey": "2004헌바81",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2008-07-31",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-6"
+   ],
+   "tags": [],
+   "title": "태아의 청구인능력",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 태아의 기본권 주체성 (std-constitution-42) — PDF 292번 항목, p.292",
+   "selectionReason": "생명권침해에 대한 태아의 헌법소원심판 청구인능력을 인정한 결정이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "99헌마494",
+   "lookupKey": "99헌마494",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2001-11-29",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-6"
+   ],
+   "tags": [],
+   "title": "외국인의 청구인능력",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 재외동포：재외동포에 대한 차별적 대우 (std-constitution-32) — PDF 293번 항목, p.293",
+   "selectionReason": "외국인에게 헌법소원심판의 청구인능력을 인정한 결정이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "99헌마139등",
+   "lookupKey": "99헌마139",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2001-03-21",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-6"
+   ],
+   "tags": [],
+   "title": "공권력의 행사 또는 불행사",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 영토권 (std-constitution-33) — PDF 297번 항목, p.295",
+   "selectionReason": "",
+   "keywords": []
+  },
+  {
+   "caseNumber": "99헌마139등",
+   "lookupKey": "99헌마139",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2001-03-21",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-6"
+   ],
+   "tags": [],
+   "title": "조약의 공권력성",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 영토권 (std-constitution-33) — PDF 299번 항목, p.296",
+   "selectionReason": "",
+   "keywords": []
+  },
+  {
+   "caseNumber": "93헌마186",
+   "lookupKey": "93헌마186",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "1996-02-29",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-6"
+   ],
+   "tags": [],
+   "title": "통치행위의 공권력성",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 소위 통치행위에 대한 사법심사 (std-constitution-208) — PDF 301번 항목, p.296",
+   "selectionReason": "",
+   "keywords": []
+  },
+  {
+   "caseNumber": "92헌마68등",
+   "lookupKey": "92헌마68",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "1992-10-01",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-6"
+   ],
+   "tags": [],
+   "title": "현재성 요건의 예외",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 행정계획의 대상적격 (std-constitution-267) — PDF 316번 항목, p.304",
+   "selectionReason": "현재성 요건의 예외를 인정하는 사유와 취지를 설시한 결정이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "2001헌마152",
+   "lookupKey": "2001헌마152",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "2001-09-27",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-6"
+   ],
+   "tags": [],
+   "title": "권리보호이익의 의의",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 청구기간의 의의 (std-constitution-280) — PDF 325번 항목, p.310",
+   "selectionReason": "권리보호이익의 의미와 취지를 설시한 결정이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "91헌마111",
+   "lookupKey": "91헌마111",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "1992-01-28",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-6"
+   ],
+   "tags": [],
+   "title": "예외적인 심판이익의 인정 사유",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 헌법소원심판의 본질 (std-constitution-254) — PDF 326번 항목, p.311",
+   "selectionReason": "권리보호이익이 없음에도 심판청구의 이익을 인정하여 본안판단을 하는 사유를 설시한 결정이다.",
+   "keywords": []
+  },
+  {
+   "caseNumber": "91헌마111",
+   "lookupKey": "91헌마111",
+   "court": "헌법재판소",
+   "decisionType": "결정",
+   "date": "1992-01-28",
+   "enBanc": false,
+   "tocPath": [
+    "hb-3",
+    "hb-3-4",
+    "hb-3-4-6"
+   ],
+   "tags": [],
+   "title": "부수적 규범통제",
+   "status": "ok",
+   "memo": "같은 재판의 다른 배치: 헌법소원심판의 본질 (std-constitution-254) — PDF 327번 항목, p.311",
+   "selectionReason": "헌법재판소법 제75조 제5항에서 규정하고 있는 부수적 위헌선언제도를 통해 위헌인 공권력 행사의 근거 법률조항에 대해 함께 위헌결정을 한 사례이다.",
+   "keywords": []
+  }
+ ]
+}

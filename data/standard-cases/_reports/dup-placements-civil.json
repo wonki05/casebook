@@ -1,0 +1,186 @@
+{
+ "subject": "civil",
+ "registered": [
+  {
+   "id": "std-civil-918",
+   "caseNumber": "91다32053",
+   "title": "소멸시효의 중단사유：청구 (5)",
+   "tocPath": [
+    "mb-1",
+    "mb-1-6"
+   ],
+   "decisionId": "sc-91da32053-19920331-judgment"
+  },
+  {
+   "id": "std-civil-919",
+   "caseNumber": "98다32175",
+   "title": "등기청구권 (2)：소유권이전등기청구권의 소멸시효",
+   "tocPath": [
+    "mb-2",
+    "mb-2-1"
+   ],
+   "decisionId": "sc-98da32175-19990318-judgment"
+  },
+  {
+   "id": "std-civil-920",
+   "caseNumber": "95마1262",
+   "title": "저당권과 용익관계：법정지상권 (2)",
+   "tocPath": [
+    "mb-2",
+    "mb-2-9"
+   ],
+   "decisionId": "sc-95ma1262-19951211-decision"
+  },
+  {
+   "id": "std-civil-921",
+   "caseNumber": "2000다51216",
+   "title": "부동산소유권의 이전등기청구권의 양도",
+   "tocPath": [
+    "mb-3",
+    "mb-3-1",
+    "mb-3-1-7"
+   ],
+   "decisionId": "sc-2000da51216-20011009-judgment"
+  },
+  {
+   "id": "std-civil-922",
+   "caseNumber": "2017다274703",
+   "title": "변제자의 구상권과 변제자대위권의 관계",
+   "tocPath": [
+    "mb-3",
+    "mb-3-1",
+    "mb-3-1-9"
+   ],
+   "decisionId": "sc-2017da274703-20190214-judgment"
+  },
+  {
+   "id": "std-civil-923",
+   "caseNumber": "2016다232597",
+   "title": "변제자대위권자의 배당요구",
+   "tocPath": [
+    "mb-3",
+    "mb-3-1",
+    "mb-3-1-9"
+   ],
+   "decisionId": "sc-2016da232597-20210225-judgment"
+  },
+  {
+   "id": "std-civil-924",
+   "caseNumber": "2004다31302",
+   "title": "계약의 구속력 (1)：사정변경으로 인한 계약해제",
+   "tocPath": [
+    "mb-3",
+    "mb-3-2",
+    "mb-3-2-2"
+   ],
+   "decisionId": "sc-2004da31302-20070329-judgment"
+  },
+  {
+   "id": "std-civil-925",
+   "caseNumber": "97마575",
+   "title": "계약해제의 요건 (7)：주된 채무와 부수적 채무의 구별기준",
+   "tocPath": [
+    "mb-3",
+    "mb-3-2",
+    "mb-3-2-3"
+   ],
+   "decisionId": "sc-97ma575-19970407-decision"
+  },
+  {
+   "id": "std-civil-926",
+   "caseNumber": "94다22682·22699",
+   "title": "매매의 일방예약 (1)：예약완결권의 법적 성질",
+   "tocPath": [
+    "mb-3",
+    "mb-3-2",
+    "mb-3-2-5"
+   ],
+   "decisionId": "sc-94da22682-19951110-judgment"
+  },
+  {
+   "id": "std-civil-927",
+   "caseNumber": "2002다51586",
+   "title": "하자담보책임과 채무불이행책임의 경합：매매의 효력",
+   "tocPath": [
+    "mb-3",
+    "mb-3-2",
+    "mb-3-2-6"
+   ],
+   "decisionId": "sc-2002da51586-20040722-judgment"
+  },
+  {
+   "id": "std-civil-928",
+   "caseNumber": "2011다49523",
+   "title": "주택임차권의 대항력과 임대목적물 매수인의 지위 (2)",
+   "tocPath": [
+    "mb-3",
+    "mb-3-2",
+    "mb-3-2-9"
+   ],
+   "decisionId": "sc-2011da49523-20130117-judgment"
+  },
+  {
+   "id": "std-civil-929",
+   "caseNumber": "2019다268061",
+   "title": "불법행위의 성립요건 (8)：위법행위 (3)",
+   "tocPath": [
+    "mb-3",
+    "mb-3-5"
+   ],
+   "decisionId": "sc-2019da268061-20210630-judgment"
+  },
+  {
+   "id": "std-civil-930",
+   "caseNumber": "92다31361",
+   "title": "손해배상액 산정 (4)：손익상계",
+   "tocPath": [
+    "mb-3",
+    "mb-3-5"
+   ],
+   "decisionId": "sc-92da31361-19921222-judgment"
+  },
+  {
+   "id": "std-civil-931",
+   "caseNumber": "2017다14895",
+   "title": "공작물책임 (3)：공작물인 도로의 설치․관리상 하자 판단기준",
+   "tocPath": [
+    "mb-3",
+    "mb-3-5"
+   ],
+   "decisionId": "sc-2017da14895-20191128-judgment"
+  },
+  {
+   "id": "std-civil-932",
+   "caseNumber": "2012다74236",
+   "title": "공동불법행위 (5)：공동불법행위자 중 다액채무자가 한 일부변제의 효과",
+   "tocPath": [
+    "mb-3",
+    "mb-3-5"
+   ],
+   "decisionId": "sc-2012da74236-20180322-judgment"
+  },
+  {
+   "id": "std-civil-933",
+   "caseNumber": "98다34126",
+   "title": "손해배상청구권의 단기소멸시효",
+   "tocPath": [
+    "mb-3",
+    "mb-3-5"
+   ],
+   "decisionId": "sc-98da34126-19981110-judgment"
+  },
+  {
+   "id": "std-civil-934",
+   "caseNumber": "2011다29307",
+   "title": "상속포기의 사해행위성",
+   "tocPath": [
+    "mb-5",
+    "mb-5-1",
+    "mb-5-1-8"
+   ],
+   "decisionId": "sc-2011da29307-20110609-judgment"
+  }
+ ],
+ "skipped": [],
+ "note": "배치 정보만 등록(standardSource 없음). 표준판례 텍스트는 같은 decisionId 의 첫 배치 것을 build_data 가 적용한다. 건너뛴 항목에만 있는 문구는 판정 후 합집합으로 더한다."
+}

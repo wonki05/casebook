@@ -5,9 +5,11 @@ law.go.kr 에서 민법 표준판례 917건의 공식 전문을 `tools/fetch_law
 ## 결과
 | 구분 | 건수 |
 |---|---:|
-| 민법 표준판례 등록 | 917 |
-| 공식 전문 수집 | **909** (기존 3 + 이번 906) |
-| 미수집 | 8 (모두 `.missing.json` 기록, 아래 표) |
+| 민법 표준판례 등록 | 934 (PDF 항목 917 + 같은 과목 중복 배치 17) |
+| 공식 전문 수집 | **925** (917 중 909 + 중복 배치 16) |
+| 미수집 | 9 (모두 `.missing.json` 기록, 아래 표) |
+
+아래 "미수집" 표와 단원 표는 PDF 항목 917건 기준이고, 중복 배치 17건의 수집은 마지막 절에 따로 적었다.
 
 단원 11개를 각각 별도 worktree·브랜치(`fetch-civil-uNN-*`, 폴더 `.worktrees/`)에서 병렬 수집했다. 단원 구성과 id 목록은 `spec/fetch-units-civil.json`, 단원별 결과는 `spec/fetch-reports/civil-*.json`.
 
@@ -33,7 +35,7 @@ law.go.kr 에서 민법 표준판례 917건의 공식 전문을 `tools/fetch_law
   - Haiku high ×2 — crosscheck low-similarity 23건의 "같은 재판의 표기 차이 / 다른 쟁점" 1차 판정, 다르다고 나온 2건은 Sonnet 5.5 가 공식 전문에서 다시 확인: `data/standard-cases/_reports/crosscheck-civil-fetch-review.json`
 - 미게재 12건 중 2건(std-civil-810·858)은 위 분류에서 병합사건 조회키 문제로 밝혀져, 확인된 precSeq 로 같은 추출 함수(`fetch_one_pw`)를 호출해 수집했다.
 
-## 미수집 8건
+## 미수집 8건 (PDF 항목 917건 중) + 중복 배치 1건(std-civil-918, 91다32053)
 | id | 사건번호 | 원인 | 처리 |
 |---|---|---|---|
 | std-civil-62 | 93다2636 | std-civil-61(93다2629·93다2636)과 같은 재판이 별도 등록됨 | 61 에 공식 본문 있음. 병합·삭제는 확인 후(같은 과목 중복 배치는 허용되나 같은 단원·같은 제목은 중복) |
@@ -48,7 +50,7 @@ law.go.kr 에서 민법 표준판례 917건의 공식 전문을 `tools/fetch_law
 미게재는 나중에 `python -X utf8 tools/fetch_lawgo.py --all-missing --retry-missing` 로 재시도할 수 있다. 다른 사이트의 텍스트는 규칙 1에 따라 `fetched/` 에 넣지 않았다.
 
 ## 검증
-- `make validate`: 오류 0. `make data build web` 성공(수록 3,236건, 전문 1,482건). `make webcheck`(HTTP·오프라인·갱신 거부 등) 통과. `tools/` 의 Python 시험 139건 통과. **`make check`(화면 전수 sweep)는 45분 이상 돌았으나 끝나지 않아 중단했다 — 통과로 보고하지 않는다.** 필요하면 사용자가 직접 `python tools/make.py check` 를 실행한다.
+- `make validate`: 오류 0. `make data build web` 성공(수록 3,389건, 전문 1,498건). `make webcheck`(HTTP·오프라인·갱신 거부 등) 통과. `tools/` 의 Python 시험 140건 통과. **`make check`(화면 전수 sweep)는 45분 이상 돌았으나 끝나지 않아 중단했다 — 통과로 보고하지 않는다.** 필요하면 사용자가 직접 `python tools/make.py check` 를 실행한다.
 - 공식 인용문 ↔ 등록부 메타 대조(`fetch_unit.py audit`): 법원·선고일·유형·사건번호·전원합의체가 일치 908건, 불일치 1건(std-civil-840, 아래).
 - crosscheck(민법): ok 872 · low-similarity 26 · meta-mismatch 6 · missing 8. meta-mismatch 6건 중 5건(399·815·424·827·78의 후보 행)은 정정 전 PDF 값을 담은 후보 파일(`candidates-civil.json`, 원전 기록이라 고치지 않음)과 정정된 등록부·공식이 다르다는 뜻이고, 나머지 1건이 std-civil-840이다. low-similarity 26건은 모두 사건번호·선고일·법원·유형이 일치한다. 기존 검토 3건과 이번 23건 모두 같은 재판이며 요지의 서술 범위·표현이 다른 것으로 판정했다(다른 재판 오결합 0).
   - 다만 Haiku 1차 판정은 원문 대조가 필요하다고 따로 적은 곳이 있다: 표준판례 판결요지 문장 누락 의심(std-civil-573, "승낙함으로써 당해 근로관계를" 앞뒤), 오기 의심(std-civil-834 "자(자)"). 표준판례 PDF 원쪽 대조는 하지 않았고 `standardSource` 는 그대로다.
@@ -65,8 +67,23 @@ law.go.kr 에서 민법 표준판례 917건의 공식 전문을 `tools/fetch_law
 | std-civil-840 | 변경 없음 | 선고일 2006-07-04 유지 | PDF 580쪽과 이후 공식 판결 6건은 7. 4., 2건과 공식 페이지 머리말만 7. 13. |
 이전 decisionId 는 모두 `identityAliases` 에 새 ID 로 이어 두었다. 공식 전문은 std-civil-122·827 만 새로 수집했고(각각 78·`annual-2020-91` 과 본문 동일) 399·815·424 는 본문이 같아 다시 받지 않았다. 웹 묶음의 전문은 해시로 저장되어 같은 재판의 배치가 늘어도 한 번만 들어간다.
 
-## 같은 과목 중복 배치 (정책 변경)
-`add_cases.py` 는 이제 같은 과목에서 같은 재판을 다른 단원·다른 제목으로 한 번 더 배치하는 것을 허용한다(제목이 같거나 목차 경로가 같으면 중복). 지금까지는 거절해서 PDF 가 같은 재판을 여러 항목에 실은 경우 첫 항목만 등록했다. 그렇게 건너뛴 항목은 `data/standard-cases/<과목>/_conflicts.json` 의 `duplicate` 에 남아 있다: 민법 17 · 상법 29 · 행정법 28 · 헌법 31 · 형법 30건(합계 135). 아직 등록하지 않았다.
+## 같은 과목 중복 배치 (정책 변경과 등록)
+`add_cases.py` 는 같은 과목에서 같은 재판을 단원에 맞는 다른 제목으로 한 번 더 배치하는 것을 허용한다(제목이 같을 때만 중복). 이전에는 거절해서 PDF 가 같은 재판을 여러 항목에 실은 경우 첫 항목만 등록했다. 그렇게 건너뛴 항목(`_conflicts.json` 의 `duplicate`)을 `tools/dup_placements.py` 로 등록했다.
+
+| 과목 | 등록 | id 범위 | 같은 단원 안(제목만 다름) |
+|---|---:|---|---:|
+| 민법 | 17 | std-civil-918~934 | 4 |
+| 상법 | 31 | std-commercial-486~516 | 9 |
+| 행정법 | 30 | std-administrative-457~486 | 8 |
+| 헌법 | 42 | std-constitution-288~329 | 11 |
+| 형법 | 33 | std-criminal-473~505 | 9 |
+| 합계 | **153** | 건너뜀 0 | 41 |
+
+- 배치 정보(PDF 제목·목차 경로·선정이유·키워드)만 등록하고 `standardSource` 는 붙이지 않았다. 표준판례 텍스트는 같은 `decisionId` 의 첫 배치에 한 번만 있고 `build_data` 가 모든 배치에 적용한다. 따라서 이 배치들의 표준판례 출처 쪽수는 첫 배치의 쪽수로 표시된다.
+- 건너뛴 항목에만 있는 문구(주로 그 항목의 쟁점)는 검토메모 판정(Opus) 없이 쓰지 않았다. 필요하면 판정 후 합집합으로 더한다(std-civil-78·122 처럼).
+- 제목이 첫 배치와 같은 1건(민법 639번)은 "제목：단원이름"으로 구별했다. 각 배치의 memo 에 "같은 재판의 다른 배치: 첫 배치 제목(id) — PDF n번 항목, p.m"을 남겼다.
+- 공식 전문은 민법 17건만 수집했다(16건 성공, std-civil-918 은 std-civil-141 과 같은 재판으로 law.go.kr 미게재). 나머지 136건은 그 과목의 공식 전문 수집 때 `fetch_lawgo.py --all-missing` 이 받는다. 웹 묶음의 전문은 해시로 한 번만 저장된다.
+- 보고서: `data/standard-cases/_reports/dup-placements-<과목>.json`, 민법 수집 `spec/fetch-reports/civil-dup-placements.json`.
 
 ## 재현
 ```bash
