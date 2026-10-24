@@ -194,43 +194,77 @@ def editorial_items(v):
     return split_items(s)
 
 
+def _order_text(fetched):
+    """Read this judgment's order only; never infer outcomes from its reasons."""
+    if not fetched:
+        return ''
+    sections = fetched.get('sections') or []
+    normalize = lambda h: re.sub(r'[\s【】〖〗\[\]\u3000]', '', h or '')
+    # A full-text provider may put the entire judgment in one 전문 block.
+    # Only a line-level 주문 heading opens the operative order.
+    order_heading = re.compile(
+        r'(?m)^[ \t\u3000]*(?:[【〖\[][ \t\u3000]*주[ \t\u3000]*문'
+        r'[ \t\u3000]*[】〗\]]|주[ \t\u3000]*문)[ \t\u3000]*(?:\r?\n|$)')
+    reason_heading = re.compile(
+        r'(?m)^[ \t\u3000]*(?:[【〖\[][ \t\u3000]*이[ \t\u3000]*유'
+        r'[ \t\u3000]*[】〗\]]|이[ \t\u3000]*유[ \t\u3000]*(?:\r?\n|$))')
+    next_heading = re.compile(
+        r'(?m)^[ \t\u3000]*(?:[【〖\[][ \t\u3000]*(?:이[ \t\u3000]*유'
+        r'|별[ \t\u3000]*지[^\r\n】〗\]]{0,30})[ \t\u3000]*[】〗\]]'
+        r'|이[ \t\u3000]*유[ \t\u3000]*(?:\r?\n|$))')
+    for section in sections:
+        heading = normalize(section.get('heading'))
+        text = section.get('text') or ''
+        if heading == '주문':
+            order = text
+        elif heading == '전문':
+            match = order_heading.search(text)
+            reasons = reason_heading.search(text)
+            if not match or (reasons and reasons.start() < match.start()):
+                continue
+            order = text[match.end():]
+        else:
+            continue
+        stop = next_heading.search(order)
+        return (order[:stop.start()] if stop else order).strip()
+    return ''
+
+
 def derive_result(fetched, orig):
     r = orig.get('result') or orig.get('outcome') or ''
     if r:
         return r
-    if not fetched:
-        return ''
-    t = ''
-    for s in fetched.get('sections', []):
-        if norm_heading(s.get('heading')) == '주문':
-            t = s.get('text', '')
-            break
+    t = _order_text(fetched)
     if not t:
         return ''
-    if '파기' in t:
-        if '환송' in t:
-            return '파기환송'
-        if '이송' in t:
-            return '파기이송'
-        return '파기자판' if '자판' in t or '무죄' in t else '파기'
-    if '상고를 모두 기각' in t or '상고를 기각' in t:
-        return '상고기각'
+    # Whitespace and 각/모두 vary between old judgments and current API text.
+    compact = re.sub(r'\s+', '', t)
     tags = []
-    if '헌법에 합치되지 아니한다' in t or '헌법불합치' in t:
+    if '파기' in compact:
+        if '환송' in compact:
+            tags.append('파기환송')
+        elif '이송' in compact:
+            tags.append('파기이송')
+        else:
+            tags.append('파기자판' if '자판' in compact or '무죄' in compact else '파기')
+    for disposition, label in (('각하', '상고각하'), ('기각', '상고기각')):
+        if re.search(r'상고[를는](?:(?:모두|각|전부))?' + disposition, compact):
+            tags.append(label)
+    if '헌법에합치되지아니한다' in compact or '헌법불합치' in compact:
         tags.append('헌법불합치')
-    uncon = '헌법에 위반된다' in t
-    con = '헌법에 위반되지 아니한다' in t
+    uncon = '헌법에위반된다' in compact
+    con = '헌법에위반되지아니한다' in compact
     if uncon and con:
         tags.append('일부 위헌')
     elif uncon:
         tags.append('위헌')
     elif con:
         tags.append('합헌')
-    if '침해한 것' in t or '침해하였' in t or '인용' in t:
+    if '침해한것' in compact or '침해하였' in compact or '인용' in compact:
         tags.append('인용')
-    if '기각' in t:
+    if '기각' in compact and '상고기각' not in tags:
         tags.append('기각')
-    if '각하' in t:
+    if '각하' in compact and '상고각하' not in tags:
         tags.append('각하')
     return '·'.join(dict.fromkeys(tags))
 

@@ -174,7 +174,7 @@ jobs:
           if len(data['cases']) != manifest['caseCount']:
               raise RuntimeError('Published case count differs from the manifest')
           by_id = {case['id']: case for case in data['cases']}
-          samples = ['std-civil-25', 'std-civil-62', 'std-civil-70', 'std-civil-141', 'std-civil-918', 'std-civil-379']
+          samples = ['std-civil-25', 'std-civil-62', 'std-civil-70', 'std-civil-141', 'std-civil-918', 'std-civil-379', 'std-civil-398']
           for case_id in samples:
               full = asset(by_id[case_id]['fullTextRef'])
               if not isinstance(full, list) or sum(len(block.get('text', '')) for block in full) < 500:
@@ -182,10 +182,25 @@ jobs:
           for case_id in ['std-civil-141', 'std-civil-918']:
               if '네플라' not in by_id[case_id]['source']['label']:
                   raise RuntimeError('Supplemental source label is missing: ' + case_id)
+          expected_results = {
+              'std-civil-25': '상고기각', 'std-civil-62': '파기환송',
+              'std-civil-70': '파기환송·상고각하·상고기각',
+              'std-civil-141': '상고기각', 'std-civil-918': '상고기각',
+              'std-civil-379': '상고기각', 'std-civil-398': '상고기각'}
+          for case_id, result in expected_results.items():
+              if by_id[case_id].get('result') != result:
+                  raise RuntimeError('Published outcome label mismatch: ' + case_id)
+          supplied = by_id['std-civil-398']
+          if '사용자 제공' not in supplied['source']['label'] or '보충' not in supplied['source']['label']:
+              raise RuntimeError('User-supplied supplemental source label is missing')
+          supplied_text = '\n'.join(block.get('text', '') for block in asset(supplied['fullTextRef']))
+          if supplied_text.count('▒') != 121 or hashlib.sha256(supplied_text.encode()).hexdigest() != 'a7252c2a012be75b9873537a799eb53d71138beb76249bf39bf5f29597accea4':
+              raise RuntimeError('User-supplied judgment text or masking changed')
           civil = [case for case in data['cases'] if case['page'] == 'std-civil']
           print(json.dumps({'dataVersion': manifest['version'], 'caseCount': len(data['cases']),
                             'pages': dict(Counter(case['page'] for case in data['cases'])),
                             'civilFullTexts': sum(bool(case.get('fullTextRef')) for case in civil),
-                            'sampleFullTextsVerified': samples, 'publishedShellVerified': True},
+                            'sampleFullTextsVerified': samples, 'outcomeLabelsVerified': expected_results,
+                            'userMaskCharactersVerified': 121, 'publishedShellVerified': True},
                            ensure_ascii=False))
           PY

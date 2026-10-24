@@ -1,10 +1,13 @@
 """Regression guards for the full texts reported missing in seven screenshots."""
+import hashlib
 import json
 from pathlib import Path
 import unittest
 
+from build_data import derive_result
+
 ROOT = Path(__file__).resolve().parent.parent
-RESOLVED = ('std-civil-25', 'std-civil-62', 'std-civil-70', 'std-civil-141', 'std-civil-918', 'std-civil-379')
+RESOLVED = ('std-civil-25', 'std-civil-62', 'std-civil-70', 'std-civil-141', 'std-civil-918', 'std-civil-379', 'std-civil-398')
 
 def load(case_id):
     return json.loads((ROOT / 'data/fetched' / (case_id + '.json')).read_text(encoding='utf-8'))
@@ -45,6 +48,34 @@ class ReportedFullTextTests(unittest.TestCase):
             self.assertIn('네플라', record['sourceLabel'])
             self.assertIn('보충', record['sourceLabel'])
             self.assertTrue(record['sourceUrl'].startswith('https://www.nepla.ai/'))
+
+    def test_repaired_records_expose_every_supported_disposition(self):
+        expected = {
+            'std-civil-25': '상고기각',
+            'std-civil-62': '파기환송',
+            'std-civil-70': '파기환송·상고각하·상고기각',
+            'std-civil-141': '상고기각',
+            'std-civil-918': '상고기각',
+            'std-civil-379': '상고기각',
+            'std-civil-398': '상고기각',
+        }
+        for case_id, result in expected.items():
+            with self.subTest(case_id=case_id):
+                self.assertEqual(derive_result(load(case_id), {}), result)
+
+    def test_user_supplied_72da1159_retains_masking_and_provenance(self):
+        record = load('std-civil-398')
+        text = full_text(record)
+        self.assertEqual(record['caseNumber'], '72다1159')
+        self.assertEqual(record['provider'], 'user-provided')
+        self.assertIn('사용자 제공', record['sourceLabel'])
+        self.assertIn('보충', record['sourceLabel'])
+        self.assertEqual(record['sourceUrl'], '')
+        self.assertEqual(text.count('▒'), 121)
+        self.assertEqual(hashlib.sha256(text.encode('utf-8')).hexdigest(),
+                         'a7252c2a012be75b9873537a799eb53d71138beb76249bf39bf5f29597accea4')
+        self.assertIn('상고를 각 기각한다.', text)
+        self.assertIn('대법원판사 양병도(재판장) 김치걸 사광욱 홍남표 김영재', text)
 
 if __name__ == '__main__':
     unittest.main()
