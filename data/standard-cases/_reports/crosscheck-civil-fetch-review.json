@@ -8,7 +8,8 @@
   "lowSimilarityReviewed": 23,
   "sameDecisionSourceVariation": 23,
   "wrongDecision": 0,
-  "metaMismatchPending": 4
+  "metaMismatchPending": 1,
+  "metaMismatchResolved": 3
  },
  "items": [
   {
@@ -244,25 +245,24 @@
  ],
  "metaMismatchPending": [
   {
+   "registryId": "std-civil-840",
+   "caseNumber": "2006므751",
+   "issue": "등록부·PDF 선고일 2006-07-04, 공식 페이지 머리말 2006-07-13. 이후 공식 판결 6건은 7.4., 2건은 7.13. — 등록부 유지."
+  }
+ ],
+ "note": "수집 단계에서는 등록부·공식 수집본·표준판례 출처를 수정하지 않았다. 이후 사용자 승인으로 399·815·424 를 add_cases.py 로 정정했고(spec/CIVIL-FETCH-STATUS.md), 840 은 유지했다.",
+ "metaMismatchResolved": [
+  {
    "registryId": "std-civil-399",
-   "caseNumber": "93다951",
-   "issue": "등록부 전원합의체 False, 공식 인용문은 전원합의체 판결. 표준판례 PDF 출처줄은 전원합의체 표기가 없다."
+   "fix": "enBanc False→True (set --enbanc yes)"
   },
   {
    "registryId": "std-civil-815",
-   "caseNumber": "82므59",
-   "issue": "등록부 전원합의체 False, 공식 인용문은 전원합의체 판결. 표준판례 PDF 출처줄은 전원합의체 표기가 없다."
+   "fix": "enBanc False→True (set --enbanc yes)"
   },
   {
    "registryId": "std-civil-424",
-   "caseNumber": "2013다63257",
-   "issue": "등록부·PDF 선고일 2013-12-16, 공식 2013-12-26."
-  },
-  {
-   "registryId": "std-civil-840",
-   "caseNumber": "2006므751",
-   "issue": "등록부·PDF 선고일 2006-07-04, 공식 2006-07-13."
+   "fix": "decisionDate 2013-12-16→2013-12-26 (set --date)"
   }
- ],
- "note": "등록부·공식 수집본·표준판례 출처는 수정하지 않았다. meta-mismatch 4건은 식별 필드(decisionId 에 날짜 포함)와 연결되므로 사용자 확인 후 add_cases.py 로 처리한다."
+ ]
 }
