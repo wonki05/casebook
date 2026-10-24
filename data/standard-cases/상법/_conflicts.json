@@ -1,0 +1,668 @@
+{
+ "stage0": [
+  {
+   "seq": 219,
+   "no": 10,
+   "page": 228,
+   "kind": "numbering-skip",
+   "note": "항목으로 보이지 않아 건너뜀(이전 218): 선고 2002다60474 판결), ‘사외이사’나 ‘비상근이사’(대법원 2019. 11. 28. 선고 2017"
+  },
+  {
+   "seq": 88,
+   "no": 88,
+   "page": 111,
+   "kind": "case",
+   "note": "사건번호 없음: 대법원 2013. 7. 12. 선고 판결"
+  }
+ ],
+ "stage3": [
+  {
+   "seq": 88,
+   "no": 88,
+   "chunk": "c005",
+   "decisionId": null,
+   "caseNumber": "????",
+   "kind": "identity",
+   "note": "해석할 수 없는 대표 사건번호: '????'",
+   "court": "대법원"
+  },
+  {
+   "seq": 89,
+   "no": 89,
+   "chunk": "c005",
+   "decisionId": "sc-2016da245418-20190214-judgment",
+   "caseNumber": "2016다245418",
+   "kind": "multi-case",
+   "note": "2016다245418 / 2016다245425"
+  },
+  {
+   "seq": 89,
+   "no": 89,
+   "chunk": "c005",
+   "decisionId": "sc-2016da245418-20190214-judgment",
+   "caseNumber": "2016다245418",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-commercial-90"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 89,
+   "no": 89,
+   "chunk": "c005",
+   "decisionId": "sc-2016da245425-20190214-judgment",
+   "caseNumber": "2016다245425",
+   "kind": "multi-case",
+   "note": "2016다245418 / 2016다245425"
+  },
+  {
+   "seq": 124,
+   "no": 124,
+   "chunk": "c008",
+   "decisionId": "sc-2016da240338-20190516-judgment",
+   "caseNumber": "2016다240338",
+   "kind": "registry-text",
+   "note": "std-commercial-117.issues, std-commercial-117.holdings",
+   "registryIds": [
+    "std-commercial-117"
+   ]
+  },
+  {
+   "seq": 158,
+   "no": 158,
+   "chunk": "c010",
+   "decisionId": "sc-2008do1044-20080626-judgment",
+   "caseNumber": "2008도1044",
+   "kind": "registry-text",
+   "note": "std-commercial-157.issues, std-commercial-157.holdings",
+   "registryIds": [
+    "std-commercial-157"
+   ]
+  },
+  {
+   "seq": 172,
+   "no": 172,
+   "chunk": "c010",
+   "decisionId": "sc-2013da99942-20140430-judgment",
+   "caseNumber": "2013다99942",
+   "kind": "registry-text",
+   "note": "std-commercial-138.issues, std-commercial-138.holdings",
+   "registryIds": [
+    "std-commercial-138"
+   ]
+  },
+  {
+   "seq": 177,
+   "no": 177,
+   "chunk": "c010",
+   "decisionId": "sc-2007da40000-20070906-judgment",
+   "caseNumber": "2007다40000",
+   "kind": "registry-text",
+   "note": "std-commercial-159.issues, std-commercial-159.holdings",
+   "registryIds": [
+    "std-commercial-159"
+   ]
+  },
+  {
+   "seq": 179,
+   "no": 179,
+   "chunk": "c010",
+   "decisionId": "sc-2002da19797-20040227-judgment",
+   "caseNumber": "2002다19797",
+   "kind": "registry-text",
+   "note": "std-commercial-26.issues, std-commercial-26.holdings",
+   "registryIds": [
+    "std-commercial-26"
+   ]
+  },
+  {
+   "seq": 182,
+   "no": 182,
+   "chunk": "c011",
+   "decisionId": "sc-2016da217741-20170112-judgment",
+   "caseNumber": "2016다217741",
+   "kind": "registry-text",
+   "note": "std-commercial-166.issues, std-commercial-166.holdings",
+   "registryIds": [
+    "std-commercial-166"
+   ]
+  },
+  {
+   "seq": 184,
+   "no": 184,
+   "chunk": "c011",
+   "decisionId": "sc-2010da13541-20100624-judgment",
+   "caseNumber": "2010다13541",
+   "kind": "registry-text",
+   "note": "std-commercial-175.issues, std-commercial-175.holdings",
+   "registryIds": [
+    "std-commercial-175"
+   ]
+  },
+  {
+   "seq": 192,
+   "no": 192,
+   "chunk": "c011",
+   "decisionId": "sc-2018da290436-20200409-judgment",
+   "caseNumber": "2018다290436",
+   "kind": "registry-text",
+   "note": "annual-2020-35.issues, annual-2020-35.holdings, std-commercial-181.issues, std-commercial-181.holdings",
+   "registryIds": [
+    "annual-2020-35",
+    "std-commercial-181"
+   ]
+  },
+  {
+   "seq": 201,
+   "no": 201,
+   "chunk": "c012",
+   "decisionId": "sc-2009da35033-20110624-judgment",
+   "caseNumber": "2009다35033",
+   "kind": "registry-text",
+   "note": "std-commercial-155.issues, std-commercial-155.holdings",
+   "registryIds": [
+    "std-commercial-155"
+   ]
+  },
+  {
+   "seq": 213,
+   "no": 213,
+   "chunk": "c012",
+   "decisionId": "sc-2016da275679-20180315-judgment",
+   "caseNumber": "2016다275679",
+   "kind": "registry-text",
+   "note": "std-commercial-154.issues, std-commercial-154.holdings",
+   "registryIds": [
+    "std-commercial-154"
+   ]
+  },
+  {
+   "seq": 221,
+   "no": 221,
+   "chunk": "c013",
+   "decisionId": "sc-2011da57869-20130912-judgment",
+   "caseNumber": "2011다57869",
+   "kind": "registry-text",
+   "note": "std-commercial-209.issues, std-commercial-209.holdings",
+   "registryIds": [
+    "std-commercial-209"
+   ]
+  },
+  {
+   "seq": 227,
+   "no": 227,
+   "chunk": "c013",
+   "decisionId": "sc-2015da5569-20170818-judgment",
+   "caseNumber": "2015다5569",
+   "kind": "registry-text",
+   "note": "std-commercial-149.issues, std-commercial-149.holdings",
+   "registryIds": [
+    "std-commercial-149"
+   ]
+  },
+  {
+   "seq": 234,
+   "no": 234,
+   "chunk": "c014",
+   "decisionId": "sc-2016da260455-20190516-judgment",
+   "caseNumber": "2016다260455",
+   "kind": "registry-text",
+   "note": "std-commercial-100.issues, std-commercial-100.holdings",
+   "registryIds": [
+    "std-commercial-100"
+   ]
+  },
+  {
+   "seq": 241,
+   "no": 241,
+   "chunk": "c014",
+   "decisionId": "sc-2011da57869-20130912-judgment",
+   "caseNumber": "2011다57869",
+   "kind": "registry-text",
+   "note": "std-commercial-209.issues, std-commercial-209.holdings",
+   "registryIds": [
+    "std-commercial-209"
+   ]
+  },
+  {
+   "seq": 255,
+   "no": 255,
+   "chunk": "c015",
+   "decisionId": "sc-2000da37326-20040625-judgment",
+   "caseNumber": "2000다37326",
+   "kind": "registry-text",
+   "note": "std-commercial-238.issues, std-commercial-238.holdings",
+   "registryIds": [
+    "std-commercial-238"
+   ]
+  },
+  {
+   "seq": 260,
+   "no": 260,
+   "chunk": "c016",
+   "decisionId": "sc-2004ma1022-20061124-decision",
+   "caseNumber": "2004마1022",
+   "kind": "registry-text",
+   "note": "std-commercial-169.issues, std-commercial-169.holdings",
+   "registryIds": [
+    "std-commercial-169"
+   ]
+  },
+  {
+   "seq": 264,
+   "no": 264,
+   "chunk": "c016",
+   "decisionId": "sc-2006da19603-20071130-judgment",
+   "caseNumber": "2006다19603",
+   "kind": "registry-text",
+   "note": "std-commercial-221.issues, std-commercial-221.holdings",
+   "registryIds": [
+    "std-commercial-221"
+   ]
+  },
+  {
+   "seq": 268,
+   "no": 268,
+   "chunk": "c016",
+   "decisionId": "sc-2005da22701-20090423-judgment",
+   "caseNumber": "2005다22701·22718",
+   "kind": "registry-text",
+   "note": "std-commercial-160.issues, std-commercial-160.holdings",
+   "registryIds": [
+    "std-commercial-160"
+   ]
+  },
+  {
+   "seq": 363,
+   "no": 363,
+   "chunk": "c024",
+   "decisionId": "sc-99da44250-20000128-judgment",
+   "caseNumber": "99다44250",
+   "kind": "registry-text",
+   "note": "std-commercial-344.issues, std-commercial-344.holdings",
+   "registryIds": [
+    "std-commercial-344"
+   ]
+  },
+  {
+   "seq": 364,
+   "no": 364,
+   "chunk": "c024",
+   "decisionId": "sc-97da48319-19980213-judgment",
+   "caseNumber": "97다48319",
+   "kind": "registry-text",
+   "note": "std-commercial-266.holdings",
+   "registryIds": [
+    "std-commercial-266"
+   ]
+  },
+  {
+   "seq": 368,
+   "no": 368,
+   "chunk": "c024",
+   "decisionId": "sc-97da48319-19980213-judgment",
+   "caseNumber": "97다48319",
+   "kind": "registry-text",
+   "note": "std-commercial-266.issues, std-commercial-266.holdings",
+   "registryIds": [
+    "std-commercial-266"
+   ]
+  },
+  {
+   "seq": 399,
+   "no": 399,
+   "chunk": "c026",
+   "decisionId": "sc-2019da277812-20210722-judgment",
+   "caseNumber": "2019다277812",
+   "kind": "registry-text",
+   "note": "annual-2021-07.issues, annual-2021-07.holdings, annual-2021-54.issues, annual-2021-54.holdings, std-commercial-56.issues, std-commercial-56.holdings",
+   "registryIds": [
+    "annual-2021-07",
+    "annual-2021-54",
+    "std-commercial-56"
+   ]
+  },
+  {
+   "seq": 409,
+   "no": 409,
+   "chunk": "c026",
+   "decisionId": "sc-2000da13887-20020329-judgment",
+   "caseNumber": "2000다13887",
+   "kind": "overlap-synthesized",
+   "note": "겹침 재판 — 종합 standardSource 적용(등록부 텍스트와 달라도 차단하지 않음)",
+   "registryIds": [
+    "std-commercial-377",
+    "std-civil-341"
+   ]
+  },
+  {
+   "seq": 412,
+   "no": 412,
+   "chunk": "c027",
+   "decisionId": "sc-2016da255125-20180913-judgment",
+   "caseNumber": "2016다255125",
+   "kind": "registry-text",
+   "note": "std-commercial-387.issues, std-commercial-387.holdings",
+   "registryIds": [
+    "std-commercial-387"
+   ]
+  },
+  {
+   "seq": 455,
+   "no": 455,
+   "chunk": "c030",
+   "decisionId": "sc-2010ma222-20120417-decision",
+   "caseNumber": "2010마222",
+   "kind": "registry-text",
+   "note": "std-commercial-422.issues, std-commercial-422.holdings",
+   "registryIds": [
+    "std-commercial-422"
+   ]
+  },
+  {
+   "seq": 483,
+   "no": 483,
+   "chunk": "c032",
+   "decisionId": "sc-2007da4943-20070427-judgment",
+   "caseNumber": "2007다4943",
+   "kind": "registry-text",
+   "note": "std-commercial-82.issues, std-commercial-82.holdings",
+   "registryIds": [
+    "std-commercial-82"
+   ]
+  },
+  {
+   "seq": 484,
+   "no": 484,
+   "chunk": "c032",
+   "decisionId": "sc-2019da205947-20190613-judgment",
+   "caseNumber": "2019다205947",
+   "kind": "registry-text",
+   "note": "std-commercial-84.issues, std-commercial-84.holdings",
+   "registryIds": [
+    "std-commercial-84"
+   ]
+  },
+  {
+   "seq": 494,
+   "no": 494,
+   "chunk": "c033",
+   "decisionId": "sc-99da58327-20010710-judgment",
+   "caseNumber": "99다58327",
+   "kind": "registry-text",
+   "note": "std-commercial-454.issues",
+   "registryIds": [
+    "std-commercial-454"
+   ]
+  },
+  {
+   "seq": 503,
+   "no": 503,
+   "chunk": "c034",
+   "decisionId": "sc-91da4249-19920214-judgment",
+   "caseNumber": "91다4249",
+   "kind": "registry-text",
+   "note": "std-commercial-448.issues, std-commercial-448.holdings",
+   "registryIds": [
+    "std-commercial-448"
+   ]
+  },
+  {
+   "seq": 505,
+   "no": 505,
+   "chunk": "c034",
+   "decisionId": "sc-2000da70064-20030110-judgment",
+   "caseNumber": "2000다70064",
+   "kind": "registry-text",
+   "note": "std-commercial-439.issues, std-commercial-439.holdings",
+   "registryIds": [
+    "std-commercial-439"
+   ]
+  },
+  {
+   "seq": 516,
+   "no": 516,
+   "chunk": "c035",
+   "decisionId": "sc-2017da240496-20180315-judgment",
+   "caseNumber": "2017다240496",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-commercial-485"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 115,
+   "no": 115,
+   "chunk": "c007",
+   "decisionId": "sc-2016da240338-20190516-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 주주의 확정 (2) (115번, p.140) / 회사에 대한 주주권 확인 (124번, p.150)"
+  },
+  {
+   "seq": 155,
+   "no": 155,
+   "chunk": "c009",
+   "decisionId": "sc-87daka3200-19890214-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 주주총회의 속행 또는 연기 (155번, p.177) / 주주총회의 결의방법 (157번, p.178)"
+  },
+  {
+   "seq": 156,
+   "no": 156,
+   "chunk": "c009",
+   "decisionId": "sc-2008do1044-20080626-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 전원출석주주총회와 소집절차상 하자의 치유 (156번, p.178) / 총회의 질서유지와 의장의 자격 (158번, p.179)"
+  },
+  {
+   "seq": 137,
+   "no": 137,
+   "chunk": "c008",
+   "decisionId": "sc-2013da99942-20140430-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 주권발행 전 주식양도 (4) (137번, p.162) / 주주명부에 따른 소집통지와 주주총회 결의의 하자 (172번, p.191)"
+  },
+  {
+   "seq": 160,
+   "no": 160,
+   "chunk": "c010",
+   "decisionId": "sc-2007da40000-20070906-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 주주총회결의에 있어서 특별이해관계인의 판단기준 (160번, p.180) / 청구의 변경과 주주총회결의취소소송의 제소기간 준수 여부 (177번, p.195)"
+  },
+  {
+   "seq": 24,
+   "no": 24,
+   "chunk": "c002",
+   "decisionId": "sc-2002da19797-20040227-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 이사선임 주주총회결의 취소판결과 상법 제39조 적용 여부 (24번, p.62) / 이사선임 주주총회결의 취소와 이사의 거래행위의 효력 (179번, p.196)"
+  },
+  {
+   "seq": 167,
+   "no": 167,
+   "chunk": "c010",
+   "decisionId": "sc-2016da217741-20170112-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 정관상 주주총회 의사정족수 규정의 유효성 (167번, p.187) / 정관상 의사정족수 규정과 이사 선임을 위한 집중투표제도 (182번, p.198)"
+  },
+  {
+   "seq": 178,
+   "no": 178,
+   "chunk": "c010",
+   "decisionId": "sc-2010da13541-20100624-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 주주총회결의의 부존재 (178번, p.195) / 정관에 의한 이사의 임기 연장 (184번, p.200)"
+  },
+  {
+   "seq": 187,
+   "no": 187,
+   "chunk": "c011",
+   "decisionId": "sc-2018da290436-20200409-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 이사의 보수의 개념과 종류(특별성과급) (187번, p.202) / 대표이사의 특별성과급과 주주총회 결의의 여부 (192번, p.206)"
+  },
+  {
+   "seq": 154,
+   "no": 154,
+   "chunk": "c009",
+   "decisionId": "sc-2009da35033-20110624-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 임시주주총회 소집철회의 방법과 절차 (154번, p.177) / 주주의 의결권행사를 곤란하게 하는 이사회결의의 효력 (201번, p.213)"
+  },
+  {
+   "seq": 153,
+   "no": 153,
+   "chunk": "c009",
+   "decisionId": "sc-2016da275679-20180315-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 법원의 소집 허가에 따른 소수주주의 주주총회 소집기간 (153번, p.176) / 이사와 회사 간의 소에 있어서 일시대표이사의 대표권 (213번, p.224)"
+  },
+  {
+   "seq": 219,
+   "no": 219,
+   "chunk": "c013",
+   "decisionId": "sc-2011da57869-20130912-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 경업대상회사의 지배주주가 되는 행위와 이사의 경업 및 겸직금지의무 (219번, p.229) / 이사의 회사 기회 및 자산 유용금지의무(신세계 주주대표소송 사건) (221번, p.231) / 대표소송 제기 후 주식을 처분한 주주의 원고적격 (241번, p.248)"
+  },
+  {
+   "seq": 148,
+   "no": 148,
+   "chunk": "c009",
+   "decisionId": "sc-2015da5569-20170818-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 질권 설정된 주식의 의결권 행사 (148번, p.172) / 이사의 자기거래와 주주 전원의 동의 (227번, p.236)"
+  },
+  {
+   "seq": 98,
+   "no": 98,
+   "chunk": "c006",
+   "decisionId": "sc-2016da260455-20190516-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 회사의 영리성과 기부행위 (98번, p.123) / 이사회결의에 찬성한 이사의 책임 (234번, p.242)"
+  },
+  {
+   "seq": 252,
+   "no": 252,
+   "chunk": "c015",
+   "decisionId": "sc-2000da37326-20040625-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 신주발행 등 무효의 원인 (252번, p.260) / 신주발행 무효의 소의 제소기간 (1) (255번, p.263)"
+  },
+  {
+   "seq": 170,
+   "no": 170,
+   "chunk": "c010",
+   "decisionId": "sc-2004ma1022-20061124-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 합병 등에 반대하는 주주의 주식매수가액의 산정 방법 (1) (170번, p.189) / 기업가치의 평가 (1) (260번, p.268)"
+  },
+  {
+   "seq": 233,
+   "no": 233,
+   "chunk": "c013",
+   "decisionId": "sc-2006da19603-20071130-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 대주주의 지시와 이사의 손해배상책임 (233번, p.241) / 분식회계로 인한 위법배당 (264번, p.273)"
+  },
+  {
+   "seq": 161,
+   "no": 161,
+   "chunk": "c010",
+   "decisionId": "sc-2005da22701-20090423-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 의결권의 대리행사, 불통일행사의 방법과 한계 (161번, p.181) / 합병비율의 불공정과 합병무효의 소 (268번, p.277)"
+  },
+  {
+   "seq": 362,
+   "no": 362,
+   "chunk": "c023",
+   "decisionId": "sc-99da44250-20000128-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 만기후배서 피배서인의 상환청구권 행사 (362번, p.375) / 부정수표단속법상 일람출급성 보장 (363번, p.377)"
+  },
+  {
+   "seq": 284,
+   "no": 284,
+   "chunk": "c018",
+   "decisionId": "sc-97da48319-19980213-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 가계수표 (284번, p.300) / 발행한도를 초과한 가계수표의 효력 (364번, p.378) / 수표의 선의취득 (368번, p.382)"
+  },
+  {
+   "seq": 54,
+   "no": 54,
+   "chunk": "c003",
+   "decisionId": "sc-2019da277812-20210722-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 보험계약의 무효와 보험금 반환 부당이득반환청구권의 시효 (54번, p.84) / 보험계약이 선량한 풍속 기타 사회질서에 반하여 무효인 경우 보험회사가 이미 지급한 보험금에 대한 부당이득반환청구권의 소멸시효기간 (399번, p.413)"
+  },
+  {
+   "seq": 400,
+   "no": 400,
+   "chunk": "c026",
+   "decisionId": "sc-2000da13887-20020329-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 보험금지급의무와 면책사유 (400번, p.414) / 보험금청구권의 양수인 또는 질권자에 대한 보험자의 면책사유의 항변 (409번, p.424)"
+  },
+  {
+   "seq": 411,
+   "no": 411,
+   "chunk": "c027",
+   "decisionId": "sc-2016da255125-20180913-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 다수 보험계약의 무효 판단 기준 (411번, p.426) / 타인을 위한 보험계약의 무효와 부당이득반환 (412번, p.427)"
+  },
+  {
+   "seq": 447,
+   "no": 447,
+   "chunk": "c029",
+   "decisionId": "sc-2010ma222-20120417-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 상법 제5편에 규정된 선박소유자 책임제한 대상이 되는 선박 (447번, p.465) / 선박소유자 등의 책임제한 배제사유로서의 ‘손해발생의 염려가 있음을 인식하면서 무모하게 한 작위 또는 부작위’의 의미 (455번, p.473)"
+  },
+  {
+   "seq": 80,
+   "no": 80,
+   "chunk": "c004",
+   "decisionId": "sc-2007da4943-20070427-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 실제의 운송주선인 (80번, p.104) / 독립적 계약자의 책임제한 여부와 히말라야 약관의 효력 (483번, p.504)"
+  },
+  {
+   "seq": 82,
+   "no": 82,
+   "chunk": "c004",
+   "decisionId": "sc-2019da205947-20190613-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 운송인책임시효 1년의 단기제척기간의 기산점(상법 제147조, 제121조 관련) (82번, p.105) / 상법 제814조의 법적 성질 (484번, p.505)"
+  },
+  {
+   "seq": 480,
+   "no": 480,
+   "chunk": "c032",
+   "decisionId": "sc-99da58327-20010710-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 해상운송인의 불법행위로 인한 손해배상책임에 있어서 귀책사유에 관한 입증책임의 소재 (480번, p.500) / 정기용선계약과 운송인의 확정 (494번, p.517)"
+  },
+  {
+   "seq": 474,
+   "no": 474,
+   "chunk": "c031",
+   "decisionId": "sc-91da4249-19920214-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 소위 ‘보증도’의 유효성과 손해배상책임 (474번, p.494) / 순환보상약관과 운송인의 사용인 등의 책임 (503번, p.531)"
+  },
+  {
+   "seq": 465,
+   "no": 465,
+   "chunk": "c031",
+   "decisionId": "sc-2000da70064-20030110-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 해상운송계약상 화물의 적부에 있어서 운송인의 주의의무 (465번, p.485) / 선하증권의 법적 성질과 기명식 선하증권의 효력 (505번, p.532)"
+  }
+ ]
+}

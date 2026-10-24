@@ -1,0 +1,656 @@
+{
+ "stage0": [
+  {
+   "seq": 81,
+   "no": 81,
+   "page": 58,
+   "kind": "date",
+   "note": "선고일 없음: 대법원 2017. 8 21. 선고 2017도7321 판결"
+  },
+  {
+   "seq": 115,
+   "no": 115,
+   "page": 83,
+   "kind": "decisionType",
+   "note": "판결/결정 불명: 대법원 2019.6.13, 2017두33985"
+  }
+ ],
+ "stage3": [
+  {
+   "seq": 35,
+   "no": 35,
+   "chunk": "c002",
+   "decisionId": "sc-2017du34087-20170530-judgment",
+   "caseNumber": "2017두34087",
+   "kind": "registry-text",
+   "note": "std-administrative-30.issues, std-administrative-30.holdings",
+   "registryIds": [
+    "std-administrative-30"
+   ]
+  },
+  {
+   "seq": 37,
+   "no": 37,
+   "chunk": "c002",
+   "decisionId": "sc-2018du44302-20181025-judgment",
+   "caseNumber": "2018두44302",
+   "kind": "registry-text",
+   "note": "std-administrative-07.issues, std-administrative-07.holdings",
+   "registryIds": [
+    "std-administrative-07"
+   ]
+  },
+  {
+   "seq": 98,
+   "no": 98,
+   "chunk": "c005",
+   "decisionId": "sc-2003du7606-20040722-judgment",
+   "caseNumber": "2003두7606",
+   "kind": "registry-text",
+   "note": "std-administrative-52.issues, std-administrative-52.holdings",
+   "registryIds": [
+    "std-administrative-52"
+   ]
+  },
+  {
+   "seq": 100,
+   "no": 100,
+   "chunk": "c005",
+   "decisionId": "sc-2018du104-20191017-judgment",
+   "caseNumber": "2018두104",
+   "kind": "registry-text",
+   "note": "std-administrative-82.issues, std-administrative-82.holdings",
+   "registryIds": [
+    "std-administrative-82"
+   ]
+  },
+  {
+   "seq": 103,
+   "no": 103,
+   "chunk": "c005",
+   "decisionId": "sc-2003da6422-20030530-judgment",
+   "caseNumber": "2003다6422",
+   "kind": "registry-text",
+   "note": "std-administrative-64.issues, std-administrative-64.holdings",
+   "registryIds": [
+    "std-administrative-64"
+   ]
+  },
+  {
+   "seq": 121,
+   "no": 121,
+   "chunk": "c006",
+   "decisionId": "sc-92nu1728-19940308-judgment",
+   "caseNumber": "92누1728",
+   "kind": "registry-text",
+   "note": "std-administrative-62.issues, std-administrative-62.holdings",
+   "registryIds": [
+    "std-administrative-62"
+   ]
+  },
+  {
+   "seq": 136,
+   "no": 136,
+   "chunk": "c007",
+   "decisionId": "sc-2014du11328-20180213-judgment",
+   "caseNumber": "2014두11328",
+   "kind": "registry-text",
+   "note": "std-administrative-23.issues, std-administrative-23.holdings",
+   "registryIds": [
+    "std-administrative-23"
+   ]
+  },
+  {
+   "seq": 159,
+   "no": 159,
+   "chunk": "c008",
+   "decisionId": "sc-2017du38874-20190711-judgment",
+   "caseNumber": "2017두38874",
+   "kind": "registry-text",
+   "note": "std-administrative-75.issues, std-administrative-75.holdings",
+   "registryIds": [
+    "std-administrative-75"
+   ]
+  },
+  {
+   "seq": 168,
+   "no": 168,
+   "chunk": "c009",
+   "decisionId": "sc-82nu420-19830726-judgment",
+   "caseNumber": "82누420",
+   "kind": "registry-text",
+   "note": "std-administrative-94.issues, std-administrative-94.holdings",
+   "registryIds": [
+    "std-administrative-94"
+   ]
+  },
+  {
+   "seq": 199,
+   "no": 199,
+   "chunk": "c010",
+   "decisionId": "sc-2016da213916-20170428-judgment",
+   "caseNumber": "2016다213916",
+   "kind": "registry-text",
+   "note": "std-administrative-145.issues, std-administrative-145.holdings",
+   "registryIds": [
+    "std-administrative-145"
+   ]
+  },
+  {
+   "seq": 214,
+   "no": 214,
+   "chunk": "c011",
+   "decisionId": "sc-2015du35116-20180125-judgment",
+   "caseNumber": "2015두35116",
+   "kind": "registry-text",
+   "note": "std-administrative-35.issues, std-administrative-35.holdings",
+   "registryIds": [
+    "std-administrative-35"
+   ]
+  },
+  {
+   "seq": 312,
+   "no": 312,
+   "chunk": "c017",
+   "decisionId": "sc-2003du10251-20041126-judgment",
+   "caseNumber": "2003두10251·10268",
+   "kind": "registry-text",
+   "note": "std-administrative-296.issues, std-administrative-296.holdings",
+   "registryIds": [
+    "std-administrative-296"
+   ]
+  },
+  {
+   "seq": 314,
+   "no": 314,
+   "chunk": "c017",
+   "decisionId": "sc-2003du9015-20040422-judgment",
+   "caseNumber": "2003두9015",
+   "kind": "registry-text",
+   "note": "std-administrative-59.issues, std-administrative-59.holdings",
+   "registryIds": [
+    "std-administrative-59"
+   ]
+  },
+  {
+   "seq": 316,
+   "no": 316,
+   "chunk": "c017",
+   "decisionId": "sc-2014du42742-20150326-judgment",
+   "caseNumber": "2014두42742",
+   "kind": "registry-text",
+   "note": "std-administrative-125.issues, std-administrative-125.holdings",
+   "registryIds": [
+    "std-administrative-125"
+   ]
+  },
+  {
+   "seq": 317,
+   "no": 317,
+   "chunk": "c017",
+   "decisionId": "sc-2000du7735-20040422-judgment",
+   "caseNumber": "2000두7735",
+   "kind": "registry-text",
+   "note": "std-administrative-61.issues",
+   "registryIds": [
+    "std-administrative-61"
+   ]
+  },
+  {
+   "seq": 326,
+   "no": 326,
+   "chunk": "c017",
+   "decisionId": "sc-2015du295-20151119-judgment",
+   "caseNumber": "2015두295",
+   "kind": "registry-text",
+   "note": "std-administrative-31.issues, std-administrative-31.holdings",
+   "registryIds": [
+    "std-administrative-31"
+   ]
+  },
+  {
+   "seq": 340,
+   "no": 340,
+   "chunk": "c018",
+   "decisionId": "sc-2006du330-20060316-judgment",
+   "caseNumber": "2006두330",
+   "kind": "registry-text",
+   "note": "std-administrative-160.issues, std-administrative-160.holdings",
+   "registryIds": [
+    "std-administrative-160"
+   ]
+  },
+  {
+   "seq": 349,
+   "no": 349,
+   "chunk": "c019",
+   "decisionId": "sc-2018du49130-20190627-judgment",
+   "caseNumber": "2018두49130",
+   "kind": "registry-text",
+   "note": "std-administrative-217.issues, std-administrative-217.holdings",
+   "registryIds": [
+    "std-administrative-217"
+   ]
+  },
+  {
+   "seq": 358,
+   "no": 358,
+   "chunk": "c019",
+   "decisionId": "sc-2005du3554-20051223-judgment",
+   "caseNumber": "2005두3554",
+   "kind": "registry-text",
+   "note": "std-administrative-37.issues",
+   "registryIds": [
+    "std-administrative-37"
+   ]
+  },
+  {
+   "seq": 364,
+   "no": 364,
+   "chunk": "c020",
+   "decisionId": "sc-2013du2518-20140926-judgment",
+   "caseNumber": "2013두2518",
+   "kind": "registry-text",
+   "note": "std-administrative-38.issues, std-administrative-38.holdings",
+   "registryIds": [
+    "std-administrative-38"
+   ]
+  },
+  {
+   "seq": 365,
+   "no": 365,
+   "chunk": "c020",
+   "decisionId": "sc-2019du38656-20190809-judgment",
+   "caseNumber": "2019두38656",
+   "kind": "registry-text",
+   "note": "std-administrative-76.issues, std-administrative-76.holdings",
+   "registryIds": [
+    "std-administrative-76"
+   ]
+  },
+  {
+   "seq": 366,
+   "no": 366,
+   "chunk": "c020",
+   "decisionId": "sc-2004du619-20070614-judgment",
+   "caseNumber": "2004두619",
+   "kind": "registry-text",
+   "note": "std-administrative-293.issues, std-administrative-293.holdings",
+   "registryIds": [
+    "std-administrative-293"
+   ]
+  },
+  {
+   "seq": 370,
+   "no": 370,
+   "chunk": "c020",
+   "decisionId": "sc-2004du9302-20070427-judgment",
+   "caseNumber": "2004두9302",
+   "kind": "registry-text",
+   "note": "std-administrative-347.issues, std-administrative-347.holdings",
+   "registryIds": [
+    "std-administrative-347"
+   ]
+  },
+  {
+   "seq": 383,
+   "no": 383,
+   "chunk": "c021",
+   "decisionId": "sc-2005du3554-20051223-judgment",
+   "caseNumber": "2005두3554",
+   "kind": "registry-text",
+   "note": "std-administrative-37.issues, std-administrative-37.holdings",
+   "registryIds": [
+    "std-administrative-37"
+   ]
+  },
+  {
+   "seq": 392,
+   "no": 392,
+   "chunk": "c021",
+   "decisionId": "sc-2019du63515-20200514-judgment",
+   "caseNumber": "2019두63515",
+   "kind": "registry-text",
+   "note": "std-administrative-200.issues, std-administrative-200.holdings",
+   "registryIds": [
+    "std-administrative-200"
+   ]
+  },
+  {
+   "seq": 398,
+   "no": 398,
+   "chunk": "c022",
+   "decisionId": "sc-2018du104-20191017-judgment",
+   "caseNumber": "2018두104",
+   "kind": "registry-text",
+   "note": "std-administrative-82.issues",
+   "registryIds": [
+    "std-administrative-82"
+   ]
+  },
+  {
+   "seq": 412,
+   "no": 412,
+   "chunk": "c023",
+   "decisionId": "sc-94nu4615-19950711-judgment",
+   "caseNumber": "94누4615",
+   "kind": "registry-text",
+   "note": "std-administrative-83.issues, std-administrative-83.holdings",
+   "registryIds": [
+    "std-administrative-83"
+   ]
+  },
+  {
+   "seq": 431,
+   "no": 431,
+   "chunk": "c024",
+   "decisionId": null,
+   "caseNumber": "2016추5087",
+   "kind": "identity",
+   "note": "재판 유형 확인 필요: 2016추5087; decisionType을 판결/결정으로 지정하세요",
+   "court": "대법원"
+  },
+  {
+   "seq": 438,
+   "no": 438,
+   "chunk": "c024",
+   "decisionId": "sc-2008du16155-20090130-judgment",
+   "caseNumber": "2008두16155",
+   "kind": "registry-text",
+   "note": "std-administrative-409.issues, std-administrative-409.holdings",
+   "registryIds": [
+    "std-administrative-409"
+   ]
+  },
+  {
+   "seq": 445,
+   "no": 445,
+   "chunk": "c025",
+   "decisionId": "sc-95nu2036-19951114-judgment",
+   "caseNumber": "95누2036",
+   "kind": "registry-text",
+   "note": "std-administrative-60.issues",
+   "registryIds": [
+    "std-administrative-60"
+   ]
+  },
+  {
+   "seq": 446,
+   "no": 446,
+   "chunk": "c025",
+   "decisionId": "sc-85do2448-19860128-judgment",
+   "caseNumber": "85도2448",
+   "kind": "multi-case",
+   "note": "85도2448 / 85감도356"
+  },
+  {
+   "seq": 446,
+   "no": 446,
+   "chunk": "c025",
+   "decisionId": "sc-85do2448-19860128-judgment",
+   "caseNumber": "85도2448",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-administrative-416"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 446,
+   "no": 446,
+   "chunk": "c025",
+   "decisionId": "sc-85x00ac1000b3c4z356-19860128-judgment",
+   "caseNumber": "85감도356",
+   "kind": "multi-case",
+   "note": "85도2448 / 85감도356"
+  },
+  {
+   "seq": 446,
+   "no": 446,
+   "chunk": "c025",
+   "decisionId": "sc-85x00ac1000b3c4z356-19860128-judgment",
+   "caseNumber": "85감도356",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-administrative-417"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 460,
+   "no": 460,
+   "chunk": "c026",
+   "decisionId": "sc-2017du33985-20190613-judgment",
+   "caseNumber": "2017두33985",
+   "kind": "registry-text",
+   "note": "std-administrative-110.issues, std-administrative-110.holdings",
+   "registryIds": [
+    "std-administrative-110"
+   ]
+  },
+  {
+   "seq": 30,
+   "no": 30,
+   "chunk": "c002",
+   "decisionId": "sc-2017du34087-20170530-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 사인의 공법행위 (5)：수리를 요하는 신고 (30번, p.26) / 사인의 공법행위 (10) : 수리의 법적 성질 (35번, p.29)"
+  },
+  {
+   "seq": 7,
+   "no": 7,
+   "chunk": "c001",
+   "decisionId": "sc-2018du44302-20181025-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 행정법의 일반원칙：평등원칙 (2) (7번, p.8) / 사인의 공법행위 (12)：수리의 법적 성질 (37번, p.30)"
+  },
+  {
+   "seq": 54,
+   "no": 54,
+   "chunk": "c003",
+   "decisionId": "sc-2003du7606-20040722-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 행정행위의 개별적 유형 (2)：예외적 승인(예외적 허가) (54번, p.41) / 행정행위의 취소와 철회 (1) (98번, p.70)"
+  },
+  {
+   "seq": 84,
+   "no": 84,
+   "chunk": "c004",
+   "decisionId": "sc-2018du104-20191017-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 불가쟁력 (84번, p.60) / 행정행위의 취소와 철회 (3) (100번, p.72) / 판결의 효력 (2)：원상회복의무 (398번, p.327)"
+  },
+  {
+   "seq": 66,
+   "no": 66,
+   "chunk": "c004",
+   "decisionId": "sc-2003da6422-20030530-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 행정행위의 부관 (3) (66번, p.48) / 행정행위의 취소와 철회 (6) (103번, p.73)"
+  },
+  {
+   "seq": 64,
+   "no": 64,
+   "chunk": "c004",
+   "decisionId": "sc-92nu1728-19940308-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 행정행위의 부관 (1) (64번, p.47) / 행정규칙 (5)：법령보충규칙(행정규칙 형식의 법규명령) (121번, p.87)"
+  },
+  {
+   "seq": 23,
+   "no": 23,
+   "chunk": "c002",
+   "decisionId": "sc-2014du11328-20180213-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 공법관계와 사법관계의 구별 (2) (23번, p.20) / 공법상 계약 (5)：사법상 계약으로 본 경우 (136번, p.99)"
+  },
+  {
+   "seq": 77,
+   "no": 77,
+   "chunk": "c004",
+   "decisionId": "sc-2017du38874-20190711-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 행정행위의 성립요건 (2) (77번, p.55) / 처분의 방식 (159번, p.116)"
+  },
+  {
+   "seq": 96,
+   "no": 96,
+   "chunk": "c005",
+   "decisionId": "sc-82nu420-19830726-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 행정행위의 하자의 치유 (1) (96번, p.68) / 절차하자의 효과 (2) (168번, p.122)"
+  },
+  {
+   "seq": 152,
+   "no": 152,
+   "chunk": "c008",
+   "decisionId": "sc-2016da213916-20170428-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 행정응원 (152번, p.111) / 대집행：대집행의 대상 (1) (199번, p.146)"
+  },
+  {
+   "seq": 36,
+   "no": 36,
+   "chunk": "c002",
+   "decisionId": "sc-2015du35116-20180125-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 사인의 공법행위 (11)：수리의 법적 성질 (36번, p.29) / 이행강제금 (3) (214번, p.156)"
+  },
+  {
+   "seq": 307,
+   "no": 307,
+   "chunk": "c016",
+   "decisionId": "sc-2003du10251-20041126-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 대상적격 (4)：행정규칙에 근거한 처분 (307번, p.250) / 대상적격 (9)：조례로 결정할 사항을 개별 결정에 의한 경우 (312번, p.254)"
+  },
+  {
+   "seq": 61,
+   "no": 61,
+   "chunk": "c003",
+   "decisionId": "sc-2003du9015-20040422-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 행정행위의 개별적 유형 (6)：공증 (61번, p.45) / 대상적격 (11)：지목변경신청에 대한 거부 (314번, p.256)"
+  },
+  {
+   "seq": 131,
+   "no": 131,
+   "chunk": "c007",
+   "decisionId": "sc-2014du42742-20150326-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 행정계획 (2)：계획입안･변경청구권 (131번, p.95) / 대상적격 (13)：계획변경신청에 대한 거부 (316번, p.258)"
+  },
+  {
+   "seq": 63,
+   "no": 63,
+   "chunk": "c003",
+   "decisionId": "sc-2000du7735-20040422-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 행정행위의 개별적 유형 (7)：통지 (63번, p.46) / 대상적격 (14)：국립대학교원 재임용 거부 (317번, p.259)"
+  },
+  {
+   "seq": 31,
+   "no": 31,
+   "chunk": "c002",
+   "decisionId": "sc-2015du295-20151119-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 사인의 공법행위 (6)：수리를 요하는 신고 (31번, p.27) / 대상적격 (23)：변경처분이 있는 경우 항고소송의 대상 (326번, p.265)"
+  },
+  {
+   "seq": 169,
+   "no": 169,
+   "chunk": "c009",
+   "decisionId": "sc-2006du330-20060316-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 절차하자의 효과 (3) (169번, p.122) / 원고적격 (6)：환경영향평가 대상지역 안의 주민 (340번, p.278)"
+  },
+  {
+   "seq": 228,
+   "no": 228,
+   "chunk": "c011",
+   "decisionId": "sc-2018du49130-20190627-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 명단공표 (228번, p.169) / 소의 이익 (3)：처분의 직권취소 (349번, p.287)"
+  },
+  {
+   "seq": 39,
+   "no": 39,
+   "chunk": "c002",
+   "decisionId": "sc-2005du3554-20051223-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 사인의 공법행위의 하자와 후속적 행정행위의 효력 (39번, p.31) / 소의 이익 (12)：사업양도에 따른 지위승계 신고수리처분 (358번, p.294) / 관련청구소송의 병합 (3)：제소기간 (383번, p.316)"
+  },
+  {
+   "seq": 40,
+   "no": 40,
+   "chunk": "c003",
+   "decisionId": "sc-2013du2518-20140926-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 대인적 행정행위 (1) (40번, p.32) / 피고적격 (3) (364번, p.298)"
+  },
+  {
+   "seq": 78,
+   "no": 78,
+   "chunk": "c004",
+   "decisionId": "sc-2019du38656-20190809-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 행정행위의 효력발생요건 (78번, p.56) / 제소기간 (1) (365번, p.300)"
+  },
+  {
+   "seq": 304,
+   "no": 304,
+   "chunk": "c016",
+   "decisionId": "sc-2004du619-20070614-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 대상적격 (1)：청소년유해매체물 결정·고시 (304번, p.248) / 제소기간 (2) (366번, p.301)"
+  },
+  {
+   "seq": 369,
+   "no": 369,
+   "chunk": "c020",
+   "decisionId": "sc-2004du9302-20070427-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 제소기간 (5) (369번, p.303) / 제소기간 (6) (370번, p.304)"
+  },
+  {
+   "seq": 210,
+   "no": 210,
+   "chunk": "c011",
+   "decisionId": "sc-2019du63515-20200514-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 제재처분 (1) (210번, p.153) / 재량행위에 대한 일부취소판결 (2) (392번, p.323)"
+  },
+  {
+   "seq": 85,
+   "no": 85,
+   "chunk": "c004",
+   "decisionId": "sc-94nu4615-19950711-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 행정행위의 무효와 취소 (1) (85번, p.60) / 행정권한의 위임의 형식 (412번, p.341)"
+  },
+  {
+   "seq": 437,
+   "no": 437,
+   "chunk": "c024",
+   "decisionId": "sc-2008du16155-20090130-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 공무원 임용결격자에 대한 임용행위의 효과 (3) (437번, p.366) / 공무원 임용처분 취소와 행정절차 (438번, p.367)"
+  },
+  {
+   "seq": 62,
+   "no": 62,
+   "chunk": "c003",
+   "decisionId": "sc-95nu2036-19951114-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 행정행위의 개별적 유형 (7)：통지 (62번, p.46) / 공무원관계의 소멸：당연퇴직이 처분에 해당하는지 여부 (445번, p.375)"
+  },
+  {
+   "seq": 115,
+   "no": 115,
+   "chunk": "c006",
+   "decisionId": "sc-2017du33985-20190613-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 법규명령 (12)：구체적 규범통제 (115번, p.83) / 공기업이용관계의 내용：이용조건설정과 이용대가징수 (460번, p.390)"
+  }
+ ]
+}

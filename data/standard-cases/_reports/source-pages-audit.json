@@ -1,0 +1,861 @@
+{
+  "createdAt": "2026-10-24T08:04:16.097877+00:00",
+  "method": "Each non-overlap standardSource field item is normalized with pdf2md_lib.normalize and sought in Haystack of declared pages versus full candidate.pdfPages. Only exact full-page-set match absent from declared subset is flagged. No inferred errors from different page lists alone.",
+  "subjects": {
+    "constitution": {
+      "candidateFile": "data/standard-cases/헌법/candidates-constitution.json",
+      "sha256AtRead": "22eb55a709735bbb15f0dba4b9d7620a6d9179d8cd70f7667510e9af6d0c3d17",
+      "candidates": 329,
+      "withStandardSource": 284,
+      "skippedOverlap": 10,
+      "itemsChecked": 729,
+      "itemsMatchedWithinCandidatePages": 728,
+      "itemsMissingFromDeclaredButFoundInFullPages": 4,
+      "affectedCandidates": 2,
+      "unchangedDuringAudit": true
+    },
+    "administrative": {
+      "candidateFile": "data/standard-cases/행정법/candidates-administrative.json",
+      "sha256AtRead": "2eca0d272cb482b918e71fa6a552b4258403e6ca11f47ac618393afb92c57285",
+      "candidates": 486,
+      "withStandardSource": 454,
+      "skippedOverlap": 9,
+      "itemsChecked": 1460,
+      "itemsMatchedWithinCandidatePages": 1457,
+      "itemsMissingFromDeclaredButFoundInFullPages": 0,
+      "affectedCandidates": 0,
+      "unchangedDuringAudit": true
+    },
+    "civil": {
+      "candidateFile": "data/standard-cases/민법/candidates-civil.json",
+      "sha256AtRead": "7ad10e043fda962852d607cdb1ccf31115c753bd1ba3110b9b9b76d99ec4cd1b",
+      "candidates": 934,
+      "withStandardSource": 912,
+      "skippedOverlap": 12,
+      "itemsChecked": 2233,
+      "itemsMatchedWithinCandidatePages": 2230,
+      "itemsMissingFromDeclaredButFoundInFullPages": 0,
+      "affectedCandidates": 0,
+      "unchangedDuringAudit": true
+    },
+    "criminal": {
+      "candidateFile": "data/standard-cases/형법/candidates-criminal.json",
+      "sha256AtRead": "558814c9988b88cbc92d9d62431d15be195f66f793be8f7540a3d044f7a47932",
+      "candidates": 505,
+      "withStandardSource": 457,
+      "skippedOverlap": 2,
+      "itemsChecked": 989,
+      "itemsMatchedWithinCandidatePages": 986,
+      "itemsMissingFromDeclaredButFoundInFullPages": 1,
+      "affectedCandidates": 1,
+      "unchangedDuringAudit": true
+    },
+    "commercial": {
+      "candidateFile": "data/standard-cases/상법/candidates-commercial.json",
+      "sha256AtRead": "d1b92157c9cc11f72dd275922b83644b3570a3968145b61109e6ab3471b63aa4",
+      "candidates": 517,
+      "withStandardSource": 483,
+      "skippedOverlap": 11,
+      "itemsChecked": 1305,
+      "itemsMatchedWithinCandidatePages": 1303,
+      "itemsMissingFromDeclaredButFoundInFullPages": 0,
+      "affectedCandidates": 0,
+      "unchangedDuringAudit": true
+    }
+  },
+  "findings": [
+    {
+      "subject": "헌법",
+      "subjectId": "constitution",
+      "seq": 151,
+      "caseNumber": "2018헌마551",
+      "decisionId": "cc-2018heonma551-20200423-decision",
+      "status": "ok",
+      "declaredPages": [
+        165
+      ],
+      "candidatePages": [
+        165,
+        166,
+        167
+      ],
+      "exactlyRequiredPages": [
+        165,
+        166,
+        167
+      ],
+      "addPages": [
+        166,
+        167
+      ],
+      "recommendedConservativePages": [
+        165,
+        166,
+        167
+      ],
+      "affectedItems": [
+        {
+          "field": "holdings",
+          "index": 0,
+          "n": "1.",
+          "chars": 607,
+          "prefix": "선례(헌재 2004. 3. 25. 2001헌마710; 2014. 3. 27. 2011헌바42)에 따라, 공무원인 교원이 정당의",
+          "exactMatchPages": [
+            165,
+            166
+          ],
+          "missingDeclaredPages": [
+            166
+          ]
+        },
+        {
+          "field": "holdings",
+          "index": 1,
+          "n": "2.",
+          "chars": 2103,
+          "prefix": "[3인의 위헌의견-명확성 원칙 및 과잉금지의 원칙 위반] ① 민주주의 국가에서 국가 구성원의 모든 사회적 활동은 ‘정치’와 관",
+          "exactMatchPages": [
+            166,
+            167
+          ],
+          "missingDeclaredPages": [
+            166,
+            167
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "헌법",
+      "subjectId": "constitution",
+      "seq": 264,
+      "caseNumber": "2021헌나1",
+      "decisionId": "cc-2021heonna1-20211028-decision",
+      "status": "ok",
+      "declaredPages": [
+        270
+      ],
+      "candidatePages": [
+        270,
+        271,
+        272,
+        273
+      ],
+      "exactlyRequiredPages": [
+        270,
+        271,
+        272,
+        273
+      ],
+      "addPages": [
+        271,
+        272,
+        273
+      ],
+      "recommendedConservativePages": [
+        270,
+        271,
+        272,
+        273
+      ],
+      "affectedItems": [
+        {
+          "field": "holdings",
+          "index": 0,
+          "n": "1.",
+          "chars": 2893,
+          "prefix": "탄핵심판의 이익 인정 여부\n(1) 탄핵심판에서 파면결정을 할 권한이 헌법재판소에 부여되어 있지만, 이 권한은 헌법과 법률이 정",
+          "exactMatchPages": [
+            270,
+            271,
+            272
+          ],
+          "missingDeclaredPages": [
+            271,
+            272
+          ]
+        },
+        {
+          "field": "holdings",
+          "index": 1,
+          "n": "2.",
+          "chars": 2509,
+          "prefix": "탄핵심판이익에 관한 청구인의 주장에 대한 판단\n(1) 헌법재판소법 제54조 제2항이 파면결정의 효력으로 5년간 공직 취임 제한",
+          "exactMatchPages": [
+            272,
+            273
+          ],
+          "missingDeclaredPages": [
+            272,
+            273
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "형법",
+      "subjectId": "criminal",
+      "seq": 355,
+      "caseNumber": "2015도7081",
+      "decisionId": "sc-2015do7081-20150910-judgment",
+      "status": "review",
+      "declaredPages": [
+        362
+      ],
+      "candidatePages": [
+        362,
+        363
+      ],
+      "exactlyRequiredPages": [
+        362,
+        363
+      ],
+      "addPages": [
+        363
+      ],
+      "recommendedConservativePages": [
+        362,
+        363
+      ],
+      "affectedItems": [
+        {
+          "field": "holdings",
+          "index": 0,
+          "n": "",
+          "chars": 675,
+          "prefix": "‘폭력행위 등 처벌에 관한 법률’ 제4조 제1항은 그 법에 규정된 범죄행위를 목적으로 하는 단체를 구성하거나 이에 가입하는 행",
+          "exactMatchPages": [
+            362,
+            363
+          ],
+          "missingDeclaredPages": [
+            363
+          ]
+        }
+      ]
+    }
+  ],
+  "unmatchedWithinCandidatePages": [
+    {
+      "subject": "헌법",
+      "seq": 154,
+      "caseNumber": "2002헌마677",
+      "field": "issues",
+      "index": 0,
+      "chars": 174,
+      "declaredPages": [
+        169,
+        170
+      ],
+      "candidatePages": [
+        169,
+        170
+      ],
+      "note": "Not an audit finding: exact source item not found within full candidate pages, so omitted-page causation is unproven."
+    },
+    {
+      "subject": "행정법",
+      "seq": 28,
+      "caseNumber": "2010두14954",
+      "field": "holdings",
+      "index": 0,
+      "chars": 769,
+      "declaredPages": [
+        24,
+        25
+      ],
+      "candidatePages": [
+        24,
+        25
+      ],
+      "note": "Not an audit finding: exact source item not found within full candidate pages, so omitted-page causation is unproven."
+    },
+    {
+      "subject": "행정법",
+      "seq": 405,
+      "caseNumber": "2005두16185",
+      "field": "issues",
+      "index": 0,
+      "chars": 128,
+      "declaredPages": [
+        332,
+        333
+      ],
+      "candidatePages": [
+        332,
+        333
+      ],
+      "note": "Not an audit finding: exact source item not found within full candidate pages, so omitted-page causation is unproven."
+    },
+    {
+      "subject": "행정법",
+      "seq": 435,
+      "caseNumber": "86누459",
+      "field": "holdings",
+      "index": 2,
+      "chars": 243,
+      "declaredPages": [
+        364,
+        365
+      ],
+      "candidatePages": [
+        364,
+        365
+      ],
+      "note": "Not an audit finding: exact source item not found within full candidate pages, so omitted-page causation is unproven."
+    },
+    {
+      "subject": "민법",
+      "seq": 21,
+      "caseNumber": "75마551",
+      "field": "holdings",
+      "index": 0,
+      "chars": 277,
+      "declaredPages": [
+        21,
+        22
+      ],
+      "candidatePages": [
+        21
+      ],
+      "note": "Not an audit finding: exact source item not found within full candidate pages, so omitted-page causation is unproven."
+    },
+    {
+      "subject": "민법",
+      "seq": 759,
+      "caseNumber": "92다31668",
+      "field": "issues",
+      "index": 0,
+      "chars": 112,
+      "declaredPages": [
+        515
+      ],
+      "candidatePages": [
+        514
+      ],
+      "note": "Not an audit finding: exact source item not found within full candidate pages, so omitted-page causation is unproven."
+    },
+    {
+      "subject": "민법",
+      "seq": 759,
+      "caseNumber": "92다31668",
+      "field": "holdings",
+      "index": 0,
+      "chars": 317,
+      "declaredPages": [
+        515
+      ],
+      "candidatePages": [
+        514
+      ],
+      "note": "Not an audit finding: exact source item not found within full candidate pages, so omitted-page causation is unproven."
+    },
+    {
+      "subject": "형법",
+      "seq": 16,
+      "caseNumber": "2011도17117",
+      "field": "issues",
+      "index": 0,
+      "chars": 88,
+      "declaredPages": [
+        41,
+        42
+      ],
+      "candidatePages": [
+        41
+      ],
+      "note": "Not an audit finding: exact source item not found within full candidate pages, so omitted-page causation is unproven."
+    },
+    {
+      "subject": "형법",
+      "seq": 16,
+      "caseNumber": "2011도17117",
+      "field": "holdings",
+      "index": 0,
+      "chars": 484,
+      "declaredPages": [
+        41,
+        42
+      ],
+      "candidatePages": [
+        41
+      ],
+      "note": "Not an audit finding: exact source item not found within full candidate pages, so omitted-page causation is unproven."
+    },
+    {
+      "subject": "형법",
+      "seq": 65,
+      "caseNumber": "98도2389",
+      "field": "holdings",
+      "index": 0,
+      "chars": 886,
+      "declaredPages": [
+        80,
+        81
+      ],
+      "candidatePages": [
+        80
+      ],
+      "note": "Not an audit finding: exact source item not found within full candidate pages, so omitted-page causation is unproven."
+    },
+    {
+      "subject": "상법",
+      "seq": 351,
+      "caseNumber": "78다1164",
+      "field": "holdings",
+      "index": 0,
+      "chars": 204,
+      "declaredPages": [
+        363,
+        364
+      ],
+      "candidatePages": [
+        363
+      ],
+      "note": "Not an audit finding: exact source item not found within full candidate pages, so omitted-page causation is unproven."
+    },
+    {
+      "subject": "상법",
+      "seq": 502,
+      "caseNumber": "2013다3170",
+      "field": "issues",
+      "index": 0,
+      "chars": 91,
+      "declaredPages": [
+        529,
+        530
+      ],
+      "candidatePages": [
+        529,
+        530
+      ],
+      "note": "Not an audit finding: exact source item not found within full candidate pages, so omitted-page causation is unproven."
+    }
+  ],
+  "summary": {
+    "affectedCandidates": 3,
+    "affectedItems": 5,
+    "unmatchedItemsNotClassifiedAsOmittedPages": 12
+  },
+  "recommendation": "For non-overlap standardSource construction in md_merge, use at least union(row.pdfPages, use_verify.pages) rather than use_verify.pages OR row.pdfPages after manual ok review. Recompute source.sha256 using exactly the final listed pages. Existing registrations require provenance refresh through add_cases.py set --standard-source; text-equality-only backfill currently skips page-only changes. For precision, compute required page spans from exact retained source items and retain review evidence where matching is not exact.",
+  "nonmatchReview": {
+    "reviewedAt": "2026-10-24T08:07:35.075208+00:00",
+    "reviewer": "Codex",
+    "scope": "Original audit 12 field-items not exactly found in candidate.pdfPages. Existing omitted-page findings remain unchanged.",
+    "summary": {
+      "itemsReviewed": 12,
+      "alreadyExactOnDeclaredSourcePages": 7,
+      "exactAfterVisuallyConfirmedFootnoteSeparation": 5,
+      "blockingTranscriptionErrors": 0,
+      "glyphOrPunctuationMismatches": 0,
+      "renderedOriginalPagesVisuallyReviewed": 10
+    },
+    "conclusion": "12개 모두 설명되었다. 7개는 선언된 출처 쪽에서 그대로 완전일치하고, 5개는 원본 화면에서 확인한 별도 각주를 감사용 메모리에서 분리하면 완전일치한다. 이 12개에서 빌드를 막아야 할 전사 오류는 발견하지 못했다. 기존 별도 출처쪽 누락 3건의 수정 필요성은 그대로다.",
+    "items": [
+      {
+        "subject": "헌법",
+        "seq": 154,
+        "caseNumber": "2002헌마677",
+        "field": "issues",
+        "index": 0,
+        "declaredPagesAtOriginalAudit": [
+          169,
+          170
+        ],
+        "candidatePagesAtOriginalAudit": [
+          169,
+          170
+        ],
+        "currentDeclaredPages": [
+          169,
+          170
+        ],
+        "blockingTranscriptionError": false,
+        "glyphOrPunctuationMismatch": false,
+        "classification": "page-bottom-footnote-interleaved-with-cross-page-body",
+        "exactMatchOnDeclaredPages": false,
+        "exactMatchAfterExcludingVisuallySeparateFootnote": true,
+        "footnotePage": 169,
+        "footnoteNumber": "1",
+        "removedFootnotePrefix": "1) 법 제2조 참조. 동 규정에 따르면 경비업에는 시설경비·호송경비·신변호보·기계경비·특수경비업무만이 포\n함되며 경비업과 전혀 관련이 없는 사업의 겸영 및 경비업과 간접적으로 관련이 있는 사업도 마찬가지로\n겸영이 금지된다(헌재 2002. 4. 25. 2001헌마614, 판례집 14-1",
+        "requiredPages": [
+          169,
+          170
+        ],
+        "explanation": "원본 PDF에서 첫 쪽의 본문 뒤에 각주 구분선과 작은 글씨 각주가 있고, 본문은 다음 쪽 머리에서 이어진다. 캐시는 각주를 본문 중간에 직렬 삽입했다. 화면으로 독립 각주임을 확인한 부분만 감사용 메모리에서 제외하면 원문 항목 전체가 정규화 후 정확히 일치한다. 문자 수정이나 LCS 허용오차가 필요한 차이가 아니며 기존 전사 본문은 정확하다.",
+        "visualInspectionNeeded": true,
+        "visualInspectionCompleted": true,
+        "pdf": "data/standard-cases/표준판례(2023년 개정판)_헌법.pdf",
+        "visuallyInspectedPages": [
+          169,
+          170
+        ],
+        "renderedPages": [
+          "tmp/pdfs/source-pages-audit/constitution-0169.png",
+          "tmp/pdfs/source-pages-audit/constitution-0170.png"
+        ]
+      },
+      {
+        "subject": "행정법",
+        "seq": 28,
+        "caseNumber": "2010두14954",
+        "field": "holdings",
+        "index": 0,
+        "declaredPagesAtOriginalAudit": [
+          24,
+          25
+        ],
+        "candidatePagesAtOriginalAudit": [
+          24,
+          25
+        ],
+        "currentDeclaredPages": [
+          24,
+          25
+        ],
+        "blockingTranscriptionError": false,
+        "glyphOrPunctuationMismatch": false,
+        "classification": "page-bottom-footnote-interleaved-with-cross-page-body",
+        "exactMatchOnDeclaredPages": false,
+        "exactMatchAfterExcludingVisuallySeparateFootnote": true,
+        "footnotePage": 24,
+        "footnoteNumber": "2",
+        "removedFootnotePrefix": "2) 건축법은 건축신고 및 착공신고와 관련하여, 2017. 4. 18. 개정으로 각각 제14조 제3항 및 제21조 제3\n항을 신설하여 “신고를 받은 날로부터 5일(착공신고의 경우 3일) 이내에 신고수리 여부를 당사자에게 통\n지하여야 한다.”고 규정하고 있다.\n24",
+        "requiredPages": [
+          24,
+          25
+        ],
+        "explanation": "원본 PDF에서 첫 쪽의 본문 뒤에 각주 구분선과 작은 글씨 각주가 있고, 본문은 다음 쪽 머리에서 이어진다. 캐시는 각주를 본문 중간에 직렬 삽입했다. 화면으로 독립 각주임을 확인한 부분만 감사용 메모리에서 제외하면 원문 항목 전체가 정규화 후 정확히 일치한다. 문자 수정이나 LCS 허용오차가 필요한 차이가 아니며 기존 전사 본문은 정확하다.",
+        "visualInspectionNeeded": true,
+        "visualInspectionCompleted": true,
+        "pdf": "data/standard-cases/표준판례(2023년 개정판)_행정법.pdf",
+        "visuallyInspectedPages": [
+          24,
+          25
+        ],
+        "renderedPages": [
+          "tmp/pdfs/source-pages-audit/administrative-0024.png",
+          "tmp/pdfs/source-pages-audit/administrative-0025.png"
+        ]
+      },
+      {
+        "subject": "행정법",
+        "seq": 405,
+        "caseNumber": "2005두16185",
+        "field": "issues",
+        "index": 0,
+        "declaredPagesAtOriginalAudit": [
+          332,
+          333
+        ],
+        "candidatePagesAtOriginalAudit": [
+          332,
+          333
+        ],
+        "currentDeclaredPages": [
+          332,
+          333
+        ],
+        "blockingTranscriptionError": false,
+        "glyphOrPunctuationMismatch": false,
+        "classification": "page-bottom-footnote-interleaved-with-cross-page-body",
+        "exactMatchOnDeclaredPages": false,
+        "exactMatchAfterExcludingVisuallySeparateFootnote": true,
+        "footnotePage": 332,
+        "footnoteNumber": "5",
+        "removedFootnotePrefix": "5) 대법원은 위와 달리 구 광주민주화운동관련자보상등에관한법률에 따른 보상금지급 청구 소송은 당사자소\n송에 의하여야 한다고 보았다(대법원 1992. 12. 24. 선고 92누3335 판결).\n“광주민주화운동관련자보상등에관한법률 제15조 본문의 규정에서 말하는 광주민주화운동관련자보상심의위",
+        "requiredPages": [
+          332,
+          333
+        ],
+        "explanation": "원본 PDF에서 첫 쪽의 본문 뒤에 각주 구분선과 작은 글씨 각주가 있고, 본문은 다음 쪽 머리에서 이어진다. 캐시는 각주를 본문 중간에 직렬 삽입했다. 화면으로 독립 각주임을 확인한 부분만 감사용 메모리에서 제외하면 원문 항목 전체가 정규화 후 정확히 일치한다. 문자 수정이나 LCS 허용오차가 필요한 차이가 아니며 기존 전사 본문은 정확하다.",
+        "visualInspectionNeeded": true,
+        "visualInspectionCompleted": true,
+        "pdf": "data/standard-cases/표준판례(2023년 개정판)_행정법.pdf",
+        "visuallyInspectedPages": [
+          332,
+          333
+        ],
+        "renderedPages": [
+          "tmp/pdfs/source-pages-audit/administrative-0332.png",
+          "tmp/pdfs/source-pages-audit/administrative-0333.png"
+        ]
+      },
+      {
+        "subject": "행정법",
+        "seq": 435,
+        "caseNumber": "86누459",
+        "field": "holdings",
+        "index": 2,
+        "declaredPagesAtOriginalAudit": [
+          364,
+          365
+        ],
+        "candidatePagesAtOriginalAudit": [
+          364,
+          365
+        ],
+        "currentDeclaredPages": [
+          364,
+          365
+        ],
+        "blockingTranscriptionError": false,
+        "glyphOrPunctuationMismatch": false,
+        "classification": "page-bottom-footnote-interleaved-with-cross-page-body",
+        "exactMatchOnDeclaredPages": false,
+        "exactMatchAfterExcludingVisuallySeparateFootnote": true,
+        "footnotePage": 364,
+        "footnoteNumber": "7",
+        "removedFootnotePrefix": "7) 헌법재판소 2006. 2. 23. 선고 2005헌가7,2005헌마1163(병합) 전원재판부 [교원지위향상을위한특별법제\n10조제3항위헌제청등] - 교원에게만 행정소송을 제기할 수 있도록 하고, 그 당사자인 학교법인 등에게는\n이를 인정하고 있지 않은 것은 「헌법」상의 평등원칙이나 일체",
+        "requiredPages": [
+          364,
+          365
+        ],
+        "explanation": "원본 PDF에서 첫 쪽의 본문 뒤에 각주 구분선과 작은 글씨 각주가 있고, 본문은 다음 쪽 머리에서 이어진다. 캐시는 각주를 본문 중간에 직렬 삽입했다. 화면으로 독립 각주임을 확인한 부분만 감사용 메모리에서 제외하면 원문 항목 전체가 정규화 후 정확히 일치한다. 문자 수정이나 LCS 허용오차가 필요한 차이가 아니며 기존 전사 본문은 정확하다.",
+        "visualInspectionNeeded": true,
+        "visualInspectionCompleted": true,
+        "pdf": "data/standard-cases/표준판례(2023년 개정판)_행정법.pdf",
+        "visuallyInspectedPages": [
+          364,
+          365
+        ],
+        "renderedPages": [
+          "tmp/pdfs/source-pages-audit/administrative-0364.png",
+          "tmp/pdfs/source-pages-audit/administrative-0365.png"
+        ]
+      },
+      {
+        "subject": "민법",
+        "seq": 21,
+        "caseNumber": "75마551",
+        "field": "holdings",
+        "index": 0,
+        "declaredPagesAtOriginalAudit": [
+          21,
+          22
+        ],
+        "candidatePagesAtOriginalAudit": [
+          21
+        ],
+        "currentDeclaredPages": [
+          21,
+          22
+        ],
+        "blockingTranscriptionError": false,
+        "glyphOrPunctuationMismatch": false,
+        "classification": "candidate-page-range-narrower-than-verified-source",
+        "exactMatchOnDeclaredPages": true,
+        "requiredPages": [
+          21,
+          22
+        ],
+        "explanation": "candidate.pdfPages가 실제 검증 출처 쪽 범위보다 좁았다. standardSource.pages에 이미 선언되어 있는 추가 쪽을 읽으면 본문이 완전히 일치한다. 출처 누락이나 전사 오류가 아니다.",
+        "visualInspectionNeeded": false
+      },
+      {
+        "subject": "민법",
+        "seq": 759,
+        "caseNumber": "92다31668",
+        "field": "issues",
+        "index": 0,
+        "declaredPagesAtOriginalAudit": [
+          515
+        ],
+        "candidatePagesAtOriginalAudit": [
+          514
+        ],
+        "currentDeclaredPages": [
+          515
+        ],
+        "blockingTranscriptionError": false,
+        "glyphOrPunctuationMismatch": false,
+        "classification": "candidate-page-range-narrower-than-verified-source",
+        "exactMatchOnDeclaredPages": true,
+        "requiredPages": [
+          515
+        ],
+        "explanation": "candidate.pdfPages가 실제 검증 출처 쪽 범위보다 좁았다. standardSource.pages에 이미 선언되어 있는 추가 쪽을 읽으면 본문이 완전히 일치한다. 출처 누락이나 전사 오류가 아니다.",
+        "visualInspectionNeeded": false
+      },
+      {
+        "subject": "민법",
+        "seq": 759,
+        "caseNumber": "92다31668",
+        "field": "holdings",
+        "index": 0,
+        "declaredPagesAtOriginalAudit": [
+          515
+        ],
+        "candidatePagesAtOriginalAudit": [
+          514
+        ],
+        "currentDeclaredPages": [
+          515
+        ],
+        "blockingTranscriptionError": false,
+        "glyphOrPunctuationMismatch": false,
+        "classification": "candidate-page-range-narrower-than-verified-source",
+        "exactMatchOnDeclaredPages": true,
+        "requiredPages": [
+          515
+        ],
+        "explanation": "candidate.pdfPages가 실제 검증 출처 쪽 범위보다 좁았다. standardSource.pages에 이미 선언되어 있는 추가 쪽을 읽으면 본문이 완전히 일치한다. 출처 누락이나 전사 오류가 아니다.",
+        "visualInspectionNeeded": false
+      },
+      {
+        "subject": "형법",
+        "seq": 16,
+        "caseNumber": "2011도17117",
+        "field": "issues",
+        "index": 0,
+        "declaredPagesAtOriginalAudit": [
+          41,
+          42
+        ],
+        "candidatePagesAtOriginalAudit": [
+          41
+        ],
+        "currentDeclaredPages": [
+          41,
+          42
+        ],
+        "blockingTranscriptionError": false,
+        "glyphOrPunctuationMismatch": false,
+        "classification": "candidate-page-range-narrower-than-verified-source",
+        "exactMatchOnDeclaredPages": true,
+        "requiredPages": [
+          41,
+          42
+        ],
+        "explanation": "candidate.pdfPages가 실제 검증 출처 쪽 범위보다 좁았다. standardSource.pages에 이미 선언되어 있는 추가 쪽을 읽으면 본문이 완전히 일치한다. 출처 누락이나 전사 오류가 아니다.",
+        "visualInspectionNeeded": false
+      },
+      {
+        "subject": "형법",
+        "seq": 16,
+        "caseNumber": "2011도17117",
+        "field": "holdings",
+        "index": 0,
+        "declaredPagesAtOriginalAudit": [
+          41,
+          42
+        ],
+        "candidatePagesAtOriginalAudit": [
+          41
+        ],
+        "currentDeclaredPages": [
+          41,
+          42
+        ],
+        "blockingTranscriptionError": false,
+        "glyphOrPunctuationMismatch": false,
+        "classification": "candidate-page-range-narrower-than-verified-source",
+        "exactMatchOnDeclaredPages": true,
+        "requiredPages": [
+          42
+        ],
+        "explanation": "candidate.pdfPages가 실제 검증 출처 쪽 범위보다 좁았다. standardSource.pages에 이미 선언되어 있는 추가 쪽을 읽으면 본문이 완전히 일치한다. 출처 누락이나 전사 오류가 아니다.",
+        "visualInspectionNeeded": false
+      },
+      {
+        "subject": "형법",
+        "seq": 65,
+        "caseNumber": "98도2389",
+        "field": "holdings",
+        "index": 0,
+        "declaredPagesAtOriginalAudit": [
+          80,
+          81
+        ],
+        "candidatePagesAtOriginalAudit": [
+          80
+        ],
+        "currentDeclaredPages": [
+          80,
+          81
+        ],
+        "blockingTranscriptionError": false,
+        "glyphOrPunctuationMismatch": false,
+        "classification": "candidate-page-range-narrower-than-verified-source",
+        "exactMatchOnDeclaredPages": true,
+        "requiredPages": [
+          80,
+          81
+        ],
+        "explanation": "candidate.pdfPages가 실제 검증 출처 쪽 범위보다 좁았다. standardSource.pages에 이미 선언되어 있는 추가 쪽을 읽으면 본문이 완전히 일치한다. 출처 누락이나 전사 오류가 아니다.",
+        "visualInspectionNeeded": false
+      },
+      {
+        "subject": "상법",
+        "seq": 351,
+        "caseNumber": "78다1164",
+        "field": "holdings",
+        "index": 0,
+        "declaredPagesAtOriginalAudit": [
+          363,
+          364
+        ],
+        "candidatePagesAtOriginalAudit": [
+          363
+        ],
+        "currentDeclaredPages": [
+          363,
+          364
+        ],
+        "blockingTranscriptionError": false,
+        "glyphOrPunctuationMismatch": false,
+        "classification": "candidate-page-range-narrower-than-verified-source",
+        "exactMatchOnDeclaredPages": true,
+        "requiredPages": [
+          363,
+          364
+        ],
+        "explanation": "candidate.pdfPages가 실제 검증 출처 쪽 범위보다 좁았다. standardSource.pages에 이미 선언되어 있는 추가 쪽을 읽으면 본문이 완전히 일치한다. 출처 누락이나 전사 오류가 아니다.",
+        "visualInspectionNeeded": false
+      },
+      {
+        "subject": "상법",
+        "seq": 502,
+        "caseNumber": "2013다3170",
+        "field": "issues",
+        "index": 0,
+        "declaredPagesAtOriginalAudit": [
+          529,
+          530
+        ],
+        "candidatePagesAtOriginalAudit": [
+          529,
+          530
+        ],
+        "currentDeclaredPages": [
+          529,
+          530
+        ],
+        "blockingTranscriptionError": false,
+        "glyphOrPunctuationMismatch": false,
+        "classification": "page-bottom-footnote-interleaved-with-cross-page-body",
+        "exactMatchOnDeclaredPages": false,
+        "exactMatchAfterExcludingVisuallySeparateFootnote": true,
+        "footnotePage": 529,
+        "footnoteNumber": "8",
+        "removedFootnotePrefix": "8) 무고장 선하증권(Clean Bill of Lading)은 화물 또는 그 포장에 하자 있는 상태를 명시적으로 표시하는 조항\n도는 단서를 기재하고 있지 않는 선하증권을 말한다.\n487",
+        "requiredPages": [
+          529,
+          530
+        ],
+        "explanation": "원본 PDF에서 첫 쪽의 본문 뒤에 각주 구분선과 작은 글씨 각주가 있고, 본문은 다음 쪽 머리에서 이어진다. 캐시는 각주를 본문 중간에 직렬 삽입했다. 화면으로 독립 각주임을 확인한 부분만 감사용 메모리에서 제외하면 원문 항목 전체가 정규화 후 정확히 일치한다. 문자 수정이나 LCS 허용오차가 필요한 차이가 아니며 기존 전사 본문은 정확하다.",
+        "visualInspectionNeeded": true,
+        "visualInspectionCompleted": true,
+        "pdf": "data/standard-cases/표준판례(2023년 개정판)_상법.pdf",
+        "visuallyInspectedPages": [
+          529,
+          530
+        ],
+        "renderedPages": [
+          "tmp/pdfs/source-pages-audit/commercial-0529.png",
+          "tmp/pdfs/source-pages-audit/commercial-0530.png"
+        ]
+      }
+    ]
+  }
+}

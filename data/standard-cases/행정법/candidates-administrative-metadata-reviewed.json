@@ -1,0 +1,69 @@
+{
+  "source": "data/standard-cases/표준판례(2023년 개정판)_행정법.pdf",
+  "subject": "administrative",
+  "group": "standard",
+  "generatedAt": "2026-10-24",
+  "metadataReview": {
+    "reviewer": "Codex",
+    "pages": [
+      361
+    ],
+    "field": "decisionType",
+    "evidence": "시정명령과 취소·정지의 대상으로서 ‘단체장의 처분’의 개념과 항고소송의 대상으로서 처분 개념이 구별된다고 한 판결",
+    "originalCitation": "대법원 2017.3.30. 선고 2016추5087"
+  },
+  "candidates": [
+    {
+      "caseNumber": "2016추5087",
+      "lookupKey": "2016추5087",
+      "court": "대법원",
+      "decisionType": "판결",
+      "date": "2017-03-30",
+      "enBanc": false,
+      "title": "명령·처분 시정명령·취소·정지 (1)",
+      "tocPath": [
+        "hj-3",
+        "hj-3-2"
+      ],
+      "tags": [],
+      "selectionReason": "시정명령과 취소·정지의 대상으로서 ‘단체장의 처분’의 개념과 항고소송의 대상으로서 처분 개념이 구별된다고 한 판결",
+      "keywords": [
+        "지방자치단체에 대한 국가감독의 범위"
+      ],
+      "memo": "PDF 인용행의 재판 유형 생략을 같은 항목 선정이유의 명시적 판결 표기로 보완(2026-10-24 Codex 검토).",
+      "status": "ok",
+      "statusReason": "PDF 361쪽 선정이유의 명시적 판결 표기로 재판 유형 확인(Codex 원본 시각 확인)",
+      "seq": 431,
+      "no": 431,
+      "chunk": "c024",
+      "pdfPages": [
+        361
+      ],
+      "decisionId": "sc-2016x00cd94z5087-20170330-judgment",
+      "standardSource": {
+        "verified": true,
+        "book": "표준판례",
+        "edition": "2023년 개정판",
+        "file": "data/standard-cases/표준판례(2023년 개정판)_행정법.pdf",
+        "pages": [
+          361
+        ],
+        "issues": [
+          {
+            "n": "",
+            "text": "지방자치법 제169조 제1항에 따른 자치사무에 관한 명령이나 처분에 대한 취소 또는 정지의 적용대상이 항고소송의 대상이 되는 행정처분으로 제한되는지 여부(소극)"
+          }
+        ],
+        "holdings": [
+          {
+            "n": "",
+            "text": "행정소송법상 항고소송은 행정청이 행하는 구체적 사실에 관한 법집행으로서의 공권력의 행사 또는 거부와 그 밖에 이에 준하는 행정작용을 대상으로 하여 위법상태를 배제함으로써 국민의 권익을 구제함을 목적으로 하는 것과 달리, 지방자치법 제169조 제1항은 지방자치단체의 자치행정사무처리가 법령 및 공익의 범위 내에서 행해지도록 감독하기 위한 규정이므로 적용대상을 항고소송의 대상이 되는 행정처분으로 제한할 이유가 없다."
+          }
+        ],
+        "reviewer": "claude-opus-5-5",
+        "reviewedAt": "2026-10-24",
+        "sha256": "dde39748e2f0e85131b5ceecf6ae5e1b6ead574c71db7a67572845358f363cfb"
+      }
+    }
+  ]
+}

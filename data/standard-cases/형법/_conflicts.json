@@ -1,0 +1,947 @@
+{
+ "stage0": [],
+ "stage3": [
+  {
+   "seq": 1,
+   "no": 1,
+   "chunk": "c001",
+   "decisionId": "cc-91heonga4-19910708-decision",
+   "caseNumber": "91헌가4",
+   "kind": "multi-case",
+   "note": "91헌가4 / 2013도1685"
+  },
+  {
+   "seq": 1,
+   "no": 1,
+   "chunk": "c001",
+   "decisionId": "cc-91heonga4-19910708-decision",
+   "caseNumber": "91헌가4",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-criminal-01"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 1,
+   "no": 1,
+   "chunk": "c001",
+   "decisionId": "sc-2013do1685-20130613-judgment",
+   "caseNumber": "2013도1685",
+   "kind": "multi-case",
+   "note": "91헌가4 / 2013도1685"
+  },
+  {
+   "seq": 1,
+   "no": 1,
+   "chunk": "c001",
+   "decisionId": "sc-2013do1685-20130613-judgment",
+   "caseNumber": "2013도1685",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-criminal-04"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 10,
+   "no": 10,
+   "chunk": "c001",
+   "decisionId": "sc-2011do6507-20110825-judgment",
+   "caseNumber": "2011도6507",
+   "kind": "registry-text",
+   "note": "std-criminal-10.issues, std-criminal-10.holdings",
+   "registryIds": [
+    "std-criminal-10"
+   ]
+  },
+  {
+   "seq": 23,
+   "no": 23,
+   "chunk": "c002",
+   "decisionId": "sc-4287x00d61500c0c1z176-19540621-judgment",
+   "caseNumber": "4287형상176",
+   "kind": "multi-case",
+   "note": "4287형상176 / 2004도74"
+  },
+  {
+   "seq": 23,
+   "no": 23,
+   "chunk": "c002",
+   "decisionId": "sc-4287x00d61500c0c1z176-19540621-judgment",
+   "caseNumber": "4287형상176",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-criminal-23"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 23,
+   "no": 23,
+   "chunk": "c002",
+   "decisionId": "sc-2004do74-20040514-judgment",
+   "caseNumber": "2004도74",
+   "kind": "multi-case",
+   "note": "4287형상176 / 2004도74"
+  },
+  {
+   "seq": 23,
+   "no": 23,
+   "chunk": "c002",
+   "decisionId": "sc-2004do74-20040514-judgment",
+   "caseNumber": "2004도74",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-criminal-24"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 36,
+   "no": 36,
+   "chunk": "c002",
+   "decisionId": "sc-96do485-19960426-judgment",
+   "caseNumber": "96도485",
+   "kind": "multi-case",
+   "note": "96도485 / 2008도7311"
+  },
+  {
+   "seq": 36,
+   "no": 36,
+   "chunk": "c002",
+   "decisionId": "sc-96do485-19960426-judgment",
+   "caseNumber": "96도485",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-criminal-37"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 36,
+   "no": 36,
+   "chunk": "c002",
+   "decisionId": "sc-2008do7311-20081127-judgment",
+   "caseNumber": "2008도7311",
+   "kind": "multi-case",
+   "note": "96도485 / 2008도7311"
+  },
+  {
+   "seq": 36,
+   "no": 36,
+   "chunk": "c002",
+   "decisionId": "sc-2008do7311-20081127-judgment",
+   "caseNumber": "2008도7311",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-criminal-38"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 40,
+   "no": 40,
+   "chunk": "c002",
+   "decisionId": "sc-2015do6809-20151112-judgment",
+   "caseNumber": "2015도6809",
+   "kind": "registry-text",
+   "note": "std-criminal-22.issues, std-criminal-22.holdings",
+   "registryIds": [
+    "std-criminal-22"
+   ]
+  },
+  {
+   "seq": 58,
+   "no": 58,
+   "chunk": "c003",
+   "decisionId": "sc-2005do8081-20060324-judgment",
+   "caseNumber": "2005도8081",
+   "kind": "registry-text",
+   "note": "std-criminal-56.issues, std-criminal-56.holdings",
+   "registryIds": [
+    "std-criminal-56"
+   ]
+  },
+  {
+   "seq": 62,
+   "no": 62,
+   "chunk": "c003",
+   "decisionId": "sc-96do3376-19970417-judgment",
+   "caseNumber": "96도3376",
+   "kind": "registry-text",
+   "note": "std-criminal-42.issues, std-criminal-42.holdings",
+   "registryIds": [
+    "std-criminal-42"
+   ]
+  },
+  {
+   "seq": 66,
+   "no": 66,
+   "chunk": "c004",
+   "decisionId": "sc-2009do13197-20121025-judgment",
+   "caseNumber": "2009도13197",
+   "kind": "multi-case",
+   "note": "2009도13197 / 2018도3443"
+  },
+  {
+   "seq": 66,
+   "no": 66,
+   "chunk": "c004",
+   "decisionId": "sc-2009do13197-20121025-judgment",
+   "caseNumber": "2009도13197",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-criminal-65"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 66,
+   "no": 66,
+   "chunk": "c004",
+   "decisionId": "sc-2018do3443-20180724-judgment",
+   "caseNumber": "2018도3443",
+   "kind": "multi-case",
+   "note": "2009도13197 / 2018도3443"
+  },
+  {
+   "seq": 66,
+   "no": 66,
+   "chunk": "c004",
+   "decisionId": "sc-2018do3443-20180724-judgment",
+   "caseNumber": "2018도3443",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-criminal-66"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 82,
+   "no": 82,
+   "chunk": "c004",
+   "decisionId": "sc-99do2461-19991126-judgment",
+   "caseNumber": "99도2461",
+   "kind": "multi-case",
+   "note": "99도2461 / 2014도16920"
+  },
+  {
+   "seq": 82,
+   "no": 82,
+   "chunk": "c004",
+   "decisionId": "sc-99do2461-19991126-judgment",
+   "caseNumber": "99도2461",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-criminal-82"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 82,
+   "no": 82,
+   "chunk": "c004",
+   "decisionId": "sc-2014do16920-20150320-judgment",
+   "caseNumber": "2014도16920",
+   "kind": "multi-case",
+   "note": "99도2461 / 2014도16920"
+  },
+  {
+   "seq": 82,
+   "no": 82,
+   "chunk": "c004",
+   "decisionId": "sc-2014do16920-20150320-judgment",
+   "caseNumber": "2014도16920",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-criminal-83"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 86,
+   "no": 86,
+   "chunk": "c005",
+   "decisionId": "sc-92do917-19920728-judgment",
+   "caseNumber": "92도917",
+   "kind": "multi-case",
+   "note": "92도917 / 91도2296"
+  },
+  {
+   "seq": 86,
+   "no": 86,
+   "chunk": "c005",
+   "decisionId": "sc-92do917-19920728-judgment",
+   "caseNumber": "92도917",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-criminal-87"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 86,
+   "no": 86,
+   "chunk": "c005",
+   "decisionId": "sc-91do2296-19911122-judgment",
+   "caseNumber": "91도2296",
+   "kind": "multi-case",
+   "note": "92도917 / 91도2296"
+  },
+  {
+   "seq": 86,
+   "no": 86,
+   "chunk": "c005",
+   "decisionId": "sc-91do2296-19911122-judgment",
+   "caseNumber": "91도2296",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-criminal-88"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 104,
+   "no": 104,
+   "chunk": "c006",
+   "decisionId": "sc-2015do6809-20151112-judgment",
+   "caseNumber": "2015도6809",
+   "kind": "registry-text",
+   "note": "std-criminal-22.issues, std-criminal-22.holdings",
+   "registryIds": [
+    "std-criminal-22"
+   ]
+  },
+  {
+   "seq": 113,
+   "no": 113,
+   "chunk": "c007",
+   "decisionId": "sc-2012do7407-20121115-judgment",
+   "caseNumber": "2012도7407",
+   "kind": "registry-text",
+   "note": "std-criminal-19.issues, std-criminal-19.holdings",
+   "registryIds": [
+    "std-criminal-19"
+   ]
+  },
+  {
+   "seq": 118,
+   "no": 118,
+   "chunk": "c007",
+   "decisionId": "sc-2003do4128-20060428-judgment",
+   "caseNumber": "2003도4128",
+   "kind": "registry-text",
+   "note": "std-criminal-41.issues, std-criminal-41.holdings",
+   "registryIds": [
+    "std-criminal-41"
+   ]
+  },
+  {
+   "seq": 121,
+   "no": 121,
+   "chunk": "c007",
+   "decisionId": "sc-88do1114-19880913-judgment",
+   "caseNumber": "88도1114",
+   "kind": "registry-text",
+   "note": "std-criminal-110.issues, std-criminal-110.holdings",
+   "registryIds": [
+    "std-criminal-110"
+   ]
+  },
+  {
+   "seq": 124,
+   "no": 124,
+   "chunk": "c007",
+   "decisionId": "sc-96do3376-19970417-judgment",
+   "caseNumber": "96도3376",
+   "kind": "registry-text",
+   "note": "std-criminal-42.issues, std-criminal-42.holdings",
+   "registryIds": [
+    "std-criminal-42"
+   ]
+  },
+  {
+   "seq": 139,
+   "no": 139,
+   "chunk": "c009",
+   "decisionId": "sc-2008do7311-20081127-judgment",
+   "caseNumber": "2008도7311",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-criminal-38"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 161,
+   "no": 161,
+   "chunk": "c010",
+   "decisionId": "sc-2006do5586-20061123-judgment",
+   "caseNumber": "2006도5586",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-criminal-157"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 162,
+   "no": 162,
+   "chunk": "c010",
+   "decisionId": "sc-2006do5586-20061123-judgment",
+   "caseNumber": "2006도5586",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-criminal-157"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 177,
+   "no": 177,
+   "chunk": "c011",
+   "decisionId": "sc-2009do7150-20091029-judgment",
+   "caseNumber": "2009도7150",
+   "kind": "registry-text",
+   "note": "std-criminal-78.issues, std-criminal-78.holdings",
+   "registryIds": [
+    "std-criminal-78"
+   ]
+  },
+  {
+   "seq": 179,
+   "no": 179,
+   "chunk": "c011",
+   "decisionId": "sc-2007do8333-20071129-judgment",
+   "caseNumber": "2007도8333·2007감도22",
+   "kind": "multi-case",
+   "note": "2007도8333·2007감도22 / 2007감도22"
+  },
+  {
+   "seq": 179,
+   "no": 179,
+   "chunk": "c011",
+   "decisionId": "sc-2007do8333-20071129-judgment",
+   "caseNumber": "2007도8333·2007감도22",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-criminal-173"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 179,
+   "no": 179,
+   "chunk": "c011",
+   "decisionId": "sc-2007x00ac1000b3c4z22-20071129-judgment",
+   "caseNumber": "2007감도22",
+   "kind": "multi-case",
+   "note": "2007도8333·2007감도22 / 2007감도22"
+  },
+  {
+   "seq": 179,
+   "no": 179,
+   "chunk": "c011",
+   "decisionId": "sc-2007x00ac1000b3c4z22-20071129-judgment",
+   "caseNumber": "2007감도22",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-criminal-174"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 195,
+   "no": 195,
+   "chunk": "c012",
+   "decisionId": "sc-2005do3832-20070629-judgment",
+   "caseNumber": "2005도3832",
+   "kind": "registry-text",
+   "note": "std-criminal-171.issues, std-criminal-171.holdings",
+   "registryIds": [
+    "std-criminal-171"
+   ]
+  },
+  {
+   "seq": 208,
+   "no": 208,
+   "chunk": "c013",
+   "decisionId": "sc-2002do4380-20030110-judgment",
+   "caseNumber": "2002도4380",
+   "kind": "registry-text",
+   "note": "std-criminal-148.issues, std-criminal-148.holdings",
+   "registryIds": [
+    "std-criminal-148"
+   ]
+  },
+  {
+   "seq": 221,
+   "no": 221,
+   "chunk": "c014",
+   "decisionId": "sc-2018do16002-20190328-judgment",
+   "caseNumber": "2018도16002",
+   "kind": "registry-text",
+   "note": "std-criminal-98.issues, std-criminal-98.holdings",
+   "registryIds": [
+    "std-criminal-98"
+   ]
+  },
+  {
+   "seq": 246,
+   "no": 246,
+   "chunk": "c015",
+   "decisionId": "sc-2011do7943-20120524-judgment",
+   "caseNumber": "2011도7943",
+   "kind": "registry-text",
+   "note": "std-criminal-237.issues, std-criminal-237.holdings",
+   "registryIds": [
+    "std-criminal-237"
+   ]
+  },
+  {
+   "seq": 248,
+   "no": 248,
+   "chunk": "c015",
+   "decisionId": "sc-2012do1895-20121011-judgment",
+   "caseNumber": "2012도1895",
+   "kind": "registry-text",
+   "note": "std-criminal-137.holdings",
+   "registryIds": [
+    "std-criminal-137"
+   ]
+  },
+  {
+   "seq": 257,
+   "no": 257,
+   "chunk": "c016",
+   "decisionId": "sc-94do2561-19950915-judgment",
+   "caseNumber": "94도2561",
+   "kind": "registry-text",
+   "note": "std-criminal-89.issues, std-criminal-89.holdings",
+   "registryIds": [
+    "std-criminal-89"
+   ]
+  },
+  {
+   "seq": 277,
+   "no": 277,
+   "chunk": "c017",
+   "decisionId": "sc-2015do8169-20151015-judgment",
+   "caseNumber": "2015도8169",
+   "kind": "registry-text",
+   "note": "std-criminal-139.issues, std-criminal-139.holdings",
+   "registryIds": [
+    "std-criminal-139"
+   ]
+  },
+  {
+   "seq": 281,
+   "no": 281,
+   "chunk": "c017",
+   "decisionId": "sc-2010do9630-20101209-judgment",
+   "caseNumber": "2010도9630",
+   "kind": "registry-text",
+   "note": "std-criminal-211.issues, std-criminal-211.holdings",
+   "registryIds": [
+    "std-criminal-211"
+   ]
+  },
+  {
+   "seq": 284,
+   "no": 284,
+   "chunk": "c017",
+   "decisionId": "sc-92do917-19920728-judgment",
+   "caseNumber": "92도917",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-criminal-87"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 287,
+   "no": 287,
+   "chunk": "c018",
+   "decisionId": "sc-2003do4417-20031024-judgment",
+   "caseNumber": "2003도4417",
+   "kind": "registry-text",
+   "note": "std-criminal-86.issues, std-criminal-86.holdings",
+   "registryIds": [
+    "std-criminal-86"
+   ]
+  },
+  {
+   "seq": 306,
+   "no": 306,
+   "chunk": "c019",
+   "decisionId": "sc-2002do669-20020718-judgment",
+   "caseNumber": "2002도669",
+   "kind": "registry-text",
+   "note": "std-criminal-145.holdings",
+   "registryIds": [
+    "std-criminal-145"
+   ]
+  },
+  {
+   "seq": 307,
+   "no": 307,
+   "chunk": "c019",
+   "decisionId": "sc-2008do2440-20080612-judgment",
+   "caseNumber": "2008도2440",
+   "kind": "registry-text",
+   "note": "std-criminal-260.holdings",
+   "registryIds": [
+    "std-criminal-260"
+   ]
+  },
+  {
+   "seq": 321,
+   "no": 321,
+   "chunk": "c020",
+   "decisionId": "sc-2010do10500-20130221-judgment",
+   "caseNumber": "2010도10500",
+   "kind": "registry-text",
+   "note": "std-criminal-138.issues, std-criminal-138.holdings",
+   "registryIds": [
+    "std-criminal-138"
+   ]
+  },
+  {
+   "seq": 335,
+   "no": 335,
+   "chunk": "c021",
+   "decisionId": "sc-2014do1104-20170720-judgment",
+   "caseNumber": "2014도1104",
+   "kind": "registry-text",
+   "note": "std-criminal-93.issues, std-criminal-93.holdings",
+   "registryIds": [
+    "std-criminal-93"
+   ]
+  },
+  {
+   "seq": 360,
+   "no": 360,
+   "chunk": "c022",
+   "decisionId": "sc-2001do6641-20020326-judgment",
+   "caseNumber": "2001도6641",
+   "kind": "registry-text",
+   "note": "std-criminal-85.issues, std-criminal-85.holdings",
+   "registryIds": [
+    "std-criminal-85"
+   ]
+  },
+  {
+   "seq": 370,
+   "no": 370,
+   "chunk": "c022",
+   "decisionId": "sc-2014do6206-20140724-judgment",
+   "caseNumber": "2014도6206",
+   "kind": "registry-text",
+   "note": "std-criminal-18.issues, std-criminal-18.holdings",
+   "registryIds": [
+    "std-criminal-18"
+   ]
+  },
+  {
+   "seq": 398,
+   "no": 398,
+   "chunk": "c023",
+   "decisionId": "sc-2008do7018-20081127-judgment",
+   "caseNumber": "2008도7018",
+   "kind": "registry-text",
+   "note": "std-criminal-199.issues, std-criminal-199.holdings",
+   "registryIds": [
+    "std-criminal-199"
+   ]
+  },
+  {
+   "seq": 444,
+   "no": 444,
+   "chunk": "c025",
+   "decisionId": "sc-96do3376-19970417-judgment",
+   "caseNumber": "96도3376",
+   "kind": "registry-text",
+   "note": "std-criminal-42.issues, std-criminal-42.holdings",
+   "registryIds": [
+    "std-criminal-42"
+   ]
+  },
+  {
+   "seq": 446,
+   "no": 446,
+   "chunk": "c025",
+   "decisionId": "sc-2014do10978-20150122-judgment",
+   "caseNumber": "2014도10978",
+   "kind": "registry-text",
+   "note": "std-criminal-80.issues, std-criminal-80.holdings",
+   "registryIds": [
+    "std-criminal-80"
+   ]
+  },
+  {
+   "seq": 480,
+   "no": 480,
+   "chunk": "c027",
+   "decisionId": "sc-2012do6027-20120830-judgment",
+   "caseNumber": "2012도6027",
+   "kind": "registry-text",
+   "note": "std-criminal-119.issues, std-criminal-119.holdings",
+   "registryIds": [
+    "std-criminal-119"
+   ]
+  },
+  {
+   "seq": 486,
+   "no": 486,
+   "chunk": "c027",
+   "decisionId": "sc-93do1002-19941223-judgment",
+   "caseNumber": "93도1002",
+   "kind": "registry-text",
+   "note": "std-criminal-127.issues, std-criminal-127.holdings",
+   "registryIds": [
+    "std-criminal-127"
+   ]
+  },
+  {
+   "seq": 9,
+   "no": 9,
+   "chunk": "c001",
+   "decisionId": "sc-2011do6507-20110825-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 장소적 적용범위 (9번, p.34) / 외국인의 국외범(보호주의) (10번, p.35)"
+  },
+  {
+   "seq": 22,
+   "no": 22,
+   "chunk": "c002",
+   "decisionId": "sc-2015do6809-20151112-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 부작위의 인과성 (22번, p.46) / 부작위범의 성립요건과 미필적 고의 (40번, p.60) / 부작위범의 공동정범 (104번, p.119)"
+  },
+  {
+   "seq": 55,
+   "no": 55,
+   "chunk": "c003",
+   "decisionId": "sc-2005do8081-20060324-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 자구행위의 성립요건 (55번, p.73) / 추정적 승낙 (58번, p.75)"
+  },
+  {
+   "seq": 41,
+   "no": 41,
+   "chunk": "c003",
+   "decisionId": "sc-96do3376-19970417-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 주관적 정당화 요소 (41번, p.61) / 상관의 위법 또는 불법한 명령 (62번, p.78) / 목적 없는 자의 행위를 이용한 간접정범 (124번, p.140) / 내란죄의 성립요소 (444번, p.415)"
+  },
+  {
+   "seq": 19,
+   "no": 19,
+   "chunk": "c002",
+   "decisionId": "sc-2012do7407-20121115-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 교사의 인과성(심리적 인과성) (19번, p.43) / 교사자의 공범관계로부터의 이탈 (113번, p.128)"
+  },
+  {
+   "seq": 39,
+   "no": 39,
+   "chunk": "c002",
+   "decisionId": "sc-2003do4128-20060428-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 부작위 공범의 동가치성 (39번, p.59) / 부작위에 의한 방조 (118번, p.133)"
+  },
+  {
+   "seq": 109,
+   "no": 109,
+   "chunk": "c006",
+   "decisionId": "sc-88do1114-19880913-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 공범 중의 1인이 공모하지 아니한 범죄를 실행한 경우 다른 공범자의 죄책 (109번, p.124) / 간접정범의 본질 (121번, p.136)"
+  },
+  {
+   "seq": 36,
+   "no": 36,
+   "chunk": "c002",
+   "decisionId": "sc-2008do7311-20081127-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 부진정결과적 가중범과 중한 결과에 대한 고의범간의 죄수 (36번, p.56) / 특별관계 (139번, p.157)"
+  },
+  {
+   "seq": 161,
+   "no": 161,
+   "chunk": "c010",
+   "decisionId": "sc-2006do5586-20061123-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 형벌의 목적 (161번, p.180) / 몰수와 추징(범인 이외의 자의 소유에 속하지 아니하는 물건) (162번, p.181)"
+  },
+  {
+   "seq": 78,
+   "no": 78,
+   "chunk": "c004",
+   "decisionId": "sc-2009do7150-20091029-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 예비죄 (78번, p.91) / 살인예비죄 (177번, p.196)"
+  },
+  {
+   "seq": 176,
+   "no": 176,
+   "chunk": "c011",
+   "decisionId": "sc-2005do3832-20070629-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 사람의 시기(진통설 또는 분만개시설) (176번, p.195) / 낙태와 임산부에 대한 상해죄의 성부 (195번, p.209)"
+  },
+  {
+   "seq": 152,
+   "no": 152,
+   "chunk": "c009",
+   "decisionId": "sc-2002do4380-20030110-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 상상적 경합과 실체적 경합의 구별 (152번, p.170) / 감금죄와 강도상해죄의 죄수 (208번, p.220)"
+  },
+  {
+   "seq": 96,
+   "no": 96,
+   "chunk": "c005",
+   "decisionId": "sc-2018do16002-20190328-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 실행의 수단 또는 대상의 착오 (96번, p.108) / 준강간죄의 불능미수 (221번, p.233)"
+  },
+  {
+   "seq": 245,
+   "no": 245,
+   "chunk": "c015",
+   "decisionId": "sc-2011do7943-20120524-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 컴퓨터 등 장애 업무방해죄의 구성요건 (245번, p.256) / 업무방해의 결과를 초래할 위험 (246번, p.257)"
+  },
+  {
+   "seq": 141,
+   "no": 141,
+   "chunk": "c009",
+   "decisionId": "sc-2012do1895-20121011-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 흡수관계(불가벌적 수반행위) (141번, p.158) / 업무방해죄와 폭행죄 간의 죄수 (248번, p.259)"
+  },
+  {
+   "seq": 87,
+   "no": 87,
+   "chunk": "c005",
+   "decisionId": "sc-94do2561-19950915-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 주거침입죄의 기수시기 (87번, p.99) / 주거침입죄의 실행의 착수시기 (257번, p.268)"
+  },
+  {
+   "seq": 143,
+   "no": 143,
+   "chunk": "c009",
+   "decisionId": "sc-2015do8169-20151015-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 결합범 (143번, p.161) / 상습절도와 주거침입의 관계 (277번, p.284)"
+  },
+  {
+   "seq": 218,
+   "no": 218,
+   "chunk": "c014",
+   "decisionId": "sc-2010do9630-20101209-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 강간죄와 강도(강간)죄ㆍ특수강도강간죄의 구별기준 (218번, p.229) / 강도강간범의 성립요건 (281번, p.289)"
+  },
+  {
+   "seq": 86,
+   "no": 86,
+   "chunk": "c005",
+   "decisionId": "sc-92do917-19920728-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 특수강도죄의 실행의 착수시기(이(異)취지) (86번, p.97) / (준)강도와 공무집행방해죄 간의 죄수 (284번, p.292)"
+  },
+  {
+   "seq": 85,
+   "no": 85,
+   "chunk": "c005",
+   "decisionId": "sc-2003do4417-20031024-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 야간주거침입절도죄의 실행의 착수시기 (85번, p.97) / 준강도의 주체 (287번, p.294)"
+  },
+  {
+   "seq": 149,
+   "no": 149,
+   "chunk": "c009",
+   "decisionId": "sc-2002do669-20020718-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 상상적 경합과 법조경합의 구별 (149번, p.167) / 사기죄와 배임죄 간의 죄수 (306번, p.312)"
+  },
+  {
+   "seq": 271,
+   "no": 271,
+   "chunk": "c017",
+   "decisionId": "sc-2008do2440-20080612-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 절취한 신용카드를 이용한 현금인출의 죄책 (271번, p.279) / 절취한 타인 신용카드를 이용한 현금인출과 계좌이체의 죄책 (307번, p.313)"
+  },
+  {
+   "seq": 142,
+   "no": 142,
+   "chunk": "c009",
+   "decisionId": "sc-2010do10500-20130221-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 흡수관계(불가벌적 사후행위) (142번, p.160) / 보관자의 이중처분행위의 죄책 (321번, p.327)"
+  },
+  {
+   "seq": 91,
+   "no": 91,
+   "chunk": "c005",
+   "decisionId": "sc-2014do1104-20170720-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 배임죄의 기수시기 (91번, p.102) / 대표이사의 어음발행행위의 배임죄 성부 (335번, p.344)"
+  },
+  {
+   "seq": 84,
+   "no": 84,
+   "chunk": "c005",
+   "decisionId": "sc-2001do6641-20020326-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 현존건조물방화죄의 실행의 착수시기 (84번, p.96) / 방화죄에서 실행의 착수시기 (360번, p.366)"
+  },
+  {
+   "seq": 18,
+   "no": 18,
+   "chunk": "c002",
+   "decisionId": "sc-2014do6206-20140724-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 인과관계의 단절 (18번, p.43) / 교통방해치사상죄의 성격 (370번, p.371)"
+  },
+  {
+   "seq": 205,
+   "no": 205,
+   "chunk": "c013",
+   "decisionId": "sc-2008do7018-20081127-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 범죄를 범한 부하에 대한 단순한 사직권유와 강요죄의 성부 (205번, p.218) / 문서죄의 객체인 문서의 해당 여하(1) (398번, p.387)"
+  },
+  {
+   "seq": 80,
+   "no": 80,
+   "chunk": "c004",
+   "decisionId": "sc-2014do10978-20150122-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 음모죄 (80번, p.92) / 내란죄에서 예비·음모와 실행의 착수시기 구분, 선동·선전의 의미 (446번, p.416)"
+  },
+  {
+   "seq": 120,
+   "no": 120,
+   "chunk": "c007",
+   "decisionId": "sc-2012do6027-20120830-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 종범 성립의 시간적 한계 (120번, p.135) / 범인도피죄의 기수시기와 공범의 성립 (480번, p.443)"
+  },
+  {
+   "seq": 130,
+   "no": 130,
+   "chunk": "c008",
+   "decisionId": "sc-93do1002-19941223-judgment",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 신분의 개념 (130번, p.146) / 모해위증죄의 성격 (486번, p.446)"
+  }
+ ]
+}

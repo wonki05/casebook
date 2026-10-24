@@ -1,0 +1,644 @@
+{
+  "reviewer": "Codex",
+  "reviewedAt": "2026-10-24T17:04:31+09:00",
+  "scope": "Stage 5 read-only review of five requested low-similarity flags; source/registry/fetched files unchanged",
+  "method": "Original PDF text re-extracted with pdfplumber and compared to candidate holdings; official stored sections and reasons inspected. Whitespace/dot normalization and removal of parenthesized Hanja are diagnostic comparisons only, never source edits. Case/date/court/type checked against exact official citation.",
+  "summary": {
+    "reviewed": 5,
+    "identityMismatches": 0,
+    "differentDecisionSuspected": 0,
+    "blockingCorrections": 0,
+    "retainedSourceDifferences": 5
+  },
+  "items": [
+    {
+      "subject": "commercial",
+      "seq": 54,
+      "caseNumber": "2019다277812",
+      "decisionId": "sc-2019da277812-20210722-judgment",
+      "registryIds": [
+        "annual-2021-07",
+        "annual-2021-54",
+        "std-commercial-56"
+      ],
+      "fetchedId": "annual-2021-07",
+      "crosscheckGeneratedAt": "2026-10-24T17:00:18+09:00",
+      "flag": "low-similarity",
+      "holdingsRatio": 0.5815,
+      "identityMatch": {
+        "citation": "[대법원 2021. 7. 22. 선고 2019다277812 전원합의체 판결]",
+        "caseNumber": {
+          "candidate": "2019다277812",
+          "registry": "2019다277812",
+          "official": [
+            "2019다277812"
+          ],
+          "ok": true
+        },
+        "date": {
+          "candidate": "2021-07-22",
+          "registry": "2021-07-22",
+          "official": "2021-07-22",
+          "ok": true
+        },
+        "court": {
+          "candidate": "대법원",
+          "registry": "대법원",
+          "official": "대법원",
+          "ok": true
+        },
+        "decisionType": {
+          "candidate": "판결",
+          "registry": "판결",
+          "official": "판결",
+          "ok": true
+        },
+        "enBanc": {
+          "candidate": true,
+          "registry": true,
+          "official": true,
+          "ok": true
+        },
+        "ok": true,
+        "officialParsed": true
+      },
+      "verdict": "retain-verified-standard-source",
+      "suspectedDifferentDecision": false,
+      "classification": "pdf_excerpt_with_editorial_cross_reference",
+      "reason": "표준판례가 공식 요지의 첫 문장과 후반부를 생략부호로 연결하고, 동지 판례를 덧붙였다. 서로 다른 재판을 잘못 병합한 증거가 아니라 PDF 원문의 발췌·편집상 차이이다.",
+      "officialLocations": [
+        "판결요지 첫 문장",
+        "판결요지 ③ 후단",
+        "이유 2. 다. 및 (3) 후단"
+      ],
+      "differences": [
+        "PDF의 ......는 공식 요지 중간 논거의 생략을 나타낸다.",
+        "PDF 말미 (동지：대법원 2021. 8. 19. 선고 2018다258074 판결)는 책의 추가 인용이며 2019다277812 공식 판결문 자체의 인용이 아니다."
+      ],
+      "neededAction": [
+        "원출처별 문자열을 그대로 보존한다.",
+        "표준판례 텍스트와 공식 원문을 출처별로 구별하여 표시한다.",
+        "교차검증의 low-similarity 경고는 본 검토 기록에 연결하되 원시 검사 결과를 고쳐 통과로 꾸미지 않는다."
+      ],
+      "blockingCorrectionNeeded": false,
+      "sourceFiles": [
+        {
+          "file": "data/standard-cases/표준판례(2023년 개정판)_상법.pdf",
+          "pdfPages": [
+            84
+          ],
+          "sha256": "fe804ce09385a702292a9df9c6cefa01256b8a9458fe3c5105bb047b9cb19080"
+        }
+      ],
+      "officialFile": {
+        "file": "data/fetched/annual-2021-07.json",
+        "sha256": "98264502940f5d989a07e677a65f2c93680e23a52c590dc66a9accf7b35e3b7a",
+        "sourceUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=217339",
+        "citation": "[대법원 2021. 7. 22. 선고 2019다277812 전원합의체 판결]"
+      },
+      "checks": [
+        {
+          "holding": 1,
+          "n": "",
+          "pdfExactAfterWhitespaceAndDotNormalization": true,
+          "pdfSubjects": [
+            "상법"
+          ],
+          "officialSummaryContainsAfterWhitespaceDotAndHanjaNormalization": false,
+          "officialReasonParagraphsContained": [
+            false
+          ]
+        }
+      ],
+      "officialEvidence": [
+        {
+          "section": "【판시사항】",
+          "anchor": "보험계약자가 다수의 계약을 통하여 보험금을 부정 취득할 목적으로",
+          "excerpt": "보험계약자가 다수의 계약을 통하여 보험금을 부정 취득할 목적으로 체결한 보험계약이 민법 제103조에 따라 무효인 경우, 보험금에 대한 부당이득반환청구권에 상법 제64조를 유추적용하여 5년의 상사 소멸시효기간이 적용되는지 여부(적극)"
+        },
+        {
+          "section": "【판결요지】",
+          "anchor": "보험자의 보험금에 대한 부당이득반환청구권에 대해서 민사 소멸시효기간이 적용된다고 볼 수는 없고",
+          "excerpt": "까지 확장하거나 유추하여 적용하는 것은 적절하지 않다.\n 그렇다고 해서 보험자의 보험금에 대한 부당이득반환청구권에 대해서 민사 소멸시효기간이 적용된다고 볼 수는 없고, 보험계약의 정형성이나 법률관계의 신속한 처리 필요성에 비추어 상사 소멸시효기간에 관한 규정을 유추적용하여야 한다. 통상 보험상품을 만들어 판매한 보험자는 보험계약의 이행에 관한 전문적 지식을 가진 자로서 보험계약자보다 우월한 지위에 있으며, 상법 제662조는 보험계약자의 보험료 반환채권에 관한 것이기는 하지만 보험계약의 무효로 인한 법률관계를 신속하게 해결할 필요가 있음을 전제로 하고 있다. 보험계약이 무효인 경우 보험금 "
+        }
+      ]
+    },
+    {
+      "subject": "administrative",
+      "seq": 32,
+      "caseNumber": "2020두40327",
+      "decisionId": "sc-2020du40327-20220907-judgment",
+      "registryIds": [
+        "annual-2022-13",
+        "std-administrative-32"
+      ],
+      "fetchedId": "annual-2022-13",
+      "crosscheckGeneratedAt": "2026-10-24T17:00:18+09:00",
+      "flag": "low-similarity",
+      "holdingsRatio": 0.1166,
+      "identityMatch": {
+        "citation": "[대법원 2022. 9. 7. 선고 2020두40327 판결]",
+        "caseNumber": {
+          "candidate": "2020두40327",
+          "registry": "2020두40327",
+          "official": [
+            "2020두40327"
+          ],
+          "ok": true
+        },
+        "date": {
+          "candidate": "2022-09-07",
+          "registry": "2022-09-07",
+          "official": "2022-09-07",
+          "ok": true
+        },
+        "court": {
+          "candidate": "대법원",
+          "registry": "대법원",
+          "official": "대법원",
+          "ok": true
+        },
+        "decisionType": {
+          "candidate": "판결",
+          "registry": "판결",
+          "official": "판결",
+          "ok": true
+        },
+        "enBanc": {
+          "candidate": false,
+          "registry": false,
+          "official": false,
+          "ok": true
+        },
+        "ok": true,
+        "officialParsed": true
+      },
+      "verdict": "retain-verified-standard-source",
+      "suspectedDifferentDecision": false,
+      "classification": "pdf_shortened_summary_with_introductory_phrase",
+      "reason": "PDF는 한 문장만 수록하고 공식 요지의 3항목과 상세 논거는 생략한다. 핵심 결론은 공식 이유의 문장과 일치하지만 PDF 도입 문구는 공식 해당 문장에 없다.",
+      "officialLocations": [
+        "판결요지 [1] 첫 문장",
+        "이유: 나. 그러나 대도시의 장 등 관할 행정청은..."
+      ],
+      "differences": [
+        "악취방지법 제8조 등 관련 규정상은 PDF에 있는 도입 문구이다.",
+        "공식 요지는 있다고 보는 것이 타당하다, 공식 이유와 PDF는 있다고 봄이 타당하다로 표기한다.",
+        "설치․운영/설치·운영의 점 기호 차이가 있다."
+      ],
+      "neededAction": [
+        "원출처별 문자열을 그대로 보존한다.",
+        "표준판례 텍스트와 공식 원문을 출처별로 구별하여 표시한다.",
+        "교차검증의 low-similarity 경고는 본 검토 기록에 연결하되 원시 검사 결과를 고쳐 통과로 꾸미지 않는다."
+      ],
+      "blockingCorrectionNeeded": false,
+      "sourceFiles": [
+        {
+          "file": "data/standard-cases/표준판례(2023년 개정판)_행정법.pdf",
+          "pdfPages": [
+            27
+          ],
+          "sha256": "1e6283521faa2f6b418fd7be603de1cb05b3c0d4929f3a90fa6a167bfc934294"
+        }
+      ],
+      "officialFile": {
+        "file": "data/fetched/annual-2022-13.json",
+        "sha256": "41079cc5cf2905c02f24c6df0e2e7ba53677670c6ef00acc8dac8d5e19b8144f",
+        "sourceUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=231019",
+        "citation": "[대법원 2022. 9. 7. 선고 2020두40327 판결]"
+      },
+      "checks": [
+        {
+          "holding": 1,
+          "n": "",
+          "pdfExactAfterWhitespaceAndDotNormalization": true,
+          "pdfSubjects": [
+            "행정법"
+          ],
+          "officialSummaryContainsAfterWhitespaceDotAndHanjaNormalization": false,
+          "officialReasonParagraphsContained": [
+            false
+          ]
+        }
+      ],
+      "officialEvidence": [
+        {
+          "section": "【이 유】",
+          "anchor": "대도시의 장 등 관할 행정청은 악취배출시설 설치·운영신고의 수리 여부를 심사할 권한이 있다고 봄이 타당하다",
+          "excerpt": " 사건 각 신고를 반려한 것은 위법하다고 판단하였다.\n\n 나.  그러나 대도시의 장 등 관할 행정청은 악취배출시설 설치·운영신고의 수리 여부를 심사할 권한이 있다고 봄이 타당하다.\n 1) 악취방지법 제8조의2 제1항에 의하면, 악취관리지역 이외의 지역에 설치된 악취배출시설이 신고대상으로 지정·고시되기 위해서는 해당 악취배출시설과 관련하여 악취 관련 민원이 1년 이상 지속되고 복합악취나 지정악취물이 3회 이상 배출허용기준을 초과하는 경우이어야 한다. 즉, 신고대상 악취배출시설로 지정·고시되었다는 것은 이미 생활환경에 피해가 발생하였다는 것을 의미한다. 이 경우 신고대상으로 지정·고시된 악취배출시설의 운"
+        }
+      ]
+    },
+    {
+      "subject": "administrative",
+      "seq": 60,
+      "caseNumber": "2019두61137",
+      "decisionId": "sc-2019du61137-20200409-judgment",
+      "registryIds": [
+        "annual-2020-03",
+        "std-administrative-58"
+      ],
+      "fetchedId": "annual-2020-03",
+      "crosscheckGeneratedAt": "2026-10-24T17:00:18+09:00",
+      "flag": "low-similarity",
+      "holdingsRatio": 0.1717,
+      "identityMatch": {
+        "citation": "[대법원 2020. 4. 9. 선고 2019두61137 판결]",
+        "caseNumber": {
+          "candidate": "2019두61137",
+          "registry": "2019두61137",
+          "official": [
+            "2019두61137"
+          ],
+          "ok": true
+        },
+        "date": {
+          "candidate": "2020-04-09",
+          "registry": "2020-04-09",
+          "official": "2020-04-09",
+          "ok": true
+        },
+        "court": {
+          "candidate": "대법원",
+          "registry": "대법원",
+          "official": "대법원",
+          "ok": true
+        },
+        "decisionType": {
+          "candidate": "판결",
+          "registry": "판결",
+          "official": "판결",
+          "ok": true
+        },
+        "enBanc": {
+          "candidate": false,
+          "registry": false,
+          "official": false,
+          "ok": true
+        },
+        "ok": true,
+        "officialParsed": true
+      },
+      "verdict": "retain-verified-standard-source",
+      "suspectedDifferentDecision": false,
+      "classification": "official_reason_excerpt_not_official_summary",
+      "reason": "PDF의 세 문단은 공식 판결요지보다 긴 공식 이유의 발췌이다. 세 문단을 각각 대조하면 전부 공식 이유의 연속 문자열과 일치한다.",
+      "officialLocations": [
+        "이유: 다. 앞서 본 법리에 비추어...",
+        "같은 다항 (1)의 두 문단"
+      ],
+      "differences": [
+        "공식 요지 [2]는 여러 법령을 열거한 압축된 결론이나 PDF는 그 결론 및 확인적 행정행위 판단의 이유를 발췌한다.",
+        "PDF는 공식 이유의 (1) 표지를 제거했지만 세 문단의 본문은 보존한다."
+      ],
+      "neededAction": [
+        "원출처별 문자열을 그대로 보존한다.",
+        "표준판례 텍스트와 공식 원문을 출처별로 구별하여 표시한다.",
+        "교차검증의 low-similarity 경고는 본 검토 기록에 연결하되 원시 검사 결과를 고쳐 통과로 꾸미지 않는다."
+      ],
+      "blockingCorrectionNeeded": false,
+      "sourceFiles": [
+        {
+          "file": "data/standard-cases/표준판례(2023년 개정판)_행정법.pdf",
+          "pdfPages": [
+            44,
+            45
+          ],
+          "sha256": "1e6283521faa2f6b418fd7be603de1cb05b3c0d4929f3a90fa6a167bfc934294"
+        }
+      ],
+      "officialFile": {
+        "file": "data/fetched/annual-2020-03.json",
+        "sha256": "994767dbb2737c05c153de8b3e5f78804864b6f8d60295d46285a868ff5c2e7d",
+        "sourceUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=211307",
+        "citation": "[대법원 2020. 4. 9. 선고 2019두61137 판결]"
+      },
+      "checks": [
+        {
+          "holding": 1,
+          "n": "",
+          "pdfExactAfterWhitespaceAndDotNormalization": true,
+          "pdfSubjects": [
+            "행정법"
+          ],
+          "officialSummaryContainsAfterWhitespaceDotAndHanjaNormalization": false,
+          "officialReasonParagraphsContained": [
+            true,
+            true,
+            true
+          ]
+        }
+      ],
+      "officialEvidence": [
+        {
+          "section": "【이 유】",
+          "anchor": "앞서 본 법리에 비추어 관련 규정들의 내용과 체계 등을 살펴보면",
+          "excerpt": "사업주에게 처리결과를 문서로 알려야 한다(제22조 제7항).\n\n 다.  앞서 본 법리에 비추어 관련 규정들의 내용과 체계 등을 살펴보면, 근로복지공단이 사업주에 대하여 하는 ‘개별 사업장의 사업종류 변경결정’은 행정청이 행하는 구체적 사실에 관한 법집행으로서의 공권력의 행사인 ‘처분’에 해당한다고 보아야 한다. 그 구체적인 이유는 다음과 같다.\n (1) 사업종류별 산재보험료율은 고용노동부장관이 매년 정하여 고시하므로, 개별 사업장의 사업종류가 구체적으로 결정되면 그에 따라 해당 사업장에 적용할 산재보험료율이 자동적으로 정해진다. 고용산재보험료징수법은 개별 사"
+        },
+        {
+          "section": "【이 유】",
+          "anchor": "사업종류별 산재보험료율은 고용노동부장관이 매년 정하여 고시하므로",
+          "excerpt": "에 해당한다고 보아야 한다. 그 구체적인 이유는 다음과 같다.\n (1) 사업종류별 산재보험료율은 고용노동부장관이 매년 정하여 고시하므로, 개별 사업장의 사업종류가 구체적으로 결정되면 그에 따라 해당 사업장에 적용할 산재보험료율이 자동적으로 정해진다. 고용산재보험료징수법은 개별 사업장의 사업종류 결정의 절차와 방법, 결정기준에 관하여 구체적으로 규정하거나 하위법령에 명시적으로 위임하지는 않았으나, 고용산재보험료징수법의 사업종류 변경신고에 관한 규정들과 근로복지공단의 사실조사에 관한 규정들은 개별 사업장의 구체적인 특성을 고려하여 사업종류가 결정되고 그에 따라 "
+        },
+        {
+          "section": "【이 유】",
+          "anchor": "고용노동부장관의 고시에 의하면, 개별 사업장의 사업종류 결정은",
+          "excerpt": "것은 고용산재보험료징수법을 집행하는 과정에서 이루어지는 행정작용이다.\n 고용노동부장관의 고시에 의하면, 개별 사업장의 사업종류 결정은 그 사업장의 재해 발생의 위험성, 경제활동의 동질성, 주된 제품·서비스의 내용, 작업공정과 내용, 한국표준산업분류에 따른 사업내용 분류, 동종 또는 유사한 다른 사업장에 적용되는 사업종류 등을 확인한 후, 매년 고용노동부장관이 고시한 ‘사업종류예시표’를 참고하여 사업세목을 확정하는 방식으로 이루어진다. 1차적으로 사업주의 보험관계 성립신고나 변경신고를 참고하지만, 사업주가 신고를 게을리하거나 그 신고 내용에 의문이 있는 경우"
+        }
+      ]
+    },
+    {
+      "subject": "administrative",
+      "seq": 3,
+      "caseNumber": "93헌마186",
+      "decisionId": "cc-93heonma186-19960229-decision",
+      "registryIds": [
+        "std-administrative-03",
+        "std-constitution-208"
+      ],
+      "fetchedId": "std-administrative-03",
+      "crosscheckGeneratedAt": "2026-10-24T17:00:18+09:00",
+      "flag": "low-similarity",
+      "holdingsRatio": 0.3238,
+      "identityMatch": {
+        "citation": "[전원재판부 93헌마186, 1996. 2. 29.]",
+        "caseNumber": {
+          "candidate": "93헌마186",
+          "registry": "93헌마186",
+          "official": [
+            "93헌마186"
+          ],
+          "ok": true
+        },
+        "date": {
+          "candidate": "1996-02-29",
+          "registry": "1996-02-29",
+          "official": "1996-02-29",
+          "ok": true
+        },
+        "court": {
+          "candidate": "헌법재판소",
+          "registry": "헌법재판소",
+          "official": "헌법재판소",
+          "ok": true
+        },
+        "decisionType": {
+          "candidate": "결정",
+          "registry": "결정",
+          "official": "결정",
+          "ok": true
+        },
+        "enBanc": {
+          "candidate": false,
+          "registry": false,
+          "official": false,
+          "ok": true
+        },
+        "ok": true,
+        "officialParsed": true
+      },
+      "verdict": "retain-verified-standard-source",
+      "suspectedDifferentDecision": false,
+      "classification": "overlap_union_hanja_omission_and_pdf_condensed_reason",
+      "reason": "같은 결정의 행정법 결정요지와 헌법 책의 이유 축약을 합친 검증된 겹침 결과이다. 공식 요지의 한자 병기와 수록 범위가 다르므로 전체 유사도가 낮다.",
+      "officialLocations": [
+        "결정요지 가.",
+        "이유 3. 가. (1) (가)",
+        "이유 3. 나. (1)"
+      ],
+      "differences": [
+        "첫 항목은 공식 결정요지 가.에서 한자 병기를 제외하면 일치한다.",
+        "둘째 항목은 헌법 PDF246쪽의 축약문으로, 공식 결정요지에는 없고 공식 이유 3. 나. (1)에 대응한다.",
+        "둘째 항목의 아울러, 생략된 세부 기준, 된다라는 종결은 PDF 원문의 차이이며 에이전트가 새로 만든 문구가 아니다.",
+        "공식 요지 나·다(탄핵소추 부작위와 발동요건)는 이 겹침 결과에 수록되지 않는다."
+      ],
+      "neededAction": [
+        "원출처별 문자열을 그대로 보존한다.",
+        "표준판례 텍스트와 공식 원문을 출처별로 구별하여 표시한다.",
+        "교차검증의 low-similarity 경고는 본 검토 기록에 연결하되 원시 검사 결과를 고쳐 통과로 꾸미지 않는다."
+      ],
+      "blockingCorrectionNeeded": false,
+      "sourceFiles": [
+        {
+          "file": "data/standard-cases/표준판례(2023년 개정판)_행정법.pdf",
+          "pdfPages": [
+            4,
+            5
+          ],
+          "sha256": "1e6283521faa2f6b418fd7be603de1cb05b3c0d4929f3a90fa6a167bfc934294"
+        },
+        {
+          "file": "data/standard-cases/표준판례(2023년 개정판)_헌법.pdf",
+          "pdfPages": [
+            246
+          ],
+          "sha256": "1f49980703f7848b080861d36e1ba268167f09a5cf729cb745ae744c4454d6f5"
+        }
+      ],
+      "officialFile": {
+        "file": "data/fetched/std-administrative-03.json",
+        "sha256": "9125ce5e038c7a6a24f259ec705a6133664ee300e0726092a1b1a666a9d77638",
+        "sourceUrl": "https://www.law.go.kr/LSW/detcInfoP.do?detcSeq=135215",
+        "citation": "[전원재판부 93헌마186, 1996. 2. 29.]"
+      },
+      "checks": [
+        {
+          "holding": 1,
+          "n": "가.",
+          "pdfExactAfterWhitespaceAndDotNormalization": true,
+          "pdfSubjects": [
+            "행정법"
+          ],
+          "officialSummaryContainsAfterWhitespaceDotAndHanjaNormalization": true,
+          "officialReasonParagraphsContained": [
+            false
+          ]
+        },
+        {
+          "holding": 2,
+          "n": "",
+          "pdfExactAfterWhitespaceAndDotNormalization": true,
+          "pdfSubjects": [
+            "헌법"
+          ],
+          "officialSummaryContainsAfterWhitespaceDotAndHanjaNormalization": false,
+          "officialReasonParagraphsContained": [
+            false
+          ]
+        }
+      ],
+      "officialEvidence": [
+        {
+          "section": "【결정요지】",
+          "anchor": "대통령(大統領)의 긴급재정경제명령(緊急財政經濟命令)은",
+          "excerpt": "가. 대통령(大統領)의 긴급재정경제명령(緊急財政經濟命令)은 국가긴급권(國家緊急權)의 일종으로서 고도(高度)의 정치적(政治的) 결단(決斷)에 의하여 발동(發動)되는 행위(行爲)이고 그 결단(決斷)을 존중하여야 할 필요성이 있는 행위(行爲)라는 의미에서 이른바 통치행위(統治行爲)에 속한다고 할 수 있으나, 통치행위(統治行爲)를 포함하여 모든 국가작용(國家作用)은 국민(國民)의 기본권적(基本權的) 가치를 실현하기 위한 수단이라는 한계를 반드시 지켜야 하는 것이고, 헌법재판소(憲法裁判所)는"
+        },
+        {
+          "section": "[이 유]",
+          "anchor": "즉 긴급재정경제명령이 아래에서 보는 바와 같은 헌법 제76조",
+          "excerpt": "로서도 특별한 사정이 없는 한 이를 수인할 것을 요구하고 있는 것이다. 즉 긴급재정경제명령이 아래에서 보는 바와 같은 헌법 제76조 소정의 요건과 한계에 부합하는 것이라면 그 자체로 목적의 정당성, 수단의 적정성, 피해의 최소성, 법익의 균형성이라는 기본권제한의 한계로서의 과잉금지원칙을 준수하는 것이 되는 것이다. 그러므로 이 사건 긴급명령이 헌법 제76조가 정하고 있는 요건과 한계에 부합하는 것인지 살펴본다.\n(2) 이 사건 긴급명령의 요건 구비 여부\n(가) 헌법의 규정\n1) 헌법 제76조 제1항은 긴급재정경제명령의 요건에 관하여 \"대통령은…… 중대한 "
+        }
+      ]
+    },
+    {
+      "subject": "administrative",
+      "seq": 418,
+      "caseNumber": "2015추528",
+      "decisionId": "sc-2015x00cd94z528-20210204-judgment",
+      "registryIds": [
+        "annual-2021-05",
+        "std-administrative-391"
+      ],
+      "fetchedId": "annual-2021-05",
+      "crosscheckGeneratedAt": "2026-10-24T17:00:18+09:00",
+      "flag": "low-similarity",
+      "holdingsRatio": 0.5112,
+      "identityMatch": {
+        "citation": "[대법원 2021. 2. 4. 선고 2015추528 판결]",
+        "caseNumber": {
+          "candidate": "2015추528",
+          "registry": "2015추528",
+          "official": null,
+          "ok": true
+        },
+        "date": {
+          "candidate": "2021-02-04",
+          "registry": "2021-02-04",
+          "official": "2021-02-04",
+          "ok": true
+        },
+        "court": {
+          "candidate": "대법원",
+          "registry": "대법원",
+          "official": "대법원",
+          "ok": true
+        },
+        "decisionType": {
+          "candidate": "판결",
+          "registry": "판결",
+          "official": "판결",
+          "ok": true
+        },
+        "enBanc": {
+          "candidate": false,
+          "registry": false,
+          "official": false,
+          "ok": true
+        },
+        "ok": true,
+        "officialParsed": true
+      },
+      "verdict": "retain-verified-standard-source",
+      "suspectedDifferentDecision": false,
+      "classification": "pdf_selection_and_renumbering_of_official_reasons",
+      "reason": "PDF가 공식 이유의 여러 부분을 발췌·축약하여 자체 번호 4항목으로 배치하였다. 공식 요지의 번호·수록 범위와 일치하지 않지만 모든 핵심 내용은 같은 재판의 이유에서 확인된다.",
+      "officialLocations": [
+        "이유 2. 나. (3)~(4): PDF [1]",
+        "이유 신청기간 관련 판단 (3) 후단: PDF [2]",
+        "이유 지적공부 등록 관련 판단: PDF [3]",
+        "이유 3. 다. (1): PDF [4]"
+      ],
+      "differences": [
+        "PDF [1]은 공식 이유의 해상 공유수면과 매립지 구별 및 합헌 판단을 축약하여 연결한다. 2015헌라3 인용에서 전원재판부 표기를 생략했다.",
+        "PDF [2]는 공식 이유의 두 문장과 일치한다.",
+        "PDF [3]의 독자적 지적등록 무효 판단은 공식 이유에 있으며, 공식 요지 [2]는 이를 배경으로 함께 언급한다.",
+        "PDF [4]는 공식 요지 [3]/이유 3. 다. (1)에 대응하며 중간 논거를 생략했다. 2000헌라2 인용의 전원재판부 표기도 생략되어 있다.",
+        "공식 요지 [4]의 광범위한 형성재량·구역결정 고려사항은 PDF의 이 항목에 수록되지 않는다."
+      ],
+      "neededAction": [
+        "원출처별 문자열을 그대로 보존한다.",
+        "표준판례 텍스트와 공식 원문을 출처별로 구별하여 표시한다.",
+        "교차검증의 low-similarity 경고는 본 검토 기록에 연결하되 원시 검사 결과를 고쳐 통과로 꾸미지 않는다."
+      ],
+      "blockingCorrectionNeeded": false,
+      "sourceFiles": [
+        {
+          "file": "data/standard-cases/표준판례(2023년 개정판)_행정법.pdf",
+          "pdfPages": [
+            346,
+            347
+          ],
+          "sha256": "1e6283521faa2f6b418fd7be603de1cb05b3c0d4929f3a90fa6a167bfc934294"
+        }
+      ],
+      "officialFile": {
+        "file": "data/fetched/annual-2021-05.json",
+        "sha256": "0d9df5aed7d68223ebfb616a758f59ec0b912eeb1c9da5b98e25b957fba57caa",
+        "sourceUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=226775",
+        "citation": "[대법원 2021. 2. 4. 선고 2015추528 판결]"
+      },
+      "checks": [
+        {
+          "holding": 1,
+          "n": "[1]",
+          "pdfExactAfterWhitespaceAndDotNormalization": true,
+          "pdfSubjects": [
+            "행정법"
+          ],
+          "officialSummaryContainsAfterWhitespaceDotAndHanjaNormalization": false,
+          "officialReasonParagraphsContained": [
+            false
+          ]
+        },
+        {
+          "holding": 2,
+          "n": "[2]",
+          "pdfExactAfterWhitespaceAndDotNormalization": true,
+          "pdfSubjects": [
+            "행정법"
+          ],
+          "officialSummaryContainsAfterWhitespaceDotAndHanjaNormalization": true,
+          "officialReasonParagraphsContained": [
+            true
+          ]
+        },
+        {
+          "holding": 3,
+          "n": "[3]",
+          "pdfExactAfterWhitespaceAndDotNormalization": true,
+          "pdfSubjects": [
+            "행정법"
+          ],
+          "officialSummaryContainsAfterWhitespaceDotAndHanjaNormalization": false,
+          "officialReasonParagraphsContained": [
+            false
+          ]
+        },
+        {
+          "holding": 4,
+          "n": "[4]",
+          "pdfExactAfterWhitespaceAndDotNormalization": true,
+          "pdfSubjects": [
+            "행정법"
+          ],
+          "officialSummaryContainsAfterWhitespaceDotAndHanjaNormalization": false,
+          "officialReasonParagraphsContained": [
+            false
+          ]
+        }
+      ],
+      "officialEvidence": [
+        {
+          "section": "【이 유】",
+          "anchor": "‘해상 공유수면’과 그 ‘매립지’는 법적 성질",
+          "excerpt": "하여야 하며, 그 전까지는 어느 지방자치단체에도 속하지 않는다. 따라서 ‘해상 공유수면’과 그 ‘매립지’는 법적 성질을 전혀 달리하는 것이며, 공유수면의 이용과 매립지의 이용은 그 방법과 내용을 달리하므로, 공유수면의 해상경계기준을 매립지의 관할 귀속 결정에까지 그대로 적용할 수는 없다(헌법재판소 2020. 7. 16. 선고 2015헌라3 전원재판부 결정 참조).\n (4) ① 지방자치단체의 관할구역은 본래 지방자치제도 보장의 핵심영역, 본질적 부분에 속하는 것이 아니라 입법형성권의 범위에 속하는 점, ② 해상 공유수면 매립지의 경우 국가의 "
+        },
+        {
+          "section": "【판결요지】",
+          "anchor": "해상 공유수면 매립지의 경우 지방자치법 제4조 제1항 본문에 의하여",
+          "excerpt": " 지적공부 등록이 이루어지는 상황을 예방하려는 데에 입법 취지가 있다. 해상 공유수면 매립지의 경우 지방자치법 제4조 제1항 본문에 의하여 법률의 형식으로 관할 지방자치단체를 정하지 않는 이상 지방자치법 제4조 제3항에 의하여 행정안전부장관의 관할 귀속 결정이 반드시 있어야 하므로, 지방자치법 제4조 제4항이 정한 대로 신청이 이루어지지 않았다고 하더라도 해당 매립지에 관하여 관할 귀속 결정을 하여야 할 행정안전부장관의 권한ㆍ의무에 어떤 영향을 미친다고 볼 수 없다. 매립면허관청이나 관련 지방자치단체의 장이 준공검사 전까지 관할 귀속 결정을 신청하지 않았다고 하"
+        },
+        {
+          "section": "【판결요지】",
+          "anchor": "국가가 매립지가 속할 지방자치단체를 결정하지 않은 상태에서",
+          "excerpt": "정보의 구축 및 관리 등에 관한 법률 시행규칙 제81조 제1항 제2호와 국가가 매립지가 속할 지방자치단체를 결정하지 않은 상태에서, 토지소유자 또는 매립면허취득자가 임의로 특정 지방자치단체의 장에게 토지 신규등록을 신청하여 마친 지적공부 등록의 효력(당연무효)에 관한 법리를 종합하면, 지방자치법 제4조 제4항은 매립지 관할 귀속에 관하여 이해관계가 있는 매립면허관청이나 관련 지방자치단체의 장이 준공검사 전까지 행정안전부장관에게 관할 귀속 결정을 신청하도록 함으로써 행정안전부장관으로 하여금 가급적 신속하고 적절한 시점에 매립지 관할 귀속 결정을 하도록 촉"
+        },
+        {
+          "section": "【판결요지】",
+          "anchor": "‘기초 지방자치단체들 상호 간’",
+          "excerpt": "1. 지방자치법 제4조 개정 전에는 공유수면 매립지의 관할 귀속이 주로 ‘기초 지방자치단체들 상호 간’의 권한쟁의심판 절차를 통해 결정되었고, 그에 따른 문제점을 해소하기 위하여 2009. 4. 1. 지방자치법 제4조가 개정되어 행정안전부장관의 매립지 관할 귀속 결정 절차가 신설된 점, 우리나라에서는 지방자치단체를 두 가지 종류로 구분하여 특별시, 광역시, 특별자치시, 도, 특별자치도와 같은 광역 지방자치단체 안에 시ㆍ군ㆍ구와 같은 기초 지방자치단체를 두고 있으므로(지방자치법 제2조 제1항, 제3조 제2항), 어떤 매립지가 특"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,440 @@
+{
+  "reviewer": "Codex",
+  "reviewedAt": "2026-10-24T17:16:20.491676+09:00",
+  "scope": "형법 _crosscheck.json 낮은 holdingsRatio 3건. 원본 PDF·후보·기존 공식 수집 파일의 동일성, 선택 범위와 의견 귀속을 읽기 전용으로 대조.",
+  "method": "원본 PDF를 pdfplumber로 다시 추출하고 페이지의 첫 머리글·마지막 쪽수를 제거한 뒤 공백·인용부호·중점 표기를 정규화하여 holdings 전체 포함을 검사했다. 공식 요지/이유 문단을 별도로 대조했고, 331번 날짜 차이는 PDF 이미지로 확인했다. 정규화는 진단용이며 원출처에 적용하지 않았다.",
+  "inputs": {
+    "crosscheck": "data/standard-cases/형법/_crosscheck.json",
+    "crosscheckSha256": "bcff597556a5ae9791161556f19e0b6c83274afb6c8f7f30bcb7ae60c85bb6e2"
+  },
+  "summary": {
+    "reviewed": 3,
+    "identityMismatches": 0,
+    "differentDecisionSuspected": 0,
+    "transcriptionErrors": 0,
+    "originalSourceReferenceDateDiscrepancies": 1,
+    "blockingCorrections": 0
+  },
+  "items": [
+    {
+      "subject": "criminal",
+      "seq": 2,
+      "caseNumber": "2005헌바19",
+      "decisionId": "cc-2005heonba19-20060727-decision",
+      "registryIds": [
+        "std-criminal-02"
+      ],
+      "holdingsRatio": 0.4422,
+      "verdict": "retain-original-source",
+      "classification": "selected-majority-reason-and-decision-summary",
+      "finding": "첫 문단은 공식 이유의 명확성 원칙 일반 기준, 둘째는 공식 결정요지 1이다. 계약자유 쟁점 2와 권 성·주선회 재판관 반대의견은 책에서 선택하지 않았다. 다른 재판 또는 의견 혼합의 근거가 없다.",
+      "neededAction": "수정 없음. 책의 선택 범위·표기와 공식 전문을 원출처대로 유지한다.",
+      "identityEvidence": {
+        "citation": "[전원재판부 2005헌바19, 2006. 7. 27.]",
+        "caseNumber": {
+          "candidate": "2005헌바19",
+          "registry": "2005헌바19",
+          "official": [
+            "2005헌바19"
+          ],
+          "ok": true
+        },
+        "date": {
+          "candidate": "2006-07-27",
+          "registry": "2006-07-27",
+          "official": "2006-07-27",
+          "ok": true
+        },
+        "court": {
+          "candidate": "헌법재판소",
+          "registry": "헌법재판소",
+          "official": "헌법재판소",
+          "ok": true
+        },
+        "decisionType": {
+          "candidate": "결정",
+          "registry": "결정",
+          "official": "결정",
+          "ok": true
+        },
+        "enBanc": {
+          "candidate": false,
+          "registry": false,
+          "official": false,
+          "ok": true
+        },
+        "ok": true,
+        "officialParsed": true
+      },
+      "source": {
+        "pdf": "data/standard-cases/표준판례(2023년 개정판)_형법.pdf",
+        "pdfSha256": "a344505ad719795c061b6244754cdd14304419636e5a4da4f388df7642324f84",
+        "standardSourcePages": [
+          28,
+          29
+        ],
+        "candidateFile": "data/standard-cases/형법/candidates-criminal.json",
+        "candidateSha256": "f807e5926935e7b59adf3f92f418a983068c9a2580f5b3e1c6f5515c2ed2b683",
+        "wholeHoldingFoundInPdfAfterRemovingPageHeadersFootersAndWhitespace": true
+      },
+      "official": {
+        "file": "data/fetched/std-criminal-02.json",
+        "sha256": "ae87a1179d5076a43b9f07cbcf06fa9b9cdd0bdac6f2050bfd569544361cca94",
+        "sourceUrl": "https://www.law.go.kr/LSW/detcInfoP.do?detcSeq=137736",
+        "citation": "[전원재판부 2005헌바19, 2006. 7. 27.]",
+        "evidence": [
+          {
+            "section": "이유",
+            "exactExcerpt": "처벌법규의 구성요건이 명확하여야 한다고 하더라도 입법권자가 모두 구성요건을 단순한 의미의 서술적인 개념에 의하여 규정하여야 한다는 것은 아니다. 처벌법규의 구성요건이 다소 광범위하여 어떤 범위에서는 법관의 보충적인 해석을 필요로 하는 개념을 사용하였다고 하더라도 그 점만으로 헌법이 요구하는 처벌법규의 명확성의 원칙에 반드시 배치되는 것이라고 볼 수 없다. 즉 건전한 상식과 통상적인 법감정을 가진 사람으로 하여금 그 적용대상자가 누구이며 구체적으로 어떠한 행위가 금지되고 있는지 충분히 알 수 있도록 규정되어 있다면 죄형법정주의의 명확성의 원칙에 위배되지 않는다고 보아야 한다. 그렇게 보지 않으면 처벌법규의 구성요건이 지나치게 구체적이고 정형적이 되어 부단히 변화하는 다양한 생활관계를 제대로 규율할 수 없게 될 것이기 때문이다(헌재 1996. 12. 26. 93헌바65, 판례집 8-2, 792 ; 헌재 1998. 5. 28. 97헌바68, 판례집 10-1, 640, 655-656 등)\n(2) 이 사건 법률조항에 대한 판단\n이 사건 법률조항에 규정된 ‘궁박’ 또는 ‘현저하게 부당한 이익’의 의미가 무엇인지, 과연 어느 정도에 이르러야 부당이득죄에 해당된다고 볼 것인지는 문언상 의미만으로는 다소 불분명한 점이 있다.\n그러나 ‘궁박’이나 ‘현저하게 부당한 이익’이라는 개념도 형법상의 ‘지려천박(知慮淺薄)’, ‘기망’, ‘임무에 위배’ 등과 같"
+          },
+          {
+            "section": "결정요지",
+            "exactExcerpt": "‘궁박’이나 ‘현저하게 부당한 이익’이라는 개념도 형법상의 ‘지려천박(知慮淺薄)’, ‘기망’, ‘임무에 위배’ 등과 같이 범죄구성요건을 형성하는 개념 중 구체적 사안에 있어서 일정한 해석을 통하여 적용할 수 있는 일반적, 규범적 개념의 하나로서, ‘궁박한 상태를 이용하여 현저하게 부당한 이익을 취득’하였는지 여부는 사회통념 또는 건전한 상식에 따라 거래당사자의 신분과 상호 간의 관계, 피해자가 처한 상황의 절박성의 정도, 계약의 체결을 둘러싼 협상과정 및 피해자의 이익, 피해자가 그 거래를 통해 추구하고자 한 목적을 달성하기 위한 다른 적절한 대안의 존재 여부 등 제반 상황을 종합한다면 합리적으로 판단할 수 있다고 할 것이므로 이 사건 법률조항이 지니는 약간의 불명확성은 법관의 통상적인 해석 작용에 의하여 충분히 보완될 수 있고 건전한 상식과 통상적인 법감정을 가진 일반인이라면 금지되는 행위가 무엇인지를 예측할 수 있으므로 이 사건 법률조항은 죄형법정주의에서 요구되는 명확성의 원칙에 위배되지 아니한다.\n 2. 폭리행위는 단지 현저히 부당한 이익을 취득하였다는 결과의 측면뿐만 아니라 행위의 측면에 있어서 그러한 이익취득이 정당한 노력의 결과가 아니라 상대방의 궁박상태를 이용한 결과라는 점에서 사회적 비난가능성이 높아 단지 폭리행위로 인하여 초래된 불균형한 재산상태를 시정하는 것에 그치지 않고 나아가 이러한 행위를 형사처벌의 대상인 반사"
+          }
+        ]
+      },
+      "paragraphComparison": [
+        {
+          "paragraph": 1,
+          "officialLocation": "이유",
+          "standardExcerpt": "처벌법규의 구성요건이 명확하여야 한다고 하더라도 입법권자가 모두 구성요건을 단순한 의미의 서술적인 개념에 의하여 규정하여야 한다는 것은 아니다. 처벌법규의 구성요건이 다소 광범위하여 어떤 범위에서는 법관의 보충적인 해석을 필요로 하는 개념을 사용하였다고 하더라도 그 점만으로 헌법이 요구하는 처벌법규의 명확성의 원칙에 반드시 배치되는 것이라고 볼 수 없다. 즉 건전한 상식과 통상적인 법감정을 가진 사람으로 하여금 그 적용대상자가 누구이며 구체적으로 어떠한 행위가 금지되고 있는지 충분히 알 수 있도록",
+          "inOfficialSummaryAfterDiagnosticNormalization": false,
+          "inOfficialReasonAfterDiagnosticNormalization": true,
+          "inSummaryIgnoringParenthesizedHanja": false,
+          "matchesReasonExceptReferenceDate": false
+        },
+        {
+          "paragraph": 2,
+          "officialLocation": "결정요지 1",
+          "standardExcerpt": "‘궁박’이나 ‘현저하게 부당한 이익’이라는 개념도 형법상의 ‘지려천박(知慮淺薄)’, ‘기망’, ‘임무에 위배’ 등과 같이 범죄구성요건을 형성하는 개념 중 구체적 사안에 있어서 일정한 해석을 통하여 적용할 수 있는 일반적, 규범적 개념의 하나로서, ‘궁박한 상태를 이용하여 현저하게 부당한 이익을 취득’하였는지 여부는 사회통념 또는 건전한 상식에 따라 거래당사자의 신분과 상호 간의 관계, 피해자가 처한 상황의 절박성의 정도, 계약의 체결을 둘러싼 협상과정 및 피해자의 이익, 피해자가 그 거래를 통해 ",
+          "inOfficialSummaryAfterDiagnosticNormalization": true,
+          "inOfficialReasonAfterDiagnosticNormalization": false,
+          "inSummaryIgnoringParenthesizedHanja": false,
+          "matchesReasonExceptReferenceDate": false
+        }
+      ],
+      "checks": {
+        "differentDecisionSuspected": false,
+        "transcriptionError": false,
+        "opinionMisattribution": false,
+        "blockingCorrectionRequired": false
+      },
+      "sourceDiscrepancies": []
+    },
+    {
+      "subject": "criminal",
+      "seq": 3,
+      "caseNumber": "2015도8335",
+      "decisionId": "sc-2015do8335-20171221-judgment",
+      "registryIds": [
+        "std-criminal-03"
+      ],
+      "holdingsRatio": 0.4763,
+      "verdict": "retain-original-source",
+      "classification": "selected-majority-summary-with-source-notation-difference",
+      "finding": "책의 5문단은 공식 판결요지 [1] 다수의견 (가)·(나)·(다)·(바)·(사)이다. (라)·(마), 반대의견 및 요지 [2] 구체적 사안은 생략되었다. 책은 공로, 공식은 공로(空路)로 표기한다.",
+      "neededAction": "수정 없음. 책의 선택 범위·표기와 공식 전문을 원출처대로 유지한다.",
+      "identityEvidence": {
+        "citation": "[대법원 2017. 12. 21. 선고 2015도8335 전원합의체 판결]",
+        "caseNumber": {
+          "candidate": "2015도8335",
+          "registry": "2015도8335",
+          "official": [
+            "2015도8335"
+          ],
+          "ok": true
+        },
+        "date": {
+          "candidate": "2017-12-21",
+          "registry": "2017-12-21",
+          "official": "2017-12-21",
+          "ok": true
+        },
+        "court": {
+          "candidate": "대법원",
+          "registry": "대법원",
+          "official": "대법원",
+          "ok": true
+        },
+        "decisionType": {
+          "candidate": "판결",
+          "registry": "판결",
+          "official": "판결",
+          "ok": true
+        },
+        "enBanc": {
+          "candidate": true,
+          "registry": true,
+          "official": true,
+          "ok": true
+        },
+        "ok": true,
+        "officialParsed": true
+      },
+      "source": {
+        "pdf": "data/standard-cases/표준판례(2023년 개정판)_형법.pdf",
+        "pdfSha256": "a344505ad719795c061b6244754cdd14304419636e5a4da4f388df7642324f84",
+        "standardSourcePages": [
+          29,
+          30
+        ],
+        "candidateFile": "data/standard-cases/형법/candidates-criminal.json",
+        "candidateSha256": "f807e5926935e7b59adf3f92f418a983068c9a2580f5b3e1c6f5515c2ed2b683",
+        "wholeHoldingFoundInPdfAfterRemovingPageHeadersFootersAndWhitespace": true
+      },
+      "official": {
+        "file": "data/fetched/std-criminal-03.json",
+        "sha256": "f6cadc890e384749874efc0dbb07fb759290d141a24a97b0efa08e7feccccbf8",
+        "sourceUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=186493",
+        "citation": "[대법원 2017. 12. 21. 선고 2015도8335 전원합의체 판결]",
+        "evidence": [
+          {
+            "section": "판결요지",
+            "exactExcerpt": "[1] [다수의견] (가) 항공보안법 제42조는 \"위계 또는 위력으로써 운항 중인 항공기의 항로를 변경하게 하여 정상 운항을 방해한 사람은 1년 이상 10년 이하의 징역에 처한다.\"라고 규정하고 있다. 같은 법 제2조 제1호는 ‘운항 중’을 ‘승객이 탑승한 후 항공기의 모든 문이 닫힌 때로부터 내리기 위하여 문을 열 때까지’로 정의하였다. 그러나 항공보안법에 ‘항로’가 무엇인지에 관하여 정의한 규정은 없다.\n (나) 죄형법정주의는 국가형벌권의 자의적인 행사로부터 개인의 자유와 권리를 보호하기 위하여 범죄와 형벌을 법률로 정할 것을 요구한다. 그러한 취지에 비추어 보면 형벌법규의 해석은 엄격하여야 하고, 문언의 가능한 의미를 벗어나 피고인에게 불리한 방향으로 해석하는 것은 죄형법정주의의 내용인 확장해석금지에 따라 허용되지 아니한다. 법률을 해석할 때 입법 취지와 목적, 제·개정 연혁, 법질서 전체와의 조화, 다른 법령과의 관계 등을 고려하는 체계적·논리적 해석 방법을 사용할 수 있으나, 문언 자체가 비교적 명확한 개념으로 구성되어 있다면 원칙적으로 이러한 해석 방법은 활용할 필요가 없거나 제한될 수밖에 없다. 죄형법정주의 원칙이 적용되는 형벌법규의 해석에서는 더욱 그러하다.\n (다) 법령에서 쓰인 용어에 관해 정의규정이 없는 경우에는 원칙적으로 사전적인 정의 등 일반적으로 받아들여진 의미에 따라야 한다. 국립국어원의 표준국어대사전은 항로를 ‘항공기가 통행하는 공로(空路)’로 정의하고 있다. 국어학적 의미에서 항로는 공중의 개념을 내포하고 있음이 분명하다. 항공기 운항과 관련하여 ‘항로’가 지상에서의 이동 경로를 가리키는 용어로 쓰인 예를 찾을 수 없다.\n (라) 다른 법률에서 항로는 ‘항공로’의 뜻으로 사용되기도 하였다. 구 항공법(2016. 3. 29. 법률 제14116호로 폐지) 제115조의2 제2항은, 국토교통부장관이 항공운송사업자에게 운항증명을 하는 경우 ‘운항하려는 항로’ 등 운항조건을 정하도록 규정하였다. 이 조문의 내용을 물려받은 항공안전법(2016"
+          },
+          {
+            "section": "판결요지",
+            "exactExcerpt": "국립국어원의 표준국어대사전은 항로를 ‘항공기가 통행하는 공로(空路)’로 정의하고 있다. 국어학적 의미에서 항로는 공중의 개념을 내포하고 있음이 분명하다. 항공기 운항과 관련하여 ‘항로’가 지상에서의 이동 경로를 가리키는 용어로 쓰인 예를 찾을 수 없다.\n (라) 다른 법률에서 항로는 ‘항공로’의 뜻으로 사용되기도 하였다. 구 항공법(2016. 3. 29. 법률 제14116호로 폐지) 제115조의2 제2항은, 국토교통부장관이 항공운송사업자에게 운항증명을 하는 경우 ‘운항하려는 항로’ 등 운항조건을 정하도록 규정하였다. 이 조문의 내용을 물려받은 항공안전법(2016. 3. 29. 법률 제14116호) 제90조 제2항은 ‘운항하려는 항로’를 ‘운항하려는 항공로’로 바꾸었으므로, 여기에서 ‘항로’는 항공로와 같은 "
+          }
+        ]
+      },
+      "paragraphComparison": [
+        {
+          "paragraph": 1,
+          "officialLocation": "다수의견 (가)",
+          "standardExcerpt": "항공보안법 제42조는 “위계 또는 위력으로써 운항 중인 항공기의 항로를 변경하게 하여 정상 운항을 방해한 사람은 1년 이상 10년 이하의 징역에 처한다.”라고 규정하고 있다. 같은 법 제2조 제1호는 ‘운항 중’을 ‘승객이 탑승한 후 항공기의 모든 문이 닫힌 때로부터 내리기 위하여 문을 열 때까지’로 정의하였다. 그러나 항공보안법에 ‘항로’가 무엇인지에 관하여 정의한 규정은 없다.",
+          "inOfficialSummaryAfterDiagnosticNormalization": true,
+          "inOfficialReasonAfterDiagnosticNormalization": true,
+          "inSummaryIgnoringParenthesizedHanja": true,
+          "matchesReasonExceptReferenceDate": false
+        },
+        {
+          "paragraph": 2,
+          "officialLocation": "다수의견 (나)",
+          "standardExcerpt": "죄형법정주의는 국가형벌권의 자의적인 행사로부터 개인의 자유와 권리를 보호하기 위하여 범죄와 형벌을 법률로 정할 것을 요구한다. 그러한 취지에 비추어 보면 형벌법규의 해석은 엄격하여야 하고, 문언의 가능한 의미를 벗어나 피고인에게 불리한 방향으로 해석하는 것은 죄형법정주의의 내용인 확장해석금지에 따라 허용되지 아니한다. 법률을 해석할 때 입법 취지와 목적, 제·개정 연혁, 법질서 전체와의 조화, 다른 법령과의 관계 등을 고려하는 체계적·논리적 해석 방법을 사용할 수 있으나, 문언 자체가 비교적 명확",
+          "inOfficialSummaryAfterDiagnosticNormalization": true,
+          "inOfficialReasonAfterDiagnosticNormalization": false,
+          "inSummaryIgnoringParenthesizedHanja": true,
+          "matchesReasonExceptReferenceDate": false
+        },
+        {
+          "paragraph": 3,
+          "officialLocation": "다수의견 (다), 한자 생략",
+          "standardExcerpt": "법령에서 쓰인 용어에 관해 정의규정이 없는 경우에는 원칙적으로 사전적인 정의 등 일반적으로 받아들여진 의미에 따라야 한다. 국립국어원의 표준국어대사전은 항로를 ‘항공기가 통행하는 공로’로 정의하고 있다. 국어학적 의미에서 항로는 공중의 개념을 내포하고 있음이 분명하다. 항공기 운항과 관련하여 ‘항로’가 지상에서의 이동 경로를 가리키는 용어로 쓰인 예를 찾을 수 없다.",
+          "inOfficialSummaryAfterDiagnosticNormalization": false,
+          "inOfficialReasonAfterDiagnosticNormalization": false,
+          "inSummaryIgnoringParenthesizedHanja": true,
+          "matchesReasonExceptReferenceDate": false
+        },
+        {
+          "paragraph": 4,
+          "officialLocation": "다수의견 (바)",
+          "standardExcerpt": "본죄의 객체는 ‘운항 중’의 항공기이다. 그러나 위계 또는 위력으로 변경할 대상인 ‘항로’는 별개의 구성요건요소로서 그 자체로 죄형법정주의 원칙에 부합하게 해석해야 할 대상이 된다. 항로가 공중의 개념을 내포한 말이고, 입법자가 그 말뜻을 사전적 정의보다 넓은 의미로 사용하였다고 볼 자료가 없다. 지상의 항공기가 이동할 때 ‘운항 중’이 된다는 이유만으로 그때 다니는 지상의 길까지 ‘항로’로 해석하는 것은 문언의 가능한 의미를 벗어난다.",
+          "inOfficialSummaryAfterDiagnosticNormalization": true,
+          "inOfficialReasonAfterDiagnosticNormalization": false,
+          "inSummaryIgnoringParenthesizedHanja": true,
+          "matchesReasonExceptReferenceDate": false
+        },
+        {
+          "paragraph": 5,
+          "officialLocation": "다수의견 (사)",
+          "standardExcerpt": "지상에서 이동하는 항공기의 경로를 함부로 변경하는 것은 다른 항공기나 시설물과 충돌할 수 있어 위험성이 큰 행위임이 분명하다. 그러나 처벌의 필요성만으로 죄형법정주의 원칙을 후퇴시켜서는 안 된다. 그런 행위는 기장에 대한 업무방해죄로 처벌할 수 있을 뿐만 아니라, 많은 경우 폭행·협박 또는 위계를 수반할 것이므로 10년 이하의 징역으로 처벌 가능한 직무집행방해죄(항공보안법 제43조) 등에 해당할 수 있어 처벌의 공백이 생기는 것도 아니다.",
+          "inOfficialSummaryAfterDiagnosticNormalization": true,
+          "inOfficialReasonAfterDiagnosticNormalization": true,
+          "inSummaryIgnoringParenthesizedHanja": true,
+          "matchesReasonExceptReferenceDate": false
+        }
+      ],
+      "checks": {
+        "differentDecisionSuspected": false,
+        "transcriptionError": false,
+        "opinionMisattribution": false,
+        "blockingCorrectionRequired": false
+      },
+      "sourceDiscrepancies": []
+    },
+    {
+      "subject": "criminal",
+      "seq": 331,
+      "caseNumber": "2019도9756",
+      "decisionId": "sc-2019do9756-20200220-judgment",
+      "registryIds": [
+        "annual-2020-80",
+        "std-criminal-313"
+      ],
+      "holdingsRatio": 0.2206,
+      "verdict": "retain-original-source",
+      "classification": "selected-majority-reasons-with-original-reference-date-disagreement",
+      "finding": "책은 공식 이유 1. 나.부터 라.까지 다수의견을 발췌한다. 공식 요지의 별개의견·반대의견·구체적 사안과 선택 범위가 달라 유사도가 낮다. 참조판례 2010도7923의 날짜 차이는 PDF 자체에 있고 전사 오류나 대상 재판 동일성 충돌이 아니다.",
+      "neededAction": "대상 재판·전사 수정 없음. 참조판례 2010도7923 날짜의 PDF/공식 차이를 진단에 남기고 양쪽 출처를 보존한다. 책을 자동 교정하지 않는다.",
+      "identityEvidence": {
+        "citation": "[대법원 2020. 2. 20. 선고 2019도9756 전원합의체 판결]",
+        "caseNumber": {
+          "candidate": "2019도9756",
+          "registry": "2019도9756",
+          "official": [
+            "2019도9756"
+          ],
+          "ok": true
+        },
+        "date": {
+          "candidate": "2020-02-20",
+          "registry": "2020-02-20",
+          "official": "2020-02-20",
+          "ok": true
+        },
+        "court": {
+          "candidate": "대법원",
+          "registry": "대법원",
+          "official": "대법원",
+          "ok": true
+        },
+        "decisionType": {
+          "candidate": "판결",
+          "registry": "판결",
+          "official": "판결",
+          "ok": true
+        },
+        "enBanc": {
+          "candidate": true,
+          "registry": true,
+          "official": true,
+          "ok": true
+        },
+        "ok": true,
+        "officialParsed": true
+      },
+      "source": {
+        "pdf": "data/standard-cases/표준판례(2023년 개정판)_형법.pdf",
+        "pdfSha256": "a344505ad719795c061b6244754cdd14304419636e5a4da4f388df7642324f84",
+        "standardSourcePages": [
+          338,
+          339,
+          340,
+          341
+        ],
+        "candidateFile": "data/standard-cases/형법/candidates-criminal.json",
+        "candidateSha256": "f807e5926935e7b59adf3f92f418a983068c9a2580f5b3e1c6f5515c2ed2b683",
+        "wholeHoldingFoundInPdfAfterRemovingPageHeadersFootersAndWhitespace": true
+      },
+      "official": {
+        "file": "data/fetched/annual-2020-80.json",
+        "sha256": "01f23be382f68a9b609027819a954a2384efbff45eb298eb804b950c95e4b3c5",
+        "sourceUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=226109",
+        "citation": "[대법원 2020. 2. 20. 선고 2019도9756 전원합의체 판결]",
+        "evidence": [
+          {
+            "section": "이유",
+            "exactExcerpt": "채무자가 금전채무를 담보하기 위하여 그 소유의 동산을 채권자에게 양도담보로 제공함으로써 채권자인 양도담보권자에 대하여 담보물의 담보가치를 유지·보전할 의무 내지 담보물을 타에 처분하거나 멸실, 훼손하는 등으로 담보권 실행에 지장을 초래하는 행위를 하지 않을 의무를 부담하게 되었더라도, 이를 들어 채무자가 통상의 계약에서의 이익대립관계를 넘어서 채권자와의 신임관계에 기초하여 채권자의 사무를 맡아 처리하는 것으로 볼 수 없다. 따라서 채무자를 배임죄의 주체인 ‘타인의 사무를 처리하는 자’에 해당한다고 할 수 없고, 그가 담보물을 제3자에게 처분하는 등으로 담보가치를 감소 또는 상실시켜 채권자의 담보권 실행이나 이를 통한 채권실현에 위험을 초래하더라도 배임죄가 성립한다고 할 수 없다. 그 구체적인 이유는 다음과 같다.\n 1) 배임죄는 ‘타인의 사무를 처리하는 자’라는 신분을 요하는 진정신분범이다. 따라서 배임죄의 성립을 인정하기 위해서는 피고인의 행위가 타인의 신뢰를 위반한 것인지, 그로 인한 피해가 어느 정도인지를 따지기에 앞서 당사자 관계의 본질을 살펴 그가 ‘타인의 사무를 처리하는 자’에 해당하는지를 판단하여야 한다. 채무자가 계약을 위반하여 그 의무를 이행하지 않는 등 채권자의 기대나 신뢰를 저버리는 행위를 하고, 그로 인한 채권자의 재산상 피해가 적지 않아 비난가능성이 높다거나, 채권자의 재산권 보호를 위하여 처벌의 필요성이 크다는 이유만으로 배임죄의 죄책을 묻는 것은 죄형법정주의 원칙에 반한다.\n 2) 금전채권채무 관계에서 채권자가 채무자의 급부이행에 대한 신뢰를 바탕으로 금전을 대여하고 채무자의 성실한 급부이행에 의해 채권의 만족이라는 이익을 얻게 된다 하더라도, 채권자가 채무자에 대한 신임을 기초로 그의 재산을 보호 또는 관리하는 임무를 부여하였다고 할 수 없고, 금전채무의 "
+          },
+          {
+            "section": "이유",
+            "exactExcerpt": "이와 달리 채무담보를 위하여 동산이나 주식을 채권자에게 양도하기로 약정하거나 양도담보로 제공한 채무자가 채권자인 양도담보권자의 사무를 처리하는 자에 해당함을 전제로 채무자가 담보목적물을 처분한 경우 배임죄가 성립한다고 한 대법원 1983. 3. 8. 선고 82도1829 판결, 대법원 1998. 11. 10. 선고 98도2526 판결, 대법원 2007. 6. 15. 선고 2006도3912 판결, 대법원 2010. 2. 25. 선고 2009도13187 판결, 대법원 2010. 11. 25. 선고 2010도11293 판결, 대법원 2011. 12. 22. 선고 2010도7923 판결을 비롯한 같은 취지의 대법원판결들은 이 판결의 견해에 배치되는 범위 내에서 모두 변경하기로 한다.\n\n 마.  이러한 법리에 비추어 배임 부분에 대한 원심의 판단을 살펴본다.\n 1) 이 부분 공소사실의 요지는, 공소외 1 주식회사(이하 ‘공소외 1 회사’라 한다)를 운영하는 피고인이 피해자 공소외 2 은행으로부터 1억 5,000만 원을 대출받으면서 위 대출금을 완납할 때까지 골재생산기기인 ‘크라샤4230’(이하 ‘이 사건 크러셔’라 한다)을 양도담보로 제공하기로 하는 계약(이하 ‘이 사건 양도담보계약’이라 한다)을 체결하였으므로, 피해자 공소외 2 은행이 담보의 목적을 달성"
+          }
+        ]
+      },
+      "paragraphComparison": [
+        {
+          "paragraph": 1,
+          "officialLocation": "이유 1. 나. 도입",
+          "standardExcerpt": "채무자가 금전채무를 담보하기 위하여 그 소유의 동산을 채권자에게 양도담보로 제공함으로써 채권자인 양도담보권자에 대하여 담보물의 담보가치를 유지·보전할 의무 내지 담보물을 타에 처분하거나 멸실, 훼손하는 등으로 담보권 실행에 지장을 초래하는 행위를 하지 않을 의무를 부담하게 되었더라도, 이를 들어 채무자가 통상의 계약에서의 이익대립관계를 넘어서 채권자와의 신임관계에 기초하여 채권자의 사무를 맡아 처리하는 것으로 볼 수 없다. 따라서 채무자를 배임죄의 주체인 ‘타인의 사무를 처리하는 자’에 해당한다고",
+          "inOfficialSummaryAfterDiagnosticNormalization": false,
+          "inOfficialReasonAfterDiagnosticNormalization": true,
+          "inSummaryIgnoringParenthesizedHanja": false,
+          "matchesReasonExceptReferenceDate": false
+        },
+        {
+          "paragraph": 2,
+          "officialLocation": "이유 1. 나. 1)",
+          "standardExcerpt": "1) 배임죄는 ‘타인의 사무를 처리하는 자’라는 신분을 요하는 진정신분범이다. 따라서 배임죄의 성립을 인정하기 위해서는 피고인의 행위가 타인의 신뢰를 위반한 것인지, 그로 인한 피해가 어느 정도인지를 따지기에 앞서 당사자 관계의 본질을 살펴 그가 ‘타인의 사무를 처리하는 자’에 해당하는지를 판단하여야 한다. 채무자가 계약을 위반하여 그 의무를 이행하지 않는 등 채권자의 기대나 신뢰를 저버리는 행위를 하고, 그로 인한 채권자의 재산상 피해가 적지 않아 비난가능성이 높다거나, 채권자의 재산권 보호를 ",
+          "inOfficialSummaryAfterDiagnosticNormalization": false,
+          "inOfficialReasonAfterDiagnosticNormalization": true,
+          "inSummaryIgnoringParenthesizedHanja": false,
+          "matchesReasonExceptReferenceDate": false
+        },
+        {
+          "paragraph": 3,
+          "officialLocation": "이유 1. 나. 2) 첫 문단",
+          "standardExcerpt": "2) 금전채권채무 관계에서 채권자가 채무자의 급부이행에 대한 신뢰를 바탕으로 금전을 대여하고 채무자의 성실한 급부이행에 의해 채권의 만족이라는 이익을 얻게 된다 하더라도, 채권자가 채무자에 대한 신임을 기초로 그의 재산을 보호 또는 관리하는 임무를 부여하였다고 할 수 없고, 금전채무의 이행은 어디까지나 채무자가 자신의 급부의무의 이행으로서 행하는 것이므로 이를 두고 채권자의 사무를 맡아 처리하는 것으로 볼 수 없다. 따라서 채무자를 채권자에 대한 관계에서 ‘타인의 사무를 처리하는 자’에 해당한다고",
+          "inOfficialSummaryAfterDiagnosticNormalization": false,
+          "inOfficialReasonAfterDiagnosticNormalization": true,
+          "inSummaryIgnoringParenthesizedHanja": false,
+          "matchesReasonExceptReferenceDate": false
+        },
+        {
+          "paragraph": 4,
+          "officialLocation": "이유 1. 나. 2) 다음 문단",
+          "standardExcerpt": "채무자가 금전채무를 담보하기 위하여 그 소유의 동산을 채권자에게 양도하기로 약정하거나 양도담보로 제공한 경우에도 마찬가지이다.",
+          "inOfficialSummaryAfterDiagnosticNormalization": false,
+          "inOfficialReasonAfterDiagnosticNormalization": true,
+          "inSummaryIgnoringParenthesizedHanja": false,
+          "matchesReasonExceptReferenceDate": false
+        },
+        {
+          "paragraph": 5,
+          "officialLocation": "이유 1. 나. 2) 다음 문단",
+          "standardExcerpt": "채무자가 양도담보설정계약에 따라 부담하는 의무, 즉 동산을 담보로 제공할 의무, 담보물의 담보가치를 유지·보전하거나 담보물을 손상, 감소 또는 멸실시키지 않을 소극적 의무, 담보권 실행 시 채권자나 그가 지정하는 자에게 담보물을 현실로 인도할 의무와 같이 채권자의 담보권 실행에 협조할 의무 등은 모두 양도담보설정계약에 따라 부담하게 된 채무자 자신의 급부의무이다. 또한 양도담보설정계약은 피담보채권의 발생을 위한 계약에 종된 계약으로, 피담보채무가 소멸하면 양도담보설정계약상의 권리의무도 소멸하게 된",
+          "inOfficialSummaryAfterDiagnosticNormalization": false,
+          "inOfficialReasonAfterDiagnosticNormalization": true,
+          "inSummaryIgnoringParenthesizedHanja": false,
+          "matchesReasonExceptReferenceDate": false
+        },
+        {
+          "paragraph": 6,
+          "officialLocation": "이유 1. 나. 3) 첫 문단",
+          "standardExcerpt": "3) 채무자가 그 소유의 동산을 점유개정 방식으로 양도담보로 제공하는 경우 채무자는 그의 직접점유를 통하여 양도담보권자에게 간접점유를 취득하게 하는 것이므로, 채무자가 담보목적물을 점유하는 행위에는 ‘보관자’로서 담보목적물을 점유한다는 측면이 있고, 채무자는 그 과정에서 담보물을 처분하거나 멸실·훼손하는 등의 행위를 하여서는 아니 될 의무를 부담한다. 그러나 그와 같은 의무는 점유매개관계가 설정되는 법률관계에서 직접점유자에게 공통적으로 인정되는 소극적 의무에 불과하다. 이러한 소극적 의무가 있다는",
+          "inOfficialSummaryAfterDiagnosticNormalization": false,
+          "inOfficialReasonAfterDiagnosticNormalization": true,
+          "inSummaryIgnoringParenthesizedHanja": false,
+          "matchesReasonExceptReferenceDate": false
+        },
+        {
+          "paragraph": 7,
+          "officialLocation": "이유 1. 나. 3) 다음 문단",
+          "standardExcerpt": "앞서 본 바와 같이 양도담보설정계약에서 당사자 관계의 전형적·본질적인 내용은 채무자의 채무불이행 시 처분정산의 방식이든 귀속정산의 방식이든 담보권 실행을 통한 금전채권의 실현에 있다. 채무자 등이 채무담보 목적으로 그 소유의 물건을 양도한 경우 반대의 특약이 없는 한 그 물건의 사용수익권은 양도담보설정자에게 있다(대법원 1996. 9. 10. 선고 96다25463 판결, 대법원 2001. 12. 11. 선고 2001다40213 판결 등 참조). 동산을 점유개정 방식으로 양도담보에 제공한 채무자는 ",
+          "inOfficialSummaryAfterDiagnosticNormalization": false,
+          "inOfficialReasonAfterDiagnosticNormalization": true,
+          "inSummaryIgnoringParenthesizedHanja": false,
+          "matchesReasonExceptReferenceDate": false
+        },
+        {
+          "paragraph": 8,
+          "officialLocation": "이유 1. 다.",
+          "standardExcerpt": "다. 위와 같은 법리는, 채무자가 동산에 관하여 양도담보설정계약을 체결하여 이를 채권자에게 양도할 의무가 있음에도 제3자에게 처분한 경우에도 적용되고, 주식에 관하여 양도담보설정계약을 체결한 채무자가 제3자에게 해당 주식을 처분한 사안에도 마찬가지로 적용된다.",
+          "inOfficialSummaryAfterDiagnosticNormalization": true,
+          "inOfficialReasonAfterDiagnosticNormalization": true,
+          "inSummaryIgnoringParenthesizedHanja": true,
+          "matchesReasonExceptReferenceDate": false
+        },
+        {
+          "paragraph": 9,
+          "officialLocation": "이유 1. 라. 참조판례 날짜 차이",
+          "standardExcerpt": "라. 이와 달리 채무담보를 위하여 동산이나 주식을 채권자에게 양도하기로 약정하거나 양도담보로 제공한 채무자가 채권자인 양도담보권자의 사무를 처리하는 자에 해당함을 전제로 채무자가 담보목적물을 처분한 경우 배임죄가 성립한다고 한 대법원 1983. 3. 8. 선고 82도1829 판결, 대법원 1998. 11. 10. 선고 98도2526 판결, 대법원 2007. 6. 15. 선고 2006도3912 판결, 대법원 2010. 2. 25. 선고 2009도13187 판결, 대법원 2010. 11. 25. 선고",
+          "inOfficialSummaryAfterDiagnosticNormalization": false,
+          "inOfficialReasonAfterDiagnosticNormalization": false,
+          "inSummaryIgnoringParenthesizedHanja": false,
+          "matchesReasonExceptReferenceDate": true
+        }
+      ],
+      "checks": {
+        "differentDecisionSuspected": false,
+        "transcriptionError": false,
+        "opinionMisattribution": false,
+        "blockingCorrectionRequired": false
+      },
+      "sourceDiscrepancies": [
+        {
+          "kind": "reference-case-date",
+          "referencedCaseNumber": "2010도7923",
+          "pdfPage": 340,
+          "printedPage": 316,
+          "pdfExact": "대법원 2011. 11. 22. 선고 2010도7923 판결",
+          "officialExact": "대법원 2011. 12. 22. 선고 2010도7923 판결",
+          "evidence": "PDF p340를 이미지로 렌더링하여 11.22 표기를 육안 확인. standardSource도 동일하므로 전사 오류가 아니다.",
+          "visualInspection": true,
+          "action": "Preserve both sources; do not rewrite PDF-derived text or fetched official text."
+        }
+      ]
+    }
+  ]
+}

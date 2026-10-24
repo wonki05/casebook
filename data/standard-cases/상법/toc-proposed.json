@@ -1,0 +1,502 @@
+{
+ "subject": "commercial",
+ "proposed": [
+  {
+   "id": "sb-1",
+   "label": "총칙·상행위",
+   "children": [
+    {
+     "id": "sb-1-1",
+     "label": "제1편 총칙",
+     "children": [
+      {
+       "id": "sb-1-1-1",
+       "label": "제1장 서론",
+       "children": []
+      },
+      {
+       "id": "sb-1-1-2",
+       "label": "제2장 상인",
+       "children": []
+      },
+      {
+       "id": "sb-1-1-3",
+       "label": "제3장 상업사용인",
+       "children": []
+      },
+      {
+       "id": "sb-1-1-4",
+       "label": "제4장 상호",
+       "children": []
+      },
+      {
+       "id": "sb-1-1-5",
+       "label": "제5장 상업등기",
+       "children": []
+      },
+      {
+       "id": "sb-1-1-6",
+       "label": "제6장 영업양도",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "sb-1-2",
+     "label": "제2편 상행위",
+     "children": [
+      {
+       "id": "sb-1-2-1",
+       "label": "제1장 상행위법 총칙",
+       "children": []
+      },
+      {
+       "id": "sb-1-2-2",
+       "label": "제2장 상행위법 각칙",
+       "children": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sb-2",
+   "label": "회사",
+   "children": [
+    {
+     "id": "sb-2-1",
+     "label": "제1편 통칙",
+     "children": []
+    },
+    {
+     "id": "sb-2-2",
+     "label": "제2편 총칙",
+     "children": [
+      {
+       "id": "sb-2-2-1",
+       "label": "제1장 회사의 설립절차",
+       "children": []
+      },
+      {
+       "id": "sb-2-2-2",
+       "label": "제2장 가장납입",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "sb-2-3",
+     "label": "제3편 주식과 주주",
+     "children": [
+      {
+       "id": "sb-2-3-1",
+       "label": "제1장 종류주식",
+       "children": []
+      },
+      {
+       "id": "sb-2-3-2",
+       "label": "제2장 주주",
+       "children": []
+      },
+      {
+       "id": "sb-2-3-3",
+       "label": "제3장 주권",
+       "children": []
+      },
+      {
+       "id": "sb-2-3-4",
+       "label": "제4장 주식의 양도와 명의개서",
+       "children": []
+      },
+      {
+       "id": "sb-2-3-5",
+       "label": "제5장 주식의 양도제한",
+       "children": []
+      },
+      {
+       "id": "sb-2-3-6",
+       "label": "제6장 자기주식취득과 상호주",
+       "children": []
+      },
+      {
+       "id": "sb-2-3-7",
+       "label": "제7장 지배주주에 의한 소수주식의 전부취득",
+       "children": []
+      },
+      {
+       "id": "sb-2-3-8",
+       "label": "제8장 주식에 대한 담보설정",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "sb-2-4",
+     "label": "제4편 기관",
+     "children": [
+      {
+       "id": "sb-2-4-1",
+       "label": "제1장 주주총회",
+       "children": []
+      },
+      {
+       "id": "sb-2-4-2",
+       "label": "제2장 이사와 이사회",
+       "children": []
+      },
+      {
+       "id": "sb-2-4-3",
+       "label": "제3장 감사 및 감사위원회",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "sb-2-5",
+     "label": "제5편 기업재무",
+     "children": [
+      {
+       "id": "sb-2-5-1",
+       "label": "제1장 주주의 신주인수권",
+       "children": []
+      },
+      {
+       "id": "sb-2-5-2",
+       "label": "제2장 위법한 신주발행 등에 관한 구제",
+       "children": []
+      },
+      {
+       "id": "sb-2-5-3",
+       "label": "제3장 사채",
+       "children": []
+      },
+      {
+       "id": "sb-2-5-4",
+       "label": "제4장 회사의 계산",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "sb-2-6",
+     "label": "제6편 기업구조조정 및 해산",
+     "children": [
+      {
+       "id": "sb-2-6-1",
+       "label": "제1장 합병",
+       "children": []
+      },
+      {
+       "id": "sb-2-6-2",
+       "label": "제2장 회사분할",
+       "children": []
+      },
+      {
+       "id": "sb-2-6-3",
+       "label": "제3장 차입매수",
+       "children": []
+      },
+      {
+       "id": "sb-2-6-4",
+       "label": "제4장 해산과 청산",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "sb-2-7",
+     "label": "제7편 주식회사 이외의 회사",
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "sb-3",
+   "label": "어음·수표",
+   "children": [
+    {
+     "id": "sb-3-1",
+     "label": "제1편 총론",
+     "children": [
+      {
+       "id": "sb-3-1-1",
+       "label": "제1장 어음·수표의 종류별 특성",
+       "children": []
+      },
+      {
+       "id": "sb-3-1-2",
+       "label": "제2장 어음·수표행위",
+       "children": []
+      },
+      {
+       "id": "sb-3-1-3",
+       "label": "제3장 어음항변",
+       "children": []
+      },
+      {
+       "id": "sb-3-1-4",
+       "label": "제4장 어음·수표의 실질관계",
+       "children": []
+      },
+      {
+       "id": "sb-3-1-5",
+       "label": "제5장 어음상 권리의 소멸",
+       "children": []
+      },
+      {
+       "id": "sb-3-1-6",
+       "label": "제6장 이득상환청구권",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "sb-3-2",
+     "label": "제2편 환어음·약속어음",
+     "children": [
+      {
+       "id": "sb-3-2-1",
+       "label": "제1장 어음의 발행",
+       "children": []
+      },
+      {
+       "id": "sb-3-2-2",
+       "label": "제2장 환어음의 인수",
+       "children": []
+      },
+      {
+       "id": "sb-3-2-3",
+       "label": "제3장 배서",
+       "children": []
+      },
+      {
+       "id": "sb-3-2-4",
+       "label": "제4장 어음보증",
+       "children": []
+      },
+      {
+       "id": "sb-3-2-5",
+       "label": "제5장 지급",
+       "children": []
+      },
+      {
+       "id": "sb-3-2-6",
+       "label": "제6장 상환청구",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "sb-3-3",
+     "label": "제3편 수표",
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "sb-4",
+   "label": "보험",
+   "children": [
+    {
+     "id": "sb-4-1",
+     "label": "제1편 보험법의 법원",
+     "children": []
+    },
+    {
+     "id": "sb-4-2",
+     "label": "제2편 보험계약",
+     "children": [
+      {
+       "id": "sb-4-2-1",
+       "label": "제1장 보험계약의 체결",
+       "children": []
+      },
+      {
+       "id": "sb-4-2-2",
+       "label": "제2장 보험계약의 효과",
+       "children": []
+      },
+      {
+       "id": "sb-4-2-3",
+       "label": "제3장 보험계약의 무효·변경·소멸·부활",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "sb-4-3",
+     "label": "제3편 손해보험 통칙",
+     "children": [
+      {
+       "id": "sb-4-3-1",
+       "label": "제1장 손해보험계약의 요소",
+       "children": []
+      },
+      {
+       "id": "sb-4-3-2",
+       "label": "제2장 손해보험계약의 효과",
+       "children": []
+      },
+      {
+       "id": "sb-4-3-3",
+       "label": "제3장 손해보험계약의 변경·소멸",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "sb-4-4",
+     "label": "제4편 손해보험 각칙",
+     "children": [
+      {
+       "id": "sb-4-4-1",
+       "label": "제1장 화재보험",
+       "children": []
+      },
+      {
+       "id": "sb-4-4-2",
+       "label": "제2장 책임보험",
+       "children": []
+      },
+      {
+       "id": "sb-4-4-3",
+       "label": "제3장 자동차보험",
+       "children": []
+      },
+      {
+       "id": "sb-4-4-4",
+       "label": "제4장 보증보험",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "sb-4-5",
+     "label": "제5편 인보험",
+     "children": [
+      {
+       "id": "sb-4-5-1",
+       "label": "제1장 생명보험계약",
+       "children": []
+      },
+      {
+       "id": "sb-4-5-2",
+       "label": "제2장 상해보험계약",
+       "children": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sb-5",
+   "label": "해상",
+   "children": [
+    {
+     "id": "sb-5-1",
+     "label": "제1편 해상기업",
+     "children": [
+      {
+       "id": "sb-5-1-1",
+       "label": "제1장 선박",
+       "children": []
+      },
+      {
+       "id": "sb-5-1-2",
+       "label": "제2장 해상기업의 보조자",
+       "children": []
+      },
+      {
+       "id": "sb-5-1-3",
+       "label": "제3장 선박소유자 등의 책임제한",
+       "children": []
+      },
+      {
+       "id": "sb-5-1-4",
+       "label": "제4장 선박담보",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "sb-5-2",
+     "label": "제2편 해상운송계약",
+     "children": [
+      {
+       "id": "sb-5-2-1",
+       "label": "제1장 개품운송계약의 당사자 확정과 계약의 유형",
+       "children": []
+      },
+      {
+       "id": "sb-5-2-2",
+       "label": "제2장 운송인의 주의의무",
+       "children": []
+      },
+      {
+       "id": "sb-5-2-3",
+       "label": "제3장 해상운송인의 면책",
+       "children": []
+      },
+      {
+       "id": "sb-5-2-4",
+       "label": "제4장 복합운송계약",
+       "children": []
+      },
+      {
+       "id": "sb-5-2-5",
+       "label": "제5장 해상여객운송계약",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "sb-5-3",
+     "label": "제3편 용선계약",
+     "children": [
+      {
+       "id": "sb-5-3-1",
+       "label": "제1장 항해용선계약",
+       "children": []
+      },
+      {
+       "id": "sb-5-3-2",
+       "label": "제2장 정기용선계약",
+       "children": []
+      },
+      {
+       "id": "sb-5-3-3",
+       "label": "제3장 선체용선계약",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "sb-5-4",
+     "label": "제4편 운송증서",
+     "children": [
+      {
+       "id": "sb-5-4-1",
+       "label": "제1장 선하증권의 법리",
+       "children": []
+      },
+      {
+       "id": "sb-5-4-2",
+       "label": "제2장 화물운송장의 법리",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "sb-5-5",
+     "label": "제5편 선박충돌",
+     "children": []
+    },
+    {
+     "id": "sb-5-6",
+     "label": "제6편 항공운송",
+     "children": []
+    }
+   ]
+  }
+ ]
+}

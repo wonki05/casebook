@@ -1,0 +1,3297 @@
+{
+ "subject": "constitution",
+ "generatedAt": "2026-10-24T08:17:50",
+ "chunks": {
+  "c001": {
+   "md": true,
+   "entries": 15,
+   "missing": [],
+   "extra": [],
+   "continued": null,
+   "pass": 15,
+   "fail": 0,
+   "skip": 0,
+   "notes": 13,
+   "pages": [
+    5,
+    19
+   ]
+  },
+  "c002": {
+   "md": true,
+   "entries": 15,
+   "missing": [],
+   "extra": [],
+   "continued": 15,
+   "pass": 15,
+   "fail": 0,
+   "skip": 0,
+   "notes": 12,
+   "pages": [
+    20,
+    33
+   ]
+  },
+  "c003": {
+   "md": true,
+   "entries": 10,
+   "missing": [],
+   "extra": [],
+   "continued": 30,
+   "pass": 10,
+   "fail": 0,
+   "skip": 0,
+   "notes": 10,
+   "pages": [
+    34,
+    48
+   ]
+  },
+  "c004": {
+   "md": true,
+   "entries": 17,
+   "missing": [],
+   "extra": [],
+   "continued": 40,
+   "pass": 17,
+   "fail": 0,
+   "skip": 0,
+   "notes": 15,
+   "pages": [
+    49,
+    63
+   ]
+  },
+  "c005": {
+   "md": true,
+   "entries": 21,
+   "missing": [],
+   "extra": [],
+   "continued": 57,
+   "pass": 21,
+   "fail": 0,
+   "skip": 0,
+   "notes": 16,
+   "pages": [
+    64,
+    77
+   ]
+  },
+  "c006": {
+   "md": true,
+   "entries": 13,
+   "missing": [],
+   "extra": [],
+   "continued": 78,
+   "pass": 13,
+   "fail": 0,
+   "skip": 0,
+   "notes": 10,
+   "pages": [
+    78,
+    92
+   ]
+  },
+  "c007": {
+   "md": true,
+   "entries": 16,
+   "missing": [],
+   "extra": [],
+   "continued": 91,
+   "pass": 15,
+   "fail": 1,
+   "skip": 0,
+   "notes": 14,
+   "pages": [
+    93,
+    107
+   ]
+  },
+  "c008": {
+   "md": true,
+   "entries": 16,
+   "missing": [],
+   "extra": [],
+   "continued": 107,
+   "pass": 16,
+   "fail": 0,
+   "skip": 0,
+   "notes": 16,
+   "pages": [
+    108,
+    122
+   ]
+  },
+  "c009": {
+   "md": true,
+   "entries": 12,
+   "missing": [],
+   "extra": [],
+   "continued": 123,
+   "pass": 11,
+   "fail": 1,
+   "skip": 0,
+   "notes": 12,
+   "pages": [
+    123,
+    137
+   ]
+  },
+  "c010": {
+   "md": true,
+   "entries": 7,
+   "missing": [],
+   "extra": [],
+   "continued": 135,
+   "pass": 7,
+   "fail": 0,
+   "skip": 0,
+   "notes": 7,
+   "pages": [
+    138,
+    152
+   ]
+  },
+  "c011": {
+   "md": true,
+   "entries": 10,
+   "missing": [],
+   "extra": [],
+   "continued": 142,
+   "pass": 9,
+   "fail": 1,
+   "skip": 0,
+   "notes": 10,
+   "pages": [
+    153,
+    167
+   ]
+  },
+  "c012": {
+   "md": true,
+   "entries": 12,
+   "missing": [],
+   "extra": [],
+   "continued": 152,
+   "pass": 11,
+   "fail": 1,
+   "skip": 0,
+   "notes": 12,
+   "pages": [
+    168,
+    182
+   ]
+  },
+  "c013": {
+   "md": true,
+   "entries": 12,
+   "missing": [],
+   "extra": [],
+   "continued": 164,
+   "pass": 12,
+   "fail": 0,
+   "skip": 0,
+   "notes": 12,
+   "pages": [
+    183,
+    197
+   ]
+  },
+  "c014": {
+   "md": true,
+   "entries": 16,
+   "missing": [],
+   "extra": [],
+   "continued": 176,
+   "pass": 16,
+   "fail": 0,
+   "skip": 0,
+   "notes": 16,
+   "pages": [
+    198,
+    212
+   ]
+  },
+  "c015": {
+   "md": true,
+   "entries": 20,
+   "missing": [],
+   "extra": [],
+   "continued": 192,
+   "pass": 20,
+   "fail": 0,
+   "skip": 0,
+   "notes": 20,
+   "pages": [
+    213,
+    230
+   ]
+  },
+  "c016": {
+   "md": true,
+   "entries": 15,
+   "missing": [],
+   "extra": [],
+   "continued": 212,
+   "pass": 14,
+   "fail": 1,
+   "skip": 0,
+   "notes": 13,
+   "pages": [
+    231,
+    242
+   ]
+  },
+  "c017": {
+   "md": true,
+   "entries": 27,
+   "missing": [],
+   "extra": [],
+   "continued": 227,
+   "pass": 26,
+   "fail": 0,
+   "skip": 1,
+   "notes": 27,
+   "pages": [
+    243,
+    262
+   ]
+  },
+  "c018": {
+   "md": true,
+   "entries": 16,
+   "missing": [],
+   "extra": [
+    263,
+    266
+   ],
+   "continued": 254,
+   "pass": 15,
+   "fail": 1,
+   "skip": 0,
+   "notes": 12,
+   "pages": [
+    263,
+    277
+   ]
+  },
+  "c019": {
+   "md": true,
+   "entries": 20,
+   "missing": [],
+   "extra": [],
+   "continued": 272,
+   "pass": 20,
+   "fail": 0,
+   "skip": 0,
+   "notes": 10,
+   "pages": [
+    278,
+    292
+   ]
+  },
+  "c020": {
+   "md": true,
+   "entries": 29,
+   "missing": [],
+   "extra": [],
+   "continued": 292,
+   "pass": 27,
+   "fail": 1,
+   "skip": 1,
+   "notes": 23,
+   "pages": [
+    293,
+    307
+   ]
+  },
+  "c021": {
+   "md": true,
+   "entries": 10,
+   "missing": [],
+   "extra": [],
+   "continued": 321,
+   "pass": 9,
+   "fail": 1,
+   "skip": 0,
+   "notes": 10,
+   "pages": [
+    308,
+    314
+   ]
+  }
+ },
+ "items": [
+  {
+   "seq": 1,
+   "no": 1,
+   "chunk": "c001",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 2,
+   "no": 2,
+   "chunk": "c001",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 3,
+   "no": 3,
+   "chunk": "c001",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 4,
+   "no": 4,
+   "chunk": "c001",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 5,
+   "no": 5,
+   "chunk": "c001",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 6,
+   "no": 6,
+   "chunk": "c001",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 7,
+   "no": 7,
+   "chunk": "c001",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 8,
+   "no": 8,
+   "chunk": "c001",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 9,
+   "no": 9,
+   "chunk": "c001",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 10,
+   "no": 10,
+   "chunk": "c001",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 11,
+   "no": 11,
+   "chunk": "c001",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 12,
+   "no": 12,
+   "chunk": "c001",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 13,
+   "no": 13,
+   "chunk": "c001",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 14,
+   "no": 14,
+   "chunk": "c001",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 15,
+   "no": 15,
+   "chunk": "c001",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 16,
+   "no": 16,
+   "chunk": "c002",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 17,
+   "no": 17,
+   "chunk": "c002",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 18,
+   "no": 18,
+   "chunk": "c002",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 19,
+   "no": 19,
+   "chunk": "c002",
+   "level": "ok",
+   "reasons": [
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 20,
+   "no": 20,
+   "chunk": "c002",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 21,
+   "no": 21,
+   "chunk": "c002",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 22,
+   "no": 22,
+   "chunk": "c002",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 23,
+   "no": 23,
+   "chunk": "c002",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 24,
+   "no": 24,
+   "chunk": "c002",
+   "level": "ok",
+   "reasons": [
+    "검토메모 5줄"
+   ]
+  },
+  {
+   "seq": 25,
+   "no": 25,
+   "chunk": "c002",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 26,
+   "no": 26,
+   "chunk": "c002",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 27,
+   "no": 27,
+   "chunk": "c002",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 28,
+   "no": 28,
+   "chunk": "c002",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 29,
+   "no": 29,
+   "chunk": "c002",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 30,
+   "no": 30,
+   "chunk": "c002",
+   "level": "error",
+   "reasons": [
+    "필수 절 〈판결요지〉 없음",
+    "다음 청크(c003)에 (이어짐) 블록 없음",
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 31,
+   "no": 31,
+   "chunk": "c003",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 32,
+   "no": 32,
+   "chunk": "c003",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 33,
+   "no": 33,
+   "chunk": "c003",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 34,
+   "no": 34,
+   "chunk": "c003",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 35,
+   "no": 35,
+   "chunk": "c003",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 36,
+   "no": 36,
+   "chunk": "c003",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 37,
+   "no": 37,
+   "chunk": "c003",
+   "level": "ok",
+   "reasons": [
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 38,
+   "no": 38,
+   "chunk": "c003",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 39,
+   "no": 39,
+   "chunk": "c003",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 40,
+   "no": 40,
+   "chunk": "c003",
+   "level": "warn",
+   "reasons": [
+    "다음 청크(c004)에 (이어짐) 블록 없음",
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 41,
+   "no": 41,
+   "chunk": "c004",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 42,
+   "no": 42,
+   "chunk": "c004",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 43,
+   "no": 43,
+   "chunk": "c004",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 44,
+   "no": 44,
+   "chunk": "c004",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 45,
+   "no": 45,
+   "chunk": "c004",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 46,
+   "no": 46,
+   "chunk": "c004",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 47,
+   "no": 47,
+   "chunk": "c004",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 48,
+   "no": 48,
+   "chunk": "c004",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 49,
+   "no": 49,
+   "chunk": "c004",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 50,
+   "no": 50,
+   "chunk": "c004",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 51,
+   "no": 51,
+   "chunk": "c004",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 52,
+   "no": 52,
+   "chunk": "c004",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 53,
+   "no": 53,
+   "chunk": "c004",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 54,
+   "no": 54,
+   "chunk": "c004",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 55,
+   "no": 55,
+   "chunk": "c004",
+   "level": "warn",
+   "reasons": [
+    "제목이 skeleton 과 다름: '일반적 법률유보조항, 기본권 제한입법의 수권 규정, 기' / '제한입법의 한계 규정'",
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 56,
+   "no": 56,
+   "chunk": "c004",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 57,
+   "no": 57,
+   "chunk": "c004",
+   "level": "warn",
+   "reasons": [
+    "다음 청크(c005)에 (이어짐) 블록 없음",
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 58,
+   "no": 58,
+   "chunk": "c005",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 59,
+   "no": 59,
+   "chunk": "c005",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 60,
+   "no": 60,
+   "chunk": "c005",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 61,
+   "no": 61,
+   "chunk": "c005",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 62,
+   "no": 62,
+   "chunk": "c005",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 63,
+   "no": 63,
+   "chunk": "c005",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 64,
+   "no": 64,
+   "chunk": "c005",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 65,
+   "no": 65,
+   "chunk": "c005",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 66,
+   "no": 66,
+   "chunk": "c005",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 67,
+   "no": 67,
+   "chunk": "c005",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 68,
+   "no": 68,
+   "chunk": "c005",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 69,
+   "no": 69,
+   "chunk": "c005",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 70,
+   "no": 70,
+   "chunk": "c005",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 71,
+   "no": 71,
+   "chunk": "c005",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 72,
+   "no": 72,
+   "chunk": "c005",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 73,
+   "no": 73,
+   "chunk": "c005",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 74,
+   "no": 74,
+   "chunk": "c005",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 75,
+   "no": 75,
+   "chunk": "c005",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 76,
+   "no": 76,
+   "chunk": "c005",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 77,
+   "no": 77,
+   "chunk": "c005",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 78,
+   "no": 78,
+   "chunk": "c005",
+   "level": "warn",
+   "reasons": [
+    "다음 청크(c006)에 (이어짐) 블록 없음",
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 79,
+   "no": 79,
+   "chunk": "c006",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 80,
+   "no": 80,
+   "chunk": "c006",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 81,
+   "no": 81,
+   "chunk": "c006",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 82,
+   "no": 82,
+   "chunk": "c006",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 83,
+   "no": 83,
+   "chunk": "c006",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 84,
+   "no": 84,
+   "chunk": "c006",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 85,
+   "no": 85,
+   "chunk": "c006",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 86,
+   "no": 86,
+   "chunk": "c006",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 87,
+   "no": 87,
+   "chunk": "c006",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 88,
+   "no": 88,
+   "chunk": "c006",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 89,
+   "no": 89,
+   "chunk": "c006",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 90,
+   "no": 90,
+   "chunk": "c006",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 91,
+   "no": 91,
+   "chunk": "c006",
+   "level": "warn",
+   "reasons": [
+    "(이어짐) 병합: 〈판결요지〉 이음 확인",
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 92,
+   "no": 92,
+   "chunk": "c007",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 93,
+   "no": 93,
+   "chunk": "c007",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 94,
+   "no": 94,
+   "chunk": "c007",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 95,
+   "no": 95,
+   "chunk": "c007",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 96,
+   "no": 96,
+   "chunk": "c007",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 97,
+   "no": 97,
+   "chunk": "c007",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 98,
+   "no": 98,
+   "chunk": "c007",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 99,
+   "no": 99,
+   "chunk": "c007",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 100,
+   "no": 100,
+   "chunk": "c007",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 101,
+   "no": 101,
+   "chunk": "c007",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 102,
+   "no": 102,
+   "chunk": "c007",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 103,
+   "no": 103,
+   "chunk": "c007",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 104,
+   "no": 104,
+   "chunk": "c007",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 105,
+   "no": 105,
+   "chunk": "c007",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 106,
+   "no": 106,
+   "chunk": "c007",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄",
+    "대조 fail 〈판결요지〉: 유사도 0.9900 < 0.995"
+   ]
+  },
+  {
+   "seq": 107,
+   "no": 107,
+   "chunk": "c007",
+   "level": "warn",
+   "reasons": [
+    "(이어짐) 병합: 〈선정이유〉 이음 확인",
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 108,
+   "no": 108,
+   "chunk": "c008",
+   "level": "ok",
+   "reasons": [
+    "검토메모 5줄"
+   ]
+  },
+  {
+   "seq": 109,
+   "no": 109,
+   "chunk": "c008",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 110,
+   "no": 110,
+   "chunk": "c008",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 111,
+   "no": 111,
+   "chunk": "c008",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 112,
+   "no": 112,
+   "chunk": "c008",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 113,
+   "no": 113,
+   "chunk": "c008",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 114,
+   "no": 114,
+   "chunk": "c008",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 115,
+   "no": 115,
+   "chunk": "c008",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 116,
+   "no": 116,
+   "chunk": "c008",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 117,
+   "no": 117,
+   "chunk": "c008",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 118,
+   "no": 118,
+   "chunk": "c008",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 119,
+   "no": 119,
+   "chunk": "c008",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 120,
+   "no": 120,
+   "chunk": "c008",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 121,
+   "no": 121,
+   "chunk": "c008",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 122,
+   "no": 122,
+   "chunk": "c008",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 123,
+   "no": 123,
+   "chunk": "c008",
+   "level": "ok",
+   "reasons": [
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 124,
+   "no": 124,
+   "chunk": "c009",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 125,
+   "no": 125,
+   "chunk": "c009",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 126,
+   "no": 126,
+   "chunk": "c009",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 127,
+   "no": 127,
+   "chunk": "c009",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 128,
+   "no": 128,
+   "chunk": "c009",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 129,
+   "no": 129,
+   "chunk": "c009",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 130,
+   "no": 130,
+   "chunk": "c009",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 131,
+   "no": 131,
+   "chunk": "c009",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 132,
+   "no": 132,
+   "chunk": "c009",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 133,
+   "no": 133,
+   "chunk": "c009",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 134,
+   "no": 134,
+   "chunk": "c009",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 135,
+   "no": 135,
+   "chunk": "c009",
+   "level": "warn",
+   "reasons": [
+    "(이어짐) 병합: 〈쟁점〉 이음 확인",
+    "(이어짐) 병합: 〈판결요지〉 이음 확인",
+    "검토메모 6줄",
+    "대조 fail 〈쟁점〉: PDF 항목 안에서 〈쟁점〉 절 제목을 찾지 못함",
+    "대조 fail 〈판결요지〉: PDF 항목 안에서 〈판결요지〉 절 제목을 찾지 못함"
+   ]
+  },
+  {
+   "seq": 136,
+   "no": 136,
+   "chunk": "c010",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 137,
+   "no": 137,
+   "chunk": "c010",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 138,
+   "no": 138,
+   "chunk": "c010",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 139,
+   "no": 139,
+   "chunk": "c010",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 140,
+   "no": 140,
+   "chunk": "c010",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 141,
+   "no": 141,
+   "chunk": "c010",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 142,
+   "no": 142,
+   "chunk": "c010",
+   "level": "warn",
+   "reasons": [
+    "(이어짐) 병합: 〈판결요지〉 이음 확인",
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 143,
+   "no": 143,
+   "chunk": "c011",
+   "level": "ok",
+   "reasons": [
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 144,
+   "no": 144,
+   "chunk": "c011",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 145,
+   "no": 145,
+   "chunk": "c011",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 146,
+   "no": 146,
+   "chunk": "c011",
+   "level": "warn",
+   "reasons": [
+    "제목이 skeleton 과 다름: '문화예술계 블랙리스트의 작성 등과 지원사업 배제 지시에' / '위헌소원 사건'",
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 147,
+   "no": 147,
+   "chunk": "c011",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 148,
+   "no": 148,
+   "chunk": "c011",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 149,
+   "no": 149,
+   "chunk": "c011",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 150,
+   "no": 150,
+   "chunk": "c011",
+   "level": "ok",
+   "reasons": [
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 151,
+   "no": 151,
+   "chunk": "c011",
+   "level": "ok",
+   "reasons": [
+    "검토메모 4줄",
+    "대조 fail 〈판결요지〉: PDF 항목 안에서 〈판결요지〉 절 제목을 찾지 못함"
+   ]
+  },
+  {
+   "seq": 152,
+   "no": 152,
+   "chunk": "c011",
+   "level": "warn",
+   "reasons": [
+    "(이어짐) 병합: 〈판결요지〉 이음 확인",
+    "검토메모 6줄"
+   ]
+  },
+  {
+   "seq": 153,
+   "no": 153,
+   "chunk": "c012",
+   "level": "ok",
+   "reasons": [
+    "검토메모 5줄"
+   ]
+  },
+  {
+   "seq": 154,
+   "no": 154,
+   "chunk": "c012",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄",
+    "대조 fail 〈쟁점〉: 숫자열 불일치"
+   ]
+  },
+  {
+   "seq": 155,
+   "no": 155,
+   "chunk": "c012",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 156,
+   "no": 156,
+   "chunk": "c012",
+   "level": "ok",
+   "reasons": [
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 157,
+   "no": 157,
+   "chunk": "c012",
+   "level": "warn",
+   "reasons": [
+    "제목이 skeleton 과 다름: '변호사 광고의 내용, 방법 등을 규제하는 대한변호사협회' / '광고에 관한 규정 사건'",
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 158,
+   "no": 158,
+   "chunk": "c012",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 159,
+   "no": 159,
+   "chunk": "c012",
+   "level": "ok",
+   "reasons": [
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 160,
+   "no": 160,
+   "chunk": "c012",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 161,
+   "no": 161,
+   "chunk": "c012",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 162,
+   "no": 162,
+   "chunk": "c012",
+   "level": "ok",
+   "reasons": [
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 163,
+   "no": 163,
+   "chunk": "c012",
+   "level": "warn",
+   "reasons": [
+    "제목이 skeleton 과 다름: '지방의회의원에 대한 퇴직연금의 지급을 정지하는 공무원연' / '조항에 관한 위헌소원 사건'",
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 164,
+   "no": 164,
+   "chunk": "c012",
+   "level": "warn",
+   "reasons": [
+    "(이어짐) 병합: 〈기타〉 이음 확인",
+    "검토메모 7줄"
+   ]
+  },
+  {
+   "seq": 165,
+   "no": 165,
+   "chunk": "c013",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 166,
+   "no": 166,
+   "chunk": "c013",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 167,
+   "no": 167,
+   "chunk": "c013",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 168,
+   "no": 168,
+   "chunk": "c013",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 169,
+   "no": 169,
+   "chunk": "c013",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 170,
+   "no": 170,
+   "chunk": "c013",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 171,
+   "no": 171,
+   "chunk": "c013",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 172,
+   "no": 172,
+   "chunk": "c013",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 173,
+   "no": 173,
+   "chunk": "c013",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 174,
+   "no": 174,
+   "chunk": "c013",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 175,
+   "no": 175,
+   "chunk": "c013",
+   "level": "ok",
+   "reasons": [
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 176,
+   "no": 176,
+   "chunk": "c013",
+   "level": "ok",
+   "reasons": [
+    "검토메모 5줄"
+   ]
+  },
+  {
+   "seq": 177,
+   "no": 177,
+   "chunk": "c014",
+   "level": "warn",
+   "reasons": [
+    "제목이 skeleton 과 다름: '아동·청소년이용음란물소지죄로 형이 확정된 자에 대한 공' / '결격사유 사건'",
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 178,
+   "no": 178,
+   "chunk": "c014",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 179,
+   "no": 179,
+   "chunk": "c014",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 180,
+   "no": 180,
+   "chunk": "c014",
+   "level": "warn",
+   "reasons": [
+    "〈판결요지〉 lcs 통과(ratio 0.9979, 완전 일치 아님): …을권리를의미하는것이라고[→는]할수는없다.또한심급제도… …리를의미하는것이라고할수[는→]없다.또한심급제도는사법…",
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 181,
+   "no": 181,
+   "chunk": "c014",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 182,
+   "no": 182,
+   "chunk": "c014",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 183,
+   "no": 183,
+   "chunk": "c014",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 184,
+   "no": 184,
+   "chunk": "c014",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 185,
+   "no": 185,
+   "chunk": "c014",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 186,
+   "no": 186,
+   "chunk": "c014",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 187,
+   "no": 187,
+   "chunk": "c014",
+   "level": "warn",
+   "reasons": [
+    "제목이 skeleton 과 다름: '국가배상청구권의 제한：공동불법행위자인 군인의 부담부분에' / '구상권'",
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 188,
+   "no": 188,
+   "chunk": "c014",
+   "level": "ok",
+   "reasons": [
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 189,
+   "no": 189,
+   "chunk": "c014",
+   "level": "error",
+   "reasons": [
+    "필수 절 〈판결요지〉 없음",
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 190,
+   "no": 190,
+   "chunk": "c014",
+   "level": "error",
+   "reasons": [
+    "필수 절 〈판결요지〉 없음",
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 191,
+   "no": 191,
+   "chunk": "c014",
+   "level": "error",
+   "reasons": [
+    "필수 절 〈판결요지〉 없음",
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 192,
+   "no": 192,
+   "chunk": "c014",
+   "level": "error",
+   "reasons": [
+    "필수 절 〈판결요지〉 없음",
+    "검토메모 5줄"
+   ]
+  },
+  {
+   "seq": 193,
+   "no": 193,
+   "chunk": "c015",
+   "level": "error",
+   "reasons": [
+    "필수 절 〈판결요지〉 없음",
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 194,
+   "no": 194,
+   "chunk": "c015",
+   "level": "error",
+   "reasons": [
+    "필수 절 〈판결요지〉 없음",
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 195,
+   "no": 195,
+   "chunk": "c015",
+   "level": "error",
+   "reasons": [
+    "필수 절 〈판결요지〉 없음",
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 196,
+   "no": 196,
+   "chunk": "c015",
+   "level": "error",
+   "reasons": [
+    "필수 절 〈판결요지〉 없음",
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 197,
+   "no": 197,
+   "chunk": "c015",
+   "level": "error",
+   "reasons": [
+    "필수 절 〈판결요지〉 없음",
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 198,
+   "no": 198,
+   "chunk": "c015",
+   "level": "error",
+   "reasons": [
+    "필수 절 〈판결요지〉 없음",
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 199,
+   "no": 199,
+   "chunk": "c015",
+   "level": "ok",
+   "reasons": [
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 200,
+   "no": 200,
+   "chunk": "c015",
+   "level": "warn",
+   "reasons": [
+    "PDF 항목 안에 같은 절이 여러 번: 판결요지",
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 201,
+   "no": 201,
+   "chunk": "c015",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 202,
+   "no": 202,
+   "chunk": "c015",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 203,
+   "no": 203,
+   "chunk": "c015",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 204,
+   "no": 204,
+   "chunk": "c015",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 205,
+   "no": 205,
+   "chunk": "c015",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 206,
+   "no": 206,
+   "chunk": "c015",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 207,
+   "no": 207,
+   "chunk": "c015",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 208,
+   "no": 208,
+   "chunk": "c015",
+   "level": "ok",
+   "reasons": [
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 209,
+   "no": 209,
+   "chunk": "c015",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 210,
+   "no": 210,
+   "chunk": "c015",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 211,
+   "no": 211,
+   "chunk": "c015",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 212,
+   "no": 212,
+   "chunk": "c015",
+   "level": "warn",
+   "reasons": [
+    "다음 청크(c016)에 (이어짐) 블록 없음",
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 213,
+   "no": 213,
+   "chunk": "c016",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 214,
+   "no": 214,
+   "chunk": "c016",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 215,
+   "no": 215,
+   "chunk": "c016",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 216,
+   "no": 216,
+   "chunk": "c016",
+   "level": "ok",
+   "reasons": [
+    "대조 fail 〈판결요지〉: 유사도 0.9895 < 0.995"
+   ]
+  },
+  {
+   "seq": 217,
+   "no": 217,
+   "chunk": "c016",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 218,
+   "no": 218,
+   "chunk": "c016",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 219,
+   "no": 219,
+   "chunk": "c016",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 220,
+   "no": 220,
+   "chunk": "c016",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 221,
+   "no": 221,
+   "chunk": "c016",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 222,
+   "no": 222,
+   "chunk": "c016",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 223,
+   "no": 223,
+   "chunk": "c016",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 224,
+   "no": 224,
+   "chunk": "c016",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 225,
+   "no": 225,
+   "chunk": "c016",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 226,
+   "no": 226,
+   "chunk": "c016",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 227,
+   "no": 227,
+   "chunk": "c016",
+   "level": "warn",
+   "reasons": [
+    "(이어짐) 병합: 〈쟁점〉 이음 확인",
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 228,
+   "no": 228,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 229,
+   "no": 229,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 230,
+   "no": 230,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 231,
+   "no": 231,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 232,
+   "no": 232,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 233,
+   "no": 233,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 234,
+   "no": 234,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 235,
+   "no": 235,
+   "chunk": "c017",
+   "level": "error",
+   "reasons": [
+    "필수 절 〈판결요지〉 없음",
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 236,
+   "no": 236,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 237,
+   "no": 237,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 238,
+   "no": 238,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 239,
+   "no": 239,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 240,
+   "no": 240,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 241,
+   "no": 241,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 242,
+   "no": 242,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 243,
+   "no": 243,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 244,
+   "no": 244,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 245,
+   "no": 245,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 246,
+   "no": 246,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 247,
+   "no": 247,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 248,
+   "no": 248,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 249,
+   "no": 249,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 250,
+   "no": 250,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 251,
+   "no": 251,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 252,
+   "no": 252,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 253,
+   "no": 253,
+   "chunk": "c017",
+   "level": "ok",
+   "reasons": [
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 254,
+   "no": 254,
+   "chunk": "c017",
+   "level": "warn",
+   "reasons": [
+    "(이어짐) 병합: 〈판결요지〉 이음 확인",
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 255,
+   "no": 255,
+   "chunk": "c018",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 256,
+   "no": 256,
+   "chunk": "c018",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 257,
+   "no": 257,
+   "chunk": "c018",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 258,
+   "no": 258,
+   "chunk": "c018",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 259,
+   "no": 259,
+   "chunk": "c018",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 260,
+   "no": 260,
+   "chunk": "c018",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 261,
+   "no": 261,
+   "chunk": "c018",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 262,
+   "no": 262,
+   "chunk": "c018",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 263,
+   "no": 264,
+   "chunk": "c018",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 264,
+   "no": 265,
+   "chunk": "c018",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄",
+    "대조 fail 〈판결요지〉: PDF 항목 안에서 〈판결요지〉 절 제목을 찾지 못함"
+   ]
+  },
+  {
+   "seq": 265,
+   "no": 267,
+   "chunk": "c018",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 266,
+   "no": 268,
+   "chunk": "c018",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 267,
+   "no": 269,
+   "chunk": "c018",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 268,
+   "no": 270,
+   "chunk": "c018",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 269,
+   "no": 271,
+   "chunk": "c018",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 270,
+   "no": 272,
+   "chunk": "c018",
+   "level": "ok",
+   "reasons": [
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 271,
+   "no": 273,
+   "chunk": "c019",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 272,
+   "no": 274,
+   "chunk": "c019",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 273,
+   "no": 275,
+   "chunk": "c019",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 274,
+   "no": 276,
+   "chunk": "c019",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 275,
+   "no": 277,
+   "chunk": "c019",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 276,
+   "no": 278,
+   "chunk": "c019",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 277,
+   "no": 279,
+   "chunk": "c019",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 278,
+   "no": 280,
+   "chunk": "c019",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 279,
+   "no": 281,
+   "chunk": "c019",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 280,
+   "no": 282,
+   "chunk": "c019",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 281,
+   "no": 283,
+   "chunk": "c019",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 282,
+   "no": 284,
+   "chunk": "c019",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 283,
+   "no": 285,
+   "chunk": "c019",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 284,
+   "no": 286,
+   "chunk": "c019",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 285,
+   "no": 287,
+   "chunk": "c019",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 286,
+   "no": 288,
+   "chunk": "c019",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 287,
+   "no": 289,
+   "chunk": "c019",
+   "level": "warn",
+   "reasons": [
+    "제목이 skeleton 과 다름: '헌법재판소법 제68조 제1항과 같은 조 제2항 헌법소원' / '법적 성격 및 관계'",
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 288,
+   "no": 290,
+   "chunk": "c019",
+   "level": "warn",
+   "reasons": [
+    "제목이 skeleton 과 다름: '헌법재판소법 제68조 제1항과 같은 조 제2항 헌법소원' / '병합가능성'",
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 289,
+   "no": 291,
+   "chunk": "c019",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 290,
+   "no": 292,
+   "chunk": "c019",
+   "level": "warn",
+   "reasons": [
+    "(이어짐) 병합: 〈판결요지〉 이음 확인",
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 291,
+   "no": 293,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 292,
+   "no": 294,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 293,
+   "no": 295,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 294,
+   "no": 296,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 295,
+   "no": 297,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 296,
+   "no": 298,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 297,
+   "no": 299,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 298,
+   "no": 300,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 299,
+   "no": 301,
+   "chunk": "c020",
+   "level": "error",
+   "reasons": [
+    "필수 절 〈판결요지〉 없음",
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 300,
+   "no": 302,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 301,
+   "no": 303,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 302,
+   "no": 304,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 303,
+   "no": 305,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 304,
+   "no": 306,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 305,
+   "no": 307,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 306,
+   "no": 308,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 307,
+   "no": 309,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 308,
+   "no": 310,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 309,
+   "no": 311,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 310,
+   "no": 312,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 311,
+   "no": 313,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 312,
+   "no": 314,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 313,
+   "no": 315,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 314,
+   "no": 316,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 315,
+   "no": 317,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 316,
+   "no": 318,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 317,
+   "no": 319,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": []
+  },
+  {
+   "seq": 318,
+   "no": 320,
+   "chunk": "c020",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 319,
+   "no": 321,
+   "chunk": "c020",
+   "level": "warn",
+   "reasons": [
+    "다음 청크(c021)에 (이어짐) 블록 없음",
+    "검토메모 1줄",
+    "대조 fail 〈판결요지〉: PDF 항목 안에서 〈판결요지〉 절 제목을 찾지 못함 (md 텍스트는 PDF 〈결정이유〉 절 안에 있음)"
+   ]
+  },
+  {
+   "seq": 320,
+   "no": 322,
+   "chunk": "c021",
+   "level": "error",
+   "reasons": [
+    "필수 절 〈판결요지〉 없음",
+    "검토메모 4줄"
+   ]
+  },
+  {
+   "seq": 321,
+   "no": 323,
+   "chunk": "c021",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 322,
+   "no": 324,
+   "chunk": "c021",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 323,
+   "no": 325,
+   "chunk": "c021",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 324,
+   "no": 326,
+   "chunk": "c021",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": 325,
+   "no": 327,
+   "chunk": "c021",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 326,
+   "no": 328,
+   "chunk": "c021",
+   "level": "ok",
+   "reasons": [
+    "검토메모 3줄",
+    "대조 fail 〈판결요지〉: 절 경계 불일치: md 가 PDF 절의 일부(앞 0자·뒤 22자 빠짐)"
+   ]
+  },
+  {
+   "seq": 327,
+   "no": 329,
+   "chunk": "c021",
+   "level": "warn",
+   "reasons": [
+    "제목이 skeleton 과 다름: '제청신청 및 기각결정이 대상이 아닌 법률조항에 대한 헌' / '헌법소원심판청구'",
+    "검토메모 3줄"
+   ]
+  },
+  {
+   "seq": 328,
+   "no": 330,
+   "chunk": "c021",
+   "level": "ok",
+   "reasons": [
+    "검토메모 1줄"
+   ]
+  },
+  {
+   "seq": 329,
+   "no": 331,
+   "chunk": "c021",
+   "level": "ok",
+   "reasons": [
+    "검토메모 2줄"
+   ]
+  },
+  {
+   "seq": null,
+   "no": 263,
+   "chunk": "c018",
+   "level": "error",
+   "reasons": [
+    "이 청크의 skeleton 기대 항목이 아님",
+    "c018.md:199 263. 탄핵소추사유"
+   ]
+  },
+  {
+   "seq": null,
+   "no": 266,
+   "chunk": "c018",
+   "level": "error",
+   "reasons": [
+    "이 청크의 skeleton 기대 항목이 아님",
+    "c018.md:276 266. 정당해산심판의 의의와 기능, 정당해산 사유"
+   ]
+  }
+ ],
+ "totals": {
+  "entries": 329,
+  "md": 329,
+  "pass": 319,
+  "fail": 8,
+  "skip": 2,
+  "ok": 290,
+  "warn": 25,
+  "error": 16,
+  "notes": 290,
+  "noteLines": 645,
+  "illegible": 0,
+  "missing": 0,
+  "extra": 2,
+  "chunks": 21,
+  "mdFiles": 21
+ }
+}

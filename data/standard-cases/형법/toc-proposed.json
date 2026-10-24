@@ -1,0 +1,136 @@
+{
+ "subject": "criminal",
+ "proposed": [
+  {
+   "id": "hb2-1",
+   "label": "형법총론",
+   "children": [
+    {
+     "id": "hb2-1-1",
+     "label": "제1편 서론",
+     "children": []
+    },
+    {
+     "id": "hb2-1-2",
+     "label": "제2편 범죄론",
+     "children": [
+      {
+       "id": "hb2-1-2-1",
+       "label": "제1장 구성요건",
+       "children": []
+      },
+      {
+       "id": "hb2-1-2-2",
+       "label": "제2장 위법성",
+       "children": []
+      },
+      {
+       "id": "hb2-1-2-3",
+       "label": "제3장 책임",
+       "children": []
+      },
+      {
+       "id": "hb2-1-2-4",
+       "label": "제4장 미수론",
+       "children": []
+      },
+      {
+       "id": "hb2-1-2-5",
+       "label": "제5장 공범론",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "hb2-1-3",
+     "label": "제3편 죄수론",
+     "children": []
+    },
+    {
+     "id": "hb2-1-4",
+     "label": "제4편 형벌론",
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "hb2-2",
+   "label": "형법각론",
+   "children": [
+    {
+     "id": "hb2-2-1",
+     "label": "제1편 개인적 법익에 대한 죄",
+     "children": [
+      {
+       "id": "hb2-2-1-1",
+       "label": "제1장 생명·신체에 대한 죄",
+       "children": []
+      },
+      {
+       "id": "hb2-2-1-2",
+       "label": "제2장 자유에 대한 죄",
+       "children": []
+      },
+      {
+       "id": "hb2-2-1-3",
+       "label": "제3장 명예와 신용에 대한 죄",
+       "children": []
+      },
+      {
+       "id": "hb2-2-1-4",
+       "label": "제4장 사생활의 평온에 대한 죄",
+       "children": []
+      },
+      {
+       "id": "hb2-2-1-5",
+       "label": "제5장 재산에 대한 죄",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "hb2-2-2",
+     "label": "제2편 사회적 법익에 대한 죄",
+     "children": [
+      {
+       "id": "hb2-2-2-1",
+       "label": "제1장 공공의 안전과 평온에 대한 죄",
+       "children": []
+      },
+      {
+       "id": "hb2-2-2-2",
+       "label": "제2장 공공의 신용에 대한 죄",
+       "children": []
+      },
+      {
+       "id": "hb2-2-2-3",
+       "label": "제3장 공중의 건강에 관한 죄",
+       "children": []
+      },
+      {
+       "id": "hb2-2-2-4",
+       "label": "제4장 사회의 도덕에 관한 죄",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "hb2-2-3",
+     "label": "제3편 국가적 법익에 대한 죄",
+     "children": [
+      {
+       "id": "hb2-2-3-1",
+       "label": "제1장 국가의 존립과 권위에 대한 죄",
+       "children": []
+      },
+      {
+       "id": "hb2-2-3-2",
+       "label": "제2장 국가의 기능에 대한 죄",
+       "children": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

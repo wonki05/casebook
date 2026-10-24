@@ -1,0 +1,337 @@
+{
+  "schemaVersion": 1,
+  "subject": "constitution",
+  "reviewer": "Codex",
+  "reviewedAt": "2026-10-24T17:05:10+09:00",
+  "sourceReport": "data/standard-cases/헌법/_crosscheck.json",
+  "sourceReportGeneratedAt": "2026-10-24T17:00:18+09:00",
+  "sourceReportSha256": "5f4b9a4eade7609bd589c720d2e0403c38014d2ed3d33a94c19bd09c7e86c276",
+  "scope": "보고서에 표시된 low-similarity 7건 및 meta-mismatch 1건. 미수집 항목과 이후 추가 수집분은 이 판정 범위 밖이다.",
+  "summary": {
+    "reviewed": 8,
+    "acceptedContent": 8,
+    "officialHeaderDateInconsistency": 1,
+    "sourcePagesCorrectionRequired": 1,
+    "unresolvedDifferentDecisionEvidence": 0
+  },
+  "policy": "PDF 원문은 수정하지 않는다. 쪽 머리글·바닥 페이지 숫자는 비교 시에만 제거하였다. 공식 자료의 문자 차이를 근거 없이 원문에 반영하지 않는다. 이 파일은 진단 판정 기록이며 registry/fetched/_review.jsonl을 수정하지 않는다.",
+  "items": [
+    {
+      "seq": 1,
+      "caseNumber": "2004헌마554등",
+      "decisionId": "cc-2004heonma554-20041021-decision",
+      "crosscheckFlag": "low-similarity",
+      "holdingsRatio": 0.1566,
+      "fetchedId": "std-constitution-01",
+      "officialSourceUrl": "https://www.law.go.kr/LSW/detcInfoP.do?detcSeq=137692",
+      "officialCitation": "[전원재판부 2004헌마554, 2004. 10. 21.]",
+      "candidatePdfPages": [
+        5
+      ],
+      "standardSourcePagesAtReview": [
+        5
+      ],
+      "evidenceFiles": [
+        "data/standard-cases/헌법/candidates-constitution.json",
+        "data/fetched/std-constitution-01.json",
+        "data/standard-cases/헌법/pages/p0005.txt"
+      ],
+      "verdict": "accept-source-excerpt",
+      "confidence": "high",
+      "finding": "같은 재판의 관습헌법 논점에 대한 책 자체의 선택·축약이다. 다른 재판의 내용으로 볼 증거를 찾지 못했다.",
+      "evidence": [
+        "PDF p5의 요지와 후보 문자열은 공백 제거 후 일치한다.",
+        "공식 결정요지 제3~11항의 관습헌법 인정 가능성·국민주권 근거·성립요건·수도·변경 및 소멸 논점이 책 요지에 대응한다.",
+        "공식 요지 전체에는 수도이전 사건의 추가 쟁점과 의견이 포함되고 책은 특정 학습 논점을 선택하므로 전체 문자열 유사도가 낮다."
+      ],
+      "neededAction": [
+        "원문과 등록정보를 유지한다.",
+        "낮은 유사도를 출처 간 수록범위 및 책 표현의 차이로 판정한 기록을 보존한다."
+      ]
+    },
+    {
+      "seq": 2,
+      "caseNumber": "88헌가5등",
+      "decisionId": "cc-88heonga5-19890714-decision",
+      "crosscheckFlag": "low-similarity",
+      "holdingsRatio": 0.0443,
+      "fetchedId": "std-constitution-02",
+      "officialSourceUrl": "https://www.law.go.kr/LSW/detcInfoP.do?detcSeq=134843",
+      "officialCitation": "[전원재판부 88헌가5, 1989. 7. 14.]",
+      "candidatePdfPages": [
+        6
+      ],
+      "standardSourcePagesAtReview": [
+        6
+      ],
+      "evidenceFiles": [
+        "data/standard-cases/헌법/candidates-constitution.json",
+        "data/fetched/std-constitution-02.json",
+        "data/standard-cases/헌법/pages/p0006.txt"
+      ],
+      "verdict": "accept-source-excerpt",
+      "confidence": "high",
+      "finding": "책 요지는 공식 결정요지의 요약이 아니라 공식 이유의 합헌적 해석 법리를 발췌한 것이다.",
+      "evidence": [
+        "PDF p6의 요지와 후보 문자열은 공백 제거 후 일치한다.",
+        "공식 [이 유]의 (3) 법 제5조 제1항의 합헌적 해석의 가능성 여부에서 법질서 통일성, 문의적 한계, 법목적 한계, 입법권 침해의 설명을 확인했다.",
+        "공식 결정요지는 사회보호법의 보호감호·소급효 문제 중심이므로 이 이유 발췌와의 전체 유사도가 낮다."
+      ],
+      "neededAction": [
+        "검증된 PDF 문장을 그대로 유지한다.",
+        "공식 요지와의 낮은 유사도를 공식 이유 발췌로 해소한 판정 기록을 보존한다."
+      ]
+    },
+    {
+      "seq": 3,
+      "caseNumber": "95헌바3",
+      "decisionId": "cc-95heonba3-19951228-decision",
+      "crosscheckFlag": "meta-mismatch",
+      "holdingsRatio": 0.6056,
+      "fetchedId": "std-constitution-03",
+      "officialSourceUrl": "https://www.law.go.kr/LSW/detcInfoP.do?detcSeq=135385",
+      "officialCitation": "[전원재판부 95헌바3, 1995. 12. 8.]",
+      "candidatePdfPages": [
+        6,
+        7
+      ],
+      "standardSourcePagesAtReview": [
+        6,
+        7
+      ],
+      "evidenceFiles": [
+        "data/standard-cases/헌법/candidates-constitution.json",
+        "data/fetched/std-constitution-03.json",
+        "data/standard-cases/헌법/pages/p0006.txt",
+        "data/standard-cases/헌법/pages/p0007.txt"
+      ],
+      "verdict": "official-header-date-inconsistency",
+      "confidence": "high",
+      "finding": "공식 페이지 머리의 1995-12-08 표기는 같은 페이지 전문 말미 날짜 및 후속 공식 결정의 인용과 충돌한다. 1995-12-28을 유지할 근거가 확인되었다.",
+      "evidence": [
+        "PDF p6의 3번 항목과 p207의 186번 중복 항목은 모두 1995. 12. 28. 95헌바3으로 기재한다.",
+        "fetched/std-constitution-03.json의 citation은 1995. 12. 8.이지만 같은 파일 [이 유] 말미 재판관 서명 직전 날짜는 1995. 12. 28.이다.",
+        "현재 국가법령정보센터 detcSeq=135385 페이지에서도 동일한 머리 날짜 불일치를 확인했다.",
+        "국가법령정보센터의 2005헌바28(detcSeq=9853) 및 2000헌바38(detcSeq=58272) 결정문은 95헌바3을 1995. 12. 28. 결정으로 인용한다.",
+        "책 요지는 공식 결정요지 제1·2항 및 이유의 헌법 개별규정 대상성·규범 간 우열 판단에 대응한다."
+      ],
+      "neededAction": [
+        "등록일과 decisionId를 1995-12-28에서 1995-12-08로 자동 변경하지 않는다.",
+        "fetched 원수집본과 PDF는 수정하지 않는다.",
+        "공식 헤더와 본문 날짜가 충돌하는 검증 예외를 이 증거와 함께 기록한다. 원자료 표시를 교정한다면 원자료와 교정 근거를 분리해야 한다."
+      ],
+      "dateEvidence": {
+        "pdf": "1995-12-28",
+        "registry": "1995-12-28",
+        "officialHeader": "1995-12-08",
+        "officialBodySignatureDate": "1995-12-28",
+        "laterOfficialCitations": "1995-12-28"
+      },
+      "primaryWebSources": [
+        {
+          "url": "https://www.law.go.kr/LSW/detcInfoP.do?detcSeq=135385",
+          "checked": "open",
+          "reference": "turn2view0"
+        },
+        {
+          "url": "https://www.law.go.kr/LSW/detcInfoP.do?detcSeq=9853&mode=1",
+          "checked": "open",
+          "reference": "turn2view1"
+        },
+        {
+          "url": "https://www.law.go.kr/LSW//detcInfoP.do?detcSeq=58272",
+          "checked": "search result full-text extract",
+          "reference": "turn0search3"
+        }
+      ]
+    },
+    {
+      "seq": 151,
+      "caseNumber": "2018헌마551",
+      "decisionId": "cc-2018heonma551-20200423-decision",
+      "crosscheckFlag": "low-similarity",
+      "holdingsRatio": 0.5739,
+      "fetchedId": "annual-2020-69",
+      "officialSourceUrl": "https://www.law.go.kr/LSW/detcInfoP.do?detcSeq=157665",
+      "officialCitation": "[전원재판부 2018헌마551, 2020. 4. 23., 위헌]",
+      "candidatePdfPages": [
+        165,
+        166,
+        167
+      ],
+      "standardSourcePagesAtReview": [
+        165
+      ],
+      "evidenceFiles": [
+        "data/standard-cases/헌법/candidates-constitution.json",
+        "data/fetched/annual-2020-69.json",
+        "data/standard-cases/헌법/pages/p0165.txt",
+        "data/standard-cases/헌법/pages/p0166.txt",
+        "data/standard-cases/헌법/pages/p0167.txt"
+      ],
+      "verdict": "accept-content-fix-source-pages",
+      "confidence": "high",
+      "finding": "텍스트의 재판 소속은 확인되지만 standardSource.pages가 실제 인용 범위를 누락한다.",
+      "evidence": [
+        "후보 pdfPages는 [165,166,167]이나 standardSource.pages는 [165]이다.",
+        "p165에는 쟁점과 결정요지 첫 줄이 있고, 정당가입 법리와 정치단체 위헌의견의 나머지 본문은 p166~167에 있다.",
+        "쪽 머리글·바닥 숫자를 제거한 p165~167에서 후보 요지 두 항목의 연속 일치를 확인했다.",
+        "_review.jsonl의 seq151 fail 판정은 verdict ok이며 pages=[165,166,167], 본문 전체 대조 및 원문의 결상의 자유 표기 보존을 명시한다.",
+        "entries.jsonl의 verify.pages=[165]는 결정요지 절 제목 탐지 실패에 따른 축소 범위이며, 이후 사람이 확인한 전체 쪽수보다 우선할 근거가 없다.",
+        "공식 결정요지는 정당가입 제한 법리와 정치단체에 관한 명확성·과잉금지 위반 각 3인 의견을 포함한다. 책이 의견 순서·지칭 등을 다르게 정리했으나 관련 논점은 대응한다."
+      ],
+      "neededAction": [
+        "원문 텍스트는 수정하지 않는다.",
+        "검증된 판정의 pages=[165,166,167]을 source 생성에 반영하고 해당 페이지 해시를 재생성한다.",
+        "변경된 standardSource는 add_cases.py를 통해 해당 재판의 배치들에 보완한다."
+      ],
+      "requiredSourcePages": [
+        165,
+        166,
+        167
+      ]
+    },
+    {
+      "seq": 210,
+      "caseNumber": "2017헌마103",
+      "decisionId": "cc-2017heonma103-20200423-decision",
+      "crosscheckFlag": "low-similarity",
+      "holdingsRatio": 0.4843,
+      "fetchedId": "annual-2020-67",
+      "officialSourceUrl": "https://www.law.go.kr/LSW/detcInfoP.do?detcSeq=157647",
+      "officialCitation": "[전원재판부 2017헌마103, 2020. 4. 23., 기각]",
+      "candidatePdfPages": [
+        228,
+        229
+      ],
+      "standardSourcePagesAtReview": [
+        228,
+        229
+      ],
+      "evidenceFiles": [
+        "data/standard-cases/헌법/candidates-constitution.json",
+        "data/fetched/annual-2020-67.json",
+        "data/standard-cases/헌법/pages/p0228.txt",
+        "data/standard-cases/헌법/pages/p0229.txt"
+      ],
+      "verdict": "accept-source-excerpt",
+      "confidence": "high",
+      "finding": "책은 법정의견 일부와 반대의견 일부를 의견 표지와 함께 선택하였다.",
+      "evidence": [
+        "쪽 머리글·바닥 숫자와 괄호 모양만 정규화하면 p228~229의 책 요지와 후보가 일치한다.",
+        "첫 두 문장은 공식 결정요지 라의 인간다운 생활·보건권 판단과 일치한다.",
+        "이후 문장들은 공식 결정요지 중 이은애·김기영·문형배 재판관 반대의견의 수급권자 의료행위선택권 부분과 일치한다.",
+        "공식 요지에는 법률유보·명확성·의사의 직업수행 등 다른 쟁점도 있어 전체 문자열 비교는 발췌 구조를 반영하지 못한다."
+      ],
+      "neededAction": [
+        "법정의견과 반대의견 표지를 포함한 PDF 원문을 유지한다.",
+        "낮은 유사도를 의견별 발췌에 따른 차이로 기록한다."
+      ]
+    },
+    {
+      "seq": 214,
+      "caseNumber": "2019헌라1",
+      "decisionId": "cc-2019heonra1-20200527-decision",
+      "crosscheckFlag": "low-similarity",
+      "holdingsRatio": 0.0591,
+      "fetchedId": "annual-2020-70",
+      "officialSourceUrl": "https://www.law.go.kr/LSW/detcInfoP.do?detcSeq=158469",
+      "officialCitation": "[전원재판부 2019헌라1, 2020. 5. 27., 기각]",
+      "candidatePdfPages": [
+        233,
+        234
+      ],
+      "standardSourcePagesAtReview": [
+        234
+      ],
+      "evidenceFiles": [
+        "data/standard-cases/헌법/candidates-constitution.json",
+        "data/fetched/annual-2020-70.json",
+        "data/standard-cases/헌법/pages/p0233.txt",
+        "data/standard-cases/헌법/pages/p0234.txt"
+      ],
+      "verdict": "accept-source-excerpt",
+      "confidence": "high",
+      "finding": "자유위임원칙에 관한 다수의견 일부를 책의 생략표시와 함께 발췌하였다.",
+      "evidence": [
+        "PDF p234의 후보 요지는 공백 제거 후 해당 쪽 원문과 일치한다.",
+        "공식 결정요지에서 다수형성·의사결정 능률성, 자유위임원칙의 제한 가능성, 비교형량, 이 사건 개선행위의 합헌 판단에 관한 문장을 확인했다.",
+        "책의 생략표시 … 앞뒤 구절은 공식 요지의 서로 떨어진 문단과 대응한다. 공식 요지 전체는 다른 논점과 의견을 포함하여 매우 길다."
+      ],
+      "neededAction": [
+        "PDF의 생략표시와 문장을 유지하고 빠진 공식 본문을 끼워 넣지 않는다.",
+        "낮은 유사도를 공식 요지 일부 발췌로 판정한다."
+      ]
+    },
+    {
+      "seq": 231,
+      "caseNumber": "93헌마186",
+      "decisionId": "cc-93heonma186-19960229-decision",
+      "crosscheckFlag": "low-similarity",
+      "holdingsRatio": 0.3238,
+      "fetchedId": "std-administrative-03",
+      "officialSourceUrl": "https://www.law.go.kr/LSW/detcInfoP.do?detcSeq=135215",
+      "officialCitation": "[전원재판부 93헌마186, 1996. 2. 29.]",
+      "candidatePdfPages": [
+        246
+      ],
+      "standardSourcePagesAtReview": [
+        246
+      ],
+      "evidenceFiles": [
+        "data/standard-cases/헌법/candidates-constitution.json",
+        "data/fetched/std-administrative-03.json",
+        "data/standard-cases/헌법/pages/p0246.txt"
+      ],
+      "verdict": "accept-cross-subject-synthesis",
+      "confidence": "high",
+      "finding": "두 과목의 검증된 합집합으로서 공식 요지와 이유의 서로 다른 범위를 포함한다.",
+      "evidence": [
+        "후보에 overlap=true이고 reviewer에 헌법 p246 + 행정법 p4,5의 합집합 출처가 명시되어 있다.",
+        "첫 요지는 공식 결정요지 가의 통치행위 심판대상성과 대응한다. 공식에는 다수의 한자 병기가 있어 단순 문자열 유사도가 낮다.",
+        "둘째 구절은 헌법 p246에 있고, 공식 [이 유]는 헌법 제76조 요건·한계에 부합하면 목적 정당성·수단 적정성·피해 최소성·법익 균형성의 과잉금지원칙을 준수한다는 설명을 담고 있다.",
+        "둘째 문장은 책 자체의 압축 표현이며 공식 요지에 없는 이유 논점이다."
+      ],
+      "neededAction": [
+        "두 과목 원문에서 얻은 합집합을 유지한다.",
+        "배포 표시에서 행정법과 헌법 두 출처가 함께 유지되는지 통합 검증한다."
+      ]
+    },
+    {
+      "seq": 322,
+      "caseNumber": "2017헌마479",
+      "decisionId": "cc-2017heonma479-20200423-decision",
+      "crosscheckFlag": "low-similarity",
+      "holdingsRatio": 0.122,
+      "fetchedId": "annual-2020-68",
+      "officialSourceUrl": "https://www.law.go.kr/LSW/detcInfoP.do?detcSeq=157651",
+      "officialCitation": "[지정재판부 2017헌마479, 2020. 4. 23.]",
+      "candidatePdfPages": [
+        309,
+        310
+      ],
+      "standardSourcePagesAtReview": [
+        309,
+        310
+      ],
+      "evidenceFiles": [
+        "data/standard-cases/헌법/candidates-constitution.json",
+        "data/fetched/annual-2020-68.json",
+        "data/standard-cases/헌법/pages/p0309.txt",
+        "data/standard-cases/헌법/pages/p0310.txt"
+      ],
+      "verdict": "accept-reasons-excerpt",
+      "confidence": "high",
+      "finding": "공식 요지가 짧게 정리한 청구기간 판단에 관한 이유의 상세 논증을 책이 수록한다.",
+      "evidence": [
+        "쪽 머리글·바닥 숫자를 제거하면 p309~310의 책 요지와 후보가 일치한다.",
+        "공식 [이 유]에서 종전 선례에 따른 2015.1.29 기산의 문제, 구체적·현실적 제약 부재, 기본권보장, 1년 기한과 법적안정성 논증을 동일한 순서로 확인했다.",
+        "공식 결정요지 가는 유예기간 경과일부터 기산한다는 결론 중심이라 상세 이유와의 전체 유사도가 낮다."
+      ],
+      "neededAction": [
+        "PDF의 이유 발췌를 그대로 유지한다.",
+        "낮은 유사도를 이유 발췌와 요지의 길이·범위 차이로 판정한다."
+      ]
+    }
+  ]
+}

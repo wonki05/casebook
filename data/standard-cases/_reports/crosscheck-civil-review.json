@@ -1,0 +1,347 @@
+{
+  "subject": "civil",
+  "reviewer": "Codex",
+  "reviewedAt": "2026-10-24T17:11:11+09:00",
+  "scope": [
+    860,
+    843,
+    300
+  ],
+  "mode": "diagnostic_only_no_source_or_registry_changes",
+  "normalizer": "pdf2md_lib.normalize",
+  "sourcePdf": "data/standard-cases/표준판례(2023년 개정판)_민법.pdf",
+  "visualPagesInspected": [
+    214,
+    572,
+    587
+  ],
+  "summary": {
+    "reviewed": 3,
+    "acceptedSourceVariations": 3,
+    "wrongDecision": 0,
+    "blocking": 0
+  },
+  "items": [
+    {
+      "seq": 860,
+      "caseNumber": "2020그42",
+      "decisionId": "sc-2020geu42-20230323-decision",
+      "registryIds": [
+        "annual-2023-65",
+        "std-civil-847"
+      ],
+      "court": "대법원",
+      "date": "2023-03-23",
+      "decisionType": "결정",
+      "enBanc": true,
+      "pdfPages": [
+        587
+      ],
+      "officialFile": "data/fetched/annual-2023-65.json",
+      "officialSeq": "234385",
+      "officialSourceUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=234385",
+      "officialCitation": "[대법원 2023. 3. 23. 자 2020그42 전원합의체 결정]",
+      "metadataVerified": true,
+      "metadataCheck": {
+        "citation": "[대법원 2023. 3. 23. 자 2020그42 전원합의체 결정]",
+        "caseNumber": {
+          "candidate": "2020그42",
+          "registry": "2020그42",
+          "official": [
+            "2020그42"
+          ],
+          "ok": true
+        },
+        "date": {
+          "candidate": "2023-03-23",
+          "registry": "2023-03-23",
+          "official": "2023-03-23",
+          "ok": true
+        },
+        "court": {
+          "candidate": "대법원",
+          "registry": "대법원",
+          "official": "대법원",
+          "ok": true
+        },
+        "decisionType": {
+          "candidate": "결정",
+          "registry": "결정",
+          "official": "결정",
+          "ok": true
+        },
+        "enBanc": {
+          "candidate": true,
+          "registry": true,
+          "official": true,
+          "ok": true
+        },
+        "ok": true,
+        "officialParsed": true
+      },
+      "originalFlag": "low-similarity",
+      "originalHoldingsRatio": 0.203,
+      "verdict": "ok_source_variation",
+      "blocking": false,
+      "action": "preserve_standardSource_and_official_source",
+      "sourceHashes": {
+        "fetchedSha256": "4a46394a8043402c46a545492336a5b89d3fa652e8fe12bbc919b16d95907dd0",
+        "pdfPageTextSha256": {
+          "587": "14d84ad6de809cbcad5915ef4e9462e5e6f97bab8db68822db93a53708be0193"
+        }
+      },
+      "classification": "majority_reason_excerpt_with_book_citation_abbreviation",
+      "officialLocation": "[이유] 2. 피상속인의 배우자와 자녀 중 자녀 전부가 상속을 포기한 경우의 상속인 / 나. 민법의 문언 및 체계적·논리적 해석 / 4) 가)·나)",
+      "explanation": "책은 다수의견 이유의 자녀 일부 포기·자녀 전부 포기·배우자와 자녀 모두 포기 부분을 연속 발췌한다. 공식 요지에는 마지막 상황의 후순위 상속인에 관한 후속 문장들이 빠져 있고 반대의견 등 다른 문장들이 포함되어 있어 요지 전체 비교가 낮다. PDF는 본문 구획표지 나)를 생략하고 민법 제1000조 제1항, 제2항을 제1, 2항으로 적었다. 사건이 다른 것이 아니며 책 표기를 보존한다.",
+      "pdfSpecificDifferences": [
+        {
+          "pdf": "민법 제1000조 제1, 2항",
+          "official": "민법 제1000조 제1항, 제2항",
+          "action": "preserve_pdf"
+        }
+      ],
+      "evidence": [
+        {
+          "holdingIndex": 0,
+          "holdingNumber": "",
+          "pdfNormalizedSubstring": true,
+          "officialSection": "이유/다수의견",
+          "officialNormalizedStart": 2562,
+          "officialNormalizedEnd": 2996,
+          "matchedExcerptSimilarity": 0.99537037,
+          "normalizedDifferences": [
+            {
+              "op": "insert",
+              "pdf": "",
+              "official": "나)",
+              "pdfNormalizedOffset": 173,
+              "officialNormalizedOffset": 2735
+            },
+            {
+              "op": "insert",
+              "pdf": "",
+              "official": "항",
+              "pdfNormalizedOffset": 330,
+              "officialNormalizedOffset": 2894
+            },
+            {
+              "op": "insert",
+              "pdf": "",
+              "official": "제",
+              "pdfNormalizedOffset": 331,
+              "officialNormalizedOffset": 2896
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seq": 843,
+      "caseNumber": "2018스5",
+      "decisionId": "sc-2018seu5-20211223-decision",
+      "registryIds": [
+        "annual-2021-80",
+        "std-civil-830"
+      ],
+      "court": "대법원",
+      "date": "2021-12-23",
+      "decisionType": "결정",
+      "enBanc": true,
+      "pdfPages": [
+        572
+      ],
+      "officialFile": "data/fetched/annual-2021-80.json",
+      "officialSeq": "219707",
+      "officialSourceUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=219707",
+      "officialCitation": "[대법원 2021. 12. 23. 자 2018스5 전원합의체 결정]",
+      "metadataVerified": true,
+      "metadataCheck": {
+        "citation": "[대법원 2021. 12. 23. 자 2018스5 전원합의체 결정]",
+        "caseNumber": {
+          "candidate": "2018스5",
+          "registry": "2018스5",
+          "official": [
+            "2018스5"
+          ],
+          "ok": true
+        },
+        "date": {
+          "candidate": "2021-12-23",
+          "registry": "2021-12-23",
+          "official": "2021-12-23",
+          "ok": true
+        },
+        "court": {
+          "candidate": "대법원",
+          "registry": "대법원",
+          "official": "대법원",
+          "ok": true
+        },
+        "decisionType": {
+          "candidate": "결정",
+          "registry": "결정",
+          "official": "결정",
+          "ok": true
+        },
+        "enBanc": {
+          "candidate": true,
+          "registry": true,
+          "official": true,
+          "ok": true
+        },
+        "ok": true,
+        "officialParsed": true
+      },
+      "originalFlag": "low-similarity",
+      "originalHoldingsRatio": 0.3198,
+      "verdict": "ok_source_variation",
+      "blocking": false,
+      "action": "preserve_standardSource_and_official_source",
+      "sourceHashes": {
+        "fetchedSha256": "277f6be9d4726730ca9bc4e379890dcda74d2098b7eac066dc3bf4df3d6b437b",
+        "pdfPageTextSha256": {
+          "572": "369466071f7acd53c420e13290ba6f879ab4d6ae7eb0a7a480d22ca3d2632604"
+        }
+      },
+      "classification": "majority_reason_excerpt_with_book_citation_abbreviation",
+      "officialLocation": "[이유] 4. 조부모에 의한 미성년 손자녀 입양허가의 판단 기준과 고려요소 / 가. 조부모에 의한 미성년 손자녀 입양의 허용 여부 / (1)·(2)",
+      "explanation": "책 [1]은 다수의견 이유의 입양의 의미, 전통·관습 및 비교법 설명 전체를 발췌하고 [2]는 자녀 복리를 살필 일반 원칙을 발췌한다. 공식 요지는 전통·관습과 비교법 문단을 생략하고 추가 고려요소 및 반대의견을 포함하므로 전체 요지 유사도가 낮다. 책 [1]의 (제877조 참조)는 공식의 (민법 제877조 참조)와 다르지만 PDF에 실제로 그렇게 실려 있다. [2]는 공식 이유와 정규화 후 완전히 같다.",
+      "pdfSpecificDifferences": [
+        {
+          "pdf": "(제877조 참조)",
+          "official": "(민법 제877조 참조)",
+          "action": "preserve_pdf"
+        }
+      ],
+      "evidence": [
+        {
+          "holdingIndex": 0,
+          "holdingNumber": "[1]",
+          "pdfNormalizedSubstring": true,
+          "officialSection": "이유/다수의견",
+          "officialNormalizedStart": 1633,
+          "officialNormalizedEnd": 2492,
+          "matchedExcerptSimilarity": 0.9988345,
+          "normalizedDifferences": [
+            {
+              "op": "insert",
+              "pdf": "",
+              "official": "민법",
+              "pdfNormalizedOffset": 212,
+              "officialNormalizedOffset": 1845
+            }
+          ]
+        },
+        {
+          "holdingIndex": 1,
+          "holdingNumber": "[2]",
+          "pdfNormalizedSubstring": true,
+          "officialSection": "이유/다수의견",
+          "officialNormalizedStart": 2495,
+          "officialNormalizedEnd": 2671,
+          "matchedExcerptSimilarity": 1.0,
+          "normalizedDifferences": []
+        }
+      ]
+    },
+    {
+      "seq": 300,
+      "caseNumber": "2017다228007",
+      "decisionId": "sc-2017da228007-20210429-judgment",
+      "registryIds": [
+        "annual-2021-10",
+        "std-civil-301"
+      ],
+      "court": "대법원",
+      "date": "2021-04-29",
+      "decisionType": "판결",
+      "enBanc": true,
+      "pdfPages": [
+        214
+      ],
+      "officialFile": "data/fetched/annual-2021-10.json",
+      "officialSeq": "226859",
+      "officialSourceUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=226859",
+      "officialCitation": "[대법원 2021. 4. 29. 선고 2017다228007 전원합의체 판결]",
+      "metadataVerified": true,
+      "metadataCheck": {
+        "citation": "[대법원 2021. 4. 29. 선고 2017다228007 전원합의체 판결]",
+        "caseNumber": {
+          "candidate": "2017다228007",
+          "registry": "2017다228007",
+          "official": [
+            "2017다228007"
+          ],
+          "ok": true
+        },
+        "date": {
+          "candidate": "2021-04-29",
+          "registry": "2021-04-29",
+          "official": "2021-04-29",
+          "ok": true
+        },
+        "court": {
+          "candidate": "대법원",
+          "registry": "대법원",
+          "official": "대법원",
+          "ok": true
+        },
+        "decisionType": {
+          "candidate": "판결",
+          "registry": "판결",
+          "official": "판결",
+          "ok": true
+        },
+        "enBanc": {
+          "candidate": true,
+          "registry": true,
+          "official": true,
+          "ok": true
+        },
+        "ok": true,
+        "officialParsed": true
+      },
+      "originalFlag": "low-similarity",
+      "originalHoldingsRatio": 0.5783,
+      "verdict": "ok_source_variation",
+      "blocking": false,
+      "action": "preserve_standardSource_and_official_source",
+      "sourceHashes": {
+        "fetchedSha256": "7228bbeda3b941994a9cb7df763b7e225b9bba8a80d0f3a488880ccb39b7734b",
+        "pdfPageTextSha256": {
+          "214": "c8c07248e2afbdb0150e38a031780bd6717351ca9de2a9b68774862437d4afe0"
+        }
+      },
+      "classification": "majority_summary_only_with_book_glyph_difference",
+      "officialLocation": "[판결요지] [다수의견]의 세 문단 전체; 별개의견·반대의견 앞까지",
+      "explanation": "책은 공식 판결요지 중 다수의견 세 문단만 수록하고 별개의견·반대의견은 수록하지 않는다. 책의 기지(기지)는 PDF 214쪽 렌더링에서도 한글 기지로 확인되며 공식 기지(基地)와 다른 책 자체의 표기이다. 해당 한자 병기 차이 외에는 다수의견 부분과 정규화 후 같다. 전사 오류나 다른 재판 혼입으로 판단하지 않으며 PDF 표기를 고치지 않는다.",
+      "pdfSpecificDifferences": [
+        {
+          "pdf": "기지(기지)",
+          "official": "기지(基地)",
+          "action": "preserve_pdf"
+        }
+      ],
+      "evidence": [
+        {
+          "holdingIndex": 0,
+          "holdingNumber": "",
+          "pdfNormalizedSubstring": true,
+          "officialSection": "판결요지/다수의견",
+          "officialNormalizedStart": 0,
+          "officialNormalizedEnd": 580,
+          "matchedExcerptSimilarity": 0.99655172,
+          "normalizedDifferences": [
+            {
+              "op": "replace",
+              "pdf": "기지",
+              "official": "基地",
+              "pdfNormalizedOffset": 95,
+              "officialNormalizedOffset": 95
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

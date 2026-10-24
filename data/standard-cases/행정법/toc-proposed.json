@@ -1,0 +1,203 @@
+{
+ "subject": "administrative",
+ "proposed": [
+  {
+   "id": "hj-1",
+   "label": "제1편 행정법 총론",
+   "children": [
+    {
+     "id": "hj-1-1",
+     "label": "제1장 행정법 서론",
+     "children": [
+      {
+       "id": "hj-1-1-1",
+       "label": "제1절 행정과 행정법",
+       "children": []
+      },
+      {
+       "id": "hj-1-1-2",
+       "label": "제2절 행정법의 법원(法源)",
+       "children": []
+      },
+      {
+       "id": "hj-1-1-3",
+       "label": "제3절 행정법관계",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "hj-1-2",
+     "label": "제2장 행정작용법",
+     "children": [
+      {
+       "id": "hj-1-2-1",
+       "label": "제1관 행정행위",
+       "children": []
+      },
+      {
+       "id": "hj-1-2-2",
+       "label": "제2관 행정행위 이외의 작용형식",
+       "children": []
+      },
+      {
+       "id": "hj-1-2-3",
+       "label": "제2절 행정절차",
+       "children": []
+      },
+      {
+       "id": "hj-1-2-4",
+       "label": "제3절 정보공개",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "hj-1-3",
+     "label": "제3장 행정의 실효성 확보수단",
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "hj-2",
+   "label": "제2편 행정구제법",
+   "children": [
+    {
+     "id": "hj-2-1",
+     "label": "제1장 행정상 손해전보",
+     "children": [
+      {
+       "id": "hj-2-1-1",
+       "label": "제1관 공무원의 위법한 직무집행으로 인한 배상책임",
+       "children": []
+      },
+      {
+       "id": "hj-2-1-2",
+       "label": "제2관 영조물하자로 인한 배상책임",
+       "children": []
+      },
+      {
+       "id": "hj-2-1-3",
+       "label": "제3관 배상책임자",
+       "children": []
+      },
+      {
+       "id": "hj-2-1-4",
+       "label": "제2절 행정상 손실보상",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "hj-2-2",
+     "label": "제2장 행정쟁송법",
+     "children": [
+      {
+       "id": "hj-2-2-1",
+       "label": "제1절 이의신청",
+       "children": []
+      },
+      {
+       "id": "hj-2-2-2",
+       "label": "제2절 행정심판",
+       "children": []
+      },
+      {
+       "id": "hj-2-2-3",
+       "label": "제1관 항고소송의 소송요건",
+       "children": []
+      },
+      {
+       "id": "hj-2-2-4",
+       "label": "제2관 항고소송의 가구제",
+       "children": []
+      },
+      {
+       "id": "hj-2-2-5",
+       "label": "제3관 항고소송의 심리",
+       "children": []
+      },
+      {
+       "id": "hj-2-2-6",
+       "label": "제4관 항고소송의 판결",
+       "children": []
+      },
+      {
+       "id": "hj-2-2-7",
+       "label": "제5관 당사자소송",
+       "children": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hj-3",
+   "label": "제3편 행정조직법",
+   "children": [
+    {
+     "id": "hj-3-1",
+     "label": "제1장 행정조직법",
+     "children": []
+    },
+    {
+     "id": "hj-3-2",
+     "label": "제2장 지방자치법",
+     "children": []
+    },
+    {
+     "id": "hj-3-3",
+     "label": "제3장 공무원법",
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "hj-4",
+   "label": "제4편 개별행정법",
+   "children": [
+    {
+     "id": "hj-4-1",
+     "label": "제1장 경찰행정법",
+     "children": []
+    },
+    {
+     "id": "hj-4-2",
+     "label": "제2장 공물법",
+     "children": []
+    },
+    {
+     "id": "hj-4-3",
+     "label": "제3장 공기업법",
+     "children": []
+    },
+    {
+     "id": "hj-4-4",
+     "label": "제4장 개발행정법",
+     "children": []
+    },
+    {
+     "id": "hj-4-5",
+     "label": "제5장 경제행정법",
+     "children": []
+    },
+    {
+     "id": "hj-4-6",
+     "label": "제6장 조세행정법",
+     "children": []
+    },
+    {
+     "id": "hj-4-7",
+     "label": "제7장 환경행정법",
+     "children": []
+    },
+    {
+     "id": "hj-4-8",
+     "label": "제8장 사회복지행정법",
+     "children": []
+    }
+   ]
+  }
+ ]
+}

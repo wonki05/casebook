@@ -1,0 +1,19 @@
+{
+  "placements": 3236,
+  "official_fulltext_hashes_checked": 576,
+  "laws": 26,
+  "dataVersion": "ffac31e3e922e53b451b",
+  "required_web_assets_present": [
+    "index.html",
+    "data-manifest.json",
+    "data/cases.ca7c54bce80b37050a7ef3ab36aa34e6f4f7da908f85e48651126dfee5404217.json",
+    "data/laws.676038559f0b17fede5d1ec215f2d6c182ea2e3b64e667ea9c346609af611404.json",
+    "sw.js"
+  ],
+  "single_html_bytes": 36313887,
+  "static_package_check": "passed",
+  "http_check": "blocked by WinError 10013 when connecting to local HTTP server",
+  "full_browser_sweep": "stopped at user request; Playwright initialization stalled",
+  "browser_pwa_offline": "not completed",
+  "regression_tests_passed": 131
+}

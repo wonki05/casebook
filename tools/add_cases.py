@@ -22,7 +22,7 @@ id 는 관례대로 자동 생성: std-<subject>-NN · annual-<year>-NN · enban
 법률신문(annual) 사건은 annual.field(분야: tools/subjects.py 의 ANNUAL_FIELDS)를 가진다. --field 를 생략하면 기사 제목에서 추정하고,
 과목(subject)은 분야에서 정해진다(가족법 → civil, 형법각칙 → criminal, 지식재산권법 → ip …).
 """
-import argparse, json, os, re, sys
+import argparse, json, os, re, sys, unicodedata
 from pathlib import Path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from case_identity import identity, IDENTITY_FIELDS, validate_standard_source, standard_sources_by_decision, primary_case_number, docket_parts
@@ -204,11 +204,38 @@ def cmd_add(a):
         print('다음: python3 tools/fetch_lawgo.py --all-missing  →  python3 tools/build_data.py  →  make build check')
 
 
+def checked_case_display(value, record):
+    """표시용 병합번호만 바꾼다. 대표 번호와 조회 키는 유지한다."""
+    display = (value or '').strip()
+    compact = re.sub(r'\s+', '', unicodedata.normalize('NFKC', display))
+    parts = re.split(r'[·,;/]', compact)
+    for index, part in enumerate(parts):
+        if index and re.fullmatch(r'\d+', part):
+            continue  # 97므513·520 같은 축약 병합번호
+        if not part or ''.join(docket_parts(part)) != part:
+            raise ValueError(f'표시 사건번호 형식 오류: {value!r}')
+    primary = primary_case_number(display)
+    if primary != primary_case_number(record['caseNumber']) or primary != primary_case_number(record.get('lookupKey') or record['caseNumber']):
+        raise ValueError('--case는 기존 대표 사건번호와 lookupKey를 바꿀 수 없습니다')
+    return display
+
+
 def cmd_set(a):
     reg, toc = load()
     c = next((x for x in reg['cases'] if x['id'] == a.id), None)
     if not c:
         raise SystemExit('없는 id: ' + a.id)
+    display_guard = None
+    if getattr(a, 'case', None) is not None:
+        try:
+            original_identity = identity(c, fetched_citation(c['id']))
+            if any(c.get(key) != value for key, value in original_identity.items()):
+                raise ValueError('--case 적용 전 저장된 재판 ID가 일치해야 합니다; 식별 필드를 먼저 확인하세요')
+            display = checked_case_display(a.case, c)
+        except ValueError as exc:
+            raise SystemExit(str(exc)) from exc
+        display_guard = {key: c.get(key) for key in ('id', 'lookupKey') + IDENTITY_FIELDS}
+        c['caseNumber'] = display
     requested_subject = getattr(a, 'subject', None)
     old_subject = c['subject']
     if a.title: c['title'] = a.title
@@ -269,11 +296,19 @@ def cmd_set(a):
         if path and idx[path[-1]][1] != path:
             raise SystemExit('--toc는 상위부터 하위까지 이어지는 전체 경로여야 합니다')
     previous = c.get('decisionId')
-    c.update(identity(c, fetched_citation(c['id'])))
-    aliases = reg.setdefault('identityAliases', {})
-    aliases[c['id']] = c['decisionId']
-    if previous and previous != c['decisionId']:
-        aliases[previous] = c['decisionId']
+    try:
+        updated_identity = identity(c, fetched_citation(c['id']))
+    except ValueError as exc:
+        raise SystemExit(str(exc)) from exc
+    if display_guard is not None:
+        if any(c.get(key) != display_guard[key] for key in ('id', 'lookupKey')) or any(updated_identity[key] != display_guard[key] for key in IDENTITY_FIELDS):
+            raise SystemExit('--case는 표시만 수정합니다; id·lookupKey·caseId·decisionId 등 재판 식별 변경은 함께 할 수 없습니다')
+    c.update(updated_identity)
+    if display_guard is None:
+        aliases = reg.setdefault('identityAliases', {})
+        aliases[c['id']] = c['decisionId']
+        if previous and previous != c['decisionId']:
+            aliases[previous] = c['decisionId']
     save(reg=reg); print('수정:', a.id)
 
 
@@ -430,6 +465,7 @@ def main():
     p.add_argument('--decision-type', choices=['판결', '결정'])
     p.set_defaults(fn=cmd_add)
     p = sub.add_parser('set'); p.add_argument('id'); p.add_argument('--title'); p.add_argument('--toc'); p.add_argument('--result'); p.add_argument('--tags'); p.add_argument('--date'); p.add_argument('--enbanc', choices=['yes', 'no'])
+    p.add_argument('--case', help='표시용 병합 사건번호 수정 (기존 대표번호·lookupKey·모든 재판 ID 유지)')
     p.add_argument('--subject', choices=SUBJECTS, help='과목 변경 (표준판례는 새 --toc, 법률신문은 일치하는 --field 필요)')
     p.add_argument('--court'); p.add_argument('--decision-type', choices=['판결', '결정'])
     p.add_argument('--standard-source', help='PDF 원문과 대조한 표준판례 발췌 JSON 파일')

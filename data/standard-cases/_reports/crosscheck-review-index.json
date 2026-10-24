@@ -1,0 +1,108 @@
+{
+  "reviewer": "Codex",
+  "reviewedAt": "2026-10-24",
+  "subjects": {
+    "constitution": {
+      "totals": {
+        "candidates": 329,
+        "withStandardSource": 284,
+        "ok": 10,
+        "low-similarity": 7,
+        "meta-mismatch": 1,
+        "missing": 266,
+        "textNotCompared": 1
+      },
+      "flagged": 8,
+      "reviewFile": "crosscheck-constitution-review.json",
+      "coveredSequences": [
+        1,
+        2,
+        3,
+        151,
+        210,
+        214,
+        231,
+        322
+      ],
+      "unreviewed": []
+    },
+    "commercial": {
+      "totals": {
+        "candidates": 517,
+        "withStandardSource": 483,
+        "ok": 29,
+        "low-similarity": 1,
+        "meta-mismatch": 0,
+        "missing": 453,
+        "textNotCompared": 2
+      },
+      "flagged": 1,
+      "reviewFile": "crosscheck-commercial-administrative-review.json",
+      "coveredSequences": [
+        54
+      ],
+      "unreviewed": []
+    },
+    "administrative": {
+      "totals": {
+        "candidates": 486,
+        "withStandardSource": 454,
+        "ok": 14,
+        "low-similarity": 4,
+        "meta-mismatch": 0,
+        "missing": 436,
+        "textNotCompared": 0
+      },
+      "flagged": 4,
+      "reviewFile": "crosscheck-commercial-administrative-review.json",
+      "coveredSequences": [
+        3,
+        32,
+        60,
+        418
+      ],
+      "unreviewed": []
+    },
+    "civil": {
+      "totals": {
+        "candidates": 934,
+        "withStandardSource": 912,
+        "ok": 30,
+        "low-similarity": 3,
+        "meta-mismatch": 0,
+        "missing": 879,
+        "textNotCompared": 0
+      },
+      "flagged": 3,
+      "reviewFile": "crosscheck-civil-review.json",
+      "coveredSequences": [
+        300,
+        843,
+        860
+      ],
+      "unreviewed": []
+    },
+    "criminal": {
+      "totals": {
+        "candidates": 505,
+        "withStandardSource": 457,
+        "ok": 7,
+        "low-similarity": 3,
+        "meta-mismatch": 0,
+        "missing": 447,
+        "textNotCompared": 0
+      },
+      "flagged": 3,
+      "reviewFile": "crosscheck-criminal-review.json",
+      "coveredSequences": [
+        2,
+        3,
+        331
+      ],
+      "unreviewed": []
+    }
+  },
+  "unreviewed": [],
+  "policy": "공식 수집 원문과 검증된 PDF 문자열을 보존한다. 원출처 차이는 자동 교정하지 않는다.",
+  "flaggedTotal": 19
+}

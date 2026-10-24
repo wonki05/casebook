@@ -1,0 +1,501 @@
+{
+ "subject": "civil",
+ "proposed": [
+  {
+   "id": "mb-1",
+   "label": "제1편 총칙",
+   "children": [
+    {
+     "id": "mb-1-1",
+     "label": "제1장 통칙",
+     "children": []
+    },
+    {
+     "id": "mb-1-2",
+     "label": "제2장 인",
+     "children": [
+      {
+       "id": "mb-1-2-1",
+       "label": "제1절 능력",
+       "children": []
+      },
+      {
+       "id": "mb-1-2-2",
+       "label": "제2절 부재와 실종",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "mb-1-3",
+     "label": "제3장 법인",
+     "children": [
+      {
+       "id": "mb-1-3-1",
+       "label": "제1절 총칙",
+       "children": []
+      },
+      {
+       "id": "mb-1-3-2",
+       "label": "제2절 설립",
+       "children": []
+      },
+      {
+       "id": "mb-1-3-3",
+       "label": "제3절 기관",
+       "children": []
+      },
+      {
+       "id": "mb-1-3-4",
+       "label": "제4절 해산",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "mb-1-4",
+     "label": "제4장 물건",
+     "children": []
+    },
+    {
+     "id": "mb-1-5",
+     "label": "제5장 법률행위",
+     "children": [
+      {
+       "id": "mb-1-5-1",
+       "label": "제1절 총칙",
+       "children": []
+      },
+      {
+       "id": "mb-1-5-2",
+       "label": "제2절 의사표시",
+       "children": []
+      },
+      {
+       "id": "mb-1-5-3",
+       "label": "제3절 대리",
+       "children": []
+      },
+      {
+       "id": "mb-1-5-4",
+       "label": "제4절 무효와 취소",
+       "children": []
+      },
+      {
+       "id": "mb-1-5-5",
+       "label": "제5절 조건과 기한",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "mb-1-6",
+     "label": "제6장 소멸시효",
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "mb-2",
+   "label": "제2편 물권",
+   "children": [
+    {
+     "id": "mb-2-1",
+     "label": "제1장 총칙",
+     "children": []
+    },
+    {
+     "id": "mb-2-2",
+     "label": "제2장 점유권",
+     "children": []
+    },
+    {
+     "id": "mb-2-3",
+     "label": "제3장 소유권",
+     "children": [
+      {
+       "id": "mb-2-3-1",
+       "label": "제1절 소유권의 한계",
+       "children": []
+      },
+      {
+       "id": "mb-2-3-2",
+       "label": "제2절 소유권의 취득",
+       "children": []
+      },
+      {
+       "id": "mb-2-3-3",
+       "label": "제3절 공동소유",
+       "children": []
+      },
+      {
+       "id": "mb-2-3-4",
+       "label": "제4절 명의신탁",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "mb-2-4",
+     "label": "제4장 지상권",
+     "children": []
+    },
+    {
+     "id": "mb-2-5",
+     "label": "제5장 지역권",
+     "children": []
+    },
+    {
+     "id": "mb-2-6",
+     "label": "제6장 전세권",
+     "children": []
+    },
+    {
+     "id": "mb-2-7",
+     "label": "제7장 유치권",
+     "children": []
+    },
+    {
+     "id": "mb-2-8",
+     "label": "제8장 질권",
+     "children": []
+    },
+    {
+     "id": "mb-2-9",
+     "label": "제9장 저당권",
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "mb-3",
+   "label": "제3편 채권",
+   "children": [
+    {
+     "id": "mb-3-1",
+     "label": "제1장 총칙",
+     "children": [
+      {
+       "id": "mb-3-1-1",
+       "label": "제1절 채권의 목적",
+       "children": []
+      },
+      {
+       "id": "mb-3-1-2",
+       "label": "제2절 채권의 효력",
+       "children": []
+      },
+      {
+       "id": "mb-3-1-3",
+       "label": "제1관 총칙",
+       "children": []
+      },
+      {
+       "id": "mb-3-1-4",
+       "label": "제2관 불가분채권과 불가분채무",
+       "children": []
+      },
+      {
+       "id": "mb-3-1-5",
+       "label": "제3관 연대채무",
+       "children": []
+      },
+      {
+       "id": "mb-3-1-6",
+       "label": "제3관 보증채무",
+       "children": []
+      },
+      {
+       "id": "mb-3-1-7",
+       "label": "제4절 채권의 양도",
+       "children": []
+      },
+      {
+       "id": "mb-3-1-8",
+       "label": "제5절 채무의 인수",
+       "children": []
+      },
+      {
+       "id": "mb-3-1-9",
+       "label": "제1관 변제",
+       "children": []
+      },
+      {
+       "id": "mb-3-1-10",
+       "label": "제2관 공탁",
+       "children": []
+      },
+      {
+       "id": "mb-3-1-11",
+       "label": "제3관 상계",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "mb-3-2",
+     "label": "제2장 계약",
+     "children": [
+      {
+       "id": "mb-3-2-1",
+       "label": "제1관 계약의 성립",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-2",
+       "label": "제2관 계약의 효력",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-3",
+       "label": "제3관 계약의 해지, 해제",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-4",
+       "label": "제2절 증여",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-5",
+       "label": "제1관 총칙",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-6",
+       "label": "제2관 매매의 효력",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-7",
+       "label": "제4절 소비대차",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-8",
+       "label": "제5절 사용대차",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-9",
+       "label": "제6절 임대차",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-10",
+       "label": "제7절 도급",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-11",
+       "label": "제8절 위임",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-12",
+       "label": "제9절 조합",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-13",
+       "label": "제10절 화해",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "mb-3-3",
+     "label": "제3장 사무관리",
+     "children": []
+    },
+    {
+     "id": "mb-3-4",
+     "label": "제4장 부당이득",
+     "children": []
+    },
+    {
+     "id": "mb-3-5",
+     "label": "제5장 불법행위",
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "mb-4",
+   "label": "제4편 친족",
+   "children": [
+    {
+     "id": "mb-4-1",
+     "label": "제2장 가족의 범위와 자의 성과 본",
+     "children": []
+    },
+    {
+     "id": "mb-4-2",
+     "label": "제3장 혼인",
+     "children": [
+      {
+       "id": "mb-4-2-1",
+       "label": "제1절 약혼",
+       "children": []
+      },
+      {
+       "id": "mb-4-2-2",
+       "label": "제2절 혼인의 성립",
+       "children": []
+      },
+      {
+       "id": "mb-4-2-3",
+       "label": "제3절 혼인의 무효와 취소",
+       "children": []
+      },
+      {
+       "id": "mb-4-2-4",
+       "label": "제4절 혼인의 효력",
+       "children": []
+      },
+      {
+       "id": "mb-4-2-5",
+       "label": "제1관 협의상 이혼",
+       "children": []
+      },
+      {
+       "id": "mb-4-2-6",
+       "label": "제2관 재판상 이혼",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "mb-4-3",
+     "label": "제4장 부모와 자",
+     "children": [
+      {
+       "id": "mb-4-3-1",
+       "label": "제1절 친생자",
+       "children": []
+      },
+      {
+       "id": "mb-4-3-2",
+       "label": "제1관 입양의 요건과 효력",
+       "children": []
+      },
+      {
+       "id": "mb-4-3-3",
+       "label": "제2관 입양의 무효와 취소",
+       "children": []
+      },
+      {
+       "id": "mb-4-3-4",
+       "label": "제2관 친권의 효력",
+       "children": []
+      },
+      {
+       "id": "mb-4-3-5",
+       "label": "제3관 친권의 상실, 일시 정지 및 일부 제한",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "mb-4-4",
+     "label": "제5장 후견",
+     "children": [
+      {
+       "id": "mb-4-4-1",
+       "label": "제1절 후견계약",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "mb-4-5",
+     "label": "제6장 부양",
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "mb-5",
+   "label": "제5편 상속",
+   "children": [
+    {
+     "id": "mb-5-1",
+     "label": "제1장 상속",
+     "children": [
+      {
+       "id": "mb-5-1-1",
+       "label": "제1절 총칙",
+       "children": []
+      },
+      {
+       "id": "mb-5-1-2",
+       "label": "제2절 상속인",
+       "children": []
+      },
+      {
+       "id": "mb-5-1-3",
+       "label": "제1관 일반적 효력",
+       "children": []
+      },
+      {
+       "id": "mb-5-1-4",
+       "label": "제3관 상속재산의 분할",
+       "children": []
+      },
+      {
+       "id": "mb-5-1-5",
+       "label": "제1관 총칙",
+       "children": []
+      },
+      {
+       "id": "mb-5-1-6",
+       "label": "제2관 단순승인",
+       "children": []
+      },
+      {
+       "id": "mb-5-1-7",
+       "label": "제3관 한정승인",
+       "children": []
+      },
+      {
+       "id": "mb-5-1-8",
+       "label": "제4관 포기",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "mb-5-2",
+     "label": "제2장 유언",
+     "children": [
+      {
+       "id": "mb-5-2-1",
+       "label": "제1절 총칙",
+       "children": []
+      },
+      {
+       "id": "mb-5-2-2",
+       "label": "제2절 유언의 방식",
+       "children": []
+      },
+      {
+       "id": "mb-5-2-3",
+       "label": "제3절 유언의 효력",
+       "children": []
+      },
+      {
+       "id": "mb-5-2-4",
+       "label": "제4절 유언의 집행",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "mb-5-3",
+     "label": "제3장 유류분",
+     "children": []
+    }
+   ]
+  }
+ ]
+}

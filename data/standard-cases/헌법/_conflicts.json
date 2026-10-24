@@ -1,0 +1,802 @@
+{
+ "stage0": [
+  {
+   "seq": 10,
+   "no": 2,
+   "page": 14,
+   "kind": "numbering-skip",
+   "note": "항목으로 보이지 않아 건너뜀(이전 9): 공직선거법 제58조 제1항 본문 등 위헌소원사건(헌재 2022. 11. 24. 2021헌바301)"
+  },
+  {
+   "seq": 152,
+   "no": 1,
+   "page": 165,
+   "kind": "numbering-skip",
+   "note": "항목으로 보이지 않아 건너뜀(이전 151): 선례(헌재 2004. 3. 25. 2001헌마710; 2014. 3. 27. 2011헌바42)에 따라, 공무"
+  },
+  {
+   "seq": 263,
+   "no": 263,
+   "page": 269,
+   "kind": "reference",
+   "note": "탄핵소추사유 → 제3편 국가조직(입법부) 참조 (다른 편 참조, 사건 아님)"
+  },
+  {
+   "seq": 265,
+   "no": 266,
+   "page": 273,
+   "kind": "reference",
+   "note": "정당해산심판의 의의와 기능, 정당해산 사유 → 제1편 헌법총론(헌법의 기본원리) 참조 (다른 편 참조, 사건 아님)"
+  }
+ ],
+ "stage3": [
+  {
+   "seq": 25,
+   "no": 25,
+   "chunk": "c002",
+   "decisionId": "cc-2008heonba141-20110331-decision",
+   "caseNumber": "2008헌바141등",
+   "kind": "registry-text",
+   "note": "std-constitution-22.issues, std-constitution-22.holdings",
+   "registryIds": [
+    "std-constitution-22"
+   ]
+  },
+  {
+   "seq": 41,
+   "no": 41,
+   "chunk": "c004",
+   "decisionId": "cc-99heonma139-20010321-decision",
+   "caseNumber": "99헌마139등",
+   "kind": "registry-text",
+   "note": "std-constitution-33.issues, std-constitution-33.holdings",
+   "registryIds": [
+    "std-constitution-33"
+   ]
+  },
+  {
+   "seq": 61,
+   "no": 61,
+   "chunk": "c005",
+   "decisionId": "cc-95heonga16-19980430-decision",
+   "caseNumber": "95헌가16",
+   "kind": "registry-text",
+   "note": "std-constitution-51.issues, std-constitution-51.holdings",
+   "registryIds": [
+    "std-constitution-51"
+   ]
+  },
+  {
+   "seq": 69,
+   "no": 69,
+   "chunk": "c005",
+   "decisionId": "cc-89heonga95-19900903-decision",
+   "caseNumber": "89헌가95",
+   "kind": "registry-text",
+   "note": "std-constitution-53.issues, std-constitution-53.holdings",
+   "registryIds": [
+    "std-constitution-53"
+   ]
+  },
+  {
+   "seq": 88,
+   "no": 88,
+   "chunk": "c006",
+   "decisionId": "cc-96heonga18-19961226-decision",
+   "caseNumber": "96헌가18",
+   "kind": "registry-text",
+   "note": "std-constitution-64.issues, std-constitution-64.holdings",
+   "registryIds": [
+    "std-constitution-64"
+   ]
+  },
+  {
+   "seq": 90,
+   "no": 90,
+   "chunk": "c006",
+   "decisionId": "cc-89heonga37-19890524-decision",
+   "caseNumber": "89헌가37등",
+   "kind": "registry-text",
+   "note": "std-constitution-84.issues, std-constitution-84.holdings",
+   "registryIds": [
+    "std-constitution-84"
+   ]
+  },
+  {
+   "seq": 92,
+   "no": 92,
+   "chunk": "c007",
+   "decisionId": "cc-96heonga18-19961226-decision",
+   "caseNumber": "96헌가18",
+   "kind": "registry-text",
+   "note": "std-constitution-64.issues, std-constitution-64.holdings",
+   "registryIds": [
+    "std-constitution-64"
+   ]
+  },
+  {
+   "seq": 93,
+   "no": 93,
+   "chunk": "c007",
+   "decisionId": "cc-98heonma363-19991223-decision",
+   "caseNumber": "98헌마363",
+   "kind": "registry-text",
+   "note": "std-constitution-67.issues, std-constitution-67.holdings",
+   "registryIds": [
+    "std-constitution-67"
+   ]
+  },
+  {
+   "seq": 94,
+   "no": 94,
+   "chunk": "c007",
+   "decisionId": "cc-2008heonba141-20110331-decision",
+   "caseNumber": "2008헌바141등",
+   "kind": "registry-text",
+   "note": "std-constitution-22.issues, std-constitution-22.holdings",
+   "registryIds": [
+    "std-constitution-22"
+   ]
+  },
+  {
+   "seq": 98,
+   "no": 98,
+   "chunk": "c007",
+   "decisionId": "cc-96heonga2-19960216-decision",
+   "caseNumber": "96헌가2등",
+   "kind": "overlap-synthesized",
+   "note": "겹침 재판 — 종합 standardSource 적용(등록부 텍스트와 달라도 차단하지 않음)",
+   "registryIds": [
+    "std-constitution-24",
+    "std-criminal-06"
+   ]
+  },
+  {
+   "seq": 123,
+   "no": 123,
+   "chunk": "c008",
+   "decisionId": "cc-2016heonma344-20180830-decision",
+   "caseNumber": "2016헌마344등",
+   "kind": "registry-text",
+   "note": "std-constitution-98.issues, std-constitution-98.holdings",
+   "registryIds": [
+    "std-constitution-98"
+   ]
+  },
+  {
+   "seq": 135,
+   "no": 135,
+   "chunk": "c009",
+   "decisionId": "cc-2005heonma165-20060629-decision",
+   "caseNumber": "2005헌마165등",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-constitution-124"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 137,
+   "no": 137,
+   "chunk": "c010",
+   "decisionId": "cc-95heonga16-19980430-decision",
+   "caseNumber": "95헌가16",
+   "kind": "registry-text",
+   "note": "std-constitution-51.issues, std-constitution-51.holdings",
+   "registryIds": [
+    "std-constitution-51"
+   ]
+  },
+  {
+   "seq": 146,
+   "no": 146,
+   "chunk": "c011",
+   "decisionId": "cc-2017heonma416-20201223-decision",
+   "caseNumber": "2017헌마416",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "annual-2020-74",
+    "std-constitution-134"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 162,
+   "no": 162,
+   "chunk": "c012",
+   "decisionId": "cc-2011heonba172-20141030-decision",
+   "caseNumber": "2011헌바172등",
+   "kind": "overlap-synthesized",
+   "note": "겹침 재판 — 종합 standardSource 적용(등록부 텍스트와 달라도 차단하지 않음)",
+   "registryIds": [
+    "std-constitution-65",
+    "std-administrative-267"
+   ]
+  },
+  {
+   "seq": 168,
+   "no": 168,
+   "chunk": "c013",
+   "decisionId": "cc-2000heonma91-20010719-decision",
+   "caseNumber": "2000헌마91등",
+   "kind": "registry-text",
+   "note": "std-constitution-11.issues, std-constitution-11.holdings",
+   "registryIds": [
+    "std-constitution-11"
+   ]
+  },
+  {
+   "seq": 186,
+   "no": 186,
+   "chunk": "c014",
+   "decisionId": "cc-95heonba3-19951228-decision",
+   "caseNumber": "95헌바3",
+   "kind": "registry-text",
+   "note": "std-constitution-03.issues, std-constitution-03.holdings",
+   "registryIds": [
+    "std-constitution-03"
+   ]
+  },
+  {
+   "seq": 203,
+   "no": 203,
+   "chunk": "c015",
+   "decisionId": "cc-95heonga6-19970716-decision",
+   "caseNumber": "95헌가6등",
+   "kind": "registry-text",
+   "note": "std-constitution-83.issues, std-constitution-83.holdings",
+   "registryIds": [
+    "std-constitution-83"
+   ]
+  },
+  {
+   "seq": 205,
+   "no": 205,
+   "chunk": "c015",
+   "decisionId": "cc-2003heonga5-20051222-decision",
+   "caseNumber": "2003헌가5등",
+   "kind": "registry-text",
+   "note": "std-constitution-77.issues, std-constitution-77.holdings",
+   "registryIds": [
+    "std-constitution-77"
+   ]
+  },
+  {
+   "seq": 218,
+   "no": 218,
+   "chunk": "c016",
+   "decisionId": "cc-2018heonma1162-20220127-decision",
+   "caseNumber": "2018헌마1162등",
+   "kind": "registry-text",
+   "note": "std-constitution-136.issues, std-constitution-136.holdings",
+   "registryIds": [
+    "std-constitution-136"
+   ]
+  },
+  {
+   "seq": 223,
+   "no": 223,
+   "chunk": "c016",
+   "decisionId": "cc-2019heonra6-20200527-decision",
+   "caseNumber": "2019헌라6등",
+   "kind": "registry-text",
+   "note": "std-constitution-204.issues, std-constitution-204.holdings",
+   "registryIds": [
+    "std-constitution-204"
+   ]
+  },
+  {
+   "seq": 225,
+   "no": 225,
+   "chunk": "c016",
+   "decisionId": "cc-2004heonna1-20040514-decision",
+   "caseNumber": "2004헌나1",
+   "kind": "registry-text",
+   "note": "std-constitution-205.issues, std-constitution-205.holdings",
+   "registryIds": [
+    "std-constitution-205"
+   ]
+  },
+  {
+   "seq": 226,
+   "no": 226,
+   "chunk": "c016",
+   "decisionId": "cc-2004heonna1-20040514-decision",
+   "caseNumber": "2004헌나1",
+   "kind": "registry-text",
+   "note": "std-constitution-205.issues, std-constitution-205.holdings",
+   "registryIds": [
+    "std-constitution-205"
+   ]
+  },
+  {
+   "seq": 227,
+   "no": 227,
+   "chunk": "c016",
+   "decisionId": "cc-96heonra2-19970716-decision",
+   "caseNumber": "96헌라2",
+   "kind": "registry-text",
+   "note": "std-constitution-198.issues, std-constitution-198.holdings",
+   "registryIds": [
+    "std-constitution-198"
+   ]
+  },
+  {
+   "seq": 229,
+   "no": 229,
+   "chunk": "c017",
+   "decisionId": "cc-2004heonna1-20040514-decision",
+   "caseNumber": "2004헌나1",
+   "kind": "registry-text",
+   "note": "std-constitution-205.issues, std-constitution-205.holdings",
+   "registryIds": [
+    "std-constitution-205"
+   ]
+  },
+  {
+   "seq": 232,
+   "no": 232,
+   "chunk": "c017",
+   "decisionId": "cc-2006heonma788-20110830-decision",
+   "caseNumber": "2006헌마788",
+   "kind": "registry-text",
+   "note": "std-constitution-75.issues, std-constitution-75.holdings",
+   "registryIds": [
+    "std-constitution-75"
+   ]
+  },
+  {
+   "seq": 263,
+   "no": 264,
+   "chunk": "c018",
+   "decisionId": "cc-2004heonna1-20040514-decision",
+   "caseNumber": "2004헌나1",
+   "kind": "registry-text",
+   "note": "std-constitution-205.issues, std-constitution-205.holdings",
+   "registryIds": [
+    "std-constitution-205"
+   ]
+  },
+  {
+   "seq": 266,
+   "no": 268,
+   "chunk": "c018",
+   "decisionId": "cc-2014heonma7-20140227-decision",
+   "caseNumber": "2014헌마7",
+   "kind": "registry-text",
+   "note": "std-constitution-239.issues, std-constitution-239.holdings",
+   "registryIds": [
+    "std-constitution-239"
+   ]
+  },
+  {
+   "seq": 267,
+   "no": 269,
+   "chunk": "c018",
+   "decisionId": "cc-96heonra2-19970716-decision",
+   "caseNumber": "96헌라2",
+   "kind": "registry-text",
+   "note": "std-constitution-198.issues, std-constitution-198.holdings",
+   "registryIds": [
+    "std-constitution-198"
+   ]
+  },
+  {
+   "seq": 274,
+   "no": 276,
+   "chunk": "c019",
+   "decisionId": "cc-2002heonra1-20031030-decision",
+   "caseNumber": "2002헌라1",
+   "kind": "registry-text",
+   "note": "std-constitution-196.issues, std-constitution-196.holdings",
+   "registryIds": [
+    "std-constitution-196"
+   ]
+  },
+  {
+   "seq": 279,
+   "no": 281,
+   "chunk": "c019",
+   "decisionId": "cc-2009heonra8-20091029-decision",
+   "caseNumber": "2009헌라8등",
+   "kind": "registry-text",
+   "note": "std-constitution-200.issues, std-constitution-200.holdings",
+   "registryIds": [
+    "std-constitution-200"
+   ]
+  },
+  {
+   "seq": 282,
+   "no": 284,
+   "chunk": "c019",
+   "decisionId": "cc-2022heonra4-20230323-decision",
+   "caseNumber": "2022헌라4",
+   "kind": "registry-text",
+   "note": "annual-2023-06.issues, annual-2023-06.holdings, std-constitution-251.issues, std-constitution-251.holdings",
+   "registryIds": [
+    "annual-2023-06",
+    "std-constitution-251"
+   ]
+  },
+  {
+   "seq": 283,
+   "no": 285,
+   "chunk": "c019",
+   "decisionId": "cc-2002heonra1-20031030-decision",
+   "caseNumber": "2002헌라1",
+   "kind": "registry-text",
+   "note": "std-constitution-196.issues, std-constitution-196.holdings",
+   "registryIds": [
+    "std-constitution-196"
+   ]
+  },
+  {
+   "seq": 287,
+   "no": 289,
+   "chunk": "c019",
+   "decisionId": "cc-89heonma221-19940428-decision",
+   "caseNumber": "89헌마221",
+   "kind": "registry-text",
+   "note": "std-constitution-214.issues, std-constitution-214.holdings",
+   "registryIds": [
+    "std-constitution-214"
+   ]
+  },
+  {
+   "seq": 290,
+   "no": 292,
+   "chunk": "c019",
+   "decisionId": "cc-2004heonba81-20080731-decision",
+   "caseNumber": "2004헌바81",
+   "kind": "registry-text",
+   "note": "std-constitution-42.issues, std-constitution-42.holdings",
+   "registryIds": [
+    "std-constitution-42"
+   ]
+  },
+  {
+   "seq": 291,
+   "no": 293,
+   "chunk": "c020",
+   "decisionId": "cc-99heonma494-20011129-decision",
+   "caseNumber": "99헌마494",
+   "kind": "registry-text",
+   "note": "std-constitution-32.issues, std-constitution-32.holdings",
+   "registryIds": [
+    "std-constitution-32"
+   ]
+  },
+  {
+   "seq": 295,
+   "no": 297,
+   "chunk": "c020",
+   "decisionId": "cc-99heonma139-20010321-decision",
+   "caseNumber": "99헌마139등",
+   "kind": "registry-text",
+   "note": "std-constitution-33.issues, std-constitution-33.holdings",
+   "registryIds": [
+    "std-constitution-33"
+   ]
+  },
+  {
+   "seq": 297,
+   "no": 299,
+   "chunk": "c020",
+   "decisionId": "cc-99heonma139-20010321-decision",
+   "caseNumber": "99헌마139등",
+   "kind": "registry-text",
+   "note": "std-constitution-33.issues, std-constitution-33.holdings",
+   "registryIds": [
+    "std-constitution-33"
+   ]
+  },
+  {
+   "seq": 314,
+   "no": 316,
+   "chunk": "c020",
+   "decisionId": "cc-92heonma68-19921001-decision",
+   "caseNumber": "92헌마68등",
+   "kind": "registry-text",
+   "note": "std-constitution-267.issues, std-constitution-267.holdings",
+   "registryIds": [
+    "std-constitution-267"
+   ]
+  },
+  {
+   "seq": 319,
+   "no": 321,
+   "chunk": "c020",
+   "decisionId": "cc-2001heonma152-20010927-decision",
+   "caseNumber": "2001헌마152",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-constitution-280"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 323,
+   "no": 325,
+   "chunk": "c021",
+   "decisionId": "cc-2001heonma152-20010927-decision",
+   "caseNumber": "2001헌마152",
+   "kind": "registry-no-source",
+   "registryIds": [
+    "std-constitution-280"
+   ],
+   "note": "등록부에 standardSource 없이 있음 — add 는 \"이미 있음\"으로 건너뛰므로 검증 후 set --standard-source 로 붙인다"
+  },
+  {
+   "seq": 324,
+   "no": 326,
+   "chunk": "c021",
+   "decisionId": "cc-91heonma111-19920128-decision",
+   "caseNumber": "91헌마111",
+   "kind": "registry-text",
+   "note": "std-constitution-254.issues, std-constitution-254.holdings",
+   "registryIds": [
+    "std-constitution-254"
+   ]
+  },
+  {
+   "seq": 325,
+   "no": 327,
+   "chunk": "c021",
+   "decisionId": "cc-91heonma111-19920128-decision",
+   "caseNumber": "91헌마111",
+   "kind": "registry-text",
+   "note": "std-constitution-254.issues, std-constitution-254.holdings",
+   "registryIds": [
+    "std-constitution-254"
+   ]
+  },
+  {
+   "seq": 22,
+   "no": 22,
+   "chunk": "c002",
+   "decisionId": "cc-2008heonba141-20110331-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 진정소급입법과 부진정소급입법 (22번, p.26) / 소급입법금지원칙(2)：친일재산 국가귀속법 사례 (25번, p.29) / 헌법 제11조 제1항 후문 사유의 성격 (94번, p.95)"
+  },
+  {
+   "seq": 34,
+   "no": 34,
+   "chunk": "c003",
+   "decisionId": "cc-99heonma139-20010321-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 영토권 (34번, p.37) / 헌법상 보장된 기본권의 의미 (41번, p.51) / 공권력의 행사 또는 불행사 (297번, p.295) / 조약의 공권력성 (299번, p.296)"
+  },
+  {
+   "seq": 53,
+   "no": 53,
+   "chunk": "c004",
+   "decisionId": "cc-95heonga16-19980430-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 기본권 경합 (53번, p.60) / 법률의 명확성원칙(2) (61번, p.66) / 음란과 저속의 구별기준 및 성표현물 출판금지의 위헌 여부 (137번, p.141)"
+  },
+  {
+   "seq": 55,
+   "no": 55,
+   "chunk": "c004",
+   "decisionId": "cc-89heonga95-19900903-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 일반적 법률유보조항, 기본권 제한입법의 수권 규정, 기본권 제한입법의 한계 규정 (55번, p.62) / 과잉금지원칙의 의의와 근거 (69번, p.71)"
+  },
+  {
+   "seq": 67,
+   "no": 67,
+   "chunk": "c005",
+   "decisionId": "cc-96heonga18-19961226-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 공공복리 (67번, p.70) / 소비자의 자기결정권과 자도소주구입명령제도 (88번, p.90) / 비교되는 사실관계의 동일성 판단기준 (92번, p.93)"
+  },
+  {
+   "seq": 89,
+   "no": 89,
+   "chunk": "c006",
+   "decisionId": "cc-89heonga37-19890524-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 평등권의 법적 성격 (89번, p.91) / 평등의 입법자 구속 여부 (90번, p.92)"
+  },
+  {
+   "seq": 71,
+   "no": 71,
+   "chunk": "c005",
+   "decisionId": "cc-98heonma363-19991223-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 목적의 정당성 (71번, p.73) / 평등의 심사 기준 (93번, p.94)"
+  },
+  {
+   "seq": 24,
+   "no": 24,
+   "chunk": "c002",
+   "decisionId": "cc-96heonga2-19960216-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 소급입법금지원칙(1)：공소시효 정지 사례 (24번, p.27) / 개별사건법률금지의 원칙과 평등 (98번, p.98)"
+  },
+  {
+   "seq": 108,
+   "no": 108,
+   "chunk": "c008",
+   "decisionId": "cc-2016heonma344-20180830-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 적법절차원칙과 공정한 재판을 받을 권리와의 관계 (108번, p.108) / 디엔에이신원확인정보의 관리 (123번, p.122)"
+  },
+  {
+   "seq": 68,
+   "no": 68,
+   "chunk": "c005",
+   "decisionId": "cc-2011heonba172-20141030-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 공공복리와 공공필요의 관계 (68번, p.71) / 민간기업에 의한 공용수용 (162번, p.179)"
+  },
+  {
+   "seq": 11,
+   "no": 11,
+   "chunk": "c001",
+   "decisionId": "cc-2000heonma91-20010719-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 비례대표의석배분방식으로서 1인 1표제의 위헌성 (11번, p.15) / 기탁금의 위헌 여부(1) (168번, p.185)"
+  },
+  {
+   "seq": 3,
+   "no": 3,
+   "chunk": "c001",
+   "decisionId": "cc-95heonba3-19951228-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 헌법 개별규정의 헌법소원심판 대상성 및 헌법규정 간의 우열관계 (3번, p.6) / 군인․공무원 등의 국가배상청구권 제한 (186번, p.207)"
+  },
+  {
+   "seq": 87,
+   "no": 87,
+   "chunk": "c006",
+   "decisionId": "cc-95heonga6-19970716-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 동성동본금혼사건 (87번, p.89) / 동성동본금혼 (203번, p.222)"
+  },
+  {
+   "seq": 81,
+   "no": 81,
+   "chunk": "c006",
+   "decisionId": "cc-2003heonga5-20051222-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 일반적 인격권 (81번, p.80) / 부성(父姓主義)의 원칙 (205번, p.224)"
+  },
+  {
+   "seq": 148,
+   "no": 148,
+   "chunk": "c011",
+   "decisionId": "cc-2018heonma1162-20220127-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 정보위원회 회의를 비공개하도록 규정한 국회법 조항에 관한 사건 (148번, p.161) / 의사공개원칙 (218번, p.236)"
+  },
+  {
+   "seq": 222,
+   "no": 222,
+   "chunk": "c016",
+   "decisionId": "cc-2019heonra6-20200527-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 수정동의의 범위 (222번, p.239) / 무제한토론 (223번, p.240)"
+  },
+  {
+   "seq": 224,
+   "no": 224,
+   "chunk": "c016",
+   "decisionId": "cc-2004heonna1-20040514-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 국회 인사청문회 견해와 해임건의의 효력 (224번, p.240) / 국회 탄핵소추사유(1) (225번, p.241) / 국회 탄핵소추사유(2) (226번, p.242) / 대통령의 중요정책 국민투표 부의권의 성격 (229번, p.244) / 탄핵소추와 적법절차 (264번, p.270)"
+  },
+  {
+   "seq": 215,
+   "no": 215,
+   "chunk": "c016",
+   "decisionId": "cc-96heonra2-19970716-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 다수결원칙(1) (215번, p.234) / 국회자율권의 범위와 한계 (227번, p.242) / 권한쟁의심판의 당사자능력(1) (269번, p.275)"
+  },
+  {
+   "seq": 79,
+   "no": 79,
+   "chunk": "c006",
+   "decisionId": "cc-2006heonma788-20110830-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 헌법 제10조의 의미 (79번, p.78) / 국가의 외교행위에 대한 사법심사 (232번, p.246)"
+  },
+  {
+   "seq": 58,
+   "no": 58,
+   "chunk": "c005",
+   "decisionId": "cc-98heonba70-19990527-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 의회유보원칙：KBS 방송수신료 사례 (58번, p.64) / 의회유보의 의미 (235번, p.249)"
+  },
+  {
+   "seq": 265,
+   "no": 267,
+   "chunk": "c018",
+   "decisionId": "cc-2014heonma7-20140227-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 정당해산심판에서 가처분의 허용와 정당활동의 자유 (267번, p.273) / 정당해산심판절차에서 민사소송법의 준용 (268번, p.274)"
+  },
+  {
+   "seq": 213,
+   "no": 213,
+   "chunk": "c016",
+   "decisionId": "cc-2002heonra1-20031030-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 자유위임원칙(1) (213번, p.233) / 권한쟁의심판의 대상적격(4) (276번, p.280) / 권한쟁의심판의 권리보호이익(심판의 이익) (285번, p.288)"
+  },
+  {
+   "seq": 217,
+   "no": 217,
+   "chunk": "c016",
+   "decisionId": "cc-2009heonra8-20091029-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 일사부재의원칙 (217번, p.235) / 권한쟁의심판의 당사자적격(4) (281번, p.284)"
+  },
+  {
+   "seq": 281,
+   "no": 283,
+   "chunk": "c019",
+   "decisionId": "cc-2022heonra4-20230323-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 권한쟁의심판의 당사자적격(6) (283번, p.286) / 권한쟁의심판의 권한침해가능성 (284번, p.287)"
+  },
+  {
+   "seq": 239,
+   "no": 239,
+   "chunk": "c017",
+   "decisionId": "cc-89heonma221-19940428-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 국무총리의 헌법상의 지위 (239번, p.251) / 헌법재판소법 제68조 제1항과 같은 조 제2항 헌법소원심판의 법적 성격 및 관계 (289번, p.291)"
+  },
+  {
+   "seq": 44,
+   "no": 44,
+   "chunk": "c004",
+   "decisionId": "cc-2004heonba81-20080731-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 태아의 기본권 주체성 (44번, p.53) / 태아의 청구인능력 (292번, p.292)"
+  },
+  {
+   "seq": 33,
+   "no": 33,
+   "chunk": "c003",
+   "decisionId": "cc-99heonma494-20011129-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 재외동포：재외동포에 대한 차별적 대우 (33번, p.36) / 외국인의 청구인능력 (293번, p.293)"
+  },
+  {
+   "seq": 231,
+   "no": 231,
+   "chunk": "c017",
+   "decisionId": "cc-93heonma186-19960229-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 소위 통치행위에 대한 사법심사 (231번, p.246) / 통치행위의 공권력성 (301번, p.296)"
+  },
+  {
+   "seq": 305,
+   "no": 307,
+   "chunk": "c020",
+   "decisionId": "cc-92heonma68-19921001-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 행정계획의 대상적격 (307번, p.299) / 현재성 요건의 예외 (316번, p.304)"
+  },
+  {
+   "seq": 319,
+   "no": 321,
+   "chunk": "c020",
+   "decisionId": "cc-2001heonma152-20010927-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 청구기간의 의의 (321번, p.307) / 권리보호이익의 의의 (325번, p.310)"
+  },
+  {
+   "seq": 286,
+   "no": 288,
+   "chunk": "c019",
+   "decisionId": "cc-91heonma111-19920128-decision",
+   "kind": "duplicate",
+   "note": "같은 재판이 여러 항목에 실림: 헌법소원심판의 본질 (288번, p.290) / 예외적인 심판이익의 인정 사유 (326번, p.311) / 부수적 규범통제 (327번, p.311)"
+  }
+ ]
+}
