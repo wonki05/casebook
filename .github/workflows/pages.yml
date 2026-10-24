@@ -174,11 +174,14 @@ jobs:
           if len(data['cases']) != manifest['caseCount']:
               raise RuntimeError('Published case count differs from the manifest')
           by_id = {case['id']: case for case in data['cases']}
-          samples = ['std-civil-04', 'std-civil-122', 'std-civil-934']
+          samples = ['std-civil-25', 'std-civil-62', 'std-civil-70', 'std-civil-141', 'std-civil-918', 'std-civil-379']
           for case_id in samples:
               full = asset(by_id[case_id]['fullTextRef'])
-              if not isinstance(full, list) or not any(block.get('text') for block in full):
-                  raise RuntimeError('Published full text is empty: ' + case_id)
+              if not isinstance(full, list) or sum(len(block.get('text', '')) for block in full) < 500:
+                  raise RuntimeError('Published full text is empty or truncated: ' + case_id)
+          for case_id in ['std-civil-141', 'std-civil-918']:
+              if '네플라' not in by_id[case_id]['source']['label']:
+                  raise RuntimeError('Supplemental source label is missing: ' + case_id)
           civil = [case for case in data['cases'] if case['page'] == 'std-civil']
           print(json.dumps({'dataVersion': manifest['version'], 'caseCount': len(data['cases']),
                             'pages': dict(Counter(case['page'] for case in data['cases'])),

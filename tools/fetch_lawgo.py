@@ -13,12 +13,14 @@ Usage:
 텍스트는 요약·수정 없이 페이지 그대로. 실패하면 <id>.missing.json 에 사유 기록.
 """
 import argparse, json, os, re, sys, time
+from pathlib import Path
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REG = os.path.join(ROOT, 'data', 'registry.json')
 FETCHED = os.path.join(ROOT, 'data', 'fetched')
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from casenum import lookup_key, is_cc  # noqa: E402
+from case_identity import case_number_list, court_id  # noqa: E402
 
 UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36 lawbook-study/1.0'
 
@@ -27,17 +29,27 @@ EXTRACT_JS = r"""
 () => {
   const root = document.querySelector('#conScroll') || document.querySelector('#contentBody');
   if (!root) return {error:'no root', title: document.title, url: location.href};
-  const toText = (el) => { const c = el.cloneNode(true);
-    c.querySelectorAll('br').forEach(b=>b.replaceWith('\n'));
-    c.querySelectorAll('p,div,li,tr,h5,h6').forEach(b=>b.appendChild(document.createTextNode('\n')));
-    return c.textContent.replace(/ /g,' ').replace(/[ \t]+\n/g,'\n').replace(/\n{3,}/g,'\n\n').trim(); };
-  const sections=[]; let cur=null;
-  Array.from(root.children).forEach(ch=>{
-    if(/^H[1-6]$/.test(ch.tagName)){ cur={heading:ch.textContent.trim(), text:''}; sections.push(cur); }
-    else if(ch.tagName==='INPUT'||ch.tagName==='SCRIPT'||ch.tagName==='STYLE'){ }
-    else { const t=toText(ch); if(!t) return; if(cur) cur.text+=(cur.text?'\n':'')+t; else sections.push({heading:'', text:t}); }
+  const blocks = new Set(['P','DIV','LI','TR','H1','H2','H3','H4','H5','H6']);
+  const clean = text => text.replace(/\u00a0/g,' ').replace(/[ \t]+\n/g,'\n').replace(/\n{3,}/g,'\n\n').trim();
+  const nodeText = node => {
+    if (node.nodeType === 3) return node.nodeValue || '';
+    if (node.nodeType !== 1 || ['INPUT','SCRIPT','STYLE'].includes(node.tagName)) return '';
+    if (node.tagName === 'BR') return '\n';
+    const value = Array.from(node.childNodes).map(nodeText).join('');
+    return blocks.has(node.tagName) ? '\n' + value + '\n' : value;
+  };
+  const sections = []; let current = {heading:'', text:''};
+  const flush = () => {
+    current.text = clean(current.text);
+    if (current.heading || current.text) sections.push(current);
+  };
+  Array.from(root.childNodes).forEach(node => {
+    if (node.nodeType === 1 && /^H[1-6]$/.test(node.tagName)) {
+      flush(); current = {heading:node.textContent.trim(), text:''};
+    } else current.text += nodeText(node);
   });
-  const h2=document.querySelector('#contentBody h2'); const sub=document.querySelector('#contentBody .subtit1');
+  flush();
+  const h2 = document.querySelector('#contentBody h2'), sub = document.querySelector('#contentBody .subtit1');
   return {pageTitle:h2?h2.textContent.trim():document.title, citation:sub?sub.textContent.trim():'', url:location.href, sections};
 }
 """
@@ -81,7 +93,7 @@ def fetch_one_pw(page, t):
             m = next((re.search(r'(precSeq|detcSeq)=(\d+)', s or '') for s in srcs if re.search(r'(precSeq|detcSeq)=(\d+)', s or '')), None)
             if not m:
                 body = page.evaluate("() => document.body ? document.body.innerText.slice(0, 300) : ''")
-                return {'id': t['id'], 'ok': False, 'reason': '한글주소 조회 실패(미게재 가능): ' + body.replace('\n', ' ')[:120], 'triedUrls': tried}
+                return {'id': t['id'], 'ok': False, 'reason': '한글주소 조회 실패 — 공식 검색·병합번호 확인 필요(미게재 확정 아님): ' + body.replace('\n', ' ')[:120], 'triedUrls': tried}
             kind, seq = ('prec' if m.group(1) == 'precSeq' else 'detc'), m.group(2)
         url = direct_url(kind, seq)
         tried.append(url)
@@ -109,7 +121,7 @@ def fetch_requests(targets, delay, force):
                 html = s.get(url, timeout=30).text
                 m = re.search(r'(precSeq|detcSeq)=(\d+)', html)
                 if not m:
-                    results.append({'id': t['id'], 'ok': False, 'reason': '한글주소 조회 실패(미게재 가능)', 'triedUrls': tried}); time.sleep(delay); continue
+                    results.append({'id': t['id'], 'ok': False, 'reason': '한글주소 조회 실패 — 공식 검색·병합번호 확인 필요(미게재 확정 아님)', 'triedUrls': tried}); time.sleep(delay); continue
                 kind, seq = ('prec' if m.group(1) == 'precSeq' else 'detc'), m.group(2)
             url = direct_url(kind, seq); tried.append(url)
             html = s.get(url, timeout=30).text
@@ -117,20 +129,7 @@ def fetch_requests(targets, delay, force):
             root = soup.select_one('#conScroll') or soup.select_one('#contentBody')
             if not root:
                 results.append({'id': t['id'], 'ok': False, 'reason': 'conScroll 없음 — 본문이 JS 로 로드되는 페이지이면 --engine playwright 를 쓰세요', 'triedUrls': tried}); time.sleep(delay); continue
-            sections, cur = [], None
-            for ch in root.find_all(recursive=False):
-                if ch.name and re.match(r'h[1-6]$', ch.name):
-                    cur = {'heading': ch.get_text(strip=True), 'text': ''}; sections.append(cur)
-                elif ch.name in ('input', 'script', 'style'):
-                    continue
-                else:
-                    txt = soup_text(ch)
-                    if not txt:
-                        continue
-                    if cur:
-                        cur['text'] += ('\n' if cur['text'] else '') + txt
-                    else:
-                        sections.append({'heading': '', 'text': txt})
+            sections = soup_sections(root)
             h2 = soup.select_one('#contentBody h2'); sub = soup.select_one('#contentBody .subtit1')
             data = {'pageTitle': h2.get_text(strip=True) if h2 else soup.title.get_text(strip=True) if soup.title else '', 'citation': sub.get_text(strip=True) if sub else '', 'url': url, 'sections': sections}
             results.append(finish(t, kind, seq, url, data, tried))
@@ -140,28 +139,126 @@ def fetch_requests(targets, delay, force):
     return results
 
 
-def soup_text(el):
-    for br in el.find_all('br'):
-        br.replace_with('\n')
-    for b in el.find_all(['p', 'div', 'li', 'tr', 'h5', 'h6']):
-        b.append('\n')
-    t = el.get_text().replace(' ', ' ')
-    t = re.sub(r'[ \t]+\n', '\n', t)
-    t = re.sub(r'\n{3,}', '\n\n', t)
-    return t.strip()
+def _soup_node_text(node):
+    """Read every DOM node, keeping inline text adjacent and block boundaries apart."""
+    from bs4 import Comment, NavigableString
+    if isinstance(node, Comment):
+        return ''
+    if isinstance(node, NavigableString):
+        return str(node)
+    name = (getattr(node, 'name', '') or '').lower()
+    if name in ('input', 'script', 'style'):
+        return ''
+    if name == 'br':
+        return '\n'
+    text = ''.join(_soup_node_text(child) for child in node.children)
+    return '\n' + text + '\n' if name in ('p', 'div', 'li', 'tr', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6') else text
 
+
+def _clean_text(text):
+    text = text.replace('\u00a0', ' ')
+    return re.sub(r'\n{3,}', '\n\n', re.sub(r'[ \t]+\n', '\n', text)).strip()
+
+
+def soup_text(el):
+    return _clean_text(_soup_node_text(el))
+
+
+def soup_sections(root):
+    """Equivalent to EXTRACT_JS, including direct text and inline elements."""
+    sections = []
+    current = {'heading': '', 'text': ''}
+    def flush():
+        current['text'] = _clean_text(current['text'])
+        if current['heading'] or current['text']:
+            sections.append(current)
+    for node in root.contents:
+        name = getattr(node, 'name', '') or ''
+        if re.fullmatch(r'h[1-6]', name, re.I):
+            flush()
+            current = {'heading': node.get_text().strip(), 'text': ''}
+        else:
+            current['text'] += _soup_node_text(node)
+    flush()
+    return sections
 
 # ---------------- common ----------------
+def citation_identity(citation):
+    """Read official court/date/dockets, expanding abbreviated merged members."""
+    match = re.search(r'(\d{4})\.\s*(\d{1,2})\.\s*(\d{1,2})\.', citation or '')
+    if not match:
+        return None
+    tail = (citation or '')[match.end():]
+    # Constitutional pages put the docket before the date and identify the
+    # deciding panel, e.g. [전원재판부 2011헌바129,172(병합), 2014. 10. 30.].
+    # The panel is not a separate court; keep the same strict court/date/member
+    # checks in finish() once this official citation grammar is recognized.
+    prefix = (citation or '')[:match.start()].strip(' []【】')
+    panel = re.fullmatch(r'(?:헌법재판소\s+)?(?:전원재판부|지정재판부)\s+(.+),', prefix)
+    if panel:
+        number = panel.group(1).strip()
+        members = case_number_list(number)
+        if (not members or not all(re.fullmatch(r'\d{2,4}헌[가-힣]+\d+', item) for item in members)
+                or not re.fullmatch(r'\s*(?:,\s*[^\[\]【】\n]+)?[\]】]?\s*', tail)):
+            return None
+        return {'court': '헌법재판소',
+                'decisionDate': f'{int(match[1]):04d}-{int(match[2]):02d}-{int(match[3]):02d}',
+                'caseNumber': number, 'members': members, 'decisionType': '결정'}
+    rest = re.match(r'\s*(?:선고|자)\s*(.*?)\s*(판결|결정)', tail)
+    if not rest:
+        return None
+    number = re.sub(r'\s*(?:전원합의체|소부)\s*$', '', rest.group(1)).strip()
+    members = case_number_list(number)
+    if not members:
+        return None
+    return {'court': citation[:match.start()].strip(' []【】'),
+            'decisionDate': f'{int(match[1]):04d}-{int(match[2]):02d}-{int(match[3]):02d}',
+            'caseNumber': number, 'members': members, 'decisionType': rest.group(2)}
+
+
 def finish(t, kind, seq, url, data, tried):
     if not data or data.get('error') or not data.get('sections'):
         return {'id': t['id'], 'ok': False, 'reason': 'extract failed: ' + str((data or {}).get('error')), 'triedUrls': tried}
     key = t['lookupKey']
-    if key not in (data.get('citation') or '') and key not in (data.get('pageTitle') or '') and not any(key in (s.get('text') or '')[:400] for s in data['sections'][:3]):
-        return {'id': t['id'], 'ok': False, 'reason': f'페이지의 사건번호가 {key} 와 일치하지 않음: {data.get("citation")}', 'triedUrls': tried}
+    metadata = citation_identity(data.get('citation') or '')
+    reason = None
+    if metadata:
+        if key not in metadata['members']:
+            reason = f'페이지의 사건번호가 {key} 와 일치하지 않음: {data.get("citation")}'
+        elif t.get('decisionDate') and t['decisionDate'] != metadata['decisionDate']:
+            reason = f'선고일 불일치: {t["decisionDate"]} / {metadata["decisionDate"]}'
+        elif t.get('decisionType') and t['decisionType'] != metadata['decisionType']:
+            reason = f'재판유형 불일치: {t["decisionType"]} / {metadata["decisionType"]}'
+        if not reason and t.get('court'):
+            try:
+                if court_id(t['court'], t.get('courtId')) != court_id(metadata['court']):
+                    reason = f'법원 불일치: {t["court"]} / {metadata["court"]}'
+            except ValueError as error:
+                reason = str(error)
+    elif t.get('decisionDate') or t.get('court'):
+        reason = '공식 인용문에서 법원·선고일·사건번호를 확인하지 못함'
+    elif key not in (data.get('citation') or '') and key not in (data.get('pageTitle') or '') and not any(key in (s.get('text') or '')[:400] for s in data['sections'][:3]):
+        reason = f'페이지의 사건번호가 {key} 와 일치하지 않음: {data.get("citation")}'
+    if reason:
+        return {'id': t['id'], 'ok': False, 'reason': reason, 'triedUrls': tried}
     rec = {'id': t['id'], 'caseNumber': t['caseNumber'], 'lookupKey': key, 'kind': kind, 'seq': str(seq), 'sourceUrl': url,
            'pageTitle': data.get('pageTitle', ''), 'citation': data.get('citation', ''), 'sections': data['sections']}
     return {'id': t['id'], 'ok': True, 'rec': rec, 'chars': sum(len(s.get('text', '')) for s in data['sections'])}
 
+
+def cached_official_location(target, record):
+    """Reuse only a matching official cache's already-verified serial number."""
+    if not isinstance(record, dict) or record.get('id') != target['id']:
+        return None
+    kind, seq = record.get('kind'), str(record.get('seq') or '')
+    if kind not in ('prec', 'detc') or not seq.isdigit():
+        return None
+    url = direct_url(kind, seq)
+    if record.get('sourceUrl') != url or record.get('sourceLabel', '국가법령정보센터') != '국가법령정보센터':
+        return None
+    if not finish(target, kind, seq, url, record, [])['ok']:
+        return None
+    return {'kind': kind, 'seq': seq}
 
 def main():
     ap = argparse.ArgumentParser()
@@ -193,8 +290,16 @@ def main():
                 continue
             if os.path.exists(miss) and a.all_missing and not a.retry_missing:
                 continue
+            target = {key: c[key] for key in ('court', 'courtId', 'decisionDate', 'decisionType') if c.get(key)}
+            target.update({'id': cid, 'caseNumber': c['caseNumber'], 'lookupKey': c.get('lookupKey') or lookup_key(c['caseNumber'])})
             lg = c.get('lawgo') or {}
-            targets.append({'id': cid, 'caseNumber': c['caseNumber'], 'lookupKey': c.get('lookupKey') or lookup_key(c['caseNumber']), 'kind': lg.get('kind'), 'seq': lg.get('seq')})
+            if not lg.get('seq') and os.path.exists(out):
+                try:
+                    lg = cached_official_location(target, json.loads(Path(out).read_text(encoding='utf-8'))) or lg
+                except (OSError, ValueError):
+                    pass
+            target.update({'kind': lg.get('kind'), 'seq': lg.get('seq')})
+            targets.append(target)
     if not targets:
         print('조회할 사건이 없습니다.'); return
     print(f'{len(targets)}건 조회 ({a.engine})')

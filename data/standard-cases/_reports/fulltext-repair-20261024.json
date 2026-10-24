@@ -1,0 +1,72 @@
+{
+  "asOf": "2026-10-24",
+  "screenshots": 7,
+  "uniqueJudgments": 6,
+  "repairedPlacements": 6,
+  "records": [
+    {
+      "id": "std-civil-141",
+      "caseNumber": "91다32053",
+      "source": "네플라 수록본 · 보충 자료",
+      "sourceUrl": "https://www.nepla.ai/case/대법원/91다32053",
+      "fullTextChars": 13473,
+      "sha256": "5c1dad328d717b58ea1f5cd46d61f5b380309dfa7165409dba78eb1a77831c51"
+    },
+    {
+      "id": "std-civil-25",
+      "caseNumber": "86다카1522",
+      "source": "국가법령정보센터",
+      "sourceUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=103645",
+      "fullTextChars": 2474,
+      "sha256": "9e9d24d097f7c7f367730e596b055fc0bd8136f4e770d7d232687e7c102b58b9"
+    },
+    {
+      "id": "std-civil-379",
+      "caseNumber": "91다44407",
+      "source": "국가법령정보센터",
+      "sourceUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=203452",
+      "fullTextChars": 1171,
+      "sha256": "1ec11d6b9b4788bd8281aea21675399bf59113b9bf798238c326de9a7f3a5ed5"
+    },
+    {
+      "id": "std-civil-62",
+      "caseNumber": "93다2636",
+      "source": "국가법령정보센터",
+      "sourceUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=201416",
+      "fullTextChars": 4183,
+      "sha256": "693f73151a31b0ae4ddc3ad19c4fae2ae592209a944ccc6d86c30a595c92b5ab"
+    },
+    {
+      "id": "std-civil-70",
+      "caseNumber": "2013다79894",
+      "source": "국가법령정보센터",
+      "sourceUrl": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=184528",
+      "fullTextChars": 6042,
+      "sha256": "08deb1667772a716049dc0a1db16554ca2d3bf8d660a22f9d53045e9084cabbf"
+    },
+    {
+      "id": "std-civil-918",
+      "caseNumber": "91다32053",
+      "source": "네플라 수록본 · 보충 자료",
+      "sourceUrl": "https://www.nepla.ai/case/대법원/91다32053",
+      "fullTextChars": 13473,
+      "sha256": "ace6b055f262385640e7514fe40a2d55b9dc28d12cbdc26fe17e60096840a201"
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "std-civil-398",
+      "caseNumber": "72다1159",
+      "reason": "검증된 판결문 전문 미확보; 표준판례 발췌로 대체하지 않음",
+      "confirmedUnpublished": false
+    }
+  ],
+  "registryAndIdentityChanges": 0,
+  "collectorFixes": [
+    "direct text-node preservation",
+    "abbreviated merged-docket validation",
+    "court/date/type identity checks",
+    "verified official serial reuse"
+  ],
+  "sourceTextPolicy": "원문 내용은 재작성하지 않음; 웹 전시용 링크·행 번호·마크다운 표지만 제거"
+}
