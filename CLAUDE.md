@@ -46,6 +46,7 @@ cases.json + laws.json + 공통 화면 ── build_web.py ─► output/web/ �
 
 ## 작업 레시피
 ### A. 표준판례를 PDF 에서 채우기 (헌법·행정법·민법·형법·상법 각 과목 페이지)
+- 다섯 PDF 전체를 일괄 전사·검증·등록하는 분업 절차(스크립트 뼈대 → 하위 모델 전사 → 스크립트 대조 → 상위 모델 판정 → `add_cases.py`)는 `spec/TASK-pdf2md.md`(작업 지시서) 와 `spec/PIPELINE-pdf2md.md`(설계) 를 따른다. Claude Code·Codex 어느 쪽이든 같은 문서로 진행하며, 아래 1~7 은 소량·수동 작업 절차다.
 1. PDF 원본은 `data/standard-cases/표준판례(2023년 개정판)_<과목>.pdf` 다(법학전문대학원협의회 발행본 5건이 이미 있다. 다른 판본은 `data/inbox/standard_pdf/` 에 둔다). 과목별 폴더 `data/standard-cases/<과목>/` 는 PDF 를 Markdown 으로 옮긴 중간 산출물 자리다(비어 있어도 된다).
 2. `python3 tools/pdf_standard_cases.py "data/standard-cases/표준판례(2023년 개정판)_상법.pdf" [--subject commercial]`
    → 같은 폴더에 `candidates-<subject>.json` (사건번호·선고일·법원·전원합의체 여부·주변 목차 문맥·표 행). `--subject` 를 생략하면 파일명의 한글 과목명으로 추정한다(id 또는 한글명 모두 허용).
@@ -87,10 +88,10 @@ cases.json + laws.json + 공통 화면 ── build_web.py ─► output/web/ �
 - 표준판례로 등록하는 전원합의체 판결은 `--enbanc` 를 붙인다(`set <id> --enbanc yes|no` 로 고칠 수 있다).
 - 병합사건은 `--case "2023헌바274·351"` 처럼 표시용 번호를 주면 조회는 첫 번호로 한다.
 - 출처: 대법원 판례속보(https://www.scourt.go.kr → 판례속보), 헌법재판소 최근 주요결정(https://www.ccourt.go.kr → 최근 주요결정). 선고 직후에는 law.go.kr 미게재일 수 있다 → 등록해 두고 나중에 재시도.
-- 헌법재판소 주요결정·대법원 전원합의체 페이지는 과목 칩(**전체분야**·헌법·행정법·민법·형법·상법) 아래 **선고연도 탭**(**전체연도** + 최신 → 과거; 여러 개를 함께 고를 수 있고, 넓은 화면은 줄바꿈·좁은 화면은 가로로 민다)으로 고른다. 칩 필터는 결정·판결의 과목(`--subject`)을 쓴다.
+- 헌법재판소 주요결정·대법원 전원합의체 페이지는 과목 칩(**전체분야**·헌법·행정법·민법·형법·상법) 아래 **선고연도 탭**(**전체연도** + 최신 → 과거; 넓은 화면은 줄바꿈·좁은 화면은 가로로 민다)으로 고른다. 칩 필터는 결정·판결의 과목(`--subject`)을 쓴다.
   - 헌법재판소: 2026 → 2010 한 해씩(`tools/subjects.py` 의 `CCOURT_YEARS`, 현재 2010–2026).
-  - 전원합의체(건국 후 전부 수록 예정): 2026 → 2020 은 한 해씩(`ENBANC_YEARS`, 현재 2020–2026), 그 앞은 2010년대 · 2000년대 · … · 1940년대 10년 단위(`ENBANC_FROM` = 1948 이 든 연대까지).
-  - 탭은 build_data.py 가 `cases.json` 의 `yearTabs` 로 만들며, 등록부 선고일이 범위 밖이면 그쪽으로 넓힌다(전원합의체의 과거 쪽은 연대 탭으로).
+  - 전원합의체(건국 후 전부 수록 예정): **시대 탭** 2020년 이후(`ENBANC_YEARS`, 현재 2020–2026) · 2010년대 · 2000년대 · … · 1940년대(`ENBANC_FROM` = 1948 부터) 가운데 하나를 고르면 그 시대 전체가 보이고, 아래 줄에 그 시대의 **개별 연도**가 나와 해마다(여러 개도) 고를 수 있다.
+  - 탭은 build_data.py 가 `cases.json` 의 `yearTabs` 로 만들며, 등록부 선고일이 범위 밖이면 그쪽으로 넓힌다(전원합의체의 과거 쪽은 연대 탭으로). 고른 탭·연도는 `localStorage` 의 `lawbook:ccourt`·`lawbook:enbanc` 에 기억된다.
 
 ### D. 법령 추가·갱신 (주요법령 페이지)
 - legalize-kr 형식 Markdown(법제처 국가법령정보 미러)을 `data/laws_md/` 에 넣고 `tools/build_laws.py` 의 `LAW_INDEX` 에 (파일명, id, 그룹, 약칭) 추가 → `make laws build check`.

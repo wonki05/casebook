@@ -68,8 +68,8 @@ mark.cur{outline:2px solid var(--accent)}
 @media(min-width:860px) and (max-width:1179px){.pagetabs .sec-l{display:none;white-space:nowrap}}
 
 /* column */
-.column{max-width:720px;margin:0 auto;padding:26px 20px calc(72px + env(safe-area-inset-bottom))}
-.column.wide{max-width:1180px}
+.column{max-width:900px;margin:0 auto;padding:26px 20px calc(72px + env(safe-area-inset-bottom))}
+.column.wide{max-width:1475px}
 .runhead{font:500 12px/1.4 var(--sans);letter-spacing:.06em;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:4px 6px;margin:0 0 16px}
 .runhead b{font-weight:600;color:var(--ink-2)}
 .pagehead h1{font:700 26px/1.3 var(--sans);margin:0 0 6px;letter-spacing:-.01em}
@@ -121,9 +121,18 @@ mark.cur{outline:2px solid var(--accent)}
 .astat b{font-weight:600;color:var(--ink-2)}
 .astat .lk{font:500 12.5px/1.6 var(--sans);color:var(--accent-ink);text-decoration:underline;text-underline-offset:3px}
 .annual-note{margin:18px 0 0;padding:16px 18px;border:1px dashed var(--rule-2);border-radius:10px;color:var(--ink-2);font-size:14px}
-/* 헌법재판소 주요결정·대법원 전원합의체: 과목 칩 아래 선고연도 탭(전체연도 + 연도·연대 여러 개 선택) — 넓은 화면은 줄바꿈, 좁은 화면은 가로로 밀기 */
+/* 헌법재판소 주요결정·대법원 전원합의체: 과목 칩 아래 선고연도 탭(전체연도 + 연도 / 시대 탭과 그 아래 연도 줄) — 넓은 화면은 줄바꿈, 좁은 화면은 가로로 밀기 */
 .ytabs{display:flex;align-items:flex-start;gap:6px;margin:10px 0 0}
+.ycol{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:6px}
+.ycol .years{flex:none}
+.ycol .years.sub{gap:5px;padding-top:7px;border-top:1px dashed var(--rule-2)}
+.years.sub .yr{height:30px;padding:0 9px;font-size:13px;line-height:28px}
 @media(min-width:600px){.years.wrap{flex-wrap:wrap;overflow:visible;-webkit-mask-image:none;mask-image:none}}
+
+.list-tools{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px;margin:12px 0 4px}
+.list-tools [data-list-open]{display:inline-flex;align-items:center;justify-content:center;width:auto;min-height:32px;padding:6px 10px;border:1px solid var(--rule-2);border-radius:8px;background:transparent;color:var(--ink-2);font:500 12px/1.4 var(--sans);white-space:nowrap;cursor:pointer}
+.list-tools [data-list-open]:hover{border-color:var(--accent);color:var(--accent-ink);background:var(--accent-soft)}
+@media print{.list-tools{display:none}}
 
 /* book-style table of contents (in column) */
 .toc{margin:14px 0 0}
@@ -190,8 +199,8 @@ body.cs-drag{user-select:none;-webkit-user-select:none;cursor:col-resize}
 .cs-body{padding:18px 20px calc(34px + env(safe-area-inset-bottom));display:flex;gap:28px;align-items:flex-start}
 @media(min-width:1024px){.cs-body{padding:22px 28px 40px}}
 .cs-main{flex:1 1 0;min-width:0}
-.cs.full .cs-body{max-width:1180px;margin:0 auto;justify-content:center}
-.cs.full .cs-main{max-width:880px}
+.cs.full .cs-body{max-width:1475px;margin:0 auto;justify-content:center}
+.cs.full .cs-main{max-width:1100px}
 /* ===== outlines (노션식 개요) ===== */
 .outline{font-family:var(--sans);font-size:12.5px;line-height:1.45;color:var(--ink-2)}
 .outline .outline-h{font:600 11px/1.4 var(--sans);letter-spacing:.08em;color:var(--ink-3);margin:0 0 8px}
@@ -214,11 +223,11 @@ body.cs-drag{user-select:none;-webkit-user-select:none;cursor:col-resize}
 .ft-outline{display:none;flex:0 0 212px}
 .cs.wide .ft-outline.has{display:block;position:sticky;top:64px;align-self:flex-start;max-height:calc(100vh - 84px);overflow:auto;padding:4px 0 4px 12px;border-left:1px solid var(--rule);scrollbar-width:thin}
 .ft-outline.pop.has{display:block;flex:none;z-index:66}
-.cs.full .ft-outline.has{display:block}
+
 .ol-btn{display:none;align-items:center;gap:5px;margin-left:auto;padding:0 10px;height:32px;align-self:center;border:1px solid var(--rule-2);border-radius:8px;font:500 12.5px var(--sans);color:var(--ink-2);white-space:nowrap}
 .ol-btn .ic{width:15px;height:15px}
 .cs.has-ol:not(.wide) .ol-btn{display:inline-flex}
-.cs.full .ol-btn{display:none}
+
 .outline-btn{display:none;align-items:center;gap:5px;position:fixed;right:14px;top:calc(var(--top) + 10px);height:34px;padding:0 11px;border:1px solid var(--rule-2);border-radius:8px;font:500 12.5px var(--sans);color:var(--ink-2);background:var(--surface);box-shadow:0 2px 10px rgba(30,20,60,.08);z-index:38}
 .law-outline.pop{top:calc(var(--top) + 50px)}
 .outline-btn .ic{width:15px;height:15px}
@@ -308,7 +317,7 @@ body.cs-drag{user-select:none;-webkit-user-select:none;cursor:col-resize}
 .laws-top .tbtn{height:42px;padding:0 14px;border:1px solid var(--rule-2);border-radius:10px;font:500 14px var(--sans);color:var(--ink-2);display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
 .laws-side{display:none}
 .laws-body{display:flex;gap:clamp(34px,2.6vw,56px);align-items:flex-start;min-width:0}   /* 본문 ↔ 오른쪽 개요: 최소 34px(기존 28px의 120%), 화면 폭에 따라 최대 56px */
-.laws-main{flex:1 1 0;min-width:0;max-width:760px;position:relative}
+.laws-main{flex:1 1 0;min-width:0;max-width:950px;position:relative}
 .law-outline{display:none;flex:0 0 212px}
 @media(min-width:1180px){.law-outline{display:block;position:sticky;top:calc(var(--top) + 16px);max-height:calc(100vh - var(--top) - 32px);overflow:auto;padding:4px 0 4px 12px;border-left:1px solid var(--rule);scrollbar-width:thin}}
 .law-outline.pop{display:block;flex:none}
@@ -417,7 +426,7 @@ body.cs-drag{user-select:none;-webkit-user-select:none;cursor:col-resize}
 /* ===== 법령 모듈 ===== */
 .lw-index{font-family:var(--sans)}
 .lw-index .g{margin:0 0 14px}
-.lw-index .g h4{margin:0 0 4px;font:600 11.5px/1.4 var(--sans);letter-spacing:.08em;color:var(--ink-3);text-transform:uppercase}
+.lw-index .g summary{cursor:pointer;padding:6px 0;margin:0 0 4px;font:600 11.5px/1.4 var(--sans);letter-spacing:.08em;color:var(--ink-3);text-transform:uppercase}
 .lw-index button{border:0;background:none;cursor:pointer;display:flex;align-items:center;gap:8px;width:100%;text-align:left;padding:7px 10px;border-radius:8px;font:500 14px/1.35 var(--sans);color:var(--ink-2)}
 .lw-index button:hover{background:var(--accent-soft);color:var(--accent-ink)}
 .lw-index button[aria-current=true]{background:var(--accent-soft);color:var(--accent-ink);font-weight:700;box-shadow:inset 3px 0 0 var(--accent)}
@@ -602,7 +611,7 @@ window.LawsModule = (() => {
     return DATA.groups.map(g => {
       const laws = DATA.laws.filter(l => l.group === g.id);
       if (!laws.length) return '';
-      return `<div class="g"><h4>${esc(g.label)}</h4>${laws.map(l => `<button type="button" data-law="${esc(l.id)}" aria-current="${l.id === activeLawId}">${esc(l.name)}<span class="k">${(l.versions ? (l.versions.find(v => v.current) || l.versions[0]).articles.length : l.articles.length) + '개조'}</span></button>`).join('')}</div>`;
+      return `<details class="g" open><summary>${esc(g.label)}</summary>${laws.map(l => `<button type="button" data-law="${esc(l.id)}" aria-current="${l.id === activeLawId}">${esc(l.name)}<span class="k">${(l.versions ? (l.versions.find(v => v.current) || l.versions[0]).articles.length : l.articles.length) + '개조'}</span></button>`).join('')}</details>`;
     }).join('');
   }
 
@@ -796,6 +805,9 @@ const decisionYear = c => +String(c.decisionDate).slice(0, 4);
 const tabOf = (page, y) => tabsOf(page).find(t => y >= t.from && y <= t.to);
 const tabName = t => t.from === t.to ? `${t.from}년` : t.label;
 const YNOUN = { ccourt: ['결정이', '결정은'], enbanc: ['판례가', '판례는'] };
+const isEras = page => tabsOf(page).some(t => t.from !== t.to);
+const yearsIn = t => Array.from({ length: t.to - t.from + 1 }, (_, i) => t.to - i);
+const primList = v => Array.isArray(v) ? v.filter(x => typeof x === 'string' || typeof x === 'number').map(String) : null;   // 저장값 중 문자열·숫자만 읽는다(손상된 값으로 시작이 멈추지 않게)
 const NUMS = ['I','II','III','IV','V','VI','VII'];
 const MAXIMS = {
   'std-constitution': ['Fiat iustitia, ruat caelum.', '하늘이 무너져도 정의를 세우라'],
@@ -1032,7 +1044,12 @@ function entryHTML(c, terms) {
   </li>`;
 }
 const entries = (cases, terms) => `<ul class="entries">${cases.map(c => entryHTML(c, terms)).join('')}</ul>`;
-function treeHTML(pageId) {
+function listHTML(content) {
+  if (!content.includes('<details')) return content;
+  return `<div class="list-scope"><div class="list-tools" role="group" aria-label="목록 펼치기·접기"><button type="button" data-list-open="true">모두 펼치기</button><button type="button" data-list-open="false">모두 접기</button></div>${content}</div>`;
+}
+function treeHTML(pageId) { return listHTML(treeMarkup(pageId)); }
+function treeMarkup(pageId) {
   const pg = pageOf(pageId); const nodes = tree(pageId);
   if (pg.group === 'annual') {
     const terms = annualTerms(), narrowed = terms.length > 0 || S.annual.court !== 'all' || S.annual.enbanc;
@@ -1048,7 +1065,7 @@ function treeHTML(pageId) {
     return `<div class="toc">${nodes.map(node).join('')}</div>`;
   }
   const nn = YNOUN[pageId];
-  if (nn && !nodes.length) return `<div class="annual-note">${CASES.some(c => c.page === pageId && yrOn(pageId, decisionYear(c))) ? `조건에 맞는 ${nn[0]} 없습니다.` : (S.ytab[pageId] || []).length ? `${esc(yrLabel(pageId))} ${nn[1]} 아직 수록되지 않았습니다.` : `아직 수록된 ${nn[0]} 없습니다.`}</div>`;
+  if (nn && !nodes.length) return `<div class="annual-note">${CASES.some(c => c.page === pageId && yrOn(pageId, decisionYear(c))) ? `조건에 맞는 ${nn[0]} 없습니다.` : !yrNone(pageId) ? `${esc(yrLabel(pageId))} ${nn[1]} 아직 수록되지 않았습니다.` : `아직 수록된 ${nn[0]} 없습니다.`}</div>`;
   const month = m => `<details class="lv2" open><summary><span class="tri">▶</span><span>${esc(m.label)}</span><span class="lead"></span><span class="cnt">${m.count}</span></summary>${entries(m.cases)}</details>`;
   return `<div class="toc flat">${nodes.map(n => `<details class="lv1" open><summary><span class="tri">▶</span><span>${esc(n.label)}</span>${n.sub ? `<span class="cnt" style="min-width:0;text-align:left;color:var(--accent-ink)">${esc(n.sub)}</span>` : ''}<span class="lead"></span><span class="cnt">${n.count}</span></summary>${n.children && n.children.length ? n.children.map(month).join('') : entries(n.cases)}</details>`).join('')}</div>`;
 }
@@ -1176,51 +1193,90 @@ function ensureAnnualYear() {
   S.annual.years = YEARS.filter(x => x === y || S.annual.years.includes(x)); saveAnnual(); return true;
 }
 
-/* ---------- 헌법재판소 주요결정·대법원 전원합의체: 과목 칩 아래 선고연도 탭(여러 개 선택, 비우면 전체연도) ---------- */
+/* ---------- 헌법재판소 주요결정·대법원 전원합의체: 과목 칩 아래 선고연도 탭 ---------- */
+// 연도 탭(헌법재판소): 해마다 하나, 여러 개 선택. 시대 탭(전원합의체: 2020년 이후 · 2010년대 · … · 1940년대): 하나를 고르면
+// 그 시대 전체가 보이고 아래 줄에 그 시대의 연도가 나온다(여러 개 선택). S.ytab[page] = {tabs: [탭 id], years: [시대 안에서 고른 해]}, 모두 비면 전체연도.
 function initYearTabs() {
   const out = {};
   Object.keys(YTABS).forEach(page => {
-    const ids = tabsOf(page).map(t => t.id), st = load('lawbook:' + page, {}) || {};
-    let sel = Array.isArray(st.years) ? ids.filter(id => st.years.map(String).includes(id)) : null;   // 저장된 선택(빈 배열 = 전체연도)
+    const tabs = tabsOf(page), ids = tabs.map(t => t.id), raw = load('lawbook:' + page, {}), st = raw && typeof raw === 'object' && !Array.isArray(raw) ? raw : {};   // 객체가 아닌 저장값은 버린다
+    const saved = primList(st.tabs) || ('tabs' in st ? null : primList(st.years));   // 예전 저장 형식 {years: [탭]} 도 읽는다
+    let sel = saved && ids.filter(id => saved.includes(id)), years = [];
     if (!sel) { const has = new Set(CASES.filter(c => c.page === page).map(c => (tabOf(page, decisionYear(c)) || {}).id)); sel = [ids.find(id => has.has(id))].filter(Boolean); }   // 처음엔 수록된 최신 탭
-    out[page] = sel.length === ids.length ? [] : sel;
+    if (isEras(page)) {
+      sel = sel.slice(0, 1);
+      const era = tabs.find(t => t.id === sel[0]), ys = era && primList(st.tabs) && primList(st.years);
+      if (ys) years = yearsIn(era).filter(y => ys.includes(String(y)));
+      if (era && years.length === yearsIn(era).length) years = [];
+    } else if (sel.length === ids.length) sel = [];
+    out[page] = { tabs: sel, years };
   });
   return out;
 }
-const saveYearTabs = page => save('lawbook:' + page, { years: S.ytab[page] });
-const yrOn = (page, y) => { const sel = S.ytab[page]; if (!sel || !sel.length) return true; const t = tabOf(page, y); return !!t && sel.includes(t.id); };
-const yrLabel = page => (S.ytab[page] || []).map(id => tabName(tabsOf(page).find(t => t.id === id))).join(' · ') || '전체연도';
+const saveYearTabs = page => save('lawbook:' + page, S.ytab[page]);
+const yrNone = page => { const st = S.ytab[page]; return !st || (!st.tabs.length && !st.years.length); };
+const yrOn = (page, y) => {
+  const st = S.ytab[page]; if (!st) return true;
+  if (st.tabs.length) { const t = tabOf(page, y); if (!t || !st.tabs.includes(t.id)) return false; }
+  return !st.years.length || st.years.includes(y);
+};
+const yrLabel = page => { const st = S.ytab[page]; return yrNone(page) ? '전체연도' : st.years.length ? st.years.map(y => y + '년').join(' · ') : st.tabs.map(id => tabName(tabsOf(page).find(t => t.id === id))).join(' · '); };
 function yearTabsHTML(id) {
-  const page = S.page, sel = S.ytab[page] || [], cnt = {};
-  CASES.forEach(c => { if (c.page === page) { const t = tabOf(page, decisionYear(c)); if (t) cnt[t.id] = (cnt[t.id] || 0) + 1; } });
-  return `<div class="ytabs"${id ? ` id="${id}"` : ''} role="group" aria-label="선고연도 선택 (여러 개를 함께 고를 수 있습니다)"><button class="yr" data-ytab="all" aria-pressed="${!sel.length}">전체연도</button><div class="years wrap">${tabsOf(page).map(t => `<button class="yr${cnt[t.id] ? '' : ' none'}" data-ytab="${esc(t.id)}" aria-pressed="${sel.includes(t.id)}" title="${t.from === t.to ? t.from : `${t.from}–${t.to}`}년 · ${cnt[t.id] ? cnt[t.id] + '건' : '수록 예정'}">${esc(t.label)}</button>`).join('')}</div></div>`;
+  const page = S.page, st = S.ytab[page] || { tabs: [], years: [] }, cnt = {}, ycnt = {};
+  CASES.forEach(c => { if (c.page === page) { const y = decisionYear(c), t = tabOf(page, y); ycnt[y] = (ycnt[y] || 0) + 1; if (t) cnt[t.id] = (cnt[t.id] || 0) + 1; } });
+  const all = `<button class="yr" data-ytab="all" aria-pressed="${yrNone(page)}">전체연도</button>`;
+  const tab = t => `<button class="yr${cnt[t.id] ? '' : ' none'}" data-ytab="${esc(t.id)}" aria-pressed="${st.tabs.includes(t.id)}" title="${t.from === t.to ? t.from : `${t.from}–${t.to}`}년 · ${cnt[t.id] ? cnt[t.id] + '건' : '수록 예정'}">${esc(t.label)}</button>`;
+  if (!isEras(page)) return `<div class="ytabs"${id ? ` id="${id}"` : ''} role="group" aria-label="선고연도 선택 (여러 개를 함께 고를 수 있습니다)">${all}<div class="years wrap">${tabsOf(page).map(tab).join('')}</div></div>`;
+  const era = tabsOf(page).find(t => t.id === st.tabs[0]);
+  const year = y => `<button class="yr${ycnt[y] ? '' : ' none'}" data-yyear="${y}" aria-pressed="${st.years.includes(y)}" title="${y}년 · ${ycnt[y] ? ycnt[y] + '건' : '수록 예정'}">${y}</button>`;
+  return `<div class="ytabs"${id ? ` id="${id}"` : ''}>${all}<div class="ycol"><div class="years wrap" role="group" aria-label="시대 선택">${tabsOf(page).map(tab).join('')}</div>${era ? `<div class="years wrap sub" role="group" aria-label="${esc(era.label)} 가운데 연도 선택 (여러 개를 함께 고를 수 있습니다)">${yearsIn(era).map(year).join('')}</div>` : ''}</div></div>`;
 }
-/* 탭을 누르면 그 연도(연대)만 → 더 누르면 함께 표시, 모두 끄거나 모두 켜면 전체연도 */
+/* 연도 탭: 누르면 그 해만 → 더 누르면 함께, 모두 끄거나 모두 켜면 전체연도.
+   시대 탭: 누르면 그 시대 전체(이미 고른 시대를 다시 누르면 아래 줄 연도 선택을 푼다) */
 function toggleYearTab(id, btn) {
-  const page = S.page, ids = tabsOf(page).map(t => t.id), cur = S.ytab[page] || [];
-  const sel = id === 'all' ? [] : cur.includes(id) ? cur.filter(x => x !== id) : ids.filter(x => x === id || cur.includes(x));
-  S.ytab[page] = sel.length === ids.length ? [] : sel;
+  const page = S.page, st = S.ytab[page]; if (!st) return;
+  const ids = tabsOf(page).map(t => t.id), before = st.tabs.join(), focused = document.activeElement === btn, inPanel = !!(btn && btn.closest('#panelBody'));   // 다시 그리기 전에 패널 안 버튼인지 기억한다
+  if (id === 'all') { st.tabs = []; st.years = []; }
+  else if (isEras(page)) { st.tabs = [id]; st.years = []; }
+  else { const sel = st.tabs.includes(id) ? st.tabs.filter(x => x !== id) : ids.filter(x => x === id || st.tabs.includes(x)); st.tabs = sel.length === ids.length ? [] : sel; }
+  const rebuild = isEras(page) && st.tabs.join() !== before;   // 시대가 바뀌면 아래 연도 줄을 새로 그린다
+  saveYearTabs(page); renderYearTabs(rebuild);
+  if (!rebuild) { nudgeYear(btn); return; }
+  const nb = focused && (inPanel ? $('#panelBody') : $('#col')).querySelector(`.ytabs [data-ytab="${CSS.escape(id)}"]`);
+  if (nb) nb.focus({ preventScroll: true });
+}
+/* 시대 탭 아래 줄의 연도: 누르면 그 해만 → 더 누르면 함께, 모두 끄거나 모두 켜면 시대 전체 */
+function toggleEraYear(y, btn) {
+  const page = S.page, st = S.ytab[page], era = st && tabsOf(page).find(t => t.id === st.tabs[0]); if (!era) return;
+  const span = yearsIn(era), sel = st.years.includes(y) ? st.years.filter(x => x !== y) : span.filter(x => x === y || st.years.includes(x));
+  st.years = sel.length === span.length ? [] : sel;
   saveYearTabs(page); renderYearTabs(); nudgeYear(btn);
 }
-/* 과목 칩·연도 줄은 그대로 두고(가로 스크롤 유지) 눌림 상태와 목록만 다시 그린다 */
-function renderYearTabs() {
+/* 과목 칩·연도 줄은 그대로 두고(가로 스크롤 유지) 눌림 상태와 목록만 다시 그린다. rebuild 면 연도 줄도 새로 그린다 */
+function renderYearTabs(rebuild) {
   const page = S.page;
   if (S.view !== 'page' || !tabsOf(page).length || !$('#ylist')) return;
-  const sel = S.ytab[page] || [];
-  document.querySelectorAll('#col [data-ytab], #panelBody [data-ytab]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.ytab === 'all' ? !sel.length : sel.includes(b.dataset.ytab))));
+  const st = S.ytab[page];
+  if (rebuild) {
+    document.querySelectorAll('#col .ytabs, #panelBody .ytabs').forEach(el => { el.outerHTML = yearTabsHTML(el.closest('#panelBody') ? '' : 'ytabs'); });
+    document.querySelectorAll('#col .ytabs .years, #panelBody .ytabs .years').forEach(revealYears);
+  } else document.querySelectorAll('#col .ytabs .yr, #panelBody .ytabs .yr').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.yyear ? st.years.includes(+b.dataset.yyear) : b.dataset.ytab === 'all' ? yrNone(page) : st.tabs.includes(b.dataset.ytab))));
   $('#ylist').innerHTML = treeHTML(page);
   const nav = $('#cs .pn'), current = byId.get(S.caseId);
   if (nav && current && current.page === page) nav.outerHTML = caseNavHTML(current);
   if ($('#panel').classList.contains('show')) { const pt = $('#panelTree'); if (pt) pt.innerHTML = treeHTML(page); else renderPanel(); }
 }
-/* 링크로 연 판례의 선고연도 탭이 꺼져 있으면 켠다(목록·이전/다음 항목이 그 판례를 포함하도록) */
+/* 링크로 연 판례의 선고연도가 꺼져 있으면 켠다(목록·이전/다음 항목이 그 판례를 포함하도록). 다른 시대면 그 시대 전체로 */
 function ensureYearTab() {
-  const page = S.page;
-  if (S.view !== 'page' || !tabsOf(page).length || !S.caseId) return false;
+  const page = S.page, st = S.ytab[page];
+  if (S.view !== 'page' || !st || !S.caseId) return false;
   const c = byId.get(S.caseId); if (!c || c.page !== page) return false;
   const y = decisionYear(c), t = tabOf(page, y); if (!t || yrOn(page, y)) return false;
-  const ids = tabsOf(page).map(x => x.id), sel = ids.filter(id => id === t.id || S.ytab[page].includes(id));
-  S.ytab[page] = sel.length === ids.length ? [] : sel; saveYearTabs(page); return true;
+  if (isEras(page)) {
+    if (st.tabs[0] !== t.id) { st.tabs = [t.id]; st.years = []; }
+    else { const span = yearsIn(t), sel = span.filter(x => x === y || st.years.includes(x)); st.years = sel.length === span.length ? [] : sel; }
+  } else { const ids = tabsOf(page).map(x => x.id), sel = ids.filter(id => id === t.id || st.tabs.includes(id)); st.tabs = sel.length === ids.length ? [] : sel; }
+  saveYearTabs(page); return true;
 }
 
 /* ---------- rendering: page (empty state = 차례) ---------- */
@@ -1236,7 +1292,7 @@ function bookmarksHTML() {
   const casePages = PAGES.filter(p => p.id !== 'laws');
   return `<div class="runhead"><b>판례집</b><span>›</span><span>북마크</span></div>
   <div class="pagehead"><h1>북마크</h1><p>${list.length ? `${list.length}건 · 별표를 누른 판례가 모든 자료 유형에 걸쳐 모입니다.` : '아직 북마크한 판례가 없습니다. 판례 목록이나 열람 화면의 별표를 눌러 추가하세요.'}</p></div>
-  ${list.length ? `<div class="toc flat">${casePages.map(p => { const l = list.filter(c => c.page === p.id); return l.length ? `<details class="lv1" open><summary><span class="tri">▶</span><span>${esc(p.label)}</span><span class="lead"></span><span class="cnt">${l.length}</span></summary>${entries(l)}</details>` : ''; }).join('')}</div>` : ''}`;
+  ${list.length ? listHTML(`<div class="toc flat">${casePages.map(p => { const l = list.filter(c => c.page === p.id); return l.length ? `<details class="lv1" open><summary><span class="tri">▶</span><span>${esc(p.label)}</span><span class="lead"></span><span class="cnt">${l.length}</span></summary>${entries(l)}</details>` : ''; }).join('')}</div>`) : ''}`;
 }
 
 /* ---------- rendering: laws page ---------- */
@@ -1264,7 +1320,7 @@ async function renderLaws() {
   if (!lawsNav) { lawsNav = document.createElement('div'); lawsNav.className = 'laws-nav'; lawsNav.innerHTML = '<div class="lw-index" id="lawIndex"></div>'; }
   const side = $('#lawsSide'); if (!lawsNav.isConnected || !side.contains(lawsNav)) { if (!$('#panel').classList.contains('show')) side.appendChild(lawsNav); }
   $('#lawSel').innerHTML = lawSelectHTML(DL);
-  const idx = lawsNav.querySelector('#lawIndex'); idx.innerHTML = LawsModule.indexHtml(S.lawId);
+  const idx = lawsNav.querySelector('#lawIndex'); idx.innerHTML = listHTML(LawsModule.indexHtml(S.lawId));
   const r = LawsModule.render({ lawId: S.lawId, versionId: S.versionId, headEl: $('#lawHead'), tocEl: $('#lawToc'), textEl: $('#lawText'),
     onChange: st => { S.versionId = st.versionId; history.replaceState(null, '', `#/laws/${st.lawId}/${st.versionId}`); document.title = lawTitle(); },
     onNav: () => { openLawOutline(false); } });
@@ -1391,7 +1447,7 @@ function applySheetMode() {
   if (w) cs.style.setProperty('--sheet-w', Math.max(480, Math.min(window.innerWidth - 120, w)) + 'px'); else cs.style.removeProperty('--sheet-w');
   updateWide();
 }
-function updateWide() { const cs = $('#cs'); if (!cs.classList.contains('show')) return; cs.classList.toggle('wide', $('#csBox').clientWidth >= 980 || cs.classList.contains('full')); }
+function updateWide() { const cs = $('#cs'); if (!cs.classList.contains('show')) return; cs.classList.toggle('wide', $('#csBox').clientWidth >= 980); }
 function toggleFull() { if (!S.caseId || window.innerWidth < 1024) return; S.settings.sheetFull = !S.settings.sheetFull; save('lawbook:settings', S.settings); applySheetMode(); toast(S.settings.sheetFull ? '전체 화면' : '시트로 보기'); }
 /* 전문 개요: "1." 수준 소제목만 */
 function fillFtOutline() {
@@ -1578,7 +1634,7 @@ function render(revealCaseYear = true) {
     col.innerHTML = S.view === 'bookmarks' ? bookmarksHTML() : S.page === 'laws' ? lawsHTML() : pageHTML();
     window.scrollTo(0, 0);
     col.querySelectorAll('.years').forEach(revealYears);
-  } else if (yearAdded) { renderAnnual(); renderYearTabs(); }
+  } else if (yearAdded) { renderAnnual(); renderYearTabs(true); }
   if (S.view !== 'bookmarks' && S.page === 'laws') renderLaws();
   if (S.caseId) openCase(byId.get(S.caseId));
   else { closeCaseUI(); if (!(S.page === 'laws' && S.view === 'page')) document.title = (S.view === 'bookmarks' ? '북마크' : pageOf(S.page).label) + ' — 판례집'; }
@@ -1630,6 +1686,8 @@ window.addEventListener('hashchange', () => { parseHash(); render(); openPanel(f
 $('#csBox').addEventListener('scroll', () => { updateProgress(); spyFt(); }, { passive: true });
 window.addEventListener('scroll', () => { if (S.page === 'laws') requestAnimationFrame(spyLaws); }, { passive: true });
 window.addEventListener('resize', () => { if (S.caseId) applySheetMode(); fadeYears(); });
+matchMedia('(min-width:600px)').addEventListener('change', () => document.querySelectorAll('.years').forEach(revealYears));
+document.addEventListener('focusin', e => { const b = e.target.closest && e.target.closest('.years .yr'); if (b) nudgeYear(b); });
 document.addEventListener('scroll', e => { const t = e.target; if (t && t.classList && t.classList.contains('years')) yearsFade(t); }, { capture: true, passive: true });
 if (window.ResizeObserver) new ResizeObserver(updateWide).observe($('#csBox'));
 $('#btnCsFull').addEventListener('click', toggleFull);
@@ -1663,6 +1721,12 @@ $('#sheet').addEventListener('click', e => {
   if (b.dataset.font) { S.settings.font = Math.max(14, Math.min(20, S.settings.font + +b.dataset.font)); applySettings(); $('#sheet').innerHTML = sheetHTML(); }
 });
 document.addEventListener('click', e => {
+  const disclosure = e.target.closest('[data-list-open]');
+  if (disclosure) {
+    const scope = disclosure.closest('.list-scope');
+    if (scope) scope.querySelectorAll('details').forEach(d => { d.open = disclosure.dataset.listOpen === 'true'; });
+    return;
+  }
   if (e.target.closest('[data-refresh-version]')) { location.reload(); return; }
   if (e.target.closest('[data-personal-export]')) { exportPersonal(); return; }
   if (e.target.closest('[data-personal-import]')) { $('#personalImport').click(); return; }
@@ -1687,6 +1751,7 @@ document.addEventListener('click', e => {
     renderAnnual(); if (open) $('#aq').focus(); return;
   }
   /* 헌법재판소 주요결정·전원합의체: 선고연도 탭 */
+  const yyb = e.target.closest('[data-yyear]'); if (yyb) { toggleEraYear(+yyb.dataset.yyear, yyb); return; }
   const ytb = e.target.closest('[data-ytab]'); if (ytb) { toggleYearTab(ytb.dataset.ytab, ytb); return; }
   const f = e.target.closest('[data-filter]'); if (f) { S.filter[S.page] = f.dataset.filter; renderedKey = null; render(!tabsOf(S.page).length); if (e.target.closest('#panelBody')) renderPanel(); return; }
   const tab = e.target.closest('[data-tab]'); if (tab) { setTab(+tab.dataset.tab); return; }

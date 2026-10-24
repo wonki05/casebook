@@ -42,19 +42,20 @@ PAGES = [  # 표준판례는 과목마다 한 페이지(std-<subject>); 과목 �
     {"id": "ccourt", "label": "헌법재판소 주요결정", "short": "헌법재판소", "section": "최신판례", "group": "ccourt", "subject": None},
     {"id": "laws", "label": "주요법령", "short": "주요법령", "section": "법령", "group": None, "subject": None},
 ]
-def make_year_tabs(years_in, single, decades_from=None):
-    """선고연도 탭 [{id, label, from, to}] (최신 → 과거). single=(처음, 끝) 해는 한 해씩 두고,
-    그 앞은 decades_from 이 있으면 그 해가 든 연대까지 10년 단위('2010년대'), 없으면 처음 해에서 끝낸다.
-    등록부의 선고연도(years_in)가 범위 밖이면 그쪽으로 넓힌다(연대 탭이 있으면 과거 쪽은 연대로)."""
+def make_year_tabs(years_in, single, eras_from=None):
+    """선고연도 탭 [{id, label, from, to}] (최신 → 과거).
+    eras_from 이 없으면 single=(처음, 끝) 해를 한 해씩 탭으로 둔다(헌법재판소).
+    eras_from 이 있으면 시대 탭이다(전원합의체): single[0] 이후를 '2020년 이후' 하나로, 그 앞은 eras_from 이 든 연대까지
+    10년 단위('2010년대' … '1940년대'; 가장 오래된 연대는 eras_from 부터). 화면은 고른 시대의 개별 연도를 아래 줄에 보여 준다.
+    등록부의 선고연도(years_in)가 범위 밖이면 그쪽으로 넓힌다."""
     first, last = single[0], max([single[1]] + years_in)
-    if decades_from is None:
+    if eras_from is None:
         first = min([first] + years_in)
-    tabs = [{"id": str(y), "label": str(y), "from": y, "to": y} for y in range(last, first - 1, -1)]
-    if decades_from is not None:
-        low = min([decades_from] + years_in) // 10 * 10
-        tabs += [{"id": f"{d}s", "label": f"{d}년대", "from": d, "to": min(d + 9, first - 1)}
-                 for d in range((first - 1) // 10 * 10, low - 1, -10)]
-    return tabs
+        return [{"id": str(y), "label": str(y), "from": y, "to": y} for y in range(last, first - 1, -1)]
+    oldest = min([eras_from] + years_in)
+    return [{"id": f"{first}+", "label": f"{first}년 이후", "from": first, "to": last}] + [
+        {"id": f"{d}s", "label": f"{d}년대", "from": max(d, oldest), "to": min(d + 9, first - 1)}
+        for d in range((first - 1) // 10 * 10, oldest // 10 * 10 - 1, -10)]
 
 
 def load_toc():

@@ -50,6 +50,8 @@ jobs:
         run: python -m unittest discover -s tools -p 'test_*.py'
       - name: Validate and build both editions
         run: python tools/make.py validate data laws build check web webcheck
+      - name: Check list controls and responsive layout
+        run: python tools/test_layout.py output/casebook.html
       - name: Check typography and personal data
         run: |
           node tools/test_fulltext.cjs output/casebook.html

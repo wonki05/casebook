@@ -15,6 +15,12 @@ python tools/make.py validate data laws build check web webcheck
 ```
 `make` 가 없는 Windows에서도 위 명령을 그대로 실행합니다. 단일 HTML 검사는 `output/casebook.html`, 웹앱 검사는 `output/web/` 을 사용합니다. `dist/` 의 기존 HTML 은 백업으로 보존합니다(`clean` 도 백업을 삭제하지 않습니다).
 
+## 목록 보기
+
+표준판례·법률신문·전원합의체·헌법재판소·북마크와 법령 분야 목록에서 **모두 펼치기 / 모두 접기**를 사용할 수 있습니다. 버튼이 있는 목록의 하위 묶음 전체에 적용하며, 차례 패널과 본문 목록은 각각 조작합니다. 필터 선택과 메모·북마크는 그대로 유지됩니다.
+
+일반 목록의 최대 폭은 900px(기존 720px의 125%), 판례 전체화면 본문의 최대 폭은 1100px(기존 880px의 125%)입니다. 창이 좁아지면 여백을 두고 줄어들며, 좁은 화면의 전문 개요는 버튼으로 엽니다.
+
 ## 구성
 ```
 output/casebook.html      # 최신 단일 HTML 보관본
@@ -24,7 +30,7 @@ src/design-d.html         # 확정 템플릿 (데이터 자리: __CASE_DATA_JSON
 AGENTS.md / CLAUDE.md     # Claude Code·Codex 작업 레시피 (표준판례 PDF, 법률신문, 전원합의체·헌법재판소, 법령, 과목 추가)
 Makefile, requirements.txt   # make 가 없는 PC 에서는 python tools/make.py <타깃…>
 tools/subjects.py         # 과목 정의 단일 출처 (헌법·행정법·민법·형법·상법: id·라벨·목차 접두어·PDF 폴더명 → 표준판례 페이지 자동 생성; 지식재산권법 ip 는 표준판례 없음)
-                          #   + 법률신문 분야 ANNUAL_FIELDS(8개) · 연도 버튼 범위 ANNUAL_YEARS(2020–2025) · 선고연도 탭 범위 CCOURT_YEARS(헌법재판소 2010–2026) · ENBANC_YEARS/ENBANC_FROM(전원합의체 2020–2026 한 해씩, 그 앞은 1940년대까지 연대)
+                          #   + 법률신문 분야 ANNUAL_FIELDS(8개) · 연도 버튼 범위 ANNUAL_YEARS(2020–2025) · 선고연도 탭 범위 CCOURT_YEARS(헌법재판소 2010–2026) · ENBANC_YEARS/ENBANC_FROM(전원합의체 시대 탭 2020년 이후 · 2010년대 … 1940년대, 고른 시대의 개별 연도)
 data/registry.json        # 사건 등록부 (tools/add_cases.py 로 편집)
 data/toc.json             # 표준판례 목차 트리 (깊이 1~3; 상법은 PDF 목차 그대로 분야›편›장, 나머지는 시안용 초안)
 data/standard-cases/      # 표준판례(2023년 개정판) PDF 5건(헌법·행정법·민법·형법·상법) + 과목별 폴더(PDF→Markdown 중간 산출물 자리)

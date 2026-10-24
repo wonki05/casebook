@@ -45,6 +45,7 @@ def report_failed(report):
                     or yt.get('tabs') != yt['expected_tabs'] or yt.get('labels') != '전체분야 전체연도'
                     or yt.get('tab_entries') != yt['tab_expected'] or yt.get('subject_entries') != yt['subject_expected']
                     or yt.get('empty_tab') != yt['empty_tab_expected'] or yt.get('empty_subject') != yt['empty_subject_expected']
+                    or yt['unmapped'] or yt.get('sub_year') != yt['sub_year_expected'] or yt.get('sub_empty') != yt['sub_empty_expected']
                     or not yt.get('filtered_navigation')):
                 return True
     return False
@@ -114,9 +115,9 @@ async def check_filtered_navigation(page, page_id, cases, tabs, case_tab, empty_
 
 
 async def check_year_tabs(page, page_id, vw, overflow):
-    """헌법재판소 주요결정·대법원 전원합의체: 과목 칩(전체분야) 아래 선고연도 탭(전체연도 + 연도·연대).
-    전체연도면 모든 판례, 탭 하나를 누르면 그 연도(연대)의 판례만, 과목 칩을 누르면 그 과목만 보여야 한다.
-    수록 판례가 한 해·한 과목뿐이어도 필터 고장을 잡도록 판례가 없는 탭·과목을 눌러 0건인지도 본다."""
+    """헌법재판소 주요결정·대법원 전원합의체: 과목 칩(전체분야) 아래 선고연도 탭(전체연도 + 연도 / 시대 탭과 그 아래 연도 줄).
+    전체연도면 모든 판례, 탭 하나를 누르면 그 연도(시대)의 판례만, 시대 아래 연도를 누르면 그 해만, 과목 칩을 누르면 그 과목만 보여야 한다.
+    수록 판례가 한 해·한 과목뿐이어도 필터 고장을 잡도록 판례가 없는 탭·연도·과목을 눌러 0건인지도 본다."""
     cases = [c for c in DATA['cases'] if c.get('page') == page_id]
     tabs = DATA.get('yearTabs', {}).get(page_id, [])
     case_tab = {c['id']: tab_of(tabs, int(c['decisionDate'][:4])) for c in cases}
@@ -125,13 +126,22 @@ async def check_year_tabs(page, page_id, vw, overflow):
     chip_subjects = [s['id'] for s in DATA['subjects'] if s.get('standard') is not False or any(c['subject'] == s['id'] for c in cases)]
     empty_tab = next((t['id'] for t in tabs if t['id'] not in case_tab.values()), None)
     empty_subject = next((s for s in chip_subjects if not any(c['subject'] == s for c in cases)), None)
+    # 시대 탭(여러 해를 묶은 탭)이면 가장 최근 시대 아래 연도 줄도 누른다
+    era = next((t for t in tabs if t['id'] == newest and t['from'] != t['to']), None)
+    era_years = list(range(era['to'], era['from'] - 1, -1)) if era else []
+    case_years = [int(c['decisionDate'][:4]) for c in cases]
+    sub_year = next((y for y in era_years if y in case_years), None)
+    sub_empty = next((y for y in era_years if y not in case_years), None)
     count = "document.querySelectorAll('#ylist .entry').length"
-    pressed = "[...document.querySelectorAll('#ytabs [aria-pressed=true]')].map(b => b.dataset.ytab).join(',')"
+    pressed = "[...document.querySelectorAll('#ytabs [aria-pressed=true]')].map(b => b.dataset.ytab || b.dataset.yyear).join(',')"
     r = {'expected': len(cases), 'expected_tabs': len(tabs),
          'tab_expected': sum(1 for c in cases if case_tab[c['id']] == newest),
          'subject_expected': sum(1 for c in cases if c['subject'] == subject),
          'empty_tab_expected': f'{empty_tab}:0' if empty_tab else None,
-         'empty_subject_expected': f'{empty_subject}:0' if empty_subject else None}
+         'empty_subject_expected': f'{empty_subject}:0' if empty_subject else None,
+         'unmapped': [c['id'] for c in cases if case_tab[c['id']] is None],
+         'sub_year_expected': f'{newest},{sub_year}:{case_years.count(sub_year)}' if sub_year else None,
+         'sub_empty_expected': f'{newest},{sub_empty}:0' if sub_empty else None}
     try:
         await page.evaluate(f"location.hash = '#/{page_id}'")
         await page.wait_for_selector('#ytabs [data-ytab]', timeout=5000)
@@ -145,6 +155,15 @@ async def check_year_tabs(page, page_id, vw, overflow):
             await page.click(f'#ytabs [data-ytab="{newest}"]')
             await page.wait_for_timeout(50)
         r['tab_entries'] = await page.evaluate(count)
+        if sub_year:
+            await page.click(f'#ytabs [data-yyear="{sub_year}"]')
+            await page.wait_for_timeout(50)
+            r['sub_year'] = f"{await page.evaluate(pressed)}:{await page.evaluate(count)}"
+            await page.click(f'#ytabs [data-yyear="{sub_year}"]')
+        if sub_empty:
+            await page.click(f'#ytabs [data-yyear="{sub_empty}"]')
+            await page.wait_for_timeout(50)
+            r['sub_empty'] = f"{await page.evaluate(pressed)}:{await page.evaluate(count)}"
         await page.click('#ytabs [data-ytab=all]')
         if empty_tab:
             await page.click(f'#ytabs [data-ytab="{empty_tab}"]')

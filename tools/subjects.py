@@ -47,8 +47,9 @@ _DEFAULT_FIELD = {"constitution": "constitution", "administrative": "administrat
 ANNUAL_YEARS = (2020, 2025)
 # 헌법재판소 주요결정 페이지의 선고연도 버튼 범위(2010년 선고 사건부터 수록). 같은 방식으로 등록부의 선고일에 맞춰 자동으로 늘어난다.
 CCOURT_YEARS = (2010, 2026)
-# 대법원 전원합의체 페이지: 최근 해(ENBANC_YEARS)는 한 해씩, 그 앞은 대법원이 처음 선고한 해(ENBANC_FROM)가 든 연대까지
-# 10년 단위 버튼(2010년대 · 2000년대 · … · 1940년대). 등록부 선고일이 범위 밖이면 build_data.py 가 그쪽으로 넓힌다.
+# 대법원 전원합의체 페이지의 시대 탭: ENBANC_YEARS[0] 이후는 '2020년 이후' 하나, 그 앞은 대법원이 처음 선고한 해(ENBANC_FROM)가 든
+# 연대까지 10년 단위(2010년대 · 2000년대 · … · 1940년대). 시대 탭을 고르면 그 시대의 개별 연도 버튼이 아래 줄에 나온다.
+# ENBANC_YEARS[0] 은 연대의 첫 해(10의 배수)로 둔다. 등록부 선고일이 범위 밖이면 build_data.py 가 그쪽으로 넓힌다.
 ENBANC_YEARS = (2020, 2026)
 ENBANC_FROM = 1948
 
