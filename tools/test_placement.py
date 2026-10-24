@@ -9,6 +9,7 @@ import unittest
 from unittest.mock import patch
 
 import add_cases
+import dup_placements
 from case_identity import identity
 
 
@@ -59,11 +60,12 @@ class PlacementTests(unittest.TestCase):
         self.assertEqual(len(placed), 2)
         self.assertEqual(placed[0]['decisionId'], placed[1]['decisionId'])
 
-    def test_same_title_or_same_unit_or_unplaced_is_still_a_duplicate(self):
+    def test_same_title_or_untitled_is_still_a_duplicate_but_same_unit_with_other_title_is_not(self):
         base = ('add', '--group', 'standard', '--subject', 'civil', '--case', '2020다10', '--date', '2020-01-01')
         self.rejected(*base, '--title', '불공정한 법률행위 (3)', '--toc', 'mb-1/mb-1-3')   # 같은 제목
-        self.rejected(*base, '--title', '다른 제목', '--toc', 'mb-1/mb-1-1')               # 같은 단원
-        self.rejected(*base)                                                               # 배치 정보 없음
+        self.rejected(*base)                                                               # 제목 없음
+        self.cli(*base, '--title', '불공정한 법률행위 (4)', '--toc', 'mb-1/mb-1-1')         # 같은 단원이어도 제목이 다르면 다른 배치
+        self.assertEqual(len([c for c in self.cases().values() if c['caseNumber'] == '2020다10']), 2)
 
     def test_other_subject_is_always_allowed(self):
         e = standard('x', '2020다10', '불공정한 법률행위 (3)', ['mb-1', 'mb-1-1'], subject='administrative')
@@ -81,12 +83,12 @@ class PlacementTests(unittest.TestCase):
                          {k: v for k, v in old.items() if k not in ('caseNumber', 'lookupKey', 'caseNumberId', 'caseId', 'decisionId')})
         self.assertNotIn('같은 재판의 다른 배치', out)
 
-    def test_correct_case_onto_another_unit_reports_sibling_but_same_unit_is_refused(self):
+    def test_correct_case_onto_another_title_reports_sibling_but_same_title_is_refused(self):
         out = self.cli('set', 'std-civil-02', '--correct-case', '2020다10')
         self.assertIn('같은 재판의 다른 배치: std-civil-01', out)
         self.assertEqual(self.cases()['std-civil-02']['decisionId'], self.cases()['std-civil-01']['decisionId'])
         reg = json.loads(self.reg.read_text(encoding='utf-8'))
-        reg['cases'][1] = standard('std-civil-02', '2020다99', '무효행위의 전환 (1)', ['mb-1', 'mb-1-1'])   # 이제 같은 단원
+        reg['cases'][1] = standard('std-civil-02', '2020다99', '불공정한 법률행위 (3)', ['mb-1', 'mb-1-2'])   # 이제 같은 제목
         self.reg.write_text(json.dumps(reg, ensure_ascii=False), encoding='utf-8')
         self.rejected('set', 'std-civil-02', '--correct-case', '2020다10')
 
@@ -99,6 +101,12 @@ class PlacementTests(unittest.TestCase):
         (self.fetched / 'std-civil-02.json').write_text('{"citation": "[대법원 2020. 1. 1. 선고 2020다11 판결]"}', encoding='utf-8')
         self.cli('set', 'std-civil-02', '--correct-case', '2020다11')                 # 인용문에 새 번호가 있으면 허용
         self.assertEqual(self.cases()['std-civil-02']['caseNumber'], '2020다11')
+
+    def test_unit_name_strips_numbering_for_title_disambiguation(self):
+        self.assertEqual(dup_placements.unit_name('제6절 매매'), '매매')
+        self.assertEqual(dup_placements.unit_name('제2장 계약'), '계약')
+        self.assertEqual(dup_placements.unit_name('제1관 변제'), '변제')
+        self.assertEqual(dup_placements.unit_name('총칙'), '총칙')
 
 
 if __name__ == '__main__':

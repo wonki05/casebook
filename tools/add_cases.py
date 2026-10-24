@@ -12,7 +12,7 @@
   python3 tools/add_cases.py set annual-2025-07 --field criminal-special [--year 2025 --article "..." --url https://...]
   # 원전(PDF 등)의 대표 사건번호 오기 정정: 재판 ID 를 다시 계산하고 이전 ID 는 identityAliases 로 이어 둔다
   python3 tools/add_cases.py set std-civil-827 --correct-case 2015므8351
-  # 같은 과목에서 같은 재판을 다른 단원에 다른 제목으로 한 번 더 배치하는 것은 허용된다(같은 제목 또는 같은 목차 경로면 중복)
+  # 같은 과목에서 같은 재판을 다른 제목(단원에 맞는 제목)으로 한 번 더 배치하는 것은 허용된다(제목이 같으면 중복)
   # 목차
   python3 tools/add_cases.py toc list --subject civil
   python3 tools/add_cases.py toc add --subject civil --parent mb-3 --id mb-3-4 --label "사무관리"      (parent 생략 = 최상위)
@@ -157,12 +157,11 @@ def make_entry(reg, toc, group, subject, case_number, date, title, toc_path=None
 
 
 def same_placement(x, e):
-    """같은 배치인가: 제목이 같거나 목차 경로가 같으면 같은 배치다(재실행 때 같은 배치가 거듭 등록되지 않게 한다).
-    제목과 목차 경로가 모두 없으면 배치를 구별할 수 없으므로 같은 배치로 본다."""
+    """같은 배치인가: 제목이 같으면 같은 배치다(재실행 때 같은 배치가 거듭 등록되지 않게 한다).
+    제목이 없으면 배치를 구별할 수 없으므로 같은 배치로 본다. 같은 재판의 배치는 제목으로 구별한다 —
+    단원(목차 경로)이 같아도 PDF 가 다른 제목으로 실었다면 다른 배치다."""
     xt, et = (x.get('title') or '').strip(), (e.get('title') or '').strip()
-    if not et and not e.get('tocPath'):
-        return True
-    return (bool(et) and xt == et) or (bool(e.get('tocPath')) and x.get('tocPath') == e.get('tocPath'))
+    return not et or xt == et
 
 
 def sibling_placements(reg, e):
@@ -175,8 +174,8 @@ def sibling_placements(reg, e):
 
 def duplicate(reg, e):
     """같은 그룹에 같은 사건이 이미 있는가. annual 은 같은 연도·분야일 때만 중복이다.
-    standard 는 같은 과목 안에서도 같은 재판을 다른 단원(목차 경로)에 다른 제목으로 두는 것을 허용하고,
-    같은 배치(제목 또는 목차 경로가 같음)일 때만 중복으로 본다 — 재판 자체를 두 번 저장하자는 것이 아니라 단원에 맞는 배치를 늘리는 것이다.
+    standard 는 같은 과목 안에서도 같은 재판을 다른 제목(단원에 맞는 제목)으로 한 번 더 두는 것을 허용하고,
+    같은 제목일 때만 중복으로 본다 — 재판 자체를 두 번 저장하자는 것이 아니라 단원에 맞는 배치를 늘리는 것이다.
     (한 판례가 두 분야 기사에, 두 과목의 표준판례 PDF 에, 한 과목의 여러 단원에 실릴 수 있다 — 배치마다 그 책의 제목을 쓴다.)
     같은 재판의 배치들은 standardSource 텍스트가 같아야 하며 validate 가 이를 확인한다."""
     for x in reg['cases']:
@@ -362,7 +361,7 @@ def cmd_set(a):
             if (x['id'] != c['id'] and x['group'] == 'standard' and x.get('subject') == c['subject']
                     and identity(x, fetched_citation(x['id']))['decisionId'] == updated_identity['decisionId']):
                 if same_placement(x, c):
-                    raise SystemExit(f"정정한 사건번호가 같은 배치(제목 또는 목차 경로가 같음)인 {x['id']} 와 겹칩니다")
+                    raise SystemExit(f"정정한 사건번호가 같은 제목의 배치 {x['id']} 와 겹칩니다")
                 sibling_ids.append(x['id'])
     c.update(updated_identity)
     if display_guard is None:
