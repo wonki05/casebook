@@ -250,8 +250,12 @@ def apply_source_precedence(rec, standard_fields, official_fields, editorial):
                     standard_provenance.append(copy.deepcopy(source))
         elif official_fields.get(field):
             rec[field] = copy.deepcopy(official_fields[field])
-            sources[field] = {'type': 'official', 'label': '국가법령정보센터',
-                              'url': official_source.get('url', '')}
+            if official_source.get('label', '국가법령정보센터') == '국가법령정보센터':
+                sources[field] = {'type': 'official', 'label': '국가법령정보센터',
+                                  'url': official_source.get('url', '')}
+            else:
+                sources[field] = {'type': 'supplemental', 'label': official_source['label'],
+                                  'url': official_source.get('url', '')}
         else:
             raw = editorial.get('holding' if field == 'holdings' else field)
             if field in ('issues', 'holdings'):
@@ -358,7 +362,7 @@ def build():
             rec["fullText"] = brackets(full) if full else None
             bench, dtype, citation, short = parse_citation(fetched.get('citation'), court, rec["decisionDate"], case_number, is_enbanc, rec['decisionType'])
             rec["bench"], rec["decisionType"], rec["citation"], rec["citeShort"] = bench, dtype, citation, short
-            rec["source"] = {"label": "국가법령정보센터", "url": fetched.get('sourceUrl') or fetched.get('url') or ''}
+            rec["source"] = {"label": fetched.get('sourceLabel') or "국가법령정보센터", "url": fetched.get('sourceUrl') or fetched.get('url') or ''}
         else:
             rec["summaryType"] = "editorial"
             bench, dtype, citation, short = parse_citation('', court, rec["decisionDate"], case_number, is_enbanc, rec['decisionType'])

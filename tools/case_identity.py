@@ -76,6 +76,25 @@ def primary_case_number(number):
     return primary
 
 
+def merged_display(number):
+    return bool(re.search(r'\(병합\)$', re.sub(r'\s+', '', unicodedata.normalize('NFKC', number or ''))))
+
+
+def case_number_list(number):
+    """표시용 병합번호의 모든 사건번호. '2011헌바129,172(병합)' → ['2011헌바129', '2011헌바172']."""
+    compact = re.sub(r'\s+', '', unicodedata.normalize('NFKC', number or ''))
+    compact = re.sub(r'\(병합\)$', '', compact)
+    compact = re.sub(r'등$', '', compact)
+    out = []
+    for part in re.split(r'[·,;/]', compact):
+        if out and re.fullmatch(r'\d+', part):
+            year, kind, _ = _DOCKET.fullmatch(out[0]).groups()
+            part = f'{year}{kind}{part}'
+        if _DOCKET.fullmatch(part):
+            out.append(part)
+    return out
+
+
 def docket_parts(number):
     return _DOCKET.fullmatch(primary_case_number(number)).groups()
 
@@ -134,11 +153,12 @@ def identity(record, citation=''):
     cid = court_id(record.get('court'), record.get('courtId'))
     primary = primary_case_number(record['caseNumber'])
     lookup = primary_case_number(record.get('lookupKey') or primary)
-    if lookup != primary:
+    # 명시적 '(병합)' 표시번호가 대표 번호(lookupKey)를 포함하면 대표 번호가 첫 번호가 아니어도 허용한다(예: 2011헌바129,172(병합)).
+    if lookup != primary and not (merged_display(record['caseNumber']) and lookup in case_number_list(record['caseNumber'])):
         raise ValueError(f'대표 사건번호 불일치: {primary} / lookupKey={lookup}')
-    nid = record.get('caseNumberId') or case_number_id(primary)
-    if decode_case_number_id(nid) != primary:
-        raise ValueError(f'사건번호 ID 불일치: {primary} / caseNumberId={nid}')
+    nid = record.get('caseNumberId') or case_number_id(lookup)
+    if decode_case_number_id(nid) != lookup:
+        raise ValueError(f'사건번호 ID 불일치: {lookup} / caseNumberId={nid}')
     if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', record.get('decisionDate', '')):
         raise ValueError('decisionDate는 YYYY-MM-DD여야 합니다')
     dt = datetime.date.fromisoformat(record['decisionDate'])

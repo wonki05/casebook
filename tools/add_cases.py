@@ -25,7 +25,7 @@ id 는 관례대로 자동 생성: std-<subject>-NN · annual-<year>-NN · enban
 import argparse, json, os, re, sys, unicodedata
 from pathlib import Path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from case_identity import identity, IDENTITY_FIELDS, validate_standard_source, standard_sources_by_decision, primary_case_number, docket_parts
+from case_identity import identity, IDENTITY_FIELDS, validate_standard_source, standard_sources_by_decision, primary_case_number, docket_parts, case_number_list, merged_display
 from casenum import romanize, lookup_key, is_cc  # noqa: E402
 from subjects import SUBJECT_IDS, STANDARD_IDS, ANNUAL_BY_ID, ANNUAL_FIELD_IDS, resolve_field, guess_field, article_year  # noqa: E402
 
@@ -208,15 +208,17 @@ def checked_case_display(value, record):
     """표시용 병합번호만 바꾼다. 대표 번호와 조회 키는 유지한다."""
     display = (value or '').strip()
     compact = re.sub(r'\s+', '', unicodedata.normalize('NFKC', display))
+    compact = re.sub(r'\(병합\)$', '', compact)
     parts = re.split(r'[·,;/]', compact)
     for index, part in enumerate(parts):
         if index and re.fullmatch(r'\d+', part):
             continue  # 97므513·520 같은 축약 병합번호
         if not part or ''.join(docket_parts(part)) != part:
             raise ValueError(f'표시 사건번호 형식 오류: {value!r}')
-    primary = primary_case_number(display)
-    if primary != primary_case_number(record['caseNumber']) or primary != primary_case_number(record.get('lookupKey') or record['caseNumber']):
-        raise ValueError('--case는 기존 대표 사건번호와 lookupKey를 바꿀 수 없습니다')
+    representative = primary_case_number(record.get('lookupKey') or record['caseNumber'])
+    first_changed = primary_case_number(display) != representative
+    if representative not in case_number_list(display) or (first_changed and not merged_display(display)):
+        raise ValueError('--case는 기존 대표 사건번호와 lookupKey를 바꿀 수 없습니다 (대표 번호가 첫 번호가 아니면 "(병합)" 표기 필요)')
     return display
 
 

@@ -95,6 +95,7 @@
   "sections": [ {"heading": "【판시사항】", "text": "..."}, {"heading": "【판결요지】", ...}, {"heading": "【참조조문】", ...}, {"heading": "【전문】", ...}, {"heading": "【주 문】", ...}, {"heading": "【이 유】", ...} ] }
 ```
 - 실패 시 `<id>.missing.json` {id, reason, triedUrls}. 미게재(최근 선고)면 나중에 `--retry-missing`.
+- **law.go.kr 미게재 사건의 사용자 제공 보충본**(예외): 사용자가 판례 검색 사이트에서 확인해 직접 제공한 텍스트는 같은 스키마로 `fetched/<id>.json` 에 두되 `provider`·`sourceLabel`(화면 출처 표기)·`sourceHeader`(원 사이트 머리글)·`sourceNote`·`suppliedAt` 을 반드시 기록한다. `sourceLabel` 이 있으면 build_data 가 "국가법령정보센터" 대신 그 문구를 출처로 쓰고, 표준판례에 없는 필드는 `fieldSources` 에 `type: "supplemental"` 로 남겨 공식 원문으로 표시하지 않는다. 사이트 부가정보(인용판례·유사판례·인용 문헌 등)는 보존하지 않는다. law.go.kr 에 게재되면 `fetch_lawgo.py --id <id> --force` 로 공식본으로 교체한다.
 
 ## 4. `data/cases.json` — 화면용 정규화 데이터 (tools/build_data.py 산출; 손대지 않음)
 registry + toc + fetched 를 합쳐 만든다. `pages`(표준판례는 standard 과목마다 `std-<subject>` 한 페이지 — tools/subjects.py 순서) · `subjects`([{id, label, standard}]) · `annual`({years: [2025, …, 2020] 최신순, fields: [{id, label, sub, subject}]}) · `yearTabs`({ccourt: [{id: "2026", label: "2026", from, to}] 한 해씩, enbanc: [{id: "2020+"|"2010s", label: "2020년 이후"|"2010년대", from, to}] 시대 탭 — 최신순; 헌법재판소 주요결정·대법원 전원합의체 선고연도 탭}) · `toc` · `cases`. 사건 주요 필드: page, citation("대법원 2026. 7. 22. 선고 2022도5937 전원합의체 판결"), citeShort("대판 2022도5937"),

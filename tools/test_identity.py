@@ -65,6 +65,27 @@ class IdentityTests(unittest.TestCase):
         self.assertNotEqual(a['decisionId'], c['decisionId'])
         self.assertNotEqual(a['decisionId'], d['decisionId'])
 
+    def test_merged_display_may_list_representative_after_first_number(self):
+        merged = record(court='헌법재판소', caseNumber='2011헌바129,172(병합)', lookupKey='2011헌바172',
+                        caseNumberId='2011heonba172', decisionDate='2014-10-30', decisionType='결정')
+        got = ci.identity(merged)
+        self.assertEqual(got['decisionId'], 'cc-2011heonba172-20141030-decision')
+        self.assertEqual(ci.case_number_list('2011헌바129,172(병합)'), ['2011헌바129', '2011헌바172'])
+        self.assertEqual(ci.case_number_list('97므513·520'), ['97므513', '97므520'])
+        self.assertEqual(ci.case_number_list('2010헌가95등'), ['2010헌가95'])
+        unrelated = record(court='헌법재판소', caseNumber='2011헌바129,173(병합)', lookupKey='2011헌바172',
+                           decisionType='결정')
+        with self.assertRaises(ValueError):
+            ci.identity(unrelated)
+        self.assertEqual(add_cases.checked_case_display('2011헌바129,172(병합)', merged), '2011헌바129,172(병합)')
+        with self.assertRaises(ValueError):
+            add_cases.checked_case_display('2011헌바129,173(병합)', merged)
+        with self.assertRaises(ValueError):
+            add_cases.checked_case_display('2011헌바129,172', merged)
+        reordered = record(court='헌법재판소', caseNumber='2011헌바129,172', lookupKey='2011헌바172', decisionType='결정')
+        with self.assertRaises(ValueError):
+            ci.identity(reordered)
+
     def test_wrong_type_date_and_lookup_are_rejected(self):
         with self.assertRaises(ValueError):
             ci.identity(record(), '대법원 2025. 1. 2.자 2024다12345 결정')
