@@ -154,11 +154,16 @@ def make_entry(reg, toc, group, subject, case_number, date, title, toc_path=None
 
 
 def duplicate(reg, e):
-    """같은 그룹에 같은 사건이 이미 있는가. annual 은 같은 연도·분야일 때만 중복(한 판례가 두 분야 기사에 실릴 수 있다)."""
+    """같은 그룹에 같은 사건이 이미 있는가. annual 은 같은 연도·분야일 때만, standard 는 같은 과목일 때만 중복
+    (한 판례가 두 분야 기사에, 또는 두 과목의 표준판례 PDF 에 실릴 수 있다 — 과목마다 그 책의 제목으로 배치된다)."""
     for x in reg['cases']:
         if x['group'] != e['group']:
             continue
         if identity(x, fetched_citation(x['id']))['decisionId'] != identity(e)['decisionId']:
+            continue
+        if e['group'] == 'standard':
+            if x.get('subject') == e.get('subject'):
+                return True
             continue
         if e['group'] != 'annual':
             return True
