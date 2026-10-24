@@ -1,0 +1,268 @@
+{
+ "subject": "civil",
+ "scope": "공식 전문 수집 후 crosscheck low-similarity 26건 중 기존 검토(2020그42·2018스5·2017다228007) 3건을 제외한 23건 + meta-mismatch 4건",
+ "reviewer": "crosscheck.py(스크립트) → claude-haiku high 1차 판정(23건) → Sonnet 5.5 재확인(1차에서 different-issue 로 나온 2건)",
+ "reviewedAt": "2026-10-24T20:15:30+09:00",
+ "mode": "diagnostic_only_no_source_or_registry_changes",
+ "summary": {
+  "lowSimilarityReviewed": 23,
+  "sameDecisionSourceVariation": 23,
+  "wrongDecision": 0,
+  "metaMismatchPending": 4
+ },
+ "items": [
+  {
+   "registryId": "std-civil-24",
+   "seq": 24,
+   "caseNumber": "74다310",
+   "decisionId": "sc-74da310-19741126-judgment",
+   "holdingsRatio": 0.4684,
+   "verdict": "same-variation",
+   "reason": "공식 판시사항·판결요지와 PDF 판결요지 모두 법인이 타인 간 계약을 보증한 경우 목적범위 내 여부를 심리하지 않고 보증책임을 인정할 수 없다는 같은 결론이다. PDF는 제34조의 목적범위를 광의로 해석하는 이유 부분을 추가로 싣고 쟁점은 목적범위 해당 여부로 풀어 썼다.",
+   "firstPass": "same-variation"
+  },
+  {
+   "registryId": "std-civil-34",
+   "seq": 34,
+   "caseNumber": "2006다24438",
+   "decisionId": "sc-2006da24438-20080821-judgment",
+   "holdingsRatio": 0.3251,
+   "verdict": "same-variation",
+   "reason": "두 요지 모두 채무면탈 목적 신설회사 설립의 판단 기준과 두 회사 모두에 대한 채무이행 청구 가능성이라는 같은 법리를 다룬다. 공식 [2]의 원심 파기 사안은 PDF에서 사실관계 문단으로 풀어 적었고, 이 부분은 문장 구성과 범위만 다르다.",
+   "firstPass": "same-variation"
+  },
+  {
+   "registryId": "std-civil-75",
+   "seq": 73,
+   "caseNumber": "2015다11281",
+   "decisionId": "sc-2015da11281-20160324-judgment",
+   "holdingsRatio": 0.5222,
+   "verdict": "same-variation",
+   "reason": "공식 판결요지와 PDF 판결요지 [1]은 거래상대방의 적극 가담 시 반사회질서 법률행위가 무효로 될 수 있다는 점, 무효를 주장할 수 있는 자의 범위, 원인무효 등기의 말소 청구에 대한 상대방의 항변 가능성이라는 같은 법리를 다룬다. PDF [2]는 원심의 사실과 판단을 추가로 적은 부분이다.",
+   "firstPass": "same-variation"
+  },
+  {
+   "registryId": "std-civil-107",
+   "seq": 104,
+   "caseNumber": "86다카1004",
+   "decisionId": "sc-86daka1004-19870707-judgment",
+   "holdingsRatio": 0.5603,
+   "verdict": "same-variation",
+   "reason": "PDF 판결요지 [1]·[2]는 공식 판결요지 가·나와 같은 법리(표의자의 진의 존중, 대리인 비진의 표시의 효과와 상대방의 악의·과실 판단 기준)를 다룬다. 공식 요지의 다(강행법규 위반 이자약정)와 라(예금계약 불성립)는 PDF 판결요지에 없어 PDF는 일부만 발췌한 것이다.",
+   "firstPass": "same-variation"
+  },
+  {
+   "registryId": "std-civil-133",
+   "seq": 130,
+   "caseNumber": "2010다28840",
+   "decisionId": "sc-2010da28840-20120322-judgment",
+   "holdingsRatio": 0.5948,
+   "verdict": "same-variation",
+   "reason": "두 요지 모두 채권양도 통지만으로는 제척기간 준수에 필요한 재판외 권리행사가 되지 않는다는 다수의견의 법리와, 소 변경 시점에 권리가 행사된 것으로 본다는 결론을 다룬다. PDF 판결요지는 다수의견만 싣고 공식 요지의 반대의견은 빠져 있다.",
+   "firstPass": "same-variation"
+  },
+  {
+   "registryId": "std-civil-148",
+   "seq": 145,
+   "caseNumber": "2018다22008",
+   "decisionId": "sc-2018da22008-20180719-judgment",
+   "holdingsRatio": 0.4581,
+   "verdict": "same-variation",
+   "reason": "PDF 판결요지는 공식 다수의견의 내용(10년 경과가 임박한 경우 재소의 소의 이익이 있다는 법리와 후소 법원이 확정권리 요건을 다시 심리할 수 없다는 점)과 같다. 공식 요지의 반대의견은 PDF에 없어 발췌에 해당한다.",
+   "firstPass": "same-variation"
+  },
+  {
+   "registryId": "std-civil-164",
+   "seq": 162,
+   "caseNumber": "79다407",
+   "decisionId": "sc-79da407-19790626-judgment",
+   "holdingsRatio": 0.3537,
+   "verdict": "same-variation",
+   "reason": "PDF 판결요지는 공식 판결요지 가(채무자가 소멸시효 이익을 받을 권리를 처분한 경우 채권자대위에 의한 원용 불가)와 같은 법리다. 공식 요지 나(선박대리상 구상채권에 대한 선박 선취특권)는 PDF에 없어 발췌로 보인다.",
+   "firstPass": "same-variation"
+  },
+  {
+   "registryId": "std-civil-180",
+   "seq": 178,
+   "caseNumber": "2000다51216",
+   "decisionId": "sc-2000da51216-20011009-judgment",
+   "holdingsRatio": 0.3512,
+   "verdict": "same-variation",
+   "reason": "매매로 인한 소유권이전등기청구권의 양도에 채무자의 동의나 승낙이 필요하여 양도인의 통지만으로는 대항력이 생기지 않는다는 공식 판결요지 [1]과 같은 법리다. 공식 [2](가처분과 가압류·압류의 우선순위)는 PDF에 없고, PDF의 취득시효완성 등기청구권 문단은 입력된 공식 요지에 대응하는 문장이 없어 원문 대조가 더 필요하다.",
+   "firstPass": "same-variation"
+  },
+  {
+   "registryId": "std-civil-194",
+   "seq": 193,
+   "caseNumber": "97다37661",
+   "decisionId": "sc-97da37661-20000316-judgment",
+   "holdingsRatio": 0.4744,
+   "verdict": "same-variation",
+   "reason": "PDF 판결요지는 공식 판결요지 [2] 다수의견(매수인이 등기를 수반하지 않고 점유해도 그것만으로 타주점유가 되지 않는다는 법리)과 같다. 공식 [1](무단점유 사실이 입증되면 자주점유 추정이 깨진다는 법리)과 보충의견은 PDF에 없어 발췌다.",
+   "firstPass": "same-variation"
+  },
+  {
+   "registryId": "std-civil-290",
+   "seq": 289,
+   "caseNumber": "94다5458",
+   "decisionId": "sc-94da5458-19941122-judgment",
+   "holdingsRatio": 0.5753,
+   "verdict": "same-variation",
+   "reason": "PDF 쟁점과 판결요지 가·나는 담보가등기 이후 신축된 건물에 관습법상 법정지상권이 성립하지 않는다는 점과 경락인의 취득 여부라는 공식 판결요지 가·나와 같은 법리다. 공식 다(임차권의 대항력 요건)와 라(권리남용 요건)는 PDF에 없어 발췌다.",
+   "firstPass": "same-variation"
+  },
+  {
+   "registryId": "std-civil-388",
+   "seq": 388,
+   "caseNumber": "67다1525",
+   "decisionId": "sc-67da1525-19621216-judgment",
+   "holdingsRatio": 0.1295,
+   "verdict": "same-variation",
+   "reason": "공식 판시사항 가가 표준판례 판결요지와 같은 법리(수임인이 받은 대체물도 당사자 사이에서는 특정물과 같이 본다)이고, 공식 판결요지는 다 항만 싣는다. 같은 재판의 요지 범위 차이. (Sonnet 5.5 전문 확인: 공식 전문에 비료·대체물 용어 다수, 유류분 0) [Haiku 1차 판정: different-issue — 공식 판결요지는 원고의 청구 내용을 오해해 예비적 전보배상청구를 심리한 잘못을 다루고, PDF 판결요지는 수임인이 대행 수입한 비료가 대체물이라도 특정물로 본다는 점을 다루므로 두 요지의 법리는 서로 다르다. 다만 공식 판시사항 가는 PDF 판결요지와 같은 법리이고 사건번호·선고일·법원·유형도 일치하므로 같은 재판 안의 다른 쟁점이 판결요지로 짝지어진 것으로 보인다. 다른 재판이 붙은 것은 아니지만 판결요지 짝짓기는 확인이 필요하다.]",
+   "firstPass": "different-issue"
+  },
+  {
+   "registryId": "std-civil-393",
+   "seq": 393,
+   "caseNumber": "90다2147",
+   "decisionId": "sc-90da2147-19910312-judgment",
+   "holdingsRatio": 0.5942,
+   "verdict": "same-variation",
+   "reason": "PDF 판결요지는 공식 판결요지의 다수의견(외화채권의 대용 청구 시 환산시기는 현실이행 시이며 법원은 채무자가 현실로 이행할 때에 가장 가까운 사실심 변론종결 당시의 시세를 기준으로 삼아야 한다는 내용)과 같은 법리다. 공식 요지의 소수의견은 PDF에 없어 발췌다.",
+   "firstPass": "same-variation"
+  },
+  {
+   "registryId": "std-civil-407",
+   "seq": 407,
+   "caseNumber": "73다1244",
+   "decisionId": "sc-73da1244-19750513-judgment",
+   "holdingsRatio": 0.5818,
+   "verdict": "same-variation",
+   "reason": "공식 요지와 표준판례 요지 모두 제3자의 채권침해가 불법행위를 구성할 수 있으나 채권침해의 태양에 따라 구체적으로 판단한다는 같은 법리를 담는다. 표준판례 요지는 여기에 이 사건(책임재산 감소에 그쳐 간접손해)에 대한 적용 판단을 덧붙이며, 공식 요지에는 그 적용 부분이 없다.",
+   "firstPass": "same-variation"
+  },
+  {
+   "registryId": "std-civil-418",
+   "seq": 418,
+   "caseNumber": "92다31361",
+   "decisionId": "sc-92da31361-19921222-judgment",
+   "holdingsRatio": 0.4101,
+   "verdict": "same-variation",
+   "reason": "손익상계에 의하여 공제할 이익의 범위를 상당인과관계 있는 것에 국한한다는 법리(나)와, 종전 직장에서 받은 보수는 공제 대상이 아니라는 판단(다)이 양쪽에 같다. 공식 요지의 가항(노동능력상실률 인정평가에 따른 일실이익 산정)은 표준판례 요지에 없어 대조되지 않으며, 표준판례가 공식 요지의 일부만 옮긴 것으로 보인다.",
+   "firstPass": "same-variation"
+  },
+  {
+   "registryId": "std-civil-507",
+   "seq": 508,
+   "caseNumber": "2016다24284",
+   "decisionId": "sc-2016da24284-20191219-judgment",
+   "holdingsRatio": 0.2074,
+   "verdict": "same-variation",
+   "reason": "양도금지특약을 위반한 채권양도는 원칙적으로 무효이고, 양수인의 악의 또는 중과실은 특약으로 대항하려는 자가 주장·증명한다는 다수의견 법리가 양쪽 모두 같다. 공식 요지 [1](건축공사도급계약 해제 시 기성고에 따른 보수 산정)은 표준판례 요지와 쟁점 목록에 없으며, 표준판례가 같은 판결의 다수의견 부분만 옮긴 것으로 보인다.",
+   "firstPass": "same-variation"
+  },
+  {
+   "registryId": "std-civil-573",
+   "seq": 576,
+   "caseNumber": "91다43138",
+   "decisionId": "sc-91da43138-19920410-judgment",
+   "holdingsRatio": 0.5768,
+   "verdict": "same-variation",
+   "reason": "사직원 제출로 합의해지를 청약한 근로자는 사용자의 승낙 의사가 확정되어 근로관계가 종료되기 전에는 사직 의사를 철회할 수 있고, 신의칙에 반하는 특별한 사정이 있을 때만 예외라는 같은 법리다. 공식 요지의 나(교사 사직원 철회 사례)는 표준판례 요지에 없다. 표준판례 요지 문장에는 ‘이에 대하여 사용자가 종료시키게 되는’ 부분에 ‘승낙함으로써 당해 근로관계를’이 빠진 것으로 보이는 누락이 있어 원문 대조가 필요하다.",
+   "firstPass": "same-variation"
+  },
+  {
+   "registryId": "std-civil-631",
+   "seq": 637,
+   "caseNumber": "66다2618",
+   "decisionId": "sc-66da2618-19670518-judgment",
+   "holdingsRatio": 0.2356,
+   "verdict": "same-variation",
+   "reason": "타인 권리를 매도한 자의 담보책임에서 선의 매수인이 받을 손해배상은 계약이 완전히 이행된 것과 동일한 경제적 이익이며 불능 당시의 시가를 표준으로 한다는 점이 양쪽에 같다. 표준판례 요지 [2]는 매매계약을 해제하고 이행에 대신하는 전보배상을 청구하는 경우 해제 당시 시가를 기준으로 한다는 내용을 덧붙이는데, 공식 요지에는 이 내용이 없어 두 시점의 관계는 대조되지 않는다.",
+   "firstPass": "same-variation"
+  },
+  {
+   "registryId": "std-civil-721",
+   "seq": 730,
+   "caseNumber": "67다1307",
+   "decisionId": "sc-67da1307-19670905-judgment",
+   "holdingsRatio": 0.3232,
+   "verdict": "same-variation",
+   "reason": "민법 제752조에 규정된 친족 이외의 친족도 정신적 고통을 입증하면 위자료를 청구할 수 있다는 같은 법리다. 표준판례 요지는 이를 피해자의 직계비속의 배우자(자부)에게 적용하는 판단을 덧붙이며, 공식 요지에는 자부에 관한 판단이 없다.",
+   "firstPass": "same-variation"
+  },
+  {
+   "registryId": "std-civil-749",
+   "seq": 760,
+   "caseNumber": "96다46903",
+   "decisionId": "sc-96da46903-19970829-judgment",
+   "holdingsRatio": 0.1677,
+   "verdict": "same-variation",
+   "reason": "공동불법행위의 관련공동성은 객관적으로 판단하며, 교통사고와 의료사고가 객관적으로 관련되고 공동하여 손해를 가하면 연대책임이 성립한다는 점이 양쪽에 같다. 표준판례 요지의 ‘의사의 공통이나 공동의 인식이 필요하지 아니하다’는 문구는 공식 요지 본문에 명시되어 있지 않은 추가 부분이다. 공식 요지 [1](합의의 범위)과 [3](의료과실 사례)은 표준판례 요지에 없다.",
+   "firstPass": "same-variation"
+  },
+  {
+   "registryId": "std-civil-790",
+   "seq": 803,
+   "caseNumber": "92므938",
+   "decisionId": "sc-92meu938-19930409-judgment",
+   "holdingsRatio": 0.2649,
+   "verdict": "same-variation",
+   "reason": "간통에 이르지 않았더라도 정조의무를 저버린 부정행위는 민법 제840조 제1호의 ‘부정한 행위’에 해당한다는 같은 법리다. 표준판례 요지는 이를 일체의 부정행위를 포함하는 넓은 개념으로 풀어 쓰고, 사실 적용과 위자료 연대 지급 결론을 덧붙였으나 공식 요지와 충돌하지 않는다.",
+   "firstPass": "same-variation"
+  },
+  {
+   "registryId": "std-civil-834",
+   "seq": 847,
+   "caseNumber": "2011다64669",
+   "decisionId": "sc-2011da64669-20111222-judgment",
+   "holdingsRatio": 0.4348,
+   "verdict": "same-variation",
+   "reason": "친권자의 배임적 대리행위를 상대방이 알았거나 알 수 있었던 경우 민법 제107조 제1항 단서를 유추하여 행위의 효과가 자녀에게 미치지 않는다는 같은 법리다. 표준판례 요지의 선의 제3자 보호(제107조 제2항 유추)와 악의 주장·증명책임 부분은 공식 요지 본문에 없어 대조되지 않는다. 표준판례 요지의 ‘자(자)’ 표기는 ‘자(子)’의 오기로 보이므로 원문 대조가 필요하다.",
+   "firstPass": "same-variation"
+  },
+  {
+   "registryId": "std-civil-885",
+   "seq": 898,
+   "caseNumber": "2000다22942",
+   "decisionId": "sc-2000da22942-20011012-judgment",
+   "holdingsRatio": 0.2305,
+   "verdict": "same-variation",
+   "reason": "상속회복청구권과 제척기간에 관한 민법 제999조가 포괄적 유증에도 유추 적용된다는 같은 결론이다. 표준판례 요지는 제1078조 등 근거와 이유를 덧붙여 풀어 쓴 것이며 공식 요지와 법리가 같다.",
+   "firstPass": "same-variation"
+  },
+  {
+   "registryId": "std-civil-912",
+   "seq": 925,
+   "caseNumber": "2000다66430",
+   "decisionId": "sc-2000da66430-20010914-judgment",
+   "holdingsRatio": 0.101,
+   "verdict": "same-variation",
+   "reason": "공식 전문에 유류분 15회·제1117조 2회가 나와 표준판례 판결요지의 쟁점(유류분반환청구권 소멸시효, 사인증여 무효 주장)이 같은 재판에 있음. 공식 판결요지 란이 일부 쟁점만 싣는다. (Sonnet 5.5 전문 확인) [Haiku 1차 판정: different-issue — 공식 요지는 사인증여에 유증의 방식 규정(민법 제1065조 이하)이 적용되지 않는다는 점과 유언이 아닌 것을 유언이라고 시인한 진술이 자백이 되지 않는다는 점을 다루고, 표준판례 요지는 유류분반환청구권의 제1117조 단기소멸시효 기산점과 사인증여 무효 주장에 유류분반환 청구가 포함되는지를 다룬다. 공식 판시사항은 없고 공식 요지 어디에도 유류분·소멸시효 판단이 없어 법리가 겹치지 않는다. 사건번호·선고일·법원이 일치하므로 공식 요지가 불완전한지 또는 표준판례 요지의 쟁점 배치가 맞는지 원문 확인이 필요하다.]",
+   "firstPass": "different-issue"
+  }
+ ],
+ "metaMismatchPending": [
+  {
+   "registryId": "std-civil-399",
+   "caseNumber": "93다951",
+   "issue": "등록부 전원합의체 False, 공식 인용문은 전원합의체 판결. 표준판례 PDF 출처줄은 전원합의체 표기가 없다."
+  },
+  {
+   "registryId": "std-civil-815",
+   "caseNumber": "82므59",
+   "issue": "등록부 전원합의체 False, 공식 인용문은 전원합의체 판결. 표준판례 PDF 출처줄은 전원합의체 표기가 없다."
+  },
+  {
+   "registryId": "std-civil-424",
+   "caseNumber": "2013다63257",
+   "issue": "등록부·PDF 선고일 2013-12-16, 공식 2013-12-26."
+  },
+  {
+   "registryId": "std-civil-840",
+   "caseNumber": "2006므751",
+   "issue": "등록부·PDF 선고일 2006-07-04, 공식 2006-07-13."
+  }
+ ],
+ "note": "등록부·공식 수집본·표준판례 출처는 수정하지 않았다. meta-mismatch 4건은 식별 필드(decisionId 에 날짜 포함)와 연결되므로 사용자 확인 후 add_cases.py 로 처리한다."
+}
