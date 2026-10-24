@@ -31,6 +31,14 @@ python -X utf8 tools/add_cases.py set std-constitution-01 --toc hb-1-1   # 6) 2)
 python -X utf8 tools/add_cases.py validate                     # 7) 오류 0 확인
 ```
 
+## 1-2. 겹침 재판 22건 (두 과목 PDF 에 같은 재판) — 과목별 등록 뒤, 수집 전에
+- 등록 규칙이 과목 단위라 22건은 두 과목 모두에 각 책의 제목으로 등록된다. 다만 두 배치의 `standardSource` 텍스트가 다르면 `build_data` 가 충돌로 멈추므로, **등록 직후** `_overlaps/final/<decisionId>.json` 의 종합 텍스트(Fable 5.1 종합 + 글자 대조 통과분)를 두 배치에 똑같이 붙인다:
+```bash
+python -X utf8 tools/overlap_apply.py --final data/standard-cases/_overlaps/final        # 각 배치 id 를 decisionId+과목으로 찾아 add_cases.py set <id> --standard-source … 실행
+```
+- 종합이 없는 재판(검증 통과 구절 없음)은 두 배치 모두 `standardSource` 를 비우고 공식 자료만 표시한다.
+- `_overlaps/final/*.json` 의 `report` 에 공식 판시사항·요지와의 비교, 제외 구절이 있다.
+
 ## 2. 전 과목 등록 후
 ```bash
 python -X utf8 tools/fetch_lawgo.py --all-missing              # 공식 텍스트 수집(약 2,700건, 1.5초 간격 → 70분 안팎; 미게재는 .missing 으로 남고 화면은 검증된 표준판례 텍스트로 채워진다)

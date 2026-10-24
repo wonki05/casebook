@@ -98,6 +98,8 @@ python tools/make.py validate data build check web webcheck
 3. 표본은 `pass` 의 **10%**(과목당 최소 20건), **결함 허용 0.5%** — 표본에 `fix`/`reject` 가 하나라도 있는 청크는 전수 재검토, 과목 전체 표본 결함률이 0.5% 를 넘으면 그 과목의 `pass` 전부를 재검토한다.
 4. 1단계 모델은 **Claude Sonnet 5.5, effort medium**(`claude-sonnet-5-5`). 제공자 API 키가 없는 세션은 서브에이전트로 같은 지시문을 돌린다(산출물 경로·형식 동일).
 5. **과목마다 git worktree** 로 나눠 진행한다(§7).
+6. **과목 간 겹침 재판(두 과목 PDF 에 같은 재판)**: 과목마다 **각 책의 제목으로 모두 배치**한다(`add_cases.duplicate` 는 표준판례를 과목 단위로 중복 판정). 판시사항(없으면 쟁점)·판결요지는 두 책의 구절을 **글자 그대로 합친 합집합**으로 하나의 `standardSource` 텍스트를 만들어 두 배치에 똑같이 붙인다(build 가 두 책의 출처를 합쳐 표시). 합집합의 순서와 각 구절의 소속은 **공식 판결문 전문과 국가법령정보센터 판시사항·판결요지와 대조**해 정하며, 이 종합·검토는 Fable 5.1(effort max) 이 `pdf2md-overlaps` worktree 에서 수행하고 `tools/overlap_check.py` 가 구절마다 PDF 원문과 글자 단위로 다시 대조한다(요약·의역·새 문장 금지는 그대로). 도구: `tools/overlap_prep.py` → `_overlaps/in/` → Fable → `_overlaps/out/` → `tools/overlap_check.py` → `_overlaps/final/`.
+7. 단계 4 실행(병합·목차 교체·등록·수집·빌드)은 Opus 5.5 또는 Sonnet 5.5, effort medium 이상인 에이전트가 `spec/STAGE4-pdf2md.md` 를 따라 수행한다.
 
 ## 7. 브랜치·worktree 운영
 - 도구(`tools/pdf_chunks.py` 등)는 `main` 에 두고, 과목 작업은 `pdf2md-<subject>` 브랜치를 `main` 에서 만들어 **별도 worktree**(`.worktrees/pdf2md-<subject>/`, 기존 법률신문 작업과 같은 관례)에서 수행한다. PDF 원본은 git 이 추적하지 않으므로(.gitignore) 도구는 PDF 를 main 작업 폴더의 `data/standard-cases/` 에서 읽고, 과목 폴더의 산출물(skeleton·md·entries·candidates 등)은 추적된다(`pages/`·`chunks/`·`md/_prompts/` 제외). 한 세션은 자기 worktree 의 `data/standard-cases/<과목>/**` 만 쓴다.
