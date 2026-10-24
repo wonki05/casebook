@@ -59,3 +59,13 @@
 - 재개 스크립트는 output/pdf2md-git-20261024/resume_git.py다. 일반 PowerShell에서 `python -X utf8 output/pdf2md-git-20261024/resume_git.py`로 실행한다. origin과 원격 변경을 재확인하고, 원격 기준의 새 작업트리에서 의존 파일 및 선택 파일을 분리해 커밋한다. 검증 후 강제 옵션 없이 main으로 push하고 실패 단계에서 멈춘다. 제한 환경에서는 실행하지 않았으며 구문 및 읽기 전용 계획 검사만 수행한다.
 - 공식 수집 디렉터리 재확인: 등록부 3,236건, 공식 파일 577개, 기존 .missing 57개, 신규 대기 2,602건의 수집 성공 및 신규 .missing은 각각 0개다. 새 DNS 검사는 하지 않았다.
 - 이번 재시도로 생성한 커밋, push, main 통합, 신규 배포는 없다. 데이터와 화면을 바꾸지 않아 빌드/브라우저 검사를 재실행하지 않았고 기존 결과를 유지한다.
+
+## Git integration result (2026-10-24T10:19:44.027410+00:00)
+
+- origin: https://github.com/wonki05/casebook.git
+- Source HEAD: 12d91e45443d0598cfd5f509ba38e09e8e6c06eb; remote baseline: 948afbb84028588f28b46b2841aec98a44cd54a6.
+- Branch: pdf2md/integrate-20261024-101803; data commit: d46322dc1bd430ba4e0c0df53f0042931ea116f4. Non-force push to main completed and ancestry verified.
+- Imported 11 previously committed prerequisites separately, then the 949-file selection.
+- validate/data/laws/build/web and targeted PDF regression tests passed. No browser sweep was run.
+- Original workspace/index and other-session files were preserved; source status is updated separately.
+- GitHub Pages deployment has not been verified. Official text collection remains a separate task.
