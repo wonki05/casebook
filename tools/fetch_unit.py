@@ -257,6 +257,9 @@ def commit_unit(plan, u, r, rep, msg):
     add = git('add', '--pathspec-from-file=-', input_text='\n'.join(paths) + '\n')
     if add.returncode:
         sys.exit('git add 실패: ' + add.stderr)
+    # 검색 보완으로 수집에 성공해 지워진 이전 미게재 기록(.missing.json)의 삭제도 함께 커밋한다.
+    gone = [os.path.relpath(missing_path(i), ROOT).replace(os.sep, '/') for i in u['ids'] if not os.path.exists(missing_path(i))]
+    git('rm', '-q', '--cached', '--ignore-unmatch', '--', *gone)
     body = 'law.go.kr 에서 tools/fetch_lawgo.py 로 추출한 원문만 data/fetched 에 보존.'
     if r['flagged']:
         body += f"\n공식 인용문과 등록부 메타가 다른 {len(r['flagged'])}건은 보고서(spec/fetch-reports)에 기록, 판정 대기."
