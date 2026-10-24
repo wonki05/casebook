@@ -1,0 +1,110 @@
+{
+ "unit": "u08-contracts",
+ "label": "계약·사무관리",
+ "total": 99,
+ "ok": 99,
+ "missing": [],
+ "flagged": [],
+ "waiting": [],
+ "retried": [
+  "std-civil-572",
+  "std-civil-580",
+  "std-civil-585",
+  "std-civil-592",
+  "std-civil-601",
+  "std-civil-605",
+  "std-civil-621",
+  "std-civil-627",
+  "std-civil-642",
+  "std-civil-643",
+  "std-civil-644",
+  "std-civil-646",
+  "std-civil-647",
+  "std-civil-655",
+  "std-civil-657",
+  "std-civil-658"
+ ],
+ "elapsedSec": 806,
+ "search": {
+  "std-civil-572": {
+   "outcome": "fetched",
+   "cite": "[대법원 2007. 6. 1. 선고 2005다5812 판결]",
+   "seq": "216401"
+  },
+  "std-civil-580": {
+   "outcome": "fetched",
+   "cite": "[대법원 2006. 2. 24. 선고 2005다58656 판결]",
+   "seq": "216143"
+  },
+  "std-civil-585": {
+   "outcome": "fetched",
+   "cite": "[대법원 1999. 7. 9. 선고 98다47542 판결]",
+   "seq": "195032"
+  },
+  "std-civil-592": {
+   "outcome": "fetched",
+   "cite": "[대법원 2009. 5. 28. 선고 2008다98655 판결]",
+   "seq": "135838"
+  },
+  "std-civil-601": {
+   "outcome": "fetched",
+   "cite": "[대법원 2005. 7. 22. 선고 2005다7566 판결]",
+   "seq": "143405"
+  },
+  "std-civil-605": {
+   "outcome": "fetched",
+   "cite": "[대법원 1970. 2. 24. 선고 69다1410 판결]",
+   "seq": "208264"
+  },
+  "std-civil-621": {
+   "outcome": "fetched",
+   "cite": "[대법원 2008. 4. 10. 선고 2007다38908 판결]",
+   "seq": "85759"
+  },
+  "std-civil-627": {
+   "outcome": "fetched",
+   "cite": "[대법원 2022. 3. 11. 선고 2017다207475 판결]",
+   "seq": "220239"
+  },
+  "std-civil-642": {
+   "outcome": "fetched",
+   "cite": "[대법원 2013. 11. 28. 선고 2013다48364 판결]",
+   "seq": "171800"
+  },
+  "std-civil-643": {
+   "outcome": "fetched",
+   "cite": "[대법원 2022. 4. 14. 선고 2020다254228 판결]",
+   "seq": "220329"
+  },
+  "std-civil-644": {
+   "outcome": "fetched",
+   "cite": "[대법원 2017. 4. 26. 선고 2014다72449 판결]",
+   "seq": "184753"
+  },
+  "std-civil-646": {
+   "outcome": "fetched",
+   "cite": "[대법원 2017. 5. 18. 선고 2012다86895 전원합의체 판결]",
+   "seq": "184812"
+  },
+  "std-civil-647": {
+   "outcome": "fetched",
+   "cite": "[대법원 2005. 9. 28. 선고 2005다8323 판결]",
+   "seq": "193866"
+  },
+  "std-civil-655": {
+   "outcome": "fetched",
+   "cite": "[대법원 2017. 1. 12. 선고 2014다11574 판결]",
+   "seq": "184103"
+  },
+  "std-civil-657": {
+   "outcome": "fetched",
+   "cite": "[대법원 2016. 8. 18. 선고 2014다31691 판결]",
+   "seq": "183242"
+  },
+  "std-civil-658": {
+   "outcome": "fetched",
+   "cite": "[대법원 2008. 3. 27. 선고 2007다78616 판결]",
+   "seq": "85613"
+  }
+ }
+}

@@ -1,0 +1,367 @@
+{
+ "subject": "criminal",
+ "registered": [
+  {
+   "id": "std-criminal-473",
+   "caseNumber": "2011도6507",
+   "title": "외국인의 국외범(보호주의)",
+   "tocPath": [
+    "hb2-1",
+    "hb2-1-1"
+   ],
+   "decisionId": "sc-2011do6507-20110825-judgment"
+  },
+  {
+   "id": "std-criminal-474",
+   "caseNumber": "2015도6809",
+   "title": "부작위범의 성립요건과 미필적 고의",
+   "tocPath": [
+    "hb2-1",
+    "hb2-1-2",
+    "hb2-1-2-1"
+   ],
+   "decisionId": "sc-2015do6809-20151112-judgment"
+  },
+  {
+   "id": "std-criminal-475",
+   "caseNumber": "2005도8081",
+   "title": "추정적 승낙",
+   "tocPath": [
+    "hb2-1",
+    "hb2-1-2",
+    "hb2-1-2-2"
+   ],
+   "decisionId": "sc-2005do8081-20060324-judgment"
+  },
+  {
+   "id": "std-criminal-476",
+   "caseNumber": "96도3376",
+   "title": "상관의 위법 또는 불법한 명령",
+   "tocPath": [
+    "hb2-1",
+    "hb2-1-2",
+    "hb2-1-2-2"
+   ],
+   "decisionId": "sc-96do3376-19970417-judgment"
+  },
+  {
+   "id": "std-criminal-477",
+   "caseNumber": "2015도6809",
+   "title": "부작위범의 공동정범",
+   "tocPath": [
+    "hb2-1",
+    "hb2-1-2",
+    "hb2-1-2-5"
+   ],
+   "decisionId": "sc-2015do6809-20151112-judgment"
+  },
+  {
+   "id": "std-criminal-478",
+   "caseNumber": "2012도7407",
+   "title": "교사자의 공범관계로부터의 이탈",
+   "tocPath": [
+    "hb2-1",
+    "hb2-1-2",
+    "hb2-1-2-5"
+   ],
+   "decisionId": "sc-2012do7407-20121115-judgment"
+  },
+  {
+   "id": "std-criminal-479",
+   "caseNumber": "2003도4128",
+   "title": "부작위에 의한 방조",
+   "tocPath": [
+    "hb2-1",
+    "hb2-1-2",
+    "hb2-1-2-5"
+   ],
+   "decisionId": "sc-2003do4128-20060428-judgment"
+  },
+  {
+   "id": "std-criminal-480",
+   "caseNumber": "88도1114",
+   "title": "간접정범의 본질",
+   "tocPath": [
+    "hb2-1",
+    "hb2-1-2",
+    "hb2-1-2-5"
+   ],
+   "decisionId": "sc-88do1114-19880913-judgment"
+  },
+  {
+   "id": "std-criminal-481",
+   "caseNumber": "96도3376",
+   "title": "목적 없는 자의 행위를 이용한 간접정범",
+   "tocPath": [
+    "hb2-1",
+    "hb2-1-2",
+    "hb2-1-2-5"
+   ],
+   "decisionId": "sc-96do3376-19970417-judgment"
+  },
+  {
+   "id": "std-criminal-482",
+   "caseNumber": "2008도7311",
+   "title": "특별관계",
+   "tocPath": [
+    "hb2-1",
+    "hb2-1-3"
+   ],
+   "decisionId": "sc-2008do7311-20081127-judgment"
+  },
+  {
+   "id": "std-criminal-483",
+   "caseNumber": "2006도5586",
+   "title": "몰수와 추징(범인 이외의 자의 소유에 속하지 아니하는 물건)",
+   "tocPath": [
+    "hb2-1",
+    "hb2-1-4"
+   ],
+   "decisionId": "sc-2006do5586-20061123-judgment"
+  },
+  {
+   "id": "std-criminal-484",
+   "caseNumber": "2009도7150",
+   "title": "살인예비죄",
+   "tocPath": [
+    "hb2-2",
+    "hb2-2-1",
+    "hb2-2-1-1"
+   ],
+   "decisionId": "sc-2009do7150-20091029-judgment"
+  },
+  {
+   "id": "std-criminal-485",
+   "caseNumber": "2005도3832",
+   "title": "낙태와 임산부에 대한 상해죄의 성부",
+   "tocPath": [
+    "hb2-2",
+    "hb2-2-1",
+    "hb2-2-1-1"
+   ],
+   "decisionId": "sc-2005do3832-20070629-judgment"
+  },
+  {
+   "id": "std-criminal-486",
+   "caseNumber": "2002도4380",
+   "title": "감금죄와 강도상해죄의 죄수",
+   "tocPath": [
+    "hb2-2",
+    "hb2-2-1",
+    "hb2-2-1-2"
+   ],
+   "decisionId": "sc-2002do4380-20030110-judgment"
+  },
+  {
+   "id": "std-criminal-487",
+   "caseNumber": "2018도16002",
+   "title": "준강간죄의 불능미수",
+   "tocPath": [
+    "hb2-2",
+    "hb2-2-1",
+    "hb2-2-1-2"
+   ],
+   "decisionId": "sc-2018do16002-20190328-judgment"
+  },
+  {
+   "id": "std-criminal-488",
+   "caseNumber": "2011도7943",
+   "title": "업무방해의 결과를 초래할 위험",
+   "tocPath": [
+    "hb2-2",
+    "hb2-2-1",
+    "hb2-2-1-3"
+   ],
+   "decisionId": "sc-2011do7943-20120524-judgment"
+  },
+  {
+   "id": "std-criminal-489",
+   "caseNumber": "2012도1895",
+   "title": "업무방해죄와 폭행죄 간의 죄수",
+   "tocPath": [
+    "hb2-2",
+    "hb2-2-1",
+    "hb2-2-1-3"
+   ],
+   "decisionId": "sc-2012do1895-20121011-judgment"
+  },
+  {
+   "id": "std-criminal-490",
+   "caseNumber": "94도2561",
+   "title": "주거침입죄의 실행의 착수시기",
+   "tocPath": [
+    "hb2-2",
+    "hb2-2-1",
+    "hb2-2-1-4"
+   ],
+   "decisionId": "sc-94do2561-19950915-judgment"
+  },
+  {
+   "id": "std-criminal-491",
+   "caseNumber": "2015도8169",
+   "title": "상습절도와 주거침입의 관계",
+   "tocPath": [
+    "hb2-2",
+    "hb2-2-1",
+    "hb2-2-1-5"
+   ],
+   "decisionId": "sc-2015do8169-20151015-judgment"
+  },
+  {
+   "id": "std-criminal-492",
+   "caseNumber": "2010도9630",
+   "title": "강도강간범의 성립요건",
+   "tocPath": [
+    "hb2-2",
+    "hb2-2-1",
+    "hb2-2-1-5"
+   ],
+   "decisionId": "sc-2010do9630-20101209-judgment"
+  },
+  {
+   "id": "std-criminal-493",
+   "caseNumber": "92도917",
+   "title": "(준)강도와 공무집행방해죄 간의 죄수",
+   "tocPath": [
+    "hb2-2",
+    "hb2-2-1",
+    "hb2-2-1-5"
+   ],
+   "decisionId": "sc-92do917-19920728-judgment"
+  },
+  {
+   "id": "std-criminal-494",
+   "caseNumber": "2003도4417",
+   "title": "준강도의 주체",
+   "tocPath": [
+    "hb2-2",
+    "hb2-2-1",
+    "hb2-2-1-5"
+   ],
+   "decisionId": "sc-2003do4417-20031024-judgment"
+  },
+  {
+   "id": "std-criminal-495",
+   "caseNumber": "2002도669",
+   "title": "사기죄와 배임죄 간의 죄수",
+   "tocPath": [
+    "hb2-2",
+    "hb2-2-1",
+    "hb2-2-1-5"
+   ],
+   "decisionId": "sc-2002do669-20020718-judgment"
+  },
+  {
+   "id": "std-criminal-496",
+   "caseNumber": "2008도2440",
+   "title": "절취한 타인 신용카드를 이용한 현금인출과 계좌이체의 죄책",
+   "tocPath": [
+    "hb2-2",
+    "hb2-2-1",
+    "hb2-2-1-5"
+   ],
+   "decisionId": "sc-2008do2440-20080612-judgment"
+  },
+  {
+   "id": "std-criminal-497",
+   "caseNumber": "2010도10500",
+   "title": "보관자의 이중처분행위의 죄책",
+   "tocPath": [
+    "hb2-2",
+    "hb2-2-1",
+    "hb2-2-1-5"
+   ],
+   "decisionId": "sc-2010do10500-20130221-judgment"
+  },
+  {
+   "id": "std-criminal-498",
+   "caseNumber": "2014도1104",
+   "title": "대표이사의 어음발행행위의 배임죄 성부",
+   "tocPath": [
+    "hb2-2",
+    "hb2-2-1",
+    "hb2-2-1-5"
+   ],
+   "decisionId": "sc-2014do1104-20170720-judgment"
+  },
+  {
+   "id": "std-criminal-499",
+   "caseNumber": "2001도6641",
+   "title": "방화죄에서 실행의 착수시기",
+   "tocPath": [
+    "hb2-2",
+    "hb2-2-2",
+    "hb2-2-2-1"
+   ],
+   "decisionId": "sc-2001do6641-20020326-judgment"
+  },
+  {
+   "id": "std-criminal-500",
+   "caseNumber": "2014도6206",
+   "title": "교통방해치사상죄의 성격",
+   "tocPath": [
+    "hb2-2",
+    "hb2-2-2",
+    "hb2-2-2-1"
+   ],
+   "decisionId": "sc-2014do6206-20140724-judgment"
+  },
+  {
+   "id": "std-criminal-501",
+   "caseNumber": "2008도7018",
+   "title": "문서죄의 객체인 문서의 해당 여하(1)",
+   "tocPath": [
+    "hb2-2",
+    "hb2-2-2",
+    "hb2-2-2-2"
+   ],
+   "decisionId": "sc-2008do7018-20081127-judgment"
+  },
+  {
+   "id": "std-criminal-502",
+   "caseNumber": "96도3376",
+   "title": "내란죄의 성립요소",
+   "tocPath": [
+    "hb2-2",
+    "hb2-2-3",
+    "hb2-2-3-1"
+   ],
+   "decisionId": "sc-96do3376-19970417-judgment"
+  },
+  {
+   "id": "std-criminal-503",
+   "caseNumber": "2014도10978",
+   "title": "내란죄에서 예비·음모와 실행의 착수시기 구분, 선동·선전의 의미",
+   "tocPath": [
+    "hb2-2",
+    "hb2-2-3",
+    "hb2-2-3-1"
+   ],
+   "decisionId": "sc-2014do10978-20150122-judgment"
+  },
+  {
+   "id": "std-criminal-504",
+   "caseNumber": "2012도6027",
+   "title": "범인도피죄의 기수시기와 공범의 성립",
+   "tocPath": [
+    "hb2-2",
+    "hb2-2-3",
+    "hb2-2-3-2"
+   ],
+   "decisionId": "sc-2012do6027-20120830-judgment"
+  },
+  {
+   "id": "std-criminal-505",
+   "caseNumber": "93도1002",
+   "title": "모해위증죄의 성격",
+   "tocPath": [
+    "hb2-2",
+    "hb2-2-3",
+    "hb2-2-3-2"
+   ],
+   "decisionId": "sc-93do1002-19941223-judgment"
+  }
+ ],
+ "skipped": [],
+ "note": "배치 정보만 등록(standardSource 없음). 표준판례 텍스트는 같은 decisionId 의 첫 배치 것을 build_data 가 적용한다. 건너뛴 항목에만 있는 문구는 판정 후 합집합으로 더한다."
+}

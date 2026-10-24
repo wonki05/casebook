@@ -1,0 +1,82 @@
+{
+ "unit": "u10-family",
+ "label": "친족",
+ "total": 76,
+ "ok": 76,
+ "missing": [],
+ "flagged": [
+  {
+   "id": "std-civil-840",
+   "caseNumber": "2006므751",
+   "flags": [
+    "선고일 2006-07-04 ≠ 공식 2006-07-13"
+   ]
+  }
+ ],
+ "waiting": [],
+ "retried": [
+  "std-civil-769",
+  "std-civil-778",
+  "std-civil-803",
+  "std-civil-807",
+  "std-civil-808",
+  "std-civil-809",
+  "std-civil-810",
+  "std-civil-827"
+ ],
+ "elapsedSec": 624,
+ "search": {
+  "std-civil-769": {
+   "outcome": "fetched",
+   "cite": "[대법원 2003. 11. 14. 선고 2000므1257 판결]",
+   "seq": "145683"
+  },
+  "std-civil-778": {
+   "outcome": "fetched",
+   "cite": "[대법원 2016. 2. 18. 선고 2015므654 판결]",
+   "seq": "187764"
+  },
+  "std-civil-803": {
+   "outcome": "fetched",
+   "cite": "[대법원 2019. 10. 31. 선고 2019므12549 판결]",
+   "seq": "210429"
+  },
+  "std-civil-807": {
+   "outcome": "fetched",
+   "cite": "[대법원 1999. 11. 26. 선고 99므1596 판결]",
+   "seq": "79069"
+  },
+  "std-civil-808": {
+   "outcome": "fetched",
+   "cite": "[대법원 2013. 6. 20. 선고 2010므4071 전원합의체 판결]",
+   "seq": "170395"
+  },
+  "std-civil-809": {
+   "outcome": "fetched",
+   "cite": "[대법원 1994. 10. 28. 선고 94므246 판결]",
+   "seq": "110954"
+  },
+  "std-civil-810": {
+   "outcome": "ambiguous",
+   "candidates": [
+    {
+     "court": "대법원",
+     "date": "1995-03-10",
+     "cite": "[대법원 1995. 3. 10. 선고 94므1379 판결]",
+     "numberMatch": true,
+     "seq": "190033"
+    },
+    {
+     "court": "대법원",
+     "date": "1995-03-10",
+     "cite": "[대법원 1995. 3. 10. 선고 94므1379 판결]",
+     "numberMatch": true,
+     "seq": "599825"
+    }
+   ]
+  },
+  "std-civil-827": {
+   "outcome": "no-result"
+  }
+ }
+}

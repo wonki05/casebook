@@ -1,0 +1,90 @@
+{
+ "unit": "u11-succession",
+ "label": "상속",
+ "total": 77,
+ "ok": 76,
+ "missing": [
+  {
+   "id": "std-civil-850",
+   "caseNumber": "2000다64502",
+   "decisionDate": "2002-02-08",
+   "class": "not-listed",
+   "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다"
+  }
+ ],
+ "flagged": [],
+ "waiting": [],
+ "retried": [
+  "std-civil-850",
+  "std-civil-851",
+  "std-civil-857",
+  "std-civil-858",
+  "std-civil-859",
+  "std-civil-862",
+  "std-civil-866",
+  "std-civil-875",
+  "std-civil-880",
+  "std-civil-909",
+  "std-civil-910",
+  "std-civil-916"
+ ],
+ "elapsedSec": 649,
+ "search": {
+  "std-civil-850": {
+   "outcome": "no-result"
+  },
+  "std-civil-851": {
+   "outcome": "fetched",
+   "cite": "[대법원 2017. 12. 22. 선고 2015다236820 판결]",
+   "seq": "192963"
+  },
+  "std-civil-857": {
+   "outcome": "fetched",
+   "cite": "[대법원 1998. 12. 8. 선고 97므513 판결]",
+   "seq": "117253"
+  },
+  "std-civil-858": {
+   "outcome": "no-result"
+  },
+  "std-civil-859": {
+   "outcome": "fetched",
+   "cite": "[대법원 2019. 11. 21. 자 2014스44 전원합의체 결정]",
+   "seq": "210541"
+  },
+  "std-civil-862": {
+   "outcome": "fetched",
+   "cite": "[대법원 2018. 8. 30. 선고 2015다27132 판결]",
+   "seq": "201348"
+  },
+  "std-civil-866": {
+   "outcome": "fetched",
+   "cite": "[대법원 2007. 7. 26. 선고 2006므2757 판결]",
+   "seq": "216337"
+  },
+  "std-civil-875": {
+   "outcome": "fetched",
+   "cite": "[대법원 2005. 1. 14. 선고 2003다38573 판결]",
+   "seq": "83655"
+  },
+  "std-civil-880": {
+   "outcome": "fetched",
+   "cite": "[대법원 2007. 10. 25. 선고 2007다51550 판결]",
+   "seq": "85361"
+  },
+  "std-civil-909": {
+   "outcome": "fetched",
+   "cite": "[대법원 2015. 11. 12. 선고 2011다55092 판결]",
+   "seq": "179850"
+  },
+  "std-civil-910": {
+   "outcome": "fetched",
+   "cite": "[대법원 2013. 3. 14. 선고 2010다42624 판결]",
+   "seq": "168432"
+  },
+  "std-civil-916": {
+   "outcome": "fetched",
+   "cite": "[대법원 2012. 4. 16. 자 2011스191 결정]",
+   "seq": "166734"
+  }
+ }
+}

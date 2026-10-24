@@ -1,0 +1,50 @@
+{
+ "unit": "u06-obligation-a",
+ "label": "채권총칙 채권의 목적·효력",
+ "total": 87,
+ "ok": 86,
+ "missing": [
+  {
+   "id": "std-civil-398",
+   "caseNumber": "72다1159",
+   "decisionDate": "1972-11-14",
+   "class": "not-listed",
+   "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다"
+  }
+ ],
+ "flagged": [],
+ "waiting": [],
+ "retried": [
+  "std-civil-398",
+  "std-civil-400",
+  "std-civil-410",
+  "std-civil-430",
+  "std-civil-463"
+ ],
+ "elapsedSec": 688,
+ "search": {
+  "std-civil-398": {
+   "outcome": "no-result"
+  },
+  "std-civil-400": {
+   "outcome": "fetched",
+   "cite": "[대법원 1998. 3. 13. 선고 97다54604 판결]",
+   "seq": "196429"
+  },
+  "std-civil-410": {
+   "outcome": "fetched",
+   "cite": "[대법원 1996. 4. 12. 선고 93다40614 판결]",
+   "seq": "113481"
+  },
+  "std-civil-430": {
+   "outcome": "fetched",
+   "cite": "[대법원 1989. 4. 25. 선고 88다카4253 판결]",
+   "seq": "204679"
+  },
+  "std-civil-463": {
+   "outcome": "fetched",
+   "cite": "[대법원 2019. 3. 14. 선고 2018다277785 판결]",
+   "seq": "206148"
+  }
+ }
+}

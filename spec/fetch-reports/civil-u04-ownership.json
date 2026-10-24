@@ -1,0 +1,74 @@
+{
+ "unit": "u04-ownership",
+ "label": "소유권·지상권",
+ "total": 99,
+ "ok": 99,
+ "missing": [],
+ "flagged": [],
+ "waiting": [],
+ "retried": [
+  "std-civil-207",
+  "std-civil-217",
+  "std-civil-224",
+  "std-civil-228",
+  "std-civil-250",
+  "std-civil-256",
+  "std-civil-277",
+  "std-civil-278",
+  "std-civil-300",
+  "std-civil-303"
+ ],
+ "elapsedSec": 756,
+ "search": {
+  "std-civil-207": {
+   "outcome": "fetched",
+   "cite": "[대법원 2000. 11. 16. 선고 98다45652 전원합의체 판결]",
+   "seq": "80052"
+  },
+  "std-civil-217": {
+   "outcome": "fetched",
+   "cite": "[대법원 2009. 7. 16. 선고 2007다15172 전원합의체 판결]",
+   "seq": "138128"
+  },
+  "std-civil-224": {
+   "outcome": "fetched",
+   "cite": "[대법원 1996. 3. 8. 선고 95다34866 판결]",
+   "seq": "198200"
+  },
+  "std-civil-228": {
+   "outcome": "fetched",
+   "cite": "[대법원 1993. 5. 25. 선고 92다52764 판결]",
+   "seq": "201917"
+  },
+  "std-civil-250": {
+   "outcome": "fetched",
+   "cite": "[대법원 2021. 9. 30. 선고 2021다245443 판결]",
+   "seq": "218185"
+  },
+  "std-civil-256": {
+   "outcome": "fetched",
+   "cite": "[대법원 2014. 2. 13. 선고 2012다112299 판결]",
+   "seq": "205580"
+  },
+  "std-civil-277": {
+   "outcome": "fetched",
+   "cite": "[대법원 2005. 11. 10. 선고 2005다34667 판결]",
+   "seq": "84138"
+  },
+  "std-civil-278": {
+   "outcome": "fetched",
+   "cite": "[대법원 2006. 6. 15. 선고 2006다6126 판결]",
+   "seq": "84556"
+  },
+  "std-civil-300": {
+   "outcome": "fetched",
+   "cite": "[대법원 2013. 1. 16. 선고 2011다38592 판결]",
+   "seq": "170715"
+  },
+  "std-civil-303": {
+   "outcome": "fetched",
+   "cite": "[대법원 2021. 9. 16. 선고 2017다271834 판결]",
+   "seq": "217789"
+  }
+ }
+}
