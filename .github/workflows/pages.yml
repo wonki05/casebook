@@ -21,6 +21,9 @@ concurrency:
 
 jobs:
   build:
+    outputs:
+      data_version: ${{ steps.package.outputs.data_version }}
+      shell_sha256: ${{ steps.package.outputs.shell_sha256 }}
     permissions:
       contents: read
       pages: read
@@ -60,8 +63,17 @@ jobs:
         timeout-minutes: 5
         run: python tools/make.py validate data laws build web
       - name: Verify generated package hashes and references
+        id: package
         timeout-minutes: 2
-        run: python tools/check_web_package.py output/web --registry data/registry.json
+        run: |
+          python tools/check_web_package.py output/web --registry data/registry.json
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import hashlib, json
+          from pathlib import Path
+          web = Path('output/web')
+          print('data_version=' + json.loads((web / 'data-manifest.json').read_text())['version'])
+          print('shell_sha256=' + hashlib.sha256((web / 'index.html').read_bytes()).hexdigest())
+          PY
       - name: Run requested full browser checks
         if: github.event_name == 'workflow_dispatch' && inputs.run_browser_checks
         timeout-minutes: 45
@@ -110,3 +122,67 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Verify published data and full text
+        timeout-minutes: 2
+        env:
+          EXPECTED_DATA_VERSION: ${{ needs.build.outputs.data_version }}
+          EXPECTED_SHELL_SHA256: ${{ needs.build.outputs.shell_sha256 }}
+          RELEASE_SHA: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, os, time
+          from collections import Counter
+          from urllib.parse import urljoin, urlsplit
+          from urllib.request import HTTPRedirectHandler, Request, build_opener
+          base = 'https://wonki05.github.io/casebook/'
+          class NoRedirect(HTTPRedirectHandler):
+              def redirect_request(self, *args, **kwargs):
+                  raise RuntimeError('Unexpected redirect from the public site')
+          opener = build_opener(NoRedirect())
+          def get(path):
+              url = urljoin(base, path)
+              parsed = urlsplit(url)
+              if parsed.scheme != 'https' or parsed.netloc != 'wonki05.github.io' or not parsed.path.startswith('/casebook/'):
+                  raise RuntimeError('Unexpected public asset location')
+              request = Request(url, headers={'Cache-Control': 'no-cache'})
+              with opener.open(request, timeout=10) as response:
+                  raw = response.read(64 * 1024 * 1024 + 1)
+              if len(raw) > 64 * 1024 * 1024:
+                  raise RuntimeError('Published asset exceeds the smoke-test limit')
+              return raw
+          expected = os.environ['EXPECTED_DATA_VERSION']
+          release = os.environ['RELEASE_SHA']
+          for attempt in range(10):
+              try:
+                  manifest = json.loads(get('data-manifest.json?release=' + release))
+                  shell = get('index.html?release=' + release)
+                  if manifest['version'] != expected:
+                      raise RuntimeError('Published data version is still ' + manifest['version'])
+                  if hashlib.sha256(shell).hexdigest() != os.environ['EXPECTED_SHELL_SHA256']:
+                      raise RuntimeError('Published reader shell is still an older release')
+                  break
+              except Exception:
+                  if attempt == 9:
+                      raise
+                  time.sleep(2)
+          def asset(ref):
+              raw = get(ref['url'])
+              if hashlib.sha256(raw).hexdigest() != ref['sha256']:
+                  raise RuntimeError('Published asset hash mismatch: ' + ref['url'])
+              return json.loads(raw)
+          data = asset(manifest['cases'])
+          if len(data['cases']) != manifest['caseCount']:
+              raise RuntimeError('Published case count differs from the manifest')
+          by_id = {case['id']: case for case in data['cases']}
+          samples = ['std-civil-04', 'std-civil-122', 'std-civil-934']
+          for case_id in samples:
+              full = asset(by_id[case_id]['fullTextRef'])
+              if not isinstance(full, list) or not any(block.get('text') for block in full):
+                  raise RuntimeError('Published full text is empty: ' + case_id)
+          civil = [case for case in data['cases'] if case['page'] == 'std-civil']
+          print(json.dumps({'dataVersion': manifest['version'], 'caseCount': len(data['cases']),
+                            'pages': dict(Counter(case['page'] for case in data['cases'])),
+                            'civilFullTexts': sum(bool(case.get('fullTextRef')) for case in civil),
+                            'sampleFullTextsVerified': samples, 'publishedShellVerified': True},
+                           ensure_ascii=False))
+          PY

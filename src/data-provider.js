@@ -166,6 +166,32 @@
     return {loadCases, loadLaws, loadFullText, checkForUpdate, downloadOffline,
       status: () => ({version: current && current.version, generatedAt: current && current.generatedAt, offline})};
   }
-  if (typeof module !== 'undefined' && module.exports) module.exports = {createProvider};
-  if (root && root.document) root.CasebookData = createProvider({baseURL: root.document.baseURI, fetch: root.fetch.bind(root), caches: root.caches, crypto: root.crypto});
+  // Probe for new releases without changing the active, version-pinned session.
+  function createUpdateMonitor(provider, options) {
+    options = options || {};
+    const now = options.now || Date.now;
+    const interval = options.intervalMs == null ? 60000 : options.intervalMs;
+    let checkedAt = options.initialCheckedAt == null ? null : options.initialCheckedAt;
+    let pending = null;
+    function check(input) {
+      if (pending) return pending;
+      const force = !!(input && input.force), time = now();
+      if (!force && checkedAt !== null && time - checkedAt < interval) return Promise.resolve(null);
+      checkedAt = time;
+      pending = Promise.resolve().then(() => provider.checkForUpdate()).then(result => {
+        if (options.onResult) options.onResult(result);
+        return result;
+      }).catch(error => {
+        if (options.onError) options.onError(error);
+        return null;
+      }).finally(() => { pending = null; });
+      return pending;
+    }
+    return {check};
+  }
+  if (typeof module !== 'undefined' && module.exports) module.exports = {createProvider, createUpdateMonitor};
+  if (root && root.document) {
+    root.CasebookData = createProvider({baseURL: root.document.baseURI, fetch: root.fetch.bind(root), caches: root.caches, crypto: root.crypto});
+    root.CasebookUpdateMonitor = createUpdateMonitor;
+  }
 })(typeof window !== 'undefined' ? window : null);

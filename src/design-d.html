@@ -67,6 +67,14 @@ mark.cur{outline:2px solid var(--accent)}
 }
 @media(min-width:860px) and (max-width:1179px){.pagetabs .sec-l{display:none;white-space:nowrap}}
 
+/* data release notice */
+.data-notice{position:fixed;z-index:85;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translateX(-50%);width:max-content;max-width:calc(100% - 28px);display:flex;align-items:center;gap:10px 16px;padding:12px 16px;border:1px solid var(--rule-2);border-radius:12px;background:var(--paper);color:var(--ink-2);box-shadow:0 4px 24px #0001;font:400 13px/1.5 var(--sans)}
+.data-notice[hidden]{display:none}
+.data-notice button{flex:none;border:1px solid var(--rule-2);border-radius:8px;padding:7px 10px;color:var(--accent-ink);background:var(--surface);font:500 12.5px/1.4 var(--sans)}
+.data-notice button:hover{border-color:var(--accent);background:var(--accent-soft)}
+@media(max-width:599px){.data-notice{width:calc(100% - 28px);flex-wrap:wrap}.data-notice button{margin-left:auto}}
+@media print{.data-notice{display:none!important}}
+
 /* column */
 .column{max-width:900px;margin:0 auto;padding:26px 20px calc(72px + env(safe-area-inset-bottom))}
 .column.wide{max-width:1475px}
@@ -570,6 +578,7 @@ body.cs-drag{user-select:none;-webkit-user-select:none;cursor:col-resize}
 
 <div class="bluelight" id="bluelight" aria-hidden="true"></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="data-notice" id="dataNotice" role="status" aria-live="polite" hidden><span id="dataNoticeText"></span><button type="button" data-refresh-version>새 자료로 다시 열기</button></div>
 
 <script id="case-data" type="application/json">__CASE_DATA_JSON__</script>
 <script id="laws-data" type="text/plain">__LAWS_DATA_B64__</script>
@@ -1604,6 +1613,32 @@ async function updateData(button, download) {
     }
   } catch (e) { if (status) { status.textContent = e.message || '자료를 가져오지 못했습니다.'; if (e.code === 'DATA_VERSION_CHANGED') status.insertAdjacentHTML('beforeend', ' <button type="button" data-refresh-version>새 자료로 다시 열기</button>'); } }
   finally { button.disabled = false; }
+}
+
+/* Keep long-lived tabs informed without reloading a reader or an unfinished memo. */
+if (WEB) {
+  const notice = $('#dataNotice'), text = $('#dataNoticeText');
+  let updateKnown = false;
+  const showNotice = message => { text.textContent = message; notice.hidden = false; };
+  const savedRelease = window.CasebookData.status().offline;
+  if (savedRelease) showNotice('새 자료를 불러오지 못해 저장된 자료를 표시하고 있습니다.');
+  const monitor = window.CasebookUpdateMonitor(window.CasebookData, {
+    initialCheckedAt: savedRelease ? null : Date.now(),
+    onResult(result) {
+      if (result.available) {
+        updateKnown = true;
+        showNotice('새 판례 자료가 있습니다. 현재 읽는 자료는 그대로 유지됩니다.');
+      } else if (!updateKnown) notice.hidden = true;
+    }
+  });
+  const checkVisible = force => {
+    if (!document.hidden && navigator.onLine !== false) monitor.check({force: !!force});
+  };
+  window.addEventListener('focus', () => checkVisible(false));
+  document.addEventListener('visibilitychange', () => checkVisible(false));
+  window.addEventListener('online', () => checkVisible(true));
+  window.setInterval(() => checkVisible(false), 5 * 60 * 1000);
+  if (savedRelease) checkVisible(false);
 }
 
 /* ---------- toast ---------- */

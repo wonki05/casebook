@@ -1,7 +1,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const {webcrypto, createHash} = require('node:crypto');
-const {createProvider} = require('../src/data-provider.js');
+const {createProvider, createUpdateMonitor} = require('../src/data-provider.js');
 const personal = require('../src/personal-data.js');
 const digest = text => createHash('sha256').update(text).digest('hex');
 const BASE = 'https://example.test/casebook/';
@@ -104,4 +104,41 @@ test('missing asset without a changed manifest remains retryable and does not cl
   await assert.rejects(p.loadFullText(c),e=>e.status===404&&!e.code);
   f.files.set(BASE+f.full.url,saved);await p.loadFullText(c);
   assert.equal(c.fullText[0].text,'공식 원문\n가. 원문 보존');
+});
+
+test('release monitor coalesces focus probes and throttles completed checks', async()=>{
+  let now=100, calls=0, finish;
+  const monitor=createUpdateMonitor({checkForUpdate(){calls++; return new Promise(resolve=>{finish=resolve;});}}, {now:()=>now,intervalMs:50});
+  const first=monitor.check(), second=monitor.check();
+  assert.equal(first,second);
+  await Promise.resolve();assert.equal(calls,1);
+  finish({available:false});await first;
+  now=149;assert.equal(await monitor.check(),null);assert.equal(calls,1);
+  now=150;const next=monitor.check();await Promise.resolve();assert.equal(calls,2);
+  finish({available:true});assert.equal((await next).available,true);
+});
+test('release monitor avoids a redundant boot probe but probes on network recovery', async()=>{
+  let calls=0;
+  const monitor=createUpdateMonitor({async checkForUpdate(){calls++;return {available:false};}}, {now:()=>100,initialCheckedAt:100});
+  assert.equal(await monitor.check(),null);assert.equal(calls,0);
+  await monitor.check({force:true});assert.equal(calls,1);
+});
+test('automatic release notice leaves active data intact and a refreshed provider loads new full text',async()=>{
+  const f=fixture(),p=f.provider(),old=(await p.loadCases()).cases[0];
+  const nextFull=f.add('data/full.notice.json',[{heading:'[이유]',text:'갱신된 전문'}]);
+  const nextCases=f.add('data/cases.notice.json',{...f.data,cases:[{...old,title:'새 제목',fullTextRef:nextFull}]});
+  f.add('data-manifest.json',{...f.manifest,version:'v2',cases:nextCases});
+  const results=[],monitor=createUpdateMonitor(p,{onResult:value=>results.push(value)});
+  await monitor.check();assert.equal(results[0].available,true);
+  assert.equal(p.status().version,'v1');assert.equal((await p.loadCases()).cases[0],old);
+  await p.loadFullText(old);assert.equal(old.fullText[0].text,'공식 원문\n가. 원문 보존');
+  const fresh=f.provider(),updated=(await fresh.loadCases()).cases[0];await fresh.loadFullText(updated);
+  assert.equal(fresh.status().version,'v2');assert.equal(updated.fullText[0].text,'갱신된 전문');
+});
+test('failed automatic release probe retains the verified active release',async()=>{
+  const f=fixture(),p=f.provider(),data=await p.loadCases(),errors=[];
+  f.setOnline(false);
+  const monitor=createUpdateMonitor(p,{onError:error=>errors.push(error)});
+  assert.equal(await monitor.check(),null);assert.equal(errors.length,1);
+  assert.equal(await p.loadCases(),data);assert.equal(p.status().version,'v1');
 });
