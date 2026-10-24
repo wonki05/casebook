@@ -146,9 +146,8 @@ def parse_cite(citation):
     d = DATE_IN_RE.search(cite)
     if not d:
         return None
-    parts = re.split(r'\s(?:선고|자),?\s*', cite, maxsplit=1)
     typ = '판결' if '판결' in cite else '결정' if '결정' in cite else '명령' if '명령' in cite else '판결' if re.search(r'판\s*$', cite) else None
-    return {'court': cite.split()[0], 'date': f"{int(d[1]):04d}-{int(d[2]):02d}-{int(d[3]):02d}", 'numbers': parts[1] if len(parts) > 1 else '',
+    return {'court': cite.split()[0], 'date': f"{int(d[1]):04d}-{int(d[2]):02d}-{int(d[3]):02d}", 'numbers': cite[d.end():],
             'type': typ, 'enBanc': '전원합의체' in cite}
 
 
