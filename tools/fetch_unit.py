@@ -12,7 +12,7 @@
   python -X utf8 tools/fetch_unit.py plan --subject civil --spec <units-spec.json> --out spec/fetch-units-civil.json
   python -X utf8 tools/fetch_unit.py run  --plan spec/fetch-units-civil.json --unit u01-general [--chunk 15] [--delay 1.5] [--commit]
   python -X utf8 tools/fetch_unit.py resolve --plan spec/fetch-units-civil.json --unit u01-general [--commit]
-  python -X utf8 tools/fetch_unit.py audit --plan spec/fetch-units-civil.json [--unit u01-general]
+  python -X utf8 tools/fetch_unit.py audit --plan spec/fetch-units-civil.json [--unit u01-general] [--write-reports]
 
 spec 파일: {"units": [{"name": "u01-general", "label": "총칙 통칙·인·법인·물건", "nodes": ["mb-1-1", "mb-1-2"]}, ...]}
   nodes 는 toc.json 의 노드 id 이며, 사건의 tocPath 에 그 id 가 있으면 그 단원에 속한다(한 사건이 두 단원에 걸리면 오류).
@@ -38,9 +38,6 @@ TRAILER = 'Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>'
 SEARCH_URL = 'https://www.law.go.kr/precSc.do?menuId=7&subMenuId=47&tabMenuId=213&query='
 RESULT_JS = r"""() => Array.from(document.querySelectorAll("a[onclick*='precView']")).map(a => ({
   text: a.innerText.replace(/\s+/g, ' ').trim(), seq: ((/precView\('(\d+)'/.exec(a.getAttribute('onclick')) || [])[1]) || ''}))"""
-
-# 공식 인용문: [대법원 2003. 7. 24. 선고 2001다48781 전원합의체 판결] / [대법원 2008. 3. 14. 자 2007마123 결정]
-CITE_RE = re.compile(r'\[\s*(?P<court>\S+(?:\s\S+?법원)?)\s+(?P<y>\d{4})\.\s*(?P<m>\d{1,2})\.\s*(?P<d>\d{1,2})\.\s*(?P<kind>선고|자)\s+(?P<num>\S+?)(?P<eb>\s+전원합의체)?\s+(?P<type>판결|결정|명령)\s*\]')
 
 
 def load_registry():
@@ -140,6 +137,21 @@ def classify(reason):
     return 'error'
 
 
+def parse_cite(citation):
+    """공식 인용문('[대법원 1993. 10. 26. 선고 93다2629, 2636(병합) 판결]')을 법원·선고일·번호부·유형·전원합의체로 읽는다. 읽지 못하면 None."""
+    m = re.search(r'\[([^\[\]]+)\]', citation or '')
+    if not m:
+        return None
+    cite = m.group(1)
+    d = DATE_IN_RE.search(cite)
+    if not d:
+        return None
+    parts = re.split(r'\s(?:선고|자),?\s*', cite, maxsplit=1)
+    typ = '판결' if '판결' in cite else '결정' if '결정' in cite else '명령' if '명령' in cite else '판결' if re.search(r'판\s*$', cite) else None
+    return {'court': cite.split()[0], 'date': f"{int(d[1]):04d}-{int(d[2]):02d}-{int(d[3]):02d}", 'numbers': parts[1] if len(parts) > 1 else '',
+            'type': typ, 'enBanc': '전원합의체' in cite}
+
+
 def check_record(c, rec):
     """공식 인용문과 등록부의 메타(법원·선고일·판결/결정·전원합의체·사건번호)를 대조한다. 불일치만 돌려준다(판정·수정은 하지 않는다)."""
     flags = []
@@ -147,21 +159,21 @@ def check_record(c, rec):
         flags.append(f"id 불일치: {rec.get('id')}")
     if not rec.get('sections') or sum(len(s.get('text', '')) for s in rec['sections']) < 200:
         flags.append('본문이 너무 짧음')
-    m = CITE_RE.search(rec.get('citation') or '')
+    m = parse_cite(rec.get('citation'))
     if not m:
         flags.append(f"인용문 해석 실패: {rec.get('citation')!r}")
         return flags
-    date = f"{int(m['y']):04d}-{int(m['m']):02d}-{int(m['d']):02d}"
-    if date != c.get('decisionDate'):
-        flags.append(f"선고일 {c.get('decisionDate')} ≠ 공식 {date}")
+    if m['date'] != c.get('decisionDate'):
+        flags.append(f"선고일 {c.get('decisionDate')} ≠ 공식 {m['date']}")
     if m['court'] != c.get('court'):
         flags.append(f"법원 {c.get('court')} ≠ 공식 {m['court']}")
-    if m['type'] != c.get('decisionType'):
+    if m['type'] and m['type'] != c.get('decisionType'):
         flags.append(f"유형 {c.get('decisionType')} ≠ 공식 {m['type']}")
-    if bool(m['eb']) != bool(c.get('enBanc')):
-        flags.append(f"전원합의체 {bool(c.get('enBanc'))} ≠ 공식 {bool(m['eb'])}")
-    if m['num'] != (c.get('lookupKey') or c['caseNumber']):
-        flags.append(f"사건번호 {c.get('lookupKey')} ≠ 공식 {m['num']}")
+    if m['enBanc'] != bool(c.get('enBanc')):
+        flags.append(f"전원합의체 {bool(c.get('enBanc'))} ≠ 공식 {m['enBanc']}")
+    key = c.get('lookupKey') or c['caseNumber']
+    if not re.search(r'(?<![0-9])' + re.escape(key) + r'(?![0-9])', m['numbers']):
+        flags.append(f"사건번호 {key} ≠ 공식 {m['numbers']}")
     return flags
 
 
@@ -189,6 +201,14 @@ def cmd_audit(a):
     tot = {'total': 0, 'ok': 0, 'missing': 0, 'flagged': 0, 'waiting': 0}
     for u in pick_units(plan, a.unit):
         r = audit_unit(plan, u)
+        if a.write_reports:
+            rep = os.path.join(REPORTS, f"{plan['subject']}-{u['name']}.json")
+            old = json.load(open(rep, encoding='utf-8')) if os.path.exists(rep) else {}
+            for k in ('retried', 'elapsedSec', 'search'):
+                if k in old:
+                    r[k] = old[k]
+            os.makedirs(REPORTS, exist_ok=True)
+            json.dump(r, open(rep, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
         print(f"{r['unit']:<28} 전체 {r['total']:>3} 성공 {r['ok']:>3} 미게재·실패 {len(r['missing']):>2} 메타 불일치 {len(r['flagged']):>2} 대기 {len(r['waiting']):>3}")
         for m in r['missing']:
             print(f"    MISS {m['id']} {m['caseNumber']} [{m['class']}] {m['reason'][:60]}")
@@ -344,7 +364,7 @@ def main():
     p = sub.add_parser('run'); p.add_argument('--plan', required=True); p.add_argument('--unit', required=True)
     p.add_argument('--chunk', type=int, default=15); p.add_argument('--delay', type=float, default=1.5); p.add_argument('--commit', action='store_true')
     p = sub.add_parser('resolve'); p.add_argument('--plan', required=True); p.add_argument('--unit', required=True); p.add_argument('--delay', type=float, default=1.5); p.add_argument('--commit', action='store_true')
-    p = sub.add_parser('audit'); p.add_argument('--plan', required=True); p.add_argument('--unit')
+    p = sub.add_parser('audit'); p.add_argument('--plan', required=True); p.add_argument('--unit'); p.add_argument('--write-reports', action='store_true', help='spec/fetch-reports 의 단원 보고서를 현재 검사 결과로 다시 쓴다(수집 파일은 건드리지 않는다)')
     a = ap.parse_args()
     {'plan': cmd_plan, 'run': cmd_run, 'resolve': cmd_resolve, 'audit': cmd_audit}[a.cmd](a)
 
