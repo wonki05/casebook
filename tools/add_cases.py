@@ -10,6 +10,9 @@
   # 필드 수정
   python3 tools/add_cases.py set std-civil-04 --title "..." --toc mb-1/mb-1-4 --result 파기환송 --tags "소멸시효,판례변경"
   python3 tools/add_cases.py set annual-2025-07 --field criminal-special [--year 2025 --article "..." --url https://...]
+  # 원전(PDF 등)의 대표 사건번호 오기 정정: 재판 ID 를 다시 계산하고 이전 ID 는 identityAliases 로 이어 둔다
+  python3 tools/add_cases.py set std-civil-827 --correct-case 2015므8351
+  # 같은 과목에서 같은 재판을 다른 단원에 다른 제목으로 한 번 더 배치하는 것은 허용된다(같은 제목 또는 같은 목차 경로면 중복)
   # 목차
   python3 tools/add_cases.py toc list --subject civil
   python3 tools/add_cases.py toc add --subject civil --parent mb-3 --id mb-3-4 --label "사무관리"      (parent 생략 = 최상위)
@@ -153,16 +156,36 @@ def make_entry(reg, toc, group, subject, case_number, date, title, toc_path=None
     return e
 
 
+def same_placement(x, e):
+    """같은 배치인가: 제목이 같거나 목차 경로가 같으면 같은 배치다(재실행 때 같은 배치가 거듭 등록되지 않게 한다).
+    제목과 목차 경로가 모두 없으면 배치를 구별할 수 없으므로 같은 배치로 본다."""
+    xt, et = (x.get('title') or '').strip(), (e.get('title') or '').strip()
+    if not et and not e.get('tocPath'):
+        return True
+    return (bool(et) and xt == et) or (bool(e.get('tocPath')) and x.get('tocPath') == e.get('tocPath'))
+
+
+def sibling_placements(reg, e):
+    """같은 그룹·같은 과목에서 같은 재판(decisionId)을 다른 배치로 두고 있는 항목 id."""
+    did = identity(e)['decisionId']
+    return [x['id'] for x in reg['cases']
+            if x['id'] != e.get('id') and x['group'] == e['group'] and x.get('subject') == e.get('subject')
+            and identity(x, fetched_citation(x['id']))['decisionId'] == did]
+
+
 def duplicate(reg, e):
-    """같은 그룹에 같은 사건이 이미 있는가. annual 은 같은 연도·분야일 때만, standard 는 같은 과목일 때만 중복
-    (한 판례가 두 분야 기사에, 또는 두 과목의 표준판례 PDF 에 실릴 수 있다 — 과목마다 그 책의 제목으로 배치된다)."""
+    """같은 그룹에 같은 사건이 이미 있는가. annual 은 같은 연도·분야일 때만 중복이다.
+    standard 는 같은 과목 안에서도 같은 재판을 다른 단원(목차 경로)에 다른 제목으로 두는 것을 허용하고,
+    같은 배치(제목 또는 목차 경로가 같음)일 때만 중복으로 본다 — 재판 자체를 두 번 저장하자는 것이 아니라 단원에 맞는 배치를 늘리는 것이다.
+    (한 판례가 두 분야 기사에, 두 과목의 표준판례 PDF 에, 한 과목의 여러 단원에 실릴 수 있다 — 배치마다 그 책의 제목을 쓴다.)
+    같은 재판의 배치들은 standardSource 텍스트가 같아야 하며 validate 가 이를 확인한다."""
     for x in reg['cases']:
         if x['group'] != e['group']:
             continue
         if identity(x, fetched_citation(x['id']))['decisionId'] != identity(e)['decisionId']:
             continue
         if e['group'] == 'standard':
-            if x.get('subject') == e.get('subject'):
+            if x.get('subject') == e.get('subject') and same_placement(x, e):
                 return True
             continue
         if e['group'] != 'annual':
@@ -189,6 +212,9 @@ def cmd_add(a):
                            a.field or c.get('field') or src.get('field'))
             if duplicate(reg, e):
                 print('이미 있음:', c['caseNumber']); continue
+            sib = sibling_placements(reg, e) if group == 'standard' else []
+            if sib:
+                print(f"같은 재판의 다른 배치로 등록: {c['caseNumber']} ↔ {', '.join(sib)} — standardSource 텍스트를 같게 맞춰야 validate 를 통과합니다")
             reg['cases'].append(e); added.append(e['id'])
     else:
         if not (a.group and (a.subject or a.field) and a.case and a.date):
@@ -197,6 +223,9 @@ def cmd_add(a):
                        field=a.field, decision_type=a.decision_type)
         if duplicate(reg, e):
             raise SystemExit('이미 있음: ' + a.case)
+        sib = sibling_placements(reg, e) if a.group == 'standard' else []
+        if sib:
+            print(f"같은 재판의 다른 배치로 등록: {a.case} ↔ {', '.join(sib)} — standardSource 텍스트를 같게 맞춰야 validate 를 통과합니다")
         reg['cases'].append(e); added.append(e['id'])
     save(reg=reg)
     print('등록:', ', '.join(added) if added else '(없음)')
@@ -204,8 +233,8 @@ def cmd_add(a):
         print('다음: python3 tools/fetch_lawgo.py --all-missing  →  python3 tools/build_data.py  →  make build check')
 
 
-def checked_case_display(value, record):
-    """표시용 병합번호만 바꾼다. 대표 번호와 조회 키는 유지한다."""
+def valid_case_display(value):
+    """표시용 사건번호(병합번호 포함)의 형식을 검사하고 앞뒤 공백을 뗀 문자열을 돌려준다."""
     display = (value or '').strip()
     compact = re.sub(r'\s+', '', unicodedata.normalize('NFKC', display))
     parts = re.split(r'[·,;/]', compact)
@@ -214,6 +243,12 @@ def checked_case_display(value, record):
             continue  # 97므513·520 같은 축약 병합번호
         if not part or ''.join(docket_parts(part)) != part:
             raise ValueError(f'표시 사건번호 형식 오류: {value!r}')
+    return display
+
+
+def checked_case_display(value, record):
+    """표시용 병합번호만 바꾼다. 대표 번호와 조회 키는 유지한다."""
+    display = valid_case_display(value)
     primary = primary_case_number(display)
     if primary != primary_case_number(record['caseNumber']) or primary != primary_case_number(record.get('lookupKey') or record['caseNumber']):
         raise ValueError('--case는 기존 대표 사건번호와 lookupKey를 바꿀 수 없습니다')
@@ -236,6 +271,24 @@ def cmd_set(a):
             raise SystemExit(str(exc)) from exc
         display_guard = {key: c.get(key) for key in ('id', 'lookupKey') + IDENTITY_FIELDS}
         c['caseNumber'] = display
+    correct = getattr(a, 'correct_case', None)
+    if correct is not None:
+        # 대표 사건번호 자체가 원전(PDF 등)의 오기였던 경우의 정정: caseNumber·lookupKey 를 바꾸고 재판 ID 를 다시 계산한다.
+        # 이전 decisionId 는 identityAliases 로 새 ID 에 이어 둔다. 공식 수집본이 있으면 그 인용문에 새 번호가 있어야 한다.
+        if getattr(a, 'case', None) is not None:
+            raise SystemExit('--correct-case 와 --case 는 함께 쓸 수 없습니다')
+        try:
+            new_display = valid_case_display(correct)
+        except ValueError as exc:
+            raise SystemExit(str(exc)) from exc
+        new_primary = primary_case_number(new_display)
+        if new_primary == primary_case_number(c['caseNumber']):
+            raise SystemExit('대표 사건번호가 이미 같습니다; 표시용 번호만 바꾸려면 --case 를 쓰세요')
+        cite = fetched_citation(c['id'])
+        if cite and new_primary not in cite:
+            raise SystemExit(f'공식 수집본의 인용문({cite})에 새 사건번호 {new_primary} 가 없습니다; 수집본을 먼저 확인하세요')
+        c['caseNumber'], c['lookupKey'] = new_display, new_primary
+        c.pop('caseNumberId', None)
     requested_subject = getattr(a, 'subject', None)
     old_subject = c['subject']
     if a.title: c['title'] = a.title
@@ -303,6 +356,14 @@ def cmd_set(a):
     if display_guard is not None:
         if any(c.get(key) != display_guard[key] for key in ('id', 'lookupKey')) or any(updated_identity[key] != display_guard[key] for key in IDENTITY_FIELDS):
             raise SystemExit('--case는 표시만 수정합니다; id·lookupKey·caseId·decisionId 등 재판 식별 변경은 함께 할 수 없습니다')
+    sibling_ids = []
+    if correct is not None and c['group'] == 'standard':
+        for x in reg['cases']:
+            if (x['id'] != c['id'] and x['group'] == 'standard' and x.get('subject') == c['subject']
+                    and identity(x, fetched_citation(x['id']))['decisionId'] == updated_identity['decisionId']):
+                if same_placement(x, c):
+                    raise SystemExit(f"정정한 사건번호가 같은 배치(제목 또는 목차 경로가 같음)인 {x['id']} 와 겹칩니다")
+                sibling_ids.append(x['id'])
     c.update(updated_identity)
     if display_guard is None:
         aliases = reg.setdefault('identityAliases', {})
@@ -310,6 +371,8 @@ def cmd_set(a):
         if previous and previous != c['decisionId']:
             aliases[previous] = c['decisionId']
     save(reg=reg); print('수정:', a.id)
+    if sibling_ids:
+        print(f"같은 재판의 다른 배치: {', '.join(sibling_ids)} — standardSource 텍스트를 같게 맞춰야 validate 를 통과합니다")
 
 
 def cmd_toc(a):
@@ -466,6 +529,7 @@ def main():
     p.set_defaults(fn=cmd_add)
     p = sub.add_parser('set'); p.add_argument('id'); p.add_argument('--title'); p.add_argument('--toc'); p.add_argument('--result'); p.add_argument('--tags'); p.add_argument('--date'); p.add_argument('--enbanc', choices=['yes', 'no'])
     p.add_argument('--case', help='표시용 병합 사건번호 수정 (기존 대표번호·lookupKey·모든 재판 ID 유지)')
+    p.add_argument('--correct-case', help='대표 사건번호 오기 정정 (caseNumber·lookupKey 와 caseId·decisionId 를 다시 계산하고 이전 ID 는 별칭으로 남김; 공식 수집본이 있으면 새 번호가 인용문에 있어야 함)')
     p.add_argument('--subject', choices=SUBJECTS, help='과목 변경 (표준판례는 새 --toc, 법률신문은 일치하는 --field 필요)')
     p.add_argument('--court'); p.add_argument('--decision-type', choices=['판결', '결정'])
     p.add_argument('--standard-source', help='PDF 원문과 대조한 표준판례 발췌 JSON 파일')
