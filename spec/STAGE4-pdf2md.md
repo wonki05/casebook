@@ -9,6 +9,10 @@
 - 과목 순서: 상법 → 헌법 → 행정법 → 민법 → 형법 (상법은 기존 toc.json 과 일치해 목차 교체가 없다).
 
 ## 1. 과목별 절차 (헌법 예; 다른 과목은 이름만 바꾼다)
+> 실행기 한 번으로 2)~7) 을 수행할 수 있다(권장): `git merge --no-edit pdf2md-constitution` 뒤에
+> `python -X utf8 tools/stage4_subject.py --subject 헌법 --overlap-final data/standard-cases/_overlaps/final` (`--dry-run` 으로 먼저 확인).
+> 실행기는 toc 교체 → md_merge(겹침 종합 적용) → --check → add → backfill → 경로 잃은 시안 사건 set --toc → validate 순서로 돌고 요약 JSON 을 낸다.
+> 겹침 재판은 md_merge 가 `_overlaps/final` 의 종합 텍스트를 바로 후보에 넣으므로 1-2 절의 overlap_apply 는 보정용(이미 등록된 배치에 다시 붙일 때)이다.
 ```bash
 git merge --no-edit pdf2md-constitution                      # 1) 브랜치 병합: data/standard-cases/헌법/{candidates-constitution.json, toc-proposed.json, md/, entries.jsonl, _review.jsonl …}
 ```

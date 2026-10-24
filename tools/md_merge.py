@@ -20,7 +20,7 @@
 --check: 후보의 모든 standardSource 를 case_identity.validate_standard_source 로, status ok 후보의 재판 ID·목차를 add_cases 규칙으로
 검사해 오류 수를 출력한다(오류가 있으면 종료코드 1). 입출력 오류는 종료코드 2.
 """
-import argparse
+import glob, argparse
 import collections
 import copy
 import json
@@ -100,7 +100,24 @@ def placement(u):
     return f'{u["row"].get("title", "")} ({u["row"]["no"]}번, p.{pg[0] if pg else "?"})'
 
 
+def load_overlap_final(path):
+    out = {}
+    if not path or not os.path.isdir(path):
+        return out
+    for f in sorted(glob.glob(os.path.join(path, '*.json'))):
+        try:
+            j = json.load(open(f, encoding='utf-8'))
+            if j.get('decisionId'):
+                out[j['decisionId']] = j
+        except Exception:
+            pass
+    return out
+
+
 def run(a, sid, d):
+    overlap = load_overlap_final(getattr(a, 'overlap_final', None))
+    from subjects import label_of as _label_of
+    my_label = _label_of(sid)
     entries_path = os.path.join(d, 'entries.jsonl')
     rows = sorted(L.read_jsonl(entries_path), key=lambda r: r['seq'])
     skel = L.load_skeleton(d)
@@ -177,7 +194,9 @@ def run(a, sid, d):
                     for k in L.STANDARD_FIELDS:
                         if k in src and k in mine and src[k] != mine[k]:
                             diff.append(f'{rc["id"]}.{k}')
-                if diff:
+                if diff and did in overlap:
+                    conflicts.append(dict(base, kind='overlap-synthesized', note='겹침 재판 — 종합 standardSource 적용(등록부 텍스트와 달라도 차단하지 않음)', registryIds=[rc['id'] for rc in reg_by_did[did]]))
+                elif diff:
                     u['reasons'].append('conflict')
                     u['notes'].append('등록부 표준판례 텍스트와 다름: ' + ', '.join(diff))
                     u['blockers'].append('등록부의 같은 재판과 표준판례 텍스트가 다름')
@@ -385,6 +404,16 @@ def run(a, sid, d):
                 'keywords': keywords_of(sections.get('주제')), 'memo': ' / '.join(memo), 'status': status, 'statusReason': reason,
                 'seq': row['seq'], 'no': row['no'], 'chunk': row.get('chunk'), 'pdfPages': row.get('pdfPages') or [],
                 'decisionId': u['decisionId'] or ''}
+        if u['decisionId'] in overlap and not u.get('dupOf'):
+            fin = overlap[u['decisionId']]
+            pl = next((x for x in (fin.get('placements') or []) if x.get('subject') == my_label), None)
+            if pl and pl.get('standardSource'):
+                src = pl['standardSource']
+                cand['statusReason'] = (cand['statusReason'] + '; ' if cand.get('statusReason') else '') + '겹침 재판 — 종합 standardSource(두 책 합집합) 적용'
+            else:
+                src = None
+                cand['statusReason'] = (cand['statusReason'] + '; ' if cand.get('statusReason') else '') + '겹침 재판 — 종합 없음, standardSource 생략'
+            cand['overlap'] = True
         if src is not None and status != 'skip':
             cand['standardSource'] = src
         candidates.append(cand)
@@ -434,6 +463,7 @@ def main(argv=None):
     ap.add_argument('--seed', type=int, help=f'표본 난수 시드(새 _review.jsonl 에만 적용, 기본 {L.SEED})')
     ap.add_argument('--registry', help='비교할 registry.json (기본: main 작업 폴더의 data/registry.json)')
     ap.add_argument('--toc', help='비교할 toc.json (기본: main 작업 폴더의 data/toc.json)')
+    ap.add_argument('--overlap-final', help='겹침 재판 종합 결과 폴더(_overlaps/final): 해당 decisionId 는 종합 standardSource 를 쓰고 등록부 텍스트 충돌로 막지 않는다')
     a = ap.parse_args(argv)
     try:
         sid, d = L.subject_dir(a.subject, a.dir)
