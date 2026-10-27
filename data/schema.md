@@ -9,7 +9,7 @@
   "caseId": "sc-2002da1178",             // {courtId}-{caseNumberId}
   "decisionType": "판결",               // 판결 | 결정
   "decisionId": "sc-2002da1178-20050721-judgment", // 개별 재판 ID
-  "group": "standard",                  // standard | annual | enbanc | ccourt (페이지 배치; 재판 정체성과 별도)
+  "group": "standard",                  // standard | research | annual | enbanc | ccourt (페이지 배치; 재판 정체성과 별도)
   "subject": "civil",                   // constitution | administrative | civil | criminal | commercial | ip   (목록·순서 = tools/subjects.py; ip=지식재산권법은 표준판례 과목이 아니라 annual 등에서만)
   "title": "여성의 종중 구성원 자격",     // 학습용 짧은 제목(편집). 공식 사건명은 수집 시 자동(pageTitle)
   "court": "대법원",                    // 하급심·지원까지 정확한 법원명; case_identity.py COURTS 에 등록
@@ -17,7 +17,7 @@
   "lookupKey": "2002다1178",            // law.go.kr 조회용 대표 사건번호
   "decisionDate": "2005-07-21",         // YYYY-MM-DD
   "enBanc": true,                       // 대법원 전원합의체 여부
-  "tocPath": ["mb-1", "mb-1-2"],        // 표준판례만. toc.json 의 id 경로(깊이 1~3)
+  "tocPath": ["mb-1", "mb-1-2"],        // 표준판례·판례연구. toc.json 의 전체 id 경로
   "tags": ["민법총칙", "관습법"],
   "result": "",                         // 비우면 주문에서 자동 추정(파기환송/상고기각/위헌/합헌/각하…)
   "editorial": { "issues": [...], "holding": [...], "statutes": [...] },   // 해당 필드에 표준판례·공식 자료가 모두 없을 때만 쓰는 대체문(선택)
@@ -81,12 +81,29 @@
 - 공식 전문은 `fetched/` 수집본을 사용한다. 원문별 저장 문자열을 의역·교정하거나 표준판례와 공식 문구를 합성하지 않는다.
 - 여러 검증된 표준판례 출처가 동일 필드에서 서로 다르면 임의 선택하지 않고 충돌로 보고하여 판본·쪽수·대상 재판을 확인한다. 법원·사건번호·날짜 자체가 다른 경우도 자동 병합하지 않는다.
 
-## 2. `data/toc.json` — 표준판례 목차 (과목별 트리, 깊이 1~3)
+### 1-4. 판례연구 배치 `research`
+
+판례연구는 `group: "research"`로 별도 등록하며 기존 표준판례·최신판례의 제목과 목차를 수정하지 않는다. 같은 재판은 `decisionId`를 공유하고, 판례연구 `title`에는 사용자가 제공한 목차의 원제목을 보존한다.
+
+| collection | 페이지·목차 키 | 과목 |
+|---|---|---|
+| `civil-research` | `research-civil` | `civil` |
+| `criminal-150` | `research-criminal` | `criminal` |
+
+- `research.collection`은 위 목록 ID, `research.order`는 목록 전체에서 1부터 시작하는 고유 순서, `research.entryId`는 목록 내 항목의 지속 식별자다. 후보에서 생략하면 `order`의 문자열을 사용한다. 같은 재판이 여러 목차 항목에 실려도 서로 다른 `entryId`로 제목·배치를 보존한다.
+- `research`에는 `volume`, `chapter`, `sourcePage`, `sourceCitation`, `sourceFile` 등 제공된 목록의 출처를 함께 보존한다. 이 출처는 판시사항·요지·전문의 출처가 아니다. 잘못된 사건번호를 공식 자료로 확인한 경우 제공된 원래 인용과 검증 근거도 보존한다.
+- 목록 파일은 `{collection, toc: [...], candidates: [...]}` 형식이다. 후보는 `status: "ok"`, `court`, `caseNumber`, `date`, `decisionType`(판결/결정), `title`, `tocPath`, `research`를 명시한다. 미확인 후보는 등록하지 않는다.
+- 등록·목차 반영은 `python tools/add_cases.py research-import --from data/research/civil-catalog.json`으로 수행한다. `--dry-run`으로 저장 없이 검증할 수 있다. 재실행은 기존 배치 ID를 유지하며, 재판의 식별 변경은 거부한다.
+- 빌드한 `isStandard`는 **같은 법원·대표 사건번호·날짜·재판유형의 표준판례 등록이 있는지**로 산정한다. 표준판례 원문 수집 여부와는 별개다. 판례연구·최신판례 화면에만 표준판례 표식을 표시한다.
+- 같은 `decisionId`에 이미 공식 수집본이 있으면 공식 인용의 법원·사건번호·날짜·유형도 일치하는지 확인한 뒤 공유한다. 인용 정보가 불충분하거나 등록부와 충돌하는 자료는 다른 배치에 공유하지 않는다. 헌법재판소의 재판부·사건번호·날짜 형식은 `kind: "detc"`인 공식 수집본에서만 인정한다. 빌드한 `officialSourceId`는 실제 사용한 `fetched/<id>.json`의 배치 ID를 가리킨다. 공식 파일과 기존 배치의 원문 표시는 이 공유 과정에서 수정하지 않는다.
+
+## 2. `data/toc.json` — 표준판례·판례연구 목차
 ```json
 { "civil": [ { "id": "mb-1", "label": "제1편 민법총칙", "children": [ { "id": "mb-1-1", "label": "민법의 법원", "children": [] } ] } ], ... }
 ```
 - id 는 과목 접두어 + 번호(헌법 hb-, 행정법 hj-, 민법 mb-, 형법 hb2-, 상법 sb-; 접두어는 tools/subjects.py 의 tocPrefix) 관례. 라벨은 자유(협의회 목차의 대·중·소주제 그대로 권장).
 - 깊이 3단계(대주제 › 중주제 › 소주제)까지 화면이 재귀로 처리한다. 사건은 `tocPath` 가 노드 경로와 정확히 일치하는 노드에 붙으므로 깊이 1·2 노드에도 사건을 둘 수 있다.
+- 판례연구 목차는 `research-civil`·`research-criminal` 키로 분리한다. 민법판례연구 1·2권은 하나의 페이지 안에서 권 › 장으로 구성하며, 연구 목차는 최대 깊이 4까지 허용한다. 모든 목차 ID는 다른 과목·목록과 중복되지 않아야 한다.
 - 상법은 PDF 구성대로 **분야(총칙·상행위 / 회사 / 어음·수표 / 보험 / 해상) › 편 › 장** 의 3단계이고(편 번호가 분야마다 다시 시작하므로 분야 층이 필요), 장 아래의 로마숫자 절(Ⅰ. Ⅱ. …)은 목차에 넣지 않고 사건의 `keywords`/`memo` 로 남긴다. 다른 네 과목의 toc.json 은 아직 시안용 초안(편 › 장 2단계)이다.
 
 ## 3. `data/fetched/<id>.json` — law.go.kr 공식 텍스트 (tools/fetch_lawgo.py 산출; 손대지 않음)
@@ -97,7 +114,7 @@
 - 실패 시 `<id>.missing.json` {id, reason, triedUrls}. 미게재(최근 선고)면 나중에 `--retry-missing`.
 
 ## 4. `data/cases.json` — 화면용 정규화 데이터 (tools/build_data.py 산출; 손대지 않음)
-registry + toc + fetched 를 합쳐 만든다. `pages`(표준판례는 standard 과목마다 `std-<subject>` 한 페이지 — tools/subjects.py 순서) · `subjects`([{id, label, standard}]) · `annual`({years: [2025, …, 2020] 최신순, fields: [{id, label, sub, subject}]}) · `yearTabs`({ccourt|enbanc: [{id: "2026"|"2010s", label: "2026"|"2010년대", from, to}] 최신순 — 헌법재판소 주요결정·대법원 전원합의체 선고연도 탭}) · `toc` · `cases`. 사건 주요 필드: page, citation("대법원 2026. 7. 22. 선고 2022도5937 전원합의체 판결"), citeShort("대판 2022도5937"),
+registry + toc + fetched 를 합쳐 만든다. `pages`(표준판례는 standard 과목마다 `std-<subject>` 한 페이지 — tools/subjects.py 순서) · `subjects`([{id, label, standard}]) · `annual`({years: [2025, …, 2020] 최신순, fields: [{id, label, sub, subject}]}) · `yearTabs`({ccourt: [{id: "2026", label: "2026", from, to}] 한 해씩, enbanc: [{id: "2020+"|"2010s", label: "2020년 이후"|"2010년대", from, to}] 시대 탭 — 최신순; 헌법재판소 주요결정·대법원 전원합의체 선고연도 탭}) · `toc` · `cases`. 사건 주요 필드: page, citation("대법원 2026. 7. 22. 선고 2022도5937 전원합의체 판결"), citeShort("대판 2022도5937"),
 issues/holdings([{n:"[1]", text}]), statutes, precedents, subjectStatutes, fullText([{heading:"[주 문]", text}]), summaryType(standard|mixed|official|editorial), fieldSources, standardSource, courtId, caseNumberId, caseId, decisionId, result, annual({year, field, series, article, url} — annual 만).
 괄호는 화면용 조판에서 `[ ]` 로 통일된다(【 】 금지). 원출처 파일은 보존한다.
 

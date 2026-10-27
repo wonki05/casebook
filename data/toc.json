@@ -6,63 +6,199 @@
    "children": [
     {
      "id": "hb-1-1",
-     "label": "헌법의 의의와 특성"
+     "label": "제1장 헌법의 개념",
+     "children": []
     },
     {
      "id": "hb-1-2",
-     "label": "헌법의 해석"
+     "label": "제2장 헌법의 기본원리",
+     "children": [
+      {
+       "id": "hb-1-2-1",
+       "label": "제1절 민주주의 원리",
+       "children": []
+      },
+      {
+       "id": "hb-1-2-2",
+       "label": "제2절 법치국가원리",
+       "children": []
+      },
+      {
+       "id": "hb-1-2-3",
+       "label": "제3절 사회국가 원리",
+       "children": []
+      }
+     ]
     },
     {
      "id": "hb-1-3",
-     "label": "헌법의 제정과 개정·관습헌법"
-    },
-    {
-     "id": "hb-1-4",
-     "label": "헌법의 기본원리"
+     "label": "제3장 국민, 영토, 통일, 국제평화주의",
+     "children": []
     }
    ]
   },
   {
    "id": "hb-2",
-   "label": "제2편 기본권론",
+   "label": "제2편 기본권",
    "children": [
     {
      "id": "hb-2-1",
-     "label": "기본권 총론"
+     "label": "제1장 기본권 총론",
+     "children": [
+      {
+       "id": "hb-2-1-1",
+       "label": "제1절 기본권의 개념",
+       "children": []
+      },
+      {
+       "id": "hb-2-1-2",
+       "label": "제2절 기본권의 본질적 내용",
+       "children": []
+      },
+      {
+       "id": "hb-2-1-3",
+       "label": "제3절 기본권의 주체",
+       "children": []
+      },
+      {
+       "id": "hb-2-1-4",
+       "label": "제4절 기본권의 성격",
+       "children": []
+      },
+      {
+       "id": "hb-2-1-5",
+       "label": "제5절 기본권의 효력",
+       "children": []
+      },
+      {
+       "id": "hb-2-1-6",
+       "label": "제6절 기본권의 제한",
+       "children": []
+      }
+     ]
     },
     {
      "id": "hb-2-2",
-     "label": "평등권"
-    },
-    {
-     "id": "hb-2-3",
-     "label": "자유권적 기본권"
-    },
-    {
-     "id": "hb-2-4",
-     "label": "참정권·청구권적 기본권·사회적 기본권"
+     "label": "제2장 개별 기본권",
+     "children": [
+      {
+       "id": "hb-2-2-1",
+       "label": "제1절 인간의 존엄과 가치 및 행복추구권",
+       "children": []
+      },
+      {
+       "id": "hb-2-2-2",
+       "label": "제2절 평등",
+       "children": []
+      },
+      {
+       "id": "hb-2-2-3",
+       "label": "제3절 신체의 자유",
+       "children": []
+      },
+      {
+       "id": "hb-2-2-4",
+       "label": "제4절 사생활의 비밀과 자유",
+       "children": []
+      },
+      {
+       "id": "hb-2-2-5",
+       "label": "제5절 양심의 자유, 종교의 자유, 학문과 예술의 자유",
+       "children": []
+      },
+      {
+       "id": "hb-2-2-6",
+       "label": "제6절 표현의 자유, 집회·결사의 자유",
+       "children": []
+      },
+      {
+       "id": "hb-2-2-7",
+       "label": "제7절 직업의 자유, 재산권, 거주이전의 자유",
+       "children": []
+      },
+      {
+       "id": "hb-2-2-8",
+       "label": "제8절 선거권, 공무담임임권, 청원권",
+       "children": []
+      },
+      {
+       "id": "hb-2-2-9",
+       "label": "제9절 재판청구권, 형사보상청구권, 국가배상청구권",
+       "children": []
+      },
+      {
+       "id": "hb-2-2-10",
+       "label": "제10절 교육의 권리, 근로의 권리, 근로3권",
+       "children": []
+      },
+      {
+       "id": "hb-2-2-11",
+       "label": "제11절 인간다운 생활을 할 권리, 혼인과 가족 보호, 보건권, 환경권",
+       "children": []
+      }
+     ]
     }
    ]
   },
   {
    "id": "hb-3",
-   "label": "제3편 통치구조론",
+   "label": "제3편 국가조직",
    "children": [
     {
      "id": "hb-3-1",
-     "label": "국회"
+     "label": "제1장 입법부",
+     "children": []
     },
     {
      "id": "hb-3-2",
-     "label": "정부"
+     "label": "제2장 행정부",
+     "children": []
     },
     {
      "id": "hb-3-3",
-     "label": "법원"
+     "label": "제3장 사법부",
+     "children": []
     },
     {
      "id": "hb-3-4",
-     "label": "헌법재판소"
+     "label": "제4장 헌법재판소",
+     "children": [
+      {
+       "id": "hb-3-4-1",
+       "label": "제1절 일반심판절차",
+       "children": []
+      },
+      {
+       "id": "hb-3-4-2",
+       "label": "제2절 위헌법률심판",
+       "children": []
+      },
+      {
+       "id": "hb-3-4-3",
+       "label": "제3절 탄핵심판",
+       "children": []
+      },
+      {
+       "id": "hb-3-4-4",
+       "label": "제4절 정당해산심판",
+       "children": []
+      },
+      {
+       "id": "hb-3-4-5",
+       "label": "제5절 권한쟁의심판",
+       "children": []
+      },
+      {
+       "id": "hb-3-4-6",
+       "label": "I. 헌법재판소법 제68조 제1항에 의한 헌법소원심판",
+       "children": []
+      },
+      {
+       "id": "hb-3-4-7",
+       "label": "II. 헌법재판소법 제68조 제2항에 의한 헌법소원심판",
+       "children": []
+      }
+     ]
     }
    ]
   }
@@ -74,19 +210,55 @@
    "children": [
     {
      "id": "hj-1-1",
-     "label": "행정과 법치주의·통치행위"
+     "label": "제1장 행정법 서론",
+     "children": [
+      {
+       "id": "hj-1-1-1",
+       "label": "제1절 행정과 행정법",
+       "children": []
+      },
+      {
+       "id": "hj-1-1-2",
+       "label": "제2절 행정법의 법원(法源)",
+       "children": []
+      },
+      {
+       "id": "hj-1-1-3",
+       "label": "제3절 행정법관계",
+       "children": []
+      }
+     ]
     },
     {
      "id": "hj-1-2",
-     "label": "행정법의 법원과 일반원칙"
+     "label": "제2장 행정작용법",
+     "children": [
+      {
+       "id": "hj-1-2-1",
+       "label": "제1관 행정행위",
+       "children": []
+      },
+      {
+       "id": "hj-1-2-2",
+       "label": "제2관 행정행위 이외의 작용형식",
+       "children": []
+      },
+      {
+       "id": "hj-1-2-3",
+       "label": "제2절 행정절차",
+       "children": []
+      },
+      {
+       "id": "hj-1-2-4",
+       "label": "제3절 정보공개",
+       "children": []
+      }
+     ]
     },
     {
      "id": "hj-1-3",
-     "label": "행정작용의 유형"
-    },
-    {
-     "id": "hj-1-4",
-     "label": "행정절차와 정보공개"
+     "label": "제3장 행정의 실효성 확보수단",
+     "children": []
     }
    ]
   },
@@ -96,33 +268,137 @@
    "children": [
     {
      "id": "hj-2-1",
-     "label": "행정소송의 대상과 사법심사"
+     "label": "제1장 행정상 손해전보",
+     "children": [
+      {
+       "id": "hj-2-1-1",
+       "label": "제1관 공무원의 위법한 직무집행으로 인한 배상책임",
+       "children": []
+      },
+      {
+       "id": "hj-2-1-2",
+       "label": "제2관 영조물하자로 인한 배상책임",
+       "children": []
+      },
+      {
+       "id": "hj-2-1-3",
+       "label": "제3관 배상책임자",
+       "children": []
+      },
+      {
+       "id": "hj-2-1-4",
+       "label": "제2절 행정상 손실보상",
+       "children": []
+      }
+     ]
     },
     {
      "id": "hj-2-2",
-     "label": "행정심판"
-    },
-    {
-     "id": "hj-2-3",
-     "label": "국가배상·손실보상"
+     "label": "제2장 행정쟁송법",
+     "children": [
+      {
+       "id": "hj-2-2-1",
+       "label": "제1절 이의신청",
+       "children": []
+      },
+      {
+       "id": "hj-2-2-2",
+       "label": "제2절 행정심판",
+       "children": []
+      },
+      {
+       "id": "hj-2-2-3",
+       "label": "제1관 항고소송의 소송요건",
+       "children": []
+      },
+      {
+       "id": "hj-2-2-4",
+       "label": "제2관 항고소송의 가구제",
+       "children": []
+      },
+      {
+       "id": "hj-2-2-5",
+       "label": "제3관 항고소송의 심리",
+       "children": []
+      },
+      {
+       "id": "hj-2-2-6",
+       "label": "제4관 항고소송의 판결",
+       "children": []
+      },
+      {
+       "id": "hj-2-2-7",
+       "label": "제5관 당사자소송",
+       "children": []
+      }
+     ]
     }
    ]
   },
   {
    "id": "hj-3",
-   "label": "제3편 행정조직·특별행정작용법",
+   "label": "제3편 행정조직법",
    "children": [
     {
      "id": "hj-3-1",
-     "label": "행정조직법·지방자치법"
+     "label": "제1장 행정조직법",
+     "children": []
     },
     {
      "id": "hj-3-2",
-     "label": "공무원법"
+     "label": "제2장 지방자치법",
+     "children": []
     },
     {
      "id": "hj-3-3",
-     "label": "경찰행정·급부행정·재무행정"
+     "label": "제3장 공무원법",
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "hj-4",
+   "label": "제4편 개별행정법",
+   "children": [
+    {
+     "id": "hj-4-1",
+     "label": "제1장 경찰행정법",
+     "children": []
+    },
+    {
+     "id": "hj-4-2",
+     "label": "제2장 공물법",
+     "children": []
+    },
+    {
+     "id": "hj-4-3",
+     "label": "제3장 공기업법",
+     "children": []
+    },
+    {
+     "id": "hj-4-4",
+     "label": "제4장 개발행정법",
+     "children": []
+    },
+    {
+     "id": "hj-4-5",
+     "label": "제5장 경제행정법",
+     "children": []
+    },
+    {
+     "id": "hj-4-6",
+     "label": "제6장 조세행정법",
+     "children": []
+    },
+    {
+     "id": "hj-4-7",
+     "label": "제7장 환경행정법",
+     "children": []
+    },
+    {
+     "id": "hj-4-8",
+     "label": "제8장 사회복지행정법",
+     "children": []
     }
    ]
   }
@@ -130,73 +406,497 @@
  "civil": [
   {
    "id": "mb-1",
-   "label": "제1편 민법총칙",
+   "label": "제1편 총칙",
    "children": [
     {
      "id": "mb-1-1",
-     "label": "민법의 법원"
+     "label": "제1장 통칙",
+     "children": []
     },
     {
      "id": "mb-1-2",
-     "label": "권리의 주체 — 자연인과 법인"
+     "label": "제2장 인",
+     "children": [
+      {
+       "id": "mb-1-2-1",
+       "label": "제1절 능력",
+       "children": []
+      },
+      {
+       "id": "mb-1-2-2",
+       "label": "제2절 부재와 실종",
+       "children": []
+      }
+     ]
     },
     {
      "id": "mb-1-3",
-     "label": "법률행위"
+     "label": "제3장 법인",
+     "children": [
+      {
+       "id": "mb-1-3-1",
+       "label": "제1절 총칙",
+       "children": []
+      },
+      {
+       "id": "mb-1-3-2",
+       "label": "제2절 설립",
+       "children": []
+      },
+      {
+       "id": "mb-1-3-3",
+       "label": "제3절 기관",
+       "children": []
+      },
+      {
+       "id": "mb-1-3-4",
+       "label": "제4절 해산",
+       "children": []
+      }
+     ]
     },
     {
      "id": "mb-1-4",
-     "label": "소멸시효"
+     "label": "제4장 물건",
+     "children": []
+    },
+    {
+     "id": "mb-1-5",
+     "label": "제5장 법률행위",
+     "children": [
+      {
+       "id": "mb-1-5-1",
+       "label": "제1절 총칙",
+       "children": []
+      },
+      {
+       "id": "mb-1-5-2",
+       "label": "제2절 의사표시",
+       "children": []
+      },
+      {
+       "id": "mb-1-5-3",
+       "label": "제3절 대리",
+       "children": []
+      },
+      {
+       "id": "mb-1-5-4",
+       "label": "제4절 무효와 취소",
+       "children": []
+      },
+      {
+       "id": "mb-1-5-5",
+       "label": "제5절 조건과 기한",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "mb-1-6",
+     "label": "제6장 소멸시효",
+     "children": []
     }
    ]
   },
   {
    "id": "mb-2",
-   "label": "제2편 물권법",
+   "label": "제2편 물권",
    "children": [
     {
      "id": "mb-2-1",
-     "label": "물권 총론·물권변동"
+     "label": "제1장 총칙",
+     "children": []
     },
     {
      "id": "mb-2-2",
-     "label": "점유권·소유권"
+     "label": "제2장 점유권",
+     "children": []
     },
     {
      "id": "mb-2-3",
-     "label": "용익물권·담보물권"
+     "label": "제3장 소유권",
+     "children": [
+      {
+       "id": "mb-2-3-1",
+       "label": "제1절 소유권의 한계",
+       "children": []
+      },
+      {
+       "id": "mb-2-3-2",
+       "label": "제2절 소유권의 취득",
+       "children": []
+      },
+      {
+       "id": "mb-2-3-3",
+       "label": "제3절 공동소유",
+       "children": []
+      },
+      {
+       "id": "mb-2-3-4",
+       "label": "제4절 명의신탁",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "mb-2-4",
+     "label": "제4장 지상권",
+     "children": []
+    },
+    {
+     "id": "mb-2-5",
+     "label": "제5장 지역권",
+     "children": []
+    },
+    {
+     "id": "mb-2-6",
+     "label": "제6장 전세권",
+     "children": []
+    },
+    {
+     "id": "mb-2-7",
+     "label": "제7장 유치권",
+     "children": []
+    },
+    {
+     "id": "mb-2-8",
+     "label": "제8장 질권",
+     "children": []
+    },
+    {
+     "id": "mb-2-9",
+     "label": "제9장 저당권",
+     "children": []
     }
    ]
   },
   {
    "id": "mb-3",
-   "label": "제3편 채권법",
+   "label": "제3편 채권",
    "children": [
     {
      "id": "mb-3-1",
-     "label": "채권총론"
+     "label": "제1장 총칙",
+     "children": [
+      {
+       "id": "mb-3-1-1",
+       "label": "제1절 채권의 목적",
+       "children": []
+      },
+      {
+       "id": "mb-3-1-2",
+       "label": "제2절 채권의 효력",
+       "children": []
+      },
+      {
+       "id": "mb-3-1-3",
+       "label": "제1관 총칙",
+       "children": []
+      },
+      {
+       "id": "mb-3-1-4",
+       "label": "제2관 불가분채권과 불가분채무",
+       "children": []
+      },
+      {
+       "id": "mb-3-1-5",
+       "label": "제3관 연대채무",
+       "children": []
+      },
+      {
+       "id": "mb-3-1-6",
+       "label": "제3관 보증채무",
+       "children": []
+      },
+      {
+       "id": "mb-3-1-7",
+       "label": "제4절 채권의 양도",
+       "children": []
+      },
+      {
+       "id": "mb-3-1-8",
+       "label": "제5절 채무의 인수",
+       "children": []
+      },
+      {
+       "id": "mb-3-1-9",
+       "label": "제1관 변제",
+       "children": []
+      },
+      {
+       "id": "mb-3-1-10",
+       "label": "제2관 공탁",
+       "children": []
+      },
+      {
+       "id": "mb-3-1-11",
+       "label": "제3관 상계",
+       "children": []
+      }
+     ]
     },
     {
      "id": "mb-3-2",
-     "label": "계약"
+     "label": "제2장 계약",
+     "children": [
+      {
+       "id": "mb-3-2-1",
+       "label": "제1관 계약의 성립",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-2",
+       "label": "제2관 계약의 효력",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-3",
+       "label": "제3관 계약의 해지, 해제",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-4",
+       "label": "제2절 증여",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-5",
+       "label": "제1관 총칙",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-6",
+       "label": "제2관 매매의 효력",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-7",
+       "label": "제4절 소비대차",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-8",
+       "label": "제5절 사용대차",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-9",
+       "label": "제6절 임대차",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-10",
+       "label": "제7절 도급",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-11",
+       "label": "제8절 위임",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-12",
+       "label": "제9절 조합",
+       "children": []
+      },
+      {
+       "id": "mb-3-2-13",
+       "label": "제10절 화해",
+       "children": []
+      }
+     ]
     },
     {
      "id": "mb-3-3",
-     "label": "부당이득·불법행위"
+     "label": "제3장 사무관리",
+     "children": []
+    },
+    {
+     "id": "mb-3-4",
+     "label": "제4장 부당이득",
+     "children": []
+    },
+    {
+     "id": "mb-3-5",
+     "label": "제5장 불법행위",
+     "children": []
     }
    ]
   },
   {
    "id": "mb-4",
-   "label": "제4편 친족·상속법",
+   "label": "제4편 친족",
    "children": [
     {
      "id": "mb-4-1",
-     "label": "친족"
+     "label": "제2장 가족의 범위와 자의 성과 본",
+     "children": []
     },
     {
      "id": "mb-4-2",
-     "label": "상속"
+     "label": "제3장 혼인",
+     "children": [
+      {
+       "id": "mb-4-2-1",
+       "label": "제1절 약혼",
+       "children": []
+      },
+      {
+       "id": "mb-4-2-2",
+       "label": "제2절 혼인의 성립",
+       "children": []
+      },
+      {
+       "id": "mb-4-2-3",
+       "label": "제3절 혼인의 무효와 취소",
+       "children": []
+      },
+      {
+       "id": "mb-4-2-4",
+       "label": "제4절 혼인의 효력",
+       "children": []
+      },
+      {
+       "id": "mb-4-2-5",
+       "label": "제1관 협의상 이혼",
+       "children": []
+      },
+      {
+       "id": "mb-4-2-6",
+       "label": "제2관 재판상 이혼",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "mb-4-3",
+     "label": "제4장 부모와 자",
+     "children": [
+      {
+       "id": "mb-4-3-1",
+       "label": "제1절 친생자",
+       "children": []
+      },
+      {
+       "id": "mb-4-3-2",
+       "label": "제1관 입양의 요건과 효력",
+       "children": []
+      },
+      {
+       "id": "mb-4-3-3",
+       "label": "제2관 입양의 무효와 취소",
+       "children": []
+      },
+      {
+       "id": "mb-4-3-4",
+       "label": "제2관 친권의 효력",
+       "children": []
+      },
+      {
+       "id": "mb-4-3-5",
+       "label": "제3관 친권의 상실, 일시 정지 및 일부 제한",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "mb-4-4",
+     "label": "제5장 후견",
+     "children": [
+      {
+       "id": "mb-4-4-1",
+       "label": "제1절 후견계약",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "mb-4-5",
+     "label": "제6장 부양",
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "mb-5",
+   "label": "제5편 상속",
+   "children": [
+    {
+     "id": "mb-5-1",
+     "label": "제1장 상속",
+     "children": [
+      {
+       "id": "mb-5-1-1",
+       "label": "제1절 총칙",
+       "children": []
+      },
+      {
+       "id": "mb-5-1-2",
+       "label": "제2절 상속인",
+       "children": []
+      },
+      {
+       "id": "mb-5-1-3",
+       "label": "제1관 일반적 효력",
+       "children": []
+      },
+      {
+       "id": "mb-5-1-4",
+       "label": "제3관 상속재산의 분할",
+       "children": []
+      },
+      {
+       "id": "mb-5-1-5",
+       "label": "제1관 총칙",
+       "children": []
+      },
+      {
+       "id": "mb-5-1-6",
+       "label": "제2관 단순승인",
+       "children": []
+      },
+      {
+       "id": "mb-5-1-7",
+       "label": "제3관 한정승인",
+       "children": []
+      },
+      {
+       "id": "mb-5-1-8",
+       "label": "제4관 포기",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "mb-5-2",
+     "label": "제2장 유언",
+     "children": [
+      {
+       "id": "mb-5-2-1",
+       "label": "제1절 총칙",
+       "children": []
+      },
+      {
+       "id": "mb-5-2-2",
+       "label": "제2절 유언의 방식",
+       "children": []
+      },
+      {
+       "id": "mb-5-2-3",
+       "label": "제3절 유언의 효력",
+       "children": []
+      },
+      {
+       "id": "mb-5-2-4",
+       "label": "제4절 유언의 집행",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "mb-5-3",
+     "label": "제3장 유류분",
+     "children": []
     }
    ]
   }
@@ -204,45 +904,132 @@
  "criminal": [
   {
    "id": "hb2-1",
-   "label": "제1편 형법총론",
+   "label": "형법총론",
    "children": [
     {
      "id": "hb2-1-1",
-     "label": "죄형법정주의"
+     "label": "제1편 서론",
+     "children": []
     },
     {
      "id": "hb2-1-2",
-     "label": "구성요건론"
+     "label": "제2편 범죄론",
+     "children": [
+      {
+       "id": "hb2-1-2-1",
+       "label": "제1장 구성요건",
+       "children": []
+      },
+      {
+       "id": "hb2-1-2-2",
+       "label": "제2장 위법성",
+       "children": []
+      },
+      {
+       "id": "hb2-1-2-3",
+       "label": "제3장 책임",
+       "children": []
+      },
+      {
+       "id": "hb2-1-2-4",
+       "label": "제4장 미수론",
+       "children": []
+      },
+      {
+       "id": "hb2-1-2-5",
+       "label": "제5장 공범론",
+       "children": []
+      }
+     ]
     },
     {
      "id": "hb2-1-3",
-     "label": "위법성·책임"
+     "label": "제3편 죄수론",
+     "children": []
     },
     {
      "id": "hb2-1-4",
-     "label": "미수·공범·죄수"
-    },
-    {
-     "id": "hb2-1-5",
-     "label": "형벌론"
+     "label": "제4편 형벌론",
+     "children": []
     }
    ]
   },
   {
    "id": "hb2-2",
-   "label": "제2편 형법각론",
+   "label": "형법각론",
    "children": [
     {
      "id": "hb2-2-1",
-     "label": "개인적 법익에 대한 죄"
+     "label": "제1편 개인적 법익에 대한 죄",
+     "children": [
+      {
+       "id": "hb2-2-1-1",
+       "label": "제1장 생명·신체에 대한 죄",
+       "children": []
+      },
+      {
+       "id": "hb2-2-1-2",
+       "label": "제2장 자유에 대한 죄",
+       "children": []
+      },
+      {
+       "id": "hb2-2-1-3",
+       "label": "제3장 명예와 신용에 대한 죄",
+       "children": []
+      },
+      {
+       "id": "hb2-2-1-4",
+       "label": "제4장 사생활의 평온에 대한 죄",
+       "children": []
+      },
+      {
+       "id": "hb2-2-1-5",
+       "label": "제5장 재산에 대한 죄",
+       "children": []
+      }
+     ]
     },
     {
      "id": "hb2-2-2",
-     "label": "사회적 법익에 대한 죄"
+     "label": "제2편 사회적 법익에 대한 죄",
+     "children": [
+      {
+       "id": "hb2-2-2-1",
+       "label": "제1장 공공의 안전과 평온에 대한 죄",
+       "children": []
+      },
+      {
+       "id": "hb2-2-2-2",
+       "label": "제2장 공공의 신용에 대한 죄",
+       "children": []
+      },
+      {
+       "id": "hb2-2-2-3",
+       "label": "제3장 공중의 건강에 관한 죄",
+       "children": []
+      },
+      {
+       "id": "hb2-2-2-4",
+       "label": "제4장 사회의 도덕에 관한 죄",
+       "children": []
+      }
+     ]
     },
     {
      "id": "hb2-2-3",
-     "label": "국가적 법익에 대한 죄"
+     "label": "제3편 국가적 법익에 대한 죄",
+     "children": [
+      {
+       "id": "hb2-2-3-1",
+       "label": "제1장 국가의 존립과 권위에 대한 죄",
+       "children": []
+      },
+      {
+       "id": "hb2-2-3-2",
+       "label": "제2장 국가의 기능에 대한 죄",
+       "children": []
+      }
+     ]
     }
    ]
   }
@@ -669,6 +1456,129 @@
     {
      "id": "sb-5-6",
      "label": "제6편 항공운송"
+    }
+   ]
+  }
+ ],
+ "research-civil": [
+  {
+   "id": "rc-1",
+   "label": "제1장 총칙편 분야",
+   "children": []
+  },
+  {
+   "id": "rc-2",
+   "label": "제2장 물권편 분야",
+   "children": []
+  },
+  {
+   "id": "rc-3",
+   "label": "제3장 채권편 분야",
+   "children": []
+  },
+  {
+   "id": "rc-4",
+   "label": "제4장 가족법 분야",
+   "children": []
+  }
+ ],
+ "research-criminal": [
+  {
+   "id": "rk-p1",
+   "label": "제1부  형법총론",
+   "children": [
+    {
+     "id": "rk-p1-1",
+     "label": "제1편  서  론",
+     "children": []
+    },
+    {
+     "id": "rk-p1-2",
+     "label": "제2편  범 죄 론",
+     "children": [
+      {
+       "id": "rk-p1-2-1",
+       "label": "제1장  구성요건",
+       "children": []
+      },
+      {
+       "id": "rk-p1-2-2",
+       "label": "제2장  위 법 성",
+       "children": []
+      },
+      {
+       "id": "rk-p1-2-3",
+       "label": "제3장  책 임 론",
+       "children": []
+      },
+      {
+       "id": "rk-p1-2-4",
+       "label": "제4장  미 수 론",
+       "children": []
+      },
+      {
+       "id": "rk-p1-2-5",
+       "label": "제5장  공 범 론",
+       "children": []
+      },
+      {
+       "id": "rk-p1-2-6",
+       "label": "제6장  죄 수 론",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "rk-p1-3",
+     "label": "제3편  형 벌 론",
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "rk-p2",
+   "label": "제2부  형법각론",
+   "children": [
+    {
+     "id": "rk-p2-1",
+     "label": "제1편  개인적 법익에 대한 죄",
+     "children": [
+      {
+       "id": "rk-p2-1-1",
+       "label": "제1장  생명과 신체에 대한 죄",
+       "children": []
+      },
+      {
+       "id": "rk-p2-1-2",
+       "label": "제2장  자유에 대한 죄",
+       "children": []
+      },
+      {
+       "id": "rk-p2-1-3",
+       "label": "제3장  명예와 신용에 대한 죄",
+       "children": []
+      },
+      {
+       "id": "rk-p2-1-4",
+       "label": "제4장  사생활의 평온에 대한 죄",
+       "children": []
+      },
+      {
+       "id": "rk-p2-1-5",
+       "label": "제5장  재산에 대한 죄",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "rk-p2-2",
+     "label": "제2편  사회적 법익에 대한 죄",
+     "children": []
+    },
+    {
+     "id": "rk-p2-3",
+     "label": "제3편  국가적 법익에 대한 죄",
+     "children": []
     }
    ]
   }

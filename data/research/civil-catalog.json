@@ -1,0 +1,2013 @@
+{
+  "collection": "civil-research",
+  "label": "민법판례연구",
+  "subject": "civil",
+  "source": {
+    "kind": "user-supplied-toc",
+    "file": "data/research/civil-toc.txt",
+    "receivedAt": "2026-10-28",
+    "description": "사용자가 제공한 1권·2권 목차. 제목·권·장·순서·시작쪽·원 인용을 보존한다. 책 본문이나 표준판례 원문 검증을 뜻하지 않는다."
+  },
+  "toc": [
+    {
+      "id": "rc-1",
+      "label": "제1장 총칙편 분야",
+      "children": []
+    },
+    {
+      "id": "rc-2",
+      "label": "제2장 물권편 분야",
+      "children": []
+    },
+    {
+      "id": "rc-3",
+      "label": "제3장 채권편 분야",
+      "children": []
+    },
+    {
+      "id": "rc-4",
+      "label": "제4장 가족법 분야",
+      "children": []
+    }
+  ],
+  "candidates": [
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "변호사 보수 약정과 신의성실의 원칙",
+      "court": "대법원",
+      "caseNumber": "2016다35833",
+      "date": "2018-05-17",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-1"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 1,
+        "volume": 1,
+        "chapter": 1,
+        "chapterOrder": 1,
+        "sourcePage": 3,
+        "sourceCitation": "(대법원 2018. 5. 17. 선고 2016다35833 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "추가접속통화료 지급청구와 신의칙",
+      "court": "대법원",
+      "caseNumber": "2014다19776, 19783",
+      "date": "2017-02-15",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-1"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 2,
+        "volume": 1,
+        "chapter": 1,
+        "chapterOrder": 2,
+        "sourcePage": 15,
+        "sourceCitation": "(대법원 2017. 2. 15. 선고 2014다19776, 19783 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "무효행위 전환과 일부 무효",
+      "court": "대법원",
+      "caseNumber": "2013다42236",
+      "date": "2016-11-18",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-1"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 3,
+        "volume": 1,
+        "chapter": 1,
+        "chapterOrder": 3,
+        "sourcePage": 23,
+        "sourceCitation": "(대법원 2016. 11. 18. 선고 2013다42236 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "소송탈퇴와 소멸시효 중단의 효력",
+      "court": "대법원",
+      "caseNumber": "2016다35789",
+      "date": "2017-07-18",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-1"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 4,
+        "volume": 1,
+        "chapter": 1,
+        "chapterOrder": 4,
+        "sourcePage": 32,
+        "sourceCitation": "(대법원 2017. 7. 18. 선고 2016다35789 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "승소확정판결이 존재하는 경우 시효중단을 위한 재소(再訴) 가능성",
+      "court": "대법원",
+      "caseNumber": "2018다22008",
+      "date": "2018-07-19",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-1"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 5,
+        "volume": 1,
+        "chapter": 1,
+        "chapterOrder": 5,
+        "sourcePage": 37,
+        "sourceCitation": "(대법원 2018. 7. 19. 선고 2018다22008 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "시효중단을 위한 확인의 소",
+      "court": "대법원",
+      "caseNumber": "2015다232316",
+      "date": "2018-10-18",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-1"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 6,
+        "volume": 1,
+        "chapter": 1,
+        "chapterOrder": 6,
+        "sourcePage": 48,
+        "sourceCitation": "(대법원 2018. 10. 18. 선고 2015다232316 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "신의칙에 반하는 소멸시효 항변과 구상권 행사",
+      "court": "대법원",
+      "caseNumber": "2015다217843",
+      "date": "2016-06-10",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-1"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 7,
+        "volume": 1,
+        "chapter": 1,
+        "chapterOrder": 7,
+        "sourcePage": 57,
+        "sourceCitation": "(대법원 2016. 6. 10. 선고 2015다217843 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "공유지분 포기에 따른 물권변동 발생 시기",
+      "court": "대법원",
+      "caseNumber": "2015다52978",
+      "date": "2016-10-27",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-2"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 8,
+        "volume": 1,
+        "chapter": 2,
+        "chapterOrder": 1,
+        "sourcePage": 67,
+        "sourceCitation": "(대법원 2016. 10. 27. 선고 2015다52978 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "폐쇄등기의 말소회복을 구하는 소의 이익",
+      "court": "대법원",
+      "caseNumber": "2011다41239",
+      "date": "2016-01-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-2"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 9,
+        "volume": 1,
+        "chapter": 2,
+        "chapterOrder": 2,
+        "sourcePage": 72,
+        "sourceCitation": "(대법원 2016. 1. 28. 선고 2011다41239 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "점유권에 기한 방해제거청구 제척기간의 기산점",
+      "court": "대법원",
+      "caseNumber": "2016다214483, 214490",
+      "date": "2016-07-29",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-2"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 10,
+        "volume": 1,
+        "chapter": 2,
+        "chapterOrder": 3,
+        "sourcePage": 81,
+        "sourceCitation": "(대법원 2016. 7. 29. 선고 2016다214483, 214490 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "토지 소유권이 토지 상공에 미치는 범위",
+      "court": "대법원",
+      "caseNumber": "2013다71098",
+      "date": "2016-11-10",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-2"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 11,
+        "volume": 1,
+        "chapter": 2,
+        "chapterOrder": 4,
+        "sourcePage": 86,
+        "sourceCitation": "(대법원 2016. 11. 10. 선고 2013다71098 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "구분소유권등기의 효력",
+      "court": "대법원",
+      "caseNumber": "2013다59876",
+      "date": "2016-01-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-2"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 12,
+        "volume": 1,
+        "chapter": 2,
+        "chapterOrder": 5,
+        "sourcePage": 92,
+        "sourceCitation": "(대법원 2016. 1. 28. 선고 2013다59876 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "집합건물 증축으로 새롭게 생긴 전유부분의 대지사용권",
+      "court": "대법원",
+      "caseNumber": "2014다236809",
+      "date": "2017-05-31",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-2"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 13,
+        "volume": 1,
+        "chapter": 2,
+        "chapterOrder": 6,
+        "sourcePage": 97,
+        "sourceCitation": "(대법원 2017. 5. 31. 선고 2014다236809 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "분묘기지권의 취득시효에 관한 관습법 인정 여부",
+      "court": "대법원",
+      "caseNumber": "2013다17292",
+      "date": "2017-01-19",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-2"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 14,
+        "volume": 1,
+        "chapter": 2,
+        "chapterOrder": 7,
+        "sourcePage": 103,
+        "sourceCitation": "(대법원 2017. 1. 19. 선고 2013다17292 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "피담보채권 일부를 먼저 배당받은 공동근저당권자의 우선변제권 범위",
+      "court": "대법원",
+      "caseNumber": "2013다16992",
+      "date": "2017-12-21",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-2"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 15,
+        "volume": 1,
+        "chapter": 2,
+        "chapterOrder": 8,
+        "sourcePage": 111,
+        "sourceCitation": "(대법원 2017. 12. 21. 선고 2013다16992 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "담보신탁의 우선수익권과 그 우선수익권이 담보하는 채권의 관계",
+      "court": "대법원",
+      "caseNumber": "2014다225809",
+      "date": "2017-06-22",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-2"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 16,
+        "volume": 1,
+        "chapter": 2,
+        "chapterOrder": 9,
+        "sourcePage": 117,
+        "sourceCitation": "(대법원 2017. 6. 22. 선고 2014다225809 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "양도담보, 부합, 부당이득",
+      "court": "대법원",
+      "caseNumber": "2012다19659",
+      "date": "2016-04-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-2"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 17,
+        "volume": 1,
+        "chapter": 2,
+        "chapterOrder": 10,
+        "sourcePage": 128,
+        "sourceCitation": "(대법원 2016. 4. 28. 선고 2012다19659 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "양도담보 목적물이 타인의 토지 위에 설치되어 있는 경우 토지 차임 상당 부당이득반환의무자",
+      "court": "대법원",
+      "caseNumber": "2018다201429",
+      "date": "2018-05-30",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-2"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 18,
+        "volume": 1,
+        "chapter": 2,
+        "chapterOrder": 11,
+        "sourcePage": 136,
+        "sourceCitation": "(대법원 2018. 5. 30. 선고 2018다201429 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "강제이행청구와 이행불능",
+      "court": "대법원",
+      "caseNumber": "2016다200729",
+      "date": "2016-05-12",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 19,
+        "volume": 1,
+        "chapter": 3,
+        "chapterOrder": 1,
+        "sourcePage": 143,
+        "sourceCitation": "(대법원 2016. 5. 12. 선고 2016다200729 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "사고로 인한 자동차 가격 하락 손해가 통상손해인지 여부",
+      "court": "대법원",
+      "caseNumber": "2016다248806",
+      "date": "2017-05-17",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 20,
+        "volume": 1,
+        "chapter": 3,
+        "chapterOrder": 2,
+        "sourcePage": 147,
+        "sourceCitation": "(대법원 2017. 5. 17. 선고 2016다248806 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "담합사건에서 법원의 재량에 따른 손해배상액 인정 요건",
+      "court": "대법원",
+      "caseNumber": "2014다81511",
+      "date": "2016-11-10",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 21,
+        "volume": 1,
+        "chapter": 3,
+        "chapterOrder": 3,
+        "sourcePage": 153,
+        "sourceCitation": "(대법원 2016. 11. 10. 선고 2014다81511 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "위약벌과 손해배상액 예정의 구별",
+      "court": "대법원",
+      "caseNumber": "2012다65973",
+      "date": "2016-07-14",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 22,
+        "volume": 1,
+        "chapter": 3,
+        "chapterOrder": 4,
+        "sourcePage": 159,
+        "sourceCitation": "(대법원 2016. 7. 14. 선고 2012다65973 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "위약벌에 대한 손해배상액 감액 규정 유추 적용",
+      "court": "대법원",
+      "caseNumber": "2015다239324",
+      "date": "2016-01-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 23,
+        "volume": 1,
+        "chapter": 3,
+        "chapterOrder": 5,
+        "sourcePage": 164,
+        "sourceCitation": "(대법원 2016. 1. 28. 선고 2015다239324 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "보증채무 부종성의 예외 인정 여부",
+      "court": "대법원",
+      "caseNumber": "2016다211620",
+      "date": "2018-05-15",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 24,
+        "volume": 1,
+        "chapter": 3,
+        "chapterOrder": 6,
+        "sourcePage": 168,
+        "sourceCitation": "(대법원 2018. 5. 15. 선고 2016다211620 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "금액이 다른 채무가 서로 부진정연대관계에 있을 때 다액채무자가 일부 변제를 하는 경우의 법률관계",
+      "court": "대법원",
+      "caseNumber": "2012다74236",
+      "date": "2018-03-22",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 25,
+        "volume": 1,
+        "chapter": 3,
+        "chapterOrder": 7,
+        "sourcePage": 175,
+        "sourceCitation": "(대법원 2018. 3. 22. 선고 2012다74236 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "체육필수시설 인수인의 권리·의무 승계 범위",
+      "court": "대법원",
+      "caseNumber": "2016다220143",
+      "date": "2018-10-18",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 26,
+        "volume": 1,
+        "chapter": 3,
+        "chapterOrder": 8,
+        "sourcePage": 183,
+        "sourceCitation": "(대법원 2018. 10. 18. 선고 2016다220143 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "사해행위 취소로 원상회복된 부동산 소유권의 법률관계",
+      "court": "대법원",
+      "caseNumber": "2015다217980",
+      "date": "2017-03-09",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 27,
+        "volume": 1,
+        "chapter": 3,
+        "chapterOrder": 9,
+        "sourcePage": 194,
+        "sourceCitation": "(대법원 2017. 3. 9. 선고 2015다217980 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "계약이 성립하지 않은 경우의 계약체결상 과실책임",
+      "court": "대법원",
+      "caseNumber": "2015다10929",
+      "date": "2017-11-14",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 28,
+        "volume": 1,
+        "chapter": 4,
+        "chapterOrder": 1,
+        "sourcePage": 209,
+        "sourceCitation": "(대법원 2017. 11. 14. 선고 2015다10929 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "사정변경으로 인한 계약 해지 요건",
+      "court": "대법원",
+      "caseNumber": "2016다249557",
+      "date": "2017-06-12",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 29,
+        "volume": 1,
+        "chapter": 4,
+        "chapterOrder": 2,
+        "sourcePage": 215,
+        "sourceCitation": "(대법원 2017. 6. 12. 선고 2016다249557 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "국가계약법령상 물가변동에 따른 계약금액 조정 규정의 적용을 배제하는 합의의 효력",
+      "court": "대법원",
+      "caseNumber": "2012다74076",
+      "date": "2017-12-21",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 30,
+        "volume": 1,
+        "chapter": 4,
+        "chapterOrder": 3,
+        "sourcePage": 221,
+        "sourceCitation": "(대법원 2017. 12. 21. 선고 2012다74076 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "재해사망보험약관의 해석",
+      "court": "대법원",
+      "caseNumber": "2015다243347",
+      "date": "2016-05-12",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 31,
+        "volume": 1,
+        "chapter": 4,
+        "chapterOrder": 4,
+        "sourcePage": 232,
+        "sourceCitation": "(대법원 2016. 5. 12. 선고 2015다243347 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "임대인 소유 건물 중 임차 부분 화재로 나머지 건물 부분이 불에 탄 경우의 법률관계",
+      "court": "대법원",
+      "caseNumber": "2012다86895, 86901",
+      "date": "2017-05-18",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 32,
+        "volume": 1,
+        "chapter": 4,
+        "chapterOrder": 5,
+        "sourcePage": 241,
+        "sourceCitation": "(대법원 2017. 5. 18. 선고 2012다86895, 86901 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "임대인 지위 승계 전 발생한 연체차임이 새로운 임대인이 반환할 임대차보증금에서 당연 공제되는지 여부",
+      "court": "대법원",
+      "caseNumber": "2016다218874",
+      "date": "2017-03-22",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 33,
+        "volume": 1,
+        "chapter": 4,
+        "chapterOrder": 6,
+        "sourcePage": 253,
+        "sourceCitation": "(대법원 2017. 3. 22. 선고 2016다218874 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "장기계속공사계약에서 총 공사기간이 연장된 경우 총 공사대금 조정 여부",
+      "court": "대법원",
+      "caseNumber": "2014다235189",
+      "date": "2018-10-30",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 34,
+        "volume": 1,
+        "chapter": 4,
+        "chapterOrder": 7,
+        "sourcePage": 260,
+        "sourceCitation": "(대법원 2018. 10. 30. 선고 2014다235189 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "농지임대차계약과 불법원인급여",
+      "court": "대법원",
+      "caseNumber": "2013다79887, 79894",
+      "date": "2017-03-15",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 35,
+        "volume": 1,
+        "chapter": 4,
+        "chapterOrder": 8,
+        "sourcePage": 273,
+        "sourceCitation": "(대법원 2017. 3. 15. 선고 2013다79887, 79894 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "오염된 토지의 유통과 불법행위 성립 여부",
+      "court": "대법원",
+      "caseNumber": "2009다66549",
+      "date": "2016-05-19",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 36,
+        "volume": 1,
+        "chapter": 4,
+        "chapterOrder": 9,
+        "sourcePage": 280,
+        "sourceCitation": "(대법원 2016. 5. 19. 선고 2009다66549 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "정치적 논쟁에 관한 표현의 자유와 명예훼손",
+      "court": "대법원",
+      "caseNumber": "2014다61654",
+      "date": "2018-10-30",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 37,
+        "volume": 1,
+        "chapter": 4,
+        "chapterOrder": 10,
+        "sourcePage": 288,
+        "sourceCitation": "(대법원 2018. 10. 30. 선고 2014다61654 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "일제강점기 시절 강제징용 피해자에 대한 손해배상책임",
+      "court": "대법원",
+      "caseNumber": "2013다61381",
+      "date": "2018-10-30",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 38,
+        "volume": 1,
+        "chapter": 4,
+        "chapterOrder": 11,
+        "sourcePage": 298,
+        "sourceCitation": "(대법원 2018. 10. 30. 선고 2013다61381 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "공개된 개인정보의 영리적 이용의 위법성",
+      "court": "대법원",
+      "caseNumber": "2014다235080",
+      "date": "2016-08-17",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 39,
+        "volume": 1,
+        "chapter": 4,
+        "chapterOrder": 12,
+        "sourcePage": 310,
+        "sourceCitation": "(대법원 2016. 8. 17. 선고 2014다235080 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "수사기관의 통신자료 요청에 따른 개인정보 제공의 위법성",
+      "court": "대법원",
+      "caseNumber": "2012다105482",
+      "date": "2016-03-10",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 40,
+        "volume": 1,
+        "chapter": 4,
+        "chapterOrder": 13,
+        "sourcePage": 318,
+        "sourceCitation": "(대법원 2016. 3. 10. 선고 2012다105482 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "정보주체의 동의 없이 개인 위치정보를 수집한 경우 손해배상책임",
+      "court": "대법원",
+      "caseNumber": "2015다251539, 251546, 251553, 251560,  251577",
+      "date": "2018-05-30",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 41,
+        "volume": 1,
+        "chapter": 4,
+        "chapterOrder": 14,
+        "sourcePage": 325,
+        "sourceCitation": "(대법원 2018. 5. 30. 선고 2015다251539, 251546, 251553, 251560,  251577 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "기사형 광고를 게재한 신문사가 방조에 의한 공동불법행위책임을 부담하는 경우",
+      "court": "대법원",
+      "caseNumber": "2015다210231",
+      "date": "2018-01-25",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 42,
+        "volume": 1,
+        "chapter": 4,
+        "chapterOrder": 15,
+        "sourcePage": 333,
+        "sourceCitation": "(대법원 2018. 1. 25. 선고 2015다210231 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "해킹 사고와 정보통신서비스제공자의 불법행위 방조책임",
+      "court": "대법원",
+      "caseNumber": "2015다24904, 24911, 24928, 24935",
+      "date": "2018-01-25",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 43,
+        "volume": 1,
+        "chapter": 4,
+        "chapterOrder": 16,
+        "sourcePage": 341,
+        "sourceCitation": "(대법원 2018. 1. 25. 선고 2015다24904, 24911, 24928, 24935 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "사용자의 보험자가 피용자의 보험자에게 구상권을 행사하는 경우의 법률관계",
+      "court": "대법원",
+      "caseNumber": "2016다271226",
+      "date": "2017-04-27",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 44,
+        "volume": 1,
+        "chapter": 4,
+        "chapterOrder": 17,
+        "sourcePage": 348,
+        "sourceCitation": "(대법원 2017. 4. 27. 선고 2016다271226 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "이혼을 원인으로 한 재산분할청구권의 양도",
+      "court": "대법원",
+      "caseNumber": "2015다61286",
+      "date": "2017-09-21",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-4"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 45,
+        "volume": 1,
+        "chapter": 5,
+        "chapterOrder": 1,
+        "sourcePage": 357,
+        "sourceCitation": "(대법원 2017. 9. 21. 선고 2015다61286 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "제척기간 경과 후 재산분할청구권의 행사",
+      "court": "대법원",
+      "caseNumber": "2018스18",
+      "date": "2018-06-22",
+      "decisionType": "결정",
+      "enBanc": false,
+      "tocPath": [
+        "rc-4"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 46,
+        "volume": 1,
+        "chapter": 5,
+        "chapterOrder": 2,
+        "sourcePage": 362,
+        "sourceCitation": "(대법원 2018. 6. 22.자 2018스18 결정)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "법정후견과 임의후견의 관계",
+      "court": "대법원",
+      "caseNumber": "2017스515",
+      "date": "2017-06-01",
+      "decisionType": "결정",
+      "enBanc": false,
+      "tocPath": [
+        "rc-4"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 47,
+        "volume": 1,
+        "chapter": 5,
+        "chapterOrder": 3,
+        "sourcePage": 371,
+        "sourceCitation": "(대법원 2017. 6. 1.자 2017스515 결정)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "?헤이그 국제아동탈취협약 이행에 관한 법률?상 반환예외사유",
+      "court": "대법원",
+      "caseNumber": "2017스630",
+      "date": "2018-04-17",
+      "decisionType": "결정",
+      "enBanc": false,
+      "tocPath": [
+        "rc-4"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 48,
+        "volume": 1,
+        "chapter": 5,
+        "chapterOrder": 4,
+        "sourcePage": 377,
+        "sourceCitation": "(대법원 2018. 4. 17.자 2017스630 결정)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "가분채권과 상속재산분할",
+      "court": "대법원",
+      "caseNumber": "2014스122",
+      "date": "2016-05-04",
+      "decisionType": "결정",
+      "enBanc": false,
+      "tocPath": [
+        "rc-4"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 49,
+        "volume": 1,
+        "chapter": 5,
+        "chapterOrder": 5,
+        "sourcePage": 384,
+        "sourceCitation": "(대법원 2016. 5. 4.자 2014스122 결정)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "북한이탈주민의 상속재산회복청구권과 제척기간",
+      "court": "대법원",
+      "caseNumber": "2014다46648",
+      "date": "2016-10-19",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-4"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 50,
+        "volume": 1,
+        "chapter": 5,
+        "chapterOrder": 6,
+        "sourcePage": 393,
+        "sourceCitation": "(대법원 2016. 10. 19. 선고 2014다46648 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "상속포기의 효력이 대습상속에 미치는지 여부",
+      "court": "대법원",
+      "caseNumber": "2014다39824",
+      "date": "2017-01-12",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-4"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 51,
+        "volume": 1,
+        "chapter": 5,
+        "chapterOrder": 7,
+        "sourcePage": 399,
+        "sourceCitation": "(대법원 2017. 1. 12. 선고 2014다39824 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "제3자의 권리 대상인 유증 목적물의 법률관계",
+      "court": "대법원",
+      "caseNumber": "2017다289040",
+      "date": "2018-07-26",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-4"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 52,
+        "volume": 1,
+        "chapter": 5,
+        "chapterOrder": 8,
+        "sourcePage": 403,
+        "sourceCitation": "(대법원 2018. 7. 26. 선고 2017다289040 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "추가법정수당 청구와 신의칙",
+      "court": "대법원",
+      "caseNumber": "2015다217287",
+      "date": "2019-02-14",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-1"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 53,
+        "volume": 2,
+        "chapter": 1,
+        "chapterOrder": 1,
+        "sourcePage": 5,
+        "sourceCitation": "(대법원 2019. 2. 14. 선고 2015다217287 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "업무상 재해로 사망한 근로자의 직계가족을 특별채용하기로 하는 단체협약의 효력",
+      "court": "대법원",
+      "caseNumber": "2016다248998",
+      "date": "2020-08-27",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-1"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 54,
+        "volume": 2,
+        "chapter": 1,
+        "chapterOrder": 2,
+        "sourcePage": 18,
+        "sourceCitation": "(대법원 2020. 8. 27. 선고 2016다248998 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "재건축조합 임원들에 대한 인센티브 지급을 내용으로 하는 조합총회 결의의 효력",
+      "court": "대법원",
+      "caseNumber": "2017다218987, 218994",
+      "date": "2020-09-03",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-1"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 55,
+        "volume": 2,
+        "chapter": 1,
+        "chapterOrder": 3,
+        "sourcePage": 28,
+        "sourceCitation": "(대법원 2020. 9. 3. 선고 2017다218987, 218994 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "통정허위표시와 제3자",
+      "court": "대법원",
+      "caseNumber": "2019다280375",
+      "date": "2020-01-30",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-1"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 56,
+        "volume": 2,
+        "chapter": 1,
+        "chapterOrder": 4,
+        "sourcePage": 36,
+        "sourceCitation": "(대법원 2020. 1. 30. 선고 2019다280375 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "제척기간과 민법 제495조의 유추 적용",
+      "court": "대법원",
+      "caseNumber": "2018다255648",
+      "date": "2019-03-14",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-1"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 57,
+        "volume": 2,
+        "chapter": 1,
+        "chapterOrder": 5,
+        "sourcePage": 43,
+        "sourceCitation": "(대법원 2019. 3. 14. 선고 2018다255648 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "임대차보증금반환채권의 소멸시효",
+      "court": "대법원",
+      "caseNumber": "2016다244224",
+      "date": "2020-07-09",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-1"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 58,
+        "volume": 2,
+        "chapter": 1,
+        "chapterOrder": 6,
+        "sourcePage": 53,
+        "sourceCitation": "(대법원 2020. 7. 9. 선고 2016다244224 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "일부청구와 소멸시효 중단",
+      "court": "대법원",
+      "caseNumber": "2019다223723",
+      "date": "2020-02-06",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-1"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 59,
+        "volume": 2,
+        "chapter": 1,
+        "chapterOrder": 7,
+        "sourcePage": 61,
+        "sourceCitation": "(대법원 2020. 2. 6. 선고 2019다223723 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "배타적 사용ㆍ수익권의 제한",
+      "court": "대법원",
+      "caseNumber": "2016다264556",
+      "date": "2019-01-24",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-2"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 60,
+        "volume": 2,
+        "chapter": 2,
+        "chapterOrder": 1,
+        "sourcePage": 71,
+        "sourceCitation": "(대법원 2019. 1. 24. 선고 2016다264556 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "명의신탁과 불법원인급여",
+      "court": "대법원",
+      "caseNumber": "2013다218156",
+      "date": "2019-06-20",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-2"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 61,
+        "volume": 2,
+        "chapter": 2,
+        "chapterOrder": 2,
+        "sourcePage": 82,
+        "sourceCitation": "(대법원 2019. 6. 20. 선고 2013다218156 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "공유물 소수지분권자의 방해배제 및 인도청구",
+      "court": "대법원",
+      "caseNumber": "2018다287522",
+      "date": "2020-05-21",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-2"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 62,
+        "volume": 2,
+        "chapter": 2,
+        "chapterOrder": 3,
+        "sourcePage": 91,
+        "sourceCitation": "(대법원 2020. 5. 21. 선고 2018다287522 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "공유물분할청구권의 대위행사",
+      "court": "대법원",
+      "caseNumber": "2018다879",
+      "date": "2020-05-21",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-2"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 63,
+        "volume": 2,
+        "chapter": 2,
+        "chapterOrder": 4,
+        "sourcePage": 103,
+        "sourceCitation": "(대법원 2020. 5. 21. 선고 2018다879 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "집합건물 공용부분에 대한 부당이득반환청구",
+      "court": "대법원",
+      "caseNumber": "2017다220744",
+      "date": "2020-05-21",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-2"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 64,
+        "volume": 2,
+        "chapter": 2,
+        "chapterOrder": 5,
+        "sourcePage": 113,
+        "sourceCitation": "(대법원 2020. 5. 21. 선고 2017다220744 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "누적적 근저당권과 변제자대위",
+      "court": "대법원",
+      "caseNumber": "2014다51756, 51763",
+      "date": "2020-04-09",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-2"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 65,
+        "volume": 2,
+        "chapter": 2,
+        "chapterOrder": 6,
+        "sourcePage": 120,
+        "sourceCitation": "(대법원 2020. 4. 9. 선고 2014다51756, 51763 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "양도금지특약을 위반한 채권양도의 효력",
+      "court": "대법원",
+      "caseNumber": "2016다24284",
+      "date": "2019-12-19",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 66,
+        "volume": 2,
+        "chapter": 3,
+        "chapterOrder": 1,
+        "sourcePage": 133,
+        "sourceCitation": "(대법원 2019. 12. 19. 선고 2016다24284 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "채권양도와 이의를 보류한 승낙",
+      "court": "대법원",
+      "caseNumber": "2017다222962",
+      "date": "2019-06-27",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 67,
+        "volume": 2,
+        "chapter": 3,
+        "chapterOrder": 2,
+        "sourcePage": 145,
+        "sourceCitation": "(대법원 2019. 6. 27. 선고 2017다222962 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "사정변경과 임대차계약의 해지",
+      "court": "대법원",
+      "caseNumber": "2020다254846",
+      "date": "2020-12-10",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 68,
+        "volume": 2,
+        "chapter": 3,
+        "chapterOrder": 3,
+        "sourcePage": 155,
+        "sourceCitation": "(대법원 2020. 12. 10. 선고 2020다254846 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "약관의 설명의무",
+      "court": "대법원",
+      "caseNumber": "2016다276177",
+      "date": "2019-05-30",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 69,
+        "volume": 2,
+        "chapter": 3,
+        "chapterOrder": 4,
+        "sourcePage": 164,
+        "sourceCitation": "(대법원 2019. 5. 30. 선고 2016다276177 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "배당이의를 하지 않은 경우의 부당이득반환청구",
+      "court": "대법원",
+      "caseNumber": "2014다206983",
+      "date": "2019-07-18",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 70,
+        "volume": 2,
+        "chapter": 3,
+        "chapterOrder": 5,
+        "sourcePage": 173,
+        "sourceCitation": "(대법원 2019. 7. 18. 선고 2014다206983 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "약제 상한금액 인하와 불법행위",
+      "court": "대법원",
+      "caseNumber": "2018다221676",
+      "date": "2020-11-26",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 71,
+        "volume": 2,
+        "chapter": 3,
+        "chapterOrder": 6,
+        "sourcePage": 182,
+        "sourceCitation": "(대법원 2020. 11. 26. 선고 2018다221676 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "성과 도용에 관한 부정경쟁행위",
+      "court": "대법원",
+      "caseNumber": "2016다276467",
+      "date": "2020-03-26",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 72,
+        "volume": 2,
+        "chapter": 3,
+        "chapterOrder": 7,
+        "sourcePage": 193,
+        "sourceCitation": "(대법원 2020. 3. 26. 선고 2016다276467 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "일용 근로자의 가동연한",
+      "court": "대법원",
+      "caseNumber": "2018다248909",
+      "date": "2019-02-21",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 73,
+        "volume": 2,
+        "chapter": 3,
+        "chapterOrder": 8,
+        "sourcePage": 200,
+        "sourceCitation": "(대법원 2019. 2. 21. 선고 2018다248909 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "온라인서비스제공자의 주의의무",
+      "court": "대법원",
+      "caseNumber": "2016다271608",
+      "date": "2019-02-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 74,
+        "volume": 2,
+        "chapter": 3,
+        "chapterOrder": 9,
+        "sourcePage": 212,
+        "sourceCitation": "(대법원 2019. 2. 28. 선고 2016다271608 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "해군본부 게시판 항의글 삭제에 따른 책임",
+      "court": "대법원",
+      "caseNumber": "2015다233807",
+      "date": "2020-06-04",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 75,
+        "volume": 2,
+        "chapter": 3,
+        "chapterOrder": 10,
+        "sourcePage": 222,
+        "sourceCitation": "(대법원 2020. 6. 4. 선고 2015다233807 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "공작물책임과 핸드 공식",
+      "court": "대법원",
+      "caseNumber": "2017다14895",
+      "date": "2019-11-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rc-3"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 76,
+        "volume": 2,
+        "chapter": 3,
+        "chapterOrder": 11,
+        "sourcePage": 230,
+        "sourceCitation": "(대법원 2019. 11. 28. 선고 2017다14895 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "아동의 출생등록될 권리",
+      "court": "대법원",
+      "caseNumber": "2020스575",
+      "date": "2020-06-08",
+      "decisionType": "결정",
+      "enBanc": false,
+      "tocPath": [
+        "rc-4"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 77,
+        "volume": 2,
+        "chapter": 4,
+        "chapterOrder": 1,
+        "sourcePage": 241,
+        "sourceCitation": "(대법원 2020. 6. 8.자 2020스575 결정)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "인공수정, 유전자형 배치와 친생추정",
+      "court": "대법원",
+      "caseNumber": "2016므2510",
+      "date": "2019-10-23",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-4"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 78,
+        "volume": 2,
+        "chapter": 4,
+        "chapterOrder": 2,
+        "sourcePage": 251,
+        "sourceCitation": "(대법원 2019. 10. 23. 선고 2016므0000 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc",
+        "identityVerification": {
+          "providedCaseNumber": "2016므0000",
+          "verifiedCaseNumber": "2016므2510",
+          "verified": true,
+          "checkedAt": "2026-10-28",
+          "source": "대법원 보도자료/언론보도해명: 친생자관계부존재확인 사건(2016므OOOO) 보도자료",
+          "url": "https://www.scourt.go.kr/supreme/news/NewsViewAction2.work?gubun=702&seqnum=807",
+          "note": "공식 보도자료 제목과 첨부명은 마스킹 번호를 사용하고, 같은 보도자료 본문은 2019. 10. 23. 선고 2016므2510 전원합의체 판결임을 명시한다. 사용자 제공 인용은 sourceCitation에 보존한다.",
+          "judgmentUrl": "https://file.scourt.go.kr/dcboard/1587345769866_102249.pdf"
+        }
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "친생자관계존부확인의 소의 원고적격",
+      "court": "대법원",
+      "caseNumber": "2015므8351",
+      "date": "2020-06-18",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-4"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 79,
+        "volume": 2,
+        "chapter": 4,
+        "chapterOrder": 3,
+        "sourcePage": 264,
+        "sourceCitation": "(대법원 2020. 6. 18. 선고 2015므8351 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "양육비 감액 판단",
+      "court": "대법원",
+      "caseNumber": "2018스566",
+      "date": "2019-01-31",
+      "decisionType": "결정",
+      "enBanc": false,
+      "tocPath": [
+        "rc-4"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 80,
+        "volume": 2,
+        "chapter": 4,
+        "chapterOrder": 4,
+        "sourcePage": 272,
+        "sourceCitation": "(대법원 2019. 1. 31.자 2018스566 결정)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "배우자의 부양의무 이행과 기여분",
+      "court": "대법원",
+      "caseNumber": "2014스44, 45",
+      "date": "2019-11-21",
+      "decisionType": "결정",
+      "enBanc": true,
+      "tocPath": [
+        "rc-4"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 81,
+        "volume": 2,
+        "chapter": 4,
+        "chapterOrder": 5,
+        "sourcePage": 280,
+        "sourceCitation": "(대법원 2019. 11. 21.자 2014스44, 45 전원합의체 결정)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "civil",
+      "title": "특별한정승인의 제척기간과 법정대리인",
+      "court": "대법원",
+      "caseNumber": "2019다232918",
+      "date": "2020-11-19",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rc-4"
+      ],
+      "research": {
+        "collection": "civil-research",
+        "order": 82,
+        "volume": 2,
+        "chapter": 4,
+        "chapterOrder": 6,
+        "sourcePage": 290,
+        "sourceCitation": "(대법원 2020. 11. 19. 선고 2019다232918 전원합의체 판결)",
+        "sourceFile": "data/research/civil-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    }
+  ]
+}

@@ -3,6 +3,9 @@
 clicks every tab-like control, collects page errors / console errors / horizontal overflow.
 
 Usage: python3 tools/sweep.py output/casebook.html
+Set CASEBOOK_SWEEP_SAMPLE_PER_PAGE to a positive integer for a reported sample
+of each page. First/last entries, standard overlaps, and decision types are
+always included, so the actual count may exceed the requested sample size.
 """
 import sys, os, json, asyncio
 from urllib.parse import urlparse
@@ -44,7 +47,9 @@ def report_failed(report):
             if (yt.get('error') or yt.get('entries') != yt['expected'] or yt.get('all_pressed') != 'all'
                     or yt.get('tabs') != yt['expected_tabs'] or yt.get('labels') != '전체분야 전체연도'
                     or yt.get('tab_entries') != yt['tab_expected'] or yt.get('subject_entries') != yt['subject_expected']
-                    or yt.get('empty_tab') != yt['empty_tab_expected'] or yt.get('empty_subject') != yt['empty_subject_expected']):
+                    or yt.get('empty_tab') != yt['empty_tab_expected'] or yt.get('empty_subject') != yt['empty_subject_expected']
+                    or yt['unmapped'] or yt.get('sub_year') != yt['sub_year_expected'] or yt.get('sub_empty') != yt['sub_empty_expected']
+                    or not yt.get('filtered_navigation')):
                 return True
     return False
 
@@ -52,14 +57,96 @@ def report_failed(report):
 YEAR_TAB_PAGES = ('ccourt', 'enbanc')
 
 
+def sampled_cases(cases, per_page):
+    """Keep exhaustive checks by default; optional samples retain key variants."""
+    if not per_page:
+        return cases
+    groups = {}
+    for case in cases:
+        groups.setdefault(case.get('page', case['group']), []).append(case)
+    selected = set()
+    for entries in groups.values():
+        count = min(len(entries), max(2, per_page))
+        indices = {round(i * (len(entries) - 1) / (count - 1)) for i in range(count)} if count > 1 else {0}
+        selected.update(entries[i]['id'] for i in indices)
+        variants = [
+            lambda c: c.get('decisionType') == '판결',
+            lambda c: c.get('decisionType') == '결정',
+        ]
+        if entries[0].get('group') == 'research':
+            variants += [lambda c: bool(c.get('isStandard')), lambda c: not c.get('isStandard')]
+        for predicate in variants:
+            if not any(c['id'] in selected and predicate(c) for c in entries):
+                match = next((c for c in entries if predicate(c)), None)
+                if match:
+                    selected.add(match['id'])
+    return [c for c in cases if c['id'] in selected]
+
+
 def tab_of(tabs, year):
     return next((t['id'] for t in tabs if t['from'] <= year <= t['to']), None)
 
 
+async def check_filtered_navigation(page, page_id, cases, tabs, case_tab, empty_subject):
+    """Changing a panel filter must refresh links without reopening excluded tabs."""
+    if not cases or len(tabs) < 2:
+        return True
+    current = cases[0]
+    other_tab = next(t['id'] for t in tabs if t['id'] != case_tab[current['id']])
+    await page.click('#ytabs [data-ytab=all]')
+    await page.evaluate("(hash) => { location.hash = hash; }", f"#/{page_id}/{current['id']}")
+    await page.wait_for_selector('#cs.show .pn', timeout=5000)
+    await page.click('#cs [data-tab="4"]')
+    await page.evaluate("window.__qaActivePanel = document.querySelector('#tabpanel')")
+    # The detail sheet covers the global toolbar; use its supported TOC shortcut.
+    await page.keyboard.press('t')
+    await page.wait_for_selector('#panel.show', timeout=5000)
+    await page.click(f'#panelBody [data-ytab="{other_tab}"]')
+    actual = await page.evaluate("""() => ({
+        links: [...document.querySelectorAll('#cs .pn a')].map(a => decodeURIComponent(a.hash.split('/').pop())),
+        selected: [...document.querySelectorAll('#ytabs [aria-pressed=true]')].map(b => b.dataset.ytab),
+        samePanel: window.__qaActivePanel === document.querySelector('#tabpanel')
+    })""")
+    selected = sorted([c for c in cases if c['id'] == current['id'] or case_tab[c['id']] == other_tab],
+                      key=lambda c: c['decisionDate'], reverse=True)
+    pos = next(i for i, c in enumerate(selected) if c['id'] == current['id'])
+    expected = ([selected[pos - 1]['id']] if pos else []) + ([selected[pos + 1]['id']] if pos + 1 < len(selected) else [])
+    if actual != {'links': expected, 'selected': [other_tab], 'samePanel': True}:
+        raise AssertionError(f'stale filtered navigation: {actual}, expected links {expected}')
+    # A subject-chip render must not re-enable the open case's excluded year.
+    chip = empty_subject or current['subject']
+    await page.click(f'#panelBody [data-filter="{chip}"]')
+    after = await page.evaluate("""() => ({
+        selected: [...document.querySelectorAll('#ytabs [aria-pressed=true]')].map(b => b.dataset.ytab),
+        links: [...document.querySelectorAll('#cs .pn a')].map(a => decodeURIComponent(a.hash.split('/').pop()))
+    })""")
+    selected = sorted([c for c in cases if c['id'] == current['id']
+                       or (case_tab[c['id']] == other_tab and c['subject'] == chip)],
+                      key=lambda c: c['decisionDate'], reverse=True)
+    pos = next(i for i, c in enumerate(selected) if c['id'] == current['id'])
+    expected = ([selected[pos - 1]['id']] if pos else []) + ([selected[pos + 1]['id']] if pos + 1 < len(selected) else [])
+    if after != {'selected': [other_tab], 'links': expected}:
+        raise AssertionError(f'filter changed selected year or bypassed subject: {after}')
+    await page.click('#btnTocClose')
+    await page.wait_for_selector('#panel:not(.show)', state='attached')
+    if expected:
+        target = expected[0]
+        await page.locator('#cs .pn a').first.click()
+        await page.wait_for_function("(id) => location.hash.endsWith('/' + id)", arg=target)
+        chosen = await page.evaluate("[...document.querySelectorAll('#ytabs [aria-pressed=true]')].map(b => b.dataset.ytab)")
+        if chosen != [other_tab]:
+            raise AssertionError(f'previous/next changed selected years: {chosen}')
+    await page.evaluate("(hash) => { location.hash = hash; }", f"#/{page_id}")
+    await page.wait_for_selector('#cs:not(.show)', state='attached')
+    await page.click('#col [data-filter=all]')
+    await page.click('#ytabs [data-ytab=all]')
+    return True
+
+
 async def check_year_tabs(page, page_id, vw, overflow):
-    """헌법재판소 주요결정·대법원 전원합의체: 과목 칩(전체분야) 아래 선고연도 탭(전체연도 + 연도·연대).
-    전체연도면 모든 판례, 탭 하나를 누르면 그 연도(연대)의 판례만, 과목 칩을 누르면 그 과목만 보여야 한다.
-    수록 판례가 한 해·한 과목뿐이어도 필터 고장을 잡도록 판례가 없는 탭·과목을 눌러 0건인지도 본다."""
+    """헌법재판소 주요결정·대법원 전원합의체: 과목 칩(전체분야) 아래 선고연도 탭(전체연도 + 연도 / 시대 탭과 그 아래 연도 줄).
+    전체연도면 모든 판례, 탭 하나를 누르면 그 연도(시대)의 판례만, 시대 아래 연도를 누르면 그 해만, 과목 칩을 누르면 그 과목만 보여야 한다.
+    수록 판례가 한 해·한 과목뿐이어도 필터 고장을 잡도록 판례가 없는 탭·연도·과목을 눌러 0건인지도 본다."""
     cases = [c for c in DATA['cases'] if c.get('page') == page_id]
     tabs = DATA.get('yearTabs', {}).get(page_id, [])
     case_tab = {c['id']: tab_of(tabs, int(c['decisionDate'][:4])) for c in cases}
@@ -68,13 +155,22 @@ async def check_year_tabs(page, page_id, vw, overflow):
     chip_subjects = [s['id'] for s in DATA['subjects'] if s.get('standard') is not False or any(c['subject'] == s['id'] for c in cases)]
     empty_tab = next((t['id'] for t in tabs if t['id'] not in case_tab.values()), None)
     empty_subject = next((s for s in chip_subjects if not any(c['subject'] == s for c in cases)), None)
+    # 시대 탭(여러 해를 묶은 탭)이면 가장 최근 시대 아래 연도 줄도 누른다
+    era = next((t for t in tabs if t['id'] == newest and t['from'] != t['to']), None)
+    era_years = list(range(era['to'], era['from'] - 1, -1)) if era else []
+    case_years = [int(c['decisionDate'][:4]) for c in cases]
+    sub_year = next((y for y in era_years if y in case_years), None)
+    sub_empty = next((y for y in era_years if y not in case_years), None)
     count = "document.querySelectorAll('#ylist .entry').length"
-    pressed = "[...document.querySelectorAll('#ytabs [aria-pressed=true]')].map(b => b.dataset.ytab).join(',')"
+    pressed = "[...document.querySelectorAll('#ytabs [aria-pressed=true]')].map(b => b.dataset.ytab || b.dataset.yyear).join(',')"
     r = {'expected': len(cases), 'expected_tabs': len(tabs),
          'tab_expected': sum(1 for c in cases if case_tab[c['id']] == newest),
          'subject_expected': sum(1 for c in cases if c['subject'] == subject),
          'empty_tab_expected': f'{empty_tab}:0' if empty_tab else None,
-         'empty_subject_expected': f'{empty_subject}:0' if empty_subject else None}
+         'empty_subject_expected': f'{empty_subject}:0' if empty_subject else None,
+         'unmapped': [c['id'] for c in cases if case_tab[c['id']] is None],
+         'sub_year_expected': f'{newest},{sub_year}:{case_years.count(sub_year)}' if sub_year else None,
+         'sub_empty_expected': f'{newest},{sub_empty}:0' if sub_empty else None}
     try:
         await page.evaluate(f"location.hash = '#/{page_id}'")
         await page.wait_for_selector('#ytabs [data-ytab]', timeout=5000)
@@ -88,6 +184,15 @@ async def check_year_tabs(page, page_id, vw, overflow):
             await page.click(f'#ytabs [data-ytab="{newest}"]')
             await page.wait_for_timeout(50)
         r['tab_entries'] = await page.evaluate(count)
+        if sub_year:
+            await page.click(f'#ytabs [data-yyear="{sub_year}"]')
+            await page.wait_for_timeout(50)
+            r['sub_year'] = f"{await page.evaluate(pressed)}:{await page.evaluate(count)}"
+            await page.click(f'#ytabs [data-yyear="{sub_year}"]')
+        if sub_empty:
+            await page.click(f'#ytabs [data-yyear="{sub_empty}"]')
+            await page.wait_for_timeout(50)
+            r['sub_empty'] = f"{await page.evaluate(pressed)}:{await page.evaluate(count)}"
         await page.click('#ytabs [data-ytab=all]')
         if empty_tab:
             await page.click(f'#ytabs [data-ytab="{empty_tab}"]')
@@ -103,6 +208,7 @@ async def check_year_tabs(page, page_id, vw, overflow):
             await page.wait_for_timeout(50)
             r['empty_subject'] = f"{empty_subject}:{await page.evaluate(count)}"
         await page.click('#col [data-filter=all]')
+        r['filtered_navigation'] = await check_filtered_navigation(page, page_id, cases, tabs, case_tab, empty_subject)
         sw = await page.evaluate('document.documentElement.scrollWidth')
         if sw > vw + 1: overflow.append((page_id, sw))
     except Exception as e:
@@ -111,11 +217,21 @@ async def check_year_tabs(page, page_id, vw, overflow):
 
 
 async def run(path):
+    raw_sample = os.environ.get('CASEBOOK_SWEEP_SAMPLE_PER_PAGE', '')
+    try:
+        sample_per_page = int(raw_sample) if raw_sample else 0
+        if raw_sample and sample_per_page < 1:
+            raise ValueError()
+    except ValueError:
+        raise SystemExit('CASEBOOK_SWEEP_SAMPLE_PER_PAGE must be a positive integer when set.')
+    cases_to_check = sampled_cases(DATA['cases'], sample_per_page)
     url = 'file://' + os.path.abspath(path)
     async with async_playwright() as p:
+        print('sweep: launching browser', flush=True)
         browser = await launch_chromium(p)
         report = {}
         for name, vw, vh, mobile in (('mobile', 390, 844, True), ('desktop', 1366, 860, False)):
+            print(f'sweep: {name}, {len(cases_to_check)} representative cases' if sample_per_page else f'sweep: {name}, all cases', flush=True)
             ctx = await browser.new_context(viewport={'width': vw, 'height': vh}, is_mobile=mobile, has_touch=mobile, locale='ko-KR')
             page = await ctx.new_page()
             errors = []
@@ -126,11 +242,13 @@ async def run(path):
             await page.wait_for_timeout(300)
             overflow = []
             empty = []
-            for c in DATA['cases']:
+            for c in cases_to_check:
                 await page.evaluate(f"location.hash = '#/{c.get('page', c['group'])}/{c['id']}'")
                 await page.wait_for_timeout(60)
                 tabs = await page.query_selector_all(TAB_SEL)
-                for t in tabs[:6]:
+                # Sample mode checks summary tabs; full reader tabs and lazy text
+                # loading are covered by webcheck. Exhaustive mode is unchanged.
+                for t in tabs[:2 if sample_per_page else 6]:
                     try:
                         if await t.is_visible():
                             await t.click(timeout=800)
@@ -143,6 +261,7 @@ async def run(path):
                 txt = await page.evaluate('document.body.innerText.length')
                 if txt < 200:
                     empty.append(c['id'])
+            print(f'sweep: {name}, case views complete; checking laws and filters', flush=True)
             laws = {}
             try:
                 await page.evaluate("location.hash = '#/laws/civil-code'")
@@ -185,7 +304,11 @@ async def run(path):
             except Exception as e:
                 annual['error'] = str(e)[:200]
             year_tabs = {pid: await check_year_tabs(page, pid, vw, overflow) for pid in YEAR_TAB_PAGES}
-            report[name] = {'errors': errors[:20], 'overflow': overflow[:10], 'empty': empty[:10], 'ignored_google_fonts': len(ignored_fonts), 'laws': laws, 'annual': annual, **year_tabs}
+            report[name] = {'mode': 'sample' if sample_per_page else 'exhaustive',
+                            'sample_per_page': sample_per_page or None,
+                            'detail_tab_limit': 2 if sample_per_page else 6,
+                            'checked_cases': len(cases_to_check), 'total_cases': len(DATA['cases']),
+                            'errors': errors[:20], 'overflow': overflow[:10], 'empty': empty[:10], 'ignored_google_fonts': len(ignored_fonts), 'laws': laws, 'annual': annual, **year_tabs}
             await ctx.close()
         await browser.close()
     print(json.dumps(report, ensure_ascii=False, indent=1))
