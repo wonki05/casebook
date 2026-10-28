@@ -20,6 +20,10 @@ from serve_web import WebAppHandler
 
 ROOT = Path(__file__).resolve().parent.parent
 RESEARCH = {'research-civil': '민법판례연구', 'research-criminal': '형법판례 150선'}
+RESEARCH_MAXIMS = {
+    'research-civil': ('Pacta sunt servanda.', '약속은 지켜져야 한다'),
+    'research-criminal': ('Nullum crimen sine lege.', '법률 없으면 범죄 없다'),
+}
 
 
 def require(condition, message):
@@ -50,6 +54,19 @@ async def open_case(page, item, identity=None):
 
 async def no_overflow(page, label):
     require(await page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'), label + ': horizontal overflow')
+
+
+async def check_maxim(page, page_id):
+    maxim = page.locator('#col > .maxim')
+    require(await maxim.count() == 1 and await maxim.is_visible(), page_id + ': legal maxim missing or hidden')
+    require(await maxim.get_attribute('data-page') == page_id, page_id + ': maxim belongs to a different page')
+    latin, translation = RESEARCH_MAXIMS[page_id]
+    require(await maxim.locator('i').inner_text() == latin, page_id + ': Latin maxim differs')
+    require(await maxim.locator('span').inner_text() == translation, page_id + ': maxim translation differs')
+    require(await maxim.evaluate('el => el.previousElementSibling?.classList.contains("pagehead")'),
+            page_id + ': maxim must follow the page heading')
+    require(await maxim.locator('i').evaluate('el => getComputedStyle(el).fontStyle') == 'italic',
+            page_id + ': maxim must use the shared italic style')
 
 
 async def check_rows(page, items, label):
@@ -194,9 +211,11 @@ async def check_viewport(browser, base, data, width):
         print(f'research-check: width {width}, {pid}', flush=True)
         items = toc_ordered_cases(data, pid)
         await list_page(page, pid, label)
+        await check_maxim(page, pid)
         await no_overflow(page, pid)
         await check_rows(page, items, pid)
-        report['research'][pid] = {'list_rows': len(items), 'standard_rows': sum(bool(c.get('isStandard')) for c in items)}
+        report['research'][pid] = {'list_rows': len(items), 'standard_rows': sum(bool(c.get('isStandard')) for c in items),
+                                   'maxim_checked': True}
         if not items:
             report['research'][pid]['detail_checks'] = 'no registered cases'
             continue

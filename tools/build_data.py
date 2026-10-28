@@ -504,6 +504,8 @@ def build():
         apply_source_precedence(rec, standard_by_decision.get(rec['decisionId'], {}), official_fields, ed)
         stats[rec['summaryType']] += 1
         rec["result"] = derive_result(fetched, {'result': c.get('result', '')})
+        if c.get("resultSource"):
+            rec["resultSource"] = copy.deepcopy(c["resultSource"])
         if rec["fullText"]:
             stats["fullText"] += 1
         cases.append(rec)

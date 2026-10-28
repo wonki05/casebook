@@ -1334,7 +1334,7 @@ function pageHTML() {
   const pg = pageOf(S.page); const mx = MAXIMS[S.page];
   return `<div class="runhead"><b>판례집</b><span>›</span><span>${esc(pg.section)}</span><span>›</span><span>${esc(pg.label)}</span></div>
   <div class="pagehead"><h1>${esc(pg.label)}</h1><p>${esc(PAGE_DESC[pg.id] || '')}</p></div>
-  ${mx ? `<div class="maxim"><i>${esc(mx[0])}</i><span>${esc(mx[1])}</span></div>` : ''}
+  ${mx ? `<div class="maxim" data-page="${esc(pg.id)}"><i>${esc(mx[0])}</i><span>${esc(mx[1])}</span></div>` : ''}
   ${S.page === 'research-civil' ? `${researchVolumesHTML()}<div id="researchList">${treeHTML(S.page)}</div>` : S.page === 'annual' ? `${annualBarHTML()}<div id="annualList">${treeHTML(S.page)}</div>` : tabsOf(S.page).length ? `${chipsHTML(S.page)}${yearTabsHTML('ytabs')}<div id="ylist">${treeHTML(S.page)}</div>` : chipsHTML(S.page) + treeHTML(S.page)}`;
 }
 function bookmarksHTML() {
@@ -1446,7 +1446,8 @@ function fieldSourceHTML(c, field) {
   return '';
 }
 function srcHTML(c) {
-  return `<div class="src"><span>${c.source ? `출처: ${c.source.url ? `<a href="${esc(c.source.url)}" target="_blank" rel="noopener">${esc(c.source.label)}</a>` : esc(c.source.label)}` : '출처: 미기재'}${c.summaryType === 'official' ? ' · 공식 판시사항·요지' : ''}</span><span>${esc(c.citation)}</span></div>`;
+  const rs = c.resultSource;
+  return `<div class="src"><span>${c.source ? `출처: ${c.source.url ? `<a href="${esc(c.source.url)}" target="_blank" rel="noopener">${esc(c.source.label)}</a>` : esc(c.source.label)}` : '출처: 미기재'}${c.summaryType === 'official' ? ' · 공식 판시사항·요지' : ''}</span><span>${esc(c.citation)}</span>${rs ? `<span>판결결과 근거: ${rs.url ? `<a href="${esc(rs.url)}" target="_blank" rel="noopener">${esc(rs.label)}</a>` : esc(rs.label)} · 주문</span>` : ''}</div>`;
 }
 function fullHTML(c) {
   if (c.fullTextRef && !c.fullText) return `<div class="empty-ft" role="status">${c._fullTextError ? esc(c._fullTextError) + (c._fullTextStale ? ' <button type="button" data-refresh-version>새 자료로 다시 열기</button>' : ' <button type="button" data-retry-full>다시 시도</button>') : '공식 전문을 불러오고 있습니다…'}</div>` + srcHTML(c);

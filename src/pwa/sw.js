@@ -28,7 +28,7 @@ self.addEventListener('fetch', event => {
   if (event.request.mode === 'navigate') {
     event.respondWith((async () => {
       try {
-        const response = await fetch(event.request);
+        const response = await fetch(new Request(event.request, {cache: 'no-store'}));
         if (response.ok) return response;
       } catch (_) {}
       return (await caches.open(SHELL)).match(absolute('./index.html'));

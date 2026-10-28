@@ -10,6 +10,8 @@
   # 필드 수정
   python3 tools/add_cases.py set std-civil-04 --title "..." --toc mb-1/mb-1-4 --result 파기환송 --tags "소멸시효,판례변경"
   python3 tools/add_cases.py set annual-2025-07 --field criminal-special [--year 2025 --article "..." --url https://...]
+  # 검증한 주문 근거로 비어 있는 형법 표준판례 결과만 일괄 보완
+  python3 tools/add_cases.py result-import --from reviewed-results.json [--dry-run]
   # 원전(PDF 등)의 대표 사건번호 오기 정정: 재판 ID 를 다시 계산하고 이전 ID 는 identityAliases 로 이어 둔다
   python3 tools/add_cases.py set std-civil-827 --correct-case 2015므8351
   # 같은 과목에서 같은 재판을 다른 제목(단원에 맞는 제목)으로 한 번 더 배치하는 것은 허용된다(제목이 같으면 중복)
@@ -27,8 +29,9 @@ id 는 관례대로 자동 생성: std-<subject>-NN · annual-<year>-NN · enban
 """
 import argparse, copy, json, os, re, sys, unicodedata
 from pathlib import Path
+from urllib.parse import urlsplit
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from case_identity import identity, IDENTITY_FIELDS, validate_standard_source, standard_sources_by_decision, primary_case_number, docket_parts, case_number_list, merged_display
+from case_identity import identity, IDENTITY_FIELDS, validate_standard_source, standard_sources_by_decision, primary_case_number, docket_parts, case_number_list, merged_display, court_id
 from casenum import romanize, lookup_key, is_cc  # noqa: E402
 from subjects import SUBJECT_IDS, STANDARD_IDS, ANNUAL_BY_ID, ANNUAL_FIELD_IDS, RESEARCH_BY_ID, resolve_field, guess_field, article_year  # noqa: E402
 
@@ -377,6 +380,134 @@ def cmd_research_import(a):
         print('--dry-run: 저장하지 않음')
 
 
+def import_results(reg, catalog):
+    """Fill empty criminal standard-case results from reviewed order evidence.
+
+    Validate the entire batch before returning a copy. The preparer verifies the
+    original source bytes; their SHA-256 and verbatim order remain as evidence.
+    """
+    from fetch_lawgo import citation_identity
+
+    scope = {'group': 'standard', 'subject': 'criminal'}
+    if not isinstance(catalog, dict) or catalog.get('scope') != scope:
+        raise ValueError('result-import 범위는 형법 표준판례(standard/criminal)만 허용합니다')
+    entries = catalog.get('cases')
+    if not isinstance(entries, list) or not entries:
+        raise ValueError('result-import에는 비어 있지 않은 cases 배열이 필요합니다')
+    updated = copy.deepcopy(reg)
+    records = {}
+    for record in updated['cases']:
+        if record['id'] in records:
+            raise ValueError('등록부에 중복 id가 있습니다: ' + record['id'])
+        records[record['id']] = record
+    changed, unchanged, seen = [], [], set()
+    for entry in entries:
+        if not isinstance(entry, dict) or not isinstance(entry.get('id'), str):
+            raise ValueError('결과 항목에 문자열 id가 필요합니다')
+        cid = entry['id']
+        if cid in seen:
+            raise ValueError('결과 입력에 중복 id가 있습니다: ' + cid)
+        seen.add(cid)
+        record = records.get(cid)
+        if record is None:
+            raise ValueError('없는 id: ' + cid)
+        if any(record.get(key) != value for key, value in scope.items()):
+            raise ValueError('형법 표준판례가 아닌 결과 항목: ' + cid)
+        fields = identity(record)
+        if (record.get('decisionId') != fields['decisionId'] or
+                entry.get('decisionId') != fields['decisionId']):
+            raise ValueError('decisionId 불일치: ' + cid)
+        result, source = entry.get('result'), entry.get('resultSource')
+        if (not isinstance(result, str) or not result.strip() or result != result.strip()
+                or '\n' in result or '\r' in result):
+            raise ValueError('한 줄의 비어 있지 않은 판결결과가 필요합니다: ' + cid)
+        if (not isinstance(source, dict) or source.get('type') not in ('official', 'provided')
+                or source.get('verified') is not True):
+            raise ValueError('검증된 official/provided resultSource가 필요합니다: ' + cid)
+        for key in ('label', 'citation', 'order'):
+            if not isinstance(source.get(key), str) or not source[key].strip():
+                raise ValueError('resultSource.' + key + '가 필요합니다: ' + cid)
+        digest = source.get('sourceSha256')
+        if not isinstance(digest, str) or not re.fullmatch(r'[0-9a-fA-F]{64}', digest):
+            raise ValueError('resultSource.sourceSha256은 SHA-256 지문이어야 합니다: ' + cid)
+        url = source.get('url')
+        if not isinstance(url, str) or url != url.strip() or '\n' in url or '\r' in url:
+            raise ValueError('resultSource.url은 URL 또는 빈 문자열이어야 합니다: ' + cid)
+        try:
+            parsed = urlsplit(url)
+            valid_url = parsed.scheme in ('http', 'https') and bool(parsed.hostname) and not parsed.username and not parsed.password
+        except ValueError as exc:
+            raise ValueError('resultSource.url 형식 오류: ' + cid) from exc
+        if (url and not valid_url) or (source['type'] == 'official' and
+                (not valid_url or parsed.hostname not in ('law.go.kr', 'www.law.go.kr'))):
+            raise ValueError('공식 출처는 law.go.kr URL이어야 합니다: ' + cid)
+        # Expand only these known reporter aliases in a parsing copy. Retain the
+        # original citation, including court abbreviations and chamber labels.
+        parser_citation = unicodedata.normalize('NFKC', source['citation'])
+        for alias, court in (('서울고법', '서울고등법원'), ('서울남부지법', '서울남부지방법원')):
+            parser_citation = re.sub(r'^(\s*[\[【]?\s*)' + alias + r'(?=\s)',
+                                     lambda match: match[1] + court, parser_citation, count=1)
+        parser_citation = re.sub(r'제\d+형사부\s*(?=판결)', '', parser_citation)
+        citation = citation_identity(parser_citation)
+        if citation is None:
+            raise ValueError('출처 인용문에서 재판 신원을 확인할 수 없습니다: ' + cid)
+        if (court_id(citation['court']) != fields['courtId'] or
+                citation['decisionDate'] != record['decisionDate'] or
+                citation['decisionType'] != fields['decisionType']):
+            raise ValueError('출처 인용문과 대상 재판의 신원이 다릅니다: ' + cid)
+        primary = primary_case_number(record.get('lookupKey') or record['caseNumber'])
+        if primary not in citation['members']:
+            evidence = source.get('mergedIdentityEvidence')
+            if (source['type'] != 'official' or not isinstance(evidence, dict)
+                    or evidence.get('type') != 'standard' or evidence.get('verified') is not True):
+                raise ValueError('대표번호가 없는 공식 인용에는 검증된 표준판례 병합 근거가 필요합니다: ' + cid)
+            for key in ('book', 'edition', 'file', 'citation'):
+                if not isinstance(evidence.get(key), str) or not evidence[key].strip():
+                    raise ValueError('mergedIdentityEvidence.' + key + '가 필요합니다: ' + cid)
+            pages = evidence.get('pages')
+            if not isinstance(pages, list) or not pages or any(type(page) is not int or page < 1 for page in pages):
+                raise ValueError('mergedIdentityEvidence.pages는 1부터 시작하는 PDF 쪽수 배열이어야 합니다: ' + cid)
+            digest = evidence.get('sourceSha256')
+            if not isinstance(digest, str) or not re.fullmatch(r'[0-9a-fA-F]{64}', digest):
+                raise ValueError('mergedIdentityEvidence.sourceSha256은 SHA-256 지문이어야 합니다: ' + cid)
+            book_citation = unicodedata.normalize('NFKC', evidence['citation']).strip()
+            if book_citation.startswith('(') and book_citation.endswith(')'):
+                book_citation = book_citation[1:-1].strip()
+            book_identity = citation_identity(book_citation)
+            if (book_identity is None or court_id(book_identity['court']) != fields['courtId']
+                    or book_identity['decisionDate'] != record['decisionDate']
+                    or book_identity['decisionType'] != fields['decisionType']
+                    or not set(citation['members']).issubset(book_identity['members'])
+                    or primary not in book_identity['members']):
+                raise ValueError('표준판례 병합 근거와 공식 인용·대상 재판의 신원이 다릅니다: ' + cid)
+        if record.get('result'):
+            if record['result'] != result:
+                raise ValueError('기존 판결결과와 충돌합니다: ' + cid)
+            if record.get('resultSource') is not None and record['resultSource'] != source:
+                raise ValueError('기존 판결결과 출처와 충돌합니다: ' + cid)
+            unchanged.append(cid)
+            continue
+        if record.get('resultSource') is not None and record['resultSource'] != source:
+            raise ValueError('기존 판결결과 출처와 충돌합니다: ' + cid)
+        record['result'] = result
+        record['resultSource'] = copy.deepcopy(source)
+        changed.append(cid)
+    return updated, {'changed': changed, 'unchanged': unchanged}
+
+
+def cmd_result_import(a):
+    reg, toc = load()
+    try:
+        updated, report = import_results(reg, read_json(a.from_file))
+    except (ValueError, KeyError) as exc:
+        raise SystemExit(str(exc)) from exc
+    if not a.dry_run and report['changed']:
+        save(reg=updated, toc=toc)
+    print(json.dumps(report, ensure_ascii=False))
+    if a.dry_run:
+        print('--dry-run: 저장하지 않음')
+
+
 def valid_case_display(value):
     """표시용 사건번호(병합번호 포함)의 형식을 검사하고 앞뒤 공백을 뗀 문자열을 돌려준다."""
     display = (value or '').strip()
@@ -705,6 +836,7 @@ def main():
     p = sub.add_parser('toc'); p.add_argument('toc_cmd', choices=['list', 'add', 'rename', 'replace']); p.add_argument('--from', dest='from_file', help='replace: 제안 목차 JSON({"proposed": [...]} 또는 배열)'); p.add_argument('--dry-run', action='store_true'); p.add_argument('--subject', choices=STANDARD_IDS); p.add_argument('--parent'); p.add_argument('--id'); p.add_argument('--label'); p.set_defaults(fn=cmd_toc)
     p = sub.add_parser('validate'); p.set_defaults(fn=cmd_validate)
     p = sub.add_parser('research-import'); p.add_argument('--from', dest='from_file', required=True); p.add_argument('--dry-run', action='store_true'); p.set_defaults(fn=cmd_research_import)
+    p = sub.add_parser('result-import'); p.add_argument('--from', dest='from_file', required=True); p.add_argument('--dry-run', action='store_true'); p.set_defaults(fn=cmd_result_import)
     p = sub.add_parser('migrate-identities'); p.set_defaults(fn=cmd_migrate_identities)
     a = ap.parse_args(); a.fn(a)
 

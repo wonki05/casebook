@@ -20,6 +20,7 @@
   "tocPath": ["mb-1", "mb-1-2"],        // 표준판례·판례연구. toc.json 의 전체 id 경로
   "tags": ["민법총칙", "관습법"],
   "result": "",                         // 비우면 주문에서 자동 추정(파기환송/상고기각/위헌/합헌/각하…)
+  "resultSource": null,                 // 별도 검증한 결과의 원문 주문·출처·인용·원수집본 SHA-256; result-import로만 보완
   "editorial": { "issues": [...], "holding": [...], "statutes": [...] },   // 해당 필드에 표준판례·공식 자료가 모두 없을 때만 쓰는 대체문(선택)
   "standardSource": { "verified": true, "book": "표준판례", "edition": "2023년 개정판", "file": "data/standard-cases/표준판례(2023년 개정판)_민법.pdf", "pages": [...], "holdings": [...] }, // 검증된 PDF 추출문, §1-3
   "annual": { "year": 2025, "field": "civil", "article": "[2025년 분야별 중요판례분석] (3) 민법(총칙·물권법)", "url": "https://..." },   // annual 만. field = 법률신문 분야(아래)

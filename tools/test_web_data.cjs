@@ -142,3 +142,62 @@ test('failed automatic release probe retains the verified active release',async(
   assert.equal(await monitor.check(),null);assert.equal(errors.length,1);
   assert.equal(await p.loadCases(),data);assert.equal(p.status().version,'v1');
 });
+
+
+// Exercise the service worker's actual fetch handler without relying on a browser
+// or a live server. A navigation's native-only mode is supplied on the event.
+function shellFixture(network) {
+  const fs = require('node:fs'), path = require('node:path'), vm = require('node:vm');
+  const handlers = {}, calls = [], matches = [];
+  const saved = new Response('<html>saved coherent shell</html>');
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../src/pwa/sw.js'), 'utf8'), {
+    self: {registration: {scope: BASE}, addEventListener(name, handler) {handlers[name] = handler;}},
+    URL, Request,
+    caches: {async open() {return {async match(url) {matches.push(url); return saved.clone();}};}},
+    async fetch(request) {calls.push(request); return network(request);}
+  });
+  return {
+    calls, matches,
+    async navigate() {
+      const request = new Request(BASE + 'index.html?view=research', {
+        cache: 'force-cache', credentials: 'include', headers: {'X-Reader-Test': 'preserved'}
+      });
+      Object.defineProperty(request, 'mode', {value: 'navigate'});
+      let pending;
+      handlers.fetch({request, respondWith(response) {pending = response;}});
+      assert.ok(pending, 'Project navigation must be handled by the service worker');
+      return {request, response: await pending};
+    }
+  };
+}
+
+test('navigation bypasses a stale HTTP shell while retaining the original request settings', async()=>{
+  const f = shellFixture(async request => new Response(request.cache === 'no-store'
+    ? '<html>current research reader</html>' : '<html>obsolete cached reader</html>'));
+  const {request, response} = await f.navigate();
+  assert.equal(await response.text(), '<html>current research reader</html>');
+  assert.equal(f.calls.length, 1);
+  assert.notEqual(f.calls[0], request);
+  assert.equal(f.calls[0].cache, 'no-store');
+  assert.equal(f.calls[0].url, request.url);
+  assert.equal(f.calls[0].method, 'GET');
+  assert.equal(f.calls[0].credentials, 'include');
+  assert.equal(f.calls[0].headers.get('X-Reader-Test'), 'preserved');
+  assert.equal(request.cache, 'force-cache', 'Do not alter the navigation request in place');
+  assert.deepEqual(f.matches, [], 'A successful latest shell must not use the offline fallback');
+});
+
+test('offline navigation retains the saved working shell', async()=>{
+  const f = shellFixture(async()=>{throw new Error('offline');});
+  const {response} = await f.navigate();
+  assert.equal(await response.text(), '<html>saved coherent shell</html>');
+  assert.equal(f.calls[0].cache, 'no-store');
+  assert.deepEqual(f.matches, [BASE + 'index.html']);
+});
+
+test('an unavailable online shell also falls back to the saved working shell', async()=>{
+  const f = shellFixture(async()=>new Response('temporarily unavailable', {status: 503}));
+  const {response} = await f.navigate();
+  assert.equal(await response.text(), '<html>saved coherent shell</html>');
+  assert.deepEqual(f.matches, [BASE + 'index.html']);
+});
