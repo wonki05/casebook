@@ -3,6 +3,9 @@
 clicks every tab-like control, collects page errors / console errors / horizontal overflow.
 
 Usage: python3 tools/sweep.py output/casebook.html
+Set CASEBOOK_SWEEP_SAMPLE_PER_PAGE to a positive integer for a reported sample
+of each page. First/last entries, standard overlaps, and decision types are
+always included, so the actual count may exceed the requested sample size.
 """
 import sys, os, json, asyncio
 from urllib.parse import urlparse
@@ -52,6 +55,32 @@ def report_failed(report):
 
 
 YEAR_TAB_PAGES = ('ccourt', 'enbanc')
+
+
+def sampled_cases(cases, per_page):
+    """Keep exhaustive checks by default; optional samples retain key variants."""
+    if not per_page:
+        return cases
+    groups = {}
+    for case in cases:
+        groups.setdefault(case.get('page', case['group']), []).append(case)
+    selected = set()
+    for entries in groups.values():
+        count = min(len(entries), max(2, per_page))
+        indices = {round(i * (len(entries) - 1) / (count - 1)) for i in range(count)} if count > 1 else {0}
+        selected.update(entries[i]['id'] for i in indices)
+        variants = [
+            lambda c: c.get('decisionType') == '판결',
+            lambda c: c.get('decisionType') == '결정',
+        ]
+        if entries[0].get('group') == 'research':
+            variants += [lambda c: bool(c.get('isStandard')), lambda c: not c.get('isStandard')]
+        for predicate in variants:
+            if not any(c['id'] in selected and predicate(c) for c in entries):
+                match = next((c for c in entries if predicate(c)), None)
+                if match:
+                    selected.add(match['id'])
+    return [c for c in cases if c['id'] in selected]
 
 
 def tab_of(tabs, year):
@@ -188,11 +217,21 @@ async def check_year_tabs(page, page_id, vw, overflow):
 
 
 async def run(path):
+    raw_sample = os.environ.get('CASEBOOK_SWEEP_SAMPLE_PER_PAGE', '')
+    try:
+        sample_per_page = int(raw_sample) if raw_sample else 0
+        if raw_sample and sample_per_page < 1:
+            raise ValueError()
+    except ValueError:
+        raise SystemExit('CASEBOOK_SWEEP_SAMPLE_PER_PAGE must be a positive integer when set.')
+    cases_to_check = sampled_cases(DATA['cases'], sample_per_page)
     url = 'file://' + os.path.abspath(path)
     async with async_playwright() as p:
+        print('sweep: launching browser', flush=True)
         browser = await launch_chromium(p)
         report = {}
         for name, vw, vh, mobile in (('mobile', 390, 844, True), ('desktop', 1366, 860, False)):
+            print(f'sweep: {name}, {len(cases_to_check)} representative cases' if sample_per_page else f'sweep: {name}, all cases', flush=True)
             ctx = await browser.new_context(viewport={'width': vw, 'height': vh}, is_mobile=mobile, has_touch=mobile, locale='ko-KR')
             page = await ctx.new_page()
             errors = []
@@ -203,11 +242,13 @@ async def run(path):
             await page.wait_for_timeout(300)
             overflow = []
             empty = []
-            for c in DATA['cases']:
+            for c in cases_to_check:
                 await page.evaluate(f"location.hash = '#/{c.get('page', c['group'])}/{c['id']}'")
                 await page.wait_for_timeout(60)
                 tabs = await page.query_selector_all(TAB_SEL)
-                for t in tabs[:6]:
+                # Sample mode checks summary tabs; full reader tabs and lazy text
+                # loading are covered by webcheck. Exhaustive mode is unchanged.
+                for t in tabs[:2 if sample_per_page else 6]:
                     try:
                         if await t.is_visible():
                             await t.click(timeout=800)
@@ -220,6 +261,7 @@ async def run(path):
                 txt = await page.evaluate('document.body.innerText.length')
                 if txt < 200:
                     empty.append(c['id'])
+            print(f'sweep: {name}, case views complete; checking laws and filters', flush=True)
             laws = {}
             try:
                 await page.evaluate("location.hash = '#/laws/civil-code'")
@@ -262,7 +304,11 @@ async def run(path):
             except Exception as e:
                 annual['error'] = str(e)[:200]
             year_tabs = {pid: await check_year_tabs(page, pid, vw, overflow) for pid in YEAR_TAB_PAGES}
-            report[name] = {'errors': errors[:20], 'overflow': overflow[:10], 'empty': empty[:10], 'ignored_google_fonts': len(ignored_fonts), 'laws': laws, 'annual': annual, **year_tabs}
+            report[name] = {'mode': 'sample' if sample_per_page else 'exhaustive',
+                            'sample_per_page': sample_per_page or None,
+                            'detail_tab_limit': 2 if sample_per_page else 6,
+                            'checked_cases': len(cases_to_check), 'total_cases': len(DATA['cases']),
+                            'errors': errors[:20], 'overflow': overflow[:10], 'empty': empty[:10], 'ignored_google_fonts': len(ignored_fonts), 'laws': laws, 'annual': annual, **year_tabs}
             await ctx.close()
         await browser.close()
     print(json.dumps(report, ensure_ascii=False, indent=1))

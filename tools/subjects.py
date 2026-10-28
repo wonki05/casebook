@@ -21,6 +21,13 @@ STANDARD_SUBJECTS = [s for s in SUBJECTS if s["standard"]]    # 표준판례 페
 STANDARD_IDS = [s["id"] for s in STANDARD_SUBJECTS]
 BY_ID = {s["id"]: s for s in SUBJECTS}
 
+# Research collections are placements, not new legal subjects or adjudications.
+RESEARCH_COLLECTIONS = [
+    {"id": "civil-research", "label": "민법판례연구", "subject": "civil", "page": "research-civil"},
+    {"id": "criminal-150", "label": "형법판례 150선", "subject": "criminal", "page": "research-criminal"},
+]
+RESEARCH_BY_ID = {c["id"]: c for c in RESEARCH_COLLECTIONS}
+
 # 법률신문 「분야별 중요판례분석」 페이지의 분야 — 화면의 분야 구분·필터 순서 = 이 목록 순서.
 # label 은 분야 이름, sub 는 그 옆의 작은 보라색 글씨. 기사 제목의 연재 순번("(3)" 등)은 화면에 쓰지 않는다.
 # keys 는 기사 제목에서 분야를 추정할 때 쓰는 낱말(공백·괄호·가운뎃점을 지운 제목에 들어 있는지 본다: '형법(총칙)' → '형법총칙').

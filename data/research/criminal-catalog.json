@@ -1,0 +1,4907 @@
+{
+  "collection": "criminal-150",
+  "label": "형법판례 150선",
+  "subject": "criminal",
+  "source": {
+    "kind": "user-supplied-toc",
+    "file": "data/research/criminal-toc.txt",
+    "receivedAt": "2026-10-28",
+    "topicCount": 153,
+    "placementCount": 155,
+    "description": "사용자가 제공한 목차. 저자명은 제목에서만 제외하고 원목차·저자·순서·쪽수·인용을 보존한다. 추가 항목 84-1·143-1·144-1 및 두 재판이 수록된 43·125를 모두 포함한다. 책 본문이나 표준판례 원문 검증을 뜻하지 않는다."
+  },
+  "toc": [
+    {
+      "id": "rk-p1",
+      "label": "제1부  형법총론",
+      "children": [
+        {
+          "id": "rk-p1-1",
+          "label": "제1편  서  론",
+          "children": []
+        },
+        {
+          "id": "rk-p1-2",
+          "label": "제2편  범 죄 론",
+          "children": [
+            {
+              "id": "rk-p1-2-1",
+              "label": "제1장  구성요건",
+              "children": []
+            },
+            {
+              "id": "rk-p1-2-2",
+              "label": "제2장  위 법 성",
+              "children": []
+            },
+            {
+              "id": "rk-p1-2-3",
+              "label": "제3장  책 임 론",
+              "children": []
+            },
+            {
+              "id": "rk-p1-2-4",
+              "label": "제4장  미 수 론",
+              "children": []
+            },
+            {
+              "id": "rk-p1-2-5",
+              "label": "제5장  공 범 론",
+              "children": []
+            },
+            {
+              "id": "rk-p1-2-6",
+              "label": "제6장  죄 수 론",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "rk-p1-3",
+          "label": "제3편  형 벌 론",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "rk-p2",
+      "label": "제2부  형법각론",
+      "children": [
+        {
+          "id": "rk-p2-1",
+          "label": "제1편  개인적 법익에 대한 죄",
+          "children": [
+            {
+              "id": "rk-p2-1-1",
+              "label": "제1장  생명과 신체에 대한 죄",
+              "children": []
+            },
+            {
+              "id": "rk-p2-1-2",
+              "label": "제2장  자유에 대한 죄",
+              "children": []
+            },
+            {
+              "id": "rk-p2-1-3",
+              "label": "제3장  명예와 신용에 대한 죄",
+              "children": []
+            },
+            {
+              "id": "rk-p2-1-4",
+              "label": "제4장  사생활의 평온에 대한 죄",
+              "children": []
+            },
+            {
+              "id": "rk-p2-1-5",
+              "label": "제5장  재산에 대한 죄",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "rk-p2-2",
+          "label": "제2편  사회적 법익에 대한 죄",
+          "children": []
+        },
+        {
+          "id": "rk-p2-3",
+          "label": "제3편  국가적 법익에 대한 죄",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "명확성원칙",
+      "court": "헌법재판소",
+      "caseNumber": "99헌마480",
+      "date": "2002-06-27",
+      "decisionType": "결정",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "1",
+        "order": 1,
+        "topicNumber": "1",
+        "topicOrder": 1,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "오영근 교수(한양대)",
+        "sourcePage": 4,
+        "sourceTitle": "[1] 명확성원칙 [오영근 교수(한양대)]　　4",
+        "sourceCitation": "헌법재판소 2002. 6. 27. 선고 99헌마480 결정",
+        "decisionCitation": "헌법재판소 2002. 6. 27. 선고 99헌마480 결정",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "허용된 해석과 금지된 유추",
+      "court": "대법원",
+      "caseNumber": "94모32",
+      "date": "1994-12-20",
+      "decisionType": "결정",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "2",
+        "order": 2,
+        "topicNumber": "2",
+        "topicOrder": 2,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김영환 교수(한양대)",
+        "sourcePage": 6,
+        "sourceTitle": "[2] 허용된 해석과 금지된 유추 [김영환 교수(한양대)]　　6",
+        "sourceCitation": "대법원 1994. 12. 20. 자 94모32 전원합의체 결정",
+        "decisionCitation": "대법원 1994. 12. 20. 자 94모32 전원합의체 결정",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "공소시효배제조항의 소급적용에 관한 유추해석",
+      "court": "대법원",
+      "caseNumber": "2015도1362, 2015전도19",
+      "date": "2015-05-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "3",
+        "order": 3,
+        "topicNumber": "3",
+        "topicOrder": 3,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "정영일 교수(경희대)",
+        "sourcePage": 8,
+        "sourceTitle": "[3] 공소시효배제조항의 소급적용에 관한 유추해석 [정영일 교수(경희대)]　　8",
+        "sourceCitation": "대법원 2015. 5. 28. 선고 2015도1362, 2015전도19 판결",
+        "decisionCitation": "대법원 2015. 5. 28. 선고 2015도1362, 2015전도19 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "외국에서 집행된 형(미결구금)의 산입",
+      "court": "대법원",
+      "caseNumber": "2017도5977",
+      "date": "2017-08-24",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "4",
+        "order": 4,
+        "topicNumber": "4",
+        "topicOrder": 4,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "전지연 교수(연세대)",
+        "sourcePage": 10,
+        "sourceTitle": "[4] 외국에서 집행된 형(미결구금)의 산입 [전지연 교수(연세대)]　　10",
+        "sourceCitation": "대법원 2017. 8. 24. 선고 2017도5977 전원합의체 판결",
+        "decisionCitation": "대법원 2017. 8. 24. 선고 2017도5977 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "양벌규정과 법인의 처벌근거",
+      "court": "대법원",
+      "caseNumber": "2009도3876",
+      "date": "2010-09-30",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "5",
+        "order": 5,
+        "topicNumber": "5",
+        "topicOrder": 5,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "박광민 교수(성균관대)",
+        "sourcePage": 16,
+        "sourceTitle": "[5] 양벌규정과 법인의 처벌근거 [박광민 교수(성균관대)]　　16",
+        "sourceCitation": "대법원 2010. 9. 30. 선고 2009도3876 판결",
+        "decisionCitation": "대법원 2010. 9. 30. 선고 2009도3876 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "피해자의 특이체질과 인과관계",
+      "court": "대법원",
+      "caseNumber": "78도1961",
+      "date": "1978-11-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "6",
+        "order": 6,
+        "topicNumber": "6",
+        "topicOrder": 6,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "송광섭 교수(원광대)",
+        "sourcePage": 18,
+        "sourceTitle": "[6] 피해자의 특이체질과 인과관계 [송광섭 교수(원광대)]　　18",
+        "sourceCitation": "대법원 1978. 11. 28. 선고 78도1961 판결",
+        "decisionCitation": "대법원 1978. 11. 28. 선고 78도1961 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "인과과정에 개입된 행위와 결과귀속",
+      "court": "대법원",
+      "caseNumber": "93도3612",
+      "date": "1994-03-22",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "7",
+        "order": 7,
+        "topicNumber": "7",
+        "topicOrder": 7,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "정현미 교수(이화여대)",
+        "sourcePage": 20,
+        "sourceTitle": "[7] 인과과정에 개입된 행위와 결과귀속 [정현미 교수(이화여대)]　　20",
+        "sourceCitation": "대법원 1994. 3. 22. 선고 93도3612 판결",
+        "decisionCitation": "대법원 1994. 3. 22. 선고 93도3612 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "피해자의 도피행위와 인과관계",
+      "court": "대법원",
+      "caseNumber": "95도425",
+      "date": "1995-05-12",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "8",
+        "order": 8,
+        "topicNumber": "8",
+        "topicOrder": 8,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이경재 교수(충북대)",
+        "sourcePage": 22,
+        "sourceTitle": "[8] 피해자의 도피행위와 인과관계 [이경재 교수(충북대)]　　22",
+        "sourceCitation": "대법원 1995. 5. 12. 선고 95도425 판결",
+        "decisionCitation": "대법원 1995. 5. 12. 선고 95도425 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "과실범의 인과관계",
+      "court": "대법원",
+      "caseNumber": "90도694",
+      "date": "1990-12-11",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "9",
+        "order": 9,
+        "topicNumber": "9",
+        "topicOrder": 9,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "신양균 교수(전북대)",
+        "sourcePage": 24,
+        "sourceTitle": "[9] 과실범의 인과관계 [신양균 교수(전북대)]　　24",
+        "sourceCitation": "대법원 1990. 12. 11. 선고 90도694 판결",
+        "decisionCitation": "대법원 1990. 12. 11. 선고 90도694 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "미필적 고의",
+      "court": "대법원",
+      "caseNumber": "2015도6809",
+      "date": "2015-11-12",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "10",
+        "order": 10,
+        "topicNumber": "10",
+        "topicOrder": 10,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "장영민 교수(이화여대)",
+        "sourcePage": 26,
+        "sourceTitle": "[10] 미필적 고의 [장영민 교수(이화여대)]　　26",
+        "sourceCitation": "대법원 2015. 11. 12. 선고 2015도6809 전원합의체 판결",
+        "decisionCitation": "대법원 2015. 11. 12. 선고 2015도6809 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "사실의 착오",
+      "court": "대법원",
+      "caseNumber": "83도2813",
+      "date": "1984-01-24",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "11",
+        "order": 11,
+        "topicNumber": "11",
+        "topicOrder": 11,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "문채규 교수(부산대)",
+        "sourcePage": 28,
+        "sourceTitle": "[11] 사실의 착오 [문채규 교수(부산대)]　　28",
+        "sourceCitation": "대법원 1984. 1. 24. 선고 83도2813 판결",
+        "decisionCitation": "대법원 1984. 1. 24. 선고 83도2813 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "개괄적 고의의 사례",
+      "court": "대법원",
+      "caseNumber": "88도650",
+      "date": "1988-06-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "12",
+        "order": 12,
+        "topicNumber": "12",
+        "topicOrder": 12,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김호기 교수(서울시립대)",
+        "sourcePage": 30,
+        "sourceTitle": "[12] 개괄적 고의의 사례 [김호기 교수(서울시립대)]　　30",
+        "sourceCitation": "대법원 1988. 6. 28. 선고 88도650 판결",
+        "decisionCitation": "대법원 1988. 6. 28. 선고 88도650 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "예견가능성 및 관리과실",
+      "court": "대법원",
+      "caseNumber": "83도3007",
+      "date": "1984-02-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "13",
+        "order": 13,
+        "topicNumber": "13",
+        "topicOrder": 13,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김정환 교수(연세대)",
+        "sourcePage": 32,
+        "sourceTitle": "[13] 예견가능성 및 관리과실 [김정환 교수(연세대)]　　32",
+        "sourceCitation": "대법원 1984. 2. 28. 선고 83도3007 판결",
+        "decisionCitation": "대법원 1984. 2. 28. 선고 83도3007 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "주의의무 위반의 판단기준",
+      "court": "대법원",
+      "caseNumber": "2008도3090",
+      "date": "2008-08-11",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "14",
+        "order": 14,
+        "topicNumber": "14",
+        "topicOrder": 14,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이용식 교수(서울대)",
+        "sourcePage": 34,
+        "sourceTitle": "[14] 주의의무 위반의 판단기준 [이용식 교수(서울대)]　　34",
+        "sourceCitation": "대법원 2008. 8. 11. 선고 2008도3090 판결",
+        "decisionCitation": "대법원 2008. 8. 11. 선고 2008도3090 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "신뢰의 원칙",
+      "court": "대법원",
+      "caseNumber": "2001도3667",
+      "date": "2003-08-19",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "15",
+        "order": 15,
+        "topicNumber": "15",
+        "topicOrder": 15,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "장연화 교수(인하대)",
+        "sourcePage": 36,
+        "sourceTitle": "[15] 신뢰의 원칙 [장연화 교수(인하대)]　　36",
+        "sourceCitation": "대법원 2003. 8. 19. 선고 2001도3667 판결",
+        "decisionCitation": "대법원 2003. 8. 19. 선고 2001도3667 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "결과적 가중범과 예견가능성",
+      "court": "대법원",
+      "caseNumber": "90도1596",
+      "date": "1990-09-25",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "16",
+        "order": 16,
+        "topicNumber": "16",
+        "topicOrder": 16,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "박종순 변호사",
+        "sourcePage": 38,
+        "sourceTitle": "[16] 결과적 가중범과 예견가능성 [박종순 변호사]　　38",
+        "sourceCitation": "대법원 1990. 9. 25. 선고 90도1596 판결",
+        "decisionCitation": "대법원 1990. 9. 25. 선고 90도1596 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "결과적 가중범의 미수",
+      "court": "대법원",
+      "caseNumber": "2007도10058",
+      "date": "2008-04-24",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "17",
+        "order": 17,
+        "topicNumber": "17",
+        "topicOrder": 17,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "박기석 교수(대구대)",
+        "sourcePage": 40,
+        "sourceTitle": "[17] 결과적 가중범의 미수 [박기석 교수(대구대)]　　40",
+        "sourceCitation": "대법원 2008. 4. 24. 선고 2007도10058 판결",
+        "decisionCitation": "대법원 2008. 4. 24. 선고 2007도10058 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "결과적 가중범의 공동정범",
+      "court": "대법원",
+      "caseNumber": "91도2156",
+      "date": "1991-11-12",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "18",
+        "order": 18,
+        "topicNumber": "18",
+        "topicOrder": 18,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "박상기 교수(연세대)",
+        "sourcePage": 42,
+        "sourceTitle": "[18] 결과적 가중범의 공동정범 [박상기 교수(연세대)]　　42",
+        "sourceCitation": "대법원 1991. 11. 12. 선고 91도2156 판결",
+        "decisionCitation": "대법원 1991. 11. 12. 선고 91도2156 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "부진정결과적 가중범의 성립범위와 죄수",
+      "court": "대법원",
+      "caseNumber": "96도485",
+      "date": "1996-04-26",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "19",
+        "order": 19,
+        "topicNumber": "19",
+        "topicOrder": 19,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김성룡 교수(경북대)",
+        "sourcePage": 44,
+        "sourceTitle": "[19] 부진정결과적 가중범의 성립범위와 죄수 [김성룡 교수(경북대)]　　44",
+        "sourceCitation": "대법원 1996. 4. 26. 선고 96도485 판결",
+        "decisionCitation": "대법원 1996. 4. 26. 선고 96도485 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "작위와 부작위의 구별",
+      "court": "대법원",
+      "caseNumber": "2002도995",
+      "date": "2004-06-24",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "20",
+        "order": 20,
+        "topicNumber": "20",
+        "topicOrder": 20,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "박용철 교수(서강대)",
+        "sourcePage": 46,
+        "sourceTitle": "[20] 작위와 부작위의 구별 [박용철 교수(서강대)]　　46",
+        "sourceCitation": "대법원 2004. 6. 24. 선고 2002도995 판결",
+        "decisionCitation": "대법원 2004. 6. 24. 선고 2002도995 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "부진정부작위범의 성립요건",
+      "court": "대법원",
+      "caseNumber": "2015도6809",
+      "date": "2015-11-12",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "21",
+        "order": 21,
+        "topicNumber": "21",
+        "topicOrder": 21,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "장영민 교수(이화여대)",
+        "sourcePage": 48,
+        "sourceTitle": "[21] 부진정부작위범의 성립요건 [장영민 교수(이화여대)]　　48",
+        "sourceCitation": "대법원 2015. 11. 12. 선고 2015도6809 전원합의체 판결",
+        "decisionCitation": "대법원 2015. 11. 12. 선고 2015도6809 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "부진정부작위범에서 사실상 작위가능성",
+      "court": "대법원",
+      "caseNumber": "2009도12109",
+      "date": "2010-01-14",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "22",
+        "order": 22,
+        "topicNumber": "22",
+        "topicOrder": 22,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "손동권 교수(건국대)",
+        "sourcePage": 50,
+        "sourceTitle": "[22] 부진정부작위범에서 사실상 작위가능성 [손동권 교수(건국대)]　　50",
+        "sourceCitation": "대법원 2010. 1. 14. 선고 2009도12109 판결",
+        "decisionCitation": "대법원 2010. 1. 14. 선고 2009도12109 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "정당방위의 성립요건으로서 침해의 현재성",
+      "court": "대법원",
+      "caseNumber": "92도2540",
+      "date": "1992-12-22",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "23",
+        "order": 23,
+        "topicNumber": "23",
+        "topicOrder": 23,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "안성조 교수(제주대)",
+        "sourcePage": 54,
+        "sourceTitle": "[23] 정당방위의 성립요건으로서 침해의 현재성 [안성조 교수(제주대)]　　54",
+        "sourceCitation": "대법원 1992. 12. 22. 선고 92도2540 판결",
+        "decisionCitation": "대법원 1992. 12. 22. 선고 92도2540 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "방위의 의사-싸움과 정당방위",
+      "court": "대법원",
+      "caseNumber": "2000도228",
+      "date": "2000-03-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "24",
+        "order": 24,
+        "topicNumber": "24",
+        "topicOrder": 24,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "최석윤 교수(한국해양대)",
+        "sourcePage": 56,
+        "sourceTitle": "[24] 방위의 의사-싸움과 정당방위 [최석윤 교수(한국해양대)]　　56",
+        "sourceCitation": "대법원 2000. 3. 28. 선고 2000도228 판결",
+        "decisionCitation": "대법원 2000. 3. 28. 선고 2000도228 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "방위행위의 상당성",
+      "court": "대법원",
+      "caseNumber": "2001도1089",
+      "date": "2001-05-15",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "25",
+        "order": 25,
+        "topicNumber": "25",
+        "topicOrder": 25,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김준호 교수(숭실대)",
+        "sourcePage": 58,
+        "sourceTitle": "[25] 방위행위의 상당성 [김준호 교수(숭실대)]　　58",
+        "sourceCitation": "대법원 2001. 5. 15. 선고 2001도1089 판결",
+        "decisionCitation": "대법원 2001. 5. 15. 선고 2001도1089 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "오상방위와 오상과잉방위의 성립범위",
+      "court": "대법원",
+      "caseNumber": "2003도3842",
+      "date": "2004-03-25",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "26",
+        "order": 26,
+        "topicNumber": "26",
+        "topicOrder": 26,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "안성훈 연구위원(한국형사정책연구원)",
+        "sourcePage": 60,
+        "sourceTitle": "[26] 오상방위와 오상과잉방위의 성립범위 [안성훈 연구위원(한국형사정책연구원)]　　60",
+        "sourceCitation": "대법원 2004. 3. 25. 선고 2003도3842 판결",
+        "decisionCitation": "대법원 2004. 3. 25. 선고 2003도3842 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "자초위난",
+      "court": "대법원",
+      "caseNumber": "94도2781",
+      "date": "1995-01-12",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "27",
+        "order": 27,
+        "topicNumber": "27",
+        "topicOrder": 27,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김봉수 교수(전남대)",
+        "sourcePage": 62,
+        "sourceTitle": "[27] 자초위난 [김봉수 교수(전남대)]　　62",
+        "sourceCitation": "대법원 1995. 1. 12. 선고 94도2781 판결",
+        "decisionCitation": "대법원 1995. 1. 12. 선고 94도2781 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "사회상규에 반하는 승낙",
+      "court": "대법원",
+      "caseNumber": "2008도9606",
+      "date": "2008-12-11",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "28",
+        "order": 28,
+        "topicNumber": "28",
+        "topicOrder": 28,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "황태정 교수(경기대)",
+        "sourcePage": 64,
+        "sourceTitle": "[28] 사회상규에 반하는 승낙 [황태정 교수(경기대)]　　64",
+        "sourceCitation": "대법원 2008. 12. 11. 선고 2008도9606 판결",
+        "decisionCitation": "대법원 2008. 12. 11. 선고 2008도9606 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "의사의 설명의무 위반과 피해자의 승낙",
+      "court": "대법원",
+      "caseNumber": "92도2345",
+      "date": "1993-07-27",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "29",
+        "order": 29,
+        "topicNumber": "29",
+        "topicOrder": 29,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이인영 교수(홍익대)",
+        "sourcePage": 66,
+        "sourceTitle": "[29] 의사의 설명의무 위반과 피해자의 승낙 [이인영 교수(홍익대)]　　66",
+        "sourceCitation": "대법원 1993. 7. 27. 선고 92도2345 판결",
+        "decisionCitation": "대법원 1993. 7. 27. 선고 92도2345 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "정당행위와 사회상규",
+      "court": "대법원",
+      "caseNumber": "2000도4415",
+      "date": "2001-02-23",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "30",
+        "order": 30,
+        "topicNumber": "30",
+        "topicOrder": 30,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "최병각 교수(동아대)",
+        "sourcePage": 68,
+        "sourceTitle": "[30] 정당행위와 사회상규 [최병각 교수(동아대)]　　68",
+        "sourceCitation": "대법원 2001. 2. 23. 선고 2000도4415 판결",
+        "decisionCitation": "대법원 2001. 2. 23. 선고 2000도4415 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "원인에 있어서 자유로운 행위-과실범",
+      "court": "대법원",
+      "caseNumber": "92도999",
+      "date": "1992-07-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "31",
+        "order": 31,
+        "topicNumber": "31",
+        "topicOrder": 31,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김성돈 교수(성균관대)",
+        "sourcePage": 72,
+        "sourceTitle": "[31] 원인에 있어서 자유로운 행위-과실범 [김성돈 교수(성균관대)]　　72",
+        "sourceCitation": "대법원 1992. 7. 28. 선고 92도999 판결",
+        "decisionCitation": "대법원 1992. 7. 28. 선고 92도999 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "원인에 있어서 자유로운 행위-고의범",
+      "court": "대법원",
+      "caseNumber": "96도857",
+      "date": "1996-06-11",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "32",
+        "order": 32,
+        "topicNumber": "32",
+        "topicOrder": 32,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김성돈 교수(성균관대)",
+        "sourcePage": 74,
+        "sourceTitle": "[32] 원인에 있어서 자유로운 행위-고의범 [김성돈 교수(성균관대)]　　74",
+        "sourceCitation": "대법원 1996. 6. 11. 선고 96도857 판결",
+        "decisionCitation": "대법원 1996. 6. 11. 선고 96도857 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "책임능력과 심신장애의 판단기준",
+      "court": "대법원",
+      "caseNumber": "2006도7900",
+      "date": "2007-02-08",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "33",
+        "order": 33,
+        "topicNumber": "33",
+        "topicOrder": 33,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김진환 변호사",
+        "sourcePage": 76,
+        "sourceTitle": "[33] 책임능력과 심신장애의 판단기준 [김진환 변호사]　　76",
+        "sourceCitation": "대법원 2007. 2. 8. 선고 2006도7900 판결",
+        "decisionCitation": "대법원 2007. 2. 8. 선고 2006도7900 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "충동조절장애와 책임무능력",
+      "court": "대법원",
+      "caseNumber": "2002도1541",
+      "date": "2002-05-24",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "34",
+        "order": 34,
+        "topicNumber": "34",
+        "topicOrder": 34,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "박미숙 선임연구위원(한국형사정책연구원)",
+        "sourcePage": 78,
+        "sourceTitle": "[34] 충동조절장애와 책임무능력 [박미숙 선임연구위원(한국형사정책연구원)]　　78",
+        "sourceCitation": "대법원 2002. 5. 24. 선고 2002도1541 판결",
+        "decisionCitation": "대법원 2002. 5. 24. 선고 2002도1541 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "법률의 착오에서의 정당한 이유",
+      "court": "대법원",
+      "caseNumber": "2005도3717",
+      "date": "2006-03-24",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "35",
+        "order": 35,
+        "topicNumber": "35",
+        "topicOrder": 35,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "천진호 교수(동아대)",
+        "sourcePage": 80,
+        "sourceTitle": "[35] 법률의 착오에서의 정당한 이유 [천진호 교수(동아대)]　　80",
+        "sourceCitation": "대법원 2006. 3. 24. 선고 2005도3717 판결",
+        "decisionCitation": "대법원 2006. 3. 24. 선고 2005도3717 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "법률의 부지",
+      "court": "대법원",
+      "caseNumber": "85도25",
+      "date": "1985-04-09",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "36",
+        "order": 36,
+        "topicNumber": "36",
+        "topicOrder": 36,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "허일태 교수(동아대)",
+        "sourcePage": 82,
+        "sourceTitle": "[36] 법률의 부지 [허일태 교수(동아대)]　　82",
+        "sourceCitation": "대법원 1985. 4. 9. 선고 85도25 판결",
+        "decisionCitation": "대법원 1985. 4. 9. 선고 85도25 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "위법성조각사유의 전제사실의 착오",
+      "court": "대법원",
+      "caseNumber": "86도1406",
+      "date": "1986-10-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "37",
+        "order": 37,
+        "topicNumber": "37",
+        "topicOrder": 37,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김혜정 교수(영남대)",
+        "sourcePage": 84,
+        "sourceTitle": "[37] 위법성조각사유의 전제사실의 착오 [김혜정 교수(영남대)]　　84",
+        "sourceCitation": "대법원 1986. 10. 28. 선고 86도1406 판결",
+        "decisionCitation": "대법원 1986. 10. 28. 선고 86도1406 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "기대가능성",
+      "court": "대법원",
+      "caseNumber": "2004도2965",
+      "date": "2004-07-15",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "38",
+        "order": 38,
+        "topicNumber": "38",
+        "topicOrder": 38,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "임정호 연구위원(한국형사정책연구원)",
+        "sourcePage": 86,
+        "sourceTitle": "[38] 기대가능성 [임정호 연구위원(한국형사정책연구원)]　　86",
+        "sourceCitation": "대법원 2004. 7. 15. 선고 2004도2965 전원합의체 판결",
+        "decisionCitation": "대법원 2004. 7. 15. 선고 2004도2965 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "실행의 착수시기",
+      "court": "대법원",
+      "caseNumber": "2000도1253",
+      "date": "2000-06-09",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-4"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "39",
+        "order": 39,
+        "topicNumber": "39",
+        "topicOrder": 39,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "한정환 교수(선문대)",
+        "sourcePage": 90,
+        "sourceTitle": "[39] 실행의 착수시기 [한정환 교수(선문대)]　　90",
+        "sourceCitation": "대법원 2000. 6. 9. 선고 2000도1253 판결",
+        "decisionCitation": "대법원 2000. 6. 9. 선고 2000도1253 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "중지미수의 성립요건-중지의 자의성",
+      "court": "대법원",
+      "caseNumber": "97도957",
+      "date": "1997-06-13",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-4"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "40",
+        "order": 40,
+        "topicNumber": "40",
+        "topicOrder": 40,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "하태훈 교수(고려대)",
+        "sourcePage": 92,
+        "sourceTitle": "[40] 중지미수의 성립요건-중지의 자의성 [하태훈 교수(고려대)]　　92",
+        "sourceCitation": "대법원 1997. 6. 13. 선고 97도957 판결",
+        "decisionCitation": "대법원 1997. 6. 13. 선고 97도957 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "예비의 중지",
+      "court": "대법원",
+      "caseNumber": "91도436",
+      "date": "1991-06-25",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-4"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "41",
+        "order": 41,
+        "topicNumber": "41",
+        "topicOrder": 41,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김재윤 교수(건국대)",
+        "sourcePage": 94,
+        "sourceTitle": "[41] 예비의 중지 [김재윤 교수(건국대)]　　94",
+        "sourceCitation": "대법원 1991. 6. 25. 선고 91도436 판결",
+        "decisionCitation": "대법원 1991. 6. 25. 선고 91도436 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "공동정범과 중지미수",
+      "court": "대법원",
+      "caseNumber": "85도2831",
+      "date": "1986-03-11",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-4"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "42",
+        "order": 42,
+        "topicNumber": "42",
+        "topicOrder": 42,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이상현 교수(숭실대)",
+        "sourcePage": 96,
+        "sourceTitle": "[42] 공동정범과 중지미수 [이상현 교수(숭실대)]　　96",
+        "sourceCitation": "대법원 1986. 3. 11. 선고 85도2831 판결",
+        "decisionCitation": "대법원 1986. 3. 11. 선고 85도2831 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "불능미수(장애미수와의 구별)",
+      "court": "대법원",
+      "caseNumber": "77도4049",
+      "date": "1978-03-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-4"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "43-1",
+        "order": 43,
+        "topicNumber": "43",
+        "topicOrder": 43,
+        "decisionOrder": 1,
+        "decisionCount": 2,
+        "author": "허일태 교수(동아대)",
+        "sourcePage": 98,
+        "sourceTitle": "[43] 불능미수(장애미수와의 구별) [허일태 교수(동아대)]　　98",
+        "sourceCitation": "대법원 1978. 3. 28. 선고 77도4049 판결, 대법원 2019. 3. 28. 선고 2018도16002 전원합의체 판결",
+        "decisionCitation": "대법원 1978. 3. 28. 선고 77도4049 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "불능미수(장애미수와의 구별)",
+      "court": "대법원",
+      "caseNumber": "2018도16002",
+      "date": "2019-03-28",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-4"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "43-2",
+        "order": 44,
+        "topicNumber": "43",
+        "topicOrder": 43,
+        "decisionOrder": 2,
+        "decisionCount": 2,
+        "author": "허일태 교수(동아대)",
+        "sourcePage": 98,
+        "sourceTitle": "[43] 불능미수(장애미수와의 구별) [허일태 교수(동아대)]　　98",
+        "sourceCitation": "대법원 1978. 3. 28. 선고 77도4049 판결, 대법원 2019. 3. 28. 선고 2018도16002 전원합의체 판결",
+        "decisionCitation": "대법원 2019. 3. 28. 선고 2018도16002 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "예비죄의 방조범",
+      "court": "대법원",
+      "caseNumber": "75도1549",
+      "date": "1976-05-25",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-4"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "44",
+        "order": 45,
+        "topicNumber": "44",
+        "topicOrder": 44,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "박형관 교수(가천대)",
+        "sourcePage": 100,
+        "sourceTitle": "[44] 예비죄의 방조범 [박형관 교수(가천대)]　　100",
+        "sourceCitation": "대법원 1976. 5. 25. 선고 75도1549 판결",
+        "decisionCitation": "대법원 1976. 5. 25. 선고 75도1549 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "편면적 대향범에 대한 공범규정 적용",
+      "court": "대법원",
+      "caseNumber": "2001도5158",
+      "date": "2001-12-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "45",
+        "order": 46,
+        "topicNumber": "45",
+        "topicOrder": 45,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "조국 교수(서울대)",
+        "sourcePage": 104,
+        "sourceTitle": "[45] 편면적 대향범에 대한 공범규정 적용 [조국 교수(서울대)]　　104",
+        "sourceCitation": "대법원 2001. 12. 28. 선고 2001도5158 판결",
+        "decisionCitation": "대법원 2001. 12. 28. 선고 2001도5158 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "부작위범에서 정범과 공범의 구별",
+      "court": "대법원",
+      "caseNumber": "96도1639",
+      "date": "1997-03-14",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "46",
+        "order": 47,
+        "topicNumber": "46",
+        "topicOrder": 46,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "전지연 교수(연세대)",
+        "sourcePage": 106,
+        "sourceTitle": "[46] 부작위범에서 정범과 공범의 구별 [전지연 교수(연세대)]　　106",
+        "sourceCitation": "대법원 1997. 3. 14. 선고 96도1639 판결",
+        "decisionCitation": "대법원 1997. 3. 14. 선고 96도1639 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "간접정범",
+      "court": "대법원",
+      "caseNumber": "96도3376",
+      "date": "1997-04-17",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "47",
+        "order": 48,
+        "topicNumber": "47",
+        "topicOrder": 47,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김종구 교수(조선대)",
+        "sourcePage": 108,
+        "sourceTitle": "[47] 간접정범 [김종구 교수(조선대)]　　108",
+        "sourceCitation": "대법원 1997. 4. 17. 선고 96도3376 전원합의체 판결",
+        "decisionCitation": "대법원 1997. 4. 17. 선고 96도3376 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "공동정범의 성립요건-기능적 범행지배",
+      "court": "대법원",
+      "caseNumber": "2002도7477",
+      "date": "2003-03-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "48",
+        "order": 49,
+        "topicNumber": "48",
+        "topicOrder": 48,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "최호진 교수(단국대)",
+        "sourcePage": 110,
+        "sourceTitle": "[48] 공동정범의 성립요건-기능적 범행지배 [최호진 교수(단국대)]　　110",
+        "sourceCitation": "대법원 2003. 3. 28. 선고 2002도7477 판결",
+        "decisionCitation": "대법원 2003. 3. 28. 선고 2002도7477 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "공모공동정범",
+      "court": "대법원",
+      "caseNumber": "2007도235",
+      "date": "2007-04-26",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "49",
+        "order": 50,
+        "topicNumber": "49",
+        "topicOrder": 49,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "문성도 교수(경찰대)",
+        "sourcePage": 112,
+        "sourceTitle": "[49] 공모공동정범 [문성도 교수(경찰대)]　　112",
+        "sourceCitation": "대법원 2007. 4. 26. 선고 2007도235 판결",
+        "decisionCitation": "대법원 2007. 4. 26. 선고 2007도235 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "과실범의 공동정범",
+      "court": "대법원",
+      "caseNumber": "97도1740",
+      "date": "1997-11-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "50",
+        "order": 51,
+        "topicNumber": "50",
+        "topicOrder": 50,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이진국 교수(아주대)",
+        "sourcePage": 114,
+        "sourceTitle": "[50] 과실범의 공동정범 [이진국 교수(아주대)]　　114",
+        "sourceCitation": "대법원 1997. 11. 28. 선고 97도1740 판결",
+        "decisionCitation": "대법원 1997. 11. 28. 선고 97도1740 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "승계적 공동정범",
+      "court": "대법원",
+      "caseNumber": "97도163",
+      "date": "1997-06-27",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "51",
+        "order": 52,
+        "topicNumber": "51",
+        "topicOrder": 51,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김성천 교수(중앙대)",
+        "sourcePage": 116,
+        "sourceTitle": "[51] 승계적 공동정범 [김성천 교수(중앙대)]　　116",
+        "sourceCitation": "대법원 1997. 6. 27. 선고 97도163 판결",
+        "decisionCitation": "대법원 1997. 6. 27. 선고 97도163 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "합동범의 공동정범",
+      "court": "대법원",
+      "caseNumber": "98도321",
+      "date": "1998-05-21",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "52",
+        "order": 53,
+        "topicNumber": "52",
+        "topicOrder": 52,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이호중 교수(서강대)",
+        "sourcePage": 118,
+        "sourceTitle": "[52] 합동범의 공동정범 [이호중 교수(서강대)]　　118",
+        "sourceCitation": "대법원 1998. 5. 21. 선고 98도321 전원합의체 판결",
+        "decisionCitation": "대법원 1998. 5. 21. 선고 98도321 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "부작위범 사이의 공동정범",
+      "court": "대법원",
+      "caseNumber": "2008도89",
+      "date": "2008-03-27",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "53",
+        "order": 54,
+        "topicNumber": "53",
+        "topicOrder": 53,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "류부곤 교수(경찰대)",
+        "sourcePage": 120,
+        "sourceTitle": "[53] 부작위범 사이의 공동정범 [류부곤 교수(경찰대)]　　120",
+        "sourceCitation": "대법원 2008. 3. 27. 선고 2008도89 판결",
+        "decisionCitation": "대법원 2008. 3. 27. 선고 2008도89 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "교사범",
+      "court": "대법원",
+      "caseNumber": "91도542",
+      "date": "1991-05-14",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "54",
+        "order": 55,
+        "topicNumber": "54",
+        "topicOrder": 54,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김형준 교수(중앙대)",
+        "sourcePage": 122,
+        "sourceTitle": "[54] 교사범 [김형준 교수(중앙대)]　　122",
+        "sourceCitation": "대법원 1991. 5. 14. 선고 91도542 판결",
+        "decisionCitation": "대법원 1991. 5. 14. 선고 91도542 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "공범과 착오-피교사자의 초과실행",
+      "court": "대법원",
+      "caseNumber": "93도1873",
+      "date": "1993-10-08",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "55",
+        "order": 56,
+        "topicNumber": "55",
+        "topicOrder": 55,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김성규 교수(한국외대)",
+        "sourcePage": 124,
+        "sourceTitle": "[55] 공범과 착오-피교사자의 초과실행 [김성규 교수(한국외대)]　　124",
+        "sourceCitation": "대법원 1993. 10. 8. 선고 93도1873 판결",
+        "decisionCitation": "대법원 1993. 10. 8. 선고 93도1873 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "방조범의 성립범위",
+      "court": "대법원",
+      "caseNumber": "2005도872",
+      "date": "2007-12-14",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "56",
+        "order": 57,
+        "topicNumber": "56",
+        "topicOrder": 56,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김혜경 교수(계명대)",
+        "sourcePage": 126,
+        "sourceTitle": "[56] 방조범의 성립범위 [김혜경 교수(계명대)]　　126",
+        "sourceCitation": "대법원 2007. 12. 14. 선고 2005도872 판결",
+        "decisionCitation": "대법원 2007. 12. 14. 선고 2005도872 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "부작위에 의한 방조",
+      "court": "대법원",
+      "caseNumber": "2003도4128",
+      "date": "2006-04-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "57",
+        "order": 58,
+        "topicNumber": "57",
+        "topicOrder": 57,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이승준 교수(충북대)",
+        "sourcePage": 128,
+        "sourceTitle": "[57] 부작위에 의한 방조 [이승준 교수(충북대)]　　128",
+        "sourceCitation": "대법원 2006. 4. 28. 선고 2003도4128 판결",
+        "decisionCitation": "대법원 2006. 4. 28. 선고 2003도4128 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "중립적 행위에 의한 방조",
+      "court": "대법원",
+      "caseNumber": "2005도4915",
+      "date": "2005-10-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "58",
+        "order": 59,
+        "topicNumber": "58",
+        "topicOrder": 58,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "신양균 교수(전북대)",
+        "sourcePage": 130,
+        "sourceTitle": "[58] 중립적 행위에 의한 방조 [신양균 교수(전북대)]　　130",
+        "sourceCitation": "대법원 2005. 10. 28. 선고 2005도4915 판결",
+        "decisionCitation": "대법원 2005. 10. 28. 선고 2005도4915 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "공모관계의 이탈 (1)-실행의 착수 전",
+      "court": "대법원",
+      "caseNumber": "94도2654",
+      "date": "1996-01-26",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "59",
+        "order": 60,
+        "topicNumber": "59",
+        "topicOrder": 59,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "류전철 교수(전남대)",
+        "sourcePage": 132,
+        "sourceTitle": "[59] 공모관계의 이탈 (1)-실행의 착수 전 [류전철 교수(전남대)]　　132",
+        "sourceCitation": "대법원 1996. 1. 26. 선고 94도2654 판결",
+        "decisionCitation": "대법원 1996. 1. 26. 선고 94도2654 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "공모관계의 이탈 (2)-기능적 행위지배의 해소",
+      "court": "대법원",
+      "caseNumber": "2008도1274",
+      "date": "2008-04-10",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "60",
+        "order": 61,
+        "topicNumber": "60",
+        "topicOrder": 60,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "서보학 교수(경희대)",
+        "sourcePage": 134,
+        "sourceTitle": "[60] 공모관계의 이탈 (2)-기능적 행위지배의 해소 [서보학 교수(경희대)]　　134",
+        "sourceCitation": "대법원 2008. 4. 10. 선고 2008도1274 판결",
+        "decisionCitation": "대법원 2008. 4. 10. 선고 2008도1274 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "공범과 신분 (1)-형법 제33조 본문과 단서의 해석",
+      "court": "대법원",
+      "caseNumber": "97도2609",
+      "date": "1997-12-26",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "61",
+        "order": 62,
+        "topicNumber": "61",
+        "topicOrder": 61,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이근우 교수(가천대)",
+        "sourcePage": 136,
+        "sourceTitle": "[61] 공범과 신분 (1)-형법 제33조 본문과 단서의 해석 [이근우 교수(가천대)]　　136",
+        "sourceCitation": "대법원 1997. 12. 26. 선고 97도2609 판결",
+        "decisionCitation": "대법원 1997. 12. 26. 선고 97도2609 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "공범과 신분 (2)-목적과 신분",
+      "court": "대법원",
+      "caseNumber": "93도1002",
+      "date": "1994-12-23",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "62",
+        "order": 63,
+        "topicNumber": "62",
+        "topicOrder": 62,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "강동범 교수(이화여대)",
+        "sourcePage": 138,
+        "sourceTitle": "[62] 공범과 신분 (2)-목적과 신분 [강동범 교수(이화여대)]　　138",
+        "sourceCitation": "대법원 1994. 12. 23. 선고 93도1002 판결",
+        "decisionCitation": "대법원 1994. 12. 23. 선고 93도1002 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "연속범의 개념과 죄수",
+      "court": "대법원",
+      "caseNumber": "2011도12131",
+      "date": "2012-05-10",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-6"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "63",
+        "order": 64,
+        "topicNumber": "63",
+        "topicOrder": 63,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "박흥식 교수(충남대)",
+        "sourcePage": 142,
+        "sourceTitle": "[63] 연속범의 개념과 죄수 [박흥식 교수(충남대)]　　142",
+        "sourceCitation": "대법원 2012. 5. 10. 선고 2011도12131 판결",
+        "decisionCitation": "대법원 2012. 5. 10. 선고 2011도12131 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "포괄일죄와 실체적 경합의 구분",
+      "court": "대법원",
+      "caseNumber": "2007도595",
+      "date": "2007-03-29",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-6"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "64",
+        "order": 65,
+        "topicNumber": "64",
+        "topicOrder": 64,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "우인성 판사(서울서부지법)",
+        "sourcePage": 144,
+        "sourceTitle": "[64] 포괄일죄와 실체적 경합의 구분 [우인성 판사(서울서부지법)]　　144",
+        "sourceCitation": "대법원 2007. 3. 29. 선고 2007도595 판결",
+        "decisionCitation": "대법원 2007. 3. 29. 선고 2007도595 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "상상적 경합과 실체적 경합의 구분",
+      "court": "대법원",
+      "caseNumber": "2009도10845",
+      "date": "2010-01-14",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-6"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "65",
+        "order": 66,
+        "topicNumber": "65",
+        "topicOrder": 65,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이인석 변호사",
+        "sourcePage": 146,
+        "sourceTitle": "[65] 상상적 경합과 실체적 경합의 구분 [이인석 변호사]　　146",
+        "sourceCitation": "대법원 2010. 1. 14. 선고 2009도10845 판결",
+        "decisionCitation": "대법원 2010. 1. 14. 선고 2009도10845 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "연결효과에 의한 상상적 경합",
+      "court": "대법원",
+      "caseNumber": "2000도1216",
+      "date": "2001-02-09",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-6"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "66",
+        "order": 67,
+        "topicNumber": "66",
+        "topicOrder": 66,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이승호 교수(건국대)",
+        "sourcePage": 148,
+        "sourceTitle": "[66] 연결효과에 의한 상상적 경합 [이승호 교수(건국대)]　　148",
+        "sourceCitation": "대법원 2001. 2. 9. 선고 2000도1216 판결",
+        "decisionCitation": "대법원 2001. 2. 9. 선고 2000도1216 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "형법 제37조 경합범의 범위",
+      "court": "대법원",
+      "caseNumber": "2014도469",
+      "date": "2014-03-27",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-2",
+        "rk-p1-2-6"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "67",
+        "order": 68,
+        "topicNumber": "67",
+        "topicOrder": 67,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이완규 변호사",
+        "sourcePage": 150,
+        "sourceTitle": "[67] 형법 제37조 경합범의 범위 [이완규 변호사]　　150",
+        "sourceCitation": "대법원 2014. 3. 27. 선고 2014도469 판결",
+        "decisionCitation": "대법원 2014. 3. 27. 선고 2014도469 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "징벌적 추징",
+      "court": "대법원",
+      "caseNumber": "95도2002",
+      "date": "1998-05-21",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "68",
+        "order": 69,
+        "topicNumber": "68",
+        "topicOrder": 68,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김대휘 변호사(세종대 석좌교수)",
+        "sourcePage": 154,
+        "sourceTitle": "[68] 징벌적 추징 [김대휘 변호사(세종대 석좌교수)]　　154",
+        "sourceCitation": "대법원 1998. 5. 21. 선고 95도2002 전원합의체 판결",
+        "decisionCitation": "대법원 1998. 5. 21. 선고 95도2002 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "몰수와 비례원칙",
+      "court": "대법원",
+      "caseNumber": "2012도11586",
+      "date": "2013-05-23",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "69",
+        "order": 70,
+        "topicNumber": "69",
+        "topicOrder": 69,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이상원 교수(서울대)",
+        "sourcePage": 156,
+        "sourceTitle": "[69] 몰수와 비례원칙 [이상원 교수(서울대)]　　156",
+        "sourceCitation": "대법원 2013. 5. 23. 선고 2012도11586 판결",
+        "decisionCitation": "대법원 2013. 5. 23. 선고 2012도11586 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "형의 선고유예와 몰수형",
+      "court": "대법원",
+      "caseNumber": "73도1133",
+      "date": "1973-12-11",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "70",
+        "order": 71,
+        "topicNumber": "70",
+        "topicOrder": 70,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "한영수 교수(아주대)",
+        "sourcePage": 158,
+        "sourceTitle": "[70] 형의 선고유예와 몰수형 [한영수 교수(아주대)]　　158",
+        "sourceCitation": "대법원 1973. 12. 11. 선고 73도1133 전원합의체 판결",
+        "decisionCitation": "대법원 1973. 12. 11. 선고 73도1133 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "집행유예기간 중의 범죄에 대하여 재차 집행유예를 선고할 수 있는가",
+      "court": "대법원",
+      "caseNumber": "2006도6196",
+      "date": "2007-02-08",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p1",
+        "rk-p1-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "71",
+        "order": 72,
+        "topicNumber": "71",
+        "topicOrder": 71,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "심희기 교수(연세대)",
+        "sourcePage": 160,
+        "sourceTitle": "[71] 집행유예기간 중의 범죄에 대하여 재차 집행유예를 선고할 수 있는가 [심희기 교수(연세대)]　　160",
+        "sourceCitation": "대법원 2007. 2. 8. 선고 2006도6196 판결",
+        "decisionCitation": "대법원 2007. 2. 8. 선고 2006도6196 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "사람의 시기",
+      "court": "대법원",
+      "caseNumber": "2005도3832",
+      "date": "2007-06-29",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "72",
+        "order": 73,
+        "topicNumber": "72",
+        "topicOrder": 72,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "조균석 교수(이화여대)",
+        "sourcePage": 168,
+        "sourceTitle": "[72] 사람의 시기 [조균석 교수(이화여대)]　　168",
+        "sourceCitation": "대법원 2007. 6. 29. 선고 2005도3832 판결",
+        "decisionCitation": "대법원 2007. 6. 29. 선고 2005도3832 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "무의미한 연명치료 중단과 살인죄",
+      "court": "대법원",
+      "caseNumber": "2009다17417",
+      "date": "2009-05-21",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "73",
+        "order": 74,
+        "topicNumber": "73",
+        "topicOrder": 73,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김영철 교수(건국대)",
+        "sourcePage": 170,
+        "sourceTitle": "[73] 무의미한 연명치료 중단과 살인죄 [김영철 교수(건국대)]　　170",
+        "sourceCitation": "대법원 2009. 5. 21. 선고 2009다17417 전원합의체 판결",
+        "decisionCitation": "대법원 2009. 5. 21. 선고 2009다17417 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "상해의 의의",
+      "court": "대법원",
+      "caseNumber": "96도2673",
+      "date": "1996-12-23",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "74",
+        "order": 75,
+        "topicNumber": "74",
+        "topicOrder": 74,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "윤상민 교수(원광대)",
+        "sourcePage": 172,
+        "sourceTitle": "[74] 상해의 의의 [윤상민 교수(원광대)]　　172",
+        "sourceCitation": "대법원 1996. 12. 23. 선고 96도2673 판결",
+        "decisionCitation": "대법원 1996. 12. 23. 선고 96도2673 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "상해죄의 동시범 특례",
+      "court": "대법원",
+      "caseNumber": "2000도2466",
+      "date": "2000-07-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "75",
+        "order": 76,
+        "topicNumber": "75",
+        "topicOrder": 75,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이창현 교수(한국외대)",
+        "sourcePage": 174,
+        "sourceTitle": "[75] 상해죄의 동시범 특례 [이창현 교수(한국외대)]　　174",
+        "sourceCitation": "대법원 2000. 7. 28. 선고 2000도2466 판결",
+        "decisionCitation": "대법원 2000. 7. 28. 선고 2000도2466 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "위험한 물건의 휴대의 개념",
+      "court": "대법원",
+      "caseNumber": "97도597",
+      "date": "1997-05-30",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "76",
+        "order": 77,
+        "topicNumber": "76",
+        "topicOrder": 76,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "강용현 변호사",
+        "sourcePage": 176,
+        "sourceTitle": "[76] 위험한 물건의 휴대의 개념 [강용현 변호사]　　176",
+        "sourceCitation": "대법원 1997. 5. 30. 선고 97도597 판결",
+        "decisionCitation": "대법원 1997. 5. 30. 선고 97도597 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "폭행죄에서의 폭행의 의의",
+      "court": "대법원",
+      "caseNumber": "2000도5716",
+      "date": "2003-01-10",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "77",
+        "order": 78,
+        "topicNumber": "77",
+        "topicOrder": 77,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "양동철 교수(경희대)",
+        "sourcePage": 178,
+        "sourceTitle": "[77] 폭행죄에서의 폭행의 의의 [양동철 교수(경희대)]　　178",
+        "sourceCitation": "대법원 2003. 1. 10. 선고 2000도5716 판결",
+        "decisionCitation": "대법원 2003. 1. 10. 선고 2000도5716 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "유기죄에서 보호의무의 발생근거",
+      "court": "대법원",
+      "caseNumber": "2011도12302",
+      "date": "2011-11-24",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-1"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "78",
+        "order": 79,
+        "topicNumber": "78",
+        "topicOrder": 78,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "오병두 교수(홍익대)",
+        "sourcePage": 180,
+        "sourceTitle": "[78] 유기죄에서 보호의무의 발생근거 [오병두 교수(홍익대)]　　180",
+        "sourceCitation": "대법원 2011. 11. 24. 선고 2011도12302 판결",
+        "decisionCitation": "대법원 2011. 11. 24. 선고 2011도12302 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "협박의 개념과 협박죄의 기수시기",
+      "court": "대법원",
+      "caseNumber": "2007도606",
+      "date": "2007-09-28",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "79",
+        "order": 80,
+        "topicNumber": "79",
+        "topicOrder": 79,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이진국 교수(아주대)",
+        "sourcePage": 184,
+        "sourceTitle": "[79] 협박의 개념과 협박죄의 기수시기 [이진국 교수(아주대)]　　184",
+        "sourceCitation": "대법원 2007. 9. 28. 선고 2007도606 전원합의체 판결",
+        "decisionCitation": "대법원 2007. 9. 28. 선고 2007도606 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "권리의 행사와 협박죄",
+      "court": "대법원",
+      "caseNumber": "2001도6468",
+      "date": "2002-02-08",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "80",
+        "order": 81,
+        "topicNumber": "80",
+        "topicOrder": 80,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "강우예 교수(한국해양대)",
+        "sourcePage": 186,
+        "sourceTitle": "[80] 권리의 행사와 협박죄 [강우예 교수(한국해양대)]　　186",
+        "sourceCitation": "대법원 2002. 2. 8. 선고 2001도6468 판결",
+        "decisionCitation": "대법원 2002. 2. 8. 선고 2001도6468 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "보호감독자에 의한 미성년자약취죄와 국외이송약취죄",
+      "court": "대법원",
+      "caseNumber": "2010도14328",
+      "date": "2013-06-20",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "81",
+        "order": 82,
+        "topicNumber": "81",
+        "topicOrder": 81,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "윤지영 연구위원(한국형사정책연구원)",
+        "sourcePage": 188,
+        "sourceTitle": "[81] 보호감독자에 의한 미성년자약취죄와 국외이송약취죄 [윤지영 연구위원(한국형사정책연구원)]　　188",
+        "sourceCitation": "대법원 2013. 6. 20. 선고 2010도14328 전원합의체 판결",
+        "decisionCitation": "대법원 2013. 6. 20. 선고 2010도14328 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "강제추행죄에서 폭행ㆍ협박의 정도",
+      "court": "대법원",
+      "caseNumber": "2001도2417",
+      "date": "2002-04-26",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "82",
+        "order": 83,
+        "topicNumber": "82",
+        "topicOrder": 82,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "오경식 교수(국립강릉원주대)",
+        "sourcePage": 190,
+        "sourceTitle": "[82] 강제추행죄에서 폭행ㆍ협박의 정도 [오경식 교수(국립강릉원주대)]　　190",
+        "sourceCitation": "대법원 2002. 4. 26. 선고 2001도2417 판결",
+        "decisionCitation": "대법원 2002. 4. 26. 선고 2001도2417 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "기습추행과 미수",
+      "court": "대법원",
+      "caseNumber": "2015도6980",
+      "date": "2015-09-10",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "83",
+        "order": 84,
+        "topicNumber": "83",
+        "topicOrder": 83,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "전윤경 교수(한양대)",
+        "sourcePage": 192,
+        "sourceTitle": "[83] 기습추행과 미수 [전윤경 교수(한양대)]　　192",
+        "sourceCitation": "대법원 2015. 9. 10. 선고 2015도6980 판결",
+        "decisionCitation": "대법원 2015. 9. 10. 선고 2015도6980 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "강제추행죄의 주관적 요소",
+      "court": "대법원",
+      "caseNumber": "2013도5856",
+      "date": "2013-09-26",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "84",
+        "order": 85,
+        "topicNumber": "84",
+        "topicOrder": 84,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김영기 변호사",
+        "sourcePage": 194,
+        "sourceTitle": "[84] 강제추행죄의 주관적 요소 [김영기 변호사]　　194",
+        "sourceCitation": "대법원 2013. 9. 26. 선고 2013도5856 판결",
+        "decisionCitation": "대법원 2013. 9. 26. 선고 2013도5856 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "아동ㆍ청소년 위계간음죄",
+      "court": "대법원",
+      "caseNumber": "2015도9436",
+      "date": "2020-08-27",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "84-1",
+        "order": 86,
+        "topicNumber": "84-1",
+        "topicOrder": 85,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "허황 부연구위원(한국형사정책연구원)",
+        "sourcePage": 196,
+        "sourceTitle": "[84-1] 아동ㆍ청소년 위계간음죄 [허황 부연구위원(한국형사정책연구원)]　　196",
+        "sourceCitation": "대법원 2020. 8. 27. 선고 2015도9436 전원합의체 판결",
+        "decisionCitation": "대법원 2020. 8. 27. 선고 2015도9436 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "명예훼손죄에서의 공연성",
+      "court": "대법원",
+      "caseNumber": "99도5622",
+      "date": "2000-05-16",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "85",
+        "order": 87,
+        "topicNumber": "85",
+        "topicOrder": 86,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김우진 판사(울산지법)",
+        "sourcePage": 200,
+        "sourceTitle": "[85] 명예훼손죄에서의 공연성 [김우진 판사(울산지법)]　　200",
+        "sourceCitation": "대법원 2000. 5. 16. 선고 99도5622 판결",
+        "decisionCitation": "대법원 2000. 5. 16. 선고 99도5622 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "형법 제310조의 적용범위",
+      "court": "대법원",
+      "caseNumber": "97도158",
+      "date": "1998-10-09",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "86",
+        "order": 88,
+        "topicNumber": "86",
+        "topicOrder": 87,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "권오걸 교수(경북대)",
+        "sourcePage": 202,
+        "sourceTitle": "[86] 형법 제310조의 적용범위 [권오걸 교수(경북대)]　　202",
+        "sourceCitation": "대법원 1998. 10. 9. 선고 97도158 판결",
+        "decisionCitation": "대법원 1998. 10. 9. 선고 97도158 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "명예훼손죄에서의 사실의 진실성에 관한 착오",
+      "court": "대법원",
+      "caseNumber": "94도2186",
+      "date": "1994-10-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "87",
+        "order": 89,
+        "topicNumber": "87",
+        "topicOrder": 88,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "주승희 교수(덕성여대)",
+        "sourcePage": 204,
+        "sourceTitle": "[87] 명예훼손죄에서의 사실의 진실성에 관한 착오 [주승희 교수(덕성여대)]　　204",
+        "sourceCitation": "대법원 1994. 10. 28. 선고 94도2186 판결",
+        "decisionCitation": "대법원 1994. 10. 28. 선고 94도2186 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "업무방해죄의 ‘업무’와 ‘공무’",
+      "court": "대법원",
+      "caseNumber": "2009도4166",
+      "date": "2009-11-19",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "88",
+        "order": 90,
+        "topicNumber": "88",
+        "topicOrder": 89,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "변종필 교수(동국대)",
+        "sourcePage": 206,
+        "sourceTitle": "[88] 업무방해죄의 ‘업무’와 ‘공무’ [변종필 교수(동국대)]　　206",
+        "sourceCitation": "대법원 2009. 11. 19. 선고 2009도4166 전원합의체 판결",
+        "decisionCitation": "대법원 2009. 11. 19. 선고 2009도4166 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "파업과 업무방해죄",
+      "court": "대법원",
+      "caseNumber": "2007도482",
+      "date": "2011-03-17",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "89",
+        "order": 91,
+        "topicNumber": "89",
+        "topicOrder": 90,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "박상기 교수(연세대)",
+        "sourcePage": 208,
+        "sourceTitle": "[89] 파업과 업무방해죄 [박상기 교수(연세대)]　　208",
+        "sourceCitation": "대법원 2011. 3. 17. 선고 2007도482 전원합의체 판결",
+        "decisionCitation": "대법원 2011. 3. 17. 선고 2007도482 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "주거침입죄의 보호법익",
+      "court": "대법원",
+      "caseNumber": "83도685",
+      "date": "1984-06-26",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-4"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "90",
+        "order": 92,
+        "topicNumber": "90",
+        "topicOrder": 91,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "오영근 교수(한양대)",
+        "sourcePage": 212,
+        "sourceTitle": "[90] 주거침입죄의 보호법익 [오영근 교수(한양대)]　　212",
+        "sourceCitation": "대법원 1984. 6. 26. 선고 83도685 판결",
+        "decisionCitation": "대법원 1984. 6. 26. 선고 83도685 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "주거침입죄의 객체-위요지",
+      "court": "대법원",
+      "caseNumber": "2009도14643",
+      "date": "2010-04-29",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-4"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "91",
+        "order": 93,
+        "topicNumber": "91",
+        "topicOrder": 92,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "홍승희 교수(원광대)",
+        "sourcePage": 214,
+        "sourceTitle": "[91] 주거침입죄의 객체-위요지 [홍승희 교수(원광대)]　　214",
+        "sourceCitation": "대법원 2010. 4. 29. 선고 2009도14643 판결",
+        "decisionCitation": "대법원 2010. 4. 29. 선고 2009도14643 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "불법 신용카드 사용 현금자동인출과 절도죄",
+      "court": "대법원",
+      "caseNumber": "95도2466",
+      "date": "1996-04-09",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "92",
+        "order": 94,
+        "topicNumber": "92",
+        "topicOrder": 93,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김대웅 판사(서울고법)",
+        "sourcePage": 218,
+        "sourceTitle": "[92] 불법 신용카드 사용 현금자동인출과 절도죄 [김대웅 판사(서울고법)]　　218",
+        "sourceCitation": "대법원 1996. 4. 9. 선고 95도2466 판결",
+        "decisionCitation": "대법원 1996. 4. 9. 선고 95도2466 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "절도죄에서의 사자의 점유",
+      "court": "대법원",
+      "caseNumber": "93도2143",
+      "date": "1993-09-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "93",
+        "order": 95,
+        "topicNumber": "93",
+        "topicOrder": 94,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "손동권 교수(건국대)",
+        "sourcePage": 220,
+        "sourceTitle": "[93] 절도죄에서의 사자의 점유 [손동권 교수(건국대)]　　220",
+        "sourceCitation": "대법원 1993. 9. 28. 선고 93도2143 판결",
+        "decisionCitation": "대법원 1993. 9. 28. 선고 93도2143 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "절도죄의 객체",
+      "court": "대법원",
+      "caseNumber": "2002도745",
+      "date": "2002-07-12",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "94",
+        "order": 96,
+        "topicNumber": "94",
+        "topicOrder": 95,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "박성민 교수(경상대)",
+        "sourcePage": 222,
+        "sourceTitle": "[94] 절도죄의 객체 [박성민 교수(경상대)]　　222",
+        "sourceCitation": "대법원 2002. 7. 12. 선고 2002도745 판결",
+        "decisionCitation": "대법원 2002. 7. 12. 선고 2002도745 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "절도죄에서의 불법영득의사",
+      "court": "대법원",
+      "caseNumber": "98도2642",
+      "date": "1998-11-10",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "95",
+        "order": 97,
+        "topicNumber": "95",
+        "topicOrder": 96,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "박찬걸 교수(대구가톨릭대)",
+        "sourcePage": 224,
+        "sourceTitle": "[95] 절도죄에서의 불법영득의사  [박찬걸 교수(대구가톨릭대)]　　224",
+        "sourceCitation": "대법원 1998. 11. 10. 선고 98도2642 판결",
+        "decisionCitation": "대법원 1998. 11. 10. 선고 98도2642 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "상습절도와 주거침입의 관계",
+      "court": "대법원",
+      "caseNumber": "84도1573",
+      "date": "1984-12-26",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "96",
+        "order": 98,
+        "topicNumber": "96",
+        "topicOrder": 97,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "최준혁 교수(인하대)",
+        "sourcePage": 226,
+        "sourceTitle": "[96] 상습절도와 주거침입의 관계 [최준혁 교수(인하대)]　　226",
+        "sourceCitation": "대법원 1984. 12. 26. 선고 84도1573 전원합의체 판결",
+        "decisionCitation": "대법원 1984. 12. 26. 선고 84도1573 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "친족상도례",
+      "court": "대법원",
+      "caseNumber": "2011도2170",
+      "date": "2011-04-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "97",
+        "order": 99,
+        "topicNumber": "97",
+        "topicOrder": 98,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김대원 교수(성균관대)",
+        "sourcePage": 228,
+        "sourceTitle": "[97] 친족상도례 [김대원 교수(성균관대)]　　228",
+        "sourceCitation": "대법원 2011. 4. 28. 선고 2011도2170 판결",
+        "decisionCitation": "대법원 2011. 4. 28. 선고 2011도2170 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "강도죄에서 폭행ㆍ협박의 정도",
+      "court": "대법원",
+      "caseNumber": "2007도7601",
+      "date": "2007-12-13",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "98",
+        "order": 100,
+        "topicNumber": "98",
+        "topicOrder": 99,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "한제희 검사(법무연수원)",
+        "sourcePage": 230,
+        "sourceTitle": "[98] 강도죄에서 폭행ㆍ협박의 정도 [한제희 검사(법무연수원)]　　230",
+        "sourceCitation": "대법원 2007. 12. 13. 선고 2007도7601 판결",
+        "decisionCitation": "대법원 2007. 12. 13. 선고 2007도7601 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "준강도죄의 기수 및 미수 판단기준",
+      "court": "대법원",
+      "caseNumber": "2004도5074",
+      "date": "2004-11-18",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "99",
+        "order": 101,
+        "topicNumber": "99",
+        "topicOrder": 100,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이천현 선임연구위원(한국형사정책연구원)",
+        "sourcePage": 232,
+        "sourceTitle": "[99] 준강도죄의 기수 및 미수 판단기준 [이천현 선임연구위원(한국형사정책연구원)]　　232",
+        "sourceCitation": "대법원 2004. 11. 18. 선고 2004도5074 전원합의체 판결",
+        "decisionCitation": "대법원 2004. 11. 18. 선고 2004도5074 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "준강도죄와 준특수강도죄의 구별기준",
+      "court": "대법원",
+      "caseNumber": "73도1553",
+      "date": "1973-11-13",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "100",
+        "order": 102,
+        "topicNumber": "100",
+        "topicOrder": 101,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이창섭 교수(제주대)",
+        "sourcePage": 234,
+        "sourceTitle": "[100] 준강도죄와 준특수강도죄의 구별기준 [이창섭 교수(제주대)]　　234",
+        "sourceCitation": "대법원 1973. 11. 13. 선고 73도1553 전원합의체 판결",
+        "decisionCitation": "대법원 1973. 11. 13. 선고 73도1553 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "준강도상해죄의 공동정범",
+      "court": "대법원",
+      "caseNumber": "83도3321",
+      "date": "1984-02-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "101",
+        "order": 103,
+        "topicNumber": "101",
+        "topicOrder": 102,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "정웅석 교수(서경대)",
+        "sourcePage": 236,
+        "sourceTitle": "[101] 준강도상해죄의 공동정범 [정웅석 교수(서경대)]　　236",
+        "sourceCitation": "대법원 1984. 2. 28. 선고 83도3321 판결",
+        "decisionCitation": "대법원 1984. 2. 28. 선고 83도3321 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "채무면탈 목적의 채권자 살해와 강도살인죄",
+      "court": "대법원",
+      "caseNumber": "2004도1098",
+      "date": "2004-06-24",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "102",
+        "order": 104,
+        "topicNumber": "102",
+        "topicOrder": 103,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "한상훈 교수(연세대)",
+        "sourcePage": 238,
+        "sourceTitle": "[102] 채무면탈 목적의 채권자 살해와 강도살인죄 [한상훈 교수(연세대)]　　238",
+        "sourceCitation": "대법원 2004. 6. 24. 선고 2004도1098 판결",
+        "decisionCitation": "대법원 2004. 6. 24. 선고 2004도1098 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "사기죄의 기망행위",
+      "court": "대법원",
+      "caseNumber": "95도2828",
+      "date": "1996-02-27",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "103",
+        "order": 105,
+        "topicNumber": "103",
+        "topicOrder": 104,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "안경옥 교수(경희대)",
+        "sourcePage": 240,
+        "sourceTitle": "[103] 사기죄의 기망행위 [안경옥 교수(경희대)]　　240",
+        "sourceCitation": "대법원 1993. 2. 27. 선고 95도2828 판결",
+        "decisionCitation": "대법원 1993. 2. 27. 선고 95도2828 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc",
+        "identityVerification": {
+          "providedDecisionDate": "1993-02-27",
+          "verifiedDecisionDate": "1996-02-27",
+          "verified": true,
+          "checkedAt": "2026-10-28",
+          "source": "국가법령정보센터 판례(사기)",
+          "url": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=113337",
+          "note": "공식 판례의 인용은 대법원 1996. 2. 27. 선고 95도2828 판결이다. 제공된 1993. 2. 27. 표기는 sourceCitation에 그대로 보존한다."
+        }
+      },
+      "lawgo": {
+        "kind": "prec",
+        "seq": "113337"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "부작위에 의한 기망",
+      "court": "대법원",
+      "caseNumber": "99도2884",
+      "date": "2000-01-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "104",
+        "order": 106,
+        "topicNumber": "104",
+        "topicOrder": 105,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이석배 교수(단국대)",
+        "sourcePage": 242,
+        "sourceTitle": "[104] 부작위에 의한 기망 [이석배 교수(단국대)]　　242",
+        "sourceCitation": "대법원 2000. 1. 28. 선고 99도2884 판결",
+        "decisionCitation": "대법원 2000. 1. 28. 선고 99도2884 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "불법원인급여와 사기죄",
+      "court": "대법원",
+      "caseNumber": "2006도6795",
+      "date": "2006-11-23",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "105",
+        "order": 107,
+        "topicNumber": "105",
+        "topicOrder": 106,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "최상욱 교수(강원대)",
+        "sourcePage": 244,
+        "sourceTitle": "[105] 불법원인급여와 사기죄 [최상욱 교수(강원대)]　　244",
+        "sourceCitation": "대법원 2006. 11. 23. 선고 2006도6795 판결",
+        "decisionCitation": "대법원 2006. 11. 23. 선고 2006도6795 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "소송사기와 사기죄의 성립요건",
+      "court": "대법원",
+      "caseNumber": "2005도9858",
+      "date": "2006-04-07",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "106",
+        "order": 108,
+        "topicNumber": "106",
+        "topicOrder": 107,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "정한중 교수(한국외대)",
+        "sourcePage": 246,
+        "sourceTitle": "[106] 소송사기와 사기죄의 성립요건 [정한중 교수(한국외대)]　　246",
+        "sourceCitation": "대법원 2006. 4. 7. 선고 2005도9858 전원합의체 판결",
+        "decisionCitation": "대법원 2006. 4. 7. 선고 2005도9858 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "위임금액을 초과한 현금카드의 현금인출과 컴퓨터등사용사기죄",
+      "court": "대법원",
+      "caseNumber": "2005도3516",
+      "date": "2006-03-24",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "107",
+        "order": 109,
+        "topicNumber": "107",
+        "topicOrder": 108,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이승호 교수(건국대)",
+        "sourcePage": 248,
+        "sourceTitle": "[107] 위임금액을 초과한 현금카드의 현금인출과 컴퓨터등사용사기죄 [이승호 교수(건국대)]　　248",
+        "sourceCitation": "대법원 2006. 3. 24. 선고 2005도3516 판결",
+        "decisionCitation": "대법원 2006. 3. 24. 선고 2005도3516 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "사기죄와 재산상 손해",
+      "court": "대법원",
+      "caseNumber": "91도2994",
+      "date": "1992-09-14",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "108",
+        "order": 110,
+        "topicNumber": "108",
+        "topicOrder": 109,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이정원 교수(영남대)",
+        "sourcePage": 250,
+        "sourceTitle": "[108] 사기죄와 재산상 손해 [이정원 교수(영남대)]　　250",
+        "sourceCitation": "대법원 1992. 9. 14. 선고 91도2994 판결",
+        "decisionCitation": "대법원 1992. 9. 14. 선고 91도2994 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "사기죄와 처분의사",
+      "court": "대법원",
+      "caseNumber": "2016도13362",
+      "date": "2017-02-16",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "109",
+        "order": 111,
+        "topicNumber": "109",
+        "topicOrder": 110,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김재봉 교수(한양대)",
+        "sourcePage": 252,
+        "sourceTitle": "[109] 사기죄와 처분의사 [김재봉 교수(한양대)]　　252",
+        "sourceCitation": "대법원 2017. 2. 16. 선고 2016도13362 전원합의체 판결",
+        "decisionCitation": "대법원 2017. 2. 16. 선고 2016도13362 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "공갈죄의 재산처분행위",
+      "court": "대법원",
+      "caseNumber": "2011도16044",
+      "date": "2012-01-27",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "110",
+        "order": 112,
+        "topicNumber": "110",
+        "topicOrder": 111,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이원상 교수(조선대)",
+        "sourcePage": 254,
+        "sourceTitle": "[110] 공갈죄의 재산처분행위 [이원상 교수(조선대)]　　254",
+        "sourceCitation": "대법원 2012. 1. 27. 선고 2011도16044 판결",
+        "decisionCitation": "대법원 2012. 1. 27. 선고 2011도16044 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "공갈죄와 수뢰죄의 관계",
+      "court": "대법원",
+      "caseNumber": "94도2528",
+      "date": "1994-12-22",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "111",
+        "order": 113,
+        "topicNumber": "111",
+        "topicOrder": 112,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이주원 교수(고려대)",
+        "sourcePage": 256,
+        "sourceTitle": "[111] 공갈죄와 수뢰죄의 관계 [이주원 교수(고려대)]　　256",
+        "sourceCitation": "대법원 1994. 12. 22. 선고 94도2528 판결",
+        "decisionCitation": "대법원 1994. 12. 22. 선고 94도2528 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "용도를 지정받은 금전의 임의사용과 횡령죄",
+      "court": "대법원",
+      "caseNumber": "2005도3627",
+      "date": "2005-11-10",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "112",
+        "order": 114,
+        "topicNumber": "112",
+        "topicOrder": 113,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "하태영 교수(동아대)",
+        "sourcePage": 258,
+        "sourceTitle": "[112] 용도를 지정받은 금전의 임의사용과 횡령죄 [하태영 교수(동아대)]　　258",
+        "sourceCitation": "대법원 2005. 11. 10. 선고 2005도3627 판결",
+        "decisionCitation": "대법원 2005. 11. 10. 선고 2005도3627 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "착오 송금된 돈의 인출ㆍ사용과 횡령죄",
+      "court": "대법원",
+      "caseNumber": "2010도891",
+      "date": "2010-12-09",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "113",
+        "order": 115,
+        "topicNumber": "113",
+        "topicOrder": 114,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "원혜욱 교수(인하대)",
+        "sourcePage": 260,
+        "sourceTitle": "[113] 착오 송금된 돈의 인출ㆍ사용과 횡령죄 [원혜욱 교수(인하대)]　　260",
+        "sourceCitation": "대법원 2010. 12. 9. 선고 2010도891 판결",
+        "decisionCitation": "대법원 2010. 12. 9. 선고 2010도891 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "중간생략등기형 명의신탁과 횡령죄",
+      "court": "대법원",
+      "caseNumber": "2014도6992",
+      "date": "2016-05-19",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "114",
+        "order": 116,
+        "topicNumber": "114",
+        "topicOrder": 115,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "강수진 교수(고려대)",
+        "sourcePage": 262,
+        "sourceTitle": "[114] 중간생략등기형 명의신탁과 횡령죄  [강수진 교수(고려대)]　　262",
+        "sourceCitation": "대법원 2016. 5. 19. 선고 2014도6992 전원합의체 판결",
+        "decisionCitation": "대법원 2016. 5. 19. 선고 2014도6992 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "횡령죄의 기수시기",
+      "court": "대법원",
+      "caseNumber": "2011도9113",
+      "date": "2012-08-17",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "115",
+        "order": 117,
+        "topicNumber": "115",
+        "topicOrder": 116,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이용식 교수(서울대)",
+        "sourcePage": 264,
+        "sourceTitle": "[115] 횡령죄의 기수시기 [이용식 교수(서울대)]　　264",
+        "sourceCitation": "대법원 2012. 8. 17. 선고 2011도9113 판결",
+        "decisionCitation": "대법원 2012. 8. 17. 선고 2011도9113 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "불법원인급여와 횡령죄",
+      "court": "대법원",
+      "caseNumber": "99도275",
+      "date": "1999-06-11",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "116",
+        "order": 118,
+        "topicNumber": "116",
+        "topicOrder": 117,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "문영식 교수(서울시립대)",
+        "sourcePage": 266,
+        "sourceTitle": "[116] 불법원인급여와 횡령죄 [문영식 교수(서울시립대)]　　266",
+        "sourceCitation": "대법원 1999. 6. 11. 선고 99도275 판결",
+        "decisionCitation": "대법원 1999. 6. 11. 선고 99도275 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "횡령죄와 위탁관계-지입차량의 처분",
+      "court": "대법원",
+      "caseNumber": "2015도1944",
+      "date": "2015-06-25",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "117",
+        "order": 119,
+        "topicNumber": "117",
+        "topicOrder": 118,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "서정민 검사(서울중앙지검)",
+        "sourcePage": 268,
+        "sourceTitle": "[117] 횡령죄와 위탁관계-지입차량의 처분 [서정민 검사(서울중앙지검)]　　268",
+        "sourceCitation": "대법원 2015. 6. 25. 선고 2015도1944 전원합의체 판결",
+        "decisionCitation": "대법원 2015. 6. 25. 선고 2015도1944 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "지명채권양도와 횡령죄 또는 배임죄의 성립 여부",
+      "court": "대법원",
+      "caseNumber": "97도666",
+      "date": "1999-04-15",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "118",
+        "order": 120,
+        "topicNumber": "118",
+        "topicOrder": 119,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이민걸 판사(대구고법)",
+        "sourcePage": 270,
+        "sourceTitle": "[118] 지명채권양도와 횡령죄 또는 배임죄의 성립 여부 [이민걸 판사(대구고법)]　　270",
+        "sourceCitation": "대법원 1999. 4. 15. 선고 97도666 전원합의체 판결",
+        "decisionCitation": "대법원 1999. 4. 15. 선고 97도666 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "계좌명의인의 보이스피싱 피해금의 무단인출과 횡령죄",
+      "court": "대법원",
+      "caseNumber": "2017도17494",
+      "date": "2018-07-19",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "119",
+        "order": 121,
+        "topicNumber": "119",
+        "topicOrder": 120,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "오영근 교수(한양대)",
+        "sourcePage": 272,
+        "sourceTitle": "[119] 계좌명의인의 보이스피싱 피해금의 무단인출과 횡령죄 [오영근 교수(한양대)]　　272",
+        "sourceCitation": "대법원 2018. 7. 19. 선고 2017도17494 전원합의체 판결",
+        "decisionCitation": "대법원 2018. 7. 19. 선고 2017도17494 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "횡령 후의 횡령-횡령죄와 불가벌적 사후행위",
+      "court": "대법원",
+      "caseNumber": "2010도10500",
+      "date": "2013-02-21",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "120",
+        "order": 122,
+        "topicNumber": "120",
+        "topicOrder": 121,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "백원기 교수(인천대)",
+        "sourcePage": 274,
+        "sourceTitle": "[120] 횡령 후의 횡령-횡령죄와 불가벌적 사후행위 [백원기 교수(인천대)]　　274",
+        "sourceCitation": "대법원 2013. 2. 21. 선고 2010도10500 전원합의체 판결",
+        "decisionCitation": "대법원 2013. 2. 21. 선고 2010도10500 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "법인 명의의 배임행위에 있어 ‘타인의 사무처리자’",
+      "court": "대법원",
+      "caseNumber": "82도2595",
+      "date": "1984-10-10",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "121",
+        "order": 123,
+        "topicNumber": "121",
+        "topicOrder": 122,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "황철규 검사(법무연수원)",
+        "sourcePage": 276,
+        "sourceTitle": "[121] 법인 명의의 배임행위에 있어 ‘타인의 사무처리자’ [황철규 검사(법무연수원)]　　276",
+        "sourceCitation": "대법원 1984. 10. 10. 선고 82도2595 전원합의체 판결",
+        "decisionCitation": "대법원 1984. 10. 10. 선고 82도2595 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "배임죄에서의 임무위배행위",
+      "court": "대법원",
+      "caseNumber": "2007도4949",
+      "date": "2009-05-29",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "122",
+        "order": 124,
+        "topicNumber": "122",
+        "topicOrder": 123,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이주원 교수(고려대)",
+        "sourcePage": 278,
+        "sourceTitle": "[122] 배임죄에서의 임무위배행위  [이주원 교수(고려대)]　　278",
+        "sourceCitation": "대법원 2009. 5. 29. 선고 2007도4949 전원합의체 판결",
+        "decisionCitation": "대법원 2009. 5. 29. 선고 2007도4949 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "배임죄에서의 재산상 손해",
+      "court": "대법원",
+      "caseNumber": "2010도11665",
+      "date": "2012-09-13",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "123",
+        "order": 125,
+        "topicNumber": "123",
+        "topicOrder": 124,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이정민 교수(단국대)",
+        "sourcePage": 280,
+        "sourceTitle": "[123] 배임죄에서의 재산상 손해 [이정민 교수(단국대)]　　280",
+        "sourceCitation": "대법원 2012. 9. 13. 선고 2010도11665 판결",
+        "decisionCitation": "대법원 2012. 9. 13. 선고 2010도11665 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "부동산과 동산의 이중매매 매도인의 형사책임",
+      "court": "대법원",
+      "caseNumber": "2008도10479",
+      "date": "2011-01-20",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "124",
+        "order": 126,
+        "topicNumber": "124",
+        "topicOrder": 125,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "강동욱 교수(동국대)",
+        "sourcePage": 282,
+        "sourceTitle": "[124] 부동산과 동산의 이중매매 매도인의 형사책임 [강동욱 교수(동국대)]　　282",
+        "sourceCitation": "대법원 2011. 1. 20. 선고 2008도10479 전원합의체 판결",
+        "decisionCitation": "대법원 2011. 1. 20. 선고 2008도10479 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "양도담보 부동산의 처분과 배임죄",
+      "court": "대법원",
+      "caseNumber": "92도753",
+      "date": "1992-07-14",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "125-1",
+        "order": 127,
+        "topicNumber": "125",
+        "topicOrder": 126,
+        "decisionOrder": 1,
+        "decisionCount": 2,
+        "author": "노수환 교수(성균관대)",
+        "sourcePage": 284,
+        "sourceTitle": "[125] 양도담보 부동산의 처분과 배임죄  [노수환 교수(성균관대)]　　284",
+        "sourceCitation": "대법원 1992. 7. 14. 선고 92도753 판결, 대법원 2020. 2. 20. 선고 2019도9756 전원합의체 판결",
+        "decisionCitation": "대법원 1992. 7. 14. 선고 92도753 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "양도담보 부동산의 처분과 배임죄",
+      "court": "대법원",
+      "caseNumber": "2019도9756",
+      "date": "2020-02-20",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "125-2",
+        "order": 128,
+        "topicNumber": "125",
+        "topicOrder": 126,
+        "decisionOrder": 2,
+        "decisionCount": 2,
+        "author": "노수환 교수(성균관대)",
+        "sourcePage": 284,
+        "sourceTitle": "[125] 양도담보 부동산의 처분과 배임죄  [노수환 교수(성균관대)]　　284",
+        "sourceCitation": "대법원 1992. 7. 14. 선고 92도753 판결, 대법원 2020. 2. 20. 선고 2019도9756 전원합의체 판결",
+        "decisionCitation": "대법원 2020. 2. 20. 선고 2019도9756 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "경영판단과 업무상배임죄",
+      "court": "대법원",
+      "caseNumber": "2005도856",
+      "date": "2005-04-29",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "126",
+        "order": 129,
+        "topicNumber": "126",
+        "topicOrder": 127,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이규훈 판사(인천지법)",
+        "sourcePage": 286,
+        "sourceTitle": "[126] 경영판단과 업무상배임죄 [이규훈 판사(인천지법)]　　286",
+        "sourceCitation": "대법원 2005. 4. 29. 선고 2005도856 판결",
+        "decisionCitation": "대법원 2005. 4. 29. 선고 2005도856 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "법인대표의 대표권남용과 배임죄 기수시기",
+      "court": "대법원",
+      "caseNumber": "2014도1104",
+      "date": "2017-07-20",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "127",
+        "order": 130,
+        "topicNumber": "127",
+        "topicOrder": 128,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이순욱 교수(전남대)",
+        "sourcePage": 288,
+        "sourceTitle": "[127] 법인대표의 대표권남용과 배임죄 기수시기 [이순욱 교수(전남대)]　　288",
+        "sourceCitation": "대법원 2017. 7. 20. 선고 2014도1104 전원합의체 판결",
+        "decisionCitation": "대법원 2017. 7. 20. 선고 2014도1104 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "배임죄와 사기죄의 경합관계",
+      "court": "대법원",
+      "caseNumber": "2010도10690",
+      "date": "2010-11-11",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "128",
+        "order": 131,
+        "topicNumber": "128",
+        "topicOrder": 129,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "류전철 교수(전남대)",
+        "sourcePage": 290,
+        "sourceTitle": "[128] 배임죄와 사기죄의 경합관계 [류전철 교수(전남대)]　　290",
+        "sourceCitation": "대법원 2010. 11. 11. 선고 2010도10690 판결",
+        "decisionCitation": "대법원 2010. 11. 11. 선고 2010도10690 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "배임수증재죄에서의 부정한 청탁",
+      "court": "대법원",
+      "caseNumber": "2003도301",
+      "date": "2003-03-25",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "129",
+        "order": 132,
+        "topicNumber": "129",
+        "topicOrder": 130,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "신용석 변호사",
+        "sourcePage": 292,
+        "sourceTitle": "[129] 배임수증재죄에서의 부정한 청탁 [신용석 변호사]　　292",
+        "sourceCitation": "대법원 2003. 3. 25. 선고 2003도301 판결",
+        "decisionCitation": "대법원 2003. 3. 25. 선고 2003도301 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "장물의 개념-현금 또는 자기앞수표의 장물성",
+      "court": "대법원",
+      "caseNumber": "2004도353",
+      "date": "2004-04-16",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "130",
+        "order": 133,
+        "topicNumber": "130",
+        "topicOrder": 131,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "천진호 교수(동아대)",
+        "sourcePage": 294,
+        "sourceTitle": "[130] 장물의 개념-현금 또는 자기앞수표의 장물성 [천진호 교수(동아대)]　　294",
+        "sourceCitation": "대법원 2004. 4. 16. 선고 2004도353 판결",
+        "decisionCitation": "대법원 2004. 4. 16. 선고 2004도353 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "업무상과실장물보관죄와 횡령죄의 관계",
+      "court": "대법원",
+      "caseNumber": "2003도8219",
+      "date": "2004-04-09",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "131",
+        "order": 134,
+        "topicNumber": "131",
+        "topicOrder": 132,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이정훈 교수(중앙대)",
+        "sourcePage": 296,
+        "sourceTitle": "[131] 업무상과실장물보관죄와 횡령죄의 관계 [이정훈 교수(중앙대)]　　296",
+        "sourceCitation": "대법원 2004. 4. 9. 선고 2003도8219 판결",
+        "decisionCitation": "대법원 2004. 4. 9. 선고 2003도8219 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "명의신탁 부동산과 권리행사방해죄",
+      "court": "대법원",
+      "caseNumber": "2005도626",
+      "date": "2005-09-09",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "132",
+        "order": 135,
+        "topicNumber": "132",
+        "topicOrder": 133,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "우인성 판사(서울서부지법)",
+        "sourcePage": 298,
+        "sourceTitle": "[132] 명의신탁 부동산과 권리행사방해죄 [우인성 판사(서울서부지법)]　　298",
+        "sourceCitation": "대법원 2005. 9. 9. 선고 2005도626 판결",
+        "decisionCitation": "대법원 2005. 9. 9. 선고 2005도626 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "강제집행면탈죄에서 강제집행을 받을 객관적 상태의 의미",
+      "court": "대법원",
+      "caseNumber": "98도1949",
+      "date": "1998-09-08",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-1",
+        "rk-p2-1-5"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "133",
+        "order": 136,
+        "topicNumber": "133",
+        "topicOrder": 134,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이상철 변호사",
+        "sourcePage": 300,
+        "sourceTitle": "[133] 강제집행면탈죄에서 강제집행을 받을 객관적 상태의 의미 [이상철 변호사]　　300",
+        "sourceCitation": "대법원 1998. 9. 8. 선고 98도1949 판결",
+        "decisionCitation": "대법원 1998. 9. 8. 선고 98도1949 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "방화죄의 기수시기",
+      "court": "대법원",
+      "caseNumber": "82도2341",
+      "date": "1983-01-18",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "134",
+        "order": 137,
+        "topicNumber": "134",
+        "topicOrder": 135,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "안성수 검사(광주고검)",
+        "sourcePage": 304,
+        "sourceTitle": "[134] 방화죄의 기수시기 [안성수 검사(광주고검)]　　304",
+        "sourceCitation": "대법원 1983. 1. 18. 선고 82도2341 판결",
+        "decisionCitation": "대법원 1983. 1. 18. 선고 82도2341 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "공공의 위험의 의의-무주의 일반물건 방화",
+      "court": "대법원",
+      "caseNumber": "2009도7421",
+      "date": "2009-10-15",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "135",
+        "order": 138,
+        "topicNumber": "135",
+        "topicOrder": 136,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이경렬 교수(성균관대)",
+        "sourcePage": 306,
+        "sourceTitle": "[135] 공공의 위험의 의의-무주의 일반물건 방화 [이경렬 교수(성균관대)]　　306",
+        "sourceCitation": "대법원 2009. 10. 15. 선고 2009도7421 판결",
+        "decisionCitation": "대법원 2009. 10. 15. 선고 2009도7421 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "이미지 파일의 문서성",
+      "court": "대법원",
+      "caseNumber": "2011도10468",
+      "date": "2011-11-10",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "136",
+        "order": 139,
+        "topicNumber": "136",
+        "topicOrder": 137,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "류석준 교수(영산대)",
+        "sourcePage": 308,
+        "sourceTitle": "[136] 이미지 파일의 문서성 [류석준 교수(영산대)]　　308",
+        "sourceCitation": "대법원 2011. 11. 10. 선고 2011도10468 판결",
+        "decisionCitation": "대법원 2011. 11. 10. 선고 2011도10468 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "사자 명의 문서의 문서성",
+      "court": "대법원",
+      "caseNumber": "2002도18",
+      "date": "2005-02-24",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "137",
+        "order": 140,
+        "topicNumber": "137",
+        "topicOrder": 138,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "황병돈 교수(홍익대)",
+        "sourcePage": 310,
+        "sourceTitle": "[137] 사자 명의 문서의 문서성 [황병돈 교수(홍익대)]　　310",
+        "sourceCitation": "대법원 2005. 2. 24. 선고 2002도18 전원합의체 판결",
+        "decisionCitation": "대법원 2005. 2. 24. 선고 2002도18 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "권한 남용과 문서위조",
+      "court": "대법원",
+      "caseNumber": "2005도6088",
+      "date": "2005-10-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "138",
+        "order": 141,
+        "topicNumber": "138",
+        "topicOrder": 139,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "정광일 검사(서울중앙지검)",
+        "sourcePage": 312,
+        "sourceTitle": "[138] 권한 남용과 문서위조 [정광일 검사(서울중앙지검)]　　312",
+        "sourceCitation": "대법원 2005. 10. 28. 선고 2005도6088 판결",
+        "decisionCitation": "대법원 2005. 10. 28. 선고 2005도6088 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "허위공문서작성죄의 간접정범",
+      "court": "대법원",
+      "caseNumber": "70도1044",
+      "date": "1970-07-28",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "139",
+        "order": 142,
+        "topicNumber": "139",
+        "topicOrder": 140,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김태명 교수(전북대)",
+        "sourcePage": 314,
+        "sourceTitle": "[139] 허위공문서작성죄의 간접정범 [김태명 교수(전북대)]　　314",
+        "sourceCitation": "대법원 1970. 7. 28. 선고 70도1044 판결",
+        "decisionCitation": "대법원 1970. 7. 28. 선고 70도1044 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "공문서부정행사죄에서의 행사의 의미",
+      "court": "대법원",
+      "caseNumber": "2002도4935",
+      "date": "2003-02-26",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "140",
+        "order": 143,
+        "topicNumber": "140",
+        "topicOrder": 141,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김한조 변호사",
+        "sourcePage": 316,
+        "sourceTitle": "[140] 공문서부정행사죄에서의 행사의 의미 [김한조 변호사]　　316",
+        "sourceCitation": "대법원 2003. 2. 26. 선고 2002도4935 판결",
+        "decisionCitation": "대법원 2003. 2. 26. 선고 2002도4935 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "공전자기록 위작ㆍ변작죄에서 위작과 변작의 개념",
+      "court": "대법원",
+      "caseNumber": "2004도6132",
+      "date": "2005-06-09",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "141",
+        "order": 144,
+        "topicNumber": "141",
+        "topicOrder": 142,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "강동범 교수(이화여대)",
+        "sourcePage": 318,
+        "sourceTitle": "[141] 공전자기록 위작ㆍ변작죄에서 위작과 변작의 개념 [강동범 교수(이화여대)]　　318",
+        "sourceCitation": "대법원 2005. 6. 9. 선고 2004도6132 판결",
+        "decisionCitation": "대법원 2005. 6. 9. 선고 2004도6132 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "위조사문서행사죄에 있어서 행사의 의미",
+      "court": "대법원",
+      "caseNumber": "87도1217",
+      "date": "1988-01-19",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-2"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "142",
+        "order": 145,
+        "topicNumber": "142",
+        "topicOrder": 143,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "노명선 교수(성균관대)",
+        "sourcePage": 320,
+        "sourceTitle": "[142] 위조사문서행사죄에 있어서 행사의 의미 [노명선 교수(성균관대)]　　320",
+        "sourceCitation": "대법원 1988. 1. 19. 선고 87도1217 판결",
+        "decisionCitation": "대법원 1988. 1. 19. 선고 87도1217 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "직무유기죄의 성립요건",
+      "court": "대법원",
+      "caseNumber": "2005도3909",
+      "date": "2006-10-19",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "143",
+        "order": 146,
+        "topicNumber": "143",
+        "topicOrder": 144,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이흔재 교수(전북대)",
+        "sourcePage": 324,
+        "sourceTitle": "[143] 직무유기죄의 성립요건 [이흔재 교수(전북대)]　　324",
+        "sourceCitation": "대법원 2006. 10. 19. 선고 2005도3909 전원합의체 판결",
+        "decisionCitation": "대법원 2006. 10. 19. 선고 2005도3909 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "직권남용권리행사방해죄",
+      "court": "대법원",
+      "caseNumber": "2019도5186",
+      "date": "2020-02-13",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "143-1",
+        "order": 147,
+        "topicNumber": "143-1",
+        "topicOrder": 145,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "오병두 교수(홍익대)",
+        "sourcePage": 326,
+        "sourceTitle": "[143-1] 직권남용권리행사방해죄 [오병두 교수(홍익대)]　　326",
+        "sourceCitation": "대법원 2020. 2. 13. 선고 2019도5186 판결",
+        "decisionCitation": "대법원 2020. 2. 13. 선고 2019도5186 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "뇌물죄에서 ‘직무에 관하여’의 의미",
+      "court": "대법원",
+      "caseNumber": "2010도17797",
+      "date": "2011-03-24",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "144",
+        "order": 148,
+        "topicNumber": "144",
+        "topicOrder": 146,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "권순건 판사(창원지법)",
+        "sourcePage": 328,
+        "sourceTitle": "[144] 뇌물죄에서 ‘직무에 관하여’의 의미 [권순건 판사(창원지법)]　　328",
+        "sourceCitation": "대법원 2011. 3. 24. 선고 2010도17797 판결",
+        "decisionCitation": "대법원 2011. 3. 24. 선고 2010도17797 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "뇌물수수죄와 제3자뇌물수수죄의 구별",
+      "court": "대법원",
+      "caseNumber": "2018도2738",
+      "date": "2019-08-29",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "144-1",
+        "order": 149,
+        "topicNumber": "144-1",
+        "topicOrder": 147,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "조지은 교수(영남대)",
+        "sourcePage": 330,
+        "sourceTitle": "[144-1] 뇌물수수죄와 제3자뇌물수수죄의 구별 [조지은 교수(영남대)]　　330",
+        "sourceCitation": "대법원 2019. 8. 29. 선고 2018도2738 전원합의체 판결",
+        "decisionCitation": "대법원 2019. 8. 29. 선고 2018도2738 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "위계에 의한 공무집행방해죄",
+      "court": "대법원",
+      "caseNumber": "2002도2064",
+      "date": "2002-09-04",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "145",
+        "order": 150,
+        "topicNumber": "145",
+        "topicOrder": 148,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "황만성 교수(원광대)",
+        "sourcePage": 332,
+        "sourceTitle": "[145] 위계에 의한 공무집행방해죄 [황만성 교수(원광대)]　　332",
+        "sourceCitation": "대법원 2002. 9. 4. 선고 2002도2064 판결",
+        "decisionCitation": "대법원 2002. 9. 4. 선고 2002도2064 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "참고인의 허위진술과 범인도피죄",
+      "court": "대법원",
+      "caseNumber": "2008도1059",
+      "date": "2008-06-26",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "146",
+        "order": 151,
+        "topicNumber": "146",
+        "topicOrder": 149,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이승련 판사(서울고법)",
+        "sourcePage": 334,
+        "sourceTitle": "[146] 참고인의 허위진술과 범인도피죄 [이승련 판사(서울고법)]　　334",
+        "sourceCitation": "대법원 2008. 6. 26. 선고 2008도1059 판결",
+        "decisionCitation": "대법원 2008. 6. 26. 선고 2008도1059 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "범인의 자기도피를 위한 제3자 교사와 범인도피교사죄",
+      "court": "대법원",
+      "caseNumber": "2005도3707",
+      "date": "2006-12-07",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "147",
+        "order": 152,
+        "topicNumber": "147",
+        "topicOrder": 150,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이창섭 교수(제주대)",
+        "sourcePage": 336,
+        "sourceTitle": "[147] 범인의 자기도피를 위한 제3자 교사와 범인도피교사죄 [이창섭 교수(제주대)]　　336",
+        "sourceCitation": "대법원 2006. 12. 7. 선고 2005도3707 판결",
+        "decisionCitation": "대법원 2006. 12. 7. 선고 2005도3707 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "증언거부권 불고지와 위증죄",
+      "court": "대법원",
+      "caseNumber": "2008도942",
+      "date": "2010-01-21",
+      "decisionType": "판결",
+      "enBanc": true,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "148",
+        "order": 153,
+        "topicNumber": "148",
+        "topicOrder": 151,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "김현 검사(인천지검)",
+        "sourcePage": 338,
+        "sourceTitle": "[148] 증언거부권 불고지와 위증죄 [김현 검사(인천지검)]　　338",
+        "sourceCitation": "대법원 2010. 1. 21. 선고 2008도942 전원합의체 판결",
+        "decisionCitation": "대법원 2010. 1. 21. 선고 2008도942 전원합의체 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "위증죄에서 ‘허위’의 진술",
+      "court": "대법원",
+      "caseNumber": "95도192",
+      "date": "1996-08-23",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "149",
+        "order": 154,
+        "topicNumber": "149",
+        "topicOrder": 152,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "윤용규 교수(강원대)",
+        "sourcePage": 340,
+        "sourceTitle": "[149] 위증죄에서 ‘허위’의 진술 [윤용규 교수(강원대)]　　340",
+        "sourceCitation": "대법원 1996. 8. 23. 선고 95도192 판결",
+        "decisionCitation": "대법원 1996. 8. 23. 선고 95도192 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    },
+    {
+      "status": "ok",
+      "subject": "criminal",
+      "title": "자기무고의 공범",
+      "court": "대법원",
+      "caseNumber": "2008도4852",
+      "date": "2008-10-23",
+      "decisionType": "판결",
+      "enBanc": false,
+      "tocPath": [
+        "rk-p2",
+        "rk-p2-3"
+      ],
+      "research": {
+        "collection": "criminal-150",
+        "entryId": "150",
+        "order": 155,
+        "topicNumber": "150",
+        "topicOrder": 153,
+        "decisionOrder": 1,
+        "decisionCount": 1,
+        "author": "이완규 변호사",
+        "sourcePage": 342,
+        "sourceTitle": "[150] 자기무고의 공범 [이완규 변호사]　　342",
+        "sourceCitation": "대법원 2008. 10. 23. 선고 2008도4852 판결",
+        "decisionCitation": "대법원 2008. 10. 23. 선고 2008도4852 판결",
+        "sourceFile": "data/research/criminal-toc.txt",
+        "sourceKind": "user-supplied-toc"
+      }
+    }
+  ]
+}

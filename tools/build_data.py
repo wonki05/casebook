@@ -6,11 +6,12 @@ Usage: python3 tools/build_data.py
   toc.json      : 표준판례 목차 트리 (과목별, 깊이 1~3)                               ← 사람/에이전트가 편집
   fetched/      : 국가법령정보센터에서 그대로 추출한 공식 텍스트 (tools/fetch_lawgo.py) ← 자동
 """
-import copy, json, re, glob, os, sys, datetime
+import copy, json, re, glob, os, sys, datetime, unicodedata
 from pathlib import Path
+from fetch_lawgo import citation_identity
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from case_identity import identity, decision_type, standard_sources_by_decision, STANDARD_FIELDS
-from subjects import SUBJECTS as SUBJECT_DEFS, STANDARD_SUBJECTS, ANNUAL_FIELDS, ANNUAL_BY_ID, ANNUAL_YEARS, CCOURT_YEARS, ENBANC_YEARS, ENBANC_FROM, guess_field  # noqa: E402
+from case_identity import identity, decision_type, standard_sources_by_decision, STANDARD_FIELDS, court_id, primary_case_number
+from subjects import SUBJECTS as SUBJECT_DEFS, STANDARD_SUBJECTS, RESEARCH_COLLECTIONS, RESEARCH_BY_ID, ANNUAL_FIELDS, ANNUAL_BY_ID, ANNUAL_YEARS, CCOURT_YEARS, ENBANC_YEARS, ENBANC_FROM, guess_field  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REG = os.path.join(ROOT, 'data', 'registry.json')
@@ -26,6 +27,8 @@ FIELD_NAMES = '·'.join(dict.fromkeys(f["label"] for f in ANNUAL_FIELDS))
 GROUPS = [
     {"id": "standard", "label": "표준판례", "short": "표준판례",
      "desc": f"법학전문대학원협의회 표준판례 — 과목({SUBJECT_NAMES})별 목차 구성"},
+    {"id": "research", "label": "판례연구", "short": "판례연구",
+     "desc": "민법판례연구 · 형법판례 150선 — 수록 목차와 제목에 따른 판례 학습"},
     {"id": "annual", "label": "법률신문 주요판례", "short": "주요판례",
      "desc": f"법률신문 「분야별 중요판례분석」 — 연도별 · 분야({FIELD_NAMES})별"},
     {"id": "enbanc", "label": "대법원 전원합의체", "short": "전원합의체",
@@ -36,6 +39,10 @@ GROUPS = [
 PAGES = [  # 표준판례는 과목마다 한 페이지(std-<subject>); 과목 순서 = tools/subjects.py 순서 (standard 과목만)
     {"id": f"std-{s['id']}", "label": f"{s['label']} 표준판례", "short": s["label"], "section": "표준판례", "group": "standard", "subject": s["id"]}
     for s in STANDARD_SUBJECTS
+] + [
+    {"id": c['page'], "label": c['label'], "short": c['label'], "section": "판례연구",
+     "group": "research", "subject": c['subject'], "collection": c['id'], "tocKey": c['page']}
+    for c in RESEARCH_COLLECTIONS
 ] + [
     {"id": "annual", "label": "법률신문 주요판례", "short": "주요판례", "section": "최신판례", "group": "annual", "subject": None},
     {"id": "enbanc", "label": "대법원 전원합의체", "short": "전원합의체", "section": "최신판례", "group": "enbanc", "subject": None},
@@ -156,6 +163,26 @@ def brackets(blocks):
 
 def load_fetched(cid):
     paths = sorted(glob.glob(os.path.join(FETCHED, cid + '.json')) + glob.glob(os.path.join(FETCHED, cid + '.part*.json')))
+    return load_fetched_paths(paths)
+
+
+def load_fetched_records(records):
+    """List the source directory once per build, retaining original path order."""
+    paths_by_id = {}
+    try:
+        with os.scandir(FETCHED) as entries:
+            for entry in entries:
+                if not entry.name.endswith('.json') or not entry.is_file():
+                    continue
+                stem = entry.name[:-5]
+                cid = stem.split('.part', 1)[0]
+                paths_by_id.setdefault(cid, []).append(entry.path)
+    except FileNotFoundError:
+        pass
+    return {record['id']: load_fetched_paths(sorted(paths_by_id.get(record['id'], []))) for record in records}
+
+
+def load_fetched_paths(paths):
     if not paths:
         return None
     merged = None
@@ -309,14 +336,72 @@ def apply_source_precedence(rec, standard_fields, official_fields, editorial):
     rec['officialSummary'] = copy.deepcopy(official_fields)
 
 
+def fetched_citation_matches_record(record, fetched):
+    """Require matching source court/date/type and a verified docket member.
+
+    Reuse the official collector's citation grammar, including abbreviated merged
+    numbers. This only parses existing text; it does not fetch or modify sources.
+    Constitutional bench-only citations require the detc source kind.
+    """
+    citation = unicodedata.normalize('NFKC', fetched.get('citation') or '')
+    metadata = citation_identity(citation)
+    if metadata is None:
+        return False
+    try:
+        fields = identity(record)
+        lookup = primary_case_number(record.get('lookupKey') or record['caseNumber'])
+        if court_id(metadata['court']) != fields['courtId']:
+            return False
+        datetime.date.fromisoformat(metadata['decisionDate'])
+    except (KeyError, ValueError):
+        return False
+    if (metadata['decisionDate'] != record['decisionDate'] or
+            metadata['decisionType'] != fields['decisionType'] or
+            lookup not in metadata['members']):
+        return False
+    if re.match(r'^\s*[\[【]?\s*(전원재판부|지정재판부)\s', citation):
+        return fetched.get('kind') == 'detc'
+    return fetched.get('kind') in (None, '', 'detc' if fields['courtId'] == 'cc' else 'prec')
+
+
+def shared_fetched_by_decision(records, identities, fetched_by_id):
+    """Reuse an existing extraction only for the identical adjudication.
+
+    Own sources remain preferred by the caller. A missing placement uses one
+    complete existing extraction without merging or altering its raw strings.
+    Prefer verified official material to supplemental material when borrowing;
+    the caller still preserves each placement's own existing source.
+    """
+    sources = {}
+    for record in records:
+        cid = record['id']
+        fetched = fetched_by_id.get(cid)
+        if not fetched or not fetched.get('sections') or not fetched_citation_matches_record(record, fetched):
+            continue
+        score = ((fetched.get('sourceLabel') or '국가법령정보센터') == '국가법령정보센터',
+                 sum(len(section.get('text') or '') for section in fetched['sections']))
+        decision_id = identities[cid]['decisionId']
+        current = sources.get(decision_id)
+        if current is None or score > current[0]:
+            sources[decision_id] = (score, cid, fetched)
+    return {decision_id: (cid, fetched) for decision_id, (_, cid, fetched) in sources.items()}
+
+
+def standard_decision_ids(records, identities):
+    """Membership is defined by standard placement, not text availability."""
+    return {identities[c['id']]['decisionId'] for c in records if c['group'] == 'standard'}
+
+
 def build():
     reg = json.loads(Path(REG).read_text(encoding='utf-8'))
     TOC = load_toc()
     cases = []
     stats = {"official": 0, "editorial": 0, "standard": 0, "mixed": 0, "fullText": 0}
-    fetched_by_id = {c['id']: load_fetched(c['id']) for c in reg['cases']}
+    fetched_by_id = load_fetched_records(reg['cases'])
     identities = {c['id']: identity(c, (fetched_by_id[c['id']] or {}).get('citation', '')) for c in reg['cases']}
     standard_by_decision = standard_sources_by_decision(reg['cases'], identities)
+    standard_ids = standard_decision_ids(reg['cases'], identities)
+    shared_fetched = shared_fetched_by_decision(reg['cases'], identities, fetched_by_id)
     for c in reg['cases']:
         cid = c['id']
         group = c['group']
@@ -325,10 +410,21 @@ def build():
         case_number = c['caseNumber']
         ed = c.get('editorial') or {}
         fetched = fetched_by_id[cid]
+        official_source_id = cid if fetched and fetched.get('sections') else None
+        if official_source_id is None:
+            shared = shared_fetched.get(identities[cid]['decisionId'])
+            if shared:
+                official_source_id, fetched = shared
+        research = copy.deepcopy(c.get('research')) if group == 'research' else None
+        page = (('std-' + (c.get('subject') or 'constitution')) if group == 'standard' else
+                RESEARCH_BY_ID[research['collection']]['page'] if group == 'research' else group)
         rec = {
             "id": cid,
             "group": group,
-            "page": ('std-' + (c.get('subject') or 'constitution')) if group == 'standard' else group,
+            "page": page,
+            "research": research,
+            "isStandard": identities[cid]['decisionId'] in standard_ids,
+            "officialSourceId": official_source_id,
             "subject": c.get('subject') or 'constitution',
             "tocPath": c.get('tocPath') or [],
             "title": (c.get('title') or '').strip(),
@@ -415,7 +511,9 @@ def build():
     # order: by group order, then subject order, then tocPath, then date
     gi = {g["id"]: i for i, g in enumerate(GROUPS)}
     si = {s["id"]: i for i, s in enumerate(SUBJECTS)}
-    cases.sort(key=lambda r: (gi[r["group"]], si.get(r["subject"], 9), r["tocPath"], r["decisionDate"]))
+    cases.sort(key=lambda r: (gi[r["group"]], si.get(r["subject"], 9),
+                              [] if r['group'] == 'research' else r["tocPath"],
+                              (r.get('research') or {}).get('order', 0), r["decisionDate"]))
 
     # 법률신문 주요판례 페이지: 연도 버튼(최신 → 과거)과 분야 구분(tools/subjects.py 의 ANNUAL_FIELDS 순서)
     years_in = [r["annual"]["year"] for r in cases if r["annual"] and isinstance(r["annual"].get("year"), int)]

@@ -25,19 +25,19 @@ id 는 관례대로 자동 생성: std-<subject>-NN · annual-<year>-NN · enban
 법률신문(annual) 사건은 annual.field(분야: tools/subjects.py 의 ANNUAL_FIELDS)를 가진다. --field 를 생략하면 기사 제목에서 추정하고,
 과목(subject)은 분야에서 정해진다(가족법 → civil, 형법각칙 → criminal, 지식재산권법 → ip …).
 """
-import argparse, json, os, re, sys, unicodedata
+import argparse, copy, json, os, re, sys, unicodedata
 from pathlib import Path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from case_identity import identity, IDENTITY_FIELDS, validate_standard_source, standard_sources_by_decision, primary_case_number, docket_parts, case_number_list, merged_display
 from casenum import romanize, lookup_key, is_cc  # noqa: E402
-from subjects import SUBJECT_IDS, STANDARD_IDS, ANNUAL_BY_ID, ANNUAL_FIELD_IDS, resolve_field, guess_field, article_year  # noqa: E402
+from subjects import SUBJECT_IDS, STANDARD_IDS, ANNUAL_BY_ID, ANNUAL_FIELD_IDS, RESEARCH_BY_ID, resolve_field, guess_field, article_year  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REG = os.path.join(ROOT, 'data', 'registry.json')
 TOC = os.path.join(ROOT, 'data', 'toc.json')
 FETCHED = os.path.join(ROOT, 'data', 'fetched')
 SUBJECTS = SUBJECT_IDS   # tools/subjects.py 가 단일 출처 (지식재산권법 ip 는 표준판례 과목이 아님 → STANDARD_IDS)
-GROUPS = ['standard', 'annual', 'enbanc', 'ccourt']
+GROUPS = ['standard', 'research', 'annual', 'enbanc', 'ccourt']
 
 
 def annual_field(field, subject, article):
@@ -68,12 +68,23 @@ def load():
 
 
 def save(reg=None, toc=None):
+    # Check both inputs before either write, including combined research imports.
+    for path, value in ((REG, reg), (TOC, toc)):
+        if value is not None and path in _loaded_bytes and Path(path).read_bytes() != _loaded_bytes[path]:
+            raise SystemExit(f'다른 세션이 {path}을 수정했습니다. 최신 파일을 읽고 다시 실행하세요.')
     for path, value in ((REG, reg), (TOC, toc)):
         if value is None:
             continue
         if path in _loaded_bytes and Path(path).read_bytes() != _loaded_bytes[path]:
             raise SystemExit(f'다른 세션이 {path}를 변경했습니다. 최신 파일을 읽고 다시 실행하세요.')
-        raw = json.dumps(value, ensure_ascii=False, indent=1).encode('utf-8')
+        previous = _loaded_bytes.get(path, b'').decode('utf-8')
+        indentation = re.search(r'(?m)^([ \t]+)\S', previous)
+        indent = indentation.group(1) if indentation else (None if previous else 1)
+        trailing = re.search(r'\s*\Z', previous).group(0) if previous else ''
+        rendered = json.dumps(value, ensure_ascii=False, indent=indent)
+        if '\r\n' in previous:
+            rendered = rendered.replace('\n', '\r\n')
+        raw = (rendered + trailing).encode('utf-8')
         # Keep the existing file permissions on managed Windows workspaces.
         # Refuse a stale snapshot rather than overwriting another session's work.
         Path(path).write_bytes(raw)
@@ -103,6 +114,10 @@ def next_id(reg, group, subject, case_number, year=None):
         n = 1
         while f'annual-{year}-{n:02d}' in ids: n += 1
         return f'annual-{year}-{n:02d}'
+    if group == 'research':
+        n = 1
+        while f'research-{subject}-{n:03d}' in ids: n += 1
+        return f'research-{subject}-{n:03d}'
     base = ('cc-' if group == 'ccourt' else 'enbanc-') + romanize(lookup_key(case_number))
     cid, n = base, 2
     while cid in ids:
@@ -187,6 +202,11 @@ def duplicate(reg, e):
             if x.get('subject') == e.get('subject') and same_placement(x, e):
                 return True
             continue
+        if e['group'] == 'research':
+            xr, er = x.get('research') or {}, e.get('research') or {}
+            if xr.get('collection') == er.get('collection') and xr.get('entryId') == er.get('entryId'):
+                return True
+            continue
         if e['group'] != 'annual':
             return True
         xa, ea = x.get('annual') or {}, e['annual']
@@ -201,6 +221,8 @@ def cmd_add(a):
     if a.from_file:
         src = read_json(a.from_file)
         group = a.group or src.get('group') or 'standard'
+        if group == 'research':
+            raise SystemExit('판례연구 목록은 research-import --from 명령으로 등록하세요.')
         subject = a.subject or src.get('subject')
         year = a.year or src.get('year')   # annual: 명령줄 --year/--field 가 파일 값보다 우선(분야는 --field > 항목 field > 파일 field)
         for c in src.get('candidates', []):
@@ -216,6 +238,8 @@ def cmd_add(a):
                 print(f"같은 재판의 다른 배치로 등록: {c['caseNumber']} ↔ {', '.join(sib)} — standardSource 텍스트를 같게 맞춰야 validate 를 통과합니다")
             reg['cases'].append(e); added.append(e['id'])
     else:
+        if a.group == 'research':
+            raise SystemExit('판례연구 목록은 research-import --from 명령으로 등록하세요.')
         if not (a.group and (a.subject or a.field) and a.case and a.date):
             raise SystemExit('--group --subject --case --date 가 필요합니다 (annual 은 --subject 대신 --field 가능; 또는 --from)')
         e = make_entry(reg, toc, a.group, a.subject, a.case, a.date, a.title, a.toc.split('/') if a.toc else None, a.tags.split(',') if a.tags else None, a.court, True if a.enbanc else None, a.year, a.article, a.url,
@@ -230,6 +254,127 @@ def cmd_add(a):
     print('등록:', ', '.join(added) if added else '(없음)')
     if added:
         print('다음: python3 tools/fetch_lawgo.py --all-missing  →  python3 tools/build_data.py  →  make build check')
+
+
+def research_toc_key(record):
+    collection = RESEARCH_BY_ID.get((record.get('research') or {}).get('collection'))
+    return collection['page'] if collection else None
+
+
+def validate_research_entry(record, toc):
+    research = record.get('research') or {}
+    collection = RESEARCH_BY_ID.get(research.get('collection'))
+    if not collection:
+        raise ValueError('알 수 없는 판례연구 목록: ' + str(research.get('collection')))
+    if record.get('subject') != collection['subject']:
+        raise ValueError('판례연구 목록과 과목이 일치하지 않습니다')
+    if type(research.get('order')) is not int or research['order'] < 1:
+        raise ValueError('research.order는 1부터 시작하는 정수여야 합니다')
+    if not isinstance(research.get('entryId'), str) or not research['entryId']:
+        raise ValueError('research.entryId가 필요합니다')
+    path = record.get('tocPath') or []
+    idx = toc_index(toc)
+    if not path or path[-1] not in idx or idx[path[-1]][0] != collection['page'] or idx[path[-1]][1] != path:
+        raise ValueError('판례연구 목차는 해당 목록의 상위부터 하위까지 이어지는 전체 경로여야 합니다')
+
+
+def import_research_catalog(reg, toc, catalog):
+    """Validate a complete collection before changing either JSON file.
+
+    A collection entry is an independent placement with its own title/order.
+    Its adjudication identity remains shared with existing placements. Pending
+    source identifiers remain in the catalog and are never invented here.
+    """
+    collection_id = catalog.get('collection')
+    collection = RESEARCH_BY_ID.get(collection_id)
+    if not collection:
+        raise ValueError('알 수 없는 판례연구 목록: ' + str(collection_id))
+    tree = catalog.get('toc')
+    if not isinstance(tree, list) or not tree:
+        raise ValueError('판례연구 toc 배열이 필요합니다')
+    tree_ids = set()
+    def check_nodes(nodes, depth=1):
+        if not isinstance(nodes, list):
+            raise ValueError('목차 children은 배열이어야 합니다')
+        for node in nodes:
+            if not isinstance(node, dict) or not isinstance(node.get('id'), str) or not node['id'] or not isinstance(node.get('label'), str) or not node['label']:
+                raise ValueError('판례연구 목차 노드에 id와 label이 필요합니다')
+            if depth > 4 or node['id'] in tree_ids:
+                raise ValueError('판례연구 목차 깊이 초과 또는 중복 id: ' + node['id'])
+            tree_ids.add(node['id'])
+            check_nodes(node.get('children') or [], depth + 1)
+    check_nodes(tree)
+    existing_other = toc_index({key: value for key, value in toc.items() if key != collection['page']})
+    if tree_ids & existing_other.keys():
+        raise ValueError('다른 목록과 중복 목차 id: ' + ', '.join(sorted(tree_ids & existing_other.keys())))
+    updated_reg, updated_toc = copy.deepcopy(reg), copy.deepcopy(toc)
+    updated_toc[collection['page']] = copy.deepcopy(tree)
+    existing = {}
+    for record in updated_reg['cases']:
+        meta = record.get('research') or {}
+        if record.get('group') == 'research' and meta.get('collection') == collection_id:
+            if meta.get('entryId') in existing:
+                raise ValueError('기존 판례연구 entryId 중복: ' + str(meta.get('entryId')))
+            existing[meta.get('entryId')] = record
+    added, changed, pending = [], [], []
+    seen_entries, seen_orders = set(), set()
+    candidates = catalog.get('candidates')
+    if not isinstance(candidates, list) or not candidates:
+        raise ValueError('판례연구 candidates 배열이 필요합니다')
+    for candidate in candidates:
+        if candidate.get('status') != 'ok':
+            pending.append(candidate.get('caseNumber') or candidate.get('title') or '(미식별)')
+            continue
+        if not candidate.get('court') or candidate.get('decisionType') not in ('판결', '결정'):
+            raise ValueError('판례연구 항목에는 court와 decisionType을 명시해야 합니다')
+        if not candidate.get('title'):
+            raise ValueError('판례연구 목차의 원제목이 필요합니다')
+        research = copy.deepcopy(candidate.get('research') or {})
+        research['collection'] = collection_id
+        research.setdefault('entryId', str(research.get('order', '')))
+        if research['entryId'] in seen_entries or research.get('order') in seen_orders:
+            raise ValueError('판례연구 entryId 또는 order 중복: ' + str(research))
+        seen_entries.add(research['entryId'])
+        seen_orders.add(research.get('order'))
+        if catalog.get('source'):
+            research.setdefault('source', copy.deepcopy(catalog['source']))
+        extra = {key: copy.deepcopy(candidate[key]) for key in ('lawgo', 'standardSource', 'courtId', 'memo', 'keywords', 'selectionReason') if key in candidate}
+        extra['research'] = research
+        entry = make_entry(updated_reg, updated_toc, 'research', collection['subject'],
+                           candidate['caseNumber'], candidate.get('date') or candidate.get('decisionDate'),
+                           candidate['title'], candidate.get('tocPath'), candidate.get('tags'),
+                           candidate['court'], candidate.get('enBanc'), extra=extra,
+                           decision_type=candidate['decisionType'])
+        validate_research_entry(entry, updated_toc)
+        old = existing.get(research['entryId'])
+        if old:
+            if identity(old)['decisionId'] != entry['decisionId']:
+                raise ValueError('기존 판례연구 항목의 재판 식별 변경은 별도 확인이 필요합니다: ' + old['id'])
+            # Reimports update collection display and explicitly supplied provenance.
+            fields = ('title', 'tocPath', 'research') + tuple(key for key in ('lawgo', 'standardSource') if key in candidate)
+            if any(old.get(key) != entry[key] for key in fields):
+                old.update({key: entry[key] for key in fields})
+                changed.append(old['id'])
+        else:
+            updated_reg['cases'].append(entry)
+            added.append(entry['id'])
+    for record in updated_reg['cases']:
+        if record.get('group') == 'research':
+            validate_research_entry(record, updated_toc)
+    return updated_reg, updated_toc, {'added': added, 'changed': changed, 'pending': pending}
+
+
+def cmd_research_import(a):
+    reg, toc = load()
+    try:
+        updated_reg, updated_toc, result = import_research_catalog(reg, toc, read_json(a.from_file))
+    except ValueError as exc:
+        raise SystemExit(str(exc)) from exc
+    if not a.dry_run:
+        save(reg=updated_reg, toc=updated_toc)
+    print(json.dumps(result, ensure_ascii=False))
+    if a.dry_run:
+        print('--dry-run: 저장하지 않음')
 
 
 def valid_case_display(value):
@@ -344,11 +489,17 @@ def cmd_set(a):
         if c['group'] == 'standard' and not path:
             raise SystemExit('표준판례는 비어 있지 않은 --toc 경로가 필요합니다')
         idx = toc_index(toc)
+        scope = research_toc_key(c) if c['group'] == 'research' else c['subject']
         for tid in path:
-            if tid not in idx or idx[tid][0] != c['subject']:
+            if tid not in idx or idx[tid][0] != scope:
                 raise SystemExit('대상 과목과 맞지 않는 목차 id: ' + tid)
         if path and idx[path[-1]][1] != path:
             raise SystemExit('--toc는 상위부터 하위까지 이어지는 전체 경로여야 합니다')
+    if c['group'] == 'research':
+        try:
+            validate_research_entry(c, toc)
+        except ValueError as exc:
+            raise SystemExit(str(exc)) from exc
     previous = c.get('decisionId')
     try:
         updated_identity = identity(c, fetched_citation(c['id']))
@@ -425,7 +576,7 @@ def cmd_toc(a):
         new_ids = set(ids)
         cleared = []
         for c in reg['cases']:
-            if c.get('subject') == a.subject and c.get('tocPath') and not all(t in new_ids for t in c['tocPath']):
+            if c.get('group') == 'standard' and c.get('subject') == a.subject and c.get('tocPath') and not all(t in new_ids for t in c['tocPath']):
                 cleared.append((c['id'], c['tocPath']))
         old_n = len(toc_index({a.subject: toc.get(a.subject, [])}))
         print(f'[{a.subject}] 목차 교체: 기존 {old_n}개 노드 → 새 {len(ids)}개 노드; 경로를 잃는 사건 {len(cleared)}건')
@@ -435,7 +586,7 @@ def cmd_toc(a):
             print('(--dry-run: 저장하지 않음)'); return
         toc[a.subject] = tree
         for c in reg['cases']:
-            if c.get('subject') == a.subject and c.get('tocPath') and not all(t in new_ids for t in c['tocPath']):
+            if c.get('group') == 'standard' and c.get('subject') == a.subject and c.get('tocPath') and not all(t in new_ids for t in c['tocPath']):
                 c['tocPath'] = []
         save(reg=reg, toc=toc)
         print('저장:', TOC, '및', REG)
@@ -471,6 +622,13 @@ def cmd_validate(a):
     reg, toc = load()
     idx = toc_index(toc)
     ids, errs, warnings, identities = set(), [], [], {}
+    fetched_decisions, research_entries = set(), set()
+    for record in reg['cases']:
+        if os.path.exists(os.path.join(FETCHED, record['id'] + '.json')):
+            try:
+                fetched_decisions.add(identity(record, fetched_citation(record['id']))['decisionId'])
+            except (ValueError, KeyError):
+                pass  # The ordinary validation pass reports the actual error.
     for c in reg['cases']:
         try:
             fields = identity(c, fetched_citation(c['id']))
@@ -479,6 +637,12 @@ def cmd_validate(a):
                 if key in c and c[key] != fields[key]:
                     errs.append(f"{c['id']}: {key} 불일치 {c[key]!r} != {fields[key]!r}")
             validate_standard_source(c.get('standardSource'))
+            if c['group'] == 'research':
+                validate_research_entry(c, toc)
+                research_key = (c['research']['collection'], c['research']['entryId'])
+                if research_key in research_entries:
+                    errs.append(f"{c['id']}: 판례연구 entryId 중복 {research_key}")
+                research_entries.add(research_key)
             if c.get('enBanc') and c.get('court') != '대법원':
                 errs.append(f"{c['id']}: 전원합의체는 대법원 사건에만 표시")
             if c['group'] == 'enbanc' and c.get('court') != '대법원':
@@ -498,12 +662,13 @@ def cmd_validate(a):
             if not f: errs.append(f"{c['id']}: annual.field 없음 (추정값 {guess_field(an.get('article'), c['subject'])}; `set {c['id']} --field …`)")
             elif f not in ANNUAL_BY_ID: errs.append(f"{c['id']}: 알 수 없는 분야 {f}")
             elif ANNUAL_BY_ID[f]['subject'] != c['subject']: errs.append(f"{c['id']}: 분야 {f} 의 과목은 {ANNUAL_BY_ID[f]['subject']} (등록 과목 {c['subject']})")
+        toc_scope = research_toc_key(c) if c['group'] == 'research' else c['subject']
         for t in c.get('tocPath') or []:
             if t not in idx: errs.append(f"{c['id']}: 없는 목차 id {t}")
-            elif idx[t][0] != c['subject']: errs.append(f"{c['id']}: 목차 {t} 는 {idx[t][0]} 과목")
+            elif idx[t][0] != toc_scope: errs.append(f"{c['id']}: 목차 {t} 는 {idx[t][0]} 목록")
         if c['group'] == 'annual' and not (c.get('annual') or {}).get('year'): errs.append(f"{c['id']}: annual.year 없음")
         if not c.get('title'): errs.append(f"{c['id']}: title 비어 있음")
-        has = os.path.exists(os.path.join(FETCHED, c['id'] + '.json'))
+        has = identities.get(c['id'], {}).get('decisionId') in fetched_decisions
         miss = os.path.exists(os.path.join(FETCHED, c['id'] + '.missing.json'))
         if not has: warnings.append(f"{c['id']}: 공식 텍스트 미수집" + (' (.missing: ' + read_json(os.path.join(FETCHED, c['id'] + '.missing.json')).get('reason', '')[:60] + ')' if miss else ''))
     if len(identities) == len(reg['cases']):
@@ -539,6 +704,7 @@ def main():
     p.add_argument('--year', type=int); p.add_argument('--article'); p.add_argument('--url'); p.set_defaults(fn=cmd_set)
     p = sub.add_parser('toc'); p.add_argument('toc_cmd', choices=['list', 'add', 'rename', 'replace']); p.add_argument('--from', dest='from_file', help='replace: 제안 목차 JSON({"proposed": [...]} 또는 배열)'); p.add_argument('--dry-run', action='store_true'); p.add_argument('--subject', choices=STANDARD_IDS); p.add_argument('--parent'); p.add_argument('--id'); p.add_argument('--label'); p.set_defaults(fn=cmd_toc)
     p = sub.add_parser('validate'); p.set_defaults(fn=cmd_validate)
+    p = sub.add_parser('research-import'); p.add_argument('--from', dest='from_file', required=True); p.add_argument('--dry-run', action='store_true'); p.set_defaults(fn=cmd_research_import)
     p = sub.add_parser('migrate-identities'); p.set_defaults(fn=cmd_migrate_identities)
     a = ap.parse_args(); a.fn(a)
 

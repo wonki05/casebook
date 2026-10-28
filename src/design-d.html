@@ -250,6 +250,8 @@ body.cs-drag{user-select:none;-webkit-user-select:none;cursor:col-resize}
 .cite-sub{display:flex;align-items:center;gap:6px;margin-left:auto}
 .badge{font:500 11.5px/1 var(--sans);padding:5px 8px;border:1px solid var(--rule-2);border-radius:999px;color:var(--accent-ink);white-space:nowrap}
 .badge.sub{color:var(--ink-2)}
+.badge.standard{display:inline-block;border-color:var(--accent);color:var(--accent-ink);background:transparent;background:color-mix(in srgb,var(--accent-soft) 35%,transparent)}
+.entry .m .badge.standard{margin-left:6px;padding:3px 7px;font-size:10.5px;vertical-align:baseline}
 .cite .acts{display:flex;gap:2px;margin-left:4px}
 .cite .ibtn{width:40px;height:40px}
 .tabs{display:flex;gap:16px;border-bottom:1px solid var(--rule);margin:14px 0 0;position:sticky;top:52px;background:var(--paper);z-index:5;overflow-x:auto;scrollbar-width:none;height:38px;box-shadow:0 1px 0 var(--paper);align-items:stretch}
@@ -789,7 +791,11 @@ const PAGES = DATA.pages, SUBJ = DATA.subjects, TOC = DATA.toc || {}, CASES = DA
 const byId = new Map(CASES.map(c => [c.id, c]));
 const recordKey = c => c.decisionId || c.id;
 function routeCase(id, page) {
-  if (byId.has(id)) return byId.get(id);
+  if (byId.has(id)) {
+    const exact = byId.get(id);
+    return page && exact.page !== page && exact.decisionId
+      ? CASES.find(c => c.page === page && c.decisionId === exact.decisionId) || exact : exact;
+  }
   const matches = CASES.filter(c => c.decisionId === id || (c.legacyIds || []).includes(id));
   if (matches.length) return matches.find(c => c.page === page) || matches[0];
   const docket = CASES.filter(c => c.caseId === id);
@@ -824,6 +830,8 @@ const MAXIMS = {
   'std-civil': ['Pacta sunt servanda.', '약속은 지켜져야 한다'],
   'std-criminal': ['Nullum crimen sine lege.', '법률 없으면 범죄 없다'],
   'std-commercial': ['Caveat emptor.', '매수인은 스스로 주의하라'],
+  'research-civil': ['Pacta sunt servanda.', '약속은 지켜져야 한다'],
+  'research-criminal': ['Nullum crimen sine lege.', '법률 없으면 범죄 없다'],
   annual: ['Ubi ius, ibi remedium.', '권리 있는 곳에 구제 있다'],
   enbanc: ['Lex specialis derogat legi generali.', '특별법은 일반법에 우선한다'],
   ccourt: ['Nemo iudex in causa sua.', '누구도 자기 사건의 재판관이 될 수 없다']
@@ -834,6 +842,8 @@ const PAGE_DESC = {
   'std-civil': '법학전문대학원협의회 표준판례 — 민법 (편·장 목차 구성)',
   'std-criminal': '법학전문대학원협의회 표준판례 — 형법 (편·장 목차 구성)',
   'std-commercial': '법학전문대학원협의회 표준판례 — 상법 (분야·편·장 목차 구성)',
+  'research-civil': '민법판례연구 1·2권 — 분야별 통합 목차',
+  'research-criminal': '형법판례 150선 — 주제별 목차',
   annual: `법률신문 「분야별 중요판례분석」 — 연도별 · 분야별 (${[...new Set(FIELDS.map(f => f.label))].join('·')})`,
   enbanc: '대법원 전원합의체 판결 — 분야별 · 선고연도별',
   ccourt: '헌법재판소 주요결정 — 분야별 · 선고연도별',
@@ -853,6 +863,7 @@ const S = {
   filter: { enbanc: 'all', ccourt: 'all' },
   annual: initAnnual(),
   ytab: initYearTabs(),
+  researchVolumes: initResearchVolumes(),
   lawId: 'constitution', versionId: null,
   settings: Object.assign({ theme: 'auto', blue: 'off', font: 16, emblem: 50, sheetFull: false, sheetWidth: 0 }, load('lawbook:settings', {})),
   bookmarks: new Set(migratedPersonal.bookmarks),
@@ -869,8 +880,12 @@ const itemsHTML = arr => !arr || !arr.length ? '<p class="note">수록된 내용
     ? `<li><span class="n">${esc(it.n)}</span><div class="t">${paras(it.text)}</div></li>`
     : `<li class="nolabel"><div class="t">${paras(it.text)}</div></li>`).join('')}</ol>`;
 const linesHTML = arr => `<ul class="lines serif">${arr.map(l => `<li>${esc(l)}</li>`).join('')}</ul>`;
+const hasToc = pg => pg && (pg.group === 'standard' || pg.group === 'research');
+const tocFor = pg => TOC[pg.tocKey || pg.subject] || [];
+const standardBadge = c => c.isStandard && ['research', 'annual', 'enbanc', 'ccourt'].includes((pageOf(c.page) || {}).group)
+  ? '<span class="badge standard">표준판례</span>' : '';
 const tocLabels = c => {
-  const out = []; let nodes = TOC[c.subject] || [];
+  const out = []; let nodes = tocFor(pageOf(c.page));
   (c.tocPath || []).forEach(id => { const n = nodes.find(x => x.id === id); if (n) { out.push(n.label); nodes = n.children || []; } });
   return out;
 };
@@ -964,13 +979,15 @@ function visibleCases(pageId) {
   let arr = CASES.filter(c => c.page === pageId);
   const f = S.filter[pageId];
   if (f && f !== 'all') arr = arr.filter(c => c.subject === f);
+  if (pageId === 'research-civil') arr = arr.filter(c => S.researchVolumes.includes(c.research?.volume));
   if (tabsOf(pageId).length) arr = arr.filter(c => yrOn(pageId, decisionYear(c)));
   return arr;
 }
 function tree(pageId) {
   const pg = pageOf(pageId); const cases = visibleCases(pageId);
-  if (pg.group === 'standard') {
+  if (hasToc(pg)) {
     const used = new Set();
+    if (pg.group === 'research') cases.sort((a, b) => (a.research?.order ?? Infinity) - (b.research?.order ?? Infinity));
     // 목차 트리는 깊이 1~3단계(대주제 › 중주제 › 소주제). 사건은 tocPath 가 노드 경로와 정확히 일치하는 노드에 붙는다.
     const build = (nodes, path) => nodes.map(n => {
       const my = path.concat(n.id);
@@ -979,7 +996,7 @@ function tree(pageId) {
       const children = build(n.children || [], my);
       return { id: n.id, label: n.label, cases: own, children, count: own.length + children.reduce((s, x) => s + x.count, 0), depth: my.length };
     });
-    const parts = build(TOC[pg.subject] || [], []);
+    const parts = build(tocFor(pg), []);
     const rest = cases.filter(c => !used.has(c.id));
     if (rest.length) parts.push({ id: pg.subject + '-etc', label: '목차 미지정', cases: [], children: [{ id: pg.subject + '-etc-1', label: '기타', cases: rest, children: [], count: rest.length, depth: 2 }], count: rest.length, depth: 1 });
     return parts;
@@ -1025,6 +1042,7 @@ function listFor() {
 function navList(c) {
   const l = listFor();
   if (S.view === 'bookmarks' || !c || l.some(x => x.id === c.id)) return l;
+  if (c.page === 'research-civil') return flatten(tree(c.page));
   // 헌법재판소 주요결정·전원합의체: 고른 선고연도 탭의 판례(+ 지금 판례)만, 목록과 같은 최신순 — 이전/다음으로 꺼 둔 탭이 켜지지 않게
   if (tabsOf(c.page).length) {
     const visible = new Set(visibleCases(c.page).map(x => x.id));
@@ -1047,7 +1065,7 @@ function entryHTML(c, terms) {
   return `<li class="entry${c.id === S.caseId ? ' cur' : ''}" data-id="${c.id}">
     <a class="entry-main" href="${caseHref(c)}"${c.id === S.caseId ? ' aria-current="true"' : ''}>
       <span class="t">${terms && terms.length ? markText(c.title, terms) : esc(c.title)}</span>
-      <span class="m">${courtIcon(c)}<span class="ct">${esc(c.citation)}${S.view === 'bookmarks' ? ` <span class="pg">· ${esc(pageOf(c.page).label)}</span>` : ''}</span>${c.result ? `<span class="res">${esc(c.result)}</span>` : ''}</span>
+      <span class="m">${courtIcon(c)}<span class="ct">${esc(c.citation)}${standardBadge(c)}${S.view === 'bookmarks' ? ` <span class="pg">· ${esc(pageOf(c.page).label)}</span>` : ''}</span>${c.result ? `<span class="res">${esc(c.result)}</span>` : ''}</span>
     </a>
     <button class="star${bm ? ' on' : ''}" data-bm="${c.id}" aria-label="${bm ? '북마크 해제' : '북마크'}" aria-pressed="${bm}"><svg class="ic"><use href="#i-star"/></svg></button>
   </li>`;
@@ -1060,6 +1078,7 @@ function listHTML(content) {
 function treeHTML(pageId) { return listHTML(treeMarkup(pageId)); }
 function treeMarkup(pageId) {
   const pg = pageOf(pageId); const nodes = tree(pageId);
+  if (pageId === 'research-civil' && !S.researchVolumes.length) return '<div class="annual-note">표시할 권을 선택하세요.</div>';
   if (pg.group === 'annual') {
     const terms = annualTerms(), narrowed = terms.length > 0 || S.annual.court !== 'all' || S.annual.enbanc;
     if (!CASES.some(c => c.page === pageId && yearOn(annualYear(c)))) return `<div class="annual-note">${esc(yearsLabel())} 판례는 아직 수록되지 않았습니다.</div>`;
@@ -1069,7 +1088,7 @@ function treeMarkup(pageId) {
     const yearNode = y => `<details class="lv2" open><summary><span class="tri">▶</span><span>${esc(y.label)}</span><span class="lead"></span><span class="cnt">${y.count}</span></summary>${entries(y.cases, terms)}</details>`;
     return `<div class="toc flat annual">${shown.map(n => `<details class="lv1${n.count ? '' : ' empty'}"${n.count ? ' open' : ''}><summary><span class="tri">▶</span><span>${esc(n.label)}</span>${n.sub ? `<span class="fsub">${esc(n.sub)}</span>` : ''}<span class="lead"></span><span class="cnt">${n.count}</span></summary>${n.children.length ? n.children.map(yearNode).join('') : n.count ? entries(n.cases, terms) : '<div class="empty-note">수록 예정</div>'}</details>`).join('')}</div>`;
   }
-  if (pg.group === 'standard') {
+  if (hasToc(pg)) {
     const node = n => `<details class="lv${Math.min(n.depth, 3)}${n.count ? '' : ' empty'}"${n.count ? ' open' : ''}><summary><span class="tri">▶</span><span>${esc(n.label)}</span><span class="lead"></span><span class="cnt">${n.count}</span></summary>${n.cases && n.cases.length ? entries(n.cases) : ''}${n.children && n.children.length ? n.children.map(node).join('') : (n.count ? '' : '<div class="empty-note">수록 예정</div>')}</details>`;
     return `<div class="toc">${nodes.map(node).join('')}</div>`;
   }
@@ -1083,6 +1102,28 @@ function chipsHTML(pageId) {
   const f = S.filter[pageId];
   const subs = SUBJ.filter(s => s.standard !== false || CASES.some(c => c.page === pageId && c.subject === s.id));   // 지식재산권법은 사건이 있을 때만
   return `<div class="chips" role="group" aria-label="과목 필터"><button class="chip" data-filter="all" aria-pressed="${f === 'all'}">전체분야</button>${subs.map(s => `<button class="chip" data-filter="${s.id}" aria-pressed="${f === s.id}">${esc(s.label)}</button>`).join('')}</div>`;
+}
+
+/* ---------- 민법판례연구: 통합 목차 · 수록 권 선택 ---------- */
+function initResearchVolumes() {
+  const st = load('lawbook:research-civil', null);
+  if (!st || !Array.isArray(st.volumes) || st.volumes.some(v => v !== 1 && v !== 2)) return [1, 2];
+  return [1, 2].filter(v => st.volumes.includes(v));   // 명시적으로 모두 끈 상태도 유지한다.
+}
+function researchVolumesHTML() {
+  return `<div class="abar research-volumes"><div class="years" role="group" aria-label="수록 권 선택 (여러 권을 함께 고를 수 있습니다)">${[1, 2].map(v => `<button type="button" class="yr" data-rvolume="${v}" aria-pressed="${S.researchVolumes.includes(v)}">${v}권</button>`).join('')}</div></div>`;
+}
+function toggleResearchVolume(volume, button) {
+  if (S.view !== 'page' || S.page !== 'research-civil' || ![1, 2].includes(volume)) return;
+  const selected = S.researchVolumes;
+  S.researchVolumes = selected.includes(volume) ? selected.filter(v => v !== volume) : [1, 2].filter(v => v === volume || selected.includes(v));
+  save('lawbook:research-civil', { volumes: S.researchVolumes });
+  document.querySelectorAll('[data-rvolume]').forEach(b => b.setAttribute('aria-pressed', String(S.researchVolumes.includes(+b.dataset.rvolume))));
+  const list = $('#researchList'); if (list) list.innerHTML = treeHTML('research-civil');
+  if ($('#panel').classList.contains('show')) { const pt = $('#panelTree'); if (pt) pt.innerHTML = treeHTML('research-civil'); else renderPanel(); }
+  const c = byId.get(S.caseId), nav = $('#csBody .pn');
+  if (c && c.page === 'research-civil' && nav) nav.outerHTML = caseNavHTML(c);
+  nudgeYear(button);
 }
 
 /* ---------- 법률신문 주요판례: 연도(여러 개 선택) · 필터 · 찾기 ---------- */
@@ -1294,7 +1335,7 @@ function pageHTML() {
   return `<div class="runhead"><b>판례집</b><span>›</span><span>${esc(pg.section)}</span><span>›</span><span>${esc(pg.label)}</span></div>
   <div class="pagehead"><h1>${esc(pg.label)}</h1><p>${esc(PAGE_DESC[pg.id] || '')}</p></div>
   ${mx ? `<div class="maxim"><i>${esc(mx[0])}</i><span>${esc(mx[1])}</span></div>` : ''}
-  ${S.page === 'annual' ? `${annualBarHTML()}<div id="annualList">${treeHTML(S.page)}</div>` : tabsOf(S.page).length ? `${chipsHTML(S.page)}${yearTabsHTML('ytabs')}<div id="ylist">${treeHTML(S.page)}</div>` : chipsHTML(S.page) + treeHTML(S.page)}`;
+  ${S.page === 'research-civil' ? `${researchVolumesHTML()}<div id="researchList">${treeHTML(S.page)}</div>` : S.page === 'annual' ? `${annualBarHTML()}<div id="annualList">${treeHTML(S.page)}</div>` : tabsOf(S.page).length ? `${chipsHTML(S.page)}${yearTabsHTML('ytabs')}<div id="ylist">${treeHTML(S.page)}</div>` : chipsHTML(S.page) + treeHTML(S.page)}`;
 }
 function bookmarksHTML() {
   const list = bookmarkedCases();
@@ -1345,6 +1386,7 @@ function lawTitle() { const l = LawsModule.lawById(S.lawId); return (l ? l.name 
 /* ---------- rendering: case (inside the sheet) ---------- */
 function caseNavHTML(c) {
   const list = navList(c); const i = list.findIndex(x => x.id === c.id);
+  if (c.page === 'research-civil' && S.view !== 'bookmarks' && i < 0) return '<nav class="pn" aria-label="항목 넘김"><span class="dis"><span class="t">현재 선택한 권에 포함되지 않은 판례입니다.</span></span></nav>';
   const prev = i > 0 ? list[i - 1] : null, next = i >= 0 && i < list.length - 1 ? list[i + 1] : null;
   return `<nav class="pn" aria-label="항목 넘김">
       ${prev ? `<a href="${caseHref(prev)}"><span class="lbl">‹ 이전 항목</span><span class="t">${esc(prev.title)}</span></a>` : '<span class="dis"><span class="lbl">‹ 이전 항목</span><span class="t">처음 항목입니다</span></span>'}
@@ -1352,7 +1394,7 @@ function caseNavHTML(c) {
     </nav>`;
 }
 function caseHTML(c) {
-  const pg = pageOf(c.page); const crumbs = [pg.label, ...(pg.group === 'standard' ? tocLabels(c) : pg.group === 'annual' ? annualCrumbs(c) : [subjLabel(c.subject)])];
+  const pg = pageOf(c.page); const crumbs = [pg.label, ...(hasToc(pg) ? tocLabels(c) : pg.group === 'annual' ? annualCrumbs(c) : [subjLabel(c.subject)])];
   const bm = S.bookmarks.has(recordKey(c));
   const ftLabel = c.decisionType === '결정' || c.court === '헌법재판소' ? '결정문 전문' : '판결문 전문';
   return `<article class="case" aria-label="${esc(c.title)}">
@@ -1360,7 +1402,7 @@ function caseHTML(c) {
     <h1>${esc(c.title)}</h1>
     ${c.caseName && c.caseName !== c.title ? `<p class="casename">${esc(c.caseName)}</p>` : ''}
     <div class="cite"><div class="cite-main">${courtIcon(c)}<span class="txt">${esc(c.citation)}</span></div>
-      <div class="cite-sub">${c.result ? `<span class="badge">${esc(c.result)}</span>` : ''}<span class="badge sub">${esc(subjLabel(c.subject))}</span>
+      <div class="cite-sub">${c.result ? `<span class="badge">${esc(c.result)}</span>` : ''}${standardBadge(c)}<span class="badge sub">${esc(subjLabel(c.subject))}</span>
       <span class="acts"><button class="ibtn" id="btnCopy" aria-label="인용 표시 복사" title="인용 표시 복사"><svg class="ic"><use href="#i-copy"/></svg></button>
       <button class="ibtn${bm ? ' on' : ''}" id="btnBmCase" data-bm="${c.id}" aria-label="${bm ? '북마크 해제' : '북마크'}" aria-pressed="${bm}" title="북마크"><svg class="ic"${bm ? ' style="fill:currentColor"' : ''}><use href="#i-star"/></svg></button></span></div>
     </div>
@@ -1519,7 +1561,7 @@ function renderPanel() {
   body.innerHTML = pagesListHTML();
   if (S.view === 'bookmarks') return;
   if (S.page === 'laws') { if (lawsNav) body.appendChild(lawsNav); return; }
-  body.insertAdjacentHTML('beforeend', S.page === 'annual' ? `${yearsGroup('')}<div id="panelTree">${treeHTML(S.page)}</div>` : tabsOf(S.page).length ? `${chipsHTML(S.page)}${yearTabsHTML('')}<div id="panelTree">${treeHTML(S.page)}</div>` : chipsHTML(S.page) + treeHTML(S.page));
+  body.insertAdjacentHTML('beforeend', S.page === 'research-civil' ? `${researchVolumesHTML()}<div id="panelTree">${treeHTML(S.page)}</div>` : S.page === 'annual' ? `${yearsGroup('')}<div id="panelTree">${treeHTML(S.page)}</div>` : tabsOf(S.page).length ? `${chipsHTML(S.page)}${yearTabsHTML('')}<div id="panelTree">${treeHTML(S.page)}</div>` : chipsHTML(S.page) + treeHTML(S.page));
   body.querySelectorAll('.years').forEach(revealYears);
   const cur = body.querySelector('.entry.cur'); if (cur) cur.scrollIntoView({ block: 'center' });
 }
@@ -1770,6 +1812,7 @@ document.addEventListener('click', e => {
   if (e.target.closest('[data-retry-full]')) { const c = byId.get(S.caseId); if (c) { delete c._fullTextError; setTab(2); } return; }
   const go_ = e.target.closest('[data-go]'); if (go_) { go(`#/${go_.dataset.go}`); return; }
   const bm = e.target.closest('[data-bm]'); if (bm) { e.preventDefault(); toggleBm(bm.dataset.bm); return; }
+  const rv = e.target.closest('[data-rvolume]'); if (rv) { toggleResearchVolume(+rv.dataset.rvolume, rv); return; }
   /* 법률신문 주요판례: 연도 · 필터 · 찾기 */
   const yb = e.target.closest('[data-year]'); if (yb) { toggleYear(+yb.dataset.year, yb); return; }
   const afd = e.target.closest('[data-afield]');

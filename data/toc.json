@@ -1459,5 +1459,128 @@
     }
    ]
   }
+ ],
+ "research-civil": [
+  {
+   "id": "rc-1",
+   "label": "제1장 총칙편 분야",
+   "children": []
+  },
+  {
+   "id": "rc-2",
+   "label": "제2장 물권편 분야",
+   "children": []
+  },
+  {
+   "id": "rc-3",
+   "label": "제3장 채권편 분야",
+   "children": []
+  },
+  {
+   "id": "rc-4",
+   "label": "제4장 가족법 분야",
+   "children": []
+  }
+ ],
+ "research-criminal": [
+  {
+   "id": "rk-p1",
+   "label": "제1부  형법총론",
+   "children": [
+    {
+     "id": "rk-p1-1",
+     "label": "제1편  서  론",
+     "children": []
+    },
+    {
+     "id": "rk-p1-2",
+     "label": "제2편  범 죄 론",
+     "children": [
+      {
+       "id": "rk-p1-2-1",
+       "label": "제1장  구성요건",
+       "children": []
+      },
+      {
+       "id": "rk-p1-2-2",
+       "label": "제2장  위 법 성",
+       "children": []
+      },
+      {
+       "id": "rk-p1-2-3",
+       "label": "제3장  책 임 론",
+       "children": []
+      },
+      {
+       "id": "rk-p1-2-4",
+       "label": "제4장  미 수 론",
+       "children": []
+      },
+      {
+       "id": "rk-p1-2-5",
+       "label": "제5장  공 범 론",
+       "children": []
+      },
+      {
+       "id": "rk-p1-2-6",
+       "label": "제6장  죄 수 론",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "rk-p1-3",
+     "label": "제3편  형 벌 론",
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "rk-p2",
+   "label": "제2부  형법각론",
+   "children": [
+    {
+     "id": "rk-p2-1",
+     "label": "제1편  개인적 법익에 대한 죄",
+     "children": [
+      {
+       "id": "rk-p2-1-1",
+       "label": "제1장  생명과 신체에 대한 죄",
+       "children": []
+      },
+      {
+       "id": "rk-p2-1-2",
+       "label": "제2장  자유에 대한 죄",
+       "children": []
+      },
+      {
+       "id": "rk-p2-1-3",
+       "label": "제3장  명예와 신용에 대한 죄",
+       "children": []
+      },
+      {
+       "id": "rk-p2-1-4",
+       "label": "제4장  사생활의 평온에 대한 죄",
+       "children": []
+      },
+      {
+       "id": "rk-p2-1-5",
+       "label": "제5장  재산에 대한 죄",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "rk-p2-2",
+     "label": "제2편  사회적 법익에 대한 죄",
+     "children": []
+    },
+    {
+     "id": "rk-p2-3",
+     "label": "제3편  국가적 법익에 대한 죄",
+     "children": []
+    }
+   ]
+  }
  ]
 }

@@ -44,7 +44,6 @@ jobs:
         timeout-minutes: 5
         run: python -m pip install --retries 2 --timeout 30 -r requirements.txt
       - name: Verify preinstalled Chrome
-        if: github.event_name == 'workflow_dispatch' && inputs.run_browser_checks
         run: google-chrome --version
       - name: Install Korean fonts for screenshots
         if: github.event_name == 'workflow_dispatch' && inputs.run_browser_checks
@@ -74,6 +73,9 @@ jobs:
           print('data_version=' + json.loads((web / 'data-manifest.json').read_text())['version'])
           print('shell_sha256=' + hashlib.sha256((web / 'index.html').read_bytes()).hexdigest())
           PY
+      - name: Check research collections and volume filters
+        timeout-minutes: 5
+        run: python tools/test_research_ui.py --web
       - name: Run requested full browser checks
         if: github.event_name == 'workflow_dispatch' && inputs.run_browser_checks
         timeout-minutes: 45
