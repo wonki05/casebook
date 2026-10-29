@@ -323,7 +323,7 @@ class RuleTests(unittest.TestCase):
         self.assertTrue(L.check_standard_source(dict(src, verified=False)))
         self.assertTrue(L.check_standard_source(dict(src, pages=[0])))
         self.assertTrue(L.check_standard_source(dict(src, reviewedAt='2026/10/24')))
-        self.assertEqual(L.SOURCE_KEYS, frozenset({'issues', 'holdings', 'statutes', 'precedents', 'subjectStatutes', 'verified', 'book',
+        self.assertEqual(L.SOURCE_KEYS, frozenset({'issues', 'holdings', 'facts', 'statutes', 'precedents', 'subjectStatutes', 'verified', 'book',
                                                    'edition', 'file', 'pages', 'url', 'reviewedAt', 'reviewer', 'sha256'}))
 
 

@@ -68,12 +68,16 @@
 
 | 필드 | 형식·요건 |
 |---|---|
-| `verified` | PDF에서 추출한 문자열을 해당 쪽과 대조한 뒤에만 `true` |
+| `verified` | PDF의 해당 쪽 또는 XLSX의 해당 셀과 문자열을 대조한 뒤에만 `true` |
 | `book` | 책명, 비어 있지 않은 문자열 |
 | `edition` | 판본·발행연도, 비어 있지 않은 문자열 |
-| `file` | 출처 PDF 파일 경로, 비어 있지 않은 문자열 |
+| `file` | 출처 PDF 또는 XLSX 파일 경로, 비어 있지 않은 문자열 |
+| `format` | `pdf`(생략 시 기본값) 또는 `xlsx` |
 | `pages` | **PDF 기준 1부터 시작하는 양의 정수 쪽번호 배열**; 인쇄된 본문 쪽번호와 혼동하지 않음 |
-| `issues`, `holdings` | 선택, `[{"n": "[1]", "text": "PDF에서 추출·대조한 문자열"}]` |
+| `sheet`, `rows` | XLSX는 정확한 시트명과 **1부터 시작하는 양의 정수 행 번호 배열**을 필수로 기록하며 `pages`는 쓰지 않음 |
+| `preferred` | 사용자가 우선 적용하도록 지정한 판본이면 `true`; 명시되지 않은 출처 사이의 충돌은 임의로 해소하지 않음 |
+| `sha256` | 원본 검증용 해시; XLSX는 통합문서 파일 전체의 SHA-256 |
+| `issues`, `holdings`, `facts` | 선택, `[{"n": "[1]", "text": "원본에서 추출·대조한 문자열"}]`; `facts`는 행정법의 **사실관계의 요지**로, 판시사항으로 바꾸지 않음 |
 | `statutes`, `precedents`, `subjectStatutes` | 선택, 원문 문자열 배열 |
 
 - 우선순위는 **필드별** `standardSource` → 공식 추출본 → `editorial` 이다. 표준판례 필드를 **생략**하면 다음 출처로 넘어가지만, 검증된 빈 배열 `[]` 을 명시하면 그 필드는 비워 두며 낮은 우선순위의 내용을 넣지 않는다.
@@ -81,6 +85,21 @@
 - 모델이 작성한 요약·추측한 문구·사건목록만 있는 후보를 `verified: true` 인 표준판례 원문으로 등록하지 않는다. 자동 PDF 텍스트 추출만으로 검토 완료 처리하지 않는다.
 - 공식 전문은 `fetched/` 수집본을 사용한다. 원문별 저장 문자열을 의역·교정하거나 표준판례와 공식 문구를 합성하지 않는다.
 - 여러 검증된 표준판례 출처가 동일 필드에서 서로 다르면 임의 선택하지 않고 충돌로 보고하여 판본·쪽수·대상 재판을 확인한다. 법원·사건번호·날짜 자체가 다른 경우도 자동 병합하지 않는다.
+- 사용자가 지정한 XLSX 판본은 `preferred: true`로 기록하여 **필드별로** 이전 판본보다 우선 적용한다. 같은 책명·판본·파일·해시의 여러 시트/행에 동일 재판이 실렸으면 각 배치의 제목·목차는 유지하고 판시사항·요지·사실관계는 원문 항목을 합쳐 표시한다. 동일한 항목은 한 번 표시하되 모든 시트/행 출처를 기록한다. 서로 다른 통합문서나 해시의 충돌은 자동 병합하지 않는다.
+- 현재 출처를 교체할 때 기존 출처 전체는 `standardSourceHistory` 배열에 보존한다. 보관된 출처는 현재 표시 출처를 덮어쓰지 않으며, 공식 수집 파일은 수정하지 않는다.
+
+### 1-3-1. 표준판례 배치 `standard`
+
+`standard`는 같은 재판의 개별 수록 항목에 속하는 메타데이터다. `decisionId`나 공식 전문과 분리한다.
+
+- `entryId`: 시트·행·인용 순서로 구별하는 수록 항목 식별자. 한 재판이 여러 단원에 나오면 각각 별도의 배치를 유지한다.
+- `order`: 과목 내 표준판례 기재순서. 화면 기본 정렬에 사용하며 선고일자 빠른순서/느린순서도 선택할 수 있다.
+- `edition`, `file`, `sheet`, `row`: 수록 여부와 순서를 확인한 판본 및 위치. `sourceCitation`과 `sourceOrder`에는 원본 셀의 인용문·번호를 보존한다.
+- `removed: true`: 전체 목록과 동일 재판 여부를 대조하여 해당 판본에서 빠진 사실이 확인된 배치만 표시한다. 원래 제목 데이터는 유지하고 화면에서만 `*`를 붙인다. 상세 화면에는 `이 판례는 개정판에는 삭제되었음.`을 표시한다. 추가된 항목에는 별도의 개정/추가 표지를 붙이지 않는다.
+- `standardPrevious`: 이전 제목·목차·등록 순서를 보존한다. 원문 인용의 식별 오류를 공식 자료로 확인하여 고칠 때는 `identityHistory`에 근거와 종전 식별을 남기고, `legacyIds`와 등록부의 `identityAliases`로 기존 링크·메모·북마크를 연결한다.
+- 원본의 특정 요지가 다른 재판에 잘못 연결된 사실이 확인되면 원본 전체를 `standardSourceHistory`에 그대로 보관한 뒤 현재 출처의 해당 필드만 제외한다. `standardSourceReview` 등 검토 기록에 제외 필드·이유·공식 근거를 남기며 원문을 의역·교정하지 않는다. 유효한 필드가 모두 없어지면 현재 `standardSource`를 생략하고 공식 자료로 보충한다. 보관 출처는 현재 표시값에 재투입하지 않는다.
+
+XLSX 대조·반영은 `python tools/add_cases.py standard-import --from <원본.xlsx> --review <검토.json> --catalog <후보.json> --report <결과.json>`으로 수행한다. `--dry-run`은 등록부·목차를 저장하지 않고 같은 검증을 수행한다. 검토 파일은 `sourceSha256`으로 원본을 고정하고 `identityOverrides`, `tocRows`, `tocAdditions` 및 필요한 출처 제외 근거를 보존한다. 식별·목차가 해결되지 않으면 전체 반영을 중단한다.
 
 ### 1-4. 판례연구 배치 `research`
 
@@ -118,11 +137,11 @@
 
 ## 4. `data/cases.json` — 화면용 정규화 데이터 (tools/build_data.py 산출; 손대지 않음)
 registry + toc + fetched 를 합쳐 만든다. `pages`(표준판례는 standard 과목마다 `std-<subject>` 한 페이지 — tools/subjects.py 순서) · `subjects`([{id, label, standard}]) · `annual`({years: [2025, …, 2020] 최신순, fields: [{id, label, sub, subject}]}) · `yearTabs`({ccourt: [{id: "2026", label: "2026", from, to}] 한 해씩, enbanc: [{id: "2020+"|"2010s", label: "2020년 이후"|"2010년대", from, to}] 시대 탭 — 최신순; 헌법재판소 주요결정·대법원 전원합의체 선고연도 탭}) · `toc` · `cases`. 사건 주요 필드: page, citation("대법원 2026. 7. 22. 선고 2022도5937 전원합의체 판결"), citeShort("대판 2022도5937"),
-issues/holdings([{n:"[1]", text}]), statutes, precedents, subjectStatutes, fullText([{heading:"[주 문]", text}]), summaryType(standard|mixed|official|editorial), fieldSources, standardSource, courtId, caseNumberId, caseId, decisionId, result, annual({year, field, series, article, url} — annual 만).
+issues/holdings/facts([{n:"[1]", text}]), statutes, precedents, subjectStatutes, fullText([{heading:"[주 문]", text}]), summaryType(standard|mixed|official|editorial), fieldSources, standardSource, standard(수록 항목별 순서·제외 표시), courtId, caseNumberId, caseId, decisionId, result, annual({year, field, series, article, url} — annual 만).
 괄호는 화면용 조판에서 `[ ]` 로 통일된다(【 】 금지). 원출처 파일은 보존한다.
 
-`fieldSources` 는 `issues`, `holdings`, `statutes`, `precedents`, `subjectStatutes` 등 각 표시 필드의 출처를 기록한다.
-- 표준판례: `{"type":"standard","sources":[{"book":...,"edition":...,"file":...,"pages":[...]}]}`
+`fieldSources` 는 `issues`, `holdings`, `facts`, `statutes`, `precedents`, `subjectStatutes` 등 각 표시 필드의 출처를 기록한다.
+- 표준판례: `{"type":"standard","sources":[{"book":...,"edition":...,"file":...,"pages":[...]}]}`. XLSX 출처에는 `pages` 대신 `format:"xlsx", sheet, rows`를 기록한다.
 - 공식 자료: `{"type":"official","label":...,"url":...}`
 - 편집 요약: `{"type":"editorial","label":...}`
 - 자료 없음: `{"type":"missing"}`

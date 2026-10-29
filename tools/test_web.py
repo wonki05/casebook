@@ -50,9 +50,12 @@ async def ready(page):
 async def open_case(page, item, canonical=False):
     identity = item['decisionId'] if canonical else item['id']
     await page.evaluate('(hash) => { location.hash = hash; }', f'#/{item["page"]}/{identity}')
+    title = item['title']
+    if item['page'].startswith('std-') and item.get('standard', {}).get('removed') is True and not title.endswith('*'):
+        title += '*'
     await page.wait_for_function(
         '(title) => document.querySelector("#cs").classList.contains("show") && document.querySelector(".case h1")?.textContent === title',
-        arg=item['title'], timeout=10000)
+        arg=title, timeout=10000)
 
 async def check_fulltext(page, item, full):
     await page.locator('[data-tab="2"]').click()
