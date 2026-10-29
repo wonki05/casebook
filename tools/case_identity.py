@@ -8,6 +8,7 @@ import copy
 import datetime
 import re
 import unicodedata
+from subjects import SUBJECTS
 
 
 COURTS = {
@@ -50,7 +51,7 @@ CASE_SYMBOLS = {
     '헌마': 'heonma', '헌바': 'heonba', '헌사': 'heonsa', '헌아': 'heona',
     '헌자': 'heonja', '헌차': 'heoncha',
 }
-STANDARD_FIELDS = ('issues', 'holdings', 'statutes', 'precedents', 'subjectStatutes')
+STANDARD_FIELDS = ('issues', 'holdings', 'facts', 'statutes', 'precedents', 'subjectStatutes')
 IDENTITY_FIELDS = ('courtId', 'caseNumberId', 'caseId', 'decisionType', 'decisionId')
 _DOCKET = re.compile(r'^(\d{4}|\d{2})([가-힣]+)(\d+)$')
 
@@ -150,21 +151,38 @@ def identity(record, citation=''):
 
 
 def validate_standard_source(source):
-    """Check provenance structure. PDF comparison remains a human/agent review."""
+    """Check PDF/XLSX provenance; verification still requires the actual source."""
     if source is None:
         return
     if not isinstance(source, dict) or source.get('verified') is not True:
-        raise ValueError('standardSource는 PDF 원문 대조 후 verified:true여야 합니다')
-    allowed = set(STANDARD_FIELDS) | {'verified', 'book', 'edition', 'file', 'pages', 'url', 'reviewedAt', 'reviewer', 'sha256'}
+        raise ValueError('standardSource는 원문 대조 후 verified:true여야 합니다')
+    allowed = set(STANDARD_FIELDS) | {'verified', 'book', 'edition', 'file', 'pages', 'url', 'reviewedAt', 'reviewer', 'sha256',
+                                      'format', 'sheet', 'rows', 'preferred'}
     unknown = set(source) - allowed
     if unknown:
         raise ValueError(f'standardSource의 미지원 필드: {sorted(unknown)}')
     for key in ('book', 'edition', 'file'):
         if not isinstance(source.get(key), str) or not source[key].strip():
             raise ValueError(f'standardSource.{key} 출처 정보가 필요합니다')
-    pages = source.get('pages')
-    if not isinstance(pages, list) or not pages or any(type(p) is not int or p < 1 for p in pages):
-        raise ValueError('standardSource.pages는 PDF의 1부터 시작하는 실제 페이지 번호 배열이어야 합니다')
+    if 'preferred' in source and type(source['preferred']) is not bool:
+        raise ValueError('standardSource.preferred는 명시적으로 선택한 판본 여부를 나타내는 불리언이어야 합니다')
+    source_format = source.get('format', 'pdf')
+    if source_format == 'xlsx':
+        if not isinstance(source.get('sheet'), str) or not source['sheet'].strip():
+            raise ValueError('standardSource.sheet에 원본 통합문서의 시트명이 필요합니다')
+        rows = source.get('rows')
+        if not isinstance(rows, list) or not rows or any(type(r) is not int or r < 1 for r in rows):
+            raise ValueError('standardSource.rows는 시트의 1부터 시작하는 실제 행 번호 배열이어야 합니다')
+        if 'pages' in source:
+            raise ValueError('XLSX 출처는 PDF pages 대신 sheet와 rows를 사용해야 합니다')
+    elif source_format == 'pdf':
+        pages = source.get('pages')
+        if not isinstance(pages, list) or not pages or any(type(p) is not int or p < 1 for p in pages):
+            raise ValueError('standardSource.pages는 PDF의 1부터 시작하는 실제 페이지 번호 배열이어야 합니다')
+        if 'sheet' in source or 'rows' in source:
+            raise ValueError('PDF 출처에는 XLSX sheet/rows를 사용할 수 없습니다')
+    else:
+        raise ValueError(f'standardSource.format 미지원 형식: {source_format!r}')
     if not any(k in source for k in STANDARD_FIELDS):
         raise ValueError('standardSource에 검토된 텍스트 필드가 없습니다')
     for key in STANDARD_FIELDS:
@@ -173,7 +191,7 @@ def validate_standard_source(source):
         values = source[key]
         if not isinstance(values, list):
             raise ValueError(f'standardSource.{key}는 배열이어야 합니다')
-        if key in ('issues', 'holdings'):
+        if key in ('issues', 'holdings', 'facts'):
             if any(not isinstance(x, dict) or not isinstance(x.get('n'), str)
                    or not isinstance(x.get('text'), str) or not x['text'].strip() for x in values):
                 raise ValueError(f'standardSource.{key}는 {{n, text}} 배열이어야 합니다')
@@ -182,22 +200,65 @@ def validate_standard_source(source):
 
 
 def standard_sources_by_decision(records, identities):
-    """Share book fields among placements; conflicting verified texts are errors."""
-    out = {}
+    """Share adjudication summaries while preserving independent placements.
+
+    Explicitly preferred editions win per field. Within the same XLSX workbook,
+    separate section rows are complementary excerpts and are combined verbatim.
+    Conflicts between other verified sources still fail closed. Archived sources
+    are retained and checked, but cannot silently override current selections.
+    """
+    collected = {}
+    subject_order = {s['id']: i for i, s in enumerate(SUBJECTS)}
     for record in records:
+        history = record.get('standardSourceHistory', [])
+        if not isinstance(history, list):
+            raise ValueError(f'{record["id"]}: standardSourceHistory는 출처 배열이어야 합니다')
+        for archived in history:
+            validate_standard_source(archived)
         source = record.get('standardSource')
         if source is None:
             continue
         validate_standard_source(source)
         decision_id = identities[record['id']]['decisionId']
+        order = (subject_order.get(record.get('subject'), len(subject_order)),
+                 source.get('sheet', ''), min(source.get('rows') or source.get('pages') or [0]),
+                 str((record.get('standard') or {}).get('entryId', record['id'])))
+        collected.setdefault(decision_id, []).append((order, source))
+
+    out = {}
+    for decision_id, rows in collected.items():
         fields = out.setdefault(decision_id, {})
-        provenance = {k: copy.deepcopy(v) for k, v in source.items() if k not in STANDARD_FIELDS}
+        ordered = [source for _, source in sorted(rows, key=lambda row: row[0])]
         for key in STANDARD_FIELDS:
-            if key not in source:
+            candidates = [source for source in ordered if key in source]
+            preferred = [source for source in candidates if source.get('preferred') is True]
+            if preferred:
+                candidates = preferred
+            if not candidates:
                 continue
-            if key in fields and fields[key]['value'] != source[key]:
-                raise ValueError(f'{decision_id}: 서로 다른 표준판례 {key} 충돌 — 출처를 대조해 우선 판본을 명시하세요')
-            item = fields.setdefault(key, {'value': copy.deepcopy(source[key]), 'sources': []})
-            if provenance not in item['sources']:
-                item['sources'].append(provenance)
+            groups = {}
+            for source in candidates:
+                # Only explicit workbook rows are complementary. PDF excerpts
+                # keep the strict, pre-existing equality requirement.
+                group = (('xlsx', source['book'], source['edition'], source['file'], source.get('sha256'))
+                         if source.get('format') == 'xlsx' else ('single', id(source)))
+                if group not in groups:
+                    groups[group] = {'value': copy.deepcopy(source[key]), 'sources': []}
+                elif source.get('format') == 'xlsx':
+                    for value in source[key]:
+                        if value not in groups[group]['value']:
+                            groups[group]['value'].append(copy.deepcopy(value))
+                item = groups[group]
+                provenance = {k: copy.deepcopy(v) for k, v in source.items() if k not in STANDARD_FIELDS}
+                if provenance not in item['sources']:
+                    item['sources'].append(provenance)
+            chosen = None
+            for item in groups.values():
+                if chosen is None:
+                    chosen = item
+                elif chosen['value'] != item['value']:
+                    raise ValueError(f'{decision_id}: 서로 다른 표준판례 {key} 충돌 — 출처를 대조해 우선 판본을 명시하세요')
+                else:
+                    chosen['sources'].extend(p for p in item['sources'] if p not in chosen['sources'])
+            fields[key] = chosen
     return out

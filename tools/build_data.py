@@ -280,7 +280,7 @@ def apply_source_precedence(rec, standard_fields, official_fields, editorial):
                               'url': official_source.get('url', '')}
         else:
             raw = editorial.get('holding' if field == 'holdings' else field)
-            if field in ('issues', 'holdings'):
+            if field in ('issues', 'holdings', 'facts'):
                 rec[field] = editorial_items(raw)
             else:
                 rec[field] = [str(x).strip() for x in (raw or []) if str(x).strip()]
@@ -393,6 +393,7 @@ def build():
             "group": group,
             "page": page,
             "research": research,
+            "standard": copy.deepcopy(c.get('standard')) if group == 'standard' else None,
             "isStandard": identities[cid]['decisionId'] in standard_ids,
             "officialSourceId": official_source_id,
             "subject": c.get('subject') or 'constitution',
@@ -411,6 +412,7 @@ def build():
             "holdingLabel": "결정요지" if court == '헌법재판소' else "판결요지",
             "issues": [],
             "holdings": [],
+            "facts": [],
             "subjectStatutes": [],
             "statutes": [],
             "precedents": [],
@@ -420,6 +422,8 @@ def build():
             "tags": c.get('tags') or [],
         }
         rec.update(identities[cid])
+        if c.get('legacyIds'):
+            rec['legacyIds'] = copy.deepcopy(c['legacyIds'])
         for k in ('selectionReason', 'keywords', 'difficulty', 'memo'):
             if c.get(k):
                 rec[k] = c[k]
@@ -478,12 +482,14 @@ def build():
             stats["fullText"] += 1
         cases.append(rec)
 
-    # order: by group order, then subject order, then tocPath, then date
+    # Placement order belongs to the book entry; decision date remains a UI option.
     gi = {g["id"]: i for i, g in enumerate(GROUPS)}
     si = {s["id"]: i for i, s in enumerate(SUBJECTS)}
     cases.sort(key=lambda r: (gi[r["group"]], si.get(r["subject"], 9),
                               [] if r['group'] == 'research' else r["tocPath"],
-                              (r.get('research') or {}).get('order', 0), r["decisionDate"]))
+                              ((r.get('research') or {}).get('order', 0) if r['group'] == 'research' else
+                               (r.get('standard') or {}).get('order', 10**9) if r['group'] == 'standard' else 0),
+                              r["decisionDate"]))
 
     # 법률신문 주요판례 페이지: 연도 버튼(최신 → 과거)과 분야 구분(tools/subjects.py 의 ANNUAL_FIELDS 순서)
     years_in = [r["annual"]["year"] for r in cases if r["annual"] and isinstance(r["annual"].get("year"), int)]

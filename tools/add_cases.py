@@ -342,6 +342,72 @@ def cmd_research_import(a):
         print('--dry-run: 저장하지 않음')
 
 
+def cmd_standard_import(a):
+    """Reconcile an intact standard workbook; never edit official fetch files."""
+    from standard_xlsx import read_workbook, assign_toc, plan_import
+    reg, toc = load()
+    overrides = read_json(a.overrides) if a.overrides else {}
+    mapping = read_json(a.toc_map) if a.toc_map else {}
+    if a.review:
+        import hashlib
+        if a.overrides or a.toc_map:
+            raise SystemExit('--review는 --overrides/--toc-map과 함께 사용할 수 없습니다')
+        review = read_json(a.review)
+        if review.get('sourceSha256') != hashlib.sha256(Path(a.from_file).read_bytes()).hexdigest():
+            raise SystemExit('검토 목록의 원본 해시와 입력 XLSX가 다릅니다; 행별 보정을 다시 검토하세요')
+        overrides = {'rows': review.get('identityOverrides', {}),
+                     'legacyIdentityCorrections': review.get('legacyIdentityCorrections', {}),
+                     'legacySourceExclusions': review.get('legacySourceExclusions', {})}
+        mapping = {'rows': review.get('tocRows', {}), 'tocAdditions': review.get('tocAdditions', [])}
+    paths = mapping.get('rows', mapping)
+    try:
+        toc_changed = False
+        for addition in mapping.get('tocAdditions', []):
+            idx = toc_index(toc)
+            subject, parent, tid = addition['subject'], addition.get('parent'), addition['id']
+            if subject not in STANDARD_IDS:
+                raise ValueError('목차 추가 과목이 아님: ' + subject)
+            if tid in idx:
+                if idx[tid][0] != subject or idx[tid][2]['label'] != addition['label']:
+                    raise ValueError('기존 목차와 추가 지시 충돌: ' + tid)
+                continue
+            if parent and (parent not in idx or idx[parent][0] != subject or len(idx[parent][1]) >= 3):
+                raise ValueError('추가 목차 parent 경로 오류: ' + str(parent))
+            node = {'id': tid, 'label': addition['label'], 'children': []}
+            (idx[parent][2].setdefault('children', []) if parent else toc.setdefault(subject, [])).append(node)
+            toc_changed = True
+        catalog = assign_toc(read_workbook(a.from_file, reg, overrides), reg, toc, paths)
+        if a.catalog:
+            Path(a.catalog).parent.mkdir(parents=True, exist_ok=True)
+            Path(a.catalog).write_text(json.dumps(catalog, ensure_ascii=False, indent=2), encoding='utf-8')
+        if catalog.get('conflicts') or catalog.get('unresolvedToc'):
+            result = {k: catalog[k] for k in ('source', 'conflicts', 'unresolvedToc', 'subjects')}
+            if a.report:
+                Path(a.report).parent.mkdir(parents=True, exist_ok=True)
+                Path(a.report).write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
+            raise ValueError(f"미해결 식별 {len(catalog['conflicts'])}건 / 목차 {len(catalog['unresolvedToc'])}건; 입력은 저장하지 않았습니다")
+        updated, result = plan_import(reg, toc, catalog, make_entry)
+        # Validate every source and full TOC path before either public data changes.
+        idx = toc_index(toc)
+        for record in updated['cases']:
+            if record['group'] == 'standard':
+                path = record.get('tocPath') or []
+                if not path or path[-1] not in idx or idx[path[-1]][0] != record['subject'] or idx[path[-1]][1] != path:
+                    raise ValueError('표준판례 목차 경로 오류: ' + record['id'])
+                validate_standard_source(record.get('standardSource'))
+        identities = {c['id']: identity(c, fetched_citation(c['id'])) for c in updated['cases']}
+        standard_sources_by_decision(updated['cases'], identities)
+        if not a.dry_run:
+            save(reg=updated, toc=toc if toc_changed else None)
+        if a.report:
+            Path(a.report).parent.mkdir(parents=True, exist_ok=True)
+            Path(a.report).write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
+        print(json.dumps({'summary': result['summary'], 'identityCorrections': len(result['identityCorrections']),
+                          'dryRun': a.dry_run}, ensure_ascii=False))
+    except ValueError as exc:
+        raise SystemExit(str(exc)) from exc
+
+
 def checked_case_display(value, record):
     """표시용 병합번호만 바꾼다. 대표 번호와 조회 키는 유지한다."""
     display = (value or '').strip()
@@ -633,6 +699,7 @@ def main():
     p = sub.add_parser('toc'); p.add_argument('toc_cmd', choices=['list', 'add', 'rename', 'replace']); p.add_argument('--from', dest='from_file', help='replace: 제안 목차 JSON({"proposed": [...]} 또는 배열)'); p.add_argument('--dry-run', action='store_true'); p.add_argument('--subject', choices=STANDARD_IDS); p.add_argument('--parent'); p.add_argument('--id'); p.add_argument('--label'); p.set_defaults(fn=cmd_toc)
     p = sub.add_parser('validate'); p.set_defaults(fn=cmd_validate)
     p = sub.add_parser('research-import'); p.add_argument('--from', dest='from_file', required=True); p.add_argument('--dry-run', action='store_true'); p.set_defaults(fn=cmd_research_import)
+    p = sub.add_parser('standard-import'); p.add_argument('--from', dest='from_file', required=True); p.add_argument('--review'); p.add_argument('--overrides'); p.add_argument('--toc-map'); p.add_argument('--catalog'); p.add_argument('--report'); p.add_argument('--dry-run', action='store_true'); p.set_defaults(fn=cmd_standard_import)
     p = sub.add_parser('migrate-identities'); p.set_defaults(fn=cmd_migrate_identities)
     a = ap.parse_args(); a.fn(a)
 
