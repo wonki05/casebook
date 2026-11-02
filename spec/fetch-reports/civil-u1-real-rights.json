@@ -1,0 +1,26 @@
+{
+ "unit": "u1-real-rights",
+ "label": "물권 추가분(총칙·점유권·공동소유·전세권·저당권)",
+ "total": 9,
+ "ok": 9,
+ "missing": [],
+ "flagged": [],
+ "waiting": [],
+ "retried": [
+  "std-civil-940",
+  "std-civil-941"
+ ],
+ "elapsedSec": 83,
+ "search": {
+  "std-civil-940": {
+   "outcome": "fetched",
+   "cite": "[대법원 2026. 2. 12. 선고 2024다229053 판결]",
+   "seq": "616709"
+  },
+  "std-civil-941": {
+   "outcome": "fetched",
+   "cite": "[대법원 2024. 12. 24. 선고 2020다275744 판결]",
+   "seq": "599857"
+  }
+ }
+}

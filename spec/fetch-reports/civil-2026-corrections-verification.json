@@ -1,0 +1,183 @@
+{
+ "scope": "사용자 승인(2026-11-02) 정정 적용 후 독립 검증",
+ "method": "Workflow 2회: ① 정정 문안 3건(949·957·987)을 사실관계·최소성·반증 3관점 판정자 9명이 검토 ② 정정 결과를 배치별 17명·파일별 5명 검증자와 지시 이행 점검자 1명이 확인(읽기 전용)",
+ "rewriteJudges": [
+  {
+   "id": "std-civil-949",
+   "verdicts": {
+    "fact": "accept",
+    "minimal": "accept",
+    "adversary": "accept"
+   }
+  },
+  {
+   "id": "std-civil-957",
+   "verdicts": {
+    "fact": "accept",
+    "minimal": "accept",
+    "adversary": "accept"
+   }
+  },
+  {
+   "id": "std-civil-987",
+   "verdicts": {
+    "fact": "accept",
+    "minimal": "accept",
+    "adversary": "accept"
+   }
+  }
+ ],
+ "verifications": [
+  {
+   "kind": "placement",
+   "id": "std-civil-935",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "kind": "placement",
+   "id": "std-civil-938",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "kind": "placement",
+   "id": "std-civil-939",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "kind": "placement",
+   "id": "std-civil-940",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "kind": "placement",
+   "id": "std-civil-941",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "kind": "placement",
+   "id": "std-civil-946",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "kind": "placement",
+   "id": "std-civil-948",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "kind": "placement",
+   "id": "std-civil-949",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "kind": "placement",
+   "id": "std-civil-953",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "kind": "placement",
+   "id": "std-civil-957",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "kind": "placement",
+   "id": "std-civil-959",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "kind": "placement",
+   "id": "std-civil-960",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "kind": "placement",
+   "id": "std-civil-972",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "kind": "placement",
+   "id": "std-civil-983",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "kind": "placement",
+   "id": "std-civil-984",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "kind": "placement",
+   "id": "std-civil-987",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "kind": "placement",
+   "id": "std-civil-990",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "kind": "file",
+   "id": "std-civil-956",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "kind": "file",
+   "id": "std-civil-963",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "kind": "file",
+   "id": "std-civil-944",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "kind": "file",
+   "id": "annual-2025-56",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "kind": "file",
+   "id": "std-civil-984",
+   "ok": true,
+   "problems": []
+  }
+ ],
+ "instructionAudit": {
+  "ok": true,
+  "missing": [],
+  "overreach": [
+   "CLAUDE.md와 AGENTS.md 절대 규칙 1에 승인된 공식 원문 정정을 예외로 허용하는 취지의 문구가 추가됐다. 사용자가 지시하지 않은 운영 규칙 문서 수정이며, 승인이 필요한 변경으로 보인다. data/schema.md에도 textCorrections, moveToHoldings, 승인된 공식 원문 정정 설명이 추가됐다.",
+   "tools/standard_xlsx.py 수정, tools/apply_fulltext_corrections.py 신규, 테스트 2개 신규, spec/CIVIL-2026-ADDITIONS-STATUS.md 수정이 있다. 정정을 적용하고 기록하기 위한 도구와 문서이며 데이터 범위를 넘는 변경은 아니다. 다만 지시에 명시된 파일은 아니다.",
+   "949·957·987 정정 문안은 사용자가 글자를 지정한 것이 아니라 작업자가 공식 원문에 맞춰 쓴 것이다. 957은 문장 일부를 통째로 바꾼다. 지시의 '내용 불일치' 항목 범위 안이고 상태 문서에 독립 검토 9명이 수용했다고 적혀 있지만, 사용자가 문안 자체를 승인했는지는 확인되지 않는다."
+  ],
+  "notes": [
+   "점검 방법: HEAD 대비 registry를 id별로 비교했고 fetched 변경 4건은 글자 단위로 비교했다. 변경된 registry id는 17건(935·938·939·940·941·946·948·949·953·957·959·960·972·983·984·987·990)이며 모두 지시 범위 안이다. 다른 배치의 수정은 없다. 엑셀 xlsx 파일은 수정되지 않았다. 빌드·검사·테스트는 읽기 전용 제약 때문에 실행하지 않았다.",
+   "지시 1 (984): registry의 caseNumber·caseId·decisionId·lookupKey가 2025다200820으로 바뀌었다. lawgo는 prec/614323이고, 이전 식별은 legacyIds와 identityHistory에 남았다. standardSource(책의 쟁점·요지)는 바뀌지 않았다. fetched/std-civil-984.json이 새로 생겼고 984.missing.json은 삭제됐다. 사용자 제시 판시사항은 984의 【판시사항】 섹션에만 [1]~[3]으로 반영됐다. 교체 전 문구는 corrections[].beforeText에, 출처 표시는 sectionSources에 보존됐다. 다른 판례에는 반영되지 않았다. 사용자가 제시한 원문 문구와의 일치는 이 점검에서 확인할 수 없었다.",
+   "지시 2: enBanc가 935·938·953·990에서 false에서 true로 바뀌었고 다른 사건은 바뀌지 않았다. 근거는 2026-review.json의 민법:53·166·389·862 패치와 각 identityReview다.",
+   "지시 3 글자 정정: 935(공동상속인들, 장남이 이미 사망한), 939(95다15575), 941(유익비), 948(입질채권), 949(소유권), 959(미치지 않으므로), 960(주채무), 983(특정한), 972(특별한)가 모두 반영됐다. 글자 단위 비교에서 승인된 글자 외의 변경은 없었다. 정정 전 전체 문자열은 standard.sourceReview.correctedSourceValues와 textCorrections에, 쪽·칸 이동이 있는 건은 standardSourceHistory에도 남았다.",
+   "지시 3 내용 불일치와 칸 어긋남: 949(선정이유 당사자 관계), 957, 987(제목 부제)이 반영됐다. 940·946·949는 쟁점 칸의 '<판결요지>'가 쟁점과 요지 칸으로 분리됐다. 요지 칸은 이전에 null이었고 쟁점 칸은 표지 앞 부분만 남았다. 표지 둘레 공백만 정리됐고 원래 쟁점 칸 값은 history에 보존됐다.",
+   "지시 4: 956(제3조의2 제2항), 963(판시사항·판결요지 모두 乙 회사에서 甲으로), 944(집합건물의 소유 및 관리에 관한 법률), 948 이유(annual-2025-56, 2019. 3. 29.)가 반영됐다. 각 fetched 파일의 corrections 배열에 정정 전·후 문구와 승인 정보가 남았다. annual-2025-56은 2025다212005로 std-civil-948과 같은 사건이다. 961·938·954·937 등 낮음·참고 등급 정정은 반영되지 않았다.",
+   "947 판단: registry의 947에는 standardSource와 editorial이 없고 선정이유만 있다. 책에 쟁점·요지가 없으므로 반영할 내용이 없는 것이 정상이다. 다만 화면이 공식 판시사항·판결요지로 보충하려면 fetched/std-civil-947.json이 있어야 하는데, 현재 저장소에는 그 파일도 .missing.json도 없고 registry의 lawgo도 비어 있다. 즉 947은 아직 공식 수집 전이며, 수집하기 전에는 화면에 판시사항·요지가 나오지 않을 것이다. 같은 상태인 사건으로 945도 확인했다. 947은 수집(fetch)을 해야 정상이라는 점을 사용자에게 알리는 것이 좋다.",
+   "원칙 준수: 엑셀 셀 값과 공식 원문의 정정 전 문구는 모두 보존됐다. 공식 원문 정정은 승인 명세(fulltext-corrections-20261102.json)에 있는 5건과 984 교체 1건만 적용됐다. 명세 파일은 PowerShell 출력 인코딩 때문에 한 번 깨져 보였으나 UTF-8로 다시 읽어 정상임을 확인했다."
+  ]
+ }
+}
