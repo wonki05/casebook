@@ -162,7 +162,8 @@ def brackets(blocks):
 
 
 def load_fetched(cid):
-    paths = sorted(glob.glob(os.path.join(FETCHED, cid + '.json')) + glob.glob(os.path.join(FETCHED, cid + '.part*.json')))
+    paths = sorted(glob.glob(os.path.join(FETCHED, cid + '.json')) + glob.glob(os.path.join(FETCHED, cid + '.part*.json'))
+                   + glob.glob(os.path.join(FETCHED, cid + '.supplement.json')))
     return load_fetched_paths(paths)
 
 
@@ -175,7 +176,7 @@ def load_fetched_records(records):
                 if not entry.name.endswith('.json') or not entry.is_file():
                     continue
                 stem = entry.name[:-5]
-                cid = stem.split('.part', 1)[0]
+                cid = re.split(r'\.(?:part|supplement)', stem, maxsplit=1)[0]
                 paths_by_id.setdefault(cid, []).append(entry.path)
     except FileNotFoundError:
         pass
@@ -186,18 +187,47 @@ def load_fetched_paths(paths):
     if not paths:
         return None
     merged = None
+    supplements = []
     for p in paths:
         try:
             d = json.loads(Path(p).read_text(encoding='utf-8'))
         except Exception as e:
             print('WARN bad json', p, e, file=sys.stderr)
             continue
-        if merged is None:
+        if p.endswith('.supplement.json'):
+            supplements.append(d)
+        elif merged is None:
             merged = d
             merged['sections'] = list(d.get('sections') or [])
         else:
             merged['sections'].extend(d.get('sections') or [])
+    if merged is None:
+        if supplements:
+            print('WARN 보충 구역만 있고 공식 수집본이 없음:', paths[0], file=sys.stderr)
+        return None
+    for supplement in supplements:
+        merge_supplement(merged, supplement)
     return merged
+
+
+def merge_supplement(merged, supplement):
+    """사용자 제공 보충 구역(<id>.supplement.json)을 공식 수집본 뒤에 붙인다. 공식본에 같은 제목의 구역이 있으면 공식본을 쓴다.
+
+    붙인 구역의 제목은 merged['supplements'] 에 출처 정보와 함께 남겨 필드별 출처 표시에 쓴다."""
+    have = {norm_heading(s.get('heading')) for s in merged['sections']}
+    added = []
+    for section in supplement.get('sections') or []:
+        key = norm_heading(section.get('heading'))
+        if key in have:
+            continue
+        have.add(key)
+        merged['sections'].append(dict(section))
+        added.append(section.get('heading'))
+    if added:
+        merged.setdefault('supplements', []).append({
+            'provider': supplement.get('provider', ''), 'sourceLabel': supplement.get('sourceLabel') or '사용자 제공 보충 자료',
+            'sourceHeader': supplement.get('sourceHeader', ''), 'sourceNote': supplement.get('sourceNote', ''),
+            'sourceUrl': supplement.get('sourceUrl', ''), 'suppliedAt': supplement.get('suppliedAt', ''), 'headings': added})
 
 
 def norm_heading(h):
@@ -296,7 +326,12 @@ def derive_result(fetched, orig):
     return '·'.join(dict.fromkeys(tags))
 
 
-def apply_source_precedence(rec, standard_fields, official_fields, editorial):
+# 공식 수집본의 구역 제목 → 표준 필드 (보충 구역이 필드를 채우면 그 필드의 출처는 보충 자료로 표시한다)
+FIELD_OF_HEADING = {'판시사항': 'issues', '판결요지': 'holdings', '결정요지': 'holdings', '심판대상조문': 'subjectStatutes',
+                    '참조조문': 'statutes', '참조판례': 'precedents'}
+
+
+def apply_source_precedence(rec, standard_fields, official_fields, editorial, supplemental=None):
     """Select each study field without modifying official or book source text."""
     sources = {}
     official_source = rec.get('source') or {}
@@ -311,7 +346,10 @@ def apply_source_precedence(rec, standard_fields, official_fields, editorial):
                     standard_provenance.append(copy.deepcopy(source))
         elif official_fields.get(field):
             rec[field] = copy.deepcopy(official_fields[field])
-            if official_source.get('label', '국가법령정보센터') == '국가법령정보센터':
+            if supplemental and field in supplemental:
+                sources[field] = {'type': 'supplemental', 'label': supplemental[field]['label'],
+                                  'url': supplemental[field].get('url', '')}
+            elif official_source.get('label', '국가법령정보센터') == '국가법령정보센터':
                 sources[field] = {'type': 'official', 'label': '국가법령정보센터',
                                   'url': official_source.get('url', '')}
             else:
@@ -472,9 +510,17 @@ def build():
             secs = fetched['sections']
             full = []
             in_full = False
+            supplement_of = {norm_heading(h): sup for sup in fetched.get('supplements') or [] for h in sup.get('headings') or []}
+            supplemental_fields, supplement_full = {}, []
             for s in secs:
                 h = norm_heading(s.get('heading'))
                 t = (s.get('text') or '').strip()
+                if h in supplement_of:
+                    sup = supplement_of[h]
+                    if h in FIELD_OF_HEADING:
+                        supplemental_fields[FIELD_OF_HEADING[h]] = {'label': sup['sourceLabel'], 'url': sup.get('sourceUrl', '')}
+                    elif t:
+                        supplement_full.append((h, sup))
                 if h == '판시사항':
                     rec["issues"] = split_items(t)
                 elif h in ('판결요지', '결정요지'):
@@ -505,7 +551,14 @@ def build():
             if lg.get('seq'):
                 rec["source"] = {"label": "국가법령정보센터", "url": f"https://www.law.go.kr/LSW/{'precInfoP' if lg.get('kind') == 'prec' else 'detcInfoP'}.do?{'precSeq' if lg.get('kind') == 'prec' else 'detcSeq'}={lg['seq']}"}
         official_fields = {key: copy.deepcopy(rec[key]) for key in STANDARD_FIELDS}
-        apply_source_precedence(rec, standard_by_decision.get(rec['decisionId'], {}), official_fields, ed)
+        apply_source_precedence(rec, standard_by_decision.get(rec['decisionId'], {}), official_fields, ed,
+                                supplemental_fields if fetched and fetched.get('sections') else None)
+        if fetched and fetched.get('sections') and (supplement_full or supplemental_fields):
+            # 공식 수집본에 사용자 제공 보충 구역을 붙인 경우: 전체를 공식 원문으로 표시하지 않고 구역별 출처를 함께 적는다.
+            supplement_labels = list(dict.fromkeys([sup['sourceLabel'] for _, sup in supplement_full]
+                                                   + [v['label'] for v in supplemental_fields.values()]))
+            rec['source'] = {**rec['source'], 'label': ' · '.join([rec['source']['label']] + supplement_labels)}
+            rec['supplements'] = copy.deepcopy(fetched.get('supplements'))
         stats[rec['summaryType']] += 1
         rec["result"] = derive_result(fetched, {'result': c.get('result', '')})
         if c.get("resultSource"):

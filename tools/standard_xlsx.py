@@ -26,7 +26,7 @@ CITATION = re.compile(r'^(.*?)\s+(?:(\d{4}-\d{2}-\d{2})\s+)?선고\s+(.+?)\s*$')
 
 TEXT_CORRECTION_FIELDS = ('title', 'issues', 'facts', 'holdings', 'selectionReason')
 # Row-patch keys that only reword source text and do not review identity.
-TEXT_PATCH_KEYS = {'textCorrections', 'moveToHoldings', 'evidence', 'reason'}
+TEXT_PATCH_KEYS = {'textCorrections', 'moveToHoldings', 'splitOff', 'evidence', 'reason'}
 
 
 def normalized_title(text):
@@ -89,6 +89,72 @@ def apply_text_corrections(key, patch, candidate, std_source):
         std_source['holdings'] = [{'n': '', 'text': tail}]
         applied.append({'field': 'issues→holdings', 'marker': marker, 'note': '표지 앞은 쟁점, 뒤는 요지로 나누고 표지 둘레 공백만 정리'})
     return applied, originals
+
+
+def split_off(key, n, spec, candidate, std_source, existing_by_key, count, source_file):
+    """검토한 행 패치의 splitOff: 셀 하나에 두 재판이 이어 붙은 행에서 둘째 재판의 줄을 떼어 새 배치 후보로 만든다.
+
+    spec: {"caseNumber", "date", "title", "tocPath", "court"?, "decisionType"?, "enBanc"?, "lines": {"issues": [줄 번호…], "holdings": […]},
+           "selectionReason": true?, "evidence", "reason"}. 줄 번호는 셀 문자열을 줄바꿈으로 나눈 0부터의 번호이고, 떼어낸 줄과 남은 줄을
+    합치면 원래 줄 전체여야 한다(글자는 바꾸지 않는다). 원래 행(base)에는 남은 줄만, 새 배치에는 떼어낸 줄만 둔다.
+    -> (새 배치 후보, 정정 전 셀 전체 문자열, 기록)"""
+    for field in ('caseNumber', 'date', 'title', 'tocPath', 'lines', 'evidence'):
+        if not spec.get(field):
+            raise ValueError(f'{key}: splitOff.{field} 가 필요합니다')
+    part = copy.deepcopy(candidate)
+    # 원래 행에서 이어받은 식별 값은 새 재판의 것이 아니다: 사건번호·법원·유형에서 다시 만든다.
+    for field in ('decisionType', 'matchExistingId', 'identityReview', 'lawgo', 'lookupKey') + IDENTITY_FIELDS:
+        part.pop(field, None)
+    for field in ('court', 'date', 'caseNumber', 'decisionType', 'title', 'tocPath', 'lawgo'):
+        if field in spec:
+            part[field] = copy.deepcopy(spec[field])
+    part['enBanc'] = bool(spec.get('enBanc', False))
+    part['newPlacement'] = True
+    part['selectionReason'] = ''   # 선정이유는 spec.selectionReason 으로 옮길 때만 갖는다(두 배치에 복제하지 않는다)
+    primary = primary_case_number(part['caseNumber'])
+    matches = existing_by_key.get((part['court'], primary, part['date']), [])
+    types = {c['decisionType'] for c in matches}
+    if 'decisionType' not in part and len(types) == 1:
+        part['decisionType'] = next(iter(types))
+    part['decisionType'] = decision_type(part)
+    part.update(identity({**part, 'decisionDate': part['date']}))
+    part_source = {k: copy.deepcopy(v) for k, v in std_source.items() if k not in ('issues', 'facts', 'holdings')}
+    originals, moved_fields = {}, []
+    for name, wanted in spec['lines'].items():
+        items = std_source.get(name)
+        if not items:
+            raise ValueError(f'{key}: splitOff 대상 칸 {name} 이 비어 있습니다')
+        text = items[0]['text']
+        lines = text.split('\n')
+        wanted = sorted(set(wanted))
+        if not wanted or any(type(i) is not int or not 0 <= i < len(lines) for i in wanted):
+            raise ValueError(f'{key}: splitOff.lines.{name} 줄 번호가 올바르지 않습니다(전체 {len(lines)}줄)')
+        kept = [l for i, l in enumerate(lines) if i not in wanted]
+        moved = [lines[i] for i in wanted]
+        if not kept or not any(l.strip() for l in kept) or not any(l.strip() for l in moved):
+            raise ValueError(f'{key}: splitOff.lines.{name} 은 남는 줄과 떼는 줄이 모두 있어야 합니다')
+        originals[name] = text
+        std_source[name] = [{'n': '', 'text': '\n'.join(kept)}]
+        part_source[name] = [{'n': '', 'text': '\n'.join(moved)}]
+        moved_fields.append({'field': name, 'lines': wanted, 'of': len(lines)})
+    if spec.get('selectionReason'):
+        reason = candidate.get('selectionReason')
+        if not reason:
+            raise ValueError(f'{key}: splitOff 로 옮길 선정이유 칸이 비어 있습니다')
+        originals['selectionReason'] = reason
+        part['selectionReason'] = reason
+        candidate['selectionReason'] = ''
+        moved_fields.append({'field': 'selectionReason', 'lines': 'all'})
+    part['standardSource'] = part_source
+    part['standard'] = {'edition': EDITION, 'entryId': f'{key}/{n}', 'order': round(count + (n - 1) / 10, 1), 'removed': False,
+                        'file': source_file,
+                        'sheet': part['sheet'], 'row': part['row'], 'sourceOrder': part.get('sourceOrder'),
+                        'sourceCitation': part['sourceCitation'], 'splitFrom': key}
+    part['identityReview'] = {'sourceCitation': part['sourceCitation'], 'evidence': copy.deepcopy(spec['evidence']),
+                              'reason': spec.get('reason', '한 행에 이어 붙은 다른 재판의 줄을 새 배치로 분리')}
+    record = {'field': 'splitOff', 'newEntryId': f'{key}/{n}', 'caseNumber': part['caseNumber'], 'date': part['date'],
+              'title': part['title'], 'moved': moved_fields, 'note': '떼어낸 줄과 남은 줄은 합치면 원래 줄 전체다; 글자는 바꾸지 않았다'}
+    return part, originals, record
 
 
 def read_workbook(path, reg, overrides=None):
@@ -186,7 +252,20 @@ def read_workbook(path, reg, overrides=None):
                 candidate['standardSource'] = std_source
             if 'selectionReason' not in patch.get('excludeFields', []):
                 candidate['selectionReason'] = vals[4] if vals[4] is not None else ''
+            parts = []
+            split_originals, split_records = {}, []
+            for n, spec in enumerate(patch.get('splitOff') or [], start=2):
+                if not patch.get('evidence'):
+                    raise ValueError(f'{key}: splitOff 의 evidence가 필요합니다')
+                part, originals_n, record_n = split_off(key, n, spec, candidate, std_source, existing_by_key, count, source_file)
+                for name, text in originals_n.items():
+                    split_originals.setdefault(name, text)
+                parts.append(part)
+                split_records.append(record_n)
             applied, originals = apply_text_corrections(key, patch, candidate, std_source)
+            if split_records:
+                applied = split_records + applied
+                originals = {**split_originals, **originals}
             candidate['standard'] = {'edition': EDITION, 'entryId': key, 'order': count, 'removed': False,
                                      'file': source_file, 'sheet': sheet, 'row': row,
                                      'sourceOrder': vals[0], 'sourceCitation': vals[2]}
@@ -208,6 +287,14 @@ def read_workbook(path, reg, overrides=None):
                 catalog['sourceAnomalies'].append(anomaly)
             candidate['status'] = 'ok'
             catalog['candidates'].append(candidate)
+            for part in parts:
+                # 인용 셀의 하이퍼링크는 원래 행의 재판을 가리키므로 떼어낸 배치에는 옮기지 않는다.
+                part['standard']['sourceReview'] = {
+                    'sheet': sheet, 'row': row, 'subject': subject, 'caseNumber': part['caseNumber'], 'title': part['title'],
+                    'sourceTitle': vals[1], 'sourceCitation': vals[2], 'splitFrom': key,
+                    'reason': part['identityReview']['reason'], 'evidence': copy.deepcopy(part['identityReview']['evidence'])}
+                part['status'] = 'ok'
+                catalog['candidates'].append(part)
         if count < 1:
             raise ValueError('빈 과목 시트: ' + sheet)
         catalog['subjects'][subject] = {'sheet': sheet, 'rows': count}
@@ -229,6 +316,10 @@ def reserved_placements(candidates):
 
 
 def choose_existing(candidate, records, used, reserved=None):
+    if candidate.get('newPlacement'):
+        # 한 행에서 떼어낸 배치: 같은 재판의 다른 배치를 가로채지 않고, 전에 가져온 자기 자신(entryId)만 다시 찾는다.
+        wanted = candidate['standard']['entryId']
+        return next((c for c in records if (c.get('standard') or {}).get('entryId') == wanted and c['id'] not in used), None)
     explicit = candidate.get('matchExistingId')
     if explicit:
         matches = [c for c in records if c['id'] == explicit]
@@ -449,6 +540,23 @@ def plan_import(reg, toc, catalog, make_entry):
                 reason = '다른 과목 시트에 수록됨: ' + ', '.join(sheets)
                 report['relocatedPlacements'].append(info(c) | {'reason': reason, 'currentSheets': sheets})
             report['retainedPlacements'].append(info(c) | {'reason': reason, 'currentSheets': sheets})
+    # 정정 전 decisionId 가 다른 배치의 현재 재판 ID 로 계속 쓰이면 별칭·옛 ID(legacyIds)로 이어 두지 않는다:
+    # 그렇게 하면 그 배치(예: 번호를 복제해 온 원본 쪽)의 개인 기록이 엉뚱한 재판으로 옮겨진다.
+    live = Counter(c['decisionId'] for c in updated['cases'])
+    aliases = updated.get('identityAliases', {})
+    by_id = {c['id']: c for c in updated['cases']}
+    for correction in report['identityCorrections']:
+        previous = ((correction.get('review') or {}).get('previousIdentity') or {}).get('decisionId')
+        case = by_id.get(correction['id'])
+        if not previous or not case or not live.get(previous):
+            continue
+        if aliases.get(previous) == case['decisionId']:
+            aliases.pop(previous)
+        if previous in (case.get('legacyIds') or []):
+            case['legacyIds'].remove(previous)
+            if not case['legacyIds']:
+                case.pop('legacyIds')
+        correction['aliasSkipped'] = '정정 전 재판 ID 가 다른 배치에서 계속 쓰여 별칭으로 잇지 않음'
     for subject, meta in catalog['subjects'].items():
         report['summary'][subject] = {**meta, 'addedPlacements': sum(c['subject'] == subject for c in report['added']),
             'removedPlacements': sum(c['subject'] == subject for c in report['removed']),

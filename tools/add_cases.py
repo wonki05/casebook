@@ -815,6 +815,35 @@ def cmd_migrate_identities(a):
     print(f'식별자 보완: {changed}건 (배치 id·공식 원문 파일명 보존)')
 
 
+def supplement_errors():
+    """data/fetched/<id>.supplement.json (사용자 제공 보충 구역) 구조 검사: 공식 수집본이 있어야 하고 출처를 밝혀야 한다."""
+    errs = []
+    for name in sorted(os.listdir(FETCHED)) if os.path.isdir(FETCHED) else []:
+        if not name.endswith('.supplement.json'):
+            continue
+        cid = name[:-len('.supplement.json')]
+        try:
+            supplement = read_json(os.path.join(FETCHED, name))
+        except ValueError as exc:
+            errs.append(f'{name}: JSON 오류 {exc}')
+            continue
+        if supplement.get('id') != cid:
+            errs.append(f"{name}: id {supplement.get('id')!r} 가 파일명과 다릅니다")
+        if not os.path.isfile(os.path.join(FETCHED, cid + '.json')):
+            errs.append(f'{name}: 공식 수집본 {cid}.json 이 없습니다')
+        for key in ('provider', 'sourceLabel', 'sourceHeader', 'sourceNote', 'suppliedAt'):
+            if not supplement.get(key):
+                errs.append(f'{name}: {key} 출처 정보가 없습니다')
+        sections = supplement.get('sections')
+        if not isinstance(sections, list) or not sections:
+            errs.append(f'{name}: sections 가 없습니다')
+            continue
+        for section in sections:
+            if not re.fullmatch(r'[【\[][^【】\[\]]+[】\]]', section.get('heading', '')) or not isinstance(section.get('text'), str):
+                errs.append(f"{name}: 구역 제목은 【…】 또는 […] 형식이어야 합니다: {section.get('heading')!r}")
+    return errs
+
+
 def cmd_validate(a):
     reg, toc = load()
     idx = toc_index(toc)
@@ -873,6 +902,7 @@ def cmd_validate(a):
             standard_sources_by_decision(reg['cases'], identities)
         except ValueError as exc:
             errs.append(str(exc))
+    errs.extend(supplement_errors())
     for e in errs: print('ERROR -', e)
     for warning in warnings: print('WARN -', warning)
     print(f'{len(reg["cases"])}건 점검, 오류 {len(errs)}개 / 경고 {len(warnings)}개')
