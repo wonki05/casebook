@@ -2,7 +2,11 @@
 
 This module never writes registry.json or toc.json. Use add_cases.py
 standard-import to commit its validated plan. Workbook cells remain source
-strings; reviewed citation corrections affect identity only.
+strings; reviewed citation corrections affect identity. Reviewed text
+corrections (textCorrections / moveToHoldings in a row patch, each needing the
+reviewer's evidence) are applied to the candidate only: the cell itself is
+never edited and the complete original strings stay in
+standard.sourceReview.correctedSourceValues next to every before/after pair.
 """
 import copy
 import hashlib
@@ -20,8 +24,71 @@ EDITION = '2026'
 CITATION = re.compile(r'^(.*?)\s+(?:(\d{4}-\d{2}-\d{2})\s+)?선고\s+(.+?)\s*$')
 
 
+TEXT_CORRECTION_FIELDS = ('title', 'issues', 'facts', 'holdings', 'selectionReason')
+# Row-patch keys that only reword source text and do not review identity.
+TEXT_PATCH_KEYS = {'textCorrections', 'moveToHoldings', 'evidence', 'reason'}
+
+
 def normalized_title(text):
     return re.sub(r'[\s:：·ㆍ,()（）\[\]－—–-]+', '', text or '')
+
+
+def apply_text_corrections(key, patch, candidate, std_source):
+    """Apply a reviewed row patch's text corrections to the candidate.
+
+    textCorrections: {field: [{"before": str, "after": str, "count": 1}]} replaces
+    an exact substring that must occur exactly `count` times in the cell text.
+    moveToHoldings: {"marker": str} splits a 쟁점 cell that carries the 판결요지
+    after a marker into issues (before) and holdings (after) when the 요지 cell
+    is empty; only the whitespace around the marker is trimmed.
+    Returns (applied corrections, complete original strings of corrected fields).
+    """
+    applied, originals = [], {}
+
+    def get(field):
+        if field in ('title', 'selectionReason'):
+            return candidate.get(field)
+        items = std_source.get(field)
+        return items[0]['text'] if items else None
+
+    def put(field, text):
+        if field in ('title', 'selectionReason'):
+            candidate[field] = text
+        else:
+            std_source[field][0]['text'] = text
+
+    for field, changes in (patch.get('textCorrections') or {}).items():
+        if field not in TEXT_CORRECTION_FIELDS:
+            raise ValueError(f'{key}: 정정할 수 없는 필드 {field!r}')
+        text = get(field)
+        if not isinstance(text, str) or not text:
+            raise ValueError(f'{key}: {field} 정정 대상 셀이 비어 있습니다')
+        originals.setdefault(field, text)
+        for change in changes:
+            before, after, count = change['before'], change['after'], change.get('count', 1)
+            if not before or before == after:
+                raise ValueError(f'{key}: {field} 정정 전후 문구가 비었거나 같습니다')
+            if text.count(before) != count:
+                raise ValueError(f'{key}: {field} 정정 전 문구가 {count}회 나오지 않습니다({text.count(before)}회): {before!r}')
+            text = text.replace(before, after)
+            applied.append({'field': field, 'before': before, 'after': after, **({'count': count} if count != 1 else {})})
+        put(field, text)
+    move = patch.get('moveToHoldings')
+    if move:
+        marker = move['marker']
+        text = get('issues')
+        if not text or 'holdings' in std_source:
+            raise ValueError(f'{key}: moveToHoldings 는 요지 칸이 비어 있고 쟁점 칸에 내용이 있을 때만 쓸 수 있습니다')
+        if text.count(marker) != 1:
+            raise ValueError(f'{key}: 표지 {marker!r} 가 쟁점 칸에 정확히 한 번 나와야 합니다({text.count(marker)}회)')
+        head, tail = (part.strip() for part in text.split(marker))
+        if not head or not tail:
+            raise ValueError(f'{key}: 표지 앞뒤에 쟁점과 요지가 모두 있어야 합니다')
+        originals.setdefault('issues', text)
+        std_source['issues'] = [{'n': '', 'text': head}]
+        std_source['holdings'] = [{'n': '', 'text': tail}]
+        applied.append({'field': 'issues→holdings', 'marker': marker, 'note': '표지 앞은 쟁점, 뒤는 요지로 나누고 표지 둘레 공백만 정리'})
+    return applied, originals
 
 
 def read_workbook(path, reg, overrides=None):
@@ -86,7 +153,7 @@ def read_workbook(path, reg, overrides=None):
             for field in ('court', 'date', 'caseNumber', 'decisionType', 'enBanc', 'tocPath', 'matchExistingId', 'title', 'lawgo'):
                 if field in patch:
                     candidate[field] = copy.deepcopy(patch[field])
-            if patch.get('evidence'):
+            if patch.get('evidence') and set(patch) - TEXT_PATCH_KEYS:
                 candidate['identityReview'] = {'sourceCitation': vals[2], 'evidence': copy.deepcopy(patch['evidence']),
                                                'reason': patch.get('reason', '출처 대조에 따른 식별 정보 보완')}
             try:
@@ -119,18 +186,24 @@ def read_workbook(path, reg, overrides=None):
                 candidate['standardSource'] = std_source
             if 'selectionReason' not in patch.get('excludeFields', []):
                 candidate['selectionReason'] = vals[4] if vals[4] is not None else ''
+            applied, originals = apply_text_corrections(key, patch, candidate, std_source)
             candidate['standard'] = {'edition': EDITION, 'entryId': key, 'order': count, 'removed': False,
                                      'file': source_file, 'sheet': sheet, 'row': row,
                                      'sourceOrder': vals[0], 'sourceCitation': vals[2]}
             if ws.cell(row, 3).hyperlink:
                 candidate['standard']['sourceUrl'] = ws.cell(row, 3).hyperlink.target
-            if patch.get('excludeFields') or ('title' in patch and patch['title'] != vals[1]):
+            if patch.get('excludeFields') or ('title' in patch and patch['title'] != vals[1]) or applied:
                 anomaly = {'sheet': sheet, 'row': row, 'subject': subject,
                            'caseNumber': candidate['caseNumber'], 'title': candidate['title'],
                            'sourceTitle': vals[1], 'sourceCitation': vals[2],
                            'excludedFields': patch.get('excludeFields', []),
                            'sourceValues': {name: vals[col] for col, name in (fields | {4: 'selectionReason'}).items() if name in patch.get('excludeFields', [])},
                            'reason': patch.get('reason'), 'evidence': patch.get('evidence')}
+                if applied:
+                    if not patch.get('evidence'):
+                        raise ValueError(f'{key}: 글자 정정의 evidence가 필요합니다')
+                    anomaly['textCorrections'] = applied
+                    anomaly['correctedSourceValues'] = originals
                 candidate['standard']['sourceReview'] = copy.deepcopy(anomaly)
                 catalog['sourceAnomalies'].append(anomaly)
             candidate['status'] = 'ok'
