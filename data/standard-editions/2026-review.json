@@ -2,7 +2,7 @@
   "sourceFile": "data/standard-cases/2026_표준판례_2차_배포용.xlsx",
   "sourceSha256": "630b2e6584e9ab38d87c5a122bcb039b7d248f66f9ea7a3a01a063d7d3380610",
   "edition": "2026",
-  "reviewedAt": "2026-10-29",
+  "reviewedAt": "2026-11-02",
   "identityOverrides": {
     "민법:571": {
       "date": "2000-12-22",
@@ -291,6 +291,240 @@
         "GitHub main 8f31923 data/registry.json identityAliases: sc-2013da63257-20131216-judgment → sc-2013da63257-20131226-judgment"
       ],
       "reason": "원격에 이미 반영된 공식 선고일 정정을 유지하고 통합문서의 날짜 오기를 식별에만 보정한다. 원래 인용문은 sourceCitation에 보존한다."
+    },
+    "민법:166": {
+      "enBanc": true,
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=607827",
+        "공식 인용문이 \"전원합의체 판결/결정\"으로 표기됨"
+      ],
+      "reason": "공식 인용문이 전원합의체인데 엑셀 인용에는 표시가 없어 정정한다. 사용자 지시(2026-11-02)"
+    },
+    "민법:389": {
+      "enBanc": true,
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=609489",
+        "공식 인용문이 \"전원합의체 판결/결정\"으로 표기됨"
+      ],
+      "reason": "공식 인용문이 전원합의체인데 엑셀 인용에는 표시가 없어 정정한다. 사용자 지시(2026-11-02)"
+    },
+    "민법:862": {
+      "enBanc": true,
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=241015",
+        "공식 인용문이 \"전원합의체 판결/결정\"으로 표기됨"
+      ],
+      "reason": "공식 인용문이 전원합의체인데 엑셀 인용에는 표시가 없어 정정한다. 사용자 지시(2026-11-02)"
+    },
+    "민법:53": {
+      "enBanc": true,
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=234931",
+        "공식 인용문이 \"전원합의체 판결\"으로 표기됨; 공식 판결요지 원문 대조"
+      ],
+      "reason": "공식 인용문이 전원합의체이고, 엑셀 요지의 오탈자 2곳(공동상속이들→공동상속인들, 장남이→장남이 이미)을 공식 판결요지에 맞춰 정정한다. 사용자 지시(2026-11-02)",
+      "textCorrections": {
+        "holdings": [
+          {
+            "before": "공동상속이들",
+            "after": "공동상속인들"
+          },
+          {
+            "before": "(장남이 사망한 경우에는 장손자)",
+            "after": "(장남이 이미 사망한 경우에는 장손자)"
+          }
+        ]
+      }
+    },
+    "민법:174": {
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=605943",
+        "공식 참조판례·이유: 대법원 1995. 8. 22. 선고 95다15575 판결; 국가법령정보 판례 검색에 95다155575 는 없음"
+      ],
+      "reason": "선정이유의 인용 사건번호에 숫자가 하나 더 들어간 오기를 정정한다. 사용자 지시(2026-11-02)",
+      "textCorrections": {
+        "selectionReason": [
+          {
+            "before": "선고 95다155575 판결",
+            "after": "선고 95다15575 판결"
+          }
+        ]
+      }
+    },
+    "민법:190": {
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=616709",
+        "엑셀 원본 쟁점 칸에 \"<판결요지>\" 표지와 요지 문단이 이어 붙고 요지 칸이 비어 있음"
+      ],
+      "reason": "쟁점 칸에 이어 붙은 판결요지를 표지로 나누어 쟁점과 요지 칸에 각각 둔다. 사용자 지시(2026-11-02)",
+      "moveToHoldings": {
+        "marker": "<판결요지>"
+      }
+    },
+    "민법:304": {
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=621907",
+        "엑셀 원본 쟁점 칸에 \"<판결요지>\" 표지와 요지 문단이 이어 붙고 요지 칸이 비어 있음"
+      ],
+      "reason": "쟁점 칸에 이어 붙은 판결요지를 표지로 나누어 쟁점과 요지 칸에 각각 둔다. 사용자 지시(2026-11-02)",
+      "moveToHoldings": {
+        "marker": "<판결요지>"
+      }
+    },
+    "민법:196": {
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=599857",
+        "민법 제203조: 점유자의 필요비·유익비 상환청구"
+      ],
+      "reason": "쟁점의 \"육비\"는 \"유익비\"의 오기이다. 사용자 지시(2026-11-02)",
+      "textCorrections": {
+        "issues": [
+          {
+            "before": "육비 상환청구권",
+            "after": "유익비 상환청구권"
+          }
+        ]
+      }
+    },
+    "민법:344": {
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=609583",
+        "입질채권: 질권의 목적이 된 채권"
+      ],
+      "reason": "선정이유의 \"입칠채권\"은 \"입질채권\"의 오기이다. 사용자 지시(2026-11-02)",
+      "textCorrections": {
+        "selectionReason": [
+          {
+            "before": "입칠채권",
+            "after": "입질채권"
+          }
+        ]
+      }
+    },
+    "민법:348": {
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=612867",
+        "공식 판시사항 [3]·이유 1.라·마: 인도를 구한 자는 설정자 甲으로부터 시설을 산 丁 회사, 상대방은 경매 매수인 乙 등에게서 임차해 볼링장을 운영하는 丙"
+      ],
+      "reason": "선정이유의 낱말 중복(\"소유의 소유권\")과 인도 청구 당사자 관계가 거꾸로 서술된 부분을 공식 판시사항에 맞춰 정정하고, 쟁점 칸에 이어 붙은 판결요지를 나눈다(정정 문안은 독립 검토 3관점 모두 수용). 사용자 지시(2026-11-02)",
+      "moveToHoldings": {
+        "marker": "<판결요지>"
+      },
+      "textCorrections": {
+        "selectionReason": [
+          {
+            "before": "그 종물의 소유의 소유권을",
+            "after": "그 종물의 소유권을"
+          },
+          {
+            "before": "위 부동산과 기계 등을 매수한 자가 위 설정자로부터 위 기계 등을 포함한 볼링장 내 시설을 매수한 자를 상대로 위 기계 등의 인도를 구한 사안에서",
+            "after": "위 부동산과 기계 등을 매수한 자로부터 이를 임차하여 볼링장을 운영하는 자를 상대로 위 설정자로부터 위 기계 등을 포함한 볼링장 내 시설을 매수한 자가 위 기계 등의 인도를 구한 사안에서"
+          }
+        ]
+      }
+    },
+    "민법:457": {
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=237055",
+        "공식 이유 2.가.3)·4): 하나은행 근저당권은 2016. 11. 4. 이미 설정, 수익자(피고)는 2019. 12. 31. 증여계약으로 지분 취득; 판시사항 [1]: 저당권이 설정된 부동산이 사해행위로 증여된 경우"
+      ],
+      "reason": "선정이유가 수익자가 새로 저당권을 취득한 사안으로 서술했으나 실제는 저당권이 설정된 부동산의 증여가 사해행위인 사안이므로 공식 판시사항과 같은 쪽 쟁점·요지에 맞춰 정정한다(정정 문안은 독립 검토 3관점 모두 수용). 사용자 지시(2026-11-02)",
+      "textCorrections": {
+        "selectionReason": [
+          {
+            "before": "부동산에 관하여 사해행위에 의하여 수익자가 새로 저당권을 취득하였는데 선행 저당권의 실행으로 사해의 저당권이 말소되고 수익자에게 돌아갈 배당금이",
+            "after": "부동산이 사해행위로 증여되었는데 선행 저당권의 실행 등으로 수익자에게 돌아갈 배당금청구권이 있음에도 그 배당금이"
+          },
+          {
+            "before": "사해행위인 저당권 취득의 원인행위를 취소한 후",
+            "after": "사해행위인 증여계약을 취소한 후"
+          }
+        ]
+      }
+    },
+    "민법:474": {
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=234449"
+      ],
+      "reason": "선정이유의 \"미치는 않으므로\"는 \"미치지 않으므로\"의 오기이다. 사용자 지시(2026-11-02)",
+      "textCorrections": {
+        "selectionReason": [
+          {
+            "before": "미치는 않으므로",
+            "after": "미치지 않으므로"
+          }
+        ]
+      }
+    },
+    "민법:496": {
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=241891"
+      ],
+      "reason": "선정이유의 \"주재무\"는 \"주채무\"의 오기이다(같은 문장 뒤에 \"주채무\"가 쓰임). 사용자 지시(2026-11-02)",
+      "textCorrections": {
+        "selectionReason": [
+          {
+            "before": "주재무",
+            "after": "주채무"
+          }
+        ]
+      }
+    },
+    "민법:648": {
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=239257"
+      ],
+      "reason": "제목의 낱말 안 공백(\"특 별한\")을 정정한다. 사용자 지시(2026-11-02)",
+      "textCorrections": {
+        "title": [
+          {
+            "before": "특 별한",
+            "after": "특별한"
+          }
+        ]
+      }
+    },
+    "민법:720": {
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=616515"
+      ],
+      "reason": "선정이유의 \"특졍한\"은 \"특정한\"의 오기이다. 사용자 지시(2026-11-02)",
+      "textCorrections": {
+        "selectionReason": [
+          {
+            "before": "특졍한",
+            "after": "특정한"
+          }
+        ]
+      }
+    },
+    "민법:776": {
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=615947",
+        "공식 원문에 \"임차\"·\"임대\"가 없고 공작물책임 (4)(std-civil-748)의 부제와 글자 그대로 같음; 같은 행의 쟁점: 민법 제758조 제1항 무과실책임의 입법 취지와 한계"
+      ],
+      "reason": "제목 부제가 공작물책임 (4)의 것을 옮겨 적은 것으로 보여, 같은 행의 쟁점에 맞춰 정정한다(정정 문안은 독립 검토 3관점 모두 수용). 사용자 지시(2026-11-02)",
+      "textCorrections": {
+        "title": [
+          {
+            "before": "임차인이 피해자인 경우, 소유자의 책임",
+            "after": "공작물 소유자의 무과실책임과 그 한계"
+          }
+        ]
+      }
+    },
+    "민법:733": {
+      "caseNumber": "2025다200820",
+      "matchExistingId": "std-civil-984",
+      "lawgo": {
+        "kind": "prec",
+        "seq": "614323"
+      },
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=614323",
+        "공식 판결 대법원 2025. 7. 3. 선고 2025다200820 판결의 이유가 엑셀 요지 3문단과 글자 그대로 일치; 국가법령정보센터·공식 API에 2025다200813 없음"
+      ],
+      "reason": "엑셀 인용의 2025다200813 은 공식 판례에 없고 같은 날 선고된 2025다200820 판결이 쟁점·요지 원문과 일치하여 사건번호를 정정한다. 사용자 지시(2026-11-02)"
     }
   },
   "legacyIdentityCorrections": {
@@ -28808,6 +29042,7 @@
     "원자료 셀 문자열을 수정하지 않는다. 식별 보정과 표제 보정 및 오염 필드 제외는 아래 근거를 따른다.",
     "XLSX에는 단원열이 없으므로 기존2023 목차 및 제목·쟁점 대조에 따른 편집상 배치를 기록한다.",
     "삭제 표시는 검토한 실질과목 식별과 나머지 소송법 시트의 인용을 전체 대조하여 판정한다.",
-    "기존 배치 ID와 개인기록 이전별칭을 유지한다."
+    "기존 배치 ID와 개인기록 이전별칭을 유지한다.",
+    "2026-11-02 사용자 승인: 민법 시트의 엑셀 오탈자·인용 오기를 identityOverrides 의 textCorrections / moveToHoldings / enBanc / caseNumber 로 정정한다. 통합문서 셀은 수정하지 않으며, 정정 전 전체 문자열은 등록부 standard.sourceReview.correctedSourceValues 에 정정 전·후 문구와 함께 보존한다."
   ]
 }
