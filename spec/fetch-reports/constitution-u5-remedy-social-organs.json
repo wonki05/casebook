@@ -1,0 +1,148 @@
+{
+ "unit": "u5-remedy-social-organs",
+ "label": "재판청구권·교육·근로·입법·행정부·기타",
+ "total": 18,
+ "ok": 18,
+ "missing": [],
+ "flagged": [
+  {
+   "id": "std-constitution-440",
+   "caseNumber": "2001헌가18",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2001헌가18 ≠ 공식 , 위헌"
+   ]
+  },
+  {
+   "id": "std-constitution-441",
+   "caseNumber": "2008헌바12",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2008헌바12 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-443",
+   "caseNumber": "2013헌마712",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2013헌마712 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-444",
+   "caseNumber": "2010헌마475",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2010헌마475 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-446",
+   "caseNumber": "2008헌가4",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2008헌가4 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-447",
+   "caseNumber": "2014헌바180",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2014헌바180 ≠ 공식 , 위헌"
+   ]
+  },
+  {
+   "id": "std-constitution-448",
+   "caseNumber": "2014헌마977",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2014헌마977 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-449",
+   "caseNumber": "2020헌마1377",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2020헌마1377 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-450",
+   "caseNumber": "2010헌바220",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2010헌바220 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-452",
+   "caseNumber": "2014헌마367",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2014헌마367 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-453",
+   "caseNumber": "2014헌가5",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2014헌가5 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-458",
+   "caseNumber": "2016헌나1",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2016헌나1 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-461",
+   "caseNumber": "2007헌마910",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2007헌마910 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-462",
+   "caseNumber": "2009헌바192",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2009헌바192 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-463",
+   "caseNumber": "2004헌가15",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2004헌가15 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-464",
+   "caseNumber": "2013헌바204",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2013헌바204 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-516",
+   "caseNumber": "96헌바62",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 96헌바62 ≠ 공식 "
+   ]
+  }
+ ],
+ "waiting": [],
+ "retried": [],
+ "elapsedSec": 174
+}
