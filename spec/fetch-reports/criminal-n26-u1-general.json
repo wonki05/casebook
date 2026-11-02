@@ -1,0 +1,34 @@
+{
+ "unit": "n26-u1-general",
+ "label": "총론 구성요건·위법성·미수론·공범론 추가분",
+ "total": 8,
+ "ok": 8,
+ "missing": [],
+ "flagged": [
+  {
+   "id": "std-criminal-509",
+   "caseNumber": "2023도10405",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ]
+  },
+  {
+   "id": "std-criminal-511",
+   "caseNumber": "2017도19025",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ]
+  },
+  {
+   "id": "std-criminal-512",
+   "caseNumber": "83도515",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ]
+  }
+ ],
+ "waiting": [],
+ "retried": [],
+ "elapsedSec": 56,
+ "search": {}
+}
