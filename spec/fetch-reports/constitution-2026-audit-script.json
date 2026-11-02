@@ -1,0 +1,12136 @@
+[
+ {
+  "id": "std-constitution-330",
+  "title": "자유민주적 기본질서의 의미와 내용",
+  "caseNumber": "2000헌마238",
+  "lookupKey": "2000헌마238",
+  "date": "2001-09-27",
+  "enBanc": false,
+  "tocPath": [
+   "hb-1",
+   "hb-1-2",
+   "hb-1-2-1"
+  ],
+  "decisionId": "cc-2000heonma238-20010927-decision",
+  "fetchedFrom": "std-constitution-330",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2001-09-27 선고 2000헌마238",
+  "xlsxRow": 10,
+  "flags": [],
+  "officialCitation": "[전원재판부 2000헌마238, 2001. 9. 27., 각하]",
+  "officialTitle": "제주4.3사건진상규명및희생자명예회복에관한특별법 의결행위 등 취소",
+  "seq": "150747",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    407
+   ],
+   [
+    "【결정요지】",
+    1638
+   ],
+   [
+    "【심판대상조문】",
+    1676
+   ],
+   [
+    "【참조조문】",
+    231
+   ],
+   [
+    "【참조판례】",
+    72
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    207
+   ],
+   [
+    "【주 문】",
+    17
+   ],
+   [
+    "【이 유】",
+    32173
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 0.8,
+   "holdings": 0.995,
+   "holdings_vs_headnote": 0.036
+  }
+ },
+ {
+  "id": "std-constitution-331",
+  "title": "소급입법금지원칙(3) ： 재조선 일본인 재산 처리 및 귀속 관련 미군 정청 법령 사례",
+  "caseNumber": "2018헌바88",
+  "lookupKey": "2018헌바88",
+  "date": "2021-01-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-1",
+   "hb-1-2",
+   "hb-1-2-2"
+  ],
+  "decisionId": "cc-2018heonba88-20210128-decision",
+  "fetchedFrom": "std-constitution-331",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2021-01-28 선고 2018헌바88",
+  "xlsxRow": 29,
+  "flags": [],
+  "officialCitation": "[전원재판부 2018헌바88, 2021. 1. 28.]",
+  "officialTitle": "재조선미국육군사령부군정청 법령 제2호 제4조 등 위헌소원",
+  "seq": "163523",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    270
+   ],
+   [
+    "【결정요지】",
+    820
+   ],
+   [
+    "【심판대상조문】",
+    108
+   ],
+   [
+    "【참조조문】",
+    317
+   ],
+   [
+    "【참조판례】",
+    187
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    93
+   ],
+   [
+    "[주 문]",
+    127
+   ],
+   [
+    "[이 유]",
+    11392
+   ]
+  ],
+  "coverage": {
+   "issues": 0.878,
+   "issues_vs_headnote": 0.878,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-332",
+  "title": "조약의 국내법적 효력",
+  "caseNumber": "97헌바65",
+  "lookupKey": "97헌바65",
+  "date": "1998-11-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-1",
+   "hb-1-3"
+  ],
+  "decisionId": "cc-97heonba65-19981126-decision",
+  "fetchedFrom": "std-constitution-332",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 1998-11-26 선고 97헌바65",
+  "xlsxRow": 43,
+  "flags": [],
+  "officialCitation": "[전원재판부 97헌바65, 1998. 11. 26.]",
+  "officialTitle": "특정범죄가중처벌등에관한법률 부칙 제2항 등 위헌소원",
+  "seq": "137370",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    345
+   ],
+   [
+    "【결정요지】",
+    1136
+   ],
+   [
+    "【심판대상조문】",
+    1022
+   ],
+   [
+    "【참조조문】",
+    369
+   ],
+   [
+    "【참조판례】",
+    7
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    61
+   ],
+   [
+    "【주 문】",
+    311
+   ],
+   [
+    "【이 유】",
+    9147
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 0.952,
+   "holdings_vs_headnote": 0.412
+  }
+ },
+ {
+  "id": "std-constitution-333",
+  "title": "조약의 위헌성 심사",
+  "caseNumber": "97헌가14",
+  "lookupKey": "97헌가14",
+  "date": "1999-04-29",
+  "enBanc": false,
+  "tocPath": [
+   "hb-1",
+   "hb-1-3"
+  ],
+  "decisionId": "cc-97heonga14-19990429-decision",
+  "fetchedFrom": "std-constitution-333",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 1999-04-29 선고 97헌가14",
+  "xlsxRow": 44,
+  "flags": [],
+  "officialCitation": "[ 97헌가14, 1999. 4. 29.]",
+  "officialTitle": "대한민국과아메리카합중국간의상호방위조약제4조에의한시설과구역및대한민국에서의합중국군대의지위에관한협정 제2조 제1의 (나)항 위헌제청",
+  "seq": "135443",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    155
+   ],
+   [
+    "【결정요지】",
+    689
+   ],
+   [
+    "【전문】",
+    107
+   ],
+   [
+    "【당 사 자】",
+    101
+   ],
+   [
+    "【주　　문】",
+    189
+   ],
+   [
+    "【이　　유】",
+    9081
+   ]
+  ],
+  "coverage": {
+   "issues": 0.911,
+   "issues_vs_headnote": 0.797,
+   "holdings": 0.994,
+   "holdings_vs_headnote": 0.648
+  }
+ },
+ {
+  "id": "std-constitution-334",
+  "title": "조약에 반하는 조례의 효력",
+  "caseNumber": "2004추10",
+  "lookupKey": "2004추10",
+  "date": "2005-09-09",
+  "enBanc": false,
+  "tocPath": [
+   "hb-1",
+   "hb-1-3"
+  ],
+  "decisionId": "sc-2004x00cd94z10-20050909-judgment",
+  "fetchedFrom": "std-constitution-334",
+  "ownFetch": true,
+  "xlsxCitation": "대법원 2005-09-09 선고 2004추10",
+  "xlsxRow": 46,
+  "flags": [],
+  "officialCitation": "[대법원 2005. 9. 9. 선고 2004추10 판결]",
+  "officialTitle": "전라북도학교급식조례재의결무효확인",
+  "seq": "84035",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    334
+   ],
+   [
+    "【판결요지】",
+    818
+   ],
+   [
+    "【참조조문】",
+    128
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【원 고】",
+    7
+   ],
+   [
+    "【피 고】",
+    39
+   ],
+   [
+    "【변론종결】",
+    12
+   ],
+   [
+    "【주 문】",
+    78
+   ],
+   [
+    "【이 유】",
+    4342
+   ]
+  ],
+  "coverage": {
+   "issues": 0.769,
+   "issues_vs_headnote": 0.5,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.821
+  }
+ },
+ {
+  "id": "std-constitution-335",
+  "title": "외국인의 기본권 주체성",
+  "caseNumber": "99헌마494",
+  "lookupKey": "99헌마494",
+  "date": "2001-11-29",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-1",
+   "hb-2-1-3"
+  ],
+  "decisionId": "cc-99heonma494-20011129-decision",
+  "fetchedFrom": "std-constitution-32",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2001-11-29 선고 99헌마494",
+  "xlsxRow": 53,
+  "flags": [],
+  "officialCitation": "[전원재판부 99헌마494, 2001. 11. 29.]",
+  "officialTitle": "재외동포의출입국과법적지위에관한법률 제2조 제2호 위헌확인",
+  "seq": "137537",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    292
+   ],
+   [
+    "【결정요지】",
+    3108
+   ],
+   [
+    "【심판대상조문】",
+    474
+   ],
+   [
+    "【참조조문】",
+    102
+   ],
+   [
+    "【참조판례】",
+    15
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    31
+   ],
+   [
+    "【주 문】",
+    187
+   ],
+   [
+    "【이 유】",
+    23994
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.251
+  }
+ },
+ {
+  "id": "std-constitution-336",
+  "title": "외국인의 기본권 주체성과 인간의 권리",
+  "caseNumber": "2008헌마430",
+  "lookupKey": "2008헌마430",
+  "date": "2012-08-23",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-1",
+   "hb-2-1-3"
+  ],
+  "decisionId": "cc-2008heonma430-20120823-decision",
+  "fetchedFrom": "std-constitution-336",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2012-08-23 선고 2008헌마430",
+  "xlsxRow": 54,
+  "flags": [],
+  "officialCitation": "[전원재판부 2008헌마430, 2012. 8. 23.]",
+  "officialTitle": "긴급보호 및 보호명령 집행행위 등 위헌확인",
+  "seq": "20540",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    249
+   ],
+   [
+    "【결정요지】",
+    1106
+   ],
+   [
+    "【참조조문】",
+    88
+   ],
+   [
+    "【참조판례】",
+    47
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당사자]",
+    100
+   ],
+   [
+    "[주문]",
+    20
+   ],
+   [
+    "[이유]",
+    22223
+   ]
+  ],
+  "coverage": {
+   "issues": null,
+   "issues_vs_headnote": null,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.188
+  }
+ },
+ {
+  "id": "std-constitution-337",
+  "title": "직업의 자유와 외국인의 기본권 주체성",
+  "caseNumber": "2013헌마359",
+  "lookupKey": "2013헌마359",
+  "date": "2014-08-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-1",
+   "hb-2-1-3"
+  ],
+  "decisionId": "cc-2013heonma359-20140828-decision",
+  "fetchedFrom": "std-constitution-337",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2014-08-28 선고 2013헌마359",
+  "xlsxRow": 55,
+  "flags": [],
+  "officialCitation": "[전원재판부 2013헌마359, 2014. 8. 28.]",
+  "officialTitle": "의료법 제27조 등 위헌확인",
+  "seq": "39577",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    296
+   ],
+   [
+    "【결정요지】",
+    788
+   ],
+   [
+    "【심판대상조문】",
+    125
+   ],
+   [
+    "【참조조문】",
+    13
+   ],
+   [
+    "【참조판례】",
+    166
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    49
+   ],
+   [
+    "[주 문]",
+    19
+   ],
+   [
+    "[이 유]",
+    6637
+   ]
+  ],
+  "coverage": {
+   "issues": 0.909,
+   "issues_vs_headnote": 0.333,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.287
+  }
+ },
+ {
+  "id": "std-constitution-338",
+  "title": "법인의 인격권 주체성",
+  "caseNumber": "2009헌가27",
+  "lookupKey": "2009헌가27",
+  "date": "2012-08-23",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-1",
+   "hb-2-1-3"
+  ],
+  "decisionId": "cc-2009heonga27-20120823-decision",
+  "fetchedFrom": "std-constitution-338",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2012-08-23 선고 2009헌가27",
+  "xlsxRow": 58,
+  "flags": [],
+  "officialCitation": "[전원재판부 2009헌가27, 2012. 8. 23.]",
+  "officialTitle": "방송법 제100조 제1항 제1호 위헌제청",
+  "seq": "20552",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    258
+   ],
+   [
+    "【결정요지】",
+    1496
+   ],
+   [
+    "【심판대상조문】",
+    207
+   ],
+   [
+    "【참조조문】",
+    212
+   ],
+   [
+    "【참조판례】",
+    177
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당사자】",
+    45
+   ],
+   [
+    "【주문】",
+    235
+   ],
+   [
+    "【이유】",
+    11376
+   ]
+  ],
+  "coverage": {
+   "issues": 0.966,
+   "issues_vs_headnote": 0.552,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.329
+  }
+ },
+ {
+  "id": "std-constitution-339",
+  "title": "기본권의 객관적 가치질서성과 기본권 보호의무",
+  "caseNumber": "2006헌마711",
+  "lookupKey": "2006헌마711",
+  "date": "2008-07-31",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-1",
+   "hb-2-1-4"
+  ],
+  "decisionId": "cc-2006heonma711-20080731-decision",
+  "fetchedFrom": "std-constitution-339",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2008-07-31 선고 2006헌마711",
+  "xlsxRow": 67,
+  "flags": [],
+  "officialCitation": "[전원재판부 2006헌마711, 2008. 7. 31.]",
+  "officialTitle": "입법부작위 위헌확인",
+  "seq": "130979",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    147
+   ],
+   [
+    "【결정요지】",
+    1054
+   ],
+   [
+    "【심판대상조문】",
+    2529
+   ],
+   [
+    "【참조조문】",
+    86
+   ],
+   [
+    "【참조판례】",
+    16
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    24
+   ],
+   [
+    "【주 문】",
+    16
+   ],
+   [
+    "【이 유】",
+    14743
+   ],
+   [
+    "【별 지】",
+    1246
+   ]
+  ],
+  "coverage": {
+   "issues": 0.788,
+   "issues_vs_headnote": 0.273,
+   "holdings": 0.994,
+   "holdings_vs_headnote": 0.2
+  }
+ },
+ {
+  "id": "std-constitution-340",
+  "title": "기본권 보장과 제도적 보장",
+  "caseNumber": "95헌바48",
+  "lookupKey": "95헌바48",
+  "date": "1997-04-24",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-1",
+   "hb-2-1-4"
+  ],
+  "decisionId": "cc-95heonba48-19970424-decision",
+  "fetchedFrom": "std-constitution-340",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 1997-04-24 선고 95헌바48",
+  "xlsxRow": 68,
+  "flags": [],
+  "officialCitation": "[전원재판부 95헌바48, 1997. 4. 24.]",
+  "officialTitle": "구 지방공무원법 제2조 제3항 제2호 나목 등 위헌소원",
+  "seq": "137426",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    114
+   ],
+   [
+    "【결정요지】",
+    849
+   ],
+   [
+    "【심판대상조문】",
+    508
+   ],
+   [
+    "【참조조문】",
+    201
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【주 문】",
+    136
+   ],
+   [
+    "【이 유】",
+    8359
+   ]
+  ],
+  "coverage": {
+   "issues": 0.953,
+   "issues_vs_headnote": 0.116,
+   "holdings": 0.998,
+   "holdings_vs_headnote": 0.468
+  }
+ },
+ {
+  "id": "std-constitution-341",
+  "title": "기본권의 대사인적 효력(1)",
+  "caseNumber": "2008다38288",
+  "lookupKey": "2008다38288",
+  "date": "2010-04-22",
+  "enBanc": true,
+  "tocPath": [
+   "hb-2",
+   "hb-2-1",
+   "hb-2-1-5"
+  ],
+  "decisionId": "sc-2008da38288-20100422-judgment",
+  "fetchedFrom": "std-constitution-341",
+  "ownFetch": true,
+  "xlsxCitation": "대법원 2010-04-22 선고 2008다38288",
+  "xlsxRow": 69,
+  "flags": [],
+  "officialCitation": "[대법원 2010. 4. 22. 선고 2008다38288 전원합의체 판결]",
+  "officialTitle": "손해배상(기)",
+  "seq": "146571",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    936
+   ],
+   [
+    "【판결요지】",
+    6199
+   ],
+   [
+    "【참조조문】",
+    366
+   ],
+   [
+    "【참조판례】",
+    314
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【원고, 상고인】",
+    23
+   ],
+   [
+    "【피고, 피상고인】",
+    34
+   ],
+   [
+    "【원심판결】",
+    34
+   ],
+   [
+    "【주 문】",
+    108
+   ],
+   [
+    "【이 유】",
+    35870
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-342",
+  "title": "기본권 경합의 해결 사례",
+  "caseNumber": "99헌마112",
+  "lookupKey": "99헌마112",
+  "date": "2000-12-14",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-1",
+   "hb-2-1-5"
+  ],
+  "decisionId": "cc-99heonma112-20001214-decision",
+  "fetchedFrom": "std-constitution-342",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2000-12-14 선고 99헌마112",
+  "xlsxRow": 72,
+  "flags": [],
+  "officialCitation": "[전원재판부 99헌마112, 2000. 12. 14.]",
+  "officialTitle": "교육공무원법 제47조 제1항 위헌확인",
+  "seq": "137531",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    173
+   ],
+   [
+    "【결정요지】",
+    1137
+   ],
+   [
+    "【심판대상조문】",
+    120
+   ],
+   [
+    "【참조조문】",
+    92
+   ],
+   [
+    "【참조판례】",
+    40
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    80
+   ],
+   [
+    "【주 문】",
+    60
+   ],
+   [
+    "【이 유】",
+    10946
+   ]
+  ],
+  "coverage": {
+   "issues": 0.973,
+   "issues_vs_headnote": 0.216,
+   "holdings": 0.988,
+   "holdings_vs_headnote": 0.224
+  }
+ },
+ {
+  "id": "std-constitution-343",
+  "title": "기본권 충돌의 해결 사례(2)",
+  "caseNumber": "2005헌바96",
+  "lookupKey": "2005헌바96",
+  "date": "2007-10-25",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-1",
+   "hb-2-1-5"
+  ],
+  "decisionId": "cc-2005heonba96-20071025-decision",
+  "fetchedFrom": "std-constitution-343",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2007-10-25 선고 2005헌바96",
+  "xlsxRow": 75,
+  "flags": [],
+  "officialCitation": "[전원재판부 2005헌바96, 2007. 10. 25.]",
+  "officialTitle": "민법 제406조 제1항 위헌소원",
+  "seq": "131599",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    164
+   ],
+   [
+    "【결정요지】",
+    1436
+   ],
+   [
+    "【심판대상조문】",
+    174
+   ],
+   [
+    "【참조조문】",
+    53
+   ],
+   [
+    "【참조판례】",
+    44
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    59
+   ],
+   [
+    "【주 문】",
+    48
+   ],
+   [
+    "【이 유】",
+    14078
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 0.536,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.253
+  }
+ },
+ {
+  "id": "std-constitution-344",
+  "title": "기본권 충돌의 해결 사례(3)",
+  "caseNumber": "2008다38288",
+  "lookupKey": "2008다38288",
+  "date": "2010-04-22",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-1",
+   "hb-2-1-5"
+  ],
+  "decisionId": "sc-2008da38288-20100422-judgment",
+  "fetchedFrom": "std-constitution-341",
+  "ownFetch": false,
+  "xlsxCitation": "대법원 2010-04-22 선고 2008다38288",
+  "xlsxRow": 76,
+  "flags": [],
+  "officialCitation": "[대법원 2010. 4. 22. 선고 2008다38288 전원합의체 판결]",
+  "officialTitle": "손해배상(기)",
+  "seq": "146571",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    936
+   ],
+   [
+    "【판결요지】",
+    6199
+   ],
+   [
+    "【참조조문】",
+    366
+   ],
+   [
+    "【참조판례】",
+    314
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【원고, 상고인】",
+    23
+   ],
+   [
+    "【피고, 피상고인】",
+    34
+   ],
+   [
+    "【원심판결】",
+    34
+   ],
+   [
+    "【주 문】",
+    108
+   ],
+   [
+    "【이 유】",
+    35870
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-345",
+  "title": "표현의 자유 및 죄형법정주의의 명확성 원칙",
+  "caseNumber": "2008헌바157",
+  "lookupKey": "2008헌바157",
+  "date": "2010-12-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-1",
+   "hb-2-1-6"
+  ],
+  "decisionId": "cc-2008heonba157-20101228-decision",
+  "fetchedFrom": "std-constitution-345",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2010-12-28 선고 2008헌바157",
+  "xlsxRow": 85,
+  "flags": [],
+  "officialCitation": "[전원재판부 2008헌바157, 2010. 12. 28.]",
+  "officialTitle": "전기통신기본법 제47조 제1항 위헌소원",
+  "seq": "14697",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    111
+   ],
+   [
+    "【결정요지】",
+    3282
+   ],
+   [
+    "【심판대상조문】",
+    48
+   ],
+   [
+    "【참조조문】",
+    64
+   ],
+   [
+    "【참조판례】",
+    89
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    166
+   ],
+   [
+    "[주 문]",
+    59
+   ],
+   [
+    "[이 유]",
+    24085
+   ]
+  ],
+  "coverage": {
+   "issues": 0.984,
+   "issues_vs_headnote": 0.938,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.081
+  }
+ },
+ {
+  "id": "std-constitution-346",
+  "title": "사형제와 생명권의 본질적 내용 침해금지",
+  "caseNumber": "2008헌가23",
+  "lookupKey": "2008헌가23",
+  "date": "2010-02-25",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-1",
+   "hb-2-1-2"
+  ],
+  "decisionId": "cc-2008heonga23-20100225-decision",
+  "fetchedFrom": "std-constitution-346",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2010-02-25 선고 2008헌가23",
+  "xlsxRow": 99,
+  "flags": [],
+  "officialCitation": "[전원재판부 2008헌가23, 2010. 2. 25.]",
+  "officialTitle": "형법 제41조 등 위헌제청",
+  "seq": "12983",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    606
+   ],
+   [
+    "【결정요지】",
+    8140
+   ],
+   [
+    "【심판대상조문】",
+    177
+   ],
+   [
+    "【참조조문】",
+    176
+   ],
+   [
+    "【참조판례】",
+    52
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    238
+   ],
+   [
+    "【주 문】",
+    337
+   ],
+   [
+    "【이 유】",
+    67017
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.49
+  }
+ },
+ {
+  "id": "std-constitution-347",
+  "title": "국가의 기본권 보호의무와 과소보호금지원칙",
+  "caseNumber": "2005헌마764",
+  "lookupKey": "2005헌마764",
+  "date": "2009-02-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-1",
+   "hb-2-1-5"
+  ],
+  "decisionId": "cc-2005heonma764-20090226-decision",
+  "fetchedFrom": "std-constitution-347",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2009-02-26 선고 2005헌마764",
+  "xlsxRow": 102,
+  "flags": [],
+  "officialCitation": "[전원재판부 2005헌마764, 2009. 2. 26.]",
+  "officialTitle": "교통사고처리특례법 제4조 제1항 위헌확인",
+  "seq": "125243",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    306
+   ],
+   [
+    "【결정요지】",
+    4673
+   ],
+   [
+    "【심판대상조문】",
+    343
+   ],
+   [
+    "【참조조문】",
+    343
+   ],
+   [
+    "【참조판례】",
+    68
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    86
+   ],
+   [
+    "【주 문】",
+    142
+   ],
+   [
+    "【이 유】",
+    20539
+   ]
+  ],
+  "coverage": {
+   "issues": 0.957,
+   "issues_vs_headnote": 0.957,
+   "holdings": 0.993,
+   "holdings_vs_headnote": 0.288
+  }
+ },
+ {
+  "id": "std-constitution-348",
+  "title": "국가의 환경권 보호의무와 과소보호금지원칙 위반(2)",
+  "caseNumber": "2020헌마389",
+  "lookupKey": "2020헌마389",
+  "date": "2024-08-29",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-1",
+   "hb-2-1-5"
+  ],
+  "decisionId": "cc-2020heonma389-20240829-decision",
+  "fetchedFrom": "annual-2024-01",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2024-08-29 선고 2020헌마389",
+  "xlsxRow": 104,
+  "flags": [],
+  "officialCitation": "[전원재판부 2020헌마389, 2024. 8. 29.]",
+  "officialTitle": "저탄소 녹색성장 기본법 제42조 제1항 제1호 위헌확인",
+  "seq": "193039",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    932
+   ],
+   [
+    "【결정요지】",
+    5623
+   ],
+   [
+    "【심판대상조문】",
+    574
+   ],
+   [
+    "【참조조문】",
+    517
+   ],
+   [
+    "【참조판례】",
+    806
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    39
+   ],
+   [
+    "【주 문】",
+    378
+   ],
+   [
+    "【이 유】",
+    85361
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 0.998,
+   "holdings_vs_headnote": 0.998
+  }
+ },
+ {
+  "id": "std-constitution-349",
+  "title": "유치장 내 화장실 시설의 인격권 침해",
+  "caseNumber": "2000헌마546",
+  "lookupKey": "2000헌마546",
+  "date": "2001-07-19",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-1"
+  ],
+  "decisionId": "cc-2000heonma546-20010719-decision",
+  "fetchedFrom": "std-constitution-349",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2001-07-19 선고 2000헌마546",
+  "xlsxRow": 107,
+  "flags": [],
+  "officialCitation": "[전원재판부 2000헌마546, 2001. 7. 19.]",
+  "officialTitle": "유치장내화장실설치및관리행위 위헌확인",
+  "seq": "134482",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    283
+   ],
+   [
+    "【결정요지】",
+    1463
+   ],
+   [
+    "【참조조문】",
+    110
+   ],
+   [
+    "【참조판례】",
+    25
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    63
+   ],
+   [
+    "【주 문】",
+    227
+   ],
+   [
+    "【이 유】",
+    7495
+   ]
+  ],
+  "coverage": {
+   "issues": 0.988,
+   "issues_vs_headnote": 0.915,
+   "holdings": 0.998,
+   "holdings_vs_headnote": 0.65
+  }
+ },
+ {
+  "id": "std-constitution-350",
+  "title": "안전벨트 착용 강제와 일반적 행동자유권",
+  "caseNumber": "2002헌마518",
+  "lookupKey": "2002헌마518",
+  "date": "2003-10-30",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-1"
+  ],
+  "decisionId": "cc-2002heonma518-20031030-decision",
+  "fetchedFrom": "std-constitution-350",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2003-10-30 선고 2002헌마518",
+  "xlsxRow": 111,
+  "flags": [],
+  "officialCitation": "[전원재판부 2002헌마518, 2003. 10. 30.]",
+  "officialTitle": "도로교통법 제118조 위헌확인",
+  "seq": "58398",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    240
+   ],
+   [
+    "【결정요지】",
+    959
+   ],
+   [
+    "【심판대상조문】",
+    490
+   ],
+   [
+    "【참조조문】",
+    206
+   ],
+   [
+    "【참조판례】",
+    45
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    22
+   ],
+   [
+    "【주 문】",
+    16
+   ],
+   [
+    "【이 유】",
+    21948
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 0.35,
+   "holdings_vs_headnote": 0.35
+  }
+ },
+ {
+  "id": "std-constitution-351",
+  "title": "서울광장 통행 저지와 일반적 행동자유권",
+  "caseNumber": "2009헌마406",
+  "lookupKey": "2009헌마406",
+  "date": "2011-06-30",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-1"
+  ],
+  "decisionId": "cc-2009heonma406-20110630-decision",
+  "fetchedFrom": "std-constitution-351",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2011-06-30 선고 2009헌마406",
+  "xlsxRow": 112,
+  "flags": [],
+  "officialCitation": "[지정재판부 2009헌마406, 2011. 6. 30.]",
+  "officialTitle": "서울특별시 서울광장 통행저지행위 위헌확인",
+  "seq": "16100",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    170
+   ],
+   [
+    "【결정요지】",
+    3562
+   ],
+   [
+    "【참조조문】",
+    234
+   ],
+   [
+    "【참조판례】",
+    146
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    60
+   ],
+   [
+    "[주 문]",
+    95
+   ],
+   [
+    "[이 유]",
+    20921
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 0.961,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.191
+  }
+ },
+ {
+  "id": "std-constitution-352",
+  "title": "연명치료 중단에 대한 자기결정권",
+  "caseNumber": "2008헌마385",
+  "lookupKey": "2008헌마385",
+  "date": "2009-11-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-1"
+  ],
+  "decisionId": "cc-2008heonma385-20091126-decision",
+  "fetchedFrom": "std-constitution-352",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2009-11-26 선고 2008헌마385",
+  "xlsxRow": 117,
+  "flags": [],
+  "officialCitation": "[전원재판부 2008헌마385, 2009. 11. 26.]",
+  "officialTitle": "입법부작위 위헌확인",
+  "seq": "140389",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    363
+   ],
+   [
+    "【결정요지】",
+    3442
+   ],
+   [
+    "【참조판례】",
+    336
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    79
+   ],
+   [
+    "【주 문】",
+    20
+   ],
+   [
+    "【이 유】",
+    19021
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-353",
+  "title": "시신의 처분에 대한 자기결정권",
+  "caseNumber": "2012헌마940",
+  "lookupKey": "2012헌마940",
+  "date": "2015-11-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-1"
+  ],
+  "decisionId": "cc-2012heonma940-20151126-decision",
+  "fetchedFrom": "std-constitution-353",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2015-11-26 선고 2012헌마940",
+  "xlsxRow": 118,
+  "flags": [],
+  "officialCitation": "[전원재판부 2012헌마940, 2015. 11. 26.]",
+  "officialTitle": "시체 해부 및 보존에 관한 법률 제12조 제1항 위헌확인",
+  "seq": "48374",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    172
+   ],
+   [
+    "【결정요지】",
+    708
+   ],
+   [
+    "【심판대상조문】",
+    62
+   ],
+   [
+    "【참조조문】",
+    243
+   ],
+   [
+    "【참조판례】",
+    34
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    24
+   ],
+   [
+    "[주 문]",
+    75
+   ],
+   [
+    "[이 유]",
+    6942
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.206
+  }
+ },
+ {
+  "id": "std-constitution-354",
+  "title": "전동킥보드 최고속도 제한과 소비자 자기결정권",
+  "caseNumber": "2017헌마1339",
+  "lookupKey": "2017헌마1339",
+  "date": "2020-02-27",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-1"
+  ],
+  "decisionId": "cc-2017heonma1339-20200227-decision",
+  "fetchedFrom": "std-constitution-354",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2020-02-27 선고 2017헌마1339",
+  "xlsxRow": 120,
+  "flags": [],
+  "officialCitation": "[전원재판부 2017헌마1339, 2020. 2. 27., 기각]",
+  "officialTitle": "안전확인대상생활용품의 안전기준 제2조 제2항 제32호 위헌확인",
+  "seq": "156143",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    441
+   ],
+   [
+    "【결정요지】",
+    1149
+   ],
+   [
+    "【심판대상조문】",
+    125
+   ],
+   [
+    "【참조조문】",
+    390
+   ],
+   [
+    "【참조판례】",
+    361
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    24
+   ],
+   [
+    "[주 문]",
+    16
+   ],
+   [
+    "[이 유]",
+    12297
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 0.757,
+   "holdings_vs_headnote": 0.757
+  }
+ },
+ {
+  "id": "std-constitution-355",
+  "title": "평등의 대사인효",
+  "caseNumber": "2009다19864",
+  "lookupKey": "2009다19864",
+  "date": "2011-01-27",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-2"
+  ],
+  "decisionId": "sc-2009da19864-20110127-judgment",
+  "fetchedFrom": "std-civil-03",
+  "ownFetch": false,
+  "xlsxCitation": "대법원 2011-01-27 선고 2009다19864",
+  "xlsxRow": 123,
+  "flags": [],
+  "officialCitation": "[대법원 2011. 1. 27. 선고 2009다19864 판결]",
+  "officialTitle": "손해배상(기)",
+  "seq": "148194",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    253
+   ],
+   [
+    "【판결요지】",
+    1741
+   ],
+   [
+    "【참조조문】",
+    122
+   ],
+   [
+    "【참조판례】",
+    56
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【원고, 피상고인】",
+    31
+   ],
+   [
+    "【피고, 상고인】",
+    45
+   ],
+   [
+    "【원심판결】",
+    34
+   ],
+   [
+    "【주 문】",
+    28
+   ],
+   [
+    "【이 유】",
+    8676
+   ]
+  ],
+  "coverage": {
+   "issues": 0.8,
+   "issues_vs_headnote": 0.467,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-356",
+  "title": "비교집단의 본질적 동일성 판단(1)",
+  "caseNumber": "2011헌마769",
+  "lookupKey": "2011헌마769",
+  "date": "2015-06-25",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-2"
+  ],
+  "decisionId": "cc-2011heonma769-20150625-decision",
+  "fetchedFrom": "std-constitution-356",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2015-06-25 선고 2011헌마769",
+  "xlsxRow": 125,
+  "flags": [],
+  "officialCitation": "[전원재판부 2011헌마769, 2015. 6. 25.]",
+  "officialTitle": "변호사시험법 제18조 제1항 위헌확인",
+  "seq": "46693",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    132
+   ],
+   [
+    "【결정요지】",
+    2114
+   ],
+   [
+    "【심판대상조문】",
+    50
+   ],
+   [
+    "【참조조문】",
+    56
+   ],
+   [
+    "【참조판례】",
+    414
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    21
+   ],
+   [
+    "[주 문]",
+    61
+   ],
+   [
+    "[이 유]",
+    26234
+   ]
+  ],
+  "coverage": {
+   "issues": 0.779,
+   "issues_vs_headnote": 0.298,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.356
+  }
+ },
+ {
+  "id": "std-constitution-357",
+  "title": "비교집단의 본질적 동일성 판단(2)",
+  "caseNumber": "2005헌마403",
+  "lookupKey": "2005헌마403",
+  "date": "2006-02-23",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-2"
+  ],
+  "decisionId": "cc-2005heonma403-20060223-decision",
+  "fetchedFrom": "std-constitution-357",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2006-02-23 선고 2005헌마403",
+  "xlsxRow": 126,
+  "flags": [],
+  "officialCitation": "[전원재판부 2005헌마403, 2006. 2. 23.]",
+  "officialTitle": "지방자치법 제87조 제1항 위헌확인",
+  "seq": "134813",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    370
+   ],
+   [
+    "【결정요지】",
+    1246
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    53
+   ],
+   [
+    "【주　　문】",
+    16
+   ],
+   [
+    "【이　　유】",
+    13925
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 0.996,
+   "holdings_vs_headnote": 0.216
+  }
+ },
+ {
+  "id": "std-constitution-358",
+  "title": "직계존속 고소금지와 평등심사 기준",
+  "caseNumber": "2008헌바56",
+  "lookupKey": "2008헌바56",
+  "date": "2011-02-24",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-2"
+  ],
+  "decisionId": "cc-2008heonba56-20110224-decision",
+  "fetchedFrom": "std-constitution-358",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2011-02-24 선고 2008헌바56",
+  "xlsxRow": 128,
+  "flags": [],
+  "officialCitation": "[전원재판부 2008헌바56, 2011. 2. 24.]",
+  "officialTitle": "형사소송법 제224조 등 위헌소원",
+  "seq": "14934",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    124
+   ],
+   [
+    "【결정요지】",
+    940
+   ],
+   [
+    "【심판대상조문】",
+    40
+   ],
+   [
+    "【참조조문】",
+    202
+   ],
+   [
+    "【참조판례】",
+    320
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    50
+   ],
+   [
+    "[주 문]",
+    56
+   ],
+   [
+    "[이 유]",
+    10606
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 0.997,
+   "holdings_vs_headnote": 0.102
+  }
+ },
+ {
+  "id": "std-constitution-359",
+  "title": "남성 병역의무 부과의 평등심사 기준",
+  "caseNumber": "2006헌마328",
+  "lookupKey": "2006헌마328",
+  "date": "2010-11-25",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-2"
+  ],
+  "decisionId": "cc-2006heonma328-20101125-decision",
+  "fetchedFrom": "std-constitution-359",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2010-11-25 선고 2006헌마328",
+  "xlsxRow": 129,
+  "flags": [],
+  "officialCitation": "[전원재판부 2006헌마328, 2010. 11. 25., 기각]",
+  "officialTitle": "병역법 제3조 제1항 등 위헌확인",
+  "seq": "14593",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    246
+   ],
+   [
+    "【결정요지】",
+    1866
+   ],
+   [
+    "【심판대상조문】",
+    91
+   ],
+   [
+    "【참조조문】",
+    76
+   ],
+   [
+    "【참조판례】",
+    150
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    24
+   ],
+   [
+    "[주 문]",
+    189
+   ],
+   [
+    "[이 유]",
+    25030
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 0.997,
+   "holdings_vs_headnote": 0.1
+  }
+ },
+ {
+  "id": "std-constitution-360",
+  "title": "국가유공자 가산점제도의 평등심사 기준(1)",
+  "caseNumber": "2000헌마25",
+  "lookupKey": "2000헌마25",
+  "date": "2001-02-22",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-2"
+  ],
+  "decisionId": "cc-2000heonma25-20010222-decision",
+  "fetchedFrom": "std-constitution-360",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2001-02-22 선고 2000헌마25",
+  "xlsxRow": 130,
+  "flags": [],
+  "officialCitation": "[전원재판부 2000헌마25, 2001. 2. 22.]",
+  "officialTitle": "국가유공자등예우및지원에관한법률 제34조 제1항 위헌확인",
+  "seq": "58246",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    180
+   ],
+   [
+    "【결정요지】",
+    2001
+   ],
+   [
+    "【심판대상조문】",
+    252
+   ],
+   [
+    "【참조조문】",
+    349
+   ],
+   [
+    "【참조판례】",
+    25
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    24
+   ],
+   [
+    "【주 문】",
+    16
+   ],
+   [
+    "【이 유】",
+    15903
+   ]
+  ],
+  "coverage": {
+   "issues": 0.943,
+   "issues_vs_headnote": 0.943,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-361",
+  "title": "국가유공자 가족 가산점제도의 평등심사 기준(2)",
+  "caseNumber": "2004헌마675",
+  "lookupKey": "2004헌마675",
+  "date": "2006-02-23",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-2"
+  ],
+  "decisionId": "cc-2004heonma675-20060223-decision",
+  "fetchedFrom": "std-constitution-361",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2006-02-23 선고 2004헌마675",
+  "xlsxRow": 131,
+  "flags": [],
+  "officialCitation": "[전원재판부 2004헌마675, 2006. 2. 23.]",
+  "officialTitle": "국가유공자등예우및지원에관한법률 제31조 제1항 등 위헌확인",
+  "seq": "124731",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    325
+   ],
+   [
+    "【결정요지】",
+    4227
+   ],
+   [
+    "【심판대상조문】",
+    870
+   ],
+   [
+    "【참조조문】",
+    379
+   ],
+   [
+    "【참조판례】",
+    66
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    17
+   ],
+   [
+    "【주 문】",
+    281
+   ],
+   [
+    "【이 유】",
+    19093
+   ],
+   [
+    "【별 지】",
+    3304
+   ]
+  ],
+  "coverage": {
+   "issues": 0.917,
+   "issues_vs_headnote": 0.917,
+   "holdings": 0.997,
+   "holdings_vs_headnote": 0.35
+  }
+ },
+ {
+  "id": "std-constitution-362",
+  "title": "차별목적의 정당성 부정 사례",
+  "caseNumber": "2019헌가3",
+  "lookupKey": "2019헌가3",
+  "date": "2021-09-30",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-2"
+  ],
+  "decisionId": "cc-2019heonga3-20210930-decision",
+  "fetchedFrom": "annual-2021-62",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2021-09-30 선고 2019헌가3",
+  "xlsxRow": 133,
+  "flags": [],
+  "officialCitation": "[전원재판부 2019헌가3, 2021. 9. 30.]",
+  "officialTitle": "공직자윤리법 부칙 제2조 위헌제청",
+  "seq": "169335",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    276
+   ],
+   [
+    "【결정요지】",
+    667
+   ],
+   [
+    "【심판대상조문】",
+    36
+   ],
+   [
+    "【참조조문】",
+    279
+   ],
+   [
+    "【참조판례】",
+    41
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    57
+   ],
+   [
+    "[주 문]",
+    47
+   ],
+   [
+    "[이 유]",
+    7948
+   ]
+  ],
+  "coverage": {
+   "issues": 0.987,
+   "issues_vs_headnote": 0.823,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-363",
+  "title": "영장주의와 징계절차",
+  "caseNumber": "2013헌바190",
+  "lookupKey": "2013헌바190",
+  "date": "2016-03-31",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-3"
+  ],
+  "decisionId": "cc-2013heonba190-20160331-decision",
+  "fetchedFrom": "std-constitution-363",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2016-03-31 선고 2013헌바190",
+  "xlsxRow": 142,
+  "flags": [],
+  "officialCitation": "[전원재판부 2013헌바190, 2016. 3. 31.]",
+  "officialTitle": "전투경찰대 설치법 제5조 등 위헌소원",
+  "seq": "49433",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    270
+   ],
+   [
+    "【결정요지】",
+    2226
+   ],
+   [
+    "【심판대상조문】",
+    146
+   ],
+   [
+    "【참조조문】",
+    315
+   ],
+   [
+    "【참조판례】",
+    145
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    56
+   ],
+   [
+    "[주 문]",
+    290
+   ],
+   [
+    "[이 유]",
+    17892
+   ]
+  ],
+  "coverage": {
+   "issues": 0.969,
+   "issues_vs_headnote": 0.812,
+   "holdings": 0.984,
+   "holdings_vs_headnote": 0.25
+  }
+ },
+ {
+  "id": "std-constitution-364",
+  "title": "영장주의의 의의",
+  "caseNumber": "96헌바28",
+  "lookupKey": "96헌바28",
+  "date": "1997-03-27",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-3"
+  ],
+  "decisionId": "cc-96heonba28-19970327-decision",
+  "fetchedFrom": "std-constitution-364",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 1997-03-27 선고 96헌바28",
+  "xlsxRow": 143,
+  "flags": [],
+  "officialCitation": "[전원재판부 96헌바28, 1997. 3. 27.]",
+  "officialTitle": "형사소송법 제70조 제1항 등 위헌소원",
+  "seq": "137440",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    169
+   ],
+   [
+    "【결정요지】",
+    797
+   ],
+   [
+    "【심판대상조문】",
+    277
+   ],
+   [
+    "【참조조문】",
+    81
+   ],
+   [
+    "【참조판례】",
+    23
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【주 문】",
+    117
+   ],
+   [
+    "【이 유】",
+    7357
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 0.75,
+   "holdings": 0.993,
+   "holdings_vs_headnote": 0.341
+  }
+ },
+ {
+  "id": "std-constitution-365",
+  "title": "영장신청의 주체",
+  "caseNumber": "2020헌마264",
+  "lookupKey": "2020헌마264",
+  "date": "2021-01-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-3"
+  ],
+  "decisionId": "cc-2020heonma264-20210128-decision",
+  "fetchedFrom": "annual-2021-55",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2021-01-28 선고 2020헌마264",
+  "xlsxRow": 144,
+  "flags": [],
+  "officialCitation": "[전원재판부 2020헌마264, 2021. 1. 28.]",
+  "officialTitle": "고위공직자범죄수사처 설치 및 운영에 관한 법률위헌확인",
+  "seq": "163537",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    283
+   ],
+   [
+    "【결정요지】",
+    12126
+   ],
+   [
+    "【심판대상조문】",
+    288
+   ],
+   [
+    "【참조판례】",
+    241
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    21
+   ],
+   [
+    "[주 문]",
+    225
+   ],
+   [
+    "[이 유]",
+    92680
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 0.524,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-366",
+  "title": "영장주의와 행정상 즉시강제",
+  "caseNumber": "2000헌가12",
+  "lookupKey": "2000헌가12",
+  "date": "2002-10-31",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-3"
+  ],
+  "decisionId": "cc-2000heonga12-20021031-decision",
+  "fetchedFrom": "std-constitution-366",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2002-10-31 선고 2000헌가12",
+  "xlsxRow": 145,
+  "flags": [],
+  "officialCitation": "[전원재판부 2000헌가12, 2002. 10. 31.]",
+  "officialTitle": "음반비디오물및게임물에관한법률 제24조 제3항 제4호 중 게임물에 관한 규정부분 위헌제청",
+  "seq": "58237",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    292
+   ],
+   [
+    "【결정요지】",
+    2035
+   ],
+   [
+    "【심판대상조문】",
+    279
+   ],
+   [
+    "【참조조문】",
+    1214
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당사자】",
+    82
+   ],
+   [
+    "【주문】",
+    98
+   ],
+   [
+    "【이유】",
+    14185
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 0.654,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.473
+  }
+ },
+ {
+  "id": "std-constitution-367",
+  "title": "영장주의와 음주측정",
+  "caseNumber": "96헌가11",
+  "lookupKey": "96헌가11",
+  "date": "1997-03-27",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-3"
+  ],
+  "decisionId": "cc-96heonga11-19970327-decision",
+  "fetchedFrom": "std-constitution-367",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 1997-03-27 선고 96헌가11",
+  "xlsxRow": 146,
+  "flags": [],
+  "officialCitation": "[전원재판부 96헌가11, 1997. 3. 27.]",
+  "officialTitle": "도로교통법 제41조 제2항 등 위헌제청",
+  "seq": "137428",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    337
+   ],
+   [
+    "【결정요지】",
+    2089
+   ],
+   [
+    "【참조조문】",
+    333
+   ],
+   [
+    "【참조판례】",
+    111
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【주 문】",
+    249
+   ],
+   [
+    "【이 유】",
+    13300
+   ]
+  ],
+  "coverage": {
+   "issues": 0.938,
+   "issues_vs_headnote": 0.438,
+   "holdings": 0.993,
+   "holdings_vs_headnote": 0.264
+  }
+ },
+ {
+  "id": "std-constitution-368",
+  "title": "영장주의와 지문채취 강제",
+  "caseNumber": "2002헌가17",
+  "lookupKey": "2002헌가17",
+  "date": "2004-09-23",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-3"
+  ],
+  "decisionId": "cc-2002heonga17-20040923-decision",
+  "fetchedFrom": "std-constitution-368",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2004-09-23 선고 2002헌가17",
+  "xlsxRow": 147,
+  "flags": [
+   "FULLTEXT_SHORT_OR_ABSENT"
+  ],
+  "officialCitation": "[전원재판부 2002헌가17, 2004. 9. 23.]",
+  "officialTitle": "경범죄처벌법 제1조 제42호 위헌제청",
+  "seq": "137275",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    293
+   ],
+   [
+    "【결정요지】",
+    932
+   ],
+   [
+    "【심판대상조문】",
+    52
+   ],
+   [
+    "【참조조문】",
+    82
+   ],
+   [
+    "【참조판례】",
+    179
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    12976
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 0.562,
+   "holdings": 0.99,
+   "holdings_vs_headnote": 0.415
+  }
+ },
+ {
+  "id": "std-constitution-369",
+  "title": "적법절차원리의 의의",
+  "caseNumber": "92헌가8",
+  "lookupKey": "92헌가8",
+  "date": "1992-12-24",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-3"
+  ],
+  "decisionId": "cc-92heonga8-19921224-decision",
+  "fetchedFrom": "std-constitution-369",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 1992-12-24 선고 92헌가8",
+  "xlsxRow": 148,
+  "flags": [],
+  "officialCitation": "[전원재판부 92헌가8, 1992. 12. 24., 위헌]",
+  "officialTitle": "형사소송법 제331조 단서 규정에 대한 위헌심판",
+  "seq": "152089",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    169
+   ],
+   [
+    "【결정요지】",
+    2412
+   ],
+   [
+    "【심판대상조문】",
+    331
+   ],
+   [
+    "【참조조문】",
+    4416
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    867
+   ],
+   [
+    "[주 문]",
+    50
+   ],
+   [
+    "[이 유]",
+    24034
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 0.412,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.136
+  }
+ },
+ {
+  "id": "std-constitution-370",
+  "title": "이중처벌금지와 공무원연금 지급제한",
+  "caseNumber": "2000헌바57",
+  "lookupKey": "2000헌바57",
+  "date": "2002-07-18",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-3"
+  ],
+  "decisionId": "cc-2000heonba57-20020718-decision",
+  "fetchedFrom": "std-constitution-370",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2002-07-18 선고 2000헌바57",
+  "xlsxRow": 152,
+  "flags": [],
+  "officialCitation": "[전원재판부 2000헌바57, 2002. 7. 18.]",
+  "officialTitle": "공무원연금법 제64조 제3항 위헌소원",
+  "seq": "58280",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    214
+   ],
+   [
+    "【결정요지】",
+    1824
+   ],
+   [
+    "【심판대상조문】",
+    279
+   ],
+   [
+    "【참조조문】",
+    245
+   ],
+   [
+    "【참조판례】",
+    73
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    73
+   ],
+   [
+    "【주 문】",
+    65
+   ],
+   [
+    "【이 유】",
+    16752
+   ]
+  ],
+  "coverage": {
+   "issues": 0.897,
+   "issues_vs_headnote": 0.517,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.919
+  }
+ },
+ {
+  "id": "std-constitution-371",
+  "title": "일사부재리원칙과 보안처분",
+  "caseNumber": "92헌바28",
+  "lookupKey": "92헌바28",
+  "date": "1997-11-27",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-3"
+  ],
+  "decisionId": "cc-92heonba28-19971127-decision",
+  "fetchedFrom": "std-constitution-371",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 1997-11-27 선고 92헌바28",
+  "xlsxRow": 153,
+  "flags": [],
+  "officialCitation": "[전원재판부 92헌바28, 1997. 11. 27.]",
+  "officialTitle": "보안관찰법 제2조 등 위헌소원",
+  "seq": "137445",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    122
+   ],
+   [
+    "【결정요지】",
+    1673
+   ],
+   [
+    "【심판대상조문】",
+    2458
+   ],
+   [
+    "【참조조문】",
+    96
+   ],
+   [
+    "【참조판례】",
+    28
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【주 문】",
+    117
+   ],
+   [
+    "【이 유】",
+    16126
+   ]
+  ],
+  "coverage": {
+   "issues": 0.935,
+   "issues_vs_headnote": 0.452,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.753
+  }
+ },
+ {
+  "id": "std-constitution-372",
+  "title": "이중처벌금지와 신상공개제도",
+  "caseNumber": "2002헌가14",
+  "lookupKey": "2002헌가14",
+  "date": "2003-06-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-3"
+  ],
+  "decisionId": "cc-2002heonga14-20030626-decision",
+  "fetchedFrom": "std-constitution-372",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2003-06-26 선고 2002헌가14",
+  "xlsxRow": 154,
+  "flags": [],
+  "officialCitation": "[전원재판부 2002헌가14, 2003. 6. 26.]",
+  "officialTitle": "청소년의성보호에관한법률 제20조 제2항 제1호 등 위헌제청",
+  "seq": "58373",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    279
+   ],
+   [
+    "【결정요지】",
+    5717
+   ],
+   [
+    "【심판대상조문】",
+    551
+   ],
+   [
+    "【참조조문】",
+    1760
+   ],
+   [
+    "【참조판례】",
+    473
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    74
+   ],
+   [
+    "【주　　문】",
+    102
+   ],
+   [
+    "【이　　유】",
+    32624
+   ]
+  ],
+  "coverage": {
+   "issues": 0.971,
+   "issues_vs_headnote": 0.971,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-373",
+  "title": "배우자의 선거범죄로 인한 당선무효 사례",
+  "caseNumber": "2010헌마68",
+  "lookupKey": "2010헌마68",
+  "date": "2011-09-29",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-3"
+  ],
+  "decisionId": "cc-2010heonma68-20110929-decision",
+  "fetchedFrom": "std-constitution-373",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2011-09-29 선고 2010헌마68",
+  "xlsxRow": 155,
+  "flags": [],
+  "officialCitation": "[전원재판부 2010헌마68, 2011. 9. 29.]",
+  "officialTitle": "공직선거법 제265조 위헌확인",
+  "seq": "17017",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    307
+   ],
+   [
+    "【결정요지】",
+    1397
+   ],
+   [
+    "【심판대상조문】",
+    42
+   ],
+   [
+    "【참조조문】",
+    95
+   ],
+   [
+    "【참조판례】",
+    394
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    68
+   ],
+   [
+    "[주 문]",
+    16
+   ],
+   [
+    "[이 유]",
+    22066
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 0.999,
+   "holdings_vs_headnote": 0.204
+  }
+ },
+ {
+  "id": "std-constitution-374",
+  "title": "배우자의 금품 수수 신고의무와 연좌제금지",
+  "caseNumber": "2015헌마236",
+  "lookupKey": "2015헌마236",
+  "date": "2016-07-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-3"
+  ],
+  "decisionId": "cc-2015heonma236-20160728-decision",
+  "fetchedFrom": "std-constitution-374",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2016-07-28 선고 2015헌마236",
+  "xlsxRow": 156,
+  "flags": [],
+  "officialCitation": "[전원재판부 2015헌마236, 2016. 7. 28.]",
+  "officialTitle": "부정청탁 및 금품등 수수의 금지에 관한 법률 제2조 제1호 마목 등 위헌확인",
+  "seq": "50857",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    1359
+   ],
+   [
+    "【결정요지】",
+    16888
+   ],
+   [
+    "【심판대상조문】",
+    178
+   ],
+   [
+    "【참조조문】",
+    195
+   ],
+   [
+    "【참조판례】",
+    795
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    23
+   ],
+   [
+    "[이 유]",
+    66024
+   ]
+  ],
+  "coverage": {
+   "issues": 0.989,
+   "issues_vs_headnote": 0.989,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.457
+  }
+ },
+ {
+  "id": "std-constitution-375",
+  "title": "자기책임의 원리",
+  "caseNumber": "2009헌마170",
+  "lookupKey": "2009헌마170",
+  "date": "2010-03-25",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-3"
+  ],
+  "decisionId": "cc-2009heonma170-20100325-decision",
+  "fetchedFrom": "std-constitution-375",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2010-03-25 선고 2009헌마170",
+  "xlsxRow": 157,
+  "flags": [],
+  "officialCitation": "[전원재판부 2009헌마170, 2010. 3. 25.]",
+  "officialTitle": "공직선거법 제265조 본문 위헌확인",
+  "seq": "13136",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    311
+   ],
+   [
+    "【결정요지】",
+    2087
+   ],
+   [
+    "【심판대상조문】",
+    92
+   ],
+   [
+    "【참조조문】",
+    149
+   ],
+   [
+    "【참조판례】",
+    443
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    36
+   ],
+   [
+    "【주 문】",
+    16
+   ],
+   [
+    "【이 유】",
+    18501
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 0.969,
+   "holdings": 0.998,
+   "holdings_vs_headnote": 0.19
+  }
+ },
+ {
+  "id": "std-constitution-376",
+  "title": "책임주의와 양벌규정",
+  "caseNumber": "2010헌바307",
+  "lookupKey": "2010헌바307",
+  "date": "2011-10-25",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-3"
+  ],
+  "decisionId": "cc-2010heonba307-20111025-decision",
+  "fetchedFrom": "std-constitution-376",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2011-10-25 선고 2010헌바307",
+  "xlsxRow": 158,
+  "flags": [],
+  "officialCitation": "[전원재판부 2010헌바307, 2011. 10. 25.]",
+  "officialTitle": "구 관광진흥법 제80조 위헌소원",
+  "seq": "17256",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    560
+   ],
+   [
+    "【결정요지】",
+    1588
+   ],
+   [
+    "【심판대상조문】",
+    76
+   ],
+   [
+    "【참조조문】",
+    104
+   ],
+   [
+    "【참조판례】",
+    159
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당사자]",
+    68
+   ],
+   [
+    "[주문]",
+    356
+   ],
+   [
+    "[이유]",
+    8228
+   ]
+  ],
+  "coverage": {
+   "issues": 0.926,
+   "issues_vs_headnote": 0.926,
+   "holdings": 0.996,
+   "holdings_vs_headnote": 0.996
+  }
+ },
+ {
+  "id": "std-constitution-377",
+  "title": "변호인의 조력을 받을 권리(2)",
+  "caseNumber": "2009헌마341",
+  "lookupKey": "2009헌마341",
+  "date": "2011-05-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-3"
+  ],
+  "decisionId": "cc-2009heonma341-20110526-decision",
+  "fetchedFrom": "std-constitution-377",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2011-05-26 선고 2009헌마341",
+  "xlsxRow": 161,
+  "flags": [],
+  "officialCitation": "[전원재판부 2009헌마341, 2011. 5. 26.]",
+  "officialTitle": "미결수용자 변호인 접견불허 처분 위헌확인",
+  "seq": "15810",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    322
+   ],
+   [
+    "【결정요지】",
+    1672
+   ],
+   [
+    "【참조조문】",
+    131
+   ],
+   [
+    "【참조판례】",
+    41
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    37
+   ],
+   [
+    "[주 문]",
+    16
+   ],
+   [
+    "[이 유]",
+    9519
+   ]
+  ],
+  "coverage": {
+   "issues": 0.955,
+   "issues_vs_headnote": 0.5,
+   "holdings": 0.998,
+   "holdings_vs_headnote": 0.306
+  }
+ },
+ {
+  "id": "std-constitution-378",
+  "title": "변호인 접견교통권의 제한 가능성",
+  "caseNumber": "91헌마111",
+  "lookupKey": "91헌마111",
+  "date": "1992-01-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-3"
+  ],
+  "decisionId": "cc-91heonma111-19920128-decision",
+  "fetchedFrom": "std-constitution-254",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 1992-01-28 선고 91헌마111",
+  "xlsxRow": 162,
+  "flags": [],
+  "officialCitation": "[전원재판부 91헌마111, 1992. 1. 28., 인용]",
+  "officialTitle": "변호인의 조력을 받을 권리에 대한 헌법소원",
+  "seq": "135013",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    439
+   ],
+   [
+    "【결정요지】",
+    1907
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[주 문]",
+    271
+   ],
+   [
+    "[이 유]",
+    6915
+   ]
+  ],
+  "coverage": {
+   "issues": 0.75,
+   "issues_vs_headnote": 1.0,
+   "holdings": 0.952,
+   "holdings_vs_headnote": 0.992
+  }
+ },
+ {
+  "id": "std-constitution-379",
+  "title": "피구속 피의자의 변호인의 조력을 받을 권리",
+  "caseNumber": "2000헌마138",
+  "lookupKey": "2000헌마138",
+  "date": "2004-09-23",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-3"
+  ],
+  "decisionId": "cc-2000heonma138-20040923-decision",
+  "fetchedFrom": "std-constitution-379",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2004-09-23 선고 2000헌마138",
+  "xlsxRow": 163,
+  "flags": [],
+  "officialCitation": "[전원재판부 2000헌마138, 2004. 9. 23.]",
+  "officialTitle": "변호인의조력을받을권리 등 침해 위헌확인",
+  "seq": "137274",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    368
+   ],
+   [
+    "【결정요지】",
+    5043
+   ],
+   [
+    "【참조조문】",
+    1644
+   ],
+   [
+    "【참조판례】",
+    568
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    57
+   ],
+   [
+    "【주　　문】",
+    121
+   ],
+   [
+    "【이　　유】",
+    32520
+   ]
+  ],
+  "coverage": {
+   "issues": 0.971,
+   "issues_vs_headnote": 0.743,
+   "holdings": 0.987,
+   "holdings_vs_headnote": 0.469
+  }
+ },
+ {
+  "id": "std-constitution-380",
+  "title": "변호인이 되려는 자의 피의자 접견교통권",
+  "caseNumber": "2015헌마1204",
+  "lookupKey": "2015헌마1204",
+  "date": "2019-02-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-3"
+  ],
+  "decisionId": "cc-2015heonma1204-20190228-decision",
+  "fetchedFrom": "std-constitution-380",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2019-02-28 선고 2015헌마1204",
+  "xlsxRow": 164,
+  "flags": [],
+  "officialCitation": "[전원재판부 2015헌마1204, 2019. 2. 28., 인용]",
+  "officialTitle": "변호인 접견불허 위헌확인 등",
+  "seq": "150330",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    530
+   ],
+   [
+    "【결정요지】",
+    3213
+   ],
+   [
+    "【심판대상조문】",
+    72
+   ],
+   [
+    "【참조조문】",
+    361
+   ],
+   [
+    "【참조판례】",
+    71
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    72
+   ],
+   [
+    "【주 문】",
+    171
+   ],
+   [
+    "【이 유】",
+    20713
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 0.997,
+   "holdings_vs_headnote": 0.452
+  }
+ },
+ {
+  "id": "std-constitution-381",
+  "title": "변호인의 변호권",
+  "caseNumber": "2016헌마503",
+  "lookupKey": "2016헌마503",
+  "date": "2017-11-30",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-3"
+  ],
+  "decisionId": "cc-2016heonma503-20171130-decision",
+  "fetchedFrom": "std-constitution-381",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2017-11-30 선고 2016헌마503",
+  "xlsxRow": 165,
+  "flags": [],
+  "officialCitation": "[전원재판부 2016헌마503, 2017. 11. 30., 인용]",
+  "officialTitle": "변호인 참여신청서 요구행위 등 위헌확인",
+  "seq": "142782",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    319
+   ],
+   [
+    "【결정요지】",
+    2653
+   ],
+   [
+    "【심판대상조문】",
+    113
+   ],
+   [
+    "【참조조문】",
+    95
+   ],
+   [
+    "【참조판례】",
+    7
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    58
+   ],
+   [
+    "【주 문】",
+    152
+   ],
+   [
+    "【이 유】",
+    969
+   ],
+   [
+    "【변호인의 좌석】",
+    109
+   ],
+   [
+    "【준용규정】",
+    32655
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 0.423,
+   "holdings": 0.995,
+   "holdings_vs_headnote": 0.227
+  }
+ },
+ {
+  "id": "std-constitution-382",
+  "title": "수형자와 변호인의 조력을 받을 권리",
+  "caseNumber": "2011헌마398",
+  "lookupKey": "2011헌마398",
+  "date": "2013-09-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-3"
+  ],
+  "decisionId": "cc-2011heonma398-20130926-decision",
+  "fetchedFrom": "std-constitution-382",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2013-09-26 선고 2011헌마398",
+  "xlsxRow": 167,
+  "flags": [],
+  "officialCitation": "[전원재판부 2011헌마398, 2013. 9. 26.]",
+  "officialTitle": "접견교통권방해 등 위헌확인",
+  "seq": "28834",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    228
+   ],
+   [
+    "【결정요지】",
+    1991
+   ],
+   [
+    "【심판대상조문】",
+    113
+   ],
+   [
+    "【참조조문】",
+    113
+   ],
+   [
+    "【참조판례】",
+    295
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당사자]",
+    49
+   ],
+   [
+    "[주문]",
+    330
+   ],
+   [
+    "[이유]",
+    28355
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 0.607,
+   "holdings": 0.997,
+   "holdings_vs_headnote": 0.145
+  }
+ },
+ {
+  "id": "std-constitution-383",
+  "title": "무죄추정원칙과 변호사업무정지명령",
+  "caseNumber": "90헌가48",
+  "lookupKey": "90헌가48",
+  "date": "1990-11-19",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-3"
+  ],
+  "decisionId": "cc-90heonga48-19901119-decision",
+  "fetchedFrom": "std-constitution-383",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 1990-11-19 선고 90헌가48",
+  "xlsxRow": 171,
+  "flags": [],
+  "officialCitation": "[전원재판부 90헌가48, 1990. 11. 19.]",
+  "officialTitle": "변호사법 제15조에 관한 위헌심판",
+  "seq": "134935",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    163
+   ],
+   [
+    "【결정요지】",
+    1157
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[주 문]",
+    43
+   ],
+   [
+    "[이 유]",
+    6436
+   ]
+  ],
+  "coverage": {
+   "issues": 0.931,
+   "issues_vs_headnote": 0.724,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.97
+  }
+ },
+ {
+  "id": "std-constitution-384",
+  "title": "무죄추정원칙과 법위반사실 공표명령",
+  "caseNumber": "2001헌바43",
+  "lookupKey": "2001헌바43",
+  "date": "2002-01-31",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-3"
+  ],
+  "decisionId": "cc-2001heonba43-20020131-decision",
+  "fetchedFrom": "std-constitution-384",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2002-01-31 선고 2001헌바43",
+  "xlsxRow": 172,
+  "flags": [],
+  "officialCitation": "[전원재판부 2001헌바43, 2002. 1. 31.]",
+  "officialTitle": "독점규제및공정거래에관한법률 제27조 위헌소원",
+  "seq": "134576",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    234
+   ],
+   [
+    "【결정요지】",
+    1601
+   ],
+   [
+    "【심판대상조문】",
+    194
+   ],
+   [
+    "【참조조문】",
+    209
+   ],
+   [
+    "【참조판례】",
+    47
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    84
+   ],
+   [
+    "【주 문】",
+    76
+   ],
+   [
+    "【이 유】",
+    10474
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.482
+  }
+ },
+ {
+  "id": "std-constitution-385",
+  "title": "자동차 운전자에 대한 좌석안전띠 미착용 범칙금",
+  "caseNumber": "2002헌마518",
+  "lookupKey": "2002헌마518",
+  "date": "2002-10-30",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-4"
+  ],
+  "decisionId": "cc-2002heonma518-20021030-decision",
+  "fetchedFrom": "std-constitution-385",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2002-10-30 선고 2002헌마518",
+  "xlsxRow": 174,
+  "flags": [
+   "DATE registry 2002-10-30 != official 2003-10-30",
+   "XLSX_DATE_VS_OFFICIAL xlsx 2002-10-30 != official 2003-10-30"
+  ],
+  "officialCitation": "[전원재판부 2002헌마518, 2003. 10. 30.]",
+  "officialTitle": "도로교통법 제118조 위헌확인",
+  "seq": "58398",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    240
+   ],
+   [
+    "【결정요지】",
+    959
+   ],
+   [
+    "【심판대상조문】",
+    490
+   ],
+   [
+    "【참조조문】",
+    206
+   ],
+   [
+    "【참조판례】",
+    45
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    22
+   ],
+   [
+    "【주 문】",
+    16
+   ],
+   [
+    "【이 유】",
+    21948
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.763
+  }
+ },
+ {
+  "id": "std-constitution-386",
+  "title": "금연구역 지정",
+  "caseNumber": "2003헌마457",
+  "lookupKey": "2003헌마457",
+  "date": "2004-08-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-4"
+  ],
+  "decisionId": "cc-2003heonma457-20040826-decision",
+  "fetchedFrom": "std-constitution-104",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2004-08-26 선고 2003헌마457",
+  "xlsxRow": 177,
+  "flags": [],
+  "officialCitation": "[전원재판부 2003헌마457, 2004. 8. 26.]",
+  "officialTitle": "국민건강증진법시행규칙 제7조 위헌확인",
+  "seq": "137638",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    172
+   ],
+   [
+    "【결정요지】",
+    652
+   ],
+   [
+    "【참조조문】",
+    43
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    23
+   ],
+   [
+    "【주　　문】",
+    16
+   ],
+   [
+    "【이　　유】",
+    6403
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-387",
+  "title": "디엔에이신원확인정보의 관리",
+  "caseNumber": "2011헌마28",
+  "lookupKey": "2011헌마28",
+  "date": "2014-08-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-4"
+  ],
+  "decisionId": "cc-2011heonma28-20140828-decision",
+  "fetchedFrom": "std-constitution-387",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2014-08-28 선고 2011헌마28",
+  "xlsxRow": 186,
+  "flags": [],
+  "officialCitation": "[전원재판부 2011헌마28, 2014. 8. 28.]",
+  "officialTitle": "디엔에이신원확인정보의 이용 및 보호에 관한 법률 부칙 제2조 제1항 위헌확인",
+  "seq": "39556",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    1529
+   ],
+   [
+    "【결정요지】",
+    4599
+   ],
+   [
+    "【심판대상조문】",
+    258
+   ],
+   [
+    "【참조조문】",
+    265
+   ],
+   [
+    "【참조판례】",
+    286
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    347
+   ],
+   [
+    "[주 문]",
+    261
+   ],
+   [
+    "[이 유]",
+    40137
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 0.996,
+   "holdings_vs_headnote": 0.996
+  }
+ },
+ {
+  "id": "std-constitution-388",
+  "title": "통신비밀보호법상 통신사실확인자료(위치정보 추적자료) 제공요청 및 취득",
+  "caseNumber": "2012헌마191",
+  "lookupKey": "2012헌마191",
+  "date": "2018-06-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-4"
+  ],
+  "decisionId": "cc-2012heonma191-20180628-decision",
+  "fetchedFrom": "std-constitution-388",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2018-06-28 선고 2012헌마191",
+  "xlsxRow": 189,
+  "flags": [
+   "FULLTEXT_SHORT_OR_ABSENT"
+  ],
+  "officialCitation": "[전원재판부 2012헌마191, 2018. 6. 28., 헌법불합치]",
+  "officialTitle": "통신비밀보호법 제2조 제11호 바목 등 위헌확인",
+  "seq": "147542",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    731
+   ],
+   [
+    "【결정요지】",
+    3047
+   ],
+   [
+    "【심판대상조문】",
+    965
+   ],
+   [
+    "【참조조문】",
+    404
+   ],
+   [
+    "【참조판례】",
+    51
+   ]
+  ],
+  "coverage": {
+   "issues": 0.734,
+   "issues_vs_headnote": 0.562,
+   "holdings": 0.998,
+   "holdings_vs_headnote": 0.998
+  }
+ },
+ {
+  "id": "std-constitution-389",
+  "title": "통신비밀보호법상 통신제한조치(인터넷회선 패킷감청)",
+  "caseNumber": "2016헌마263",
+  "lookupKey": "2016헌마263",
+  "date": "2018-08-30",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-4"
+  ],
+  "decisionId": "cc-2016heonma263-20180830-decision",
+  "fetchedFrom": "std-constitution-389",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2018-08-30 선고 2016헌마263",
+  "xlsxRow": 190,
+  "flags": [
+   "FULLTEXT_SHORT_OR_ABSENT",
+   "XLSX_TEXT_UNRELATED"
+  ],
+  "officialCitation": "[전원재판부 2016헌마263, 2018. 8. 30., 헌법불합치]",
+  "officialTitle": "통신제한조치 허가 위헌확인 등",
+  "seq": "148668",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    348
+   ],
+   [
+    "【결정요지】",
+    6118
+   ],
+   [
+    "【심판대상조문】",
+    47
+   ],
+   [
+    "【참조조문】",
+    168
+   ],
+   [
+    "【참조판례】",
+    29
+   ]
+  ],
+  "coverage": {
+   "issues": 0.329,
+   "issues_vs_headnote": 0.329,
+   "holdings": 0.512,
+   "holdings_vs_headnote": 0.511
+  }
+ },
+ {
+  "id": "std-constitution-390",
+  "title": "자동차 운전자에 대한 좌석안전띠 미착용 범칙금",
+  "caseNumber": "2002헌마518",
+  "lookupKey": "2002헌마518",
+  "date": "2002-10-30",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-5"
+  ],
+  "decisionId": "cc-2002heonma518-20021030-decision",
+  "fetchedFrom": "std-constitution-385",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2002-10-30 선고 2002헌마518",
+  "xlsxRow": 197,
+  "flags": [
+   "DATE registry 2002-10-30 != official 2003-10-30",
+   "XLSX_DATE_VS_OFFICIAL xlsx 2002-10-30 != official 2003-10-30"
+  ],
+  "officialCitation": "[전원재판부 2002헌마518, 2003. 10. 30.]",
+  "officialTitle": "도로교통법 제118조 위헌확인",
+  "seq": "58398",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    240
+   ],
+   [
+    "【결정요지】",
+    959
+   ],
+   [
+    "【심판대상조문】",
+    490
+   ],
+   [
+    "【참조조문】",
+    206
+   ],
+   [
+    "【참조판례】",
+    45
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    22
+   ],
+   [
+    "【주 문】",
+    16
+   ],
+   [
+    "【이 유】",
+    21948
+   ]
+  ],
+  "coverage": {
+   "issues": 0.964,
+   "issues_vs_headnote": 0.964,
+   "holdings": 0.996,
+   "holdings_vs_headnote": 0.557
+  }
+ },
+ {
+  "id": "std-constitution-391",
+  "title": "지문날인의무를 부과하는 주민등록법시행령",
+  "caseNumber": "96헌가11",
+  "lookupKey": "96헌가11",
+  "date": "1997-03-27",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-5"
+  ],
+  "decisionId": "cc-96heonga11-19970327-decision",
+  "fetchedFrom": "std-constitution-367",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 1997-03-27 선고 96헌가11",
+  "xlsxRow": 198,
+  "flags": [
+   "XLSX_TEXT_UNRELATED"
+  ],
+  "officialCitation": "[전원재판부 96헌가11, 1997. 3. 27.]",
+  "officialTitle": "도로교통법 제41조 제2항 등 위헌제청",
+  "seq": "137428",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    337
+   ],
+   [
+    "【결정요지】",
+    2089
+   ],
+   [
+    "【참조조문】",
+    333
+   ],
+   [
+    "【참조판례】",
+    111
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【주 문】",
+    249
+   ],
+   [
+    "【이 유】",
+    13300
+   ]
+  ],
+  "coverage": {
+   "issues": 0.565,
+   "issues_vs_headnote": 0.165,
+   "holdings": 0.581,
+   "holdings_vs_headnote": 0.152
+  }
+ },
+ {
+  "id": "std-constitution-392",
+  "title": "주취운전혐의자에 대한 음주측정의무 부과 및 불이행시 처벌",
+  "caseNumber": "99헌마513",
+  "lookupKey": "99헌마513",
+  "date": "2005-05-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-5"
+  ],
+  "decisionId": "cc-99heonma513-20050526-decision",
+  "fetchedFrom": "std-constitution-392",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2005-05-26 선고 99헌마513",
+  "xlsxRow": 199,
+  "flags": [],
+  "officialCitation": "[전원재판부 99헌마513, 2005. 5. 26.]",
+  "officialTitle": "주민등록법 제17조의8 등 위헌확인 (주민등록법시행령 제33조 제2항)",
+  "seq": "137747",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    146
+   ],
+   [
+    "【결정요지】",
+    3986
+   ],
+   [
+    "【참조조문】",
+    1764
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    298
+   ],
+   [
+    "【주　　문】",
+    136
+   ],
+   [
+    "【이　　유】",
+    36379
+   ]
+  ],
+  "coverage": {
+   "issues": 0.891,
+   "issues_vs_headnote": 0.141,
+   "holdings": 0.53,
+   "holdings_vs_headnote": 0.275
+  }
+ },
+ {
+  "id": "std-constitution-393",
+  "title": "환자들의 의료비 내역 정보를 국세청에 제출할 의무",
+  "caseNumber": "2006헌마1401",
+  "lookupKey": "2006헌마1401",
+  "date": "2008-10-30",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-5"
+  ],
+  "decisionId": "cc-2006heonma1401-20081030-decision",
+  "fetchedFrom": "std-constitution-393",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2008-10-30 선고 2006헌마1401",
+  "xlsxRow": 200,
+  "flags": [],
+  "officialCitation": "[전원재판부 2006헌마1401, 2008. 10. 30.]",
+  "officialTitle": "소득세법 제165조 제1항 등 위헌확인",
+  "seq": "130817",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    339
+   ],
+   [
+    "【결정요지】",
+    3555
+   ],
+   [
+    "【심판대상조문】",
+    705
+   ],
+   [
+    "【참조조문】",
+    298
+   ],
+   [
+    "【참조판례】",
+    36
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    128
+   ],
+   [
+    "【주 문】",
+    25
+   ],
+   [
+    "【이 유】",
+    30386
+   ],
+   [
+    "【별 지】",
+    29
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-394",
+  "title": "공정거래법상 법위반사실의 공표 명령",
+  "caseNumber": "2001헌바43",
+  "lookupKey": "2001헌바43",
+  "date": "2002-01-31",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-5"
+  ],
+  "decisionId": "cc-2001heonba43-20020131-decision",
+  "fetchedFrom": "std-constitution-384",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2002-01-31 선고 2001헌바43",
+  "xlsxRow": 201,
+  "flags": [],
+  "officialCitation": "[전원재판부 2001헌바43, 2002. 1. 31.]",
+  "officialTitle": "독점규제및공정거래에관한법률 제27조 위헌소원",
+  "seq": "134576",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    234
+   ],
+   [
+    "【결정요지】",
+    1601
+   ],
+   [
+    "【심판대상조문】",
+    194
+   ],
+   [
+    "【참조조문】",
+    209
+   ],
+   [
+    "【참조판례】",
+    47
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    84
+   ],
+   [
+    "【주 문】",
+    76
+   ],
+   [
+    "【이 유】",
+    10474
+   ]
+  ],
+  "coverage": {
+   "issues": 0.976,
+   "issues_vs_headnote": 0.976,
+   "holdings": 0.995,
+   "holdings_vs_headnote": 0.995
+  }
+ },
+ {
+  "id": "std-constitution-395",
+  "title": "중대재해 발생시 그 내용을 보고하도록 한 산업안전보건법",
+  "caseNumber": "2021헌바111",
+  "lookupKey": "2021헌바111",
+  "date": "2025-02-27",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-5"
+  ],
+  "decisionId": "cc-2021heonba111-20250227-decision",
+  "fetchedFrom": "std-constitution-395",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2025-02-27 선고 2021헌바111",
+  "xlsxRow": 202,
+  "flags": [],
+  "officialCitation": "[전원재판부 2021헌바111, 2025. 2. 27.]",
+  "officialTitle": "산업안전보건법 제175조 제2항 제2호 등 위헌소원",
+  "seq": "196791",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    242
+   ],
+   [
+    "【결정요지】",
+    526
+   ],
+   [
+    "【심판대상조문】",
+    187
+   ],
+   [
+    "【참조조문】",
+    390
+   ],
+   [
+    "【참조판례】",
+    186
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    52
+   ],
+   [
+    "【주 문】",
+    205
+   ],
+   [
+    "【이 유】",
+    10160
+   ]
+  ],
+  "coverage": {
+   "issues": 0.988,
+   "issues_vs_headnote": 0.837,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.296
+  }
+ },
+ {
+  "id": "std-constitution-396",
+  "title": "육군훈련소 내 종교행사 참석 강제",
+  "caseNumber": "2019헌마941",
+  "lookupKey": "2019헌마941",
+  "date": "2022-11-24",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-5"
+  ],
+  "decisionId": "cc-2019heonma941-20221124-decision",
+  "fetchedFrom": "std-constitution-396",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2022-11-24 선고 2019헌마941",
+  "xlsxRow": 203,
+  "flags": [],
+  "officialCitation": "[전원재판부 2019헌마941, 2022. 11. 24.]",
+  "officialTitle": "육군훈련소 내 종교행사 참석 강제 위헌확인",
+  "seq": "179151",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    326
+   ],
+   [
+    "【결정요지】",
+    1512
+   ],
+   [
+    "【참조조문】",
+    76
+   ],
+   [
+    "【참조판례】",
+    63
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    80
+   ],
+   [
+    "【주 문】",
+    119
+   ],
+   [
+    "【이 유】",
+    11662
+   ]
+  ],
+  "coverage": {
+   "issues": 0.903,
+   "issues_vs_headnote": 0.903,
+   "holdings": 0.998,
+   "holdings_vs_headnote": 0.998
+  }
+ },
+ {
+  "id": "std-constitution-397",
+  "title": "사법시험 1차시험 일요일 시행",
+  "caseNumber": "2019헌마941",
+  "lookupKey": "2019헌마941",
+  "date": "2022-11-24",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-5"
+  ],
+  "decisionId": "cc-2019heonma941-20221124-decision",
+  "fetchedFrom": "std-constitution-396",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2022-11-24 선고 2019헌마941",
+  "xlsxRow": 204,
+  "flags": [
+   "XLSX_TEXT_UNRELATED"
+  ],
+  "officialCitation": "[전원재판부 2019헌마941, 2022. 11. 24.]",
+  "officialTitle": "육군훈련소 내 종교행사 참석 강제 위헌확인",
+  "seq": "179151",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    326
+   ],
+   [
+    "【결정요지】",
+    1512
+   ],
+   [
+    "【참조조문】",
+    76
+   ],
+   [
+    "【참조판례】",
+    63
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    80
+   ],
+   [
+    "【주 문】",
+    119
+   ],
+   [
+    "【이 유】",
+    11662
+   ]
+  ],
+  "coverage": {
+   "issues": 0.468,
+   "issues_vs_headnote": 0.351,
+   "holdings": 0.199,
+   "holdings_vs_headnote": 0.141
+  }
+ },
+ {
+  "id": "std-constitution-398",
+  "title": "학문의 자유의 보호영역",
+  "caseNumber": "2001헌마814",
+  "lookupKey": "2001헌마814",
+  "date": "2003-09-25",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-5"
+  ],
+  "decisionId": "cc-2001heonma814-20030925-decision",
+  "fetchedFrom": "std-constitution-398",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2003-09-25 선고 2001헌마814",
+  "xlsxRow": 206,
+  "flags": [],
+  "officialCitation": "[전원재판부 2001헌마814, 2003. 9. 25., 각하]",
+  "officialTitle": "편입생특별전형대상자선발시험시행계획및공개경쟁시험공고취소",
+  "seq": "134565",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    95
+   ],
+   [
+    "【결정요지】",
+    1061
+   ],
+   [
+    "【참조판례】",
+    31
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    304
+   ],
+   [
+    "【주 문】",
+    20
+   ],
+   [
+    "【이 유】",
+    9227
+   ],
+   [
+    "【별 지】",
+    7
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.33
+  }
+ },
+ {
+  "id": "std-constitution-399",
+  "title": "음란 ・ 저속한 표현과 표현의 자유 보호영역",
+  "caseNumber": "2006헌바109",
+  "lookupKey": "2006헌바109",
+  "date": "2009-05-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-6"
+  ],
+  "decisionId": "cc-2006heonba109-20090528-decision",
+  "fetchedFrom": "std-constitution-399",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2009-05-28 선고 2006헌바109",
+  "xlsxRow": 213,
+  "flags": [],
+  "officialCitation": "[전원재판부 2006헌바109, 2009. 5. 28.]",
+  "officialTitle": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 제65조 제1항 제2호 위헌소원",
+  "seq": "134053",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    258
+   ],
+   [
+    "【결정요지】",
+    2867
+   ],
+   [
+    "【심판대상조문】",
+    109
+   ],
+   [
+    "【참조조문】",
+    58
+   ],
+   [
+    "【참조판례】",
+    846
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    548
+   ],
+   [
+    "【주 문】",
+    173
+   ],
+   [
+    "【이 유】",
+    34118
+   ]
+  ],
+  "coverage": {
+   "issues": 0.867,
+   "issues_vs_headnote": 0.406,
+   "holdings": 0.996,
+   "holdings_vs_headnote": 0.996
+  }
+ },
+ {
+  "id": "std-constitution-400",
+  "title": "공공기관 게시판 이용자 실명확인 사건",
+  "caseNumber": "2019헌마654",
+  "lookupKey": "2019헌마654",
+  "date": "2022-12-22",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-6"
+  ],
+  "decisionId": "cc-2019heonma654-20221222-decision",
+  "fetchedFrom": "std-constitution-400",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2022-12-22 선고 2019헌마654",
+  "xlsxRow": 217,
+  "flags": [],
+  "officialCitation": "[전원재판부 2019헌마654, 2022. 12. 22.]",
+  "officialTitle": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 제44조의5 제1항 제1호 위헌확인",
+  "seq": "179743",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    171
+   ],
+   [
+    "【결정요지】",
+    2003
+   ],
+   [
+    "【심판대상조문】",
+    72
+   ],
+   [
+    "【참조조문】",
+    324
+   ],
+   [
+    "【참조판례】",
+    8
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    21
+   ],
+   [
+    "【주 문】",
+    16
+   ],
+   [
+    "【이 유】",
+    8461
+   ]
+  ],
+  "coverage": {
+   "issues": 0.98,
+   "issues_vs_headnote": 0.99,
+   "holdings": 0.99,
+   "holdings_vs_headnote": 0.99
+  }
+ },
+ {
+  "id": "std-constitution-401",
+  "title": "국가보안법 제7조에 대한 한정합헌 결정",
+  "caseNumber": "89헌가113",
+  "lookupKey": "89헌가113",
+  "date": "1990-04-02",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-6"
+  ],
+  "decisionId": "cc-89heonga113-19900402-decision",
+  "fetchedFrom": "std-constitution-401",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 1990-04-02 선고 89헌가113",
+  "xlsxRow": 222,
+  "flags": [],
+  "officialCitation": "[전원재판부 89헌가113, 1990. 4. 2.]",
+  "officialTitle": "국가보안법 제7조에 관한 위헌심판",
+  "seq": "134856",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    246
+   ],
+   [
+    "【결정요지】",
+    2288
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[주 문]",
+    133
+   ],
+   [
+    "[이 유]",
+    18052
+   ]
+  ],
+  "coverage": {
+   "issues": 0.857,
+   "issues_vs_headnote": 0.304,
+   "holdings": 0.804,
+   "holdings_vs_headnote": 0.473
+  }
+ },
+ {
+  "id": "std-constitution-402",
+  "title": "형법 제307조 제1항(사실적시 명예훼손죄) 사건",
+  "caseNumber": "2017헌마1113",
+  "lookupKey": "2017헌마1113",
+  "date": "2021-02-25",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-6"
+  ],
+  "decisionId": "cc-2017heonma1113-20210225-decision",
+  "fetchedFrom": "annual-2021-56",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2021-02-25 선고 2017헌마1113",
+  "xlsxRow": 223,
+  "flags": [],
+  "officialCitation": "[전원재판부 2017헌마1113, 2021. 2. 25.]",
+  "officialTitle": "형법 제307조 제1항 위헌확인",
+  "seq": "163947",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    74
+   ],
+   [
+    "【결정요지】",
+    2627
+   ],
+   [
+    "【심판대상조문】",
+    44
+   ],
+   [
+    "【참조조문】",
+    112
+   ],
+   [
+    "【참조판례】",
+    500
+   ],
+   [
+    "【전문】",
+    169
+   ],
+   [
+    "[주 문]",
+    87
+   ],
+   [
+    "[이 유]",
+    19579
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-403",
+  "title": "공직선거법상 사실 적시에 의한 비방금지조항 사건",
+  "caseNumber": "2023헌바78",
+  "lookupKey": "2023헌바78",
+  "date": "2024-06-27",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-6"
+  ],
+  "decisionId": "cc-2023heonba78-20240627-decision",
+  "fetchedFrom": "annual-2024-05",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2024-06-27 선고 2023헌바78",
+  "xlsxRow": 224,
+  "flags": [],
+  "officialCitation": "[전원재판부 2023헌바78, 2024. 6. 27.]",
+  "officialTitle": "공직선거법 제250조 제2항 등 위헌소원",
+  "seq": "191539",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    406
+   ],
+   [
+    "【결정요지】",
+    1351
+   ],
+   [
+    "【심판대상조문】",
+    159
+   ],
+   [
+    "【참조조문】",
+    55
+   ],
+   [
+    "【참조판례】",
+    230
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    63
+   ],
+   [
+    "【주 문】",
+    191
+   ],
+   [
+    "【이 유】",
+    18399
+   ]
+  ],
+  "coverage": {
+   "issues": 0.99,
+   "issues_vs_headnote": 0.99,
+   "holdings": 0.969,
+   "holdings_vs_headnote": 0.969
+  }
+ },
+ {
+  "id": "std-constitution-404",
+  "title": "서울특별시 학생인권조례 사건",
+  "caseNumber": "2017헌마1356",
+  "lookupKey": "2017헌마1356",
+  "date": "2019-11-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-6"
+  ],
+  "decisionId": "cc-2017heonma1356-20191128-decision",
+  "fetchedFrom": "std-constitution-404",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2019-11-28 선고 2017헌마1356",
+  "xlsxRow": 225,
+  "flags": [
+   "FULLTEXT_SHORT_OR_ABSENT"
+  ],
+  "officialCitation": "[전원재판부 2017헌마1356, 2019. 11. 28., 기각]",
+  "officialTitle": "서울시 학생인권조례 제3조 제1항 등 위헌확인",
+  "seq": "153787",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    467
+   ],
+   [
+    "【결정요지】",
+    2176
+   ],
+   [
+    "【심판대상조문】",
+    261
+   ],
+   [
+    "【참조판례】",
+    55
+   ]
+  ],
+  "coverage": {
+   "issues": 0.993,
+   "issues_vs_headnote": 0.993,
+   "holdings": 0.999,
+   "holdings_vs_headnote": 0.999
+  }
+ },
+ {
+  "id": "std-constitution-405",
+  "title": "국가모독죄 사건",
+  "caseNumber": "2013헌가20",
+  "lookupKey": "2013헌가20",
+  "date": "2015-10-21",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-6"
+  ],
+  "decisionId": "cc-2013heonga20-20151021-decision",
+  "fetchedFrom": "std-constitution-405",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2015-10-21 선고 2013헌가20",
+  "xlsxRow": 227,
+  "flags": [],
+  "officialCitation": "[전원재판부 2013헌가20, 2015. 10. 21.]",
+  "officialTitle": "구 형법 제104조의2 위헌제청",
+  "seq": "48054",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    216
+   ],
+   [
+    "【결정요지】",
+    665
+   ],
+   [
+    "【심판대상조문】",
+    78
+   ],
+   [
+    "【참조조문】",
+    68
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    92
+   ],
+   [
+    "[주 문]",
+    89
+   ],
+   [
+    "[이 유]",
+    6343
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-406",
+  "title": "대북전단 등의 살포 금지 및 처벌 사건",
+  "caseNumber": "2020헌마1724",
+  "lookupKey": "2020헌마1724",
+  "date": "2023-09-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-6"
+  ],
+  "decisionId": "cc-2020heonma1724-20230926-decision",
+  "fetchedFrom": "annual-2023-12",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2023-09-26 선고 2020헌마1724",
+  "xlsxRow": 228,
+  "flags": [],
+  "officialCitation": "[전원재판부 2020헌마1724, 2023. 9. 26.]",
+  "officialTitle": "남북관계 발전에 관한 법률 일부 개정법률 위헌확인",
+  "seq": "185601",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    198
+   ],
+   [
+    "【결정요지】",
+    2765
+   ],
+   [
+    "【심판대상조문】",
+    66
+   ],
+   [
+    "【참조조문】",
+    162
+   ],
+   [
+    "【참조판례】",
+    398
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    128
+   ],
+   [
+    "【주 문】",
+    102
+   ],
+   [
+    "【이 유】",
+    26218
+   ]
+  ],
+  "coverage": {
+   "issues": 0.993,
+   "issues_vs_headnote": 0.993,
+   "holdings": 0.978,
+   "holdings_vs_headnote": 0.978
+  }
+ },
+ {
+  "id": "std-constitution-407",
+  "title": "방송의 자유, 한국방송공사 수신료 분리징수",
+  "caseNumber": "2023헌마820",
+  "lookupKey": "2023헌마820",
+  "date": "2024-05-30",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-6"
+  ],
+  "decisionId": "cc-2023heonma820-20240530-decision",
+  "fetchedFrom": "annual-2024-04",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2024-05-30 선고 2023헌마820",
+  "xlsxRow": 229,
+  "flags": [],
+  "officialCitation": "[전원재판부 2023헌마820, 2024. 5. 30.]",
+  "officialTitle": "방송법 시행령 입법예고 공고 취소",
+  "seq": "191007",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    364
+   ],
+   [
+    "【결정요지】",
+    3164
+   ],
+   [
+    "【심판대상조문】",
+    41
+   ],
+   [
+    "【참조조문】",
+    316
+   ],
+   [
+    "【참조판례】",
+    491
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    78
+   ],
+   [
+    "【주 문】",
+    93
+   ],
+   [
+    "【이 유】",
+    37695
+   ]
+  ],
+  "coverage": {
+   "issues": 0.952,
+   "issues_vs_headnote": 0.952,
+   "holdings": 0.997,
+   "holdings_vs_headnote": 0.997
+  }
+ },
+ {
+  "id": "std-constitution-408",
+  "title": "군내 불온서적 차단 사건",
+  "caseNumber": "2008헌마638",
+  "lookupKey": "2008헌마638",
+  "date": "2010-10-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-6"
+  ],
+  "decisionId": "cc-2008heonma638-20101028-decision",
+  "fetchedFrom": "std-constitution-408",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2010-10-28 선고 2008헌마638",
+  "xlsxRow": 231,
+  "flags": [],
+  "officialCitation": "[전원재판부 2008헌마638, 2010. 10. 28.]",
+  "officialTitle": "군인사법 제47조의2 위헌확인 등",
+  "seq": "14476",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    314
+   ],
+   [
+    "【결정요지】",
+    2620
+   ],
+   [
+    "【심판대상조문】",
+    125
+   ],
+   [
+    "【참조조문】",
+    38
+   ],
+   [
+    "【참조판례】",
+    92
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    160
+   ],
+   [
+    "[주 문]",
+    57
+   ],
+   [
+    "[이 유]",
+    46916
+   ]
+  ],
+  "coverage": {
+   "issues": 0.962,
+   "issues_vs_headnote": 0.962,
+   "holdings": 0.998,
+   "holdings_vs_headnote": 0.998
+  }
+ },
+ {
+  "id": "std-constitution-409",
+  "title": "구속적부심사건 피의자의 수사기록 정보비공개결정",
+  "caseNumber": "2000헌마474",
+  "lookupKey": "2000헌마474",
+  "date": "2003-03-27",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-6"
+  ],
+  "decisionId": "cc-2000heonma474-20030327-decision",
+  "fetchedFrom": "std-constitution-409",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2003-03-27 선고 2000헌마474",
+  "xlsxRow": 232,
+  "flags": [],
+  "officialCitation": "[전원재판부 2000헌마474, 2003. 3. 27.]",
+  "officialTitle": "정보비공개결정 위헌확인",
+  "seq": "134481",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    378
+   ],
+   [
+    "【결정요지】",
+    2684
+   ],
+   [
+    "【참조조문】",
+    77
+   ],
+   [
+    "【참조판례】",
+    57
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    29
+   ],
+   [
+    "【주 문】",
+    115
+   ],
+   [
+    "【이 유】",
+    11717
+   ],
+   [
+    "【별 지】",
+    1252
+   ]
+  ],
+  "coverage": {
+   "issues": 0.987,
+   "issues_vs_headnote": 0.987,
+   "holdings": 0.998,
+   "holdings_vs_headnote": 0.998
+  }
+ },
+ {
+  "id": "std-constitution-410",
+  "title": "변호사시험 성적 비공개 사건",
+  "caseNumber": "2011헌마769",
+  "lookupKey": "2011헌마769",
+  "date": "2015-06-25",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-6"
+  ],
+  "decisionId": "cc-2011heonma769-20150625-decision",
+  "fetchedFrom": "std-constitution-356",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2015-06-25 선고 2011헌마769",
+  "xlsxRow": 233,
+  "flags": [],
+  "officialCitation": "[전원재판부 2011헌마769, 2015. 6. 25.]",
+  "officialTitle": "변호사시험법 제18조 제1항 위헌확인",
+  "seq": "46693",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    132
+   ],
+   [
+    "【결정요지】",
+    2114
+   ],
+   [
+    "【심판대상조문】",
+    50
+   ],
+   [
+    "【참조조문】",
+    56
+   ],
+   [
+    "【참조판례】",
+    414
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    21
+   ],
+   [
+    "[주 문]",
+    61
+   ],
+   [
+    "[이 유]",
+    26234
+   ]
+  ],
+  "coverage": {
+   "issues": 0.992,
+   "issues_vs_headnote": 0.746,
+   "holdings": 0.718,
+   "holdings_vs_headnote": 0.718
+  }
+ },
+ {
+  "id": "std-constitution-411",
+  "title": "미신고 집회 · 시위에 대한 형사처벌의 헌법적 한계",
+  "caseNumber": "2021헌바168",
+  "lookupKey": "2021헌바168",
+  "date": "2026-02-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-6"
+  ],
+  "decisionId": "cc-2021heonba168-20260226-decision",
+  "fetchedFrom": "std-constitution-411",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2026-02-26 선고 2021헌바168",
+  "xlsxRow": 237,
+  "flags": [],
+  "officialCitation": "[전원재판부 2021헌바168, 2026. 2. 26.]",
+  "officialTitle": "구 집회 및 시위에 관한 법률 제6조 제1항 본문 등 위헌소원",
+  "seq": "205949",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    414
+   ],
+   [
+    "【결정요지】",
+    2042
+   ],
+   [
+    "【심판대상조문】",
+    278
+   ],
+   [
+    "【참조조문】",
+    75
+   ],
+   [
+    "【참조판례】",
+    486
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    271
+   ],
+   [
+    "【주 문】",
+    362
+   ],
+   [
+    "【이 유】",
+    29745
+   ]
+  ],
+  "coverage": {
+   "issues": 0.993,
+   "issues_vs_headnote": 0.993,
+   "holdings": 0.996,
+   "holdings_vs_headnote": 0.996
+  }
+ },
+ {
+  "id": "std-constitution-412",
+  "title": "재판에 영향을 미칠 염려가 있는 집회 ‧ 시위 금지 사건",
+  "caseNumber": "2014헌가3",
+  "lookupKey": "2014헌가3",
+  "date": "2016-09-29",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-6"
+  ],
+  "decisionId": "cc-2014heonga3-20160929-decision",
+  "fetchedFrom": "std-constitution-412",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2016-09-29 선고 2014헌가3",
+  "xlsxRow": 238,
+  "flags": [],
+  "officialCitation": "[전원재판부 2014헌가3, 2016. 9. 29.]",
+  "officialTitle": "구 집회 및 시위에 관한 법률 제3조 제1항 제3호 위헌제청",
+  "seq": "52335",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    666
+   ],
+   [
+    "【결정요지】",
+    1172
+   ],
+   [
+    "【심판대상조문】",
+    189
+   ],
+   [
+    "【참조조문】",
+    368
+   ],
+   [
+    "【참조판례】",
+    196
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    259
+   ],
+   [
+    "[주 문]",
+    443
+   ],
+   [
+    "[이 유 ]",
+    14301
+   ]
+  ],
+  "coverage": {
+   "issues": 0.952,
+   "issues_vs_headnote": 0.952,
+   "holdings": 0.991,
+   "holdings_vs_headnote": 0.991
+  }
+ },
+ {
+  "id": "std-constitution-413",
+  "title": "법적근거 없는 옥외집회신고서 반복적 반려 사건",
+  "caseNumber": "2007헌마712",
+  "lookupKey": "2007헌마712",
+  "date": "2008-05-29",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-6"
+  ],
+  "decisionId": "cc-2007heonma712-20080529-decision",
+  "fetchedFrom": "std-constitution-413",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2008-05-29 선고 2007헌마712",
+  "xlsxRow": 239,
+  "flags": [],
+  "officialCitation": "[전원재판부 2007헌마712, 2008. 5. 29.]",
+  "officialTitle": "민원서류 반려 위헌확인",
+  "seq": "134840",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    243
+   ],
+   [
+    "【결정요지】",
+    2357
+   ],
+   [
+    "【참조조문】",
+    80
+   ],
+   [
+    "【참조판례】",
+    34
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    126
+   ],
+   [
+    "【주 문】",
+    129
+   ],
+   [
+    "【이 유】",
+    20641
+   ],
+   [
+    "【별 지】",
+    485
+   ]
+  ],
+  "coverage": {
+   "issues": 0.944,
+   "issues_vs_headnote": 0.944,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-414",
+  "title": "셔틀버스 운영금지와 백화점 등의 경영자들의 영업의 자유",
+  "caseNumber": "2001헌마132",
+  "lookupKey": "2001헌마132",
+  "date": "2001-06-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-7"
+  ],
+  "decisionId": "cc-2001heonma132-20010628-decision",
+  "fetchedFrom": "std-constitution-140",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2001-06-28 선고 2001헌마132",
+  "xlsxRow": 241,
+  "flags": [],
+  "officialCitation": "[전원재판부 2001헌마132, 2001. 6. 28.]",
+  "officialTitle": "여객자동차운수사업법 제73조의2 등 위헌확인",
+  "seq": "58489",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    242
+   ],
+   [
+    "【결정요지】",
+    3321
+   ],
+   [
+    "【심판대상조문】",
+    560
+   ],
+   [
+    "【참조조문】",
+    372
+   ],
+   [
+    "【참조판례】",
+    107
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    50
+   ],
+   [
+    "【주 문】",
+    68
+   ],
+   [
+    "【이 유】",
+    19466
+   ],
+   [
+    "【별 지】",
+    1139
+   ]
+  ],
+  "coverage": {
+   "issues": 0.524,
+   "issues_vs_headnote": 0.524,
+   "holdings": 0.993,
+   "holdings_vs_headnote": 0.993
+  }
+ },
+ {
+  "id": "std-constitution-415",
+  "title": "대한변리사회 의무 가입 조항과 직업의 자유",
+  "caseNumber": "2020헌바21",
+  "lookupKey": "2020헌바21",
+  "date": "2026-04-29",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-7"
+  ],
+  "decisionId": "cc-2020heonba21-20260429-decision",
+  "fetchedFrom": "std-constitution-415",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2026-04-29 선고 2020헌바21",
+  "xlsxRow": 244,
+  "flags": [],
+  "officialCitation": "[전원재판부 2020헌바21, 2026. 4. 29.]",
+  "officialTitle": "변리사법 제11조 위헌소원",
+  "seq": "207607",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    212
+   ],
+   [
+    "【결정요지】",
+    3496
+   ],
+   [
+    "【심판대상조문】",
+    72
+   ],
+   [
+    "【참조조문】",
+    54
+   ],
+   [
+    "【참조판례】",
+    208
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    59
+   ],
+   [
+    "【주 문】",
+    138
+   ],
+   [
+    "【이 유】",
+    27126
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 0.998,
+   "holdings_vs_headnote": 0.631
+  }
+ },
+ {
+  "id": "std-constitution-416",
+  "title": "성매매 형사처벌과 성판매자의 직업의 자유",
+  "caseNumber": "2013헌가2",
+  "lookupKey": "2013헌가2",
+  "date": "2016-03-31",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-7"
+  ],
+  "decisionId": "cc-2013heonga2-20160331-decision",
+  "fetchedFrom": "std-constitution-416",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2016-03-31 선고 2013헌가2",
+  "xlsxRow": 248,
+  "flags": [],
+  "officialCitation": "[전원재판부 2013헌가2, 2016. 3. 31.]",
+  "officialTitle": "성매매알선 등 행위의 처벌에 관한 법률 제21조 제1항 위헌제청",
+  "seq": "49435",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    200
+   ],
+   [
+    "【결정요지】",
+    4573
+   ],
+   [
+    "【심판대상조문】",
+    62
+   ],
+   [
+    "【참조조문】",
+    235
+   ],
+   [
+    "【참조판례】",
+    148
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    100
+   ],
+   [
+    "[주 문]",
+    78
+   ],
+   [
+    "[이 유]",
+    41815
+   ]
+  ],
+  "coverage": {
+   "issues": 0.745,
+   "issues_vs_headnote": 0.745,
+   "holdings": 0.806,
+   "holdings_vs_headnote": 0.806
+  }
+ },
+ {
+  "id": "std-constitution-417",
+  "title": "학교정화구역 내 극장시설 및 영업 금지",
+  "caseNumber": "2010헌바384",
+  "lookupKey": "2010헌바384",
+  "date": "2011-10-25",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-7"
+  ],
+  "decisionId": "cc-2010heonba384-20111025-decision",
+  "fetchedFrom": "std-constitution-417",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2011-10-25 선고 2010헌바384",
+  "xlsxRow": 249,
+  "flags": [],
+  "officialCitation": "[전원재판부 2010헌바384, 2011. 10. 25.]",
+  "officialTitle": "학교보건법 제6조 제1항 제13호 등 위헌소원",
+  "seq": "17236",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    255
+   ],
+   [
+    "【결정요지】",
+    992
+   ],
+   [
+    "【심판대상조문】",
+    101
+   ],
+   [
+    "【참조조문】",
+    283
+   ],
+   [
+    "【참조판례】",
+    217
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당사자]",
+    72
+   ],
+   [
+    "[주문]",
+    117
+   ],
+   [
+    "[이유]",
+    13916
+   ]
+  ],
+  "coverage": {
+   "issues": 0.988,
+   "issues_vs_headnote": 0.988,
+   "holdings": 0.997,
+   "holdings_vs_headnote": 0.997
+  }
+ },
+ {
+  "id": "std-constitution-418",
+  "title": "비의료인 문신시술 금지",
+  "caseNumber": "2017헌마1343",
+  "lookupKey": "2017헌마1343",
+  "date": "2022-03-31",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-7"
+  ],
+  "decisionId": "cc-2017heonma1343-20220331-decision",
+  "fetchedFrom": "std-constitution-418",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2022-03-31 선고 2017헌마1343",
+  "xlsxRow": 250,
+  "flags": [],
+  "officialCitation": "[전원재판부 2017헌마1343, 2022. 3. 31.]",
+  "officialTitle": "의료법 제27조 제1항 본문 전단 위헌확인 등",
+  "seq": "172601",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    206
+   ],
+   [
+    "【결정요지】",
+    1997
+   ],
+   [
+    "【심판대상조문】",
+    138
+   ],
+   [
+    "【참조조문】",
+    69
+   ],
+   [
+    "【참조판례】",
+    373
+   ],
+   [
+    "【전문】",
+    254
+   ],
+   [
+    "[주 문]",
+    107
+   ],
+   [
+    "[이 유]",
+    19218
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 0.986,
+   "holdings_vs_headnote": 0.986
+  }
+ },
+ {
+  "id": "std-constitution-419",
+  "title": "민간기업에 의한 공용수용 가능성",
+  "caseNumber": "2007헌바114",
+  "lookupKey": "2007헌바114",
+  "date": "2009-09-24",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-7"
+  ],
+  "decisionId": "cc-2007heonba114-20090924-decision",
+  "fetchedFrom": "std-constitution-419",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2009-09-24 선고 2007헌바114",
+  "xlsxRow": 255,
+  "flags": [],
+  "officialCitation": "[전원재판부 2007헌바114, 2009. 9. 24.]",
+  "officialTitle": "산업입지 및 개발에 관한 법률 제11조 제1항 등 위헌소원",
+  "seq": "139035",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    492
+   ],
+   [
+    "【결정요지】",
+    3369
+   ],
+   [
+    "【심판대상조문】",
+    153
+   ],
+   [
+    "【참조조문】",
+    31
+   ],
+   [
+    "【참조판례】",
+    98
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    116
+   ],
+   [
+    "【주 문】",
+    173
+   ],
+   [
+    "【이 유】",
+    23941
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-420",
+  "title": "최저임금고시와 재산권",
+  "caseNumber": "2017헌마1366",
+  "lookupKey": "2017헌마1366",
+  "date": "2019-12-27",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-7"
+  ],
+  "decisionId": "cc-2017heonma1366-20191227-decision",
+  "fetchedFrom": "std-constitution-420",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2019-12-27 선고 2017헌마1366",
+  "xlsxRow": 259,
+  "flags": [],
+  "officialCitation": "[전원재판부 2017헌마1366, 2019. 12. 27., 기각]",
+  "officialTitle": "고용노동부 고시 제2017-42호 위헌확인",
+  "seq": "154549",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    565
+   ],
+   [
+    "【결정요지】",
+    4007
+   ],
+   [
+    "【심판대상조문】",
+    119
+   ],
+   [
+    "【참조조문】",
+    327
+   ],
+   [
+    "【참조판례】",
+    29
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    143
+   ],
+   [
+    "【주 문】",
+    313
+   ],
+   [
+    "【이 유】",
+    21569
+   ]
+  ],
+  "coverage": {
+   "issues": 0.711,
+   "issues_vs_headnote": 0.711,
+   "holdings": 0.764,
+   "holdings_vs_headnote": 0.764
+  }
+ },
+ {
+  "id": "std-constitution-421",
+  "title": "공법상 권리와 재산권",
+  "caseNumber": "99헌마289",
+  "lookupKey": "99헌마289",
+  "date": "2000-06-29",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-7"
+  ],
+  "decisionId": "cc-99heonma289-20000629-decision",
+  "fetchedFrom": "std-constitution-421",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2000-06-29 선고 99헌마289",
+  "xlsxRow": 260,
+  "flags": [],
+  "officialCitation": "[전원재판부 99헌마289, 2000. 6. 29.]",
+  "officialTitle": "국민건강보험법 제33조 제2항 등 위헌확인",
+  "seq": "137528",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    286
+   ],
+   [
+    "【결정요지】",
+    2588
+   ],
+   [
+    "【심판대상조문】",
+    1725
+   ],
+   [
+    "【참조조문】",
+    382
+   ],
+   [
+    "【참조판례】",
+    15
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    38
+   ],
+   [
+    "【주 문】",
+    20
+   ],
+   [
+    "【이 유】",
+    30705
+   ]
+  ],
+  "coverage": {
+   "issues": 0.891,
+   "issues_vs_headnote": 0.359,
+   "holdings": 0.995,
+   "holdings_vs_headnote": 0.374
+  }
+ },
+ {
+  "id": "std-constitution-422",
+  "title": "집합제한조치로 발생한 손실과 재산권",
+  "caseNumber": "2020헌마1669",
+  "lookupKey": "2020헌마1669",
+  "date": "2023-06-29",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-7"
+  ],
+  "decisionId": "cc-2020heonma1669-20230629-decision",
+  "fetchedFrom": "std-constitution-422",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2023-06-29 선고 2020헌마1669",
+  "xlsxRow": 262,
+  "flags": [],
+  "officialCitation": "[전원재판부 2020헌마1669, 2023. 6. 29.]",
+  "officialTitle": "입법부작위 위헌확인",
+  "seq": "183967",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    173
+   ],
+   [
+    "【결정요지】",
+    787
+   ],
+   [
+    "【심판대상조문】",
+    98
+   ],
+   [
+    "【참조조문】",
+    367
+   ],
+   [
+    "【참조판례】",
+    89
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    46
+   ],
+   [
+    "【주 문】",
+    19
+   ],
+   [
+    "【이 유】",
+    8844
+   ]
+  ],
+  "coverage": {
+   "issues": 0.876,
+   "issues_vs_headnote": 0.573,
+   "holdings": 0.655,
+   "holdings_vs_headnote": 0.655
+  }
+ },
+ {
+  "id": "std-constitution-423",
+  "title": "회원제 골프장 시설의 입장료 부가금",
+  "caseNumber": "2017헌가21",
+  "lookupKey": "2017헌가21",
+  "date": "2019-12-27",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-7"
+  ],
+  "decisionId": "cc-2017heonga21-20191227-decision",
+  "fetchedFrom": "std-constitution-423",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2019-12-27 선고 2017헌가21",
+  "xlsxRow": 263,
+  "flags": [],
+  "officialCitation": "[전원재판부 2017헌가21, 2019. 12. 27., 위헌]",
+  "officialTitle": "국민체육진흥법 제20조 제1항 제3호 위헌제청",
+  "seq": "154539",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    289
+   ],
+   [
+    "【결정요지】",
+    1960
+   ],
+   [
+    "【심판대상조문】",
+    145
+   ],
+   [
+    "【참조조문】",
+    782
+   ],
+   [
+    "【참조판례】",
+    381
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    126
+   ],
+   [
+    "[주 문]",
+    161
+   ],
+   [
+    "[이 유]",
+    18553
+   ]
+  ],
+  "coverage": {
+   "issues": 0.984,
+   "issues_vs_headnote": 0.738,
+   "holdings": 0.988,
+   "holdings_vs_headnote": 0.376
+  }
+ },
+ {
+  "id": "std-constitution-424",
+  "title": "한강 물이용부담금",
+  "caseNumber": "2018헌바425",
+  "lookupKey": "2018헌바425",
+  "date": "2020-08-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-7"
+  ],
+  "decisionId": "cc-2018heonba425-20200828-decision",
+  "fetchedFrom": "annual-2020-72",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2020-08-28 선고 2018헌바425",
+  "xlsxRow": 264,
+  "flags": [],
+  "officialCitation": "[전원재판부 2018헌바425, 2020. 8. 28., 합헌]",
+  "officialTitle": "한강수계 상수원수질개선 및 주민지원 등에 관한 법률 제19조 제1항 등 위헌소원",
+  "seq": "160477",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    431
+   ],
+   [
+    "【결정요지】",
+    1959
+   ],
+   [
+    "【심판대상조문】",
+    126
+   ],
+   [
+    "【참조조문】",
+    354
+   ],
+   [
+    "【참조판례】",
+    244
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    96
+   ],
+   [
+    "[주 문]",
+    145
+   ],
+   [
+    "[이 유]",
+    19125
+   ]
+  ],
+  "coverage": {
+   "issues": 0.976,
+   "issues_vs_headnote": 0.976,
+   "holdings": 0.999,
+   "holdings_vs_headnote": 0.999
+  }
+ },
+ {
+  "id": "std-constitution-425",
+  "title": "먹는샘물(생수)에 대한 수질개선부담금",
+  "caseNumber": "2002헌바42",
+  "lookupKey": "2002헌바42",
+  "date": "2004-07-15",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-7"
+  ],
+  "decisionId": "cc-2002heonba42-20040715-decision",
+  "fetchedFrom": "std-constitution-425",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2004-07-15 선고 2002헌바42",
+  "xlsxRow": 265,
+  "flags": [],
+  "officialCitation": "[전원재판부 2002헌바42, 2004. 7. 15.]",
+  "officialTitle": "먹는물관리법 제28조 제1항 위헌소원",
+  "seq": "137279",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    140
+   ],
+   [
+    "【결정요지】",
+    2802
+   ],
+   [
+    "【참조조문】",
+    7622
+   ],
+   [
+    "【참조판례】",
+    232
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    116
+   ],
+   [
+    "【주　　문】",
+    83
+   ],
+   [
+    "【이　　유】",
+    22945
+   ]
+  ],
+  "coverage": {
+   "issues": 0.676,
+   "issues_vs_headnote": 0.676,
+   "holdings": 0.559,
+   "holdings_vs_headnote": 0.559
+  }
+ },
+ {
+  "id": "std-constitution-426",
+  "title": "복수국적자의 국적이탈의 자유 제한",
+  "caseNumber": "2016헌마889",
+  "lookupKey": "2016헌마889",
+  "date": "2020-09-24",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-7"
+  ],
+  "decisionId": "cc-2016heonma889-20200924-decision",
+  "fetchedFrom": "std-constitution-152",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2020-09-24 선고 2016헌마889",
+  "xlsxRow": 266,
+  "flags": [],
+  "officialCitation": "[전원재판부 2016헌마889, 2020. 9. 24., 헌법불합치]",
+  "officialTitle": "국적법 제12조 제2항 본문 등 위헌확인",
+  "seq": "160803",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    353
+   ],
+   [
+    "【결정요지】",
+    3840
+   ],
+   [
+    "【심판대상조문】",
+    171
+   ],
+   [
+    "【참조조문】",
+    142
+   ],
+   [
+    "【참조판례】",
+    157
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    78
+   ],
+   [
+    "[주 문]",
+    203
+   ],
+   [
+    "[이 유]",
+    20302
+   ]
+  ],
+  "coverage": {
+   "issues": 0.987,
+   "issues_vs_headnote": 0.299,
+   "holdings": 0.995,
+   "holdings_vs_headnote": 0.995
+  }
+ },
+ {
+  "id": "std-constitution-427",
+  "title": "여권의 사용제한 등에 관한 고시 위헌확인",
+  "caseNumber": "2007헌마1366",
+  "lookupKey": "2007헌마1366",
+  "date": "2008-06-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-7"
+  ],
+  "decisionId": "cc-2007heonma1366-20080626-decision",
+  "fetchedFrom": "std-constitution-153",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2008-06-26 선고 2007헌마1366",
+  "xlsxRow": 267,
+  "flags": [],
+  "officialCitation": "[전원재판부 2007헌마1366, 2008. 6. 26.]",
+  "officialTitle": "여권의 사용제한 등에 관한 고시 위헌확인",
+  "seq": "129927",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    210
+   ],
+   [
+    "【결정요지】",
+    1711
+   ],
+   [
+    "【참조조문】",
+    132
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    48
+   ],
+   [
+    "【주 문】",
+    20
+   ],
+   [
+    "【이 유】",
+    8831
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-428",
+  "title": "거주지를 기준으로 중 ‧ 고등학교 입학 제한",
+  "caseNumber": "91헌마204",
+  "lookupKey": "91헌마204",
+  "date": "1995-02-23",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-7"
+  ],
+  "decisionId": "cc-91heonma204-19950223-decision",
+  "fetchedFrom": "std-constitution-428",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 1995-02-23 선고 91헌마204",
+  "xlsxRow": 268,
+  "flags": [],
+  "officialCitation": "[전원재판부 91헌마204, 1995. 2. 23.]",
+  "officialTitle": "교육법 시행령 제71조 등 에 대한 헌법소원",
+  "seq": "135036",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    46
+   ],
+   [
+    "【결정요지】",
+    319
+   ],
+   [
+    "【심판대상조문】",
+    1181
+   ],
+   [
+    "【참조조문】",
+    61
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    24
+   ],
+   [
+    "【주 문】",
+    16
+   ],
+   [
+    "【이 유】",
+    9527
+   ]
+  ],
+  "coverage": {
+   "issues": 0.893,
+   "issues_vs_headnote": 0.243,
+   "holdings": 0.744,
+   "holdings_vs_headnote": 0.744
+  }
+ },
+ {
+  "id": "std-constitution-429",
+  "title": "지방자치단체장의 피선거권 자격요건으로 90일 이상 관할구역 주 민등록 요구",
+  "caseNumber": "96헌마200",
+  "lookupKey": "96헌마200",
+  "date": "1996-06-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-7"
+  ],
+  "decisionId": "cc-96heonma200-19960626-decision",
+  "fetchedFrom": "std-constitution-429",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 1996-06-26 선고 96헌마200",
+  "xlsxRow": 269,
+  "flags": [],
+  "officialCitation": "[전원재판부 96헌마200, 1996. 6. 26.]",
+  "officialTitle": "공직선거및선거부정방지법 제16조 제3항 위헌확인",
+  "seq": "135411",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    100
+   ],
+   [
+    "【결정요지】",
+    1531
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당사자]",
+    20
+   ],
+   [
+    "[주 문]",
+    14
+   ],
+   [
+    "[이 유]",
+    9700
+   ]
+  ],
+  "coverage": {
+   "issues": 0.944,
+   "issues_vs_headnote": 0.775,
+   "holdings": 0.985,
+   "holdings_vs_headnote": 0.48
+  }
+ },
+ {
+  "id": "std-constitution-430",
+  "title": "서울광장 차벽봉쇄에 따른 통행저지 사건",
+  "caseNumber": "2009헌마406",
+  "lookupKey": "2009헌마406",
+  "date": "2011-06-30",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-7"
+  ],
+  "decisionId": "cc-2009heonma406-20110630-decision",
+  "fetchedFrom": "std-constitution-351",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2011-06-30 선고 2009헌마406",
+  "xlsxRow": 270,
+  "flags": [],
+  "officialCitation": "[지정재판부 2009헌마406, 2011. 6. 30.]",
+  "officialTitle": "서울특별시 서울광장 통행저지행위 위헌확인",
+  "seq": "16100",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    170
+   ],
+   [
+    "【결정요지】",
+    3562
+   ],
+   [
+    "【참조조문】",
+    234
+   ],
+   [
+    "【참조판례】",
+    146
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    60
+   ],
+   [
+    "[주 문]",
+    95
+   ],
+   [
+    "[이 유]",
+    20921
+   ]
+  ],
+  "coverage": {
+   "issues": 0.986,
+   "issues_vs_headnote": 0.986,
+   "holdings": 0.988,
+   "holdings_vs_headnote": 0.988
+  }
+ },
+ {
+  "id": "std-constitution-431",
+  "title": "재외선거인 선거권 및 국민투표권 제한",
+  "caseNumber": "2009헌마256",
+  "lookupKey": "2009헌마256",
+  "date": "2014-07-24",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-8"
+  ],
+  "decisionId": "cc-2009heonma256-20140724-decision",
+  "fetchedFrom": "std-constitution-431",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2014-07-24 선고 2009헌마256",
+  "xlsxRow": 276,
+  "flags": [],
+  "officialCitation": "[전원재판부 2009헌마256, 2014. 7. 24.]",
+  "officialTitle": "공직선거법 제218조의4 제1항 등 위헌확인",
+  "seq": "38976",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    968
+   ],
+   [
+    "【결정요지】",
+    3289
+   ],
+   [
+    "【심판대상조문】",
+    558
+   ],
+   [
+    "【참조조문】",
+    34
+   ],
+   [
+    "【참조판례】",
+    237
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    30
+   ],
+   [
+    "[주 문]",
+    486
+   ],
+   [
+    "[이 유]",
+    26861
+   ]
+  ],
+  "coverage": {
+   "issues": 0.958,
+   "issues_vs_headnote": 0.963,
+   "holdings": 0.992,
+   "holdings_vs_headnote": 0.992
+  }
+ },
+ {
+  "id": "std-constitution-432",
+  "title": "주민투표권과 헌법상 선거권",
+  "caseNumber": "2011헌마676",
+  "lookupKey": "2011헌마676",
+  "date": "2013-07-25",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-8"
+  ],
+  "decisionId": "cc-2011heonma676-20130725-decision",
+  "fetchedFrom": "std-constitution-432",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2013-07-25 선고 2011헌마676",
+  "xlsxRow": 280,
+  "flags": [],
+  "officialCitation": "[전원재판부 2011헌마676, 2013. 7. 25.]",
+  "officialTitle": "주민투표법 제6조 제1항 위헌확인",
+  "seq": "24643",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    215
+   ],
+   [
+    "【결정요지】",
+    450
+   ],
+   [
+    "【심판대상조문】",
+    79
+   ],
+   [
+    "【참조조문】",
+    251
+   ],
+   [
+    "【참조판례】",
+    48
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당사자]",
+    21
+   ],
+   [
+    "[주문]",
+    16
+   ],
+   [
+    "[이유]",
+    5857
+   ]
+  ],
+  "coverage": {
+   "issues": 0.821,
+   "issues_vs_headnote": 0.821,
+   "holdings": 0.653,
+   "holdings_vs_headnote": 0.653
+  }
+ },
+ {
+  "id": "std-constitution-433",
+  "title": "공무담임권의 보호영역과 공무수행의 자유",
+  "caseNumber": "2005헌마1275",
+  "lookupKey": "2005헌마1275",
+  "date": "2008-06-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-8"
+  ],
+  "decisionId": "cc-2005heonma1275-20080626-decision",
+  "fetchedFrom": "std-constitution-433",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2008-06-26 선고 2005헌마1275",
+  "xlsxRow": 283,
+  "flags": [],
+  "officialCitation": "[전원재판부 2005헌마1275, 2008. 6. 26.]",
+  "officialTitle": "정부조직법 제2조 제7항 위헌확인",
+  "seq": "129939",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    464
+   ],
+   [
+    "【결정요지】",
+    1302
+   ],
+   [
+    "【참조조문】",
+    345
+   ],
+   [
+    "【참조판례】",
+    28
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    48
+   ],
+   [
+    "【주 문】",
+    17
+   ],
+   [
+    "【이 유】",
+    7906
+   ],
+   [
+    "【별 지】",
+    2534
+   ]
+  ],
+  "coverage": {
+   "issues": 0.715,
+   "issues_vs_headnote": 0.715,
+   "holdings": 0.984,
+   "holdings_vs_headnote": 0.984
+  }
+ },
+ {
+  "id": "std-constitution-434",
+  "title": "공무담임권의 보호영역과 주식 매각 ‧ 백지신탁",
+  "caseNumber": "2010헌가65",
+  "lookupKey": "2010헌가65",
+  "date": "2012-08-23",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-8"
+  ],
+  "decisionId": "cc-2010heonga65-20120823-decision",
+  "fetchedFrom": "std-constitution-434",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2012-08-23 선고 2010헌가65",
+  "xlsxRow": 284,
+  "flags": [],
+  "officialCitation": "[전원재판부 2010헌가65, 2012. 8. 23.]",
+  "officialTitle": "공직자윤리법 제14조의4제1항 위헌 제청",
+  "seq": "21153",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    309
+   ],
+   [
+    "【결정요지】",
+    1480
+   ],
+   [
+    "【심판대상조문】",
+    128
+   ],
+   [
+    "【참조조문】",
+    228
+   ],
+   [
+    "【참조판례】",
+    242
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당사자]",
+    53
+   ],
+   [
+    "[주문]",
+    150
+   ],
+   [
+    "[이유]",
+    24450
+   ]
+  ],
+  "coverage": {
+   "issues": 0.789,
+   "issues_vs_headnote": 0.789,
+   "holdings": 0.787,
+   "holdings_vs_headnote": 0.787
+  }
+ },
+ {
+  "id": "std-constitution-435",
+  "title": "공무담임권의 보호영역과 국회의원 연로회원지원금",
+  "caseNumber": "2013헌마666",
+  "lookupKey": "2013헌마666",
+  "date": "2015-04-30",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-8"
+  ],
+  "decisionId": "cc-2013heonma666-20150430-decision",
+  "fetchedFrom": "std-constitution-435",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2015-04-30 선고 2013헌마666",
+  "xlsxRow": 285,
+  "flags": [],
+  "officialCitation": "[전원재판부 2013헌마666, 2015. 4. 30.]",
+  "officialTitle": "대한민국헌정회 육성법 제2조의2 제1항 제2호 위헌확인",
+  "seq": "45953",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    162
+   ],
+   [
+    "【결정요지】",
+    464
+   ],
+   [
+    "【심판대상조문】",
+    62
+   ],
+   [
+    "【참조조문】",
+    84
+   ],
+   [
+    "【참조판례】",
+    137
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    100
+   ],
+   [
+    "[주 문]",
+    16
+   ],
+   [
+    "[이 유]",
+    9461
+   ]
+  ],
+  "coverage": {
+   "issues": 0.643,
+   "issues_vs_headnote": 0.643,
+   "holdings": 0.423,
+   "holdings_vs_headnote": 0.423
+  }
+ },
+ {
+  "id": "std-constitution-436",
+  "title": "법관 임용 결격사유와 공무담임권",
+  "caseNumber": "2021헌마460",
+  "lookupKey": "2021헌마460",
+  "date": "2024-07-18",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-8"
+  ],
+  "decisionId": "cc-2021heonma460-20240718-decision",
+  "fetchedFrom": "annual-2024-07",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2024-07-18 선고 2021헌마460",
+  "xlsxRow": 286,
+  "flags": [],
+  "officialCitation": "[전원재판부 2021헌마460, 2024. 7. 18.]",
+  "officialTitle": "법원조직법 제43조 제1항 제5호 위헌확인",
+  "seq": "192063",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    132
+   ],
+   [
+    "【결정요지】",
+    1071
+   ],
+   [
+    "【심판대상조문】",
+    93
+   ],
+   [
+    "【참조조문】",
+    329
+   ],
+   [
+    "【참조판례】",
+    49
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    13
+   ],
+   [
+    "【주 문】",
+    104
+   ],
+   [
+    "【이 유】",
+    15795
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 0.61,
+   "holdings_vs_headnote": 0.308
+  }
+ },
+ {
+  "id": "std-constitution-437",
+  "title": "청원권의 보호범위와 행정부작위",
+  "caseNumber": "2003헌마851",
+  "lookupKey": "2003헌마851",
+  "date": "2004-05-27",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-8"
+  ],
+  "decisionId": "cc-2003heonma851-20040527-decision",
+  "fetchedFrom": "std-constitution-437",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2004-05-27 선고 2003헌마851",
+  "xlsxRow": 288,
+  "flags": [],
+  "officialCitation": "[전원재판부 2003헌마851, 2004. 5. 27., 각하]",
+  "officialTitle": "군인연금법 개정 청원에 대한 부작위 위헌확인",
+  "seq": "134700",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    155
+   ],
+   [
+    "【결정요지】",
+    766
+   ],
+   [
+    "【참조조문】",
+    34
+   ],
+   [
+    "【참조판례】",
+    43
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    63
+   ],
+   [
+    "【주 문】",
+    16
+   ],
+   [
+    "【이 유】",
+    4814
+   ],
+   [
+    "【별 지】",
+    15
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 0.993,
+   "holdings_vs_headnote": 0.993
+  }
+ },
+ {
+  "id": "std-constitution-438",
+  "title": "청원권의 보호범위와 이유명시",
+  "caseNumber": "93헌마213",
+  "lookupKey": "93헌마213",
+  "date": "1994-02-24",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-8"
+  ],
+  "decisionId": "cc-93heonma213-19940224-decision",
+  "fetchedFrom": "std-constitution-438",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 1994-02-24 선고 93헌마213",
+  "xlsxRow": 289,
+  "flags": [],
+  "officialCitation": "[전원재판부 93헌마213, 1994. 2. 24., 각하]",
+  "officialTitle": "종교시설용지공급처분취소 등",
+  "seq": "135222",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    243
+   ],
+   [
+    "【결정요지】",
+    973
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    93
+   ],
+   [
+    "[주 문]",
+    16
+   ],
+   [
+    "[이 유]",
+    5590
+   ]
+  ],
+  "coverage": {
+   "issues": 0.944,
+   "issues_vs_headnote": 1.0,
+   "holdings": 0.946,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-439",
+  "title": "수용자의 서신 발송에 대한 교도소장의 허가와 청원권",
+  "caseNumber": "99헌마713",
+  "lookupKey": "99헌마713",
+  "date": "2001-11-29",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-8"
+  ],
+  "decisionId": "cc-99heonma713-20011129-decision",
+  "fetchedFrom": "std-constitution-439",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2001-11-29 선고 99헌마713",
+  "xlsxRow": 290,
+  "flags": [],
+  "officialCitation": "[전원재판부 99헌마713, 2001. 11. 29.]",
+  "officialTitle": "행형법시행령 제62조 등 위헌확인",
+  "seq": "137541",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    176
+   ],
+   [
+    "【결정요지】",
+    1041
+   ],
+   [
+    "【심판대상조문】",
+    726
+   ],
+   [
+    "【참조조문】",
+    330
+   ],
+   [
+    "【참조판례】",
+    34
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    24
+   ],
+   [
+    "【주 문】",
+    147
+   ],
+   [
+    "【이 유】",
+    8313
+   ]
+  ],
+  "coverage": {
+   "issues": 0.991,
+   "issues_vs_headnote": 0.991,
+   "holdings": 0.995,
+   "holdings_vs_headnote": 0.669
+  }
+ },
+ {
+  "id": "std-constitution-440",
+  "title": "변호사징계와 법관에 의한 재판을 받을 권리",
+  "caseNumber": "2001헌가18",
+  "lookupKey": "2001헌가18",
+  "date": "2002-02-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-9"
+  ],
+  "decisionId": "cc-2001heonga18-20020228-decision",
+  "fetchedFrom": "std-constitution-440",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2002-02-28 선고 2001헌가18",
+  "xlsxRow": 297,
+  "flags": [],
+  "officialCitation": "[전원재판부 2001헌가18, 2002. 2. 28., 위헌]",
+  "officialTitle": "변호사법 제100조 제4항 등 위헌제청",
+  "seq": "134530",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    397
+   ],
+   [
+    "【결정요지】",
+    1040
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    42
+   ],
+   [
+    "[주 문]",
+    32
+   ],
+   [
+    "[이 유]",
+    3231
+   ]
+  ],
+  "coverage": {
+   "issues": 0.984,
+   "issues_vs_headnote": 0.984,
+   "holdings": 0.987,
+   "holdings_vs_headnote": 0.987
+  }
+ },
+ {
+  "id": "std-constitution-441",
+  "title": "재판청구권의 보호영역",
+  "caseNumber": "2008헌바12",
+  "lookupKey": "2008헌바12",
+  "date": "2009-11-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-9"
+  ],
+  "decisionId": "cc-2008heonba12-20091126-decision",
+  "fetchedFrom": "std-constitution-441",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2009-11-26 선고 2008헌바12",
+  "xlsxRow": 298,
+  "flags": [],
+  "officialCitation": "[전원재판부 2008헌바12, 2009. 11. 26.]",
+  "officialTitle": "국민의 형사재판 참여에 관한 법률 제5조 제1항등 위헌소원",
+  "seq": "140380",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    211
+   ],
+   [
+    "【결정요지】",
+    548
+   ],
+   [
+    "【심판대상조문】",
+    74
+   ],
+   [
+    "【참조판례】",
+    100
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    73
+   ],
+   [
+    "【주 문】",
+    93
+   ],
+   [
+    "【이 유】",
+    7602
+   ]
+  ],
+  "coverage": {
+   "issues": 0.982,
+   "issues_vs_headnote": 0.982,
+   "holdings": 0.992,
+   "holdings_vs_headnote": 0.992
+  }
+ },
+ {
+  "id": "std-constitution-442",
+  "title": "출국금지와 공정한 재판을 받을 권리",
+  "caseNumber": "2008헌바12",
+  "lookupKey": "2008헌바12",
+  "date": "2009-11-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-9"
+  ],
+  "decisionId": "cc-2008heonba12-20091126-decision",
+  "fetchedFrom": "std-constitution-441",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2009-11-26 선고 2008헌바12",
+  "xlsxRow": 299,
+  "flags": [
+   "XLSX_TEXT_UNRELATED"
+  ],
+  "officialCitation": "[전원재판부 2008헌바12, 2009. 11. 26.]",
+  "officialTitle": "국민의 형사재판 참여에 관한 법률 제5조 제1항등 위헌소원",
+  "seq": "140380",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    211
+   ],
+   [
+    "【결정요지】",
+    548
+   ],
+   [
+    "【심판대상조문】",
+    74
+   ],
+   [
+    "【참조판례】",
+    100
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    73
+   ],
+   [
+    "【주 문】",
+    93
+   ],
+   [
+    "【이 유】",
+    7602
+   ]
+  ],
+  "coverage": {
+   "issues": 0.386,
+   "issues_vs_headnote": 0.316,
+   "holdings": 0.091,
+   "holdings_vs_headnote": 0.032
+  }
+ },
+ {
+  "id": "std-constitution-443",
+  "title": "형사재판 및 민사재판에서 수형자의 재소자용 의류 착용",
+  "caseNumber": "2013헌마712",
+  "lookupKey": "2013헌마712",
+  "date": "2015-12-23",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-9"
+  ],
+  "decisionId": "cc-2013heonma712-20151223-decision",
+  "fetchedFrom": "std-constitution-443",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2015-12-23 선고 2013헌마712",
+  "xlsxRow": 300,
+  "flags": [],
+  "officialCitation": "[전원재판부 2013헌마712, 2015. 12. 23.]",
+  "officialTitle": "형의 집행 및 수용자의 처우에 관한 법률 제82조 위헌확인",
+  "seq": "48677",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    265
+   ],
+   [
+    "【결정요지】",
+    1319
+   ],
+   [
+    "【심판대상조문】",
+    59
+   ],
+   [
+    "【참조조문】",
+    102
+   ],
+   [
+    "【참조판례】",
+    251
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    24
+   ],
+   [
+    "[주 문]",
+    195
+   ],
+   [
+    "[이 유]",
+    11019
+   ]
+  ],
+  "coverage": {
+   "issues": 0.987,
+   "issues_vs_headnote": 0.987,
+   "holdings": 0.997,
+   "holdings_vs_headnote": 0.997
+  }
+ },
+ {
+  "id": "std-constitution-444",
+  "title": "수형자의 행정소송 변론기일 출정 제한",
+  "caseNumber": "2010헌마475",
+  "lookupKey": "2010헌마475",
+  "date": "2012-03-29",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-9"
+  ],
+  "decisionId": "cc-2010heonma475-20120329-decision",
+  "fetchedFrom": "std-constitution-444",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2012-03-29 선고 2010헌마475",
+  "xlsxRow": 301,
+  "flags": [],
+  "officialCitation": "[전원재판부 2010헌마475, 2012. 3. 29.]",
+  "officialTitle": "공권력행사 위헌확인",
+  "seq": "19202",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    109
+   ],
+   [
+    "【결정요지】",
+    1609
+   ],
+   [
+    "【참조조문】",
+    409
+   ],
+   [
+    "【참조판례】",
+    136
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당사자]",
+    41
+   ],
+   [
+    "[주문]",
+    138
+   ],
+   [
+    "[이유]",
+    12047
+   ]
+  ],
+  "coverage": {
+   "issues": 0.863,
+   "issues_vs_headnote": 0.863,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-445",
+  "title": "상속분가액지급청구권의 제척기간",
+  "caseNumber": "2021헌마1588",
+  "lookupKey": "2021헌마1588",
+  "date": "2024-06-27",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-9"
+  ],
+  "decisionId": "cc-2021heonma1588-20240627-decision",
+  "fetchedFrom": "annual-2024-52",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2024-06-27 선고 2021헌마1588",
+  "xlsxRow": 302,
+  "flags": [],
+  "officialCitation": "[전원재판부 2021헌마1588, 2024. 6. 27.]",
+  "officialTitle": "민법 제1014조 등 위헌확인",
+  "seq": "191541",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    230
+   ],
+   [
+    "【결정요지】",
+    939
+   ],
+   [
+    "【심판대상조문】",
+    87
+   ],
+   [
+    "【참조조문】",
+    162
+   ],
+   [
+    "【참조판례】",
+    385
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    20
+   ],
+   [
+    "【주 문】",
+    98
+   ],
+   [
+    "【이 유】",
+    8895
+   ]
+  ],
+  "coverage": {
+   "issues": 0.86,
+   "issues_vs_headnote": 0.826,
+   "holdings": 0.995,
+   "holdings_vs_headnote": 0.995
+  }
+ },
+ {
+  "id": "std-constitution-446",
+  "title": "형사보상청구권의 제척기간",
+  "caseNumber": "2008헌가4",
+  "lookupKey": "2008헌가4",
+  "date": "2010-07-29",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-9"
+  ],
+  "decisionId": "cc-2008heonga4-20100729-decision",
+  "fetchedFrom": "std-constitution-446",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2010-07-29 선고 2008헌가4",
+  "xlsxRow": 303,
+  "flags": [],
+  "officialCitation": "[전원재판부 2008헌가4, 2010. 7. 29.]",
+  "officialTitle": "형사보상법 제7조 위헌제청",
+  "seq": "14044",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    98
+   ],
+   [
+    "【결정요지】",
+    1096
+   ],
+   [
+    "【심판대상조문】",
+    9
+   ],
+   [
+    "【참조조문】",
+    100
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    37
+   ],
+   [
+    "【주 문】",
+    155
+   ],
+   [
+    "【이 유】",
+    13263
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.941
+  }
+ },
+ {
+  "id": "std-constitution-447",
+  "title": "민주화보상법 중 ‘정신적 손해’ 와 국가배상청구권",
+  "caseNumber": "2014헌바180",
+  "lookupKey": "2014헌바180",
+  "date": "2018-08-30",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-9"
+  ],
+  "decisionId": "cc-2014heonba180-20180830-decision",
+  "fetchedFrom": "std-constitution-447",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2018-08-30 선고 2014헌바180",
+  "xlsxRow": 309,
+  "flags": [
+   "FULLTEXT_SHORT_OR_ABSENT"
+  ],
+  "officialCitation": "[전원재판부 2014헌바180, 2018. 8. 30., 위헌]",
+  "officialTitle": "민주화운동관련자 명예회복 및 보상 등에 관한 법률 제18조 제2항 위헌소원",
+  "seq": "148663",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    494
+   ],
+   [
+    "【결정요지】",
+    3119
+   ],
+   [
+    "【참조조문】",
+    847
+   ],
+   [
+    "【참조판례】",
+    17
+   ]
+  ],
+  "coverage": {
+   "issues": 0.99,
+   "issues_vs_headnote": 0.99,
+   "holdings": 0.99,
+   "holdings_vs_headnote": 0.99
+  }
+ },
+ {
+  "id": "std-constitution-448",
+  "title": "도서대출 및 열람실 이용 제한과 교육을 받을 권리",
+  "caseNumber": "2014헌마977",
+  "lookupKey": "2014헌마977",
+  "date": "2016-11-24",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-10"
+  ],
+  "decisionId": "cc-2014heonma977-20161124-decision",
+  "fetchedFrom": "std-constitution-448",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2016-11-24 선고 2014헌마977",
+  "xlsxRow": 315,
+  "flags": [],
+  "officialCitation": "[전원재판부 2014헌마977, 2016. 11. 24.]",
+  "officialTitle": "도서대출 및 열람실 이용 불허행위 등 위헌확인",
+  "seq": "52798",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    539
+   ],
+   [
+    "【결정요지】",
+    858
+   ],
+   [
+    "【참조조문】",
+    132
+   ],
+   [
+    "【참조판례】",
+    99
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    82
+   ],
+   [
+    "[주 문]",
+    302
+   ],
+   [
+    "[이 유]",
+    4857
+   ]
+  ],
+  "coverage": {
+   "issues": 0.8,
+   "issues_vs_headnote": 0.8,
+   "holdings": 0.986,
+   "holdings_vs_headnote": 0.719
+  }
+ },
+ {
+  "id": "std-constitution-449",
+  "title": "법학전문대학원 교육과정과 교육을 받을 권리",
+  "caseNumber": "2020헌마1377",
+  "lookupKey": "2020헌마1377",
+  "date": "2024-02-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-10"
+  ],
+  "decisionId": "cc-2020heonma1377-20240228-decision",
+  "fetchedFrom": "std-constitution-449",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2024-02-28 선고 2020헌마1377",
+  "xlsxRow": 316,
+  "flags": [],
+  "officialCitation": "[전원재판부 2020헌마1377, 2024. 2. 28.]",
+  "officialTitle": "법학전문대학원 설치 · 운영에 관한 법률 등 위헌확인",
+  "seq": "188971",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    276
+   ],
+   [
+    "【결정요지】",
+    755
+   ],
+   [
+    "【심판대상조문】",
+    170
+   ],
+   [
+    "【참조조문】",
+    178
+   ],
+   [
+    "【참조판례】",
+    141
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    23
+   ],
+   [
+    "【주 문】",
+    19
+   ],
+   [
+    "【이 유】",
+    4471
+   ]
+  ],
+  "coverage": {
+   "issues": 0.781,
+   "issues_vs_headnote": 0.397,
+   "holdings": 0.971,
+   "holdings_vs_headnote": 0.971
+  }
+ },
+ {
+  "id": "std-constitution-450",
+  "title": "학교운영지원비의 부담과 의무교육 무상의 원칙",
+  "caseNumber": "2010헌바220",
+  "lookupKey": "2010헌바220",
+  "date": "2012-08-23",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-10"
+  ],
+  "decisionId": "cc-2010heonba220-20120823-decision",
+  "fetchedFrom": "std-constitution-450",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2012-08-23 선고 2010헌바220",
+  "xlsxRow": 317,
+  "flags": [],
+  "officialCitation": "[전원재판부 2010헌바220, 2012. 8. 23.]",
+  "officialTitle": "초·중등교육법 제30조의2 제2항 제2호 등 위헌소원",
+  "seq": "20539",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    470
+   ],
+   [
+    "【결정요지】",
+    1297
+   ],
+   [
+    "【심판대상조문】",
+    220
+   ],
+   [
+    "【참조조문】",
+    75
+   ],
+   [
+    "【참조판례】",
+    90
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당사자】",
+    115
+   ],
+   [
+    "【주문】",
+    405
+   ],
+   [
+    "【이유】",
+    12873
+   ]
+  ],
+  "coverage": {
+   "issues": 0.959,
+   "issues_vs_headnote": 0.438,
+   "holdings": 0.994,
+   "holdings_vs_headnote": 0.994
+  }
+ },
+ {
+  "id": "std-constitution-451",
+  "title": "국립대학의 대학 자율권의 주체성 및 그 침해 여부",
+  "caseNumber": "2014헌마1149",
+  "lookupKey": "2014헌마1149",
+  "date": "2015-12-23",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-10"
+  ],
+  "decisionId": "cc-2014heonma1149-20151223-decision",
+  "fetchedFrom": "std-constitution-259",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2015-12-23 선고 2014헌마1149",
+  "xlsxRow": 318,
+  "flags": [],
+  "officialCitation": "[전원재판부 2014헌마1149, 2015. 12. 23.]",
+  "officialTitle": "○○대학교 법학전문대학원 2015학년 모집정지처분 등 취소",
+  "seq": "48717",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    233
+   ],
+   [
+    "【결정요지】",
+    1139
+   ],
+   [
+    "【참조조문】",
+    201
+   ],
+   [
+    "【참조판례】",
+    197
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    49
+   ],
+   [
+    "[주 문]",
+    149
+   ],
+   [
+    "[이 유]",
+    10233
+   ]
+  ],
+  "coverage": {
+   "issues": 0.897,
+   "issues_vs_headnote": 0.897,
+   "holdings": 0.99,
+   "holdings_vs_headnote": 0.99
+  }
+ },
+ {
+  "id": "std-constitution-452",
+  "title": "고용허가를 받아 입국한 외국인근로자의 출국만기보험금 지급",
+  "caseNumber": "2014헌마367",
+  "lookupKey": "2014헌마367",
+  "date": "2016-03-31",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-10"
+  ],
+  "decisionId": "cc-2014heonma367-20160331-decision",
+  "fetchedFrom": "std-constitution-452",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2016-03-31 선고 2014헌마367",
+  "xlsxRow": 324,
+  "flags": [],
+  "officialCitation": "[전원재판부 2014헌마367, 2016. 3. 31.]",
+  "officialTitle": "외국인근로자의 고용 등에 관한 법률 제13조 제3항 등 위헌확인",
+  "seq": "49463",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    259
+   ],
+   [
+    "【결정요지】",
+    1651
+   ],
+   [
+    "【심판대상조문】",
+    89
+   ],
+   [
+    "【참조조문】",
+    187
+   ],
+   [
+    "【참조판례】",
+    519
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    103
+   ],
+   [
+    "[주 문]",
+    16
+   ],
+   [
+    "[이 유]",
+    16761
+   ]
+  ],
+  "coverage": {
+   "issues": 0.982,
+   "issues_vs_headnote": 0.982,
+   "holdings": 0.803,
+   "holdings_vs_headnote": 0.803
+  }
+ },
+ {
+  "id": "std-constitution-453",
+  "title": "초헌법적 국가긴급권과 근로3권의 본질적 내용 침해",
+  "caseNumber": "2014헌가5",
+  "lookupKey": "2014헌가5",
+  "date": "2015-03-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-10"
+  ],
+  "decisionId": "cc-2014heonga5-20150326-decision",
+  "fetchedFrom": "std-constitution-453",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2015-03-26 선고 2014헌가5",
+  "xlsxRow": 325,
+  "flags": [],
+  "officialCitation": "[전원재판부 2014헌가5, 2015. 3. 26.]",
+  "officialTitle": "국가보위에관한특별조치법 제9조 등 위헌제청",
+  "seq": "44975",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    284
+   ],
+   [
+    "【결정요지】",
+    990
+   ],
+   [
+    "【심판대상조문】",
+    109
+   ],
+   [
+    "【참조조문】",
+    136
+   ],
+   [
+    "【참조판례】",
+    90
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    83
+   ],
+   [
+    "[주 문]",
+    120
+   ],
+   [
+    "[이 유]",
+    4608
+   ]
+  ],
+  "coverage": {
+   "issues": 0.987,
+   "issues_vs_headnote": 0.987,
+   "holdings": 0.992,
+   "holdings_vs_headnote": 0.992
+  }
+ },
+ {
+  "id": "std-constitution-454",
+  "title": "경과실 범죄행위에 대한 의료보험수급권 제한",
+  "caseNumber": "2002헌바1",
+  "lookupKey": "2002헌바1",
+  "date": "2003-12-18",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-11"
+  ],
+  "decisionId": "cc-2002heonba1-20031218-decision",
+  "fetchedFrom": "std-constitution-187",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2003-12-18 선고 2002헌바1",
+  "xlsxRow": 329,
+  "flags": [],
+  "officialCitation": "[전원재판부 2002헌바1, 2003. 12. 18.]",
+  "officialTitle": "구 국민의료보험법 제41조 제1항 등 위헌소원",
+  "seq": "134623",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    277
+   ],
+   [
+    "【결정요지】",
+    1427
+   ],
+   [
+    "【심판대상조문】",
+    221
+   ],
+   [
+    "【참조조문】",
+    295
+   ],
+   [
+    "【참조판례】",
+    16
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    79
+   ],
+   [
+    "【주 문】",
+    165
+   ],
+   [
+    "【이 유】",
+    25994
+   ]
+  ],
+  "coverage": {
+   "issues": 0.835,
+   "issues_vs_headnote": 0.835,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-455",
+  "title": "검사의 치료감호청구와 보건에 관한 국가의 보호의무",
+  "caseNumber": "2019헌가24",
+  "lookupKey": "2019헌가24",
+  "date": "2021-01-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-11"
+  ],
+  "decisionId": "cc-2019heonga24-20210128-decision",
+  "fetchedFrom": "std-constitution-455",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2021-01-28 선고 2019헌가24",
+  "xlsxRow": 336,
+  "flags": [],
+  "officialCitation": "[전원재판부 2019헌가24, 2021. 1. 28.]",
+  "officialTitle": "치료감호 등에 관한 법률 제4조 제7항 위헌제청 등",
+  "seq": "163525",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    243
+   ],
+   [
+    "【결정요지】",
+    1208
+   ],
+   [
+    "【심판대상조문】",
+    57
+   ],
+   [
+    "【참조조문】",
+    357
+   ],
+   [
+    "【참조판례】",
+    449
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    150
+   ],
+   [
+    "[주 문]",
+    81
+   ],
+   [
+    "[이 유]",
+    18838
+   ]
+  ],
+  "coverage": {
+   "issues": 0.88,
+   "issues_vs_headnote": 0.88,
+   "holdings": 0.972,
+   "holdings_vs_headnote": 0.644
+  }
+ },
+ {
+  "id": "std-constitution-456",
+  "title": "선거운동과정의 소음과 환경권",
+  "caseNumber": "2018헌마730",
+  "lookupKey": "2018헌마730",
+  "date": "2019-12-27",
+  "enBanc": false,
+  "tocPath": [
+   "hb-2",
+   "hb-2-2",
+   "hb-2-2-11"
+  ],
+  "decisionId": "cc-2018heonma730-20191227-decision",
+  "fetchedFrom": "std-constitution-195",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2019-12-27 선고 2018헌마730",
+  "xlsxRow": 337,
+  "flags": [],
+  "officialCitation": "[전원재판부 2018헌마730, 2019. 12. 27., 헌법불합치]",
+  "officialTitle": "공직선거법 제79조 제3항 등 위헌확인",
+  "seq": "154569",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    211
+   ],
+   [
+    "【결정요지】",
+    1840
+   ],
+   [
+    "【심판대상조문】",
+    120
+   ],
+   [
+    "【참조조문】",
+    461
+   ],
+   [
+    "【참조판례】",
+    17
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    21
+   ],
+   [
+    "【주 문】",
+    193
+   ],
+   [
+    "【이 유】",
+    16056
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 0.818,
+   "holdings": 0.997,
+   "holdings_vs_headnote": 0.242
+  }
+ },
+ {
+  "id": "std-constitution-457",
+  "title": "교섭단체",
+  "caseNumber": "2002헌라1",
+  "lookupKey": "2002헌라1",
+  "date": "2003-10-30",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-1"
+  ],
+  "decisionId": "cc-2002heonra1-20031030-decision",
+  "fetchedFrom": "std-constitution-196",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2003-10-30 선고 2002헌라1",
+  "xlsxRow": 344,
+  "flags": [],
+  "officialCitation": "[전원재판부 2002헌라1, 2003. 10. 30.]",
+  "officialTitle": "국회의원과 국회의장간의 권한쟁의",
+  "seq": "58378",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    315
+   ],
+   [
+    "【결정요지】",
+    3660
+   ],
+   [
+    "【참조조문】",
+    250
+   ],
+   [
+    "【참조판례】",
+    57
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    64
+   ],
+   [
+    "【주 문】",
+    16
+   ],
+   [
+    "【이 유】",
+    18691
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 0.417,
+   "holdings": 0.995,
+   "holdings_vs_headnote": 0.386
+  }
+ },
+ {
+  "id": "std-constitution-458",
+  "title": "탄핵소추(1)",
+  "caseNumber": "2016헌나1",
+  "lookupKey": "2016헌나1",
+  "date": "2017-03-10",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-1"
+  ],
+  "decisionId": "cc-2016heonna1-20170310-decision",
+  "fetchedFrom": "std-constitution-458",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2017-03-10 선고 2016헌나1",
+  "xlsxRow": 351,
+  "flags": [],
+  "officialCitation": "[전원재판부 2016헌나1, 2017. 3. 10.]",
+  "officialTitle": "대통령(박근혜)탄핵",
+  "seq": "54153",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    380
+   ],
+   [
+    "【결정요지】",
+    5668
+   ],
+   [
+    "【참조조문】",
+    467
+   ],
+   [
+    "【참조판례】",
+    508
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    69
+   ],
+   [
+    "【주 문】",
+    19
+   ],
+   [
+    "【이 유】",
+    75379
+   ]
+  ],
+  "coverage": {
+   "issues": 0.908,
+   "issues_vs_headnote": 0.206,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.418
+  }
+ },
+ {
+  "id": "std-constitution-459",
+  "title": "탄핵소추권의 남용",
+  "caseNumber": "2024헌나1",
+  "lookupKey": "2024헌나1",
+  "date": "2025-01-23",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-1"
+  ],
+  "decisionId": "cc-2024heonna1-20250123-decision",
+  "fetchedFrom": "annual-2025-12",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2025-01-23 선고 2024헌나1",
+  "xlsxRow": 353,
+  "flags": [],
+  "officialCitation": "[전원재판부 2024헌나1, 2025. 1. 23.]",
+  "officialTitle": "방송통신위원회 위원장(이진숙) 탄핵",
+  "seq": "195713",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    348
+   ],
+   [
+    "【결정요지】",
+    2028
+   ],
+   [
+    "【참조조문】",
+    641
+   ],
+   [
+    "【참조판례】",
+    331
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    146
+   ],
+   [
+    "【주 문】",
+    16
+   ],
+   [
+    "【이 유】",
+    36426
+   ]
+  ],
+  "coverage": {
+   "issues": 0.953,
+   "issues_vs_headnote": 0.318,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.239
+  }
+ },
+ {
+  "id": "std-constitution-460",
+  "title": "위임입법에 의한 기본권제한과 법률유보원칙",
+  "caseNumber": "2003헌마289",
+  "lookupKey": "2003헌마289",
+  "date": "2005-02-24",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-2"
+  ],
+  "decisionId": "cc-2003heonma289-20050224-decision",
+  "fetchedFrom": "std-constitution-210",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2005-02-24 선고 2003헌마289",
+  "xlsxRow": 361,
+  "flags": [],
+  "officialCitation": "[전원재판부 2003헌마289, 2005. 2. 24.]",
+  "officialTitle": "행형법시행령 제145조 제2항 등 위헌확인",
+  "seq": "134681",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    333
+   ],
+   [
+    "【결정요지】",
+    1339
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    23
+   ],
+   [
+    "【주　　문】",
+    203
+   ],
+   [
+    "【이　　유】",
+    21315
+   ]
+  ],
+  "coverage": {
+   "issues": 0.711,
+   "issues_vs_headnote": 0.526,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.132
+  }
+ },
+ {
+  "id": "std-constitution-461",
+  "title": "모법의 위임범위를 벗어난 하위법령",
+  "caseNumber": "2007헌마910",
+  "lookupKey": "2007헌마910",
+  "date": "2010-04-29",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-2"
+  ],
+  "decisionId": "cc-2007heonma910-20100429-decision",
+  "fetchedFrom": "std-constitution-461",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2010-04-29 선고 2007헌마910",
+  "xlsxRow": 362,
+  "flags": [],
+  "officialCitation": "[전원재판부 2007헌마910, 2010. 4. 29.]",
+  "officialTitle": "행정사법 시행령 제4조 제3항 위헌확인",
+  "seq": "13626",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    204
+   ],
+   [
+    "【결정요지】",
+    1001
+   ],
+   [
+    "【심판대상조문】",
+    114
+   ],
+   [
+    "【참조조문】",
+    152
+   ],
+   [
+    "【참조판례】",
+    243
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    24
+   ],
+   [
+    "【주 문】",
+    124
+   ],
+   [
+    "【이 유】",
+    9670
+   ]
+  ],
+  "coverage": {
+   "issues": 0.964,
+   "issues_vs_headnote": 0.536,
+   "holdings": 0.996,
+   "holdings_vs_headnote": 0.286
+  }
+ },
+ {
+  "id": "std-constitution-462",
+  "title": "포괄위임금지원칙상 위임입법의 필요성",
+  "caseNumber": "2009헌바192",
+  "lookupKey": "2009헌바192",
+  "date": "2010-07-29",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-2"
+  ],
+  "decisionId": "cc-2009heonba192-20100729-decision",
+  "fetchedFrom": "std-constitution-462",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2010-07-29 선고 2009헌바192",
+  "xlsxRow": 364,
+  "flags": [],
+  "officialCitation": "[전원재판부 2009헌바192, 2010. 7. 29.]",
+  "officialTitle": "소득세법 제97조 제1항 제2호 등 위헌소원",
+  "seq": "14080",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    239
+   ],
+   [
+    "【결정요지】",
+    842
+   ],
+   [
+    "【심판대상조문】",
+    91
+   ],
+   [
+    "【참조조문】",
+    67
+   ],
+   [
+    "【참조판례】",
+    221
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    69
+   ],
+   [
+    "【주 문】",
+    106
+   ],
+   [
+    "【이 유】",
+    7417
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 0.409,
+   "holdings": 0.995,
+   "holdings_vs_headnote": 0.381
+  }
+ },
+ {
+  "id": "std-constitution-463",
+  "title": "헌법 제95조와 포괄위임금지원칙",
+  "caseNumber": "2004헌가15",
+  "lookupKey": "2004헌가15",
+  "date": "2004-11-25",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-2"
+  ],
+  "decisionId": "cc-2004heonga15-20041125-decision",
+  "fetchedFrom": "std-constitution-463",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2004-11-25 선고 2004헌가15",
+  "xlsxRow": 367,
+  "flags": [],
+  "officialCitation": "[전원재판부 2004헌가15, 2004. 11. 25.]",
+  "officialTitle": "오수·분뇨및축산폐수의처리에관한법률 제5조 제1항 위헌제청",
+  "seq": "137688",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    180
+   ],
+   [
+    "【결정요지】",
+    1622
+   ],
+   [
+    "【참조조문】",
+    102
+   ],
+   [
+    "【참조판례】",
+    84
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    70
+   ],
+   [
+    "【주　　문】",
+    107
+   ],
+   [
+    "【이　　유】",
+    12061
+   ]
+  ],
+  "coverage": {
+   "issues": 0.734,
+   "issues_vs_headnote": 0.266,
+   "holdings": 0.995,
+   "holdings_vs_headnote": 0.491
+  }
+ },
+ {
+  "id": "std-constitution-464",
+  "title": "포괄위임금지원칙과 명확성원칙의 관계",
+  "caseNumber": "2013헌바204",
+  "lookupKey": "2013헌바204",
+  "date": "2015-07-30",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-2"
+  ],
+  "decisionId": "cc-2013heonba204-20150730-decision",
+  "fetchedFrom": "std-constitution-464",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2015-07-30 선고 2013헌바204",
+  "xlsxRow": 369,
+  "flags": [],
+  "officialCitation": "[전원재판부 2013헌바204, 2015. 7. 30.]",
+  "officialTitle": "구 소득세법 제98조 위헌소원",
+  "seq": "47277",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    186
+   ],
+   [
+    "【결정요지】",
+    643
+   ],
+   [
+    "【심판대상조문】",
+    80
+   ],
+   [
+    "【참조조문】",
+    168
+   ],
+   [
+    "【참조판례】",
+    528
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    93
+   ],
+   [
+    "[주 문]",
+    96
+   ],
+   [
+    "[이 유]",
+    10180
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 0.471,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.29
+  }
+ },
+ {
+  "id": "std-constitution-465",
+  "title": "법관의 지위와 신분보장(1)",
+  "caseNumber": "2001헌마557",
+  "lookupKey": "2001헌마557",
+  "date": "2002-10-31",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-3"
+  ],
+  "decisionId": "cc-2001heonma557-20021031-decision",
+  "fetchedFrom": "std-constitution-218",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2002-10-31 선고 2001헌마557",
+  "xlsxRow": 375,
+  "flags": [],
+  "officialCitation": "[전원재판부 2001헌마557, 2002. 10. 31.]",
+  "officialTitle": "법원조직법 제45조 제4항 위헌확인",
+  "seq": "134553",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    123
+   ],
+   [
+    "【결정요지】",
+    1798
+   ],
+   [
+    "【심판대상조문】",
+    76
+   ],
+   [
+    "【참조조문】",
+    55
+   ],
+   [
+    "【참조판례】",
+    25
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    14
+   ],
+   [
+    "【주 문】",
+    16
+   ],
+   [
+    "【이 유】",
+    12137
+   ]
+  ],
+  "coverage": {
+   "issues": 0.929,
+   "issues_vs_headnote": 0.929,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-466",
+  "title": "형사보상청구와 단심제",
+  "caseNumber": "2008헌마514",
+  "lookupKey": "2008헌마514",
+  "date": "2010-10-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-3"
+  ],
+  "decisionId": "cc-2008heonma514-20101028-decision",
+  "fetchedFrom": "std-constitution-227",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2010-10-28 선고 2008헌마514",
+  "xlsxRow": 384,
+  "flags": [],
+  "officialCitation": "[전원재판부 2008헌마514, 2010. 10. 28.]",
+  "officialTitle": "형사보상법 제19조 제1항 등 위헌확인 등",
+  "seq": "14495",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    373
+   ],
+   [
+    "【결정요지】",
+    1460
+   ],
+   [
+    "【심판대상조문】",
+    139
+   ],
+   [
+    "【참조조문】",
+    160
+   ],
+   [
+    "【참조판례】",
+    171
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    78
+   ],
+   [
+    "[주 문]",
+    173
+   ],
+   [
+    "[이 유]",
+    14457
+   ]
+  ],
+  "coverage": {
+   "issues": 0.987,
+   "issues_vs_headnote": 0.987,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.464
+  }
+ },
+ {
+  "id": "std-constitution-467",
+  "title": "기속력의 범위",
+  "caseNumber": "2006헌마1098",
+  "lookupKey": "2006헌마1098",
+  "date": "2008-10-30",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-1"
+  ],
+  "decisionId": "cc-2006heonma1098-20081030-decision",
+  "fetchedFrom": "std-constitution-143",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2008-10-30 선고 2006헌마1098",
+  "xlsxRow": 389,
+  "flags": [],
+  "officialCitation": "[전원재판부 2006헌마1098, 2008. 10. 30.]",
+  "officialTitle": "의료법 제61조 제1항 중 「장애인복지법」에 따른 시각장애인 중 부분 위헌확인",
+  "seq": "130816",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    440
+   ],
+   [
+    "【결정요지】",
+    2694
+   ],
+   [
+    "【참조조문】",
+    1512
+   ],
+   [
+    "【참조판례】",
+    86
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    228
+   ],
+   [
+    "【주 문】",
+    0
+   ],
+   [
+    "【이 유】",
+    23314
+   ]
+  ],
+  "coverage": {
+   "issues": 0.96,
+   "issues_vs_headnote": 0.48,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.624
+  }
+ },
+ {
+  "id": "std-constitution-468",
+  "title": "헌법재판소법 제23조 제1항에 대한 효력정지가처분",
+  "caseNumber": "2024헌사1250",
+  "lookupKey": "2024헌사1250",
+  "date": "2024-10-14",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-1"
+  ],
+  "decisionId": "cc-2024heonsa1250-20241014-decision",
+  "fetchedFrom": "annual-2024-11",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2024-10-14 선고 2024헌사1250",
+  "xlsxRow": 393,
+  "flags": [],
+  "officialCitation": "[전원재판부 2024헌사1250, 2024. 10. 14.]",
+  "officialTitle": "효력정지가처분신청",
+  "seq": "193839",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    133
+   ],
+   [
+    "【결정요지】",
+    744
+   ],
+   [
+    "【심판대상조문】",
+    90
+   ],
+   [
+    "【참조조문】",
+    138
+   ],
+   [
+    "【참조판례】",
+    164
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    30
+   ],
+   [
+    "【주 문】",
+    150
+   ],
+   [
+    "【이 유】",
+    3502
+   ]
+  ],
+  "coverage": {
+   "issues": 0.748,
+   "issues_vs_headnote": 0.748,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-469",
+  "title": "헌법재판소 재판관 임명절차의 속행정지가처분",
+  "caseNumber": "2025헌사399",
+  "lookupKey": "2025헌사399",
+  "date": "2025-04-16",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-1"
+  ],
+  "decisionId": "cc-2025heonsa399-20250416-decision",
+  "fetchedFrom": "annual-2025-13",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2025-04-16 선고 2025헌사399",
+  "xlsxRow": 394,
+  "flags": [],
+  "officialCitation": "[전원재판부 2025헌사399, 2025. 4. 16.]",
+  "officialTitle": "효력정지가처분신청",
+  "seq": "197879",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    181
+   ],
+   [
+    "【결정요지】",
+    832
+   ],
+   [
+    "【참조조문】",
+    264
+   ],
+   [
+    "【참조판례】",
+    283
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    89
+   ],
+   [
+    "【주 문】",
+    162
+   ],
+   [
+    "【이 유】",
+    3749
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-470",
+  "title": "청구의 취하",
+  "caseNumber": "2024헌마352",
+  "lookupKey": "2024헌마352",
+  "date": "2024-06-27",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-1"
+  ],
+  "decisionId": "cc-2024heonma352-20240627-decision",
+  "fetchedFrom": "std-constitution-470",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2024-06-27 선고 2024헌마352",
+  "xlsxRow": 395,
+  "flags": [
+   "DATE registry 2024-06-27 != official 2024-05-07",
+   "XLSX_DATE_VS_OFFICIAL xlsx 2024-06-27 != official 2024-05-07"
+  ],
+  "officialCitation": "[전원재판부 2024헌마352, 2024. 5. 7.]",
+  "officialTitle": "공권력 행사 위헌확인",
+  "seq": "191661",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    150
+   ],
+   [
+    "【결정요지】",
+    610
+   ],
+   [
+    "【참조조문】",
+    90
+   ],
+   [
+    "【참조판례】",
+    318
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    33
+   ],
+   [
+    "【주 문】",
+    47
+   ],
+   [
+    "【이 유】",
+    1649
+   ]
+  ],
+  "coverage": {
+   "issues": 0.972,
+   "issues_vs_headnote": 0.972,
+   "holdings": 0.994,
+   "holdings_vs_headnote": 0.994
+  }
+ },
+ {
+  "id": "std-constitution-471",
+  "title": "청구인 사망과 심판절차종료",
+  "caseNumber": "2015헌마1149",
+  "lookupKey": "2015헌마1149",
+  "date": "2020-04-23",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-1"
+  ],
+  "decisionId": "cc-2015heonma1149-20200423-decision",
+  "fetchedFrom": "std-constitution-471",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2020-04-23 선고 2015헌마1149",
+  "xlsxRow": 396,
+  "flags": [],
+  "officialCitation": "[전원재판부 2015헌마1149, 2020. 4. 23., 각하]",
+  "officialTitle": "직사살수행위 위헌확인 등",
+  "seq": "157645",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    735
+   ],
+   [
+    "【결정요지】",
+    4238
+   ],
+   [
+    "【심판대상조문】",
+    255
+   ],
+   [
+    "【참조조문】",
+    145
+   ],
+   [
+    "【참조판례】",
+    867
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    139
+   ],
+   [
+    "[주 문]",
+    202
+   ],
+   [
+    "[이 유]",
+    23133
+   ]
+  ],
+  "coverage": {
+   "issues": 0.979,
+   "issues_vs_headnote": 0.617,
+   "holdings": 0.996,
+   "holdings_vs_headnote": 0.357
+  }
+ },
+ {
+  "id": "std-constitution-472",
+  "title": "위헌법률심판의 대상",
+  "caseNumber": "95헌바3",
+  "lookupKey": "95헌바3",
+  "date": "1995-12-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-2"
+  ],
+  "decisionId": "cc-95heonba3-19951228-decision",
+  "fetchedFrom": "std-constitution-03",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 1995-12-28 선고 95헌바3",
+  "xlsxRow": 397,
+  "flags": [
+   "DATE registry 1995-12-28 != official 1995-12-08",
+   "XLSX_DATE_VS_OFFICIAL xlsx 1995-12-28 != official 1995-12-08"
+  ],
+  "officialCitation": "[전원재판부 95헌바3, 1995. 12. 8.]",
+  "officialTitle": "국가배상법 제2조 제1항 등 위헌소원",
+  "seq": "135385",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    129
+   ],
+   [
+    "【결정요지】",
+    917
+   ],
+   [
+    "【전문】",
+    64
+   ],
+   [
+    "[주 문]",
+    153
+   ],
+   [
+    "[이 유]",
+    5357
+   ]
+  ],
+  "coverage": {
+   "issues": 0.969,
+   "issues_vs_headnote": 0.594,
+   "holdings": 0.99,
+   "holdings_vs_headnote": 0.638
+  }
+ },
+ {
+  "id": "std-constitution-473",
+  "title": "재판의 전제성(1)",
+  "caseNumber": "92헌가8",
+  "lookupKey": "92헌가8",
+  "date": "1992-12-24",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-2"
+  ],
+  "decisionId": "cc-92heonga8-19921224-decision",
+  "fetchedFrom": "std-constitution-369",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 1992-12-24 선고 92헌가8",
+  "xlsxRow": 399,
+  "flags": [],
+  "officialCitation": "[전원재판부 92헌가8, 1992. 12. 24., 위헌]",
+  "officialTitle": "형사소송법 제331조 단서 규정에 대한 위헌심판",
+  "seq": "152089",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    169
+   ],
+   [
+    "【결정요지】",
+    2412
+   ],
+   [
+    "【심판대상조문】",
+    331
+   ],
+   [
+    "【참조조문】",
+    4416
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    867
+   ],
+   [
+    "[주 문]",
+    50
+   ],
+   [
+    "[이 유]",
+    24034
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 0.667,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.851
+  }
+ },
+ {
+  "id": "std-constitution-474",
+  "title": "재판의 전제성(2)",
+  "caseNumber": "2010헌바251",
+  "lookupKey": "2010헌바251",
+  "date": "2014-01-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-2"
+  ],
+  "decisionId": "cc-2010heonba251-20140128-decision",
+  "fetchedFrom": "std-constitution-474",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2014-01-28 선고 2010헌바251",
+  "xlsxRow": 400,
+  "flags": [],
+  "officialCitation": "[전원재판부 2010헌바251, 2014. 1. 28.]",
+  "officialTitle": "백두대간 보호에 관한 법률 제7조 제1항 제6호 위헌소원",
+  "seq": "34799",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    94
+   ],
+   [
+    "【결정요지】",
+    1050
+   ],
+   [
+    "【심판대상조문】",
+    93
+   ],
+   [
+    "【참조조문】",
+    31
+   ],
+   [
+    "【참조판례】",
+    188
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    74
+   ],
+   [
+    "[주문]",
+    19
+   ],
+   [
+    "[이유]",
+    18747
+   ]
+  ],
+  "coverage": {
+   "issues": 0.864,
+   "issues_vs_headnote": 0.864,
+   "holdings": 0.529,
+   "holdings_vs_headnote": 0.529
+  }
+ },
+ {
+  "id": "std-constitution-475",
+  "title": "위헌법률심판의 심사기준(1)",
+  "caseNumber": "96헌가18",
+  "lookupKey": "96헌가18",
+  "date": "1996-12-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-2"
+  ],
+  "decisionId": "cc-96heonga18-19961226-decision",
+  "fetchedFrom": "std-constitution-64",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 1996-12-26 선고 96헌가18",
+  "xlsxRow": 402,
+  "flags": [],
+  "officialCitation": "[전원재판부 96헌가18, 1996. 12. 26.]",
+  "officialTitle": "주세법 제38조의7 등 위헌제청",
+  "seq": "135400",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    61
+   ],
+   [
+    "【결정요지】",
+    2839
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【주 문】",
+    94
+   ],
+   [
+    "【이 유】",
+    22984
+   ]
+  ],
+  "coverage": {
+   "issues": 0.933,
+   "issues_vs_headnote": 0.422,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.589
+  }
+ },
+ {
+  "id": "std-constitution-476",
+  "title": "위헌법률심판제청에서의 위헌성 의심의 정도",
+  "caseNumber": "93헌가2",
+  "lookupKey": "93헌가2",
+  "date": "1993-12-23",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-2"
+  ],
+  "decisionId": "cc-93heonga2-19931223-decision",
+  "fetchedFrom": "std-constitution-476",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 1993-12-23 선고 93헌가2",
+  "xlsxRow": 404,
+  "flags": [],
+  "officialCitation": "[전원재판부 93헌가2, 1993. 12. 23., 위헌]",
+  "officialTitle": "형사소송법 제97조 제3항 위헌제청",
+  "seq": "153069",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    406
+   ],
+   [
+    "【결정요지】",
+    1698
+   ],
+   [
+    "【심판대상조문】",
+    150
+   ],
+   [
+    "【참조조문】",
+    1549
+   ],
+   [
+    "【참조판례】",
+    206
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[주 문]",
+    89
+   ],
+   [
+    "[이 유]",
+    18712
+   ]
+  ],
+  "coverage": {
+   "issues": 0.933,
+   "issues_vs_headnote": 0.4,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.863
+  }
+ },
+ {
+  "id": "std-constitution-477",
+  "title": "위헌법률심판절차에서의 보조참가",
+  "caseNumber": "2016헌가17",
+  "lookupKey": "2016헌가17",
+  "date": "2020-03-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-2"
+  ],
+  "decisionId": "cc-2016heonga17-20200326-decision",
+  "fetchedFrom": "std-constitution-477",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2020-03-26 선고 2016헌가17",
+  "xlsxRow": 405,
+  "flags": [],
+  "officialCitation": "[전원재판부 2016헌가17, 2020. 3. 26., 합헌]",
+  "officialTitle": "지방세법 제111조 제1항 제1호 다목 2) 등 위헌제청 등",
+  "seq": "157053",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    498
+   ],
+   [
+    "【결정요지】",
+    2365
+   ],
+   [
+    "【심판대상조문】",
+    221
+   ],
+   [
+    "【참조조문】",
+    848
+   ],
+   [
+    "【참조판례】",
+    230
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    287
+   ],
+   [
+    "[주 문]",
+    289
+   ],
+   [
+    "[이 유]",
+    33748
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 0.783,
+   "holdings": 0.997,
+   "holdings_vs_headnote": 0.131
+  }
+ },
+ {
+  "id": "std-constitution-478",
+  "title": "대통령 탄핵심판(2)",
+  "caseNumber": "2016헌나1",
+  "lookupKey": "2016헌나1",
+  "date": "2017-03-10",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-3"
+  ],
+  "decisionId": "cc-2016heonna1-20170310-decision",
+  "fetchedFrom": "std-constitution-458",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2017-03-10 선고 2016헌나1",
+  "xlsxRow": 407,
+  "flags": [],
+  "officialCitation": "[전원재판부 2016헌나1, 2017. 3. 10.]",
+  "officialTitle": "대통령(박근혜)탄핵",
+  "seq": "54153",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    380
+   ],
+   [
+    "【결정요지】",
+    5668
+   ],
+   [
+    "【참조조문】",
+    467
+   ],
+   [
+    "【참조판례】",
+    508
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    69
+   ],
+   [
+    "【주 문】",
+    19
+   ],
+   [
+    "【이 유】",
+    75379
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 0.998,
+   "holdings_vs_headnote": 0.998
+  }
+ },
+ {
+  "id": "std-constitution-479",
+  "title": "대통령 탄핵심판(3)",
+  "caseNumber": "2024헌나8",
+  "lookupKey": "2024헌나8",
+  "date": "2025-04-04",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-3"
+  ],
+  "decisionId": "cc-2024heonna8-20250404-decision",
+  "fetchedFrom": "annual-2025-10",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2025-04-04 선고 2024헌나8",
+  "xlsxRow": 408,
+  "flags": [],
+  "officialCitation": "[전원재판부 2024헌나8, 2025. 4. 4.]",
+  "officialTitle": "대통령(윤석열) 탄핵",
+  "seq": "197519",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    795
+   ],
+   [
+    "【결정요지】",
+    5404
+   ],
+   [
+    "【참조조문】",
+    858
+   ],
+   [
+    "【참조판례】",
+    1649
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    77
+   ],
+   [
+    "【주 문】",
+    19
+   ],
+   [
+    "【이 유】",
+    92848
+   ]
+  ],
+  "coverage": {
+   "issues": 0.976,
+   "issues_vs_headnote": 0.976,
+   "holdings": 0.996,
+   "holdings_vs_headnote": 0.996
+  }
+ },
+ {
+  "id": "std-constitution-480",
+  "title": "경찰청장 탄핵심판",
+  "caseNumber": "2024헌나7",
+  "lookupKey": "2024헌나7",
+  "date": "2025-12-18",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-3"
+  ],
+  "decisionId": "cc-2024heonna7-20251218-decision",
+  "fetchedFrom": "annual-2025-11",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2025-12-18 선고 2024헌나7",
+  "xlsxRow": 409,
+  "flags": [],
+  "officialCitation": "[전원재판부 2024헌나7, 2025. 12. 18.]",
+  "officialTitle": "경찰청장(조지호) 탄핵",
+  "seq": "204085",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    503
+   ],
+   [
+    "【결정요지】",
+    1917
+   ],
+   [
+    "【참조조문】",
+    627
+   ],
+   [
+    "【참조판례】",
+    462
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    93
+   ],
+   [
+    "【주 문】",
+    20
+   ],
+   [
+    "【이 유】",
+    29858
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-481",
+  "title": "대통령 권한대행에 대한 탄핵소추의 의결정족수",
+  "caseNumber": "2024헌나9",
+  "lookupKey": "2024헌나9",
+  "date": "2025-03-24",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-3"
+  ],
+  "decisionId": "cc-2024heonna9-20250324-decision",
+  "fetchedFrom": "annual-2025-01",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2025-03-24 선고 2024헌나9",
+  "xlsxRow": 410,
+  "flags": [],
+  "officialCitation": "[전원재판부 2024헌나9, 2025. 3. 24.]",
+  "officialTitle": "국무총리(한덕수) 탄핵",
+  "seq": "197159",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    337
+   ],
+   [
+    "【결정요지】",
+    4836
+   ],
+   [
+    "【참조조문】",
+    539
+   ],
+   [
+    "【참조판례】",
+    370
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    112
+   ],
+   [
+    "【주 문】",
+    16
+   ],
+   [
+    "【이 유】",
+    32749
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-482",
+  "title": "탄핵소추의 철회",
+  "caseNumber": "2023헌라9",
+  "lookupKey": "2023헌라9",
+  "date": "2024-03-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-3"
+  ],
+  "decisionId": "cc-2023heonra9-20240328-decision",
+  "fetchedFrom": "std-constitution-482",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2024-03-28 선고 2023헌라9",
+  "xlsxRow": 412,
+  "flags": [],
+  "officialCitation": "[전원재판부 2023헌라9, 2024. 3. 28.]",
+  "officialTitle": "국회의원과 국회의장 간의 권한쟁의",
+  "seq": "189483",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    625
+   ],
+   [
+    "【결정요지】",
+    1353
+   ],
+   [
+    "【참조조문】",
+    92
+   ],
+   [
+    "【참조판례】",
+    99
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    59
+   ],
+   [
+    "【주 문】",
+    122
+   ],
+   [
+    "【이 유】",
+    11103
+   ]
+  ],
+  "coverage": {
+   "issues": 0.987,
+   "issues_vs_headnote": 0.987,
+   "holdings": 0.997,
+   "holdings_vs_headnote": 0.58
+  }
+ },
+ {
+  "id": "std-constitution-483",
+  "title": "정당해산심판의 의의와 기능, 정당해산 사유, 의원직 상실",
+  "caseNumber": "2013헌다1",
+  "lookupKey": "2013헌다1",
+  "date": "2014-12-19",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-4"
+  ],
+  "decisionId": "cc-2013heonda1-20141219-decision",
+  "fetchedFrom": "std-constitution-07",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2014-12-19 선고 2013헌다1",
+  "xlsxRow": 413,
+  "flags": [],
+  "officialCitation": "[전원재판부 2013헌다1, 2014. 12. 19.]",
+  "officialTitle": "통합진보당 해산",
+  "seq": "41693",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    453
+   ],
+   [
+    "【결정요지】",
+    10521
+   ],
+   [
+    "【참조조문】",
+    236
+   ],
+   [
+    "【참조판례】",
+    196
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    380
+   ],
+   [
+    "[주 문]",
+    72
+   ],
+   [
+    "[이 유]",
+    298582
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-484",
+  "title": "권한쟁의심판의 당사자적격(2)",
+  "caseNumber": "2000헌라2",
+  "lookupKey": "2000헌라2",
+  "date": "2004-09-23",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-5"
+  ],
+  "decisionId": "cc-2000heonra2-20040923-decision",
+  "fetchedFrom": "std-constitution-248",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2004-09-23 선고 2000헌라2",
+  "xlsxRow": 426,
+  "flags": [],
+  "officialCitation": "[전원재판부 2000헌라2, 2004. 9. 23.]",
+  "officialTitle": "당진군과 평택시간의 권한쟁의",
+  "seq": "137273",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    536
+   ],
+   [
+    "【결정요지】",
+    3727
+   ],
+   [
+    "【참조조문】",
+    5347
+   ],
+   [
+    "【참조판례】",
+    92
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    126
+   ],
+   [
+    "【주　　문】",
+    154
+   ],
+   [
+    "【이　　유】",
+    63294
+   ]
+  ],
+  "coverage": {
+   "issues": 0.587,
+   "issues_vs_headnote": 0.565,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.27
+  }
+ },
+ {
+  "id": "std-constitution-485",
+  "title": "권한쟁의심판의 권한침해가능성(2)",
+  "caseNumber": "2015헌라1",
+  "lookupKey": "2015헌라1",
+  "date": "2016-05-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-5"
+  ],
+  "decisionId": "cc-2015heonra1-20160526-decision",
+  "fetchedFrom": "std-constitution-199",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2016-05-26 선고 2015헌라1",
+  "xlsxRow": 432,
+  "flags": [],
+  "officialCitation": "[전원재판부 2015헌라1, 2016. 5. 26.]",
+  "officialTitle": "국회의원과 국회의장 등 간의 권한쟁의",
+  "seq": "50232",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    801
+   ],
+   [
+    "【결정요지】",
+    9320
+   ],
+   [
+    "【참조조문】",
+    113
+   ],
+   [
+    "【참조판례】",
+    343
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    172
+   ],
+   [
+    "[주 문]",
+    19
+   ],
+   [
+    "[이 유]",
+    61941
+   ]
+  ],
+  "coverage": {
+   "issues": 0.987,
+   "issues_vs_headnote": 0.987,
+   "holdings": 0.994,
+   "holdings_vs_headnote": 0.994
+  }
+ },
+ {
+  "id": "std-constitution-486",
+  "title": "재판관 미임명에 관한 권한쟁의심판",
+  "caseNumber": "2025헌라1",
+  "lookupKey": "2025헌라1",
+  "date": "2025-02-27",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-5"
+  ],
+  "decisionId": "cc-2025heonra1-20250227-decision",
+  "fetchedFrom": "annual-2025-02",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2025-02-27 선고 2025헌라1",
+  "xlsxRow": 437,
+  "flags": [],
+  "officialCitation": "[전원재판부 2025헌라1, 2025. 2. 27.]",
+  "officialTitle": "국회와 대통령 간의 권한쟁의",
+  "seq": "196679",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    557
+   ],
+   [
+    "【결정요지】",
+    4016
+   ],
+   [
+    "【참조조문】",
+    159
+   ],
+   [
+    "【참조판례】",
+    206
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    124
+   ],
+   [
+    "【주 문】",
+    167
+   ],
+   [
+    "【이 유】",
+    23866
+   ]
+  ],
+  "coverage": {
+   "issues": 0.988,
+   "issues_vs_headnote": 0.988,
+   "holdings": 0.998,
+   "holdings_vs_headnote": 0.998
+  }
+ },
+ {
+  "id": "std-constitution-487",
+  "title": "심판절차종료",
+  "caseNumber": "2015헌라5",
+  "lookupKey": "2015헌라5",
+  "date": "2016-04-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-5"
+  ],
+  "decisionId": "cc-2015heonra5-20160428-decision",
+  "fetchedFrom": "std-constitution-487",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2016-04-28 선고 2015헌라5",
+  "xlsxRow": 438,
+  "flags": [],
+  "officialCitation": "[전원재판부 2015헌라5, 2016. 4. 28.]",
+  "officialTitle": "국회의원과 행정자치부장관 간의 권한쟁의",
+  "seq": "50075",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    171
+   ],
+   [
+    "【결정요지】",
+    803
+   ],
+   [
+    "【참조조문】",
+    219
+   ],
+   [
+    "【참조판례】",
+    152
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    47
+   ],
+   [
+    "[주 문]",
+    98
+   ],
+   [
+    "[이 유]",
+    6941
+   ]
+  ],
+  "coverage": {
+   "issues": 0.9,
+   "issues_vs_headnote": 0.9,
+   "holdings": 0.981,
+   "holdings_vs_headnote": 0.467
+  }
+ },
+ {
+  "id": "std-constitution-488",
+  "title": "입법절차상 하자와 법률안 가결선포행위 효력",
+  "caseNumber": "2009헌라7",
+  "lookupKey": "2009헌라7",
+  "date": "2011-08-30",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-5"
+  ],
+  "decisionId": "cc-2009heonra7-20110830-decision",
+  "fetchedFrom": "std-constitution-488",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2011-08-30 선고 2009헌라7",
+  "xlsxRow": 439,
+  "flags": [],
+  "officialCitation": "[전원재판부 2009헌라7, 2011. 8. 30.]",
+  "officialTitle": "국회의원과 국회의장 간의 권한쟁의",
+  "seq": "16535",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    217
+   ],
+   [
+    "【결정요지】",
+    977
+   ],
+   [
+    "【참조조문】",
+    132
+   ],
+   [
+    "【참조판례】",
+    189
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당사자]",
+    92
+   ],
+   [
+    "[주문]",
+    240
+   ],
+   [
+    "[이유]",
+    18080
+   ]
+  ],
+  "coverage": {
+   "issues": 0.951,
+   "issues_vs_headnote": 0.902,
+   "holdings": 0.998,
+   "holdings_vs_headnote": 0.34
+  }
+ },
+ {
+  "id": "std-constitution-489",
+  "title": "헌법소원심판의 청구인능력",
+  "caseNumber": "93헌마120",
+  "lookupKey": "93헌마120",
+  "date": "1994-12-29",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-6"
+  ],
+  "decisionId": "cc-93heonma120-19941229-decision",
+  "fetchedFrom": "std-constitution-256",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 1994-12-29 선고 93헌마120",
+  "xlsxRow": 443,
+  "flags": [],
+  "officialCitation": "[전원재판부 93헌마120, 1994. 12. 29.]",
+  "officialTitle": "불기소처분취소",
+  "seq": "172963",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    44
+   ],
+   [
+    "【결정요지】",
+    1121
+   ],
+   [
+    "【참조조문】",
+    40
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[주 문]",
+    16
+   ],
+   [
+    "[이 유]",
+    2894
+   ]
+  ],
+  "coverage": {
+   "issues": 0.833,
+   "issues_vs_headnote": 0.583,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.674
+  }
+ },
+ {
+  "id": "std-constitution-490",
+  "title": "법인의 청구인능력",
+  "caseNumber": "90헌마56",
+  "lookupKey": "90헌마56",
+  "date": "1991-06-03",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-6"
+  ],
+  "decisionId": "cc-90heonma56-19910603-decision",
+  "fetchedFrom": "std-constitution-257",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 1991-06-03 선고 90헌마56",
+  "xlsxRow": 445,
+  "flags": [],
+  "officialCitation": "[전원재판부 90헌마56, 1991. 6. 3., 각하]",
+  "officialTitle": "영화법 제12조 등 에 대한 헌법소원",
+  "seq": "151691",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    121
+   ],
+   [
+    "【결정요지】",
+    1491
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【주 문】",
+    19
+   ],
+   [
+    "【이 유】",
+    15037
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 0.375,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.214
+  }
+ },
+ {
+  "id": "std-constitution-491",
+  "title": "공적 기관의 청구인능력",
+  "caseNumber": "2007헌마700",
+  "lookupKey": "2007헌마700",
+  "date": "2008-01-17",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-6"
+  ],
+  "decisionId": "cc-2007heonma700-20080117-decision",
+  "fetchedFrom": "std-constitution-491",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2008-01-17 선고 2007헌마700",
+  "xlsxRow": 446,
+  "flags": [],
+  "officialCitation": "[전원재판부 2007헌마700, 2008. 1. 17.]",
+  "officialTitle": "대통령의 선거중립의무 준수요청 등 조치 취소",
+  "seq": "130445",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    582
+   ],
+   [
+    "【결정요지】",
+    9488
+   ],
+   [
+    "【참조조문】",
+    153
+   ],
+   [
+    "【참조판례】",
+    121
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    91
+   ],
+   [
+    "【주 문】",
+    16
+   ],
+   [
+    "【이 유】",
+    69218
+   ],
+   [
+    "【별 지】",
+    14828
+   ]
+  ],
+  "coverage": {
+   "issues": 0.846,
+   "issues_vs_headnote": 0.692,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.664
+  }
+ },
+ {
+  "id": "std-constitution-492",
+  "title": "공법인의 청구인능력",
+  "caseNumber": "2012헌마271",
+  "lookupKey": "2012헌마271",
+  "date": "2013-09-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-6"
+  ],
+  "decisionId": "cc-2012heonma271-20130926-decision",
+  "fetchedFrom": "std-constitution-492",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2013-09-26 선고 2012헌마271",
+  "xlsxRow": 447,
+  "flags": [],
+  "officialCitation": "[전원재판부 2012헌마271, 2013. 9. 26.]",
+  "officialTitle": "방송광고판매대행 등에 관한 법률 제5조 제2항 위헌확인",
+  "seq": "29133",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    347
+   ],
+   [
+    "【결정요지】",
+    990
+   ],
+   [
+    "【심판대상조문】",
+    103
+   ],
+   [
+    "【참조조문】",
+    331
+   ],
+   [
+    "【참조판례】",
+    253
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당사자]",
+    48
+   ],
+   [
+    "[주문]",
+    16
+   ],
+   [
+    "[이유]",
+    20676
+   ]
+  ],
+  "coverage": {
+   "issues": 0.889,
+   "issues_vs_headnote": 0.667,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.157
+  }
+ },
+ {
+  "id": "std-constitution-493",
+  "title": "국립대학의 청구인능력 인정",
+  "caseNumber": "2014헌마1149",
+  "lookupKey": "2014헌마1149",
+  "date": "2015-12-23",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-6"
+  ],
+  "decisionId": "cc-2014heonma1149-20151223-decision",
+  "fetchedFrom": "std-constitution-259",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2015-12-23 선고 2014헌마1149",
+  "xlsxRow": 448,
+  "flags": [],
+  "officialCitation": "[전원재판부 2014헌마1149, 2015. 12. 23.]",
+  "officialTitle": "○○대학교 법학전문대학원 2015학년 모집정지처분 등 취소",
+  "seq": "48717",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    233
+   ],
+   [
+    "【결정요지】",
+    1139
+   ],
+   [
+    "【참조조문】",
+    201
+   ],
+   [
+    "【참조판례】",
+    197
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    49
+   ],
+   [
+    "[주 문]",
+    149
+   ],
+   [
+    "[이 유]",
+    10233
+   ]
+  ],
+  "coverage": {
+   "issues": 0.647,
+   "issues_vs_headnote": 0.647,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-494",
+  "title": "공권력의 행사 또는 불행사",
+  "caseNumber": "2014헌마368",
+  "lookupKey": "2014헌마368",
+  "date": "2018-08-30",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-6"
+  ],
+  "decisionId": "cc-2014heonma368-20180830-decision",
+  "fetchedFrom": "std-constitution-111",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2018-08-30 선고 2014헌마368",
+  "xlsxRow": 449,
+  "flags": [
+   "FULLTEXT_SHORT_OR_ABSENT"
+  ],
+  "officialCitation": "[전원재판부 2014헌마368, 2018. 8. 30., 인용]",
+  "officialTitle": "건강보험 요양급여내역 제공 요청 및 제공 행위 등 위헌확인",
+  "seq": "148659",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    691
+   ],
+   [
+    "【결정요지】",
+    3297
+   ],
+   [
+    "【심판대상조문】",
+    223
+   ],
+   [
+    "【참조조문】",
+    344
+   ],
+   [
+    "【참조판례】",
+    49
+   ]
+  ],
+  "coverage": {
+   "issues": 0.667,
+   "issues_vs_headnote": 0.333,
+   "holdings": 0.133,
+   "holdings_vs_headnote": 0.133
+  }
+ },
+ {
+  "id": "std-constitution-495",
+  "title": "조례의 공권력 행사성",
+  "caseNumber": "92헌마264",
+  "lookupKey": "92헌마264",
+  "date": "1995-04-20",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-6"
+  ],
+  "decisionId": "cc-92heonma264-19950420-decision",
+  "fetchedFrom": "std-constitution-264",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 1995-04-20 선고 92헌마264",
+  "xlsxRow": 456,
+  "flags": [],
+  "officialCitation": "[전원재판부 92헌마264, 1995. 4. 20.]",
+  "officialTitle": "부천시담배자동판매기설치금지조례 제4조 등 위헌확인",
+  "seq": "135123",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    268
+   ],
+   [
+    "【결정요지】",
+    1028
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    41
+   ],
+   [
+    "[주 문]",
+    20
+   ],
+   [
+    "[이 유]",
+    8611
+   ]
+  ],
+  "coverage": {
+   "issues": 0.778,
+   "issues_vs_headnote": 0.556,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.681
+  }
+ },
+ {
+  "id": "std-constitution-496",
+  "title": "행정부작위의 헌법소원 대상성",
+  "caseNumber": "2003헌마898",
+  "lookupKey": "2003헌마898",
+  "date": "2004-10-28",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-6"
+  ],
+  "decisionId": "cc-2003heonma898-20041028-decision",
+  "fetchedFrom": "std-constitution-496",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2004-10-28 선고 2003헌마898",
+  "xlsxRow": 457,
+  "flags": [],
+  "officialCitation": "[전원재판부 2003헌마898, 2004. 10. 28.]",
+  "officialTitle": "근로기회제공불이행 위헌확인",
+  "seq": "137665",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    227
+   ],
+   [
+    "【결정요지】",
+    1608
+   ],
+   [
+    "【참조조문】",
+    3560
+   ],
+   [
+    "【참조판례】",
+    317
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    49
+   ],
+   [
+    "【주　　문】",
+    16
+   ],
+   [
+    "【이　　유】",
+    12564
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 0.538,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.503
+  }
+ },
+ {
+  "id": "std-constitution-497",
+  "title": "대한변호사협회 규정의 공권력 행사성",
+  "caseNumber": "2021헌마619",
+  "lookupKey": "2021헌마619",
+  "date": "2022-05-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-6"
+  ],
+  "decisionId": "cc-2021heonma619-20220526-decision",
+  "fetchedFrom": "annual-2022-87",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2022-05-26 선고 2021헌마619",
+  "xlsxRow": 462,
+  "flags": [],
+  "officialCitation": "[전원재판부 2021헌마619, 2022. 5. 26.]",
+  "officialTitle": "변호사 광고에 관한 규정 제3조 제2항 등 위헌확인",
+  "seq": "174313",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    680
+   ],
+   [
+    "【결정요지】",
+    3688
+   ],
+   [
+    "【심판대상조문】",
+    198
+   ],
+   [
+    "【참조조문】",
+    130
+   ],
+   [
+    "【참조판례】",
+    926
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    21
+   ],
+   [
+    "[주 문]",
+    222
+   ],
+   [
+    "[이 유]",
+    39893
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.551
+  }
+ },
+ {
+  "id": "std-constitution-498",
+  "title": "제3자의 자기관련성(1)",
+  "caseNumber": "2021헌마619",
+  "lookupKey": "2021헌마619",
+  "date": "2022-05-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-6"
+  ],
+  "decisionId": "cc-2021heonma619-20220526-decision",
+  "fetchedFrom": "annual-2022-87",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2022-05-26 선고 2021헌마619",
+  "xlsxRow": 466,
+  "flags": [],
+  "officialCitation": "[전원재판부 2021헌마619, 2022. 5. 26.]",
+  "officialTitle": "변호사 광고에 관한 규정 제3조 제2항 등 위헌확인",
+  "seq": "174313",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    680
+   ],
+   [
+    "【결정요지】",
+    3688
+   ],
+   [
+    "【심판대상조문】",
+    198
+   ],
+   [
+    "【참조조문】",
+    130
+   ],
+   [
+    "【참조판례】",
+    926
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    21
+   ],
+   [
+    "[주 문]",
+    222
+   ],
+   [
+    "[이 유]",
+    39893
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 0.996,
+   "holdings_vs_headnote": 0.823
+  }
+ },
+ {
+  "id": "std-constitution-499",
+  "title": "제3자의 자기관련성(2)",
+  "caseNumber": "2010헌마88",
+  "lookupKey": "2010헌마88",
+  "date": "2012-05-31",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-6"
+  ],
+  "decisionId": "cc-2010heonma88-20120531-decision",
+  "fetchedFrom": "std-constitution-499",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2012-05-31 선고 2010헌마88",
+  "xlsxRow": 467,
+  "flags": [],
+  "officialCitation": "[전원재판부 2010헌마88, 2012. 5. 31.]",
+  "officialTitle": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 제44조의2 제2항 위헌확인",
+  "seq": "19778",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    344
+   ],
+   [
+    "【결정요지】",
+    1336
+   ],
+   [
+    "【심판대상조문】",
+    73
+   ],
+   [
+    "【참조조문】",
+    155
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당사자]",
+    14
+   ],
+   [
+    "[주문]",
+    16
+   ],
+   [
+    "[이유]",
+    13786
+   ]
+  ],
+  "coverage": {
+   "issues": 0.975,
+   "issues_vs_headnote": 0.886,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.307
+  }
+ },
+ {
+  "id": "std-constitution-500",
+  "title": "제3자의 자기관련성(3)",
+  "caseNumber": "2009헌마514",
+  "lookupKey": "2009헌마514",
+  "date": "2013-05-30",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-6"
+  ],
+  "decisionId": "cc-2009heonma514-20130530-decision",
+  "fetchedFrom": "std-constitution-500",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2013-05-30 선고 2009헌마514",
+  "xlsxRow": 468,
+  "flags": [],
+  "officialCitation": "[전원재판부 2009헌마514, 2013. 5. 30.]",
+  "officialTitle": "법학전문대학원 설치인가 중 입학전형계획 위헌확인 등",
+  "seq": "24233",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    212
+   ],
+   [
+    "【결정요지】",
+    1379
+   ],
+   [
+    "【참조조문】",
+    36
+   ],
+   [
+    "【참조판례】",
+    88
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당사자]",
+    150
+   ],
+   [
+    "[주문]",
+    135
+   ],
+   [
+    "[이유]",
+    10713
+   ]
+  ],
+  "coverage": {
+   "issues": 0.978,
+   "issues_vs_headnote": 0.563,
+   "holdings": 0.997,
+   "holdings_vs_headnote": 0.386
+  }
+ },
+ {
+  "id": "std-constitution-501",
+  "title": "수혜적 법령에 관한 자기관련성",
+  "caseNumber": "2009헌마340",
+  "lookupKey": "2009헌마340",
+  "date": "2010-04-29",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-6"
+  ],
+  "decisionId": "cc-2009heonma340-20100429-decision",
+  "fetchedFrom": "std-constitution-501",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2010-04-29 선고 2009헌마340",
+  "xlsxRow": 469,
+  "flags": [],
+  "officialCitation": "[전원재판부 2009헌마340, 2010. 4. 29.]",
+  "officialTitle": "병역법 제26조 제1항 제3호 등 위헌확인",
+  "seq": "13631",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    238
+   ],
+   [
+    "【결정요지】",
+    888
+   ],
+   [
+    "【심판대상조문】",
+    295
+   ],
+   [
+    "【참조조문】",
+    15
+   ],
+   [
+    "【참조판례】",
+    189
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    24
+   ],
+   [
+    "【주 문】",
+    16
+   ],
+   [
+    "【이 유】",
+    4165
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 0.996,
+   "holdings_vs_headnote": 0.789
+  }
+ },
+ {
+  "id": "std-constitution-502",
+  "title": "현재성이 부정된 사례(1)",
+  "caseNumber": "2008헌마491",
+  "lookupKey": "2008헌마491",
+  "date": "2010-05-27",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-6"
+  ],
+  "decisionId": "cc-2008heonma491-20100527-decision",
+  "fetchedFrom": "std-constitution-13",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2010-05-27 선고 2008헌마491",
+  "xlsxRow": 471,
+  "flags": [],
+  "officialCitation": "[전원재판부 2008헌마491, 2010. 5. 27.]",
+  "officialTitle": "공직선거법 제122조의2 등 위헌확인",
+  "seq": "13634",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    248
+   ],
+   [
+    "【결정요지】",
+    924
+   ],
+   [
+    "【심판대상조문】",
+    62
+   ],
+   [
+    "【참조조문】",
+    140
+   ],
+   [
+    "【참조판례】",
+    130
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    21
+   ],
+   [
+    "【주 문】",
+    163
+   ],
+   [
+    "【이 유】",
+    18251
+   ]
+  ],
+  "coverage": {
+   "issues": 0.846,
+   "issues_vs_headnote": 0.503,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.253
+  }
+ },
+ {
+  "id": "std-constitution-503",
+  "title": "현재성이 부정된 사례(2)",
+  "caseNumber": "2018헌마739",
+  "lookupKey": "2018헌마739",
+  "date": "2020-09-24",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-6"
+  ],
+  "decisionId": "cc-2018heonma739-20200924-decision",
+  "fetchedFrom": "std-constitution-503",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2020-09-24 선고 2018헌마739",
+  "xlsxRow": 472,
+  "flags": [],
+  "officialCitation": "[전원재판부 2018헌마739, 2020. 9. 24., 기각]",
+  "officialTitle": "변호사시험법 제7조 제1항 등 위헌확인 등",
+  "seq": "160825",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    845
+   ],
+   [
+    "【결정요지】",
+    1009
+   ],
+   [
+    "【심판대상조문】",
+    131
+   ],
+   [
+    "【참조판례】",
+    458
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    21
+   ],
+   [
+    "[주 문]",
+    286
+   ],
+   [
+    "[이 유]",
+    12200
+   ]
+  ],
+  "coverage": {
+   "issues": 0.993,
+   "issues_vs_headnote": 0.993,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.585
+  }
+ },
+ {
+  "id": "std-constitution-504",
+  "title": "현재성 요건의 예외 사례(1)",
+  "caseNumber": "2000헌마25",
+  "lookupKey": "2000헌마25",
+  "date": "2001-02-22",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-6"
+  ],
+  "decisionId": "cc-2000heonma25-20010222-decision",
+  "fetchedFrom": "std-constitution-360",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2001-02-22 선고 2000헌마25",
+  "xlsxRow": 474,
+  "flags": [],
+  "officialCitation": "[전원재판부 2000헌마25, 2001. 2. 22.]",
+  "officialTitle": "국가유공자등예우및지원에관한법률 제34조 제1항 위헌확인",
+  "seq": "58246",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    180
+   ],
+   [
+    "【결정요지】",
+    2001
+   ],
+   [
+    "【심판대상조문】",
+    252
+   ],
+   [
+    "【참조조문】",
+    349
+   ],
+   [
+    "【참조판례】",
+    25
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    24
+   ],
+   [
+    "【주 문】",
+    16
+   ],
+   [
+    "【이 유】",
+    15903
+   ]
+  ],
+  "coverage": {
+   "issues": 0.949,
+   "issues_vs_headnote": 0.612,
+   "holdings": 0.933,
+   "holdings_vs_headnote": 0.488
+  }
+ },
+ {
+  "id": "std-constitution-505",
+  "title": "현재성 요건의 예외 사례(2)",
+  "caseNumber": "2008헌마438",
+  "lookupKey": "2008헌마438",
+  "date": "2010-04-29",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-6"
+  ],
+  "decisionId": "cc-2008heonma438-20100429-decision",
+  "fetchedFrom": "std-constitution-505",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2010-04-29 선고 2008헌마438",
+  "xlsxRow": 475,
+  "flags": [],
+  "officialCitation": "[전원재판부 2008헌마438, 2010. 4. 29.]",
+  "officialTitle": "공직선거법 제148조 제1항 위헌확인",
+  "seq": "13628",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    306
+   ],
+   [
+    "【결정요지】",
+    870
+   ],
+   [
+    "【심판대상조문】",
+    45
+   ],
+   [
+    "【참조조문】",
+    423
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    24
+   ],
+   [
+    "【주 문】",
+    16
+   ],
+   [
+    "【이 유】",
+    11065
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-506",
+  "title": "직접성 요건의 예외 법리",
+  "caseNumber": "2015헌마165",
+  "lookupKey": "2015헌마165",
+  "date": "2016-09-29",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-6"
+  ],
+  "decisionId": "cc-2015heonma165-20160929-decision",
+  "fetchedFrom": "std-constitution-506",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2016-09-29 선고 2015헌마165",
+  "xlsxRow": 477,
+  "flags": [],
+  "officialCitation": "[전원재판부 2015헌마165, 2016. 9. 29.]",
+  "officialTitle": "형사소송법 제361조의3 위헌확인",
+  "seq": "52362",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    374
+   ],
+   [
+    "【결정요지】",
+    872
+   ],
+   [
+    "【심판대상조문】",
+    106
+   ],
+   [
+    "【참조조문】",
+    96
+   ],
+   [
+    "【참조판례】",
+    433
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[당 사 자]",
+    24
+   ],
+   [
+    "[주 문]",
+    16
+   ],
+   [
+    "[이 유]",
+    9987
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 0.45,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.257
+  }
+ },
+ {
+  "id": "std-constitution-507",
+  "title": "직접성 요건의 예외(1)",
+  "caseNumber": "2004헌마1021",
+  "lookupKey": "2004헌마1021",
+  "date": "2007-12-27",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-6"
+  ],
+  "decisionId": "cc-2004heonma1021-20071227-decision",
+  "fetchedFrom": "std-constitution-507",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2007-12-27 선고 2004헌마1021",
+  "xlsxRow": 478,
+  "flags": [],
+  "officialCitation": "[전원재판부 2004헌마1021, 2007. 12. 27.]",
+  "officialTitle": "의료법 제2조 등 위헌확인",
+  "seq": "130949",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    262
+   ],
+   [
+    "【결정요지】",
+    3212
+   ],
+   [
+    "【심판대상조문】",
+    428
+   ],
+   [
+    "【참조조문】",
+    164
+   ],
+   [
+    "【참조판례】",
+    18
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    48
+   ],
+   [
+    "【주 문】",
+    151
+   ],
+   [
+    "【이 유】",
+    15465
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 0.985,
+   "holdings_vs_headnote": 0.638
+  }
+ },
+ {
+  "id": "std-constitution-508",
+  "title": "심판청구의 교환적 변경과 청구기간",
+  "caseNumber": "91헌마134",
+  "lookupKey": "91헌마134",
+  "date": "1992-06-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-6"
+  ],
+  "decisionId": "cc-91heonma134-19920626-decision",
+  "fetchedFrom": "std-constitution-508",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 1992-06-26 선고 91헌마134",
+  "xlsxRow": 482,
+  "flags": [],
+  "officialCitation": "[전원재판부 91헌마134, 1992. 6. 26., 각하]",
+  "officialTitle": "기소중지처분에 대한 헌법소원",
+  "seq": "135017",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    68
+   ],
+   [
+    "【결정요지】",
+    192
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "[주 문]",
+    16
+   ],
+   [
+    "[이 유]",
+    2025
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-509",
+  "title": "청구기간 도과의 정당한 사유",
+  "caseNumber": "2016헌마388",
+  "lookupKey": "2016헌마388",
+  "date": "2022-07-21",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-6"
+  ],
+  "decisionId": "cc-2016heonma388-20220721-decision",
+  "fetchedFrom": "annual-2022-78",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2022-07-21 선고 2016헌마388",
+  "xlsxRow": 483,
+  "flags": [],
+  "officialCitation": "[전원재판부 2016헌마388, 2022. 7. 21.]",
+  "officialTitle": "통신자료 취득행위 위헌확인 등",
+  "seq": "175583",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    524
+   ],
+   [
+    "【결정요지】",
+    3150
+   ],
+   [
+    "【심판대상조문】",
+    157
+   ],
+   [
+    "【참조조문】",
+    540
+   ],
+   [
+    "【참조판례】",
+    71
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    47
+   ],
+   [
+    "【주 문】",
+    317
+   ],
+   [
+    "【이 유】",
+    33634
+   ]
+  ],
+  "coverage": {
+   "issues": 0.937,
+   "issues_vs_headnote": 0.806,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.264
+  }
+ },
+ {
+  "id": "std-constitution-510",
+  "title": "청구권자",
+  "caseNumber": "2004헌바44",
+  "lookupKey": "2004헌바44",
+  "date": "2008-04-24",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-7"
+  ],
+  "decisionId": "cc-2004heonba44-20080424-decision",
+  "fetchedFrom": "std-constitution-510",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2008-04-24 선고 2004헌바44",
+  "xlsxRow": 490,
+  "flags": [],
+  "officialCitation": "[전원재판부 2004헌바44, 2008. 4. 24.]",
+  "officialTitle": "온천법 제2조 등 위헌소원",
+  "seq": "129968",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    332
+   ],
+   [
+    "【결정요지】",
+    940
+   ],
+   [
+    "【심판대상조문】",
+    567
+   ],
+   [
+    "【참조조문】",
+    606
+   ],
+   [
+    "【참조판례】",
+    26
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    60
+   ],
+   [
+    "【주 문】",
+    106
+   ],
+   [
+    "【이 유】",
+    7082
+   ],
+   [
+    "【별 지】",
+    2916
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 0.999,
+   "holdings_vs_headnote": 0.297
+  }
+ },
+ {
+  "id": "std-constitution-511",
+  "title": "당해 재판의 전부 승소와 재판의 전제성",
+  "caseNumber": "99헌바61",
+  "lookupKey": "99헌바61",
+  "date": "2000-07-20",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-7"
+  ],
+  "decisionId": "cc-99heonba61-20000720-decision",
+  "fetchedFrom": "std-constitution-511",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2000-07-20 선고 99헌바61",
+  "xlsxRow": 492,
+  "flags": [],
+  "officialCitation": "[전원재판부 99헌바61, 2000. 7. 20.]",
+  "officialTitle": "사립학교교원연금법 제57조 제1항 등 위헌소원",
+  "seq": "137572",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    45
+   ],
+   [
+    "【결정요지】",
+    160
+   ],
+   [
+    "【심판대상조문】",
+    493
+   ],
+   [
+    "【참조조문】",
+    212
+   ],
+   [
+    "【참조판례】",
+    6
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    76
+   ],
+   [
+    "【주 문】",
+    13
+   ],
+   [
+    "【이 유】",
+    3087
+   ]
+  ],
+  "coverage": {
+   "issues": 0.973,
+   "issues_vs_headnote": 0.973,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 1.0
+  }
+ },
+ {
+  "id": "std-constitution-512",
+  "title": "재판의 전제성 소멸과 심판의 이익",
+  "caseNumber": "2002헌바3",
+  "lookupKey": "2002헌바3",
+  "date": "2003-06-26",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-7"
+  ],
+  "decisionId": "cc-2002heonba3-20030626-decision",
+  "fetchedFrom": "std-constitution-512",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2003-06-26 선고 2002헌바3",
+  "xlsxRow": 493,
+  "flags": [],
+  "officialCitation": "[전원재판부 2002헌바3, 2003. 6. 26.]",
+  "officialTitle": "법무사법 제19조 위헌소원",
+  "seq": "134636",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    322
+   ],
+   [
+    "【결정요지】",
+    1606
+   ],
+   [
+    "【심판대상조문】",
+    201
+   ],
+   [
+    "【참조조문】",
+    85
+   ],
+   [
+    "【참조판례】",
+    39
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    57
+   ],
+   [
+    "【주 문】",
+    59
+   ],
+   [
+    "【이 유】",
+    16031
+   ]
+  ],
+  "coverage": {
+   "issues": 0.811,
+   "issues_vs_headnote": 0.149,
+   "holdings": 0.996,
+   "holdings_vs_headnote": 0.188
+  }
+ },
+ {
+  "id": "std-constitution-513",
+  "title": "법률개정으로 면소판결이 확정된 경우 재판의 전제성",
+  "caseNumber": "2021헌바233",
+  "lookupKey": "2021헌바233",
+  "date": "2024-01-25",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-7"
+  ],
+  "decisionId": "cc-2021heonba233-20240125-decision",
+  "fetchedFrom": "std-constitution-513",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2024-01-25 선고 2021헌바233",
+  "xlsxRow": 494,
+  "flags": [],
+  "officialCitation": "[전원재판부 2021헌바233, 2024. 1. 25.]",
+  "officialTitle": "공직선거법 제255조 제1항 제9호 등 위헌소원",
+  "seq": "188063",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    503
+   ],
+   [
+    "【결정요지】",
+    1281
+   ],
+   [
+    "【심판대상조문】",
+    280
+   ],
+   [
+    "【참조조문】",
+    115
+   ],
+   [
+    "【참조판례】",
+    143
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    167
+   ],
+   [
+    "【주 문】",
+    289
+   ],
+   [
+    "【이 유】",
+    9627
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 0.991,
+   "holdings_vs_headnote": 0.392
+  }
+ },
+ {
+  "id": "std-constitution-514",
+  "title": "진정입법부작위에 대한 심판청구의 부적법성",
+  "caseNumber": "2020헌바475",
+  "lookupKey": "2020헌바475",
+  "date": "2024-01-25",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-7"
+  ],
+  "decisionId": "cc-2020heonba475-20240125-decision",
+  "fetchedFrom": "std-constitution-514",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 2024-01-25 선고 2020헌바475",
+  "xlsxRow": 495,
+  "flags": [],
+  "officialCitation": "[전원재판부 2020헌바475, 2024. 1. 25.]",
+  "officialTitle": "형사보상 및 명예회복에 관한 법률 제2조 제1항 위헌소원",
+  "seq": "188061",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    247
+   ],
+   [
+    "【결정요지】",
+    735
+   ],
+   [
+    "【심판대상조문】",
+    140
+   ],
+   [
+    "【참조조문】",
+    195
+   ],
+   [
+    "【참조판례】",
+    560
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    347
+   ],
+   [
+    "【주 문】",
+    20
+   ],
+   [
+    "【이 유】",
+    18099
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.191
+  }
+ },
+ {
+  "id": "std-constitution-515",
+  "title": "중앙선거관리위원회와 감사원 간의 권한쟁의",
+  "caseNumber": "2023헌라5",
+  "lookupKey": "2023헌라5",
+  "date": "2025-02-27",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-4",
+   "hb-3-4-5"
+  ],
+  "decisionId": "cc-2023heonra5-20250227-decision",
+  "fetchedFrom": "annual-2025-14",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2025-02-27 선고 2023헌라5",
+  "xlsxRow": 498,
+  "flags": [],
+  "officialCitation": "[전원재판부 2023헌라5, 2025. 2. 27.]",
+  "officialTitle": "중앙선거관리위원회와 감사원 간의 권한쟁의",
+  "seq": "196681",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    262
+   ],
+   [
+    "【결정요지】",
+    1937
+   ],
+   [
+    "【참조조문】",
+    63
+   ],
+   [
+    "【참조판례】",
+    150
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    123
+   ],
+   [
+    "【주 문】",
+    136
+   ],
+   [
+    "【이 유】",
+    18508
+   ]
+  ],
+  "coverage": {
+   "issues": 0.976,
+   "issues_vs_headnote": 0.976,
+   "holdings": 0.997,
+   "holdings_vs_headnote": 0.997
+  }
+ },
+ {
+  "id": "std-constitution-516",
+  "title": "지방자치제도의 헌법적 의미",
+  "caseNumber": "96헌바62",
+  "lookupKey": "96헌바62",
+  "date": "1998-04-30",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-5"
+  ],
+  "decisionId": "cc-96heonba62-19980430-decision",
+  "fetchedFrom": "std-constitution-516",
+  "ownFetch": true,
+  "xlsxCitation": "헌법재판소 1998-04-30 선고 96헌바62",
+  "xlsxRow": 499,
+  "flags": [],
+  "officialCitation": "[전원재판부 96헌바62, 1998. 4. 30.]",
+  "officialTitle": "지방세법 제9조 위헌소원",
+  "seq": "135432",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    69
+   ],
+   [
+    "【결정요지】",
+    186
+   ],
+   [
+    "【심판대상조문】",
+    150
+   ],
+   [
+    "【참조조문】",
+    121
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    76
+   ],
+   [
+    "【주 문】",
+    145
+   ],
+   [
+    "【이 유】",
+    9016
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 0.471,
+   "holdings": 0.991,
+   "holdings_vs_headnote": 0.06
+  }
+ },
+ {
+  "id": "std-constitution-517",
+  "title": "지방자치제도와 제도보장",
+  "caseNumber": "2005헌마403",
+  "lookupKey": "2005헌마403",
+  "date": "2006-02-23",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-5"
+  ],
+  "decisionId": "cc-2005heonma403-20060223-decision",
+  "fetchedFrom": "std-constitution-357",
+  "ownFetch": false,
+  "xlsxCitation": "헌법재판소 2006-02-23 선고 2005헌마403",
+  "xlsxRow": 500,
+  "flags": [],
+  "officialCitation": "[전원재판부 2005헌마403, 2006. 2. 23.]",
+  "officialTitle": "지방자치법 제87조 제1항 위헌확인",
+  "seq": "134813",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    370
+   ],
+   [
+    "【결정요지】",
+    1246
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【당 사 자】",
+    53
+   ],
+   [
+    "【주　　문】",
+    16
+   ],
+   [
+    "【이　　유】",
+    13925
+   ]
+  ],
+  "coverage": {
+   "issues": 0.887,
+   "issues_vs_headnote": 0.887,
+   "holdings": 0.999,
+   "holdings_vs_headnote": 0.242
+  }
+ },
+ {
+  "id": "std-constitution-518",
+  "title": "기관위임사무와 조례제정권",
+  "caseNumber": "99추30",
+  "lookupKey": "99추30",
+  "date": "1999-09-17",
+  "enBanc": false,
+  "tocPath": [
+   "hb-3",
+   "hb-3-5"
+  ],
+  "decisionId": "sc-99x00cd94z30-19990917-judgment",
+  "fetchedFrom": "std-constitution-518",
+  "ownFetch": true,
+  "xlsxCitation": "대법원 1999-09-17 선고 99추30",
+  "xlsxRow": 501,
+  "flags": [],
+  "officialCitation": "[대법원 1999. 9. 17. 선고 99추30 판결]",
+  "officialTitle": "울진군발전소주변지역지원산업시행에관한조례무효확인청구의소",
+  "seq": "192239",
+  "provider": null,
+  "sections": [
+   [
+    "【판시사항】",
+    330
+   ],
+   [
+    "【판결요지】",
+    1393
+   ],
+   [
+    "【참조조문】",
+    465
+   ],
+   [
+    "【참조판례】",
+    280
+   ],
+   [
+    "【전문】",
+    0
+   ],
+   [
+    "【원 고】",
+    20
+   ],
+   [
+    "【피 고】",
+    5
+   ],
+   [
+    "【변론종결】",
+    11
+   ],
+   [
+    "【주 문】",
+    80
+   ],
+   [
+    "【이 유】",
+    3817
+   ]
+  ],
+  "coverage": {
+   "issues": 1.0,
+   "issues_vs_headnote": 1.0,
+   "holdings": 1.0,
+   "holdings_vs_headnote": 0.896
+  }
+ }
+]
