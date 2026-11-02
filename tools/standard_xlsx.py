@@ -2,7 +2,12 @@
 
 This module never writes registry.json or toc.json. Use add_cases.py
 standard-import to commit its validated plan. Workbook cells remain source
-strings; reviewed citation corrections affect identity only.
+strings; reviewed citation corrections affect identity only. The one exception
+is a user-approved `textCorrections` list in the review file: exact from/to
+replacements (plus drop/split of a misplaced cell) that are applied while
+reading the workbook, so a re-import reproduces them. The uncorrected source
+stays in standardSourceHistory and the workbook, and every change is recorded
+in the placement's `standard.textCorrections`.
 """
 import copy
 import hashlib
@@ -18,10 +23,66 @@ SHEETS = {'민법': 'civil', '상법': 'commercial', '형법': 'criminal',
           '헌법': 'constitution', '행정법': 'administrative'}
 EDITION = '2026'
 CITATION = re.compile(r'^(.*?)\s+(?:(\d{4}-\d{2}-\d{2})\s+)?선고\s+(.+?)\s*$')
+LIST_FIELDS = ('issues', 'facts', 'holdings')
+TEXT_FIELDS = ('title', 'selectionReason') + LIST_FIELDS
 
 
 def normalized_title(text):
     return re.sub(r'[\s:：·ㆍ,()（）\[\]－—–-]+', '', text or '')
+
+
+def apply_text_corrections(key, review, state):
+    """Apply one row's approved text corrections to `state` (changed in place).
+
+    `state` maps title/selectionReason to strings and issues/facts/holdings to
+    [{"n", "text"}] lists or None. Each replacement must match exactly the stated
+    number of times, otherwise the import stops: a changed workbook must never be
+    "corrected" by accident. Returns the audit record for `standard.textCorrections`.
+    """
+    if not isinstance(review, dict) or not review.get('evidence') or not review.get('changes'):
+        raise ValueError(f'{key}: 텍스트 정정에는 evidence와 changes가 필요합니다')
+    applied = []
+    for change in review['changes']:
+        op, field = change.get('op'), change.get('field')
+        if op not in ('replace', 'drop', 'split') or field not in TEXT_FIELDS:
+            raise ValueError(f'{key}: 지원하지 않는 정정입니다: {change!r}')
+        if op == 'replace':
+            old, new, want = change.get('from'), change.get('to'), change.get('count', 1)
+            if not isinstance(old, str) or not old or not isinstance(new, str) or old == new or type(want) is not int or want < 1:
+                raise ValueError(f'{key}: replace 정정이 올바르지 않습니다: {change!r}')
+            if field in LIST_FIELDS:
+                items = state.get(field) or []
+                found = sum(x['text'].count(old) for x in items)
+                if found == want:
+                    for x in items:
+                        x['text'] = x['text'].replace(old, new)
+            else:
+                found = (state.get(field) or '').count(old)
+                if found == want:
+                    state[field] = state[field].replace(old, new)
+            if found != want:
+                raise ValueError(f'{key}: {field}에서 {old!r} 이(가) {found}번 나옵니다(기대 {want}번); 원자료가 바뀌었는지 확인하세요')
+        elif op == 'drop':
+            if field not in LIST_FIELDS or not state.get(field):
+                raise ValueError(f'{key}: 제외할 {field} 셀이 없습니다')
+            state[field] = None
+        else:
+            at, into, items = change.get('at'), change.get('into'), state.get(field) or []
+            if (field not in LIST_FIELDS or into not in LIST_FIELDS or into == field or state.get(into)
+                    or len(items) != 1 or not isinstance(at, str) or not at or items[0]['text'].count(at) != 1):
+                raise ValueError(f'{key}: split 정정이 올바르지 않습니다: {change!r}')
+            head, tail = items[0]['text'].split(at)
+            if not head.strip() or not tail.strip():
+                raise ValueError(f'{key}: split 으로 나뉜 한쪽이 비어 있습니다: {change!r}')
+            items[0]['text'] = head
+            state[into] = [{'n': items[0].get('n', ''), 'text': tail}]
+        applied.append({k: copy.deepcopy(change[k]) for k in ('op', 'field', 'from', 'to', 'at', 'into', 'count', 'kind') if k in change})
+    for field in LIST_FIELDS:
+        if state.get(field) is not None and any(not x['text'].strip() for x in state[field]):
+            raise ValueError(f'{key}: 정정 뒤 {field} 가 비었습니다')
+    if not (state.get('title') or '').strip():
+        raise ValueError(f'{key}: 정정 뒤 제목이 비었습니다')
+    return {'reason': review.get('reason'), 'evidence': copy.deepcopy(review['evidence']), 'changes': applied}
 
 
 def read_workbook(path, reg, overrides=None):
@@ -44,6 +105,8 @@ def read_workbook(path, reg, overrides=None):
                'excludedSheets': [s for s in wb.sheetnames if s not in SHEETS]}
     catalog['legacyIdentityCorrections'] = copy.deepcopy(overrides.get('legacyIdentityCorrections', {}))
     catalog['legacySourceExclusions'] = copy.deepcopy(overrides.get('legacySourceExclusions', {}))
+    catalog['textCorrections'] = []
+    text_fixes = copy.deepcopy(overrides.get('textCorrections', {})) if 'rows' in overrides else {}
     # Non-target procedure sheets still prove continued inclusion in this
     # edition. Reading their citations prevents a false deletion notice.
     for sheet in wb.sheetnames:
@@ -115,13 +178,31 @@ def read_workbook(path, reg, overrides=None):
                     if not isinstance(vals[col], str):
                         raise ValueError(f'{key}: {name} 셀이 문자열이 아님')
                     std_source[name] = [{'n': '', 'text': vals[col]}]
-            if any(name in std_source for name in ('issues', 'facts', 'holdings')):
-                candidate['standardSource'] = std_source
             if 'selectionReason' not in patch.get('excludeFields', []):
                 candidate['selectionReason'] = vals[4] if vals[4] is not None else ''
+            text_record = None
+            if key in text_fixes:
+                state = {'title': candidate['title'], 'selectionReason': candidate.get('selectionReason'),
+                         **{name: copy.deepcopy(std_source.get(name)) for name in LIST_FIELDS}}
+                text_record = apply_text_corrections(key, text_fixes.pop(key), state)
+                candidate['title'] = state['title']
+                if 'selectionReason' in candidate:
+                    candidate['selectionReason'] = state['selectionReason']
+                for name in LIST_FIELDS:
+                    if state.get(name):
+                        std_source[name] = state[name]
+                    else:
+                        std_source.pop(name, None)
+            if any(name in std_source for name in LIST_FIELDS):
+                candidate['standardSource'] = std_source
             candidate['standard'] = {'edition': EDITION, 'entryId': key, 'order': count, 'removed': False,
                                      'file': source_file, 'sheet': sheet, 'row': row,
                                      'sourceOrder': vals[0], 'sourceCitation': vals[2]}
+            if text_record:
+                candidate['standard']['textCorrections'] = text_record
+                catalog['textCorrections'].append({'sheet': sheet, 'row': row, 'subject': subject,
+                                                   'caseNumber': candidate['caseNumber'], 'title': candidate['title'],
+                                                   **copy.deepcopy(text_record)})
             if ws.cell(row, 3).hyperlink:
                 candidate['standard']['sourceUrl'] = ws.cell(row, 3).hyperlink.target
             if patch.get('excludeFields') or ('title' in patch and patch['title'] != vals[1]):
@@ -139,6 +220,8 @@ def read_workbook(path, reg, overrides=None):
             raise ValueError('빈 과목 시트: ' + sheet)
         catalog['subjects'][subject] = {'sheet': sheet, 'rows': count}
     wb.close()
+    if text_fixes:
+        raise ValueError('텍스트 정정 대상 행을 찾지 못했습니다: ' + ', '.join(sorted(text_fixes)))
     return catalog
 
 
@@ -245,6 +328,7 @@ def plan_import(reg, toc, catalog, make_entry):
               'changed': [], 'matches': [], 'identityCorrections': [], 'conflicts': [],
               'unresolvedToc': [], 'retainedPlacements': [], 'summary': {}}
     report['sourceAnomalies'] = copy.deepcopy(catalog.get('sourceAnomalies', []))
+    report['textCorrections'] = copy.deepcopy(catalog.get('textCorrections', []))
     report['relocatedPlacements'] = []
     report['reviewedCorrections'] = [{k: copy.deepcopy(c.get(k)) for k in ('subject', 'title', 'sheet', 'row', 'caseNumber', 'date', 'decisionId', 'identityReview')}
                                     for c in catalog['candidates'] if c.get('identityReview')]

@@ -28808,6 +28808,752 @@
     "원자료 셀 문자열을 수정하지 않는다. 식별 보정과 표제 보정 및 오염 필드 제외는 아래 근거를 따른다.",
     "XLSX에는 단원열이 없으므로 기존2023 목차 및 제목·쟁점 대조에 따른 편집상 배치를 기록한다.",
     "삭제 표시는 검토한 실질과목 식별과 나머지 소송법 시트의 인용을 전체 대조하여 판정한다.",
-    "기존 배치 ID와 개인기록 이전별칭을 유지한다."
-  ]
+    "기존 배치 ID와 개인기록 이전별칭을 유지한다.",
+    "textCorrections: 사용자가 승인한(2026-11-02) 오탈자·내용 불일치 정정만 엑셀 셀 문자열에 적용한다. 각 정정은 from/to 가 정확히 일치할 때만 적용되고 나머지 원문은 바꾸지 않으며, 정정 전 출처는 standardSourceHistory 에, 정정 내용은 standard.textCorrections 에 남는다."
+  ],
+  "textCorrections": {
+    "형법:15": {
+      "caseNumber": "75도727",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=92604",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 15행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "“을” 에게",
+          "to": "“을”에게",
+          "kind": "띄어쓰기(승인 표 외 추가 발견)"
+        },
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "것이다.  사람을",
+          "to": "것이다. 사람을",
+          "kind": "띄어쓰기(승인 표 외 추가 발견)"
+        }
+      ],
+      "id": "std-criminal-507"
+    },
+    "형법:33": {
+      "caseNumber": "2023도10768",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=237915",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 33행"
+      ],
+      "changes": [
+        {
+          "op": "split",
+          "field": "issues",
+          "at": "\n<판결요지>  ",
+          "into": "holdings",
+          "kind": "요지가 쟁점 칸에 들어감"
+        },
+        {
+          "op": "replace",
+          "field": "issues",
+          "from": "인정여부",
+          "to": "인정 여부",
+          "kind": "띄어쓰기"
+        },
+        {
+          "op": "replace",
+          "field": "issues",
+          "from": "한사람",
+          "to": "한 사람",
+          "kind": "띄어쓰기"
+        },
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "오인할만한",
+          "to": "오인할 만한",
+          "kind": "띄어쓰기"
+        }
+      ],
+      "id": "std-criminal-508"
+    },
+    "형법:64": {
+      "caseNumber": "2023도10405",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=605069",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 64행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "제15조,제4조",
+          "to": "제15조, 제4조",
+          "kind": "띄어쓰기"
+        },
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "제15조,제8조",
+          "to": "제15조, 제8조",
+          "kind": "띄어쓰기"
+        },
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "결과적가중범",
+          "to": "결과적 가중범",
+          "kind": "띄어쓰기"
+        },
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "미수대상",
+          "to": "미수 대상",
+          "kind": "띄어쓰기"
+        },
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "범죄가미수에",
+          "to": "범죄가 미수에",
+          "kind": "띄어쓰기"
+        },
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "이 사건미수규정",
+          "to": "이 사건 미수규정",
+          "kind": "띄어쓰기"
+        }
+      ],
+      "id": "std-criminal-509"
+    },
+    "형법:67": {
+      "caseNumber": "2004도8259",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=67498",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 67행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "피고인 1의 공모하에",
+          "to": "피고인 1과의 공모하에",
+          "kind": "조사 누락"
+        }
+      ],
+      "id": "std-criminal-510"
+    },
+    "형법:89": {
+      "caseNumber": "83도515",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=97772",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 89행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "selectionReason",
+          "from": "반대의견은 판례는 형법",
+          "to": "반대의견은 형법",
+          "kind": "군더더기"
+        },
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "행위’ 로서",
+          "to": "행위’로서",
+          "kind": "띄어쓰기(승인 표 외 추가 발견)"
+        }
+      ],
+      "id": "std-criminal-512"
+    },
+    "형법:94": {
+      "caseNumber": "2022도5827",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=232783",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 94행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "피해자 퇴거를 요구",
+          "to": "피해자에게 퇴거를 요구",
+          "kind": "조사 누락"
+        },
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "교사하였다.교사범이",
+          "to": "교사하였다. 교사범이",
+          "kind": "띄어쓰기(승인 표 외 추가 발견)"
+        },
+        {
+          "op": "replace",
+          "field": "selectionReason",
+          "from": "경우에 이는 흔히",
+          "to": "이 경우에 이는 흔히",
+          "kind": "낱말 누락"
+        }
+      ],
+      "id": "std-criminal-513"
+    },
+    "형법:174": {
+      "caseNumber": "2018도13877",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=237581",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 174행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "title",
+          "from": "‘폭행 · 협박’ 의",
+          "to": "‘폭행·협박’의",
+          "kind": "표제 서식"
+        }
+      ],
+      "id": "std-criminal-514"
+    },
+    "형법:193": {
+      "caseNumber": "2017도19229",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=233057",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 193행"
+      ],
+      "changes": [
+        {
+          "op": "drop",
+          "field": "issues",
+          "kind": "다른 재판(516)의 쟁점"
+        }
+      ],
+      "id": "std-criminal-515"
+    },
+    "형법:194": {
+      "caseNumber": "2022도4719",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=233887",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 194행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "title",
+          "from": "비언적",
+          "to": "비언어적",
+          "kind": "글자 누락"
+        },
+        {
+          "op": "replace",
+          "field": "title",
+          "from": "비언어적 · 시각적",
+          "to": "비언어적·시각적",
+          "kind": "표제 서식"
+        },
+        {
+          "op": "replace",
+          "field": "selectionReason",
+          "from": "비언적·시각적",
+          "to": "비언어적·시각적",
+          "kind": "글자 누락"
+        }
+      ],
+      "id": "std-criminal-516"
+    },
+    "형법:221": {
+      "caseNumber": "2009도5595",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=142618",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 221행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "title",
+          "from": "주거침입절도죄의",
+          "to": "절도죄의",
+          "kind": "표제와 내용 불일치"
+        }
+      ],
+      "id": "std-criminal-518"
+    },
+    "형법:245": {
+      "caseNumber": "2023도17200",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=600577",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 245행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "title",
+          "from": "사용 · 수익권",
+          "to": "사용·수익권",
+          "kind": "표제 서식"
+        }
+      ],
+      "id": "std-criminal-520"
+    },
+    "형법:247": {
+      "caseNumber": "2024도18441",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=605289",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 247행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "\n(2)피고인이",
+          "to": "\n(2) 피고인이",
+          "kind": "띄어쓰기(승인 표 외 추가 발견)"
+        }
+      ],
+      "id": "std-criminal-521"
+    },
+    "형법:272": {
+      "caseNumber": "2005도4738",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=84071",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 272행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "selectionReason",
+          "from": "\nV. 횡령의 죄",
+          "to": "",
+          "kind": "장 제목 잔재"
+        },
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "랑데부룸살롱( 공소외",
+          "to": "랑데부룸살롱(공소외",
+          "kind": "띄어쓰기(승인 표 외 추가 발견)"
+        }
+      ],
+      "id": "std-criminal-526"
+    },
+    "형법:282": {
+      "caseNumber": "2016도18761",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=213717",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 282행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "title",
+          "from": "이자간",
+          "to": "양자간",
+          "kind": "표기 불일치"
+        },
+        {
+          "op": "replace",
+          "field": "issues",
+          "from": "경우,명의수탁자가",
+          "to": "경우, 명의수탁자가",
+          "kind": "띄어쓰기(승인 표 외 추가 발견)"
+        },
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "보면,부동산실명법을",
+          "to": "보면, 부동산실명법을",
+          "kind": "띄어쓰기"
+        },
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "경우,계약인",
+          "to": "경우, 계약인",
+          "kind": "띄어쓰기"
+        },
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "위임약정,명의신탁약정을",
+          "to": "위임약정, 명의신탁약정을",
+          "kind": "띄어쓰기"
+        },
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "불과하다.명의수탁자가",
+          "to": "불과하다. 명의수탁자가",
+          "kind": "띄어쓰기"
+        },
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "볼 수 없다.따라서",
+          "to": "볼 수 없다. 따라서",
+          "kind": "띄어쓰기"
+        }
+      ],
+      "id": "std-criminal-528"
+    },
+    "형법:284": {
+      "caseNumber": "2014도6740",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=184020",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 284행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "selectionReason",
+          "from": "\nVI. 배임의 죄",
+          "to": "",
+          "kind": "장 제목 잔재"
+        },
+        {
+          "op": "replace",
+          "field": "selectionReason",
+          "from": "인정여부에",
+          "to": "인정 여부에",
+          "kind": "띄어쓰기(승인 표 외 추가 발견)"
+        }
+      ],
+      "id": "std-criminal-529"
+    },
+    "형법:293": {
+      "caseNumber": "2019도14770",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=226505",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 293행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "title",
+          "from": "동산 · 채권",
+          "to": "동산·채권",
+          "kind": "표제 서식"
+        },
+        {
+          "op": "replace",
+          "field": "selectionReason",
+          "from": "346)에서 마찬가지로",
+          "to": "346)에서와 마찬가지로",
+          "kind": "조사 누락"
+        },
+        {
+          "op": "replace",
+          "field": "selectionReason",
+          "from": "전원합의체판결이다",
+          "to": "전원합의체 판결이다",
+          "kind": "띄어쓰기"
+        }
+      ],
+      "id": "std-criminal-530"
+    },
+    "형법:294": {
+      "caseNumber": "2020도8682",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=233053",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 294행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "selectionReason",
+          "from": "대법원전원합의체판결",
+          "to": "대법원 전원합의체 판결",
+          "kind": "띄어쓰기"
+        }
+      ],
+      "id": "std-criminal-531"
+    },
+    "형법:295": {
+      "caseNumber": "2019도14340",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=226421",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 295행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "selectionReason",
+          "from": "판결 등)를 변경하여",
+          "to": "판결 등))를 변경하여",
+          "kind": "괄호 짝"
+        },
+        {
+          "op": "replace",
+          "field": "selectionReason",
+          "from": "전원합의체판결이다",
+          "to": "전원합의체 판결이다",
+          "kind": "띄어쓰기"
+        }
+      ],
+      "id": "std-criminal-532"
+    },
+    "형법:296": {
+      "caseNumber": "2014도17180",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=179600",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 296행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "selectionReason",
+          "from": "범행후 손해회복이",
+          "to": "범행 후 손해회복이",
+          "kind": "띄어쓰기(승인 표 외 추가 발견)"
+        },
+        {
+          "op": "replace",
+          "field": "selectionReason",
+          "from": "범죄성립등에",
+          "to": "범죄성립 등에",
+          "kind": "띄어쓰기(승인 표 외 추가 발견)"
+        }
+      ],
+      "id": "std-criminal-533"
+    },
+    "형법:297": {
+      "caseNumber": "2014도3363",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=187492",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 297행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "issues",
+          "from": "쟁점>제3자에게",
+          "to": "제3자에게",
+          "kind": "서식 잔재"
+        }
+      ],
+      "id": "std-criminal-534"
+    },
+    "형법:312": {
+      "caseNumber": "2025도978",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=607845",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 312행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "selectionReason",
+          "from": "권한없이",
+          "to": "권원없이",
+          "kind": "글자 오기"
+        }
+      ],
+      "id": "std-criminal-535"
+    },
+    "형법:315": {
+      "caseNumber": "2024도7611",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=615949",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 315행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "title",
+          "from": "‘자기의 물건’ 의",
+          "to": "‘자기의 물건’의",
+          "kind": "표제 서식"
+        },
+        {
+          "op": "replace",
+          "field": "selectionReason",
+          "from": "권리행사방해죄 있어서",
+          "to": "권리행사방해죄에 있어서",
+          "kind": "조사 누락"
+        }
+      ],
+      "id": "std-criminal-536"
+    },
+    "형법:356": {
+      "caseNumber": "2019도11294",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=226503",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 356행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "법인이고,법인의",
+          "to": "법인이고, 법인의",
+          "kind": "띄어쓰기"
+        },
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "불과하다.따라서",
+          "to": "불과하다. 따라서",
+          "kind": "띄어쓰기"
+        },
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "대법원은,형법",
+          "to": "대법원은, 형법",
+          "kind": "띄어쓰기"
+        },
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "것이므로,위와",
+          "to": "것이므로, 위와",
+          "kind": "띄어쓰기"
+        },
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "판시하였다.위 법리는",
+          "to": "판시하였다. 위 법리는",
+          "kind": "띄어쓰기"
+        },
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "경우도형법",
+          "to": "경우도 형법",
+          "kind": "띄어쓰기"
+        }
+      ],
+      "id": "std-criminal-537"
+    },
+    "형법:369": {
+      "caseNumber": "2020도14045",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=226689",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 369행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "사서명(사서명)",
+          "to": "사서명(私署名)",
+          "kind": "한자 병기 소실"
+        },
+        {
+          "op": "replace",
+          "field": "selectionReason",
+          "from": "\nI. 성풍속에 관한 죄",
+          "to": "",
+          "kind": "장 제목 잔재"
+        }
+      ],
+      "id": "std-criminal-539"
+    },
+    "형법:376": {
+      "caseNumber": "2018도3619",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=197020",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 376행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "selectionReason",
+          "from": "\nI. 내란의 죄",
+          "to": "",
+          "kind": "장 제목 잔재"
+        }
+      ],
+      "id": "std-criminal-540"
+    },
+    "형법:402": {
+      "caseNumber": "2023도16951",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=241249",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 402행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "issues",
+          "from": "결찰관의",
+          "to": "경찰관의",
+          "kind": "글자 오기"
+        },
+        {
+          "op": "replace",
+          "field": "selectionReason",
+          "from": "가운에 대법원",
+          "to": "가운데 대법원",
+          "kind": "글자 누락"
+        },
+        {
+          "op": "replace",
+          "field": "selectionReason",
+          "from": "타당하는 입장",
+          "to": "타당하다는 입장",
+          "kind": "글자 누락"
+        }
+      ],
+      "id": "std-criminal-541"
+    },
+    "형법:422": {
+      "caseNumber": "2025도11170",
+      "reason": "사용자 승인(2026-11-02)에 따른 형법 2026 추가 판례 오탈자·내용 불일치 정정. 공식 판결문·엑셀 원본 셀과 대조해 확인했고, 정정 전 표준판례 출처는 standardSourceHistory 와 엑셀 원본에 보존한다.",
+      "evidence": [
+        "https://www.law.go.kr/LSW/precInfoP.do?precSeq=623069",
+        "2026_표준판례_2차_배포용.xlsx 형법 시트 422행"
+      ],
+      "changes": [
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "벌금이상의",
+          "to": "벌금 이상의",
+          "kind": "띄어쓰기"
+        },
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "애초에형법",
+          "to": "애초에 형법",
+          "kind": "띄어쓰기"
+        },
+        {
+          "op": "replace",
+          "field": "holdings",
+          "from": "범인도피죄본범이",
+          "to": "범인도피죄 본범이",
+          "kind": "띄어쓰기"
+        }
+      ],
+      "id": "std-criminal-543"
+    }
+  }
 }

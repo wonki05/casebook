@@ -99,7 +99,9 @@
 - `standardPrevious`: 이전 제목·목차·등록 순서를 보존한다. 원문 인용의 식별 오류를 공식 자료로 확인하여 고칠 때는 `identityHistory`에 근거와 종전 식별을 남기고, `legacyIds`와 등록부의 `identityAliases`로 기존 링크·메모·북마크를 연결한다.
 - 원본의 특정 요지가 다른 재판에 잘못 연결된 사실이 확인되면 원본 전체를 `standardSourceHistory`에 그대로 보관한 뒤 현재 출처의 해당 필드만 제외한다. `standardSourceReview` 등 검토 기록에 제외 필드·이유·공식 근거를 남기며 원문을 의역·교정하지 않는다. 유효한 필드가 모두 없어지면 현재 `standardSource`를 생략하고 공식 자료로 보충한다. 보관 출처는 현재 표시값에 재투입하지 않는다.
 
-XLSX 대조·반영은 `python tools/add_cases.py standard-import --from <원본.xlsx> --review <검토.json> --catalog <후보.json> --report <결과.json>`으로 수행한다. `--dry-run`은 등록부·목차를 저장하지 않고 같은 검증을 수행한다. 검토 파일은 `sourceSha256`으로 원본을 고정하고 `identityOverrides`, `tocRows`, `tocAdditions` 및 필요한 출처 제외 근거를 보존한다. 식별·목차가 해결되지 않으면 전체 반영을 중단한다.
+- 사용자가 승인한 오탈자·내용 불일치 정정은 검토 파일의 `textCorrections`(키 `<시트>:<행>`, 값 `{reason, evidence, changes[]}`)에만 적는다. `changes` 의 `op` 는 `replace`(`field` 는 title·selectionReason·issues·facts·holdings, `from`→`to`, 기본은 정확히 1회 일치하고 `count` 로 횟수를 지정), `drop`(다른 재판의 쟁점·요지·사실관계가 들어간 칸을 제외하면 그 필드는 공식 자료로 보충), `split`(한 칸에 섞여 들어간 다른 필드의 본문을 `at` 기준으로 나눠 `into` 필드로 옮김)이다. 일치하지 않으면 가져오기가 중단되어 바뀐 원자료를 조용히 정정하지 않는다. 정정 전 출처는 `standardSourceHistory` 에, 정정 내용은 배치의 `standard.textCorrections` 에 남고 같은 엑셀을 다시 가져와도 같은 결과가 나온다. 공식 수집본(`fetched/`)은 이 방식으로도 고치지 않는다.
+
+XLSX 대조·반영은 `python tools/add_cases.py standard-import --from <원본.xlsx> --review <검토.json> --catalog <후보.json> --report <결과.json>`으로 수행한다. `--dry-run`은 등록부·목차를 저장하지 않고 같은 검증을 수행한다. 검토 파일은 `sourceSha256`으로 원본을 고정하고 `identityOverrides`, `tocRows`, `tocAdditions`, `textCorrections` 및 필요한 출처 제외 근거를 보존한다. 식별·목차가 해결되지 않으면 전체 반영을 중단한다.
 
 ### 1-4. 판례연구 배치 `research`
 

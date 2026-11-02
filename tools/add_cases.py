@@ -523,7 +523,8 @@ def cmd_standard_import(a):
             raise SystemExit('검토 목록의 원본 해시와 입력 XLSX가 다릅니다; 행별 보정을 다시 검토하세요')
         overrides = {'rows': review.get('identityOverrides', {}),
                      'legacyIdentityCorrections': review.get('legacyIdentityCorrections', {}),
-                     'legacySourceExclusions': review.get('legacySourceExclusions', {})}
+                     'legacySourceExclusions': review.get('legacySourceExclusions', {}),
+                     'textCorrections': review.get('textCorrections', {})}
         mapping = {'rows': review.get('tocRows', {}), 'tocAdditions': review.get('tocAdditions', [])}
     paths = mapping.get('rows', mapping)
     try:
