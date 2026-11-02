@@ -1,0 +1,19 @@
+{
+ "unit": "n26-u2-personal-property-a",
+ "label": "각론 자유·명예 + 재산죄(절도·사기) 추가분",
+ "total": 11,
+ "ok": 11,
+ "missing": [],
+ "flagged": [
+  {
+   "id": "std-criminal-514",
+   "caseNumber": "2018도13877",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ]
+  }
+ ],
+ "waiting": [],
+ "retried": [],
+ "elapsedSec": 71
+}
