@@ -1,0 +1,1206 @@
+{
+  "approvedBy": "사용자 지시(2026-11-03)",
+  "approvedAt": "2026-11-03",
+  "note": "헌법 2026 개정판 추가분 공식 원문의 오탈자 정정(401 '주문예' 제외 모두 사용자 승인)과 깨진 '?' 글자 복원, 구 형식 페이지(368)의 구역 나누기. 정정 전 글자는 각 파일의 corrections 배열에 남는다. 재수집(fetch_lawgo.py --force)이 덮어쓰면 tools/apply_fulltext_edits.py --from 이 파일 로 다시 적용한다. 적용하지 않은 것: 401 '주문예'(사용자 제외), 195의 '1대?각 1조' 3곳·420의 문단 첫머리 '?' 2곳·393의 짝 없는 '?' 2곳(글자를 확정할 수 없음).",
+  "items": [
+    {
+      "file": "std-constitution-330",
+      "section": "【이 유】",
+      "before": "궁국적으로는",
+      "after": "궁극적으로는",
+      "reason": "'궁국적'은 '궁극적'의 오기(표준판례 쪽 표기는 '궁극적으로는')",
+      "confidence": "높음"
+    },
+    {
+      "file": "std-constitution-340",
+      "section": "【결정요지】",
+      "before": "객관적 범규범이라는",
+      "after": "객관적 법규범이라는",
+      "reason": "'범규범'은 '법규범'의 오기(표준판례 쪽 표기는 '객관적 법규범')",
+      "confidence": "중간"
+    },
+    {
+      "file": "std-constitution-389",
+      "section": "【결정요지】",
+      "before": "수기관의",
+      "after": "수사기관의",
+      "reason": "'수기관'은 '수사기관'에서 '사'가 빠진 오기(같은 보충의견 앞 문장은 '수사기관의 권한남용')",
+      "confidence": "중간"
+    },
+    {
+      "file": "std-constitution-401",
+      "section": "[이 유]",
+      "before": "지나치게 다의적고 그",
+      "after": "지나치게 다의적이고 그",
+      "reason": "'다의적고'는 '다의적이고'에서 '이'가 빠진 오기(같은 이유의 다른 곳은 '다의적이고')",
+      "confidence": "높음"
+    },
+    {
+      "file": "std-constitution-401",
+      "section": "【결정요지】",
+      "before": "결과(結果)과 될",
+      "after": "결과(結果)가 될",
+      "reason": "조사 '가'가 '과'로 잘못 적힘(같은 결정문 이유는 '결과가 될 해석을')",
+      "confidence": "높음"
+    },
+    {
+      "file": "std-constitution-401",
+      "section": "【결정요지】",
+      "before": "긍적정적인",
+      "after": "긍정적인",
+      "reason": "'긍적정적'은 '긍정적'의 오기(글자 중복)",
+      "confidence": "높음"
+    },
+    {
+      "file": "std-constitution-401",
+      "section": "【결정요지】",
+      "before": "내부체재(內部體制)",
+      "after": "내부체제(內部體制)",
+      "reason": "'체재'는 '體制'의 독음 '체제'의 오기(괄호의 한자가 體制)",
+      "confidence": "중간"
+    },
+    {
+      "file": "annual-2023-12",
+      "op": "replaceAt",
+      "section": "【판시사항】",
+      "sectionSha256": "178cf07fab065752e27d8b3fd0001564fe883d36788bd32a04130b3ba658dc86",
+      "edits": [
+        {
+          "offset": 0,
+          "before": "북합의서",
+          "after": "남북합의서"
+        }
+      ],
+      "reason": "첫 글자 '남'이 빠짐(같은 결정문에서 '남북합의서' 16회, '북합의서' 단독 표기는 이 한 곳뿐; 정정 후 문구가 정정 전 문구를 포함하므로 위치로 지정)",
+      "confidence": "높음"
+    },
+    {
+      "file": "std-constitution-439",
+      "section": "【참조조문】",
+      "before": "행행법시행령",
+      "after": "행형법시행령",
+      "reason": "'행행법'은 '행형법'의 오기(같은 결정문의 사건명·이유는 '행형법시행령')",
+      "confidence": "중간"
+    },
+    {
+      "file": "std-constitution-195",
+      "op": "replaceAt",
+      "section": "【주 문】",
+      "sectionSha256": "0bf789e069c6608b6c7f25a7e300642a85f67bb4b79351f8678d62e7027e1c7b",
+      "edits": [
+        {
+          "offset": 54,
+          "before": "?",
+          "after": "⋅"
+        }
+      ],
+      "reason": "원문 추출 과정에서 가운뎃점이 '?'로 깨짐(같은 단어 나열: '시?도지사', '연설?대담', '생명?신체'); 이 결정문 참조조문과 표준판례는 ⋅(U+22C5)를 쓴다. 인용 법령의 \"각 1대?각 1조\" 3곳은 구분 글자를 확정할 수 없어 제외",
+      "confidence": "높음"
+    },
+    {
+      "file": "std-constitution-195",
+      "op": "replaceAt",
+      "section": "【이 유】",
+      "sectionSha256": "5004467e243c467f5365a32fc70063c6122aaf0015982127612d7b2ef9658df2",
+      "edits": [
+        {
+          "offset": 101,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 231,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 359,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 423,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 667,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 789,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 1005,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 1022,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 1102,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 1108,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 1110,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 1146,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 1158,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 1160,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 1199,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 1201,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 1309,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 1311,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 1339,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 1347,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 1481,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 2169,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 2621,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 3311,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 3550,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 3808,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 4638,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 4988,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 5529,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 5606,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 5654,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 5816,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 5863,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 7491,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 7540,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 7593,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8008,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8050,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8179,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8189,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8193,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8197,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8201,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8206,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8210,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8214,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8261,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8269,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8272,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8276,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8307,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8311,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8315,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8332,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8343,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8446,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8504,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 11476,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 11537,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 11804,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 13890,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 13995,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 14006,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 14016,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 14019,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 14168,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 14304,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 14324,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 14360,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 14571,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 14666,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 14673,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 14743,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 14795,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15192,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15200,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15242,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15253,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15257,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15260,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15264,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15269,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15273,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15277,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15323,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15331,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15334,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15338,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15368,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15372,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15376,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15393,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15531,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15540,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15619,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15631,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15658,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15679,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15741,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15765,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15783,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15885,
+          "before": "?",
+          "after": "⋅"
+        }
+      ],
+      "reason": "원문 추출 과정에서 가운뎃점이 '?'로 깨짐(같은 단어 나열: '시?도지사', '연설?대담', '생명?신체'); 이 결정문 참조조문과 표준판례는 ⋅(U+22C5)를 쓴다. 인용 법령의 \"각 1대?각 1조\" 3곳은 구분 글자를 확정할 수 없어 제외",
+      "confidence": "높음"
+    },
+    {
+      "file": "std-constitution-420",
+      "op": "replaceAt",
+      "section": "【이 유】",
+      "sectionSha256": "d86a829580aad8a381b930f9786626d16820f54f95ab1baf365be2fbdbebd315",
+      "edits": [
+        {
+          "offset": 1748,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 1792,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 2343,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 2975,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 3741,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 3743,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 3763,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 5491,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 5669,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 5790,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 7687,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 7732,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8110,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 8482,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 10064,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 10642,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 10918,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 11114,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 11158,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 11248,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 11284,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 12551,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 12597,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 13160,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 13637,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 14446,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 14530,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 14534,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 14614,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 14694,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 15363,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 16421,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 16435,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 16439,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 17004,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 17507,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 17670,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 18178,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 18266,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 18639,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 19088,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 19173,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 19199,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 20160,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 20162,
+          "before": "?",
+          "after": "⋅"
+        },
+        {
+          "offset": 20189,
+          "before": "?",
+          "after": "⋅"
+        }
+      ],
+      "reason": "원문 추출 과정에서 가운뎃점이 '?'로 깨짐(같은 단어 나열: '보호?육성', '권리?의무', '노동?경제'); 표준판례(엑셀)는 ⋅(U+22C5)를 쓴다. 문단 첫머리의 '?' 2곳(머리표 글자)은 제외",
+      "confidence": "높음"
+    },
+    {
+      "file": "std-constitution-380",
+      "op": "replaceAt",
+      "section": "【이 유】",
+      "sectionSha256": "246cf65fc64add423715c926b9f7b597cbfc4898918dc738f1166e1e0738b87d",
+      "edits": [
+        {
+          "offset": 1791,
+          "before": "?",
+          "after": "ㆍ"
+        },
+        {
+          "offset": 1797,
+          "before": "?",
+          "after": "ㆍ"
+        },
+        {
+          "offset": 1801,
+          "before": "?",
+          "after": "ㆍ"
+        },
+        {
+          "offset": 1806,
+          "before": "?",
+          "after": "ㆍ"
+        },
+        {
+          "offset": 5783,
+          "before": "?",
+          "after": "ㆍ"
+        },
+        {
+          "offset": 5789,
+          "before": "?",
+          "after": "ㆍ"
+        },
+        {
+          "offset": 5793,
+          "before": "?",
+          "after": "ㆍ"
+        },
+        {
+          "offset": 5798,
+          "before": "?",
+          "after": "ㆍ"
+        },
+        {
+          "offset": 6789,
+          "before": "?",
+          "after": " "
+        },
+        {
+          "offset": 6801,
+          "before": "?",
+          "after": " "
+        },
+        {
+          "offset": 12251,
+          "before": "?",
+          "after": "ㆍ"
+        },
+        {
+          "offset": 12415,
+          "before": "?",
+          "after": "ㆍ"
+        },
+        {
+          "offset": 15062,
+          "before": "?",
+          "after": "ㆍ"
+        }
+      ],
+      "reason": "원문 추출 과정에서 가운뎃점이 '?'로 깨짐(같은 단어 나열: '변호인ㆍ법정대리인ㆍ배우자ㆍ직계친족ㆍ형제자매', '교도소장ㆍ구치소장'); 이 결정문은 ㆍ(U+318D)를 쓴다. 다만 판례 인용 '(헌재?1991. 7. 8.?89헌마181 …)'의 '?' 2곳은 가운뎃점이 아니라 띄어쓰기 자리로 판단('헌재 1991. 7. 8. 89헌마181')",
+      "confidence": "높음"
+    },
+    {
+      "file": "std-constitution-393",
+      "op": "replaceAt",
+      "section": "【이 유】",
+      "sectionSha256": "7989befdba665a97e552a08b0eca2eac04b6644bf654a5fcf21869d978feab92",
+      "edits": [
+        {
+          "offset": 1425,
+          "before": "?",
+          "after": "「"
+        },
+        {
+          "offset": 1433,
+          "before": "?",
+          "after": "」"
+        },
+        {
+          "offset": 1654,
+          "before": "?",
+          "after": "「"
+        },
+        {
+          "offset": 1662,
+          "before": "?",
+          "after": "」"
+        },
+        {
+          "offset": 3334,
+          "before": "?",
+          "after": "「"
+        },
+        {
+          "offset": 3340,
+          "before": "?",
+          "after": "」"
+        },
+        {
+          "offset": 3353,
+          "before": "?",
+          "after": "「"
+        },
+        {
+          "offset": 3361,
+          "before": "?",
+          "after": "」"
+        },
+        {
+          "offset": 3363,
+          "before": "?",
+          "after": "「"
+        },
+        {
+          "offset": 3369,
+          "before": "?",
+          "after": "」"
+        },
+        {
+          "offset": 3388,
+          "before": "?",
+          "after": "「"
+        },
+        {
+          "offset": 3395,
+          "before": "?",
+          "after": "」"
+        },
+        {
+          "offset": 3459,
+          "before": "?",
+          "after": "「"
+        },
+        {
+          "offset": 3467,
+          "before": "?",
+          "after": "」"
+        },
+        {
+          "offset": 3496,
+          "before": "?",
+          "after": "「"
+        },
+        {
+          "offset": 3504,
+          "before": "?",
+          "after": "」"
+        },
+        {
+          "offset": 3533,
+          "before": "?",
+          "after": "「"
+        },
+        {
+          "offset": 3541,
+          "before": "?",
+          "after": "」"
+        },
+        {
+          "offset": 3993,
+          "before": "?",
+          "after": "「"
+        },
+        {
+          "offset": 3998,
+          "before": "?",
+          "after": "」"
+        },
+        {
+          "offset": 4035,
+          "before": "?",
+          "after": "「"
+        },
+        {
+          "offset": 4040,
+          "before": "?",
+          "after": "」"
+        },
+        {
+          "offset": 4182,
+          "before": "?",
+          "after": "「"
+        },
+        {
+          "offset": 4188,
+          "before": "?",
+          "after": "」"
+        },
+        {
+          "offset": 4201,
+          "before": "?",
+          "after": "「"
+        },
+        {
+          "offset": 4207,
+          "before": "?",
+          "after": "」"
+        },
+        {
+          "offset": 4252,
+          "before": "?",
+          "after": "「"
+        },
+        {
+          "offset": 4260,
+          "before": "?",
+          "after": "」"
+        },
+        {
+          "offset": 4291,
+          "before": "?",
+          "after": "「"
+        },
+        {
+          "offset": 4298,
+          "before": "?",
+          "after": "」"
+        },
+        {
+          "offset": 4402,
+          "before": "?",
+          "after": "「"
+        },
+        {
+          "offset": 4411,
+          "before": "?",
+          "after": "」"
+        },
+        {
+          "offset": 4492,
+          "before": "?",
+          "after": "「"
+        },
+        {
+          "offset": 4501,
+          "before": "?",
+          "after": "」"
+        },
+        {
+          "offset": 4678,
+          "before": "?",
+          "after": "「"
+        },
+        {
+          "offset": 4682,
+          "before": "?",
+          "after": "」"
+        },
+        {
+          "offset": 4694,
+          "before": "?",
+          "after": "「"
+        },
+        {
+          "offset": 4698,
+          "before": "?",
+          "after": "」"
+        }
+      ],
+      "reason": "법령명을 감싼 낫표 「」 가 '?'로 깨짐(\"?조세특례제한법?\" → \"「조세특례제한법」\"); 같은 줄에서 짝이 맞는 19쌍만 복원하고 짝을 찾을 수 없는 문단 첫머리 '?' 2곳은 제외",
+      "confidence": "중간"
+    },
+    {
+      "file": "std-constitution-370",
+      "op": "replaceAt",
+      "section": "【이 유】",
+      "sectionSha256": "d7cabef3003358efaaf8cd1d64a16bf3e55021e60a65e5f2ff6cb97d68b30edd",
+      "edits": [
+        {
+          "offset": 3590,
+          "before": "?",
+          "after": "ㆍ"
+        },
+        {
+          "offset": 4315,
+          "before": "?",
+          "after": "ㆍ"
+        },
+        {
+          "offset": 4950,
+          "before": "?",
+          "after": "ㆍ"
+        },
+        {
+          "offset": 8583,
+          "before": "?",
+          "after": "ㆍ"
+        },
+        {
+          "offset": 9919,
+          "before": "?",
+          "after": "ㆍ"
+        }
+      ],
+      "reason": "원문 추출 과정에서 가운뎃점이 '?'로 깨짐(같은 단어 나열: '국가안전보장ㆍ질서유지', '인적ㆍ물적'); 이 결정문은 ㆍ(U+318D)를 쓴다",
+      "confidence": "높음"
+    },
+    {
+      "file": "std-constitution-373",
+      "op": "replaceAt",
+      "section": "[이 유]",
+      "sectionSha256": "b452d26a0cd4b96d3a34687900fc18765ad78bc6cf3e639d84e8263ef30336e5",
+      "edits": [
+        {
+          "offset": 2608,
+          "before": "?",
+          "after": "ㆍ"
+        },
+        {
+          "offset": 10837,
+          "before": "?",
+          "after": "ㆍ"
+        }
+      ],
+      "reason": "원문 추출 과정에서 가운뎃점이 '?'로 깨짐(같은 단어 나열: '폐지ㆍ제정', '매수ㆍ기부행위'); 이 결정문은 ㆍ(U+318D)를 쓴다",
+      "confidence": "높음"
+    },
+    {
+      "file": "std-constitution-368",
+      "op": "splitSection",
+      "section": "[당 사 자]",
+      "markers": [
+        "[주　　문]",
+        "[이　　유]"
+      ],
+      "headings": [
+        "【당 사 자】",
+        "【주 문】",
+        "【이 유】"
+      ],
+      "reason": "구 형식 페이지라 당사자·주문·이유가 '[당 사 자]' 한 섹션에 이어 붙어 수집됨 — 본문의 '[주  문]', '[이  유]' 표지 줄을 경계로 다른 재판과 같은 구역으로 나눈다(글자는 그대로)"
+    }
+  ]
+}
