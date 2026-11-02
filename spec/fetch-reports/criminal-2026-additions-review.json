@@ -19,7 +19,8 @@
    "precSeq": "605069",
    "flags": [
     "전원합의체 False ≠ 공식 True"
-   ]
+   ],
+   "resolved": true
   },
   {
    "id": "std-criminal-511",
@@ -31,7 +32,8 @@
    "precSeq": "234953",
    "flags": [
     "전원합의체 False ≠ 공식 True"
-   ]
+   ],
+   "resolved": true
   },
   {
    "id": "std-criminal-512",
@@ -43,7 +45,8 @@
    "precSeq": "97772",
    "flags": [
     "전원합의체 False ≠ 공식 True"
-   ]
+   ],
+   "resolved": true
   },
   {
    "id": "std-criminal-514",
@@ -55,7 +58,8 @@
    "precSeq": "237581",
    "flags": [
     "전원합의체 False ≠ 공식 True"
-   ]
+   ],
+   "resolved": true
   },
   {
    "id": "std-criminal-528",
@@ -67,7 +71,8 @@
    "precSeq": "213717",
    "flags": [
     "전원합의체 False ≠ 공식 True"
-   ]
+   ],
+   "resolved": true
   },
   {
    "id": "std-criminal-530",
@@ -79,7 +84,8 @@
    "precSeq": "226505",
    "flags": [
     "전원합의체 False ≠ 공식 True"
-   ]
+   ],
+   "resolved": true
   },
   {
    "id": "std-criminal-531",
@@ -91,7 +97,8 @@
    "precSeq": "233053",
    "flags": [
     "전원합의체 False ≠ 공식 True"
-   ]
+   ],
+   "resolved": true
   },
   {
    "id": "std-criminal-532",
@@ -103,7 +110,8 @@
    "precSeq": "226421",
    "flags": [
     "전원합의체 False ≠ 공식 True"
-   ]
+   ],
+   "resolved": true
   },
   {
    "id": "std-criminal-534",
@@ -115,7 +123,8 @@
    "precSeq": "187492",
    "flags": [
     "전원합의체 False ≠ 공식 True"
-   ]
+   ],
+   "resolved": true
   },
   {
    "id": "std-criminal-537",
@@ -127,7 +136,8 @@
    "precSeq": "226503",
    "flags": [
     "전원합의체 False ≠ 공식 True"
-   ]
+   ],
+   "resolved": true
   },
   {
    "id": "std-criminal-538",
@@ -139,7 +149,8 @@
    "precSeq": "80479",
    "flags": [
     "전원합의체 False ≠ 공식 True"
-   ]
+   ],
+   "resolved": true
   },
   {
    "id": "std-criminal-543",
@@ -151,7 +162,8 @@
    "precSeq": "623069",
    "flags": [
     "전원합의체 False ≠ 공식 True"
-   ]
+   ],
+   "resolved": true
   }
  ],
  "typoSuspects": [
@@ -164,7 +176,8 @@
    "kind": "글자 누락",
    "confidence": "높음",
    "visibleOnWeb": true,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-516",
@@ -175,7 +188,8 @@
    "kind": "글자 누락",
    "confidence": "높음",
    "visibleOnWeb": false,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-541",
@@ -186,7 +200,8 @@
    "kind": "글자 오기",
    "confidence": "높음",
    "visibleOnWeb": true,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-541",
@@ -197,7 +212,8 @@
    "kind": "글자 누락",
    "confidence": "높음",
    "visibleOnWeb": false,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-541",
@@ -208,7 +224,8 @@
    "kind": "글자 누락",
    "confidence": "높음",
    "visibleOnWeb": false,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-534",
@@ -219,7 +236,8 @@
    "kind": "서식 잔재",
    "confidence": "높음",
    "visibleOnWeb": true,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-536",
@@ -230,7 +248,8 @@
    "kind": "조사 누락",
    "confidence": "높음",
    "visibleOnWeb": false,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-532",
@@ -241,7 +260,8 @@
    "kind": "괄호 짝",
    "confidence": "높음",
    "visibleOnWeb": false,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-539",
@@ -252,7 +272,8 @@
    "kind": "한자 병기 소실",
    "confidence": "높음",
    "visibleOnWeb": true,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-528",
@@ -263,7 +284,8 @@
    "kind": "표기 불일치",
    "confidence": "중간",
    "visibleOnWeb": true,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-535",
@@ -274,7 +296,8 @@
    "kind": "표기 불일치",
    "confidence": "중간",
    "visibleOnWeb": false,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-510",
@@ -285,7 +308,8 @@
    "kind": "조사 누락",
    "confidence": "중간",
    "visibleOnWeb": true,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-513",
@@ -296,7 +320,8 @@
    "kind": "조사 누락",
    "confidence": "중간",
    "visibleOnWeb": true,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-513",
@@ -307,7 +332,8 @@
    "kind": "낱말 오기",
    "confidence": "중간",
    "visibleOnWeb": false,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-512",
@@ -318,7 +344,8 @@
    "kind": "군더더기",
    "confidence": "중간",
    "visibleOnWeb": false,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-530",
@@ -329,7 +356,8 @@
    "kind": "조사 누락",
    "confidence": "중간",
    "visibleOnWeb": false,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-509",
@@ -340,7 +368,8 @@
    "kind": "띄어쓰기",
    "confidence": "낮음",
    "visibleOnWeb": true,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-528",
@@ -351,7 +380,8 @@
    "kind": "띄어쓰기",
    "confidence": "낮음",
    "visibleOnWeb": true,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-537",
@@ -362,7 +392,8 @@
    "kind": "띄어쓰기",
    "confidence": "낮음",
    "visibleOnWeb": true,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-543",
@@ -373,7 +404,8 @@
    "kind": "띄어쓰기",
    "confidence": "낮음",
    "visibleOnWeb": true,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-508",
@@ -384,7 +416,8 @@
    "kind": "띄어쓰기",
    "confidence": "낮음",
    "visibleOnWeb": true,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-530",
@@ -395,7 +428,8 @@
    "kind": "띄어쓰기",
    "confidence": "낮음",
    "visibleOnWeb": false,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-514",
@@ -406,7 +440,8 @@
    "kind": "표제 서식",
    "confidence": "낮음",
    "visibleOnWeb": true,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   },
   {
    "id": "std-criminal-536",
@@ -417,7 +452,8 @@
    "kind": "표제 서식",
    "confidence": "낮음",
    "visibleOnWeb": true,
-   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)"
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
   }
  ],
  "contentMismatchSuspects": [
@@ -427,7 +463,8 @@
    "field": "쟁점",
    "observed": "언어적 수단이 아닌 비언어적·시각적 수단만을 사용한 표현이라도 … 모욕죄가 성립하는지 여부",
    "evidence": "516(2022도4719)의 쟁점과 글자까지 같다. 515(2017도19229)는 연예인에 대한 인터넷 댓글(‘국민호텔녀’) 사건이다.",
-   "visibleOnWeb": true
+   "visibleOnWeb": true,
+   "resolved": "쟁점 칸 제외(공식 판시사항 표시)"
   },
   {
    "id": "std-criminal-508",
@@ -435,7 +472,8 @@
    "field": "쟁점",
    "observed": "싸움을 함에 있어서 격투를 하는 자 중의 한사람의 공격이 … 정당방위의 인정여부 (칸 안에 \"<판결요지>\" 로 시작하는 긴 문단이 이어 붙음)",
    "evidence": "공식 판시사항은 복싱클럽 코치의 상해 사건에서 오인에 대한 \"정당한 이유\"의 존부이며 공식 전문에 \"격투\"·\"정당방위\"가 한 번도 나오지 않는다.",
-   "visibleOnWeb": true
+   "visibleOnWeb": true,
+   "resolved": "쟁점 문장 유지, <판결요지> 문단을 요지 칸으로 이동"
   },
   {
    "id": "std-criminal-518",
@@ -443,7 +481,8 @@
    "field": "표제",
    "observed": "주거침입절도죄의 실행의 착수시기",
    "evidence": "같은 항목의 쟁점·요지·공식 판시사항은 \"절도죄의 실행의 착수시기\"(주차 차량 문 손잡이를 잡고 열려던 사안, 형법 제329조)로 주거침입이 없다.",
-   "visibleOnWeb": true
+   "visibleOnWeb": true,
+   "resolved": "표제 주거침입절도죄 → 절도죄"
   }
  ],
  "headingResidue": {
@@ -453,28 +492,32 @@
     "caseNumber": "2005도4738",
     "field": "선정이유",
     "observed": "V. 횡령의 죄",
-    "visibleOnWeb": false
+    "visibleOnWeb": false,
+    "resolved": true
    },
    {
     "id": "std-criminal-529",
     "caseNumber": "2014도6740",
     "field": "선정이유",
     "observed": "VI. 배임의 죄",
-    "visibleOnWeb": false
+    "visibleOnWeb": false,
+    "resolved": true
    },
    {
     "id": "std-criminal-539",
     "caseNumber": "2020도14045",
     "field": "선정이유",
     "observed": "I. 성풍속에 관한 죄",
-    "visibleOnWeb": false
+    "visibleOnWeb": false,
+    "resolved": true
    },
    {
     "id": "std-criminal-540",
     "caseNumber": "2018도3619",
     "field": "선정이유",
     "observed": "I. 내란의 죄",
-    "visibleOnWeb": false
+    "visibleOnWeb": false,
+    "resolved": true
    }
   ],
   "elsewhereInRegistry": [
@@ -514,5 +557,76 @@
   },
   "note": "지적마다 Haiku 반박 검증 2회. 검증이 엄격해 글자 오류가 아닌 내용·서식 지적은 \"아님\"으로 나왔으므로, 아래 목록은 사람이 등록부·공식 전문·xlsx 원본 셀과 직접 대조해 확정했다."
  },
- "notChanged": "등록부·standardSource·표제는 고치지 않았다(책 원문 보존, CLAUDE.md 절대규칙 1). 정정은 사용자 승인 후 add_cases.py set 으로."
+ "notChanged": "공식 수집본(fetched/)은 수정하지 않았다. 책(엑셀) 쪽 표기는 사용자 승인(2026-11-02)에 따라 textCorrections 로 정정했고 정정 전 출처는 standardSourceHistory 에 보존했다.",
+ "resolution": {
+  "date": "2026-11-02",
+  "approvedBy": "사용자 지시(2026-11-02): 오탈자·내용 불일치·전원합의체 표기 일괄 반영",
+  "enBanc": {
+   "applied": [
+    "std-criminal-509",
+    "std-criminal-511",
+    "std-criminal-512",
+    "std-criminal-514",
+    "std-criminal-528",
+    "std-criminal-530",
+    "std-criminal-531",
+    "std-criminal-532",
+    "std-criminal-534",
+    "std-criminal-537",
+    "std-criminal-538",
+    "std-criminal-543"
+   ],
+   "how": "add_cases.py set <id> --enbanc yes",
+   "auditFlagsAfter": 0
+  },
+  "textCorrections": {
+   "entries": 27,
+   "changes": 65,
+   "approvedTable": 54,
+   "extraSameClass": 11,
+   "byField": {
+    "holdings": 30,
+    "issues": 7,
+    "selectionReason": 20,
+    "title": 8
+   },
+   "where": "data/standard-editions/2026-review.json textCorrections",
+   "history": "standardSourceHistory + standard.textCorrections"
+  },
+  "contentFixes": {
+   "std-criminal-515": "쟁점 칸 제외(공식 판시사항 표시)",
+   "std-criminal-508": "쟁점 문장 유지, <판결요지> 문단을 요지 칸으로 이동",
+   "std-criminal-518": "표제 주거침입절도죄 → 절도죄"
+  },
+  "headingResidueRemoved": [
+   "std-criminal-526",
+   "std-criminal-529",
+   "std-criminal-539",
+   "std-criminal-540"
+  ],
+  "verification": {
+   "workflowAgents": 100,
+   "caseReviews": 39,
+   "changeVerdicts": {
+    "correct": 63,
+    "unclear": 1,
+    "unclearResolved": "2인 재판정 ok"
+   },
+   "decisionPanels": {
+    "total": 11,
+    "unanimousKeep": 9,
+    "splitKeep": [
+     "std-criminal-508 요지 이동",
+     "표제 공백 서식"
+    ]
+   },
+   "residualFindings": {
+    "total": 13,
+    "adopted": [
+     "std-criminal-514 선정이유 일부견해 → 일부 견해"
+    ],
+    "notAdopted": 12
+   }
+  }
+ }
 }

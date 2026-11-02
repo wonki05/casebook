@@ -29018,6 +29018,13 @@
           "from": "‘폭행 · 협박’ 의",
           "to": "‘폭행·협박’의",
           "kind": "표제 서식"
+        },
+        {
+          "op": "replace",
+          "field": "selectionReason",
+          "from": "학계의 일부견해와",
+          "to": "학계의 일부 견해와",
+          "kind": "띄어쓰기(승인 표 외 추가 발견)"
         }
       ],
       "id": "std-criminal-514"
