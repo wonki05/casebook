@@ -1,0 +1,110 @@
+{
+ "subject": "criminal",
+ "subjectLabel": "형법",
+ "total": 39,
+ "edition": "2026",
+ "scope": "2026 표준판례 2차 배포에서 추가된 형법 배치(standardPrevious 없음, removed 아님)",
+ "units": [
+  {
+   "name": "n26-u1-general",
+   "label": "총론 구성요건·위법성·미수론·공범론 추가분",
+   "nodes": [
+    "hb2-1-2-1",
+    "hb2-1-2-2",
+    "hb2-1-2-4",
+    "hb2-1-2-5"
+   ],
+   "nodeLabels": [
+    "제1장 구성요건",
+    "제2장 위법성",
+    "제4장 미수론",
+    "제5장 공범론"
+   ],
+   "ids": [
+    "std-criminal-506",
+    "std-criminal-507",
+    "std-criminal-508",
+    "std-criminal-509",
+    "std-criminal-510",
+    "std-criminal-511",
+    "std-criminal-512",
+    "std-criminal-513"
+   ]
+  },
+  {
+   "name": "n26-u2-personal-property-a",
+   "label": "각론 자유·명예 + 재산죄(절도·사기) 추가분",
+   "nodes": [
+    "hb2-2-1-2",
+    "hb2-2-1-3",
+    "hb2-2-1-5"
+   ],
+   "nodeLabels": [
+    "제2장 자유에 대한 죄",
+    "제3장 명예와 신용에 대한 죄",
+    "제5장 재산에 대한 죄"
+   ],
+   "ids": [
+    "std-criminal-514",
+    "std-criminal-515",
+    "std-criminal-516",
+    "std-criminal-517",
+    "std-criminal-518",
+    "std-criminal-519",
+    "std-criminal-520",
+    "std-criminal-521",
+    "std-criminal-522",
+    "std-criminal-523",
+    "std-criminal-524"
+   ]
+  },
+  {
+   "name": "n26-u3-property-b",
+   "label": "각론 재산죄(사기·횡령·배임 등) 추가분",
+   "nodes": [
+    "hb2-2-1-5"
+   ],
+   "nodeLabels": [
+    "제5장 재산에 대한 죄"
+   ],
+   "ids": [
+    "std-criminal-525",
+    "std-criminal-526",
+    "std-criminal-527",
+    "std-criminal-528",
+    "std-criminal-529",
+    "std-criminal-530",
+    "std-criminal-531",
+    "std-criminal-532",
+    "std-criminal-533",
+    "std-criminal-534",
+    "std-criminal-535",
+    "std-criminal-536"
+   ]
+  },
+  {
+   "name": "n26-u4-social-national",
+   "label": "각론 사회적·국가적 법익 추가분",
+   "nodes": [
+    "hb2-2-2-2",
+    "hb2-2-2-4",
+    "hb2-2-3-2"
+   ],
+   "nodeLabels": [
+    "제2장 공공의 신용에 대한 죄",
+    "제4장 사회의 도덕에 관한 죄",
+    "제2장 국가의 기능에 대한 죄"
+   ],
+   "ids": [
+    "std-criminal-537",
+    "std-criminal-538",
+    "std-criminal-539",
+    "std-criminal-540",
+    "std-criminal-541",
+    "std-criminal-542",
+    "std-criminal-543",
+    "std-criminal-544"
+   ]
+  }
+ ]
+}

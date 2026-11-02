@@ -1,0 +1,48 @@
+{
+ "unit": "n26-u3-property-b",
+ "label": "각론 재산죄(사기·횡령·배임 등) 추가분",
+ "total": 12,
+ "ok": 12,
+ "missing": [],
+ "flagged": [
+  {
+   "id": "std-criminal-528",
+   "caseNumber": "2016도18761",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ]
+  },
+  {
+   "id": "std-criminal-530",
+   "caseNumber": "2019도14770",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ]
+  },
+  {
+   "id": "std-criminal-531",
+   "caseNumber": "2020도8682",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ]
+  },
+  {
+   "id": "std-criminal-532",
+   "caseNumber": "2019도14340",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ]
+  },
+  {
+   "id": "std-criminal-534",
+   "caseNumber": "2014도3363",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ]
+  }
+ ],
+ "waiting": [],
+ "retried": [],
+ "elapsedSec": 77,
+ "search": {}
+}

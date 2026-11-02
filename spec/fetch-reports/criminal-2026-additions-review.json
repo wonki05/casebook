@@ -1,0 +1,632 @@
+{
+ "generatedAt": "2026-11-02",
+ "baseline": "origin/main c7bb830 (2026 개정판 반영)",
+ "scope": "std-criminal-506..544 (2026 개정판에서 추가된 39건)",
+ "collection": {
+  "total": 39,
+  "collected": 39,
+  "missing": [],
+  "source": "국가법령정보센터(law.go.kr) 공식 전문"
+ },
+ "enBancMismatch": [
+  {
+   "id": "std-criminal-509",
+   "caseNumber": "2023도10405",
+   "decisionDate": "2025-03-20",
+   "title": "결과적 가중범의 미수",
+   "registryEnBanc": false,
+   "officialCitation": "[대법원 2025. 3. 20. 선고 2023도10405 전원합의체 판결]",
+   "precSeq": "605069",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ],
+   "resolved": true
+  },
+  {
+   "id": "std-criminal-511",
+   "caseNumber": "2017도19025",
+   "decisionDate": "2021-09-09",
+   "title": "공중송신권 침해의 방조행위",
+   "registryEnBanc": false,
+   "officialCitation": "[대법원 2021. 9. 9. 선고 2017도19025 전원합의체 판결]",
+   "precSeq": "234953",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ],
+   "resolved": true
+  },
+  {
+   "id": "std-criminal-512",
+   "caseNumber": "83도515",
+   "decisionDate": "1983-06-14",
+   "title": "간접정범의 본질",
+   "registryEnBanc": false,
+   "officialCitation": "[대법원 1983. 6. 14. 선고 83도515 전원합의체 판결]",
+   "precSeq": "97772",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ],
+   "resolved": true
+  },
+  {
+   "id": "std-criminal-514",
+   "caseNumber": "2018도13877",
+   "decisionDate": "2023-09-21",
+   "title": "강제추행죄의 ‘폭행 · 협박’ 의 의미 및 판단기준",
+   "registryEnBanc": false,
+   "officialCitation": "[대법원 2023. 9. 21. 선고 2018도13877 전원합의체 판결]",
+   "precSeq": "237581",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ],
+   "resolved": true
+  },
+  {
+   "id": "std-criminal-528",
+   "caseNumber": "2016도18761",
+   "decisionDate": "2021-02-18",
+   "title": "이자간 명의신탁과 횡령죄",
+   "registryEnBanc": false,
+   "officialCitation": "[대법원 2021. 2. 18. 선고 2016도18761 전원합의체 판결]",
+   "precSeq": "213717",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ],
+   "resolved": true
+  },
+  {
+   "id": "std-criminal-530",
+   "caseNumber": "2019도14770",
+   "decisionDate": "2020-08-27",
+   "title": "동산 · 채권 등의 담보에 관한 법률에 따른 동산담보와 배임죄",
+   "registryEnBanc": false,
+   "officialCitation": "[대법원 2020. 8. 27. 선고 2019도14770 전원합의체 판결]",
+   "precSeq": "226505",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ],
+   "resolved": true
+  },
+  {
+   "id": "std-criminal-531",
+   "caseNumber": "2020도8682",
+   "decisionDate": "2022-12-22",
+   "title": "양도담보 목적물인 자동차의 처분과 배임죄",
+   "registryEnBanc": false,
+   "officialCitation": "[대법원 2022. 12. 22. 선고 2020도8682 전원합의체 판결]",
+   "precSeq": "233053",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ],
+   "resolved": true
+  },
+  {
+   "id": "std-criminal-532",
+   "caseNumber": "2019도14340",
+   "decisionDate": "2020-06-18",
+   "title": "금전채무를 담보하기 위한 저당권설정과 배임죄",
+   "registryEnBanc": false,
+   "officialCitation": "[대법원 2020. 6. 18. 선고 2019도14340 전원합의체 판결]",
+   "precSeq": "226421",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ],
+   "resolved": true
+  },
+  {
+   "id": "std-criminal-534",
+   "caseNumber": "2014도3363",
+   "decisionDate": "2014-08-21",
+   "title": "채권담보를 위한 대물변제예약의 자기사무성",
+   "registryEnBanc": false,
+   "officialCitation": "[대법원 2014. 8. 21. 선고 2014도3363 전원합의체 판결]",
+   "precSeq": "187492",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ],
+   "resolved": true
+  },
+  {
+   "id": "std-criminal-537",
+   "caseNumber": "2019도11294",
+   "decisionDate": "2020-08-27",
+   "title": "위작, 변작의 의미",
+   "registryEnBanc": false,
+   "officialCitation": "[대법원 2020. 8. 27. 선고 2019도11294 전원합의체 판결]",
+   "precSeq": "226503",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ],
+   "resolved": true
+  },
+  {
+   "id": "std-criminal-538",
+   "caseNumber": "2000도1985",
+   "decisionDate": "2001-04-19",
+   "title": "공문서부정행사죄에서 부정행사의 의미(2)",
+   "registryEnBanc": false,
+   "officialCitation": "[대법원 2001. 4. 19. 선고 2000도1985 전원합의체 판결]",
+   "precSeq": "80479",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ],
+   "resolved": true
+  },
+  {
+   "id": "std-criminal-543",
+   "caseNumber": "2025도11170",
+   "decisionDate": "2026-06-18",
+   "title": "자기도피방조죄",
+   "registryEnBanc": false,
+   "officialCitation": "[대법원 2026. 6. 18. 선고 2025도11170 전원합의체 판결]",
+   "precSeq": "623069",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ],
+   "resolved": true
+  }
+ ],
+ "typoSuspects": [
+  {
+   "id": "std-criminal-516",
+   "caseNumber": "2022도4719",
+   "field": "표제",
+   "observed": "비언적 · 시각적 수단을 사용한 표현행위와 모욕",
+   "expected": "비언어적 (공식 판시사항 [2] \"비언어적·시각적 수단\")",
+   "kind": "글자 누락",
+   "confidence": "높음",
+   "visibleOnWeb": true,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-516",
+   "caseNumber": "2022도4719",
+   "field": "선정이유",
+   "observed": "비언적·시각적 수단만을 사용한 모욕",
+   "expected": "비언어적",
+   "kind": "글자 누락",
+   "confidence": "높음",
+   "visibleOnWeb": false,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-541",
+   "caseNumber": "2023도16951",
+   "field": "쟁점",
+   "observed": "결찰관의 공무집행의 적법성에 관한 착오의 형법적 평가",
+   "expected": "경찰관 (같은 문장 앞에 \"경찰관 A\"가 있음)",
+   "kind": "글자 오기",
+   "confidence": "높음",
+   "visibleOnWeb": true,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-541",
+   "caseNumber": "2023도16951",
+   "field": "선정이유",
+   "observed": "대립되고 있는 가운에 대법원 판례가",
+   "expected": "가운데",
+   "kind": "글자 누락",
+   "confidence": "높음",
+   "visibleOnWeb": false,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-541",
+   "caseNumber": "2023도16951",
+   "field": "선정이유",
+   "observed": "포섭하는 것이 타당하는 입장을 제시한",
+   "expected": "타당하다는",
+   "kind": "글자 누락",
+   "confidence": "높음",
+   "visibleOnWeb": false,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-534",
+   "caseNumber": "2014도3363",
+   "field": "쟁점",
+   "observed": "대물로 변제하기로 한 부동산을 쟁점>제3자에게 처분한 경우",
+   "expected": "\"쟁점>\" 은 서식 잔재",
+   "kind": "서식 잔재",
+   "confidence": "높음",
+   "visibleOnWeb": true,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-536",
+   "caseNumber": "2024도7611",
+   "field": "선정이유",
+   "observed": "권리행사방해죄 있어서",
+   "expected": "권리행사방해죄에 있어서",
+   "kind": "조사 누락",
+   "confidence": "높음",
+   "visibleOnWeb": false,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-532",
+   "caseNumber": "2019도14340",
+   "field": "선정이유",
+   "observed": "기존의 법리 (채무 담보를 … 판결 등)를 변경하여",
+   "expected": "바깥 괄호 \"(\" 가 닫히지 않음(여는 괄호 2, 닫는 괄호 1)",
+   "kind": "괄호 짝",
+   "confidence": "높음",
+   "visibleOnWeb": false,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-539",
+   "caseNumber": "2020도14045",
+   "field": "요지",
+   "observed": "[1] 사서명(사서명) 등 위조죄",
+   "expected": "공식 판시사항은 \"사서명(私署名)\" — 괄호 안 한자 소실",
+   "kind": "한자 병기 소실",
+   "confidence": "높음",
+   "visibleOnWeb": true,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-528",
+   "caseNumber": "2016도18761",
+   "field": "표제",
+   "observed": "이자간 명의신탁과 횡령죄",
+   "expected": "같은 항목의 선정이유·요지·공식 판시사항은 모두 \"양자간\" (二者間 표기일 수도 있어 확인 필요)",
+   "kind": "표기 불일치",
+   "confidence": "중간",
+   "visibleOnWeb": true,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-535",
+   "caseNumber": "2025도978",
+   "field": "선정이유",
+   "observed": "이를 통해 권한없이 식재한 수목의 과실을",
+   "expected": "표제·공식 판시사항은 \"권원없이\"",
+   "kind": "표기 불일치",
+   "confidence": "중간",
+   "visibleOnWeb": false,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-510",
+   "caseNumber": "2004도8259",
+   "field": "요지",
+   "observed": "피고인 2가 피고인 1의 공모하에 강간행위에",
+   "expected": "공식은 \"…과의 공모하에\" — 조사 누락 의심",
+   "kind": "조사 누락",
+   "confidence": "중간",
+   "visibleOnWeb": true,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-513",
+   "caseNumber": "2022도5827",
+   "field": "요지",
+   "observed": "건물을 이용하고 있는 피해자 퇴거를 요구하였으나",
+   "expected": "피해자에게 / 피해자의 — 조사 누락 의심",
+   "kind": "조사 누락",
+   "confidence": "중간",
+   "visibleOnWeb": true,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-513",
+   "caseNumber": "2022도5827",
+   "field": "선정이유",
+   "observed": "포함한 것이다. 경우에 이는 흔히",
+   "expected": "\"이 경우\" 등으로 읽힘 — 군더더기",
+   "kind": "낱말 오기",
+   "confidence": "중간",
+   "visibleOnWeb": false,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-512",
+   "caseNumber": "83도515",
+   "field": "선정이유",
+   "observed": "다수의견과 반대의견은 판례는 형법 제104조의2",
+   "expected": "\"판례는\" 군더더기",
+   "kind": "군더더기",
+   "confidence": "중간",
+   "visibleOnWeb": false,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-530",
+   "caseNumber": "2019도14770",
+   "field": "선정이유",
+   "observed": "동산 양도담보(표준판례 346)에서 마찬가지로",
+   "expected": "에서와",
+   "kind": "조사 누락",
+   "confidence": "중간",
+   "visibleOnWeb": false,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-509",
+   "caseNumber": "2023도10405",
+   "field": "요지",
+   "observed": "제15조,제4조 · 제15조,제8조 · 결과적가중범 · 미수대상 · 범죄가미수에 · 이 사건미수규정",
+   "expected": "쉼표 뒤·낱말 사이 띄어쓰기(공식은 \"제15조, 제4조\", \"결과적 가중범\", \"미수 대상\")",
+   "kind": "띄어쓰기",
+   "confidence": "낮음",
+   "visibleOnWeb": true,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-528",
+   "caseNumber": "2016도18761",
+   "field": "요지",
+   "observed": "불과하다.명의수탁자가 · 볼 수 없다.따라서 · 경우,계약인 · 보면,부동산실명법을 · 위임약정,명의신탁약정을",
+   "expected": "마침표·쉼표 뒤 공백 누락",
+   "kind": "띄어쓰기",
+   "confidence": "낮음",
+   "visibleOnWeb": true,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-537",
+   "caseNumber": "2019도11294",
+   "field": "요지",
+   "observed": "법인이고,법인의 · 대법원은,형법 · 경우도형법 · 판시하였다.위 법리는 · 불과하다.따라서 · 것이므로,위와",
+   "expected": "마침표·쉼표 뒤 공백 누락",
+   "kind": "띄어쓰기",
+   "confidence": "낮음",
+   "visibleOnWeb": true,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-543",
+   "caseNumber": "2025도11170",
+   "field": "요지",
+   "observed": "벌금이상의 · 애초에형법 · 범인도피죄본범이",
+   "expected": "띄어쓰기",
+   "kind": "띄어쓰기",
+   "confidence": "낮음",
+   "visibleOnWeb": true,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-508",
+   "caseNumber": "2023도10768",
+   "field": "쟁점",
+   "observed": "인정여부 · 한사람 · 오인할만한",
+   "expected": "인정 여부 · 한 사람 · 오인할 만한",
+   "kind": "띄어쓰기",
+   "confidence": "낮음",
+   "visibleOnWeb": true,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-530",
+   "caseNumber": "2019도14770",
+   "field": "선정이유",
+   "observed": "전원합의체판결",
+   "expected": "전원합의체 판결 (531은 \"대법원전원합의체판결\", 532는 \"전원합의체판결\")",
+   "kind": "띄어쓰기",
+   "confidence": "낮음",
+   "visibleOnWeb": false,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-514",
+   "caseNumber": "2018도13877",
+   "field": "표제",
+   "observed": "강제추행죄의 ‘폭행 · 협박’ 의 의미 및 판단기준",
+   "expected": "가운뎃점 앞뒤·닫는 따옴표 뒤 공백 (516·520·530·536 표제에도 같은 서식)",
+   "kind": "표제 서식",
+   "confidence": "낮음",
+   "visibleOnWeb": true,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  },
+  {
+   "id": "std-criminal-536",
+   "caseNumber": "2024도7611",
+   "field": "표제",
+   "observed": "권리행사방해죄에서 말하는 ‘자기의 물건’ 의 의미와 판단기준",
+   "expected": "닫는 따옴표와 조사 사이 공백",
+   "kind": "표제 서식",
+   "confidence": "낮음",
+   "visibleOnWeb": true,
+   "sourceCell": "xlsx 원본 셀에 그대로 있음(가져오기 오류 아님)",
+   "resolved": "textCorrections"
+  }
+ ],
+ "contentMismatchSuspects": [
+  {
+   "id": "std-criminal-515",
+   "caseNumber": "2017도19229",
+   "field": "쟁점",
+   "observed": "언어적 수단이 아닌 비언어적·시각적 수단만을 사용한 표현이라도 … 모욕죄가 성립하는지 여부",
+   "evidence": "516(2022도4719)의 쟁점과 글자까지 같다. 515(2017도19229)는 연예인에 대한 인터넷 댓글(‘국민호텔녀’) 사건이다.",
+   "visibleOnWeb": true,
+   "resolved": "쟁점 칸 제외(공식 판시사항 표시)"
+  },
+  {
+   "id": "std-criminal-508",
+   "caseNumber": "2023도10768",
+   "field": "쟁점",
+   "observed": "싸움을 함에 있어서 격투를 하는 자 중의 한사람의 공격이 … 정당방위의 인정여부 (칸 안에 \"<판결요지>\" 로 시작하는 긴 문단이 이어 붙음)",
+   "evidence": "공식 판시사항은 복싱클럽 코치의 상해 사건에서 오인에 대한 \"정당한 이유\"의 존부이며 공식 전문에 \"격투\"·\"정당방위\"가 한 번도 나오지 않는다.",
+   "visibleOnWeb": true,
+   "resolved": "쟁점 문장 유지, <판결요지> 문단을 요지 칸으로 이동"
+  },
+  {
+   "id": "std-criminal-518",
+   "caseNumber": "2009도5595",
+   "field": "표제",
+   "observed": "주거침입절도죄의 실행의 착수시기",
+   "evidence": "같은 항목의 쟁점·요지·공식 판시사항은 \"절도죄의 실행의 착수시기\"(주차 차량 문 손잡이를 잡고 열려던 사안, 형법 제329조)로 주거침입이 없다.",
+   "visibleOnWeb": true,
+   "resolved": "표제 주거침입절도죄 → 절도죄"
+  }
+ ],
+ "headingResidue": {
+  "inThisBatch": [
+   {
+    "id": "std-criminal-526",
+    "caseNumber": "2005도4738",
+    "field": "선정이유",
+    "observed": "V. 횡령의 죄",
+    "visibleOnWeb": false,
+    "resolved": true
+   },
+   {
+    "id": "std-criminal-529",
+    "caseNumber": "2014도6740",
+    "field": "선정이유",
+    "observed": "VI. 배임의 죄",
+    "visibleOnWeb": false,
+    "resolved": true
+   },
+   {
+    "id": "std-criminal-539",
+    "caseNumber": "2020도14045",
+    "field": "선정이유",
+    "observed": "I. 성풍속에 관한 죄",
+    "visibleOnWeb": false,
+    "resolved": true
+   },
+   {
+    "id": "std-criminal-540",
+    "caseNumber": "2018도3619",
+    "field": "선정이유",
+    "observed": "I. 내란의 죄",
+    "visibleOnWeb": false,
+    "resolved": true
+   }
+  ],
+  "elsewhereInRegistry": [
+   "std-commercial-266",
+   "std-commercial-290",
+   "std-criminal-09",
+   "std-criminal-195",
+   "std-criminal-218",
+   "std-criminal-294",
+   "std-criminal-321",
+   "std-criminal-330",
+   "std-criminal-351",
+   "std-criminal-40",
+   "std-criminal-414",
+   "std-criminal-424",
+   "std-criminal-64"
+  ],
+  "note": "선정이유는 현재 화면 템플릿이 쓰지 않는다(src/ 에 selectionReason·선정이유 참조 없음, 브라우저 확인)."
+ },
+ "reviewMethod": {
+  "reviewers": {
+   "typo-haiku": 39,
+   "typo-sonnet": 39,
+   "consistency-sonnet": 39
+  },
+  "findings": 178,
+  "byAuditor": {
+   "typo-haiku": 72,
+   "typo-sonnet": 70,
+   "consistency-sonnet": 36
+  },
+  "skepticRuns": 356,
+  "skepticVotes": {
+   "twoSaidReal": 42,
+   "oneSaidReal": 24,
+   "noneSaidReal": 112
+  },
+  "note": "지적마다 Haiku 반박 검증 2회. 검증이 엄격해 글자 오류가 아닌 내용·서식 지적은 \"아님\"으로 나왔으므로, 아래 목록은 사람이 등록부·공식 전문·xlsx 원본 셀과 직접 대조해 확정했다."
+ },
+ "notChanged": "공식 수집본(fetched/)은 수정하지 않았다. 책(엑셀) 쪽 표기는 사용자 승인(2026-11-02)에 따라 textCorrections 로 정정했고 정정 전 출처는 standardSourceHistory 에 보존했다.",
+ "resolution": {
+  "date": "2026-11-02",
+  "approvedBy": "사용자 지시(2026-11-02): 오탈자·내용 불일치·전원합의체 표기 일괄 반영",
+  "enBanc": {
+   "applied": [
+    "std-criminal-509",
+    "std-criminal-511",
+    "std-criminal-512",
+    "std-criminal-514",
+    "std-criminal-528",
+    "std-criminal-530",
+    "std-criminal-531",
+    "std-criminal-532",
+    "std-criminal-534",
+    "std-criminal-537",
+    "std-criminal-538",
+    "std-criminal-543"
+   ],
+   "how": "add_cases.py set <id> --enbanc yes",
+   "auditFlagsAfter": 0
+  },
+  "textCorrections": {
+   "entries": 27,
+   "changes": 65,
+   "approvedTable": 54,
+   "extraSameClass": 11,
+   "byField": {
+    "holdings": 30,
+    "issues": 7,
+    "selectionReason": 20,
+    "title": 8
+   },
+   "where": "data/standard-editions/2026-review.json textCorrections",
+   "history": "standardSourceHistory + standard.textCorrections"
+  },
+  "contentFixes": {
+   "std-criminal-515": "쟁점 칸 제외(공식 판시사항 표시)",
+   "std-criminal-508": "쟁점 문장 유지, <판결요지> 문단을 요지 칸으로 이동",
+   "std-criminal-518": "표제 주거침입절도죄 → 절도죄"
+  },
+  "headingResidueRemoved": [
+   "std-criminal-526",
+   "std-criminal-529",
+   "std-criminal-539",
+   "std-criminal-540"
+  ],
+  "verification": {
+   "workflowAgents": 100,
+   "caseReviews": 39,
+   "changeVerdicts": {
+    "correct": 63,
+    "unclear": 1,
+    "unclearResolved": "2인 재판정 ok"
+   },
+   "decisionPanels": {
+    "total": 11,
+    "unanimousKeep": 9,
+    "splitKeep": [
+     "std-criminal-508 요지 이동",
+     "표제 공백 서식"
+    ]
+   },
+   "residualFindings": {
+    "total": 13,
+    "adopted": [
+     "std-criminal-514 선정이유 일부견해 → 일부 견해"
+    ],
+    "notAdopted": 12
+   }
+  }
+ }
+}
