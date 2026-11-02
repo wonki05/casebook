@@ -194,7 +194,8 @@ def citation_identity(citation):
     # The panel is not a separate court; keep the same strict court/date/member
     # checks in finish() once this official citation grammar is recognized.
     prefix = (citation or '')[:match.start()].strip(' []【】')
-    panel = re.fullmatch(r'(?:헌법재판소\s+)?(?:전원재판부|지정재판부)\s+(.+),', prefix)
+    # 일부 오래된 결정은 재판부 표기 없이 '[ 97헌가14, 1999. 4. 29.]' 로만 적힌다(번호부는 헌법재판소 사건부호만 허용).
+    panel = re.fullmatch(r'(?:(?:헌법재판소\s+)?(?:전원재판부|지정재판부)\s+)?(.+),', prefix)
     if panel:
         number = panel.group(1).strip()
         members = case_number_list(number)
