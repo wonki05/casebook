@@ -1,0 +1,28 @@
+{
+ "unit": "u2-obligation-general-a",
+ "label": "채권총칙 추가분(목적·효력·불가분·보증·양도·인수)",
+ "total": 9,
+ "ok": 9,
+ "missing": [],
+ "flagged": [
+  {
+   "id": "std-civil-953",
+   "caseNumber": "2023다221885",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ]
+  }
+ ],
+ "waiting": [],
+ "retried": [
+  "std-civil-961"
+ ],
+ "elapsedSec": 83,
+ "search": {
+  "std-civil-961": {
+   "outcome": "fetched",
+   "cite": "[대법원 2024. 10. 25. 선고 2024다232066 판결]",
+   "seq": "241889"
+  }
+ }
+}
