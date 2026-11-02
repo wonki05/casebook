@@ -1,0 +1,139 @@
+{
+ "subject": "civil",
+ "subjectLabel": "민법",
+ "scope": "2026년 개정판(2026_표준판례_2차_배포용.xlsx)에서 추가되어 공식 전문이 없는 재판(재판 단위 대표 배치 id)",
+ "total": 41,
+ "units": [
+  {
+   "name": "u1-real-rights",
+   "label": "물권 추가분(총칙·점유권·공동소유·전세권·저당권)",
+   "nodes": [
+    "mb-2-1",
+    "mb-2-2",
+    "mb-2-3-3",
+    "mb-2-6",
+    "mb-2-9"
+   ],
+   "nodeLabels": [
+    "제1장 총칙",
+    "제2장 점유권",
+    "제3절 공동소유",
+    "제6장 전세권",
+    "제9장 저당권"
+   ],
+   "ids": [
+    "std-civil-939",
+    "std-civil-940",
+    "std-civil-941",
+    "std-civil-943",
+    "std-civil-944",
+    "std-civil-946",
+    "std-civil-949",
+    "std-civil-951",
+    "std-civil-952"
+   ]
+  },
+  {
+   "name": "u2-obligation-general-a",
+   "label": "채권총칙 추가분(목적·효력·불가분·보증·양도·인수)",
+   "nodes": [
+    "mb-3-1-1",
+    "mb-3-1-2",
+    "mb-3-1-4",
+    "mb-3-1-6",
+    "mb-3-1-7",
+    "mb-3-1-8"
+   ],
+   "nodeLabels": [
+    "제1절 채권의 목적",
+    "제2절 채권의 효력",
+    "제2관 불가분채권과 불가분채무",
+    "제3관 보증채무",
+    "제4절 채권의 양도",
+    "제5절 채무의 인수"
+   ],
+   "ids": [
+    "std-civil-953",
+    "std-civil-954",
+    "std-civil-956",
+    "std-civil-957",
+    "std-civil-959",
+    "std-civil-960",
+    "std-civil-961",
+    "std-civil-962",
+    "std-civil-963"
+   ]
+  },
+  {
+   "name": "u3-obligation-general-b-contract",
+   "label": "채권총칙 변제·상계 및 계약총칙·증여 추가분",
+   "nodes": [
+    "mb-3-1-9",
+    "mb-3-1-11",
+    "mb-3-2-4",
+    "mb-3-2-5"
+   ],
+   "nodeLabels": [
+    "제1관 변제",
+    "제3관 상계",
+    "제2절 증여",
+    "제1관 총칙"
+   ],
+   "ids": [
+    "std-civil-964",
+    "std-civil-965",
+    "std-civil-966",
+    "std-civil-967",
+    "std-civil-968",
+    "std-civil-969",
+    "std-civil-970",
+    "std-civil-971",
+    "std-civil-972"
+   ]
+  },
+  {
+   "name": "u4-lease-unjust",
+   "label": "임대차·부당이득 추가분",
+   "nodes": [
+    "mb-3-2-9",
+    "mb-3-4"
+   ],
+   "nodeLabels": [
+    "제6절 임대차",
+    "제4장 부당이득"
+   ],
+   "ids": [
+    "std-civil-973",
+    "std-civil-974",
+    "std-civil-975",
+    "std-civil-976",
+    "std-civil-977",
+    "std-civil-978",
+    "std-civil-980",
+    "std-civil-981"
+   ]
+  },
+  {
+   "name": "u5-tort-succession",
+   "label": "부당이득·불법행위·유언 추가분",
+   "nodes": [
+    "mb-3-4",
+    "mb-3-5",
+    "mb-5-2-2"
+   ],
+   "nodeLabels": [
+    "제4장 부당이득",
+    "제5장 불법행위",
+    "제2절 유언의 방식"
+   ],
+   "ids": [
+    "std-civil-982",
+    "std-civil-983",
+    "std-civil-984",
+    "std-civil-986",
+    "std-civil-987",
+    "std-civil-991"
+   ]
+  }
+ ]
+}
