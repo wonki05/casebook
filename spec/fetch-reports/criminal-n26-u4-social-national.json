@@ -1,0 +1,33 @@
+{
+ "unit": "n26-u4-social-national",
+ "label": "각론 사회적·국가적 법익 추가분",
+ "total": 8,
+ "ok": 8,
+ "missing": [],
+ "flagged": [
+  {
+   "id": "std-criminal-537",
+   "caseNumber": "2019도11294",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ]
+  },
+  {
+   "id": "std-criminal-538",
+   "caseNumber": "2000도1985",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ]
+  },
+  {
+   "id": "std-criminal-543",
+   "caseNumber": "2025도11170",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ]
+  }
+ ],
+ "waiting": [],
+ "retried": [],
+ "elapsedSec": 55
+}
