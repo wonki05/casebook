@@ -1,0 +1,234 @@
+{
+ "subject": "constitution",
+ "subjectLabel": "헌법",
+ "total": 130,
+ "scope": "2026년 개정판에서 추가되어 공식 전문이 없는 재판(재판 단위 대표 배치 id)",
+ "units": [
+  {
+   "name": "u1-general-rights-intro",
+   "label": "헌법총론·기본권 총론·인간의 존엄",
+   "nodes": [
+    "hb-1",
+    "hb-2-1",
+    "hb-2-2-1"
+   ],
+   "nodeLabels": [
+    "제1편 헌법총론",
+    "제1장 기본권 총론",
+    "제1절 인간의 존엄과 가치 및 행복추구권"
+   ],
+   "ids": [
+    "std-constitution-330",
+    "std-constitution-331",
+    "std-constitution-332",
+    "std-constitution-333",
+    "std-constitution-334",
+    "std-constitution-336",
+    "std-constitution-337",
+    "std-constitution-338",
+    "std-constitution-339",
+    "std-constitution-340",
+    "std-constitution-341",
+    "std-constitution-342",
+    "std-constitution-343",
+    "std-constitution-345",
+    "std-constitution-346",
+    "std-constitution-347",
+    "std-constitution-349",
+    "std-constitution-350",
+    "std-constitution-351",
+    "std-constitution-352",
+    "std-constitution-353",
+    "std-constitution-354"
+   ]
+  },
+  {
+   "name": "u2-equality-bodily-liberty",
+   "label": "평등·신체의 자유",
+   "nodes": [
+    "hb-2-2-2",
+    "hb-2-2-3"
+   ],
+   "nodeLabels": [
+    "제2절 평등",
+    "제3절 신체의 자유"
+   ],
+   "ids": [
+    "std-constitution-356",
+    "std-constitution-357",
+    "std-constitution-358",
+    "std-constitution-359",
+    "std-constitution-360",
+    "std-constitution-361",
+    "std-constitution-363",
+    "std-constitution-364",
+    "std-constitution-366",
+    "std-constitution-367",
+    "std-constitution-368",
+    "std-constitution-369",
+    "std-constitution-370",
+    "std-constitution-371",
+    "std-constitution-372",
+    "std-constitution-373",
+    "std-constitution-374",
+    "std-constitution-375",
+    "std-constitution-376",
+    "std-constitution-377",
+    "std-constitution-379",
+    "std-constitution-380",
+    "std-constitution-381",
+    "std-constitution-382",
+    "std-constitution-383",
+    "std-constitution-384"
+   ]
+  },
+  {
+   "name": "u3-privacy-conscience-expression",
+   "label": "사생활·양심·종교·표현·인간다운 생활",
+   "nodes": [
+    "hb-2-2-4",
+    "hb-2-2-5",
+    "hb-2-2-6",
+    "hb-2-2-11"
+   ],
+   "nodeLabels": [
+    "제4절 사생활의 비밀과 자유",
+    "제5절 양심의 자유, 종교의 자유, 학문과 예술의 자유",
+    "제6절 표현의 자유, 집회·결사의 자유",
+    "제11절 인간다운 생활을 할 권리, 혼인과 가족 보호, 보건권, 환경권"
+   ],
+   "ids": [
+    "std-constitution-385",
+    "std-constitution-387",
+    "std-constitution-388",
+    "std-constitution-389",
+    "std-constitution-392",
+    "std-constitution-393",
+    "std-constitution-395",
+    "std-constitution-396",
+    "std-constitution-398",
+    "std-constitution-399",
+    "std-constitution-400",
+    "std-constitution-401",
+    "std-constitution-404",
+    "std-constitution-405",
+    "std-constitution-408",
+    "std-constitution-409",
+    "std-constitution-411",
+    "std-constitution-412",
+    "std-constitution-413",
+    "std-constitution-455"
+   ]
+  },
+  {
+   "name": "u4-occupation-property-suffrage",
+   "label": "직업·재산권·선거권",
+   "nodes": [
+    "hb-2-2-7",
+    "hb-2-2-8"
+   ],
+   "nodeLabels": [
+    "제7절 직업의 자유, 재산권, 거주이전의 자유",
+    "제8절 선거권, 공무담임임권, 청원권"
+   ],
+   "ids": [
+    "std-constitution-415",
+    "std-constitution-416",
+    "std-constitution-417",
+    "std-constitution-418",
+    "std-constitution-419",
+    "std-constitution-420",
+    "std-constitution-421",
+    "std-constitution-422",
+    "std-constitution-423",
+    "std-constitution-425",
+    "std-constitution-428",
+    "std-constitution-429",
+    "std-constitution-431",
+    "std-constitution-432",
+    "std-constitution-433",
+    "std-constitution-434",
+    "std-constitution-435",
+    "std-constitution-437",
+    "std-constitution-438",
+    "std-constitution-439"
+   ]
+  },
+  {
+   "name": "u5-remedy-social-organs",
+   "label": "재판청구권·교육·근로·입법·행정부·기타",
+   "nodes": [
+    "hb-2-2-9",
+    "hb-2-2-10",
+    "hb-3-1",
+    "hb-3-2",
+    "hb-3-3",
+    "hb-3-5"
+   ],
+   "nodeLabels": [
+    "제9절 재판청구권, 형사보상청구권, 국가배상청구권",
+    "제10절 교육의 권리, 근로의 권리, 근로3권",
+    "제1장 입법부",
+    "제2장 행정부",
+    "제3장 사법부",
+    "제5장 지방자치"
+   ],
+   "ids": [
+    "std-constitution-440",
+    "std-constitution-441",
+    "std-constitution-443",
+    "std-constitution-444",
+    "std-constitution-446",
+    "std-constitution-447",
+    "std-constitution-448",
+    "std-constitution-449",
+    "std-constitution-450",
+    "std-constitution-452",
+    "std-constitution-453",
+    "std-constitution-458",
+    "std-constitution-461",
+    "std-constitution-462",
+    "std-constitution-463",
+    "std-constitution-464",
+    "std-constitution-516",
+    "std-constitution-518"
+   ]
+  },
+  {
+   "name": "u6-constitutional-court",
+   "label": "헌법재판소 절차·헌법소원",
+   "nodes": [
+    "hb-3-4"
+   ],
+   "nodeLabels": [
+    "제4장 헌법재판소"
+   ],
+   "ids": [
+    "std-constitution-470",
+    "std-constitution-471",
+    "std-constitution-474",
+    "std-constitution-476",
+    "std-constitution-477",
+    "std-constitution-482",
+    "std-constitution-487",
+    "std-constitution-488",
+    "std-constitution-491",
+    "std-constitution-492",
+    "std-constitution-496",
+    "std-constitution-499",
+    "std-constitution-500",
+    "std-constitution-501",
+    "std-constitution-503",
+    "std-constitution-505",
+    "std-constitution-506",
+    "std-constitution-507",
+    "std-constitution-508",
+    "std-constitution-510",
+    "std-constitution-511",
+    "std-constitution-512",
+    "std-constitution-513",
+    "std-constitution-514"
+   ]
+  }
+ ]
+}
