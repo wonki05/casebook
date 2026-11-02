@@ -101,6 +101,8 @@
 
 XLSX 대조·반영은 `python tools/add_cases.py standard-import --from <원본.xlsx> --review <검토.json> --catalog <후보.json> --report <결과.json>`으로 수행한다. `--dry-run`은 등록부·목차를 저장하지 않고 같은 검증을 수행한다. 검토 파일은 `sourceSha256`으로 원본을 고정하고 `identityOverrides`, `tocRows`, `tocAdditions` 및 필요한 출처 제외 근거를 보존한다. 식별·목차가 해결되지 않으면 전체 반영을 중단한다.
 
+검토 파일의 행 패치(`identityOverrides["시트:행"]`)는 `evidence` 를 필수로 하며, 사용자가 승인한 글자·칸 정정은 `textCorrections`(`{필드: [{"before", "after", "count"}]}`, 필드는 `title`·`issues`·`facts`·`holdings`·`selectionReason`)와 `moveToHoldings`(`{"marker"}`: 쟁점 칸에 이어 붙은 판결요지를 표지로 나눔)로 후보에만 적용한다. 통합문서 셀은 수정하지 않는다. 정정 전 전체 문자열은 `standard.sourceReview.correctedSourceValues`, 정정 전·후 문구는 `standard.sourceReview.textCorrections` 에 남고 이전 출처는 `standardSourceHistory` 에 보관된다. 같은 통합문서와 검토 파일로 다시 가져오면 같은 결과가 나온다.
+
 ### 1-4. 판례연구 배치 `research`
 
 판례연구는 `group: "research"`로 별도 등록하며 기존 표준판례·최신판례의 제목과 목차를 수정하지 않는다. 같은 재판은 `decisionId`를 공유하고, 판례연구 `title`에는 사용자가 제공한 목차의 원제목을 보존한다.
@@ -134,6 +136,7 @@ XLSX 대조·반영은 `python tools/add_cases.py standard-import --from <원본
 - 실패 시 `<id>.missing.json` {id, reason, triedUrls}. 미게재(최근 선고)면 나중에 `--retry-missing`.
 
 - **law.go.kr 미게재 사건의 사용자 제공 보충본**(예외): 사용자가 판례 검색 사이트에서 확인해 직접 제공한 텍스트는 같은 스키마로 `fetched/<id>.json` 에 두되 `provider`·`sourceLabel`(화면 출처 표기)·`sourceHeader`(원 사이트 머리글)·`sourceNote`·`suppliedAt` 을 반드시 기록한다. `sourceLabel` 이 있으면 build_data 가 "국가법령정보센터" 대신 그 문구를 출처로 쓰고, 표준판례에 없는 필드는 `fieldSources` 에 `type: "supplemental"` 로 남겨 공식 원문으로 표시하지 않는다. 사이트 부가정보(인용판례·유사판례·인용 문헌 등)는 보존하지 않는다. law.go.kr 에 게재되면 `fetch_lawgo.py --id <id> --force` 로 공식본으로 교체한다.
+- **승인된 공식 원문 정정**(예외): 사용자가 개별 승인한 오탈자 정정과 한 섹션의 사용자 제공본 교체는 `tools/apply_fulltext_corrections.py` 로만 적용한다. 정정 명세는 `data/standard-cases/_reports/fulltext-corrections-*.json` 에 두고, 대상 `fetched/<id>.json` 의 `corrections` 배열에 정정 전·후 문구(섹션 교체는 `beforeText`)·이유·승인 정보를, 사용자 제공 섹션은 `sectionSources[<섹션>]`(`provider`·`sourceLabel`·`sourceNote`·`suppliedAt`)에 남긴다. 파일 전체의 출처 표기(`sourceLabel`)는 바꾸지 않으며, 재수집이 덮어쓰면 같은 도구를 다시 실행한다.
 
 ## 4. `data/cases.json` — 화면용 정규화 데이터 (tools/build_data.py 산출; 손대지 않음)
 registry + toc + fetched 를 합쳐 만든다. `pages`(표준판례는 standard 과목마다 `std-<subject>` 한 페이지 — tools/subjects.py 순서) · `subjects`([{id, label, standard}]) · `annual`({years: [2025, …, 2020] 최신순, fields: [{id, label, sub, subject}]}) · `yearTabs`({ccourt: [{id: "2026", label: "2026", from, to}] 한 해씩, enbanc: [{id: "2020+"|"2010s", label: "2020년 이후"|"2010년대", from, to}] 시대 탭 — 최신순; 헌법재판소 주요결정·대법원 전원합의체 선고연도 탭}) · `toc` · `cases`. 사건 주요 필드: page, citation("대법원 2026. 7. 22. 선고 2022도5937 전원합의체 판결"), citeShort("대판 2022도5937"),
