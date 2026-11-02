@@ -1,0 +1,174 @@
+{
+ "unit": "u1-general-rights-intro",
+ "label": "헌법총론·기본권 총론·인간의 존엄",
+ "total": 22,
+ "ok": 21,
+ "missing": [
+  {
+   "id": "std-constitution-333",
+   "caseNumber": "97헌가14",
+   "decisionDate": "1999-04-29",
+   "class": "error",
+   "reason": "공식 인용문에서 법원·선고일·사건번호를 확인하지 못함"
+  }
+ ],
+ "flagged": [
+  {
+   "id": "std-constitution-330",
+   "caseNumber": "2000헌마238",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2000헌마238 ≠ 공식 , 각하"
+   ]
+  },
+  {
+   "id": "std-constitution-331",
+   "caseNumber": "2018헌바88",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2018헌바88 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-332",
+   "caseNumber": "97헌바65",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 97헌바65 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-336",
+   "caseNumber": "2008헌마430",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2008헌마430 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-337",
+   "caseNumber": "2013헌마359",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2013헌마359 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-338",
+   "caseNumber": "2009헌가27",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2009헌가27 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-339",
+   "caseNumber": "2006헌마711",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2006헌마711 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-340",
+   "caseNumber": "95헌바48",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 95헌바48 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-342",
+   "caseNumber": "99헌마112",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 99헌마112 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-343",
+   "caseNumber": "2005헌바96",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2005헌바96 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-345",
+   "caseNumber": "2008헌바157",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2008헌바157 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-346",
+   "caseNumber": "2008헌가23",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2008헌가23 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-347",
+   "caseNumber": "2005헌마764",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2005헌마764 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-349",
+   "caseNumber": "2000헌마546",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2000헌마546 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-350",
+   "caseNumber": "2002헌마518",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2002헌마518 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-351",
+   "caseNumber": "2009헌마406",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 지정재판부",
+    "사건번호 2009헌마406 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-352",
+   "caseNumber": "2008헌마385",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2008헌마385 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-353",
+   "caseNumber": "2012헌마940",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2012헌마940 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-354",
+   "caseNumber": "2017헌마1339",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2017헌마1339 ≠ 공식 , 기각"
+   ]
+  }
+ ],
+ "waiting": [],
+ "retried": [
+  "std-constitution-333"
+ ],
+ "elapsedSec": 246
+}
