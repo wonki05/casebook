@@ -1,0 +1,31 @@
+{
+ "unit": "u03-gen-concurrence-punish-life",
+ "label": "총론 죄수론·형벌론 + 각론 생명·신체",
+ "total": 63,
+ "ok": 63,
+ "missing": [],
+ "flagged": [
+  {
+   "id": "std-criminal-172",
+   "caseNumber": "2011헌바267",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2011헌바267 ≠ 공식 "
+   ]
+  }
+ ],
+ "waiting": [],
+ "retried": [
+  "std-criminal-174",
+  "std-criminal-175"
+ ],
+ "elapsedSec": 551,
+ "search": {
+  "std-criminal-174": {
+   "outcome": "no-result"
+  },
+  "std-criminal-175": {
+   "outcome": "no-result"
+  }
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "unit": "u06-spec-social",
+ "label": "각론 사회적 법익",
+ "total": 91,
+ "ok": 91,
+ "missing": [],
+ "flagged": [
+  {
+   "id": "std-criminal-339",
+   "caseNumber": "73노179",
+   "flags": [
+    "법원 서울고등법원 ≠ 공식 서울고법"
+   ]
+  }
+ ],
+ "waiting": [],
+ "retried": [
+  "std-criminal-373"
+ ],
+ "elapsedSec": 790,
+ "search": {
+  "std-criminal-373": {
+   "outcome": "fetched",
+   "cite": "[대법원 1998. 4. 10. 선고 98도164 판결]",
+   "seq": "116592"
+  }
+ }
+}

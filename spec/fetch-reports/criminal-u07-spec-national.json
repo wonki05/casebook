@@ -1,0 +1,52 @@
+{
+ "unit": "u07-spec-national",
+ "label": "각론 국가적 법익",
+ "total": 55,
+ "ok": 54,
+ "missing": [
+  {
+   "id": "std-criminal-426",
+   "caseNumber": "74도213",
+   "decisionDate": "1975-07-22",
+   "class": "not-listed",
+   "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다"
+  }
+ ],
+ "flagged": [
+  {
+   "id": "std-criminal-425",
+   "caseNumber": "2016헌바96",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2016헌바96 ≠ 공식 , 합헌"
+   ]
+  },
+  {
+   "id": "std-criminal-439",
+   "caseNumber": "2010고합331",
+   "flags": [
+    "법원 서울남부지방법원 ≠ 공식 서울남부지법"
+   ]
+  }
+ ],
+ "waiting": [],
+ "retried": [
+  "std-criminal-426",
+  "std-criminal-440",
+  "std-criminal-464"
+ ],
+ "elapsedSec": 517,
+ "search": {
+  "std-criminal-426": {
+   "outcome": "no-result"
+  },
+  "std-criminal-440": {
+   "outcome": "no-result"
+  },
+  "std-criminal-464": {
+   "outcome": "fetched",
+   "cite": "[대법원 2013. 12. 26. 선고 2013도8085 판결]",
+   "seq": "172307"
+  }
+ }
+}

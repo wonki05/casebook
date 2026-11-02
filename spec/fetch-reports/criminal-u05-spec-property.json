@@ -1,0 +1,30 @@
+{
+ "unit": "u05-spec-property",
+ "label": "각론 재산에 대한 죄",
+ "total": 94,
+ "ok": 94,
+ "missing": [],
+ "flagged": [],
+ "waiting": [],
+ "retried": [
+  "std-criminal-257",
+  "std-criminal-261",
+  "std-criminal-317"
+ ],
+ "elapsedSec": 759,
+ "search": {
+  "std-criminal-257": {
+   "outcome": "fetched",
+   "cite": "[대법원 2003. 6. 24. 선고 2003도1985 판결]",
+   "seq": "82687"
+  },
+  "std-criminal-261": {
+   "outcome": "fetched",
+   "cite": "[대법원 2011. 4. 14. 선고 2011도300 판결]",
+   "seq": "149527"
+  },
+  "std-criminal-317": {
+   "outcome": "no-result"
+  }
+ }
+}

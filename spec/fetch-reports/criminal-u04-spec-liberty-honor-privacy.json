@@ -1,0 +1,30 @@
+{
+ "unit": "u04-spec-liberty-honor-privacy",
+ "label": "각론 자유·명예신용·사생활",
+ "total": 57,
+ "ok": 57,
+ "missing": [],
+ "flagged": [],
+ "waiting": [],
+ "retried": [
+  "std-criminal-206",
+  "std-criminal-209",
+  "std-criminal-213"
+ ],
+ "elapsedSec": 488,
+ "search": {
+  "std-criminal-206": {
+   "outcome": "fetched",
+   "cite": "[대법원 2014. 2. 27. 선고 2013도12301 판결]",
+   "seq": "172749"
+  },
+  "std-criminal-209": {
+   "outcome": "fetched",
+   "cite": "[대법원 2013. 5. 16. 선고 2012도14788 전원합의체 판결]",
+   "seq": "172372"
+  },
+  "std-criminal-213": {
+   "outcome": "no-result"
+  }
+ }
+}

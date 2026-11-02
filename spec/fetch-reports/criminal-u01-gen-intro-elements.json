@@ -1,0 +1,82 @@
+{
+ "unit": "u01-gen-intro-elements",
+ "label": "총론 서론·구성요건·위법성",
+ "total": 68,
+ "ok": 68,
+ "missing": [],
+ "flagged": [
+  {
+   "id": "std-criminal-01",
+   "caseNumber": "91헌가4",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 91헌가4 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-criminal-02",
+   "caseNumber": "2005헌바19",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2005헌바19 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-criminal-06",
+   "caseNumber": "96헌가2",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 96헌가2 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-criminal-07",
+   "caseNumber": "2011헌바122",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2011헌바122 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-criminal-08",
+   "caseNumber": "2005헌가10",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2005헌가10 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-criminal-13",
+   "caseNumber": "2008헌가14",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2008헌가14 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-criminal-14",
+   "caseNumber": "2009헌가25·29·36·2010헌가6·25",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2009헌가25 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-criminal-30",
+   "caseNumber": "2008도3090",
+   "flags": [
+    "선고일 2008-08-11 ≠ 공식 2008-08-21"
+   ]
+  }
+ ],
+ "waiting": [],
+ "retried": [
+  "std-criminal-26"
+ ],
+ "elapsedSec": 589,
+ "search": {
+  "std-criminal-26": {
+   "outcome": "no-result"
+  }
+ }
+}

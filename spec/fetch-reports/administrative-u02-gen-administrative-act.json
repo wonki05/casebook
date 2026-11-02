@@ -1,0 +1,61 @@
+{
+ "unit": "u02-gen-administrative-act",
+ "label": "총론 행정작용법 행정행위",
+ "total": 64,
+ "ok": 63,
+ "missing": [
+  {
+   "id": "std-administrative-40",
+   "caseNumber": "2020두39356",
+   "decisionDate": "2022-01-27",
+   "class": "not-listed",
+   "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다"
+  }
+ ],
+ "flagged": [
+  {
+   "id": "std-administrative-44",
+   "caseNumber": "2013두987",
+   "flags": [
+    "선고일 2015-02-15 ≠ 공식 2015-02-12"
+   ]
+  },
+  {
+   "id": "std-administrative-79",
+   "caseNumber": "2017도7321",
+   "flags": [
+    "선고일 2017-08-21 ≠ 공식 2017-09-21"
+   ]
+  }
+ ],
+ "waiting": [],
+ "retried": [
+  "std-administrative-40",
+  "std-administrative-95"
+ ],
+ "elapsedSec": 631,
+ "search": {
+  "std-administrative-40": {
+   "outcome": "no-result"
+  },
+  "std-administrative-95": {
+   "outcome": "ambiguous",
+   "candidates": [
+    {
+     "court": "대법원",
+     "date": "2019-01-17",
+     "cite": "[대법원 2019. 1. 17. 선고 2016두56721 판결]",
+     "numberMatch": true,
+     "seq": "204344"
+    },
+    {
+     "court": "대법원",
+     "date": "2019-01-17",
+     "cite": "[대법원 2019. 1. 17. 선고 2016두56721 판결]",
+     "numberMatch": true,
+     "seq": "618339"
+    }
+   ]
+  }
+ }
+}

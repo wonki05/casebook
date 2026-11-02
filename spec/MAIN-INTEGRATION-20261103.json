@@ -1,0 +1,603 @@
+{
+  "date": "2026-11-03",
+  "baseline": "c7bb830b7ee566af779a1a0ba6293ab717d4ecc8",
+  "sourceCommits": [
+    "7469214",
+    "ef039ae",
+    "4d25566",
+    "899912a"
+  ],
+  "registryCount": 4008,
+  "changedExistingIds": [
+    "std-criminal-97",
+    "std-criminal-343",
+    "std-civil-935",
+    "std-civil-938",
+    "std-civil-939",
+    "std-civil-940",
+    "std-civil-941",
+    "std-civil-946",
+    "std-civil-948",
+    "std-civil-949",
+    "std-civil-953",
+    "std-civil-957",
+    "std-civil-959",
+    "std-civil-960",
+    "std-civil-972",
+    "std-civil-983",
+    "std-civil-984",
+    "std-civil-987",
+    "std-civil-990",
+    "std-criminal-507",
+    "std-criminal-508",
+    "std-criminal-509",
+    "std-criminal-510",
+    "std-criminal-511",
+    "std-criminal-512",
+    "std-criminal-513",
+    "std-criminal-514",
+    "std-criminal-515",
+    "std-criminal-516",
+    "std-criminal-518",
+    "std-criminal-520",
+    "std-criminal-521",
+    "std-criminal-526",
+    "std-criminal-528",
+    "std-criminal-529",
+    "std-criminal-530",
+    "std-criminal-531",
+    "std-criminal-532",
+    "std-criminal-533",
+    "std-criminal-534",
+    "std-criminal-535",
+    "std-criminal-536",
+    "std-criminal-537",
+    "std-criminal-538",
+    "std-criminal-539",
+    "std-criminal-540",
+    "std-criminal-541",
+    "std-criminal-543",
+    "std-constitution-385",
+    "std-constitution-389",
+    "std-constitution-390",
+    "std-constitution-391",
+    "std-constitution-392",
+    "std-constitution-397",
+    "std-constitution-442",
+    "std-constitution-450",
+    "std-constitution-470"
+  ],
+  "addedIds": [
+    "std-constitution-519"
+  ],
+  "removedIds": [],
+  "changedBySubject": {
+    "criminal": 31,
+    "civil": 17,
+    "constitution": 9
+  },
+  "subjects": {
+    "constitution": {
+      "placements": 519,
+      "fullTextPlacements": 514,
+      "currentPlacements": 507,
+      "currentFullTextPlacements": 502,
+      "pendingCurrentIds": [
+        "std-constitution-98",
+        "std-constitution-298",
+        "std-constitution-139",
+        "std-constitution-173",
+        "std-constitution-245"
+      ]
+    },
+    "civil": {
+      "placements": 993,
+      "fullTextPlacements": 991,
+      "currentPlacements": 938,
+      "currentFullTextPlacements": 936,
+      "pendingCurrentIds": [
+        "std-civil-731",
+        "std-civil-850"
+      ]
+    },
+    "criminal": {
+      "placements": 544,
+      "fullTextPlacements": 543,
+      "currentPlacements": 448,
+      "currentFullTextPlacements": 448,
+      "pendingCurrentIds": []
+    },
+    "administrative": {
+      "placements": 539,
+      "fullTextPlacements": 495,
+      "currentPlacements": 370,
+      "currentFullTextPlacements": 329,
+      "pendingCurrentIds": [
+        "std-administrative-488",
+        "std-administrative-36",
+        "std-administrative-40",
+        "std-administrative-490",
+        "std-administrative-491",
+        "std-administrative-492",
+        "std-administrative-44",
+        "std-administrative-493",
+        "std-administrative-494",
+        "std-administrative-496",
+        "std-administrative-498",
+        "std-administrative-499",
+        "std-administrative-501",
+        "std-administrative-502",
+        "std-administrative-503",
+        "std-administrative-207",
+        "std-administrative-505",
+        "std-administrative-506",
+        "std-administrative-507",
+        "std-administrative-508",
+        "std-administrative-509",
+        "std-administrative-510",
+        "std-administrative-512",
+        "std-administrative-513",
+        "std-administrative-515",
+        "std-administrative-517",
+        "std-administrative-518",
+        "std-administrative-519",
+        "std-administrative-520",
+        "std-administrative-522",
+        "std-administrative-525",
+        "std-administrative-526",
+        "std-administrative-527",
+        "std-administrative-528",
+        "std-administrative-529",
+        "std-administrative-530",
+        "std-administrative-532",
+        "std-administrative-533",
+        "std-administrative-534",
+        "std-administrative-538",
+        "std-administrative-539"
+      ]
+    }
+  },
+  "missingMarkers": [
+    {
+      "id": "annual-2020-12",
+      "subject": "civil",
+      "caseNumber": "2017다218987",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2020-12.missing.json"
+    },
+    {
+      "id": "annual-2020-14",
+      "subject": "civil",
+      "caseNumber": "2016다244224",
+      "reason": "한글주소 조회 실패(미게재 가능)",
+      "file": "data/fetched/annual-2020-14.missing.json"
+    },
+    {
+      "id": "annual-2020-26",
+      "subject": "commercial",
+      "caseNumber": "2017다278385",
+      "reason": "한글주소 조회 실패(미게재 가능)",
+      "file": "data/fetched/annual-2020-26.missing.json"
+    },
+    {
+      "id": "annual-2020-30",
+      "subject": "commercial",
+      "caseNumber": "2016다241515",
+      "reason": "한글주소 조회 실패(미게재 가능)",
+      "file": "data/fetched/annual-2020-30.missing.json"
+    },
+    {
+      "id": "annual-2020-40",
+      "subject": "commercial",
+      "caseNumber": "2020다204049",
+      "reason": "한글주소 조회 실패(미게재 가능)",
+      "file": "data/fetched/annual-2020-40.missing.json"
+    },
+    {
+      "id": "annual-2020-56",
+      "subject": "commercial",
+      "caseNumber": "2018다242116",
+      "reason": "한글주소 조회 실패(미게재 가능)",
+      "file": "data/fetched/annual-2020-56.missing.json"
+    },
+    {
+      "id": "annual-2020-61",
+      "subject": "commercial",
+      "caseNumber": "2019다290129",
+      "reason": "한글주소 조회 실패(미게재 가능)",
+      "file": "data/fetched/annual-2020-61.missing.json"
+    },
+    {
+      "id": "annual-2021-20",
+      "subject": "commercial",
+      "caseNumber": "2017다3222·3239",
+      "reason": "한글주소 조회 실패(미게재 가능)",
+      "file": "data/fetched/annual-2021-20.missing.json"
+    },
+    {
+      "id": "annual-2021-38",
+      "subject": "commercial",
+      "caseNumber": "2018두41882",
+      "reason": "한글주소 조회 실패(미게재 가능)",
+      "file": "data/fetched/annual-2021-38.missing.json"
+    },
+    {
+      "id": "annual-2021-43",
+      "subject": "commercial",
+      "caseNumber": "2018다209713",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2021-43.missing.json"
+    },
+    {
+      "id": "annual-2021-48",
+      "subject": "commercial",
+      "caseNumber": "2018다257958·257965",
+      "reason": "한글주소 조회 실패(미게재 가능)",
+      "file": "data/fetched/annual-2021-48.missing.json"
+    },
+    {
+      "id": "annual-2021-49",
+      "subject": "commercial",
+      "caseNumber": "2020도13704",
+      "reason": "한글주소 조회 실패(미게재 가능)",
+      "file": "data/fetched/annual-2021-49.missing.json"
+    },
+    {
+      "id": "annual-2021-78",
+      "subject": "civil",
+      "caseNumber": "2019므11584",
+      "reason": "한글주소 조회 실패(미게재 가능)",
+      "file": "data/fetched/annual-2021-78.missing.json"
+    },
+    {
+      "id": "annual-2021-79",
+      "subject": "civil",
+      "caseNumber": "2021므12320",
+      "reason": "한글주소 조회 실패(미게재 가능)",
+      "file": "data/fetched/annual-2021-79.missing.json"
+    },
+    {
+      "id": "annual-2022-06",
+      "subject": "administrative",
+      "caseNumber": "2019두49199·49205",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2022-06.missing.json"
+    },
+    {
+      "id": "annual-2022-115",
+      "subject": "civil",
+      "caseNumber": "2021다230083·230090",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2022-115.missing.json"
+    },
+    {
+      "id": "annual-2022-117",
+      "subject": "civil",
+      "caseNumber": "2017스98·99·100·101",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2022-117.missing.json"
+    },
+    {
+      "id": "annual-2022-123",
+      "subject": "ip",
+      "caseNumber": "2021다303134",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2022-123.missing.json"
+    },
+    {
+      "id": "annual-2022-34",
+      "subject": "administrative",
+      "caseNumber": "2022추5040",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2022-34.missing.json"
+    },
+    {
+      "id": "annual-2022-37",
+      "subject": "administrative",
+      "caseNumber": "2022추5057",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2022-37.missing.json"
+    },
+    {
+      "id": "annual-2022-39",
+      "subject": "civil",
+      "caseNumber": "2018다248855·248662",
+      "reason": "한글주소 조회 실패(미게재 가능)",
+      "file": "data/fetched/annual-2022-39.missing.json"
+    },
+    {
+      "id": "annual-2022-60",
+      "subject": "commercial",
+      "caseNumber": "2016마5394·5395·5396",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2022-60.missing.json"
+    },
+    {
+      "id": "annual-2022-71",
+      "subject": "commercial",
+      "caseNumber": "2021다201085·201092",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2022-71.missing.json"
+    },
+    {
+      "id": "annual-2022-76",
+      "subject": "commercial",
+      "caseNumber": "2017다229758",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2022-76.missing.json"
+    },
+    {
+      "id": "annual-2022-77",
+      "subject": "commercial",
+      "caseNumber": "2019다249305",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2022-77.missing.json"
+    },
+    {
+      "id": "annual-2023-52",
+      "subject": "civil",
+      "caseNumber": "2023다240428·240435",
+      "reason": "한글주소 조회 실패(미게재 가능)",
+      "file": "data/fetched/annual-2023-52.missing.json"
+    },
+    {
+      "id": "annual-2023-64",
+      "subject": "civil",
+      "caseNumber": "2017므11856·11863",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2023-64.missing.json"
+    },
+    {
+      "id": "annual-2023-89",
+      "subject": "commercial",
+      "caseNumber": "2020다232709·232716",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2023-89.missing.json"
+    },
+    {
+      "id": "annual-2023-91",
+      "subject": "commercial",
+      "caseNumber": "2022두62888",
+      "reason": "한글주소 조회 실패(미게재 가능)",
+      "file": "data/fetched/annual-2023-91.missing.json"
+    },
+    {
+      "id": "annual-2023-92",
+      "subject": "commercial",
+      "caseNumber": "2021두46902",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2023-92.missing.json"
+    },
+    {
+      "id": "annual-2023-95",
+      "subject": "commercial",
+      "caseNumber": "2020두41399",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2023-95.missing.json"
+    },
+    {
+      "id": "annual-2024-49",
+      "subject": "civil",
+      "caseNumber": "2022므13504·13511",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2024-49.missing.json"
+    },
+    {
+      "id": "annual-2024-56",
+      "subject": "civil",
+      "caseNumber": "2024스525·526",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2024-56.missing.json"
+    },
+    {
+      "id": "annual-2024-68",
+      "subject": "commercial",
+      "caseNumber": "2024다213713",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2024-68.missing.json"
+    },
+    {
+      "id": "annual-2024-73",
+      "subject": "commercial",
+      "caseNumber": "2020다264010",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2024-73.missing.json"
+    },
+    {
+      "id": "annual-2024-75",
+      "subject": "commercial",
+      "caseNumber": "2023다204866",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2024-75.missing.json"
+    },
+    {
+      "id": "annual-2024-79",
+      "subject": "commercial",
+      "caseNumber": "2024도1828",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2024-79.missing.json"
+    },
+    {
+      "id": "annual-2024-82",
+      "subject": "commercial",
+      "caseNumber": "2021두49444",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2024-82.missing.json"
+    },
+    {
+      "id": "annual-2024-94",
+      "subject": "commercial",
+      "caseNumber": "2024다202188",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2024-94.missing.json"
+    },
+    {
+      "id": "annual-2024-95",
+      "subject": "commercial",
+      "caseNumber": "2022다200317·200324",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2024-95.missing.json"
+    },
+    {
+      "id": "annual-2025-31",
+      "subject": "administrative",
+      "caseNumber": "2024두33556",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2025-31.missing.json"
+    },
+    {
+      "id": "annual-2025-36",
+      "subject": "administrative",
+      "caseNumber": "2023두60070",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2025-36.missing.json"
+    },
+    {
+      "id": "annual-2025-55",
+      "subject": "civil",
+      "caseNumber": "2020다277399",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2025-55.missing.json"
+    },
+    {
+      "id": "annual-2025-60",
+      "subject": "commercial",
+      "caseNumber": "2021다256696등",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2025-60.missing.json"
+    },
+    {
+      "id": "annual-2025-68",
+      "subject": "commercial",
+      "caseNumber": "2025도2805",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2025-68.missing.json"
+    },
+    {
+      "id": "annual-2025-75",
+      "subject": "criminal",
+      "caseNumber": "2024도7386",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2025-75.missing.json"
+    },
+    {
+      "id": "annual-2025-79",
+      "subject": "civil",
+      "caseNumber": "2024다308079",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2025-79.missing.json"
+    },
+    {
+      "id": "annual-2025-80",
+      "subject": "civil",
+      "caseNumber": "2024다293313",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2025-80.missing.json"
+    },
+    {
+      "id": "annual-2025-83",
+      "subject": "civil",
+      "caseNumber": "2022다306048",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/annual-2025-83.missing.json"
+    },
+    {
+      "id": "cc-2022heolba95",
+      "subject": "constitution",
+      "caseNumber": "2022헌바95",
+      "reason": "law.go.kr pretty URL returned the error page '해당 한글주소명을 찾을 수 없습니다' (no iframe / detcSeq) on two attempts; decision dated 2026-10-22 appears not to be uploaded yet",
+      "file": "data/fetched/cc-2022heolba95.missing.json"
+    },
+    {
+      "id": "cc-2022heolga28",
+      "subject": "constitution",
+      "caseNumber": "2022헌가28",
+      "reason": "law.go.kr pretty URL returned the error page '해당 한글주소명을 찾을 수 없습니다' (no iframe / detcSeq) on two attempts; decision dated 2026-10-22 appears not to be uploaded yet",
+      "file": "data/fetched/cc-2022heolga28.missing.json"
+    },
+    {
+      "id": "cc-2023heolba47",
+      "subject": "constitution",
+      "caseNumber": "2023헌바47등",
+      "reason": "law.go.kr pretty URL returned the error page '해당 한글주소명을 찾을 수 없습니다' (no iframe / detcSeq) on two attempts; decision dated 2026-10-22 appears not to be uploaded yet",
+      "file": "data/fetched/cc-2023heolba47.missing.json"
+    },
+    {
+      "id": "cc-2024heolma990",
+      "subject": "constitution",
+      "caseNumber": "2024헌마990·2026헌바197",
+      "reason": "law.go.kr pretty URL returned the error page '해당 한글주소명을 찾을 수 없습니다' (no iframe / detcSeq) on two attempts; decision dated 2026-10-22 appears not to be uploaded yet",
+      "file": "data/fetched/cc-2024heolma990.missing.json"
+    },
+    {
+      "id": "cc-2025heolga7",
+      "subject": "constitution",
+      "caseNumber": "2025헌가7",
+      "reason": "law.go.kr pretty URL returned the error page '해당 한글주소명을 찾을 수 없습니다' (no iframe / detcSeq) on two attempts; decision dated 2026-10-22 appears not to be uploaded yet",
+      "file": "data/fetched/cc-2025heolga7.missing.json"
+    },
+    {
+      "id": "enbanc-2023da275578",
+      "subject": "civil",
+      "caseNumber": "2023다275578",
+      "reason": "law.go.kr에 해당 판례가 등재되어 있지 않음. 한글주소 https://www.law.go.kr/판례/(2023다275578) 는 오류페이지('해당 한글주소명을 찾을 수 없습니다')를 반환하였고(2회 시도), 판례 검색(precSc.do)에서 '2023다275578' 및 '275578' 검색 결과 모두 총 0건. 선고일(2026. 9. 29.)이 최근이어서 아직 국가법령정보센터에 수록되지 않은 것으로 보임.",
+      "file": "data/fetched/enbanc-2023da275578.missing.json"
+    },
+    {
+      "id": "std-administrative-107",
+      "subject": "administrative",
+      "caseNumber": "90누6613",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/std-administrative-107.missing.json"
+    },
+    {
+      "id": "std-administrative-291",
+      "subject": "administrative",
+      "caseNumber": "97누15432",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/std-administrative-291.missing.json"
+    },
+    {
+      "id": "std-administrative-36",
+      "subject": "administrative",
+      "caseNumber": "2017두74302",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/std-administrative-36.missing.json"
+    },
+    {
+      "id": "std-administrative-40",
+      "subject": "administrative",
+      "caseNumber": "2020두39365",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/std-administrative-40.missing.json"
+    },
+    {
+      "id": "std-civil-731",
+      "subject": "civil",
+      "caseNumber": "75다396",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/std-civil-731.missing.json"
+    },
+    {
+      "id": "std-civil-850",
+      "subject": "civil",
+      "caseNumber": "2000다64502",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/std-civil-850.missing.json"
+    },
+    {
+      "id": "std-criminal-426",
+      "subject": "criminal",
+      "caseNumber": "74도213",
+      "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다",
+      "file": "data/fetched/std-criminal-426.missing.json"
+    }
+  ],
+  "administrativeIdentityHold": [
+    "std-administrative-44",
+    "std-administrative-195",
+    "std-administrative-207"
+  ],
+  "unitTests": 314,
+  "localBrowserChecks": "Initialization did not complete; run sampled check and HTTP/PWA checks in CI before deployment."
+}

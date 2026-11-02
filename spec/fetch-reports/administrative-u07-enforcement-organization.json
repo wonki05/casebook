@@ -1,0 +1,100 @@
+{
+ "unit": "u07-enforcement-organization",
+ "label": "행정의 실효성 확보수단 + 행정조직·지방자치·공무원",
+ "total": 65,
+ "ok": 65,
+ "missing": [],
+ "flagged": [
+  {
+   "id": "std-administrative-195",
+   "caseNumber": "91누13564",
+   "flags": [
+    "선고일 1992-04-12 ≠ 공식 1992-06-12"
+   ]
+  },
+  {
+   "id": "std-administrative-203",
+   "caseNumber": "2001헌바80·84·102·103·2002헌바26",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2001헌바80 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-administrative-206",
+   "caseNumber": "2000헌가12",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2000헌가12 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-administrative-207",
+   "caseNumber": "84누250",
+   "flags": [
+    "선고일 1985-11-23 ≠ 공식 1985-11-12"
+   ]
+  },
+  {
+   "id": "std-administrative-213",
+   "caseNumber": "2002헌마275",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2002헌마275 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-administrative-388",
+   "caseNumber": "2007헌라4",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2007헌라4 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-administrative-393",
+   "caseNumber": "2002헌바76",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2002헌바76 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-administrative-406",
+   "caseNumber": "2019헌바117",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2019헌바117 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-administrative-410",
+   "caseNumber": "98헌바101",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 98헌바101 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-administrative-411",
+   "caseNumber": "2001헌마788",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2001헌마788 ≠ 공식 "
+   ]
+  }
+ ],
+ "waiting": [],
+ "retried": [
+  "std-administrative-209",
+  "std-administrative-212"
+ ],
+ "elapsedSec": 706,
+ "search": {
+  "std-administrative-209": {
+   "outcome": "fetched",
+   "cite": "[대법원 2011. 3. 10. 선고 2009두23617 판결]",
+   "seq": "149167"
+  }
+ }
+}

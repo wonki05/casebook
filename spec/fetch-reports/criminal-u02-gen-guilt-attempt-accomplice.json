@@ -1,0 +1,30 @@
+{
+ "unit": "u02-gen-guilt-attempt-accomplice",
+ "label": "총론 책임·미수론·공범론",
+ "total": 76,
+ "ok": 76,
+ "missing": [],
+ "flagged": [],
+ "waiting": [],
+ "retried": [
+  "std-criminal-91",
+  "std-criminal-94",
+  "std-criminal-113",
+  "std-criminal-128"
+ ],
+ "elapsedSec": 711,
+ "search": {
+  "std-criminal-91": {
+   "outcome": "no-result"
+  },
+  "std-criminal-94": {
+   "outcome": "no-result"
+  },
+  "std-criminal-113": {
+   "outcome": "no-result"
+  },
+  "std-criminal-128": {
+   "outcome": "no-result"
+  }
+ }
+}

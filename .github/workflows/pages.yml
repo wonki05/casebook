@@ -73,6 +73,11 @@ jobs:
           print('data_version=' + json.loads((web / 'data-manifest.json').read_text())['version'])
           print('shell_sha256=' + hashlib.sha256((web / 'index.html').read_bytes()).hexdigest())
           PY
+      - name: Check representative case views and offline updates
+        timeout-minutes: 10
+        env:
+          CASEBOOK_SWEEP_SAMPLE_PER_PAGE: '2'
+        run: python tools/make.py check webcheck
       - name: Check research collections and volume filters
         timeout-minutes: 5
         run: python tools/test_research_ui.py --web

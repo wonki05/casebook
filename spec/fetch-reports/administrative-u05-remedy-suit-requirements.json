@@ -1,0 +1,14 @@
+{
+ "unit": "u05-remedy-suit-requirements",
+ "label": "행정쟁송 항고소송의 소송요건",
+ "total": 67,
+ "ok": 67,
+ "missing": [],
+ "flagged": [],
+ "waiting": [],
+ "retried": [
+  "std-administrative-293"
+ ],
+ "elapsedSec": 669,
+ "search": {}
+}

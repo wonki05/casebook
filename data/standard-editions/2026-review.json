@@ -681,6 +681,66 @@
       "enBanc": true,
       "evidence": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=209140",
       "reason": "기존 사용자 승인 전원합의체 표시를 재가져오기에도 보존(94모32)."
+    },
+    "형법:64": {
+      "enBanc": true,
+      "evidence": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=605069",
+      "reason": "기존 사용자 승인 전원합의체 표시를 재가져오기에도 보존(2023도10405)."
+    },
+    "형법:86": {
+      "enBanc": true,
+      "evidence": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=234953",
+      "reason": "기존 사용자 승인 전원합의체 표시를 재가져오기에도 보존(2017도19025)."
+    },
+    "형법:89": {
+      "enBanc": true,
+      "evidence": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=97772",
+      "reason": "기존 사용자 승인 전원합의체 표시를 재가져오기에도 보존(83도515)."
+    },
+    "형법:174": {
+      "enBanc": true,
+      "evidence": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=237581",
+      "reason": "기존 사용자 승인 전원합의체 표시를 재가져오기에도 보존(2018도13877)."
+    },
+    "형법:282": {
+      "enBanc": true,
+      "evidence": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=213717",
+      "reason": "기존 사용자 승인 전원합의체 표시를 재가져오기에도 보존(2016도18761)."
+    },
+    "형법:293": {
+      "enBanc": true,
+      "evidence": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=226505",
+      "reason": "기존 사용자 승인 전원합의체 표시를 재가져오기에도 보존(2019도14770)."
+    },
+    "형법:294": {
+      "enBanc": true,
+      "evidence": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=233053",
+      "reason": "기존 사용자 승인 전원합의체 표시를 재가져오기에도 보존(2020도8682)."
+    },
+    "형법:295": {
+      "enBanc": true,
+      "evidence": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=226421",
+      "reason": "기존 사용자 승인 전원합의체 표시를 재가져오기에도 보존(2019도14340)."
+    },
+    "형법:297": {
+      "enBanc": true,
+      "evidence": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=187492",
+      "reason": "기존 사용자 승인 전원합의체 표시를 재가져오기에도 보존(2014도3363)."
+    },
+    "형법:356": {
+      "enBanc": true,
+      "evidence": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=226503",
+      "reason": "기존 사용자 승인 전원합의체 표시를 재가져오기에도 보존(2019도11294)."
+    },
+    "형법:361": {
+      "enBanc": true,
+      "evidence": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=80479",
+      "reason": "기존 사용자 승인 전원합의체 표시를 재가져오기에도 보존(2000도1985)."
+    },
+    "형법:422": {
+      "enBanc": true,
+      "evidence": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=623069",
+      "reason": "기존 사용자 승인 전원합의체 표시를 재가져오기에도 보존(2025도11170)."
     }
   },
   "legacyIdentityCorrections": {

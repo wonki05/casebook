@@ -1,0 +1,82 @@
+{
+ "unit": "u04-remedy-state-compensation",
+ "label": "행정구제 행정상 손해전보(국가배상·손실보상)",
+ "total": 61,
+ "ok": 61,
+ "missing": [],
+ "flagged": [
+  {
+   "id": "std-administrative-246",
+   "caseNumber": "93헌바21",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 93헌바21 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-administrative-264",
+   "caseNumber": "89헌마214·90헌바16·97헌바78",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 89헌마214 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-administrative-265",
+   "caseNumber": "2007헌바114",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2007헌바114 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-administrative-266",
+   "caseNumber": "2008헌바166",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2008헌바166 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-administrative-267",
+   "caseNumber": "2011헌바129,172(병합)",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2011헌바172 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-administrative-269",
+   "caseNumber": "2006헌바79",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2006헌바79 ≠ 공식 "
+   ]
+  }
+ ],
+ "waiting": [],
+ "retried": [
+  "std-administrative-218",
+  "std-administrative-219",
+  "std-administrative-235",
+  "std-administrative-236"
+ ],
+ "elapsedSec": 648,
+ "search": {
+  "std-administrative-219": {
+   "outcome": "fetched",
+   "cite": "[대법원 2010. 1. 28. 선고 2007다82950 판결]",
+   "seq": "215493"
+  },
+  "std-administrative-235": {
+   "outcome": "fetched",
+   "cite": "[대법원 2003. 11. 27. 선고 2001다33789 판결]",
+   "seq": "82934"
+  },
+  "std-administrative-236": {
+   "outcome": "fetched",
+   "cite": "[대법원 2000. 11. 10. 선고 2000다26807 판결]",
+   "seq": "80044"
+  }
+ }
+}

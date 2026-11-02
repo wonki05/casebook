@@ -1,0 +1,64 @@
+{
+ "unit": "u01-gen-intro-infodisclosure",
+ "label": "총론 행정법 서론(행정과 행정법·법원·행정법관계) + 정보공개",
+ "total": 62,
+ "ok": 61,
+ "missing": [
+  {
+   "id": "std-administrative-36",
+   "caseNumber": "2017두74302",
+   "decisionDate": "2019-10-31",
+   "class": "not-listed",
+   "reason": "한글주소 조회 실패(미게재 가능): 해당 한글주소명을 찾을 수 없습니다.  정확한 한글 주소명인지 확인해 주시기 바랍니다. 자세한 한글주소명 사용법[한글 법령주소]을 확인해 주시기 바랍니다. 동일한 문제가 지속될 경우 아래 번호로 문의해주시기 바랍니다"
+  }
+ ],
+ "flagged": [
+  {
+   "id": "std-administrative-03",
+   "caseNumber": "93헌마186",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 93헌마186 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-administrative-19",
+   "caseNumber": "97헌바76등",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 97헌바76 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-administrative-31",
+   "caseNumber": "2015두295",
+   "flags": [
+    "전원합의체 False ≠ 공식 True"
+   ]
+  },
+  {
+   "id": "std-administrative-186",
+   "caseNumber": "2005구합10484",
+   "flags": [
+    "법원 서울행정법원 ≠ 공식 서울행법"
+   ]
+  }
+ ],
+ "waiting": [],
+ "retried": [
+  "std-administrative-22",
+  "std-administrative-36",
+  "std-administrative-168"
+ ],
+ "elapsedSec": 713,
+ "search": {
+  "std-administrative-36": {
+   "outcome": "no-result"
+  },
+  "std-administrative-168": {
+   "outcome": "fetched",
+   "cite": "[대법원 2016. 12. 15. 선고 2012두11409 판결]",
+   "seq": "184793"
+  }
+ }
+}
