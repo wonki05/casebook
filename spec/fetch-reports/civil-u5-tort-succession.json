@@ -17,5 +17,10 @@
  "retried": [
   "std-civil-984"
  ],
- "elapsedSec": 56
+ "elapsedSec": 56,
+ "search": {
+  "std-civil-984": {
+   "outcome": "no-result"
+  }
+ }
 }
