@@ -1,0 +1,206 @@
+{
+ "unit": "u6-constitutional-court",
+ "label": "헌법재판소 절차·헌법소원",
+ "total": 24,
+ "ok": 23,
+ "missing": [
+  {
+   "id": "std-constitution-470",
+   "caseNumber": "2024헌마352",
+   "decisionDate": "2024-06-27",
+   "class": "error",
+   "reason": "선고일 불일치: 2024-06-27 / 2024-05-07"
+  }
+ ],
+ "flagged": [
+  {
+   "id": "std-constitution-471",
+   "caseNumber": "2015헌마1149",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2015헌마1149 ≠ 공식 , 각하"
+   ]
+  },
+  {
+   "id": "std-constitution-474",
+   "caseNumber": "2010헌바251",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2010헌바251 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-476",
+   "caseNumber": "93헌가2",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 93헌가2 ≠ 공식 , 위헌"
+   ]
+  },
+  {
+   "id": "std-constitution-477",
+   "caseNumber": "2016헌가17",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2016헌가17 ≠ 공식 , 합헌"
+   ]
+  },
+  {
+   "id": "std-constitution-482",
+   "caseNumber": "2023헌라9",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2023헌라9 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-487",
+   "caseNumber": "2015헌라5",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2015헌라5 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-488",
+   "caseNumber": "2009헌라7",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2009헌라7 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-491",
+   "caseNumber": "2007헌마700",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2007헌마700 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-492",
+   "caseNumber": "2012헌마271",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2012헌마271 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-496",
+   "caseNumber": "2003헌마898",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2003헌마898 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-499",
+   "caseNumber": "2010헌마88",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2010헌마88 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-500",
+   "caseNumber": "2009헌마514",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2009헌마514 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-501",
+   "caseNumber": "2009헌마340",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2009헌마340 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-503",
+   "caseNumber": "2018헌마739",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2018헌마739 ≠ 공식 , 기각"
+   ]
+  },
+  {
+   "id": "std-constitution-505",
+   "caseNumber": "2008헌마438",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2008헌마438 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-506",
+   "caseNumber": "2015헌마165",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2015헌마165 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-507",
+   "caseNumber": "2004헌마1021",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2004헌마1021 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-508",
+   "caseNumber": "91헌마134",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 91헌마134 ≠ 공식 , 각하"
+   ]
+  },
+  {
+   "id": "std-constitution-510",
+   "caseNumber": "2004헌바44",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2004헌바44 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-511",
+   "caseNumber": "99헌바61",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 99헌바61 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-512",
+   "caseNumber": "2002헌바3",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2002헌바3 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-513",
+   "caseNumber": "2021헌바233",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2021헌바233 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-514",
+   "caseNumber": "2020헌바475",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2020헌바475 ≠ 공식 "
+   ]
+  }
+ ],
+ "waiting": [],
+ "retried": [
+  "std-constitution-470"
+ ],
+ "elapsedSec": 257
+}
