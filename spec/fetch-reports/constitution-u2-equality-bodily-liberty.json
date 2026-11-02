@@ -1,0 +1,220 @@
+{
+ "unit": "u2-equality-bodily-liberty",
+ "label": "평등·신체의 자유",
+ "total": 26,
+ "ok": 26,
+ "missing": [],
+ "flagged": [
+  {
+   "id": "std-constitution-356",
+   "caseNumber": "2011헌마769",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2011헌마769 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-357",
+   "caseNumber": "2005헌마403",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2005헌마403 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-358",
+   "caseNumber": "2008헌바56",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2008헌바56 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-359",
+   "caseNumber": "2006헌마328",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2006헌마328 ≠ 공식 , 기각"
+   ]
+  },
+  {
+   "id": "std-constitution-360",
+   "caseNumber": "2000헌마25",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2000헌마25 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-361",
+   "caseNumber": "2004헌마675",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2004헌마675 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-363",
+   "caseNumber": "2013헌바190",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2013헌바190 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-364",
+   "caseNumber": "96헌바28",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 96헌바28 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-366",
+   "caseNumber": "2000헌가12",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2000헌가12 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-367",
+   "caseNumber": "96헌가11",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 96헌가11 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-368",
+   "caseNumber": "2002헌가17",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2002헌가17 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-369",
+   "caseNumber": "92헌가8",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 92헌가8 ≠ 공식 , 위헌"
+   ]
+  },
+  {
+   "id": "std-constitution-370",
+   "caseNumber": "2000헌바57",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2000헌바57 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-371",
+   "caseNumber": "92헌바28",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 92헌바28 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-372",
+   "caseNumber": "2002헌가14",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2002헌가14 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-373",
+   "caseNumber": "2010헌마68",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2010헌마68 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-374",
+   "caseNumber": "2015헌마236",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2015헌마236 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-375",
+   "caseNumber": "2009헌마170",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2009헌마170 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-376",
+   "caseNumber": "2010헌바307",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2010헌바307 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-377",
+   "caseNumber": "2009헌마341",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2009헌마341 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-379",
+   "caseNumber": "2000헌마138",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2000헌마138 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-380",
+   "caseNumber": "2015헌마1204",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2015헌마1204 ≠ 공식 , 인용"
+   ]
+  },
+  {
+   "id": "std-constitution-381",
+   "caseNumber": "2016헌마503",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2016헌마503 ≠ 공식 , 인용"
+   ]
+  },
+  {
+   "id": "std-constitution-382",
+   "caseNumber": "2011헌마398",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2011헌마398 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-383",
+   "caseNumber": "90헌가48",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 90헌가48 ≠ 공식 "
+   ]
+  },
+  {
+   "id": "std-constitution-384",
+   "caseNumber": "2001헌바43",
+   "flags": [
+    "법원 헌법재판소 ≠ 공식 전원재판부",
+    "사건번호 2001헌바43 ≠ 공식 "
+   ]
+  }
+ ],
+ "waiting": [],
+ "retried": [],
+ "elapsedSec": 302
+}
