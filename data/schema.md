@@ -49,6 +49,7 @@
   "standardSource": { "verified": true, "book": "표준판례", "edition": "2023년 개정판", "file": "data/standard-cases/표준판례(2023년 개정판)_민법.pdf", "pages": [...], "holdings": [...] }, // 검증된 PDF 추출문, §1-3
 
   "annual": { "year": 2025, "field": "civil", "article": "[2025년 분야별 중요판례분석] (3) 민법(총칙·물권법)", "url": "https://..." },   // annual 만. field = 법률신문 분야(아래)
+  "ccourtSource": { "provider": "헌법재판소", "boardId": "1195", "eventId": "4268005", "listUrl": "https://www.ccourt.go.kr/site/kor/ex/bbs/List.do?cbIdx=1195", "sourceUrl": "https://www.ccourt.go.kr/site/kor/ex/bbs/View.do?cbIdx=1195&bcIdx=4268005", "sourceFile": "page-001.html", "sourceSha256": "<원본 파일의 SHA-256>", "page": 1, "result": "합헌,기각" }, // ccourt 게시판 목록 출처(선택)
 
   "lawgo": { "kind": "prec", "seq": "193822" },   // law.go.kr 일련번호를 알면(선택) — fetch 가 바로 조회
 
@@ -209,6 +210,10 @@ XLSX 대조·반영은 `python tools/add_cases.py standard-import --from <원본
 - 사용자가 승인한 오탈자·내용 불일치 정정은 검토 파일의 `textCorrections`(키 `<시트>:<행>`, 값 `{reason, evidence, changes[]}`)에 적을 수 있다. `changes` 의 `op` 는 `replace`(`field` 는 title·selectionReason·issues·facts·holdings, `from`→`to`, 기본은 정확히 1회 일치하고 `count` 로 횟수를 지정), `drop`(다른 재판의 쟁점·요지·사실관계가 들어간 칸을 제외하면 그 필드는 공식 자료로 보충), `split`(한 칸에 섞여 들어간 다른 필드의 본문을 `at` 기준으로 나눠 `into` 필드로 옮김)이다. 일치하지 않으면 가져오기가 중단되어 바뀐 원자료를 조용히 정정하지 않는다. 정정 전 출처는 `standardSourceHistory` 에, 정정 내용은 배치의 `standard.textCorrections` 에 남고 같은 엑셀을 다시 가져와도 같은 결과가 나온다. 공식 수집본(`fetched/`)은 이 방식으로도 고치지 않는다.
 
 
+
+### 헌법재판소 최근 주요결정 목록 출처 `ccourtSource`
+
+`ccourt` 그룹의 헌법재판소 사건에 선택적으로 기록한다. `provider`는 `헌법재판소`, `boardId`·`eventId`는 게시판과 게시물의 숫자 문자열이다. `listUrl`은 목록 주소, 선택적인 `sourceUrl`은 게시물 주소이며 둘 다 헌법재판소 HTTPS 주소다. `sourceFile`은 저장된 목록 HTML의 파일명, `sourceSha256`은 그 파일 원본 바이트의 소문자 SHA-256, `page`는 목록 페이지 번호(1부터 시작)다. 선택적인 `result`는 목록의 종국결과 원문으로 빈 문자열도 가능하다. 이 값은 결정 주문이나 판시사항·요지가 아니며, 목록에 잘린 설명도 공식 판시사항·요지로 취급하지 않는다. 후보 파일의 `ccourtSource`는 `add --from`으로 그대로 보존한다.
 
 ### 1-4. 판례연구 배치 `research`
 

@@ -43,6 +43,37 @@ SUBJECTS = SUBJECT_IDS   # tools/subjects.py 가 단일 출처 (지식재산권�
 GROUPS = ['standard', 'research', 'annual', 'enbanc', 'ccourt']
 
 
+def validate_ccourt_source(source, group, court):
+    """최근 주요결정 게시판 목록의 출처를 검증한다 (판시사항 출처가 아님)."""
+    if source is None:
+        return
+    if not isinstance(source, dict) or group != 'ccourt' or court != '헌법재판소':
+        raise ValueError('ccourtSource는 헌법재판소 주요결정의 출처 객체여야 합니다')
+    if source.get('provider') != '헌법재판소':
+        raise ValueError('ccourtSource.provider는 헌법재판소여야 합니다')
+    for key in ('boardId', 'eventId'):
+        if not isinstance(source.get(key), str) or not re.fullmatch(r'[0-9]+', source[key]):
+            raise ValueError(f'ccourtSource.{key}는 숫자 문자열이어야 합니다')
+    for key in ('listUrl', 'sourceUrl'):
+        if key == 'sourceUrl' and key not in source:
+            continue
+        value = source.get(key)
+        if not isinstance(value, str):
+            raise ValueError(f'ccourtSource.{key}는 헌법재판소 HTTPS URL이어야 합니다')
+        parsed = urlsplit(value)
+        if parsed.scheme != 'https' or parsed.netloc != 'www.ccourt.go.kr' or not parsed.path:
+            raise ValueError(f'ccourtSource.{key}는 헌법재판소 HTTPS URL이어야 합니다')
+    name = source.get('sourceFile')
+    if not isinstance(name, str) or not name or name in ('.', '..') or '/' in name or '\\' in name:
+        raise ValueError('ccourtSource.sourceFile은 저장한 목록 파일의 이름이어야 합니다')
+    if not isinstance(source.get('sourceSha256'), str) or not re.fullmatch(r'[0-9a-f]{64}', source['sourceSha256']):
+        raise ValueError('ccourtSource.sourceSha256은 소문자 SHA-256이어야 합니다')
+    if type(source.get('page')) is not int or source['page'] < 1:
+        raise ValueError('ccourtSource.page는 1 이상의 정수여야 합니다')
+    if 'result' in source and not isinstance(source['result'], str):
+        raise ValueError('ccourtSource.result는 원문 문자열이어야 합니다')
+
+
 def annual_field(field, subject, article):
     """annual 사건의 분야를 정하고 과목과 맞춘다 → (field, subject)."""
     field = field or guess_field(article, subject)
@@ -163,6 +194,7 @@ def make_entry(reg, toc, group, subject, case_number, date, title, toc_path=None
         e['decisionType'] = decision_type
     try:
         validate_standard_source(e.get('standardSource'))
+        validate_ccourt_source(e.get('ccourtSource'), group, court)
         e.update(identity(e))
     except ValueError as exc:
         raise SystemExit(str(exc)) from exc
@@ -232,7 +264,7 @@ def cmd_add(a):
             if c.get('status') != 'ok':
                 continue
             e = make_entry(reg, toc, group, c.get('subject') or subject, c['caseNumber'], c.get('date'), c.get('title'), c.get('tocPath'), c.get('tags'), c.get('court'), c.get('enBanc'),
-                           year, src.get('article'), src.get('url'), c.get('editorial'), {k: c.get(k) for k in ('selectionReason', 'keywords', 'difficulty', 'memo', 'lawgo', 'decisionType', 'courtId', 'standardSource')},
+                           year, src.get('article'), src.get('url'), c.get('editorial'), {k: c.get(k) for k in ('selectionReason', 'keywords', 'difficulty', 'memo', 'lawgo', 'decisionType', 'courtId', 'standardSource', 'ccourtSource')},
                            a.field or c.get('field') or src.get('field'))
             if duplicate(reg, e):
                 print('이미 있음:', c['caseNumber']); continue
@@ -864,6 +896,7 @@ def cmd_validate(a):
                 if key in c and c[key] != fields[key]:
                     errs.append(f"{c['id']}: {key} 불일치 {c[key]!r} != {fields[key]!r}")
             validate_standard_source(c.get('standardSource'))
+            validate_ccourt_source(c.get('ccourtSource'), c['group'], c.get('court'))
             if c['group'] == 'research':
                 validate_research_entry(c, toc)
                 research_key = (c['research']['collection'], c['research']['entryId'])

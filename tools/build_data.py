@@ -490,6 +490,9 @@ def build():
             "tags": c.get('tags') or [],
         }
         rec.update(identities[cid])
+        ccourt_source = c.get('ccourtSource')
+        if ccourt_source:
+            rec['ccourtSource'] = copy.deepcopy(ccourt_source)
         if c.get('legacyIds'):
             rec['legacyIds'] = copy.deepcopy(c['legacyIds'])
         for k in ('selectionReason', 'keywords', 'difficulty', 'memo'):
@@ -559,9 +562,18 @@ def build():
                                                    + [v['label'] for v in supplemental_fields.values()]))
             rec['source'] = {**rec['source'], 'label': ' · '.join([rec['source']['label']] + supplement_labels)}
             rec['supplements'] = copy.deepcopy(fetched.get('supplements'))
+        listing_source = None
+        if ccourt_source:
+            listing_source = {'label': '헌법재판소 최근 주요결정 목록',
+                              'url': ccourt_source.get('sourceUrl') or ccourt_source.get('listUrl', '')}
+            if not rec['source']:
+                rec['source'] = copy.deepcopy(listing_source)
         stats[rec['summaryType']] += 1
         rec["result"] = derive_result(fetched, {'result': c.get('result', '')})
-        if c.get("resultSource"):
+        if not rec['result'] and ccourt_source and ccourt_source.get('result'):
+            rec['result'] = ccourt_source['result']
+            rec['resultListingSource'] = copy.deepcopy(listing_source)
+        if c.get("resultSource") and not rec.get('resultListingSource'):
             rec["resultSource"] = copy.deepcopy(c["resultSource"])
         if rec["fullText"]:
             stats["fullText"] += 1

@@ -1,0 +1,24 @@
+{
+ "id": "cc-2021heolma1380",
+ "caseNumber": "2021헌마1380",
+ "lookupKey": "2021헌마1380",
+ "kind": "detc",
+ "seq": "172639",
+ "sourceUrl": "https://www.law.go.kr/LSW/detcInfoP.do?detcSeq=172639",
+ "pageTitle": "코로나바이러스 백신 미접종자 차별행위 위헌확인",
+ "citation": "[헌법재판소 2022. 3. 31. 선고 2021헌마1380 결정]",
+ "sections": [
+  {
+   "heading": "【전문】",
+   "text": "사           건          2021헌마1380    코로나바이러스 백신 미접종자 차별행위 위헌확인청    구    인          진○○[주           문]이 사건 심판청구를 각하한다.[이           유]기록에 의하면, 청구인은 변호사를 대리인으로 선임하지 아니한 채 이 사건 심판청구를 하였고, 대리인 선임과 관련하여 보정명령을 받고도 보정기간 내에 이를 보정하지 아니한 사실을 인정할 수 있다.그렇다면 이 사건 심판청구는 부적법하므로 이를 각하하기로 하여, 관여 재판관 전원의 일치된 의견으로 주문과 같이 결정한다.\n"
+  }
+ ],
+ "officialCaseNumber": "2021헌마1380",
+ "retrieval": {
+  "method": "korean-law:get_decision_text",
+  "domain": "constitutional",
+  "full": true,
+  "sourceTextSha256": "8a75cdbc48a794f923f00704b3d057dc55fe976a250cfa8270f75b71621ef461",
+  "bodyQuality": "recognizable_closing"
+ }
+}
