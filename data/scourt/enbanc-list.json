@@ -42,7 +42,8 @@
    "courtId": "sc",
    "caseNumberId": "76da2119",
    "caseId": "sc-76da2119",
-   "decisionId": "sc-76da2119-19780214-judgment"
+   "decisionId": "sc-76da2119-19780214-judgment",
+   "discardNote": "변경 : 대법원 2022. 3. 24. 선고 2021다241618 전원합의체 판결에 의하여 변경"
   },
   {
    "srno": "2081376",
@@ -59,7 +60,8 @@
    "courtId": "sc",
    "caseNumberId": "77do3564",
    "caseId": "sc-77do3564",
-   "decisionId": "sc-77do3564-19780214-judgment"
+   "decisionId": "sc-77do3564-19780214-judgment",
+   "discardNote": "변경 : 대법원 2004.9.16. 선고 2001도3206 판결에 의하여 변경"
   },
   {
    "srno": "2087176",
@@ -76,7 +78,8 @@
    "courtId": "sc",
    "caseNumberId": "80da2029",
    "caseId": "sc-80da2029",
-   "decisionId": "sc-80da2029-19810224-judgment"
+   "decisionId": "sc-80da2029-19810224-judgment",
+   "discardNote": "변경 : 대법원 2001.3.15. 선고 98두15597 판결에 의하여 변경, 대법원 1995.2.14. 선고 93재다27 판결에 의하여 폐기"
   },
   {
    "srno": "2100977",
@@ -93,7 +96,8 @@
    "courtId": "sc",
    "caseNumberId": "86do1724",
    "caseId": "sc-86do1724",
-   "decisionId": "sc-86do1724-19870707-judgment"
+   "decisionId": "sc-86do1724-19870707-judgment",
+   "discardNote": "변경 : 대법원 2010.1.21. 선고 2008도942 전원합의체 판결에 의하여 변경"
   },
   {
    "srno": "2091176",
@@ -110,7 +114,8 @@
    "courtId": "sc",
    "caseNumberId": "89daka12398",
    "caseId": "sc-89daka12398",
-   "decisionId": "sc-89daka12398-19901127-judgment"
+   "decisionId": "sc-89daka12398-19901127-judgment",
+   "discardNote": "변경 : 대법원 2001.9.20. 선고 99다37894 판결에 의하여 변경"
   },
   {
    "srno": "2088960",
@@ -127,7 +132,8 @@
    "courtId": "sc",
    "caseNumberId": "90do2033",
    "caseId": "sc-90do2033",
-   "decisionId": "sc-90do2033-19920331-judgment"
+   "decisionId": "sc-90do2033-19920331-judgment",
+   "discardNote": "변경 : 대법원 2010.7.23. 선고 2010도1189 전원합의체 판결에 의하여 변경"
   },
   {
    "srno": "2025000007984",
@@ -148,7 +154,8 @@
    "duplicateGroup": "sc-91da1226-19930119-judgment",
    "duplicateSrnos": [
     "2096359"
-   ]
+   ],
+   "discardNote": "변경 : 대법원 2006.4.20. 선고 2004다37775 판결에 의하여 변경"
   },
   {
    "srno": "2096359",
@@ -169,7 +176,8 @@
    "duplicateGroup": "sc-91da1226-19930119-judgment",
    "duplicateSrnos": [
     "2025000007984"
-   ]
+   ],
+   "discardNote": "변경 : 대법원 2006.4.20. 선고 2004다37775 판결에 의하여 변경"
   },
   {
    "srno": "2025000008092",
@@ -190,7 +198,8 @@
    "duplicateGroup": "sc-92nu8293-19930119-judgment",
    "duplicateSrnos": [
     "2096977"
-   ]
+   ],
+   "discardNote": "변경 : 대법원 2006.4.20. 선고 2002두1878 판결에 의하여 변경"
   },
   {
    "srno": "2096977",
@@ -211,7 +220,8 @@
    "duplicateGroup": "sc-92nu8293-19930119-judgment",
    "duplicateSrnos": [
     "2025000008092"
-   ]
+   ],
+   "discardNote": "변경 : 대법원 2006.4.20. 선고 2002두1878 판결에 의하여 변경"
   },
   {
    "srno": "2100797",
@@ -228,7 +238,8 @@
    "courtId": "sc",
    "caseNumberId": "93da46360",
    "caseId": "sc-93da46360",
-   "decisionId": "sc-93da46360-19940322-judgment"
+   "decisionId": "sc-93da46360-19940322-judgment",
+   "discardNote": "변경 : 대법원 2009.7.16. 선고 2007다15172, 15189 전원합의체 판결에 의하여 변경"
   },
   {
    "srno": "2100092",
@@ -245,7 +256,8 @@
    "courtId": "sc",
    "caseNumberId": "93da9392",
    "caseId": "sc-93da9392",
-   "decisionId": "sc-93da9392-19940322-judgment"
+   "decisionId": "sc-93da9392-19940322-judgment",
+   "discardNote": "변경 : 대법원 2020. 5. 21. 선고 2018다287522 전원합의체 판결에 의하여 변경"
   },
   {
    "srno": "2097489",
@@ -262,7 +274,8 @@
    "courtId": "sc",
    "caseNumberId": "92da35783",
    "caseId": "sc-92da35783",
-   "decisionId": "sc-92da35783-19940524-judgment"
+   "decisionId": "sc-92da35783-19940524-judgment",
+   "discardNote": "변경 : 대법원 2011.6.23. 선고 2007다63089, 63096 전원합의체 판결에 의하여 변경"
   },
   {
    "srno": "2100585",
@@ -279,7 +292,8 @@
    "courtId": "sc",
    "caseNumberId": "94nu14148",
    "caseId": "sc-94nu14148",
-   "decisionId": "sc-94nu14148-19951017-judgment"
+   "decisionId": "sc-94nu14148-19951017-judgment",
+   "discardNote": "변경 : 대법원 2006.6.22. 선고 2003두1684 전원합의체 판결에 의하여 변경"
   },
   {
    "srno": "2104576",
@@ -296,7 +310,8 @@
    "courtId": "sc",
    "caseNumberId": "95nu18383",
    "caseId": "sc-95nu18383",
-   "decisionId": "sc-95nu18383-19970320-judgment"
+   "decisionId": "sc-95nu18383-19970320-judgment",
+   "discardNote": "변경 : 대법원 2011.7.21. 선고 2010두23644 전원합의체 판결에 의하여 변경"
   },
   {
    "srno": "2103918",
@@ -313,7 +328,8 @@
    "courtId": "sc",
    "caseNumberId": "97do2021",
    "caseId": "sc-97do2021",
-   "decisionId": "sc-97do2021-19971120-judgment"
+   "decisionId": "sc-97do2021-19971120-judgment",
+   "discardNote": "변경 : 대법원 2008.4.17. 선고 2004도4899 판결에 의하여 변경"
   },
   {
    "srno": "2025000007260",
@@ -330,7 +346,8 @@
    "courtId": "sc",
    "caseNumberId": "97do666",
    "caseId": "sc-97do666",
-   "decisionId": "sc-97do666-19990415-judgment"
+   "decisionId": "sc-97do666-19990415-judgment",
+   "discardNote": "변경 : 대법원 2022. 6. 23. 선고 2017도3829 전원합의체 판결에 의하여 변경"
   },
   {
    "srno": "2061571",
@@ -347,7 +364,8 @@
    "courtId": "sc",
    "caseNumberId": "2000da62322",
    "caseId": "sc-2000da62322",
-   "decisionId": "sc-2000da62322-20020321-judgment"
+   "decisionId": "sc-2000da62322-20020321-judgment",
+   "discardNote": "변경 : 대법원 2022. 3. 24. 선고 2021다241618 전원합의체 판결에 의하여 변경"
   },
   {
    "srno": "2062090",
@@ -364,7 +382,8 @@
    "courtId": "sc",
    "caseNumberId": "2004do2965",
    "caseId": "sc-2004do2965",
-   "decisionId": "sc-2004do2965-20040715-judgment"
+   "decisionId": "sc-2004do2965-20040715-judgment",
+   "discardNote": "변경 : 대법원 2018. 11. 1. 선고 2016도10912 전원합의체 판결에 의하여 변경"
   },
   {
    "srno": "2058848",
@@ -381,7 +400,8 @@
    "courtId": "sc",
    "caseNumberId": "2007da27670",
    "caseId": "sc-2007da27670",
-   "decisionId": "sc-2007da27670-20081120-judgment"
+   "decisionId": "sc-2007da27670-20081120-judgment",
+   "discardNote": "변경 : 대법원 2023. 5. 11. 선고 2018다248626 전원합의체 판결에 의하여 변경"
   },
   {
    "srno": "2060174",
@@ -398,7 +418,8 @@
    "courtId": "sc",
    "caseNumberId": "2009seu117",
    "caseId": "sc-2009seu117",
-   "decisionId": "sc-2009seu117-20110902-decision"
+   "decisionId": "sc-2009seu117-20110902-decision",
+   "discardNote": "변경 : 대법원 2022. 11. 24.자 2020스616 전원합의체 결정에 의하여 변경"
   },
   {
    "srno": "2138794",
@@ -415,7 +436,8 @@
    "courtId": "sc",
    "caseNumberId": "2012da89399",
    "caseId": "sc-2012da89399",
-   "decisionId": "sc-2012da89399-20131218-judgment"
+   "decisionId": "sc-2012da89399-20131218-judgment",
+   "discardNote": "변경 : 대법원 2024. 12. 19. 선고 2020다247190 전원합의체 판결에 의하여 변경"
   },
   {
    "srno": "2138795",
@@ -432,7 +454,8 @@
    "courtId": "sc",
    "caseNumberId": "2012da94643",
    "caseId": "sc-2012da94643",
-   "decisionId": "sc-2012da94643-20131218-judgment"
+   "decisionId": "sc-2012da94643-20131218-judgment",
+   "discardNote": "변경 : 대법원 2024. 12. 19. 선고 2020다247190 전원합의체 판결에 의하여 변경"
   },
   {
    "srno": "2077849",
@@ -1752,13 +1775,14 @@
    "decisionDate": "1985-01-29",
    "decisionType": "판결",
    "portalGrade": "전원합의체",
-   "discarded": false,
+   "discarded": true,
    "publication": "[집33(1)민,1;공1985.3.15.(748),356]",
    "caseAlias": "",
    "courtId": "sc",
    "caseNumberId": "83daka1730",
    "caseId": "sc-83daka1730",
-   "decisionId": "sc-83daka1730-19850129-judgment"
+   "decisionId": "sc-83daka1730-19850129-judgment",
+   "discardNote": "폐기 : 대법원 1989.12.26. 선고 87다카2176 전원합의체판결에 의하여 폐기"
   },
   {
    "srno": "2086709",

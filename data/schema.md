@@ -51,6 +51,8 @@
   "annual": { "year": 2025, "field": "civil", "article": "[2025년 분야별 중요판례분석] (3) 민법(총칙·물권법)", "url": "https://..." },   // annual 만. field = 법률신문 분야(아래)
   "ccourtSource": { "provider": "헌법재판소", "boardId": "1195", "eventId": "4268005", "listUrl": "https://www.ccourt.go.kr/site/kor/ex/bbs/List.do?cbIdx=1195", "sourceUrl": "https://www.ccourt.go.kr/site/kor/ex/bbs/View.do?cbIdx=1195&bcIdx=4268005", "sourceFile": "page-001.html", "sourceSha256": "<원본 파일의 SHA-256>", "page": 1, "result": "합헌,기각" }, // ccourt 게시판 목록 출처(선택)
 
+  "scourtSource": { "provider": "사법정보공개포털", "srno": "2026000046592", "grade": "전원합의체", "discarded": false, "discardedNote": "변경 : 대법원 … 판결에 의하여 변경" },   // enbanc 배치의 포털 출처(선택). 포털 판례등급이 폐기(변경)이거나 전문 머리글에 변경·폐기 표시가 있으면 discarded true(+표시 문구 discardedNote) — 화면에는 아직 표시하지 않음
+
   "lawgo": { "kind": "prec", "seq": "193822" },   // law.go.kr 일련번호를 알면(선택) — fetch 가 바로 조회
 
   "selectionReason": "", "keywords": [], "difficulty": "", "memo": ""     // 선택(표준판례 PDF·노션 필드)

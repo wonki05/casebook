@@ -74,6 +74,25 @@ def validate_ccourt_source(source, group, court):
         raise ValueError('ccourtSource.result는 원문 문자열이어야 합니다')
 
 
+def validate_scourt_source(source, group, court):
+    """사법정보공개포털에서 받은 전원합의체 배치의 출처·등급을 검증한다 (판시사항 출처가 아님)."""
+    if source is None:
+        return
+    if not isinstance(source, dict) or group != 'enbanc' or court != '대법원':
+        raise ValueError('scourtSource는 대법원 전원합의체 배치의 출처 객체여야 합니다')
+    if source.get('provider') != '사법정보공개포털':
+        raise ValueError('scourtSource.provider는 사법정보공개포털이어야 합니다')
+    if not isinstance(source.get('srno'), str) or not re.fullmatch(r'[0-9]+', source['srno']):
+        raise ValueError('scourtSource.srno는 숫자 문자열이어야 합니다')
+    if source.get('grade') not in ('전원합의체', '폐기(변경)'):
+        raise ValueError('scourtSource.grade는 전원합의체 또는 폐기(변경)이어야 합니다')
+    if type(source.get('discarded')) is not bool or (source['grade'] == '폐기(변경)' and not source['discarded']):
+        raise ValueError('scourtSource.discarded는 불리언이어야 하고 등급이 폐기(변경)이면 true여야 합니다')
+    note = source.get('discardedNote')
+    if note is not None and (not isinstance(note, str) or not note.strip() or not source['discarded']):
+        raise ValueError('scourtSource.discardedNote는 폐기·변경으로 표시된 사건의 포털 표시 문구(비어 있지 않은 문자열)여야 합니다')
+
+
 def annual_field(field, subject, article):
     """annual 사건의 분야를 정하고 과목과 맞춘다 → (field, subject)."""
     field = field or guess_field(article, subject)
@@ -195,6 +214,7 @@ def make_entry(reg, toc, group, subject, case_number, date, title, toc_path=None
     try:
         validate_standard_source(e.get('standardSource'))
         validate_ccourt_source(e.get('ccourtSource'), group, court)
+        validate_scourt_source(e.get('scourtSource'), group, court)
         e.update(identity(e))
     except ValueError as exc:
         raise SystemExit(str(exc)) from exc
@@ -264,7 +284,7 @@ def cmd_add(a):
             if c.get('status') != 'ok':
                 continue
             e = make_entry(reg, toc, group, c.get('subject') or subject, c['caseNumber'], c.get('date'), c.get('title'), c.get('tocPath'), c.get('tags'), c.get('court'), c.get('enBanc'),
-                           year, src.get('article'), src.get('url'), c.get('editorial'), {k: c.get(k) for k in ('selectionReason', 'keywords', 'difficulty', 'memo', 'lawgo', 'decisionType', 'courtId', 'standardSource', 'ccourtSource')},
+                           year, src.get('article'), src.get('url'), c.get('editorial'), {k: c.get(k) for k in ('selectionReason', 'keywords', 'difficulty', 'memo', 'lawgo', 'decisionType', 'courtId', 'standardSource', 'ccourtSource', 'scourtSource')},
                            a.field or c.get('field') or src.get('field'))
             if duplicate(reg, e):
                 print('이미 있음:', c['caseNumber']); continue
@@ -897,6 +917,7 @@ def cmd_validate(a):
                     errs.append(f"{c['id']}: {key} 불일치 {c[key]!r} != {fields[key]!r}")
             validate_standard_source(c.get('standardSource'))
             validate_ccourt_source(c.get('ccourtSource'), c['group'], c.get('court'))
+            validate_scourt_source(c.get('scourtSource'), c['group'], c.get('court'))
             if c['group'] == 'research':
                 validate_research_entry(c, toc)
                 research_key = (c['research']['collection'], c['research']['entryId'])

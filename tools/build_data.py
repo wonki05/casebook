@@ -493,6 +493,8 @@ def build():
         ccourt_source = c.get('ccourtSource')
         if ccourt_source:
             rec['ccourtSource'] = copy.deepcopy(ccourt_source)
+        if c.get('scourtSource'):
+            rec['scourtSource'] = copy.deepcopy(c['scourtSource'])   # 포털 일련번호·등급·폐기 여부: 데이터에만 두고 화면에는 아직 표시하지 않는다
         if c.get('legacyIds'):
             rec['legacyIds'] = copy.deepcopy(c['legacyIds'])
         for k in ('selectionReason', 'keywords', 'difficulty', 'memo'):

@@ -8,6 +8,7 @@ Usage:
   python tools/fetch_scourt.py list                 # 판례등급=전원합의체·대법원 목록 → data/scourt/enbanc-list.json
   python tools/fetch_scourt.py docs                 # 목록 중 전문이 없는 사건의 전문 → data/scourt/docs/<srno>.json
   python tools/fetch_scourt.py discarded            # 판례등급=폐기(변경) 중 제목에 '전원합의체'가 있는 사건을 찾아 전문까지 수집
+  python tools/fetch_scourt.py annotate             # 전문 머리글의 폐기·변경 표시를 discardNote·discarded 로 기록
   python tools/fetch_scourt.py verify               # 건수·중복·전문 구조 점검 → data/scourt/collection-report.json
   옵션: --from 1978-01-01 --to <오늘> --delay 0.4 --force(이미 받은 전문도 다시)
 
@@ -235,6 +236,35 @@ def cmd_docs(a, subset=None):
     return failed
 
 
+def discard_note(text):
+    """전문 머리글의 '변경 : … 판결에 의하여 변경' · '폐기 : …' 줄(판례등급과 별개로 포털이 붙이는 표시)."""
+    head = text.split('【', 1)[0]
+    m = re.search(r'(?m)^[ \t]*((?:변경|폐기)[ \t]*[:：][ \t]*\S.*?)[ \t]*$', head)
+    return ' '.join(m.group(1).split()) if m else ''
+
+
+def cmd_annotate(a):
+    """받아 둔 전문에서 폐기·변경 표시를 찾아 전문 파일과 목록 기록에 discardNote·discarded 로 남긴다(전문 원본은 그대로)."""
+    data = load_list()
+    changed = 0
+    for r in data['records']:
+        with open(doc_path(r['srno']), encoding='utf-8') as f:
+            d = json.load(f)
+        note = discard_note(d['text'])
+        discarded = r['portalGrade'] == '폐기(변경)' or bool(note)
+        if d.get('discardNote', '') != note or d.get('discarded') != discarded:
+            d['discardNote'], d['discarded'] = note, discarded
+            write_json(doc_path(r['srno']), d)
+        if r.get('discardNote', '') != note or r['discarded'] != discarded:
+            changed += 1
+        r['discarded'], r['discardNote'] = discarded, note
+        if not note:
+            del r['discardNote']
+    write_json(LIST, data, indent=1)
+    flagged = [r['caseNumber'] for r in data['records'] if r['discarded']]
+    print(f'폐기·변경 표시 {len(flagged)}건 (등급 폐기(변경) {sum(r["portalGrade"] == "폐기(변경)" for r in data["records"])}건 포함); 목록 기록 갱신 {changed}건')
+
+
 def cmd_discarded(a):
     total, items = fetch_items(GRADE_DISCARDED, a.date_from, a.date_to, a.delay)
     print(f'폐기(변경) 등급 {total}건: 제목에 전원합의체가 있는지 확인합니다')
@@ -331,14 +361,14 @@ def cmd_verify(a):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument('command', choices=['list', 'docs', 'discarded', 'verify'])
+    ap.add_argument('command', choices=['list', 'docs', 'discarded', 'annotate', 'verify'])
     ap.add_argument('--from', dest='date_from', default='1978-01-01')
     ap.add_argument('--to', dest='date_to', default=datetime.date.today().isoformat())
     ap.add_argument('--delay', type=float, default=0.4)
     ap.add_argument('--force', action='store_true')
     a = ap.parse_args()
     {'list': cmd_list, 'docs': lambda x: cmd_docs(x, SUBSET_ENBANC), 'discarded': cmd_discarded,
-     'verify': cmd_verify}[a.command](a)
+     'annotate': cmd_annotate, 'verify': cmd_verify}[a.command](a)
 
 
 if __name__ == '__main__':
