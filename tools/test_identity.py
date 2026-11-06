@@ -225,8 +225,13 @@ class CliAndBuildTests(unittest.TestCase):
                 build_data.build()
             data=json.loads(out.read_text(encoding='utf-8'))
             self.assertEqual(len(data['cases']),2)
+            by_id={r['id']:r for r in data['cases']}
+            # 표준판례 배치는 검증된 표준판례 발췌를, 전원합의체(최신판례) 배치는 재판 전체를 조명하는 공식 요지를 먼저 보인다 (spec/CCOURT-PAGE-SUMMARY.md)
+            self.assertEqual(by_id[a['id']]['holdings'],a['standardSource']['holdings'])
+            self.assertEqual(by_id['fixture-enbanc']['holdings'],[{'n':'','text':'공식 요지 fixture'}])
+            self.assertEqual(by_id['fixture-enbanc']['summaryPrecedence'],['official','standard','editorial'])
+            self.assertEqual([p['id'] for p in by_id['fixture-enbanc']['standardPlacements']],[a['id']])
             for r in data['cases']:
-                self.assertEqual(r['holdings'],a['standardSource']['holdings'])
                 self.assertEqual(r['officialSummary']['holdings'][0]['text'],'공식 요지 fixture')
                 self.assertEqual(r['fullText'][0]['text'],'공식 전문 fixture')
                 self.assertEqual(r['decisionId'],ci.identity(a)['decisionId'])

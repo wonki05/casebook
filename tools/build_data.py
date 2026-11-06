@@ -21,6 +21,30 @@ OUT = os.path.join(ROOT, 'data', 'cases.json')
 
 GROUP_MAP = {'standard': 'standard', 'annual': 'annual', 'enbanc': 'enbanc', 'constitutional_court': 'ccourt'}
 
+# 페이지 그룹별 판시사항·요지(STANDARD_FIELDS) 출처 우선순위 — spec/CCOURT-PAGE-SUMMARY.md.
+# 표준판례·판례연구 페이지는 단원(목차)에 맞춘 검증된 발췌를 먼저 보이고, 최신판례 페이지(법률신문·전원합의체·헌법재판소)는
+# 재판 전체를 조명하는 공식 판시사항·요지를 먼저 보인다. 배치의 summarySource('standard'|'official')가 있으면 그 출처를 맨 앞에
+# 둔다. 편집 요약(editorial)은 언제나 마지막이다. 어느 순서든 원출처 문자열은 바꾸지 않고 필드별 출처(fieldSources)를 남긴다.
+SUMMARY_PRECEDENCE = {
+    'standard': ('standard', 'official', 'editorial'),
+    'research': ('standard', 'official', 'editorial'),
+    'annual': ('official', 'standard', 'editorial'),
+    'enbanc': ('official', 'standard', 'editorial'),
+    'ccourt': ('official', 'standard', 'editorial'),
+}
+SUMMARY_SOURCE_OVERRIDES = ('standard', 'official')
+
+
+def summary_precedence(group, override=None):
+    """배치가 속한 페이지 그룹의 우선순위에 배치별 덮어쓰기(summarySource)를 적용한 출처 순서."""
+    order = list(SUMMARY_PRECEDENCE.get(group, SUMMARY_PRECEDENCE['standard']))
+    if override:
+        if override not in SUMMARY_SOURCE_OVERRIDES:
+            raise ValueError(f'summarySource 는 {"|".join(SUMMARY_SOURCE_OVERRIDES)} 중 하나여야 합니다: {override!r}')
+        order.remove(override)
+        order.insert(0, override)
+    return tuple(order)
+
 SUBJECTS = [{"id": s["id"], "label": s["label"], "standard": s["standard"]} for s in SUBJECT_DEFS]      # tools/subjects.py 가 단일 출처
 SUBJECT_NAMES = '·'.join(s["label"] for s in STANDARD_SUBJECTS)
 FIELD_NAMES = '·'.join(dict.fromkeys(f["label"] for f in ANNUAL_FIELDS))
@@ -248,9 +272,17 @@ def textify(v):
 
 
 def editorial_items(v):
-    """Original editorial issues/holding: string (maybe '[1] ...' or '* 1. ...') or list."""
+    """Original editorial issues/holding: string (maybe '[1] ...' or '* 1. ...') or list.
+    List items that begin with their own marker ('1. …', '[1] …') keep it as the item label (law.go.kr 형식의 편집 요약)."""
     if isinstance(v, list):
-        return [{"n": "", "text": str(x).strip()} for x in v if str(x).strip()]
+        items = []
+        for x in v:
+            text = str(x).strip()
+            if not text:
+                continue
+            m = MARKER_TYPES[1][1].match(text) or MARKER_TYPES[0][1].match(text)
+            items.append({"n": m.group(1), "text": text[m.end():].strip()} if m and text[m.end():].strip() else {"n": "", "text": text})
+        return items
     s = textify(v).strip()
     s = re.sub(r'^\*\s*', '', s)
     return split_items(s)
@@ -336,43 +368,61 @@ FIELD_OF_HEADING = {'판시사항': 'issues', '판결요지': 'holdings', '결�
                     '참조조문': 'statutes', '참조판례': 'precedents'}
 
 
-def apply_source_precedence(rec, standard_fields, official_fields, editorial, supplemental=None):
-    """Select each study field without modifying official or book source text."""
+def apply_source_precedence(rec, standard_fields, official_fields, editorial, supplemental=None,
+                            order=SUMMARY_PRECEDENCE['standard']):
+    """Select each study field without modifying official or book source text.
+
+    order 는 필드별로 출처를 고르는 순서다 — 'standard'(검증된 표준판례 발췌; 명시된 빈 배열 [] 도 선택이다),
+    'official'(공식·보충 수집본; 내용이 있을 때만), 'editorial'(편집 요약; 내용이 있을 때만, 없으면 missing).
+    페이지 그룹마다 다르며(SUMMARY_PRECEDENCE) 배치의 summarySource 로 덮어쓸 수 있다(summary_precedence)."""
     sources = {}
     official_source = rec.get('source') or {}
     standard_provenance = []
+    basis = editorial.get('basis') if isinstance(editorial, dict) else None
     for field in STANDARD_FIELDS:
-        if field in standard_fields:
-            choice = standard_fields[field]
-            rec[field] = copy.deepcopy(choice['value'])
-            sources[field] = {'type': 'standard', 'sources': copy.deepcopy(choice['sources'])}
-            for source in choice['sources']:
-                if source not in standard_provenance:
-                    standard_provenance.append(copy.deepcopy(source))
-        elif official_fields.get(field):
-            rec[field] = copy.deepcopy(official_fields[field])
-            if supplemental and field in supplemental:
-                sources[field] = {'type': 'supplemental', 'label': supplemental[field]['label'],
-                                  'url': supplemental[field].get('url', '')}
-            elif official_source.get('label', '국가법령정보센터') == '국가법령정보센터':
-                sources[field] = {'type': 'official', 'label': '국가법령정보센터',
-                                  'url': official_source.get('url', '')}
-            else:
-                sources[field] = {'type': 'supplemental', 'label': official_source['label'],
-                                  'url': official_source.get('url', '')}
-        else:
-            raw = editorial.get('holding' if field == 'holdings' else field)
-            if field in ('issues', 'holdings', 'facts'):
-                rec[field] = editorial_items(raw)
-            else:
-                rec[field] = [str(x).strip() for x in (raw or []) if str(x).strip()]
-            sources[field] = ({'type': 'editorial', 'label': '편집 요약'}
-                              if rec[field] else {'type': 'missing'})
+        chosen = None
+        for kind in order:
+            if kind == 'standard' and field in standard_fields:
+                choice = standard_fields[field]
+                rec[field] = copy.deepcopy(choice['value'])
+                chosen = {'type': 'standard', 'sources': copy.deepcopy(choice['sources'])}
+                for source in choice['sources']:
+                    if source not in standard_provenance:
+                        standard_provenance.append(copy.deepcopy(source))
+            elif kind == 'official' and official_fields.get(field):
+                rec[field] = copy.deepcopy(official_fields[field])
+                if supplemental and field in supplemental:
+                    chosen = {'type': 'supplemental', 'label': supplemental[field]['label'],
+                              'url': supplemental[field].get('url', '')}
+                elif official_source.get('label', '국가법령정보센터') == '국가법령정보센터':
+                    chosen = {'type': 'official', 'label': '국가법령정보센터',
+                              'url': official_source.get('url', '')}
+                else:
+                    chosen = {'type': 'supplemental', 'label': official_source['label'],
+                              'url': official_source.get('url', '')}
+            elif kind == 'editorial':
+                raw = editorial.get('holding' if field == 'holdings' else field)
+                if field in ('issues', 'holdings', 'facts'):
+                    value = editorial_items(raw)
+                else:
+                    value = [str(x).strip() for x in (raw or []) if str(x).strip()]
+                if value:
+                    rec[field] = value
+                    chosen = {'type': 'editorial', 'label': '편집 요약'}
+                    if basis:
+                        chosen['basis'] = copy.deepcopy(basis)
+            if chosen:
+                break
+        if not chosen:
+            rec[field] = []
+            chosen = {'type': 'missing'}
+        sources[field] = chosen
     types = {sources[f]['type'] for f in ('issues', 'holdings')}
     rec['summaryType'] = ('standard' if types == {'standard'} else
                           'official' if types == {'official'} else
                           'editorial' if types <= {'editorial', 'missing'} else 'mixed')
     rec['fieldSources'] = sources
+    rec['summaryPrecedence'] = list(order)
     rec['standardSource'] = standard_provenance[0] if standard_provenance else None
     rec['standardSources'] = standard_provenance
     # Keep the official counterpart available for comparison without relabeling it.
@@ -435,6 +485,24 @@ def standard_decision_ids(records, identities):
     return {identities[c['id']]['decisionId'] for c in records if c['group'] == 'standard'}
 
 
+def standard_placements_by_decision(records, identities):
+    """같은 재판의 표준판례 배치 목록 — 다른 페이지의 배지가 표준판례 상세창으로 갈 수 있게 한다 (과목 순서 → 수록 순서)."""
+    subject_order = {s['id']: i for i, s in enumerate(STANDARD_SUBJECTS)}
+    out = {}
+    for c in records:
+        if c['group'] != 'standard':
+            continue
+        subject = c.get('subject') or 'constitution'
+        out.setdefault(identities[c['id']]['decisionId'], []).append(
+            {'id': c['id'], 'page': 'std-' + subject, 'subject': subject, 'title': (c.get('title') or '').strip(),
+             'tocPath': list(c.get('tocPath') or []), 'order': (c.get('standard') or {}).get('order', 10**9)})
+    for placements in out.values():
+        placements.sort(key=lambda p: (subject_order.get(p['subject'], 9), p['order'], p['id']))
+        for p in placements:
+            p.pop('order')
+    return out
+
+
 def build():
     reg = json.loads(Path(REG).read_text(encoding='utf-8'))
     TOC = load_toc()
@@ -444,6 +512,7 @@ def build():
     identities = {c['id']: identity(c, (fetched_by_id[c['id']] or {}).get('citation', '')) for c in reg['cases']}
     standard_by_decision = standard_sources_by_decision(reg['cases'], identities)
     standard_ids = standard_decision_ids(reg['cases'], identities)
+    standard_placements = standard_placements_by_decision(reg['cases'], identities)
     shared_fetched = shared_fetched_by_decision(reg['cases'], identities, fetched_by_id)
     for c in reg['cases']:
         cid = c['id']
@@ -495,6 +564,10 @@ def build():
             "tags": c.get('tags') or [],
         }
         rec.update(identities[cid])
+        if rec['isStandard'] and group != 'standard':
+            rec['standardPlacements'] = copy.deepcopy(standard_placements.get(rec['decisionId'], []))
+        if c.get('summarySource'):
+            rec['summarySource'] = c['summarySource']
         ccourt_source = c.get('ccourtSource')
         if ccourt_source:
             rec['ccourtSource'] = copy.deepcopy(ccourt_source)
@@ -562,7 +635,8 @@ def build():
                 rec["source"] = {"label": "국가법령정보센터", "url": f"https://www.law.go.kr/LSW/{'precInfoP' if lg.get('kind') == 'prec' else 'detcInfoP'}.do?{'precSeq' if lg.get('kind') == 'prec' else 'detcSeq'}={lg['seq']}"}
         official_fields = {key: copy.deepcopy(rec[key]) for key in STANDARD_FIELDS}
         apply_source_precedence(rec, standard_by_decision.get(rec['decisionId'], {}), official_fields, ed,
-                                supplemental_fields if fetched and fetched.get('sections') else None)
+                                supplemental_fields if fetched and fetched.get('sections') else None,
+                                summary_precedence(group, c.get('summarySource')))
         if fetched and fetched.get('sections') and (supplement_full or supplemental_fields):
             # 공식 수집본에 사용자 제공 보충 구역을 붙인 경우: 전체를 공식 원문으로 표시하지 않고 구역별 출처를 함께 적는다.
             supplement_labels = list(dict.fromkeys([sup['sourceLabel'] for _, sup in supplement_full]

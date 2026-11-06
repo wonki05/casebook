@@ -32,7 +32,7 @@ async function main() {
     esc: value => String(value || ''), sec: (n, heading, body) => `<h3>${heading}</h3>${body}`,
     itemsHTML: rows => (rows || []).map(x => x.text).join('\n'), srcHTML: () => '',
     hasToc: () => false, subjLabel: () => '헌법', recordKey: c => c.decisionId,
-    courtIcon: () => '', standardBadge: () => '', tabHTML: () => '', caseNavHTML: () => '',
+    courtIcon: () => '', standardBadge: () => '', standardNoteHTML: () => '', tabHTML: () => '', caseNavHTML: () => '',
   });
   vm.runInContext([...declarations, ...['compareStandardCases', 'fieldSourceHTML', 'summaryHTML', 'caseHTML'].map(extract)].join('\n'), context);
   const rows = data.cases.slice(0, 3);

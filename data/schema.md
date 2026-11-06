@@ -44,7 +44,9 @@
 
   "resultSource": null,                 // 별도 검증한 결과의 원문 주문·출처·인용·원수집본 SHA-256; result-import로만 보완
 
-  "editorial": { "issues": [...], "holding": [...], "statutes": [...] },   // 해당 필드에 표준판례·공식 자료가 모두 없을 때만 쓰는 대체문(선택)
+  "editorial": { "issues": ["1. … 여부(적극)"], "holding": ["1. …"], "statutes": [...], "basis": { "label": "헌법재판소 최근 주요결정 게시물", "url": "https://...", "basedOn": "post" } },   // 해당 필드에 표준판례·공식 자료가 모두 없을 때만 쓰는 대체문(선택). basis = 요약의 근거 자료(화면에 "근거:" 로 표시). `set <id> --editorial <json>`
+
+  "summarySource": "standard",          // 선택. 판시사항·요지의 출처 순서를 페이지 그룹 기본값(§1-3) 대신 지정: standard | official. `set <id> --summary-source standard|official|auto`
 
   "standardSource": { "verified": true, "book": "표준판례", "edition": "2023년 개정판", "file": "data/standard-cases/표준판례(2023년 개정판)_민법.pdf", "pages": [...], "holdings": [...] }, // 검증된 PDF 추출문, §1-3
 
@@ -133,7 +135,7 @@
 
 
 
-표준판례와 공식 자료가 다르면 **검증된 표준판례의 해당 필드를 우선**한다. 이는 학습 화면의 표시 기준이며 공식 원문 파일의 내용을 고치는 작업이 아니다. 같은 `decisionId` 의 다른 페이지 배치에도 이 기준을 적용한다.
+표준판례와 공식 자료가 다르면 **표준판례·판례연구 페이지의 배치는 검증된 표준판례의 해당 필드를 우선**한다. 이는 학습 화면의 표시 기준이며 공식 원문 파일의 내용을 고치는 작업이 아니다. 같은 `decisionId` 라도 **페이지 그룹에 따라 출처 순서가 다르다**(`tools/build_data.py` 의 `SUMMARY_PRECEDENCE`, 설계 근거는 `spec/CCOURT-PAGE-SUMMARY.md`): 표준판례(`standard`)·판례연구(`research`) 배치는 표준판례 → 공식 → 편집 요약, 최신판례 페이지(`annual`·`enbanc`·`ccourt`) 배치는 재판 전체를 조명하도록 공식 → 표준판례 → 편집 요약 순서다. 배치의 `summarySource`(`standard`|`official`)가 있으면 그 출처를 맨 앞에 둔다. 어느 순서든 원출처 문자열은 바꾸지 않으며 필드별 출처(`fieldSources`)를 함께 기록한다. 표준판례 페이지 밖의 배치는 `standardPlacements` 로 같은 재판의 표준판례 배치를 가리키고 화면의 "표준판례" 배지가 그 상세창으로 연결된다.
 
 
 
@@ -165,7 +167,7 @@
 
 
 
-- 우선순위는 **필드별** `standardSource` → 공식 추출본 → `editorial` 이다. 표준판례 필드를 **생략**하면 다음 출처로 넘어가지만, 검증된 빈 배열 `[]` 을 명시하면 그 필드는 비워 두며 낮은 우선순위의 내용을 넣지 않는다.
+- 우선순위는 **필드별**로 적용된다(표준판례·판례연구 페이지: `standardSource` → 공식 추출본 → `editorial`; 최신판례 페이지: 공식 추출본 → `standardSource` → `editorial`). 표준판례 필드를 **생략**하면 다음 출처로 넘어가지만, 검증된 빈 배열 `[]` 을 명시하면 순서상 표준판례 차례에서 그 필드를 비워 두며 뒤 순서의 내용을 넣지 않는다. 편집 요약은 어느 페이지에서든 마지막이다.
 
 - 최소 하나의 검토된 텍스트 필드가 필요하다. 빈 배열은 해당 필드를 의도적으로 비워 두는 경우에만 지정한다.
 
@@ -301,7 +303,7 @@ XLSX 대조·반영은 `python tools/add_cases.py standard-import --from <원본
 
 registry + toc + fetched 를 합쳐 만든다. `pages`(표준판례는 standard 과목마다 `std-<subject>` 한 페이지 — tools/subjects.py 순서) · `subjects`([{id, label, standard}]) · `annual`({years: [2025, …, 2020] 최신순, fields: [{id, label, sub, subject}]}) · `yearTabs`({ccourt: [{id: "2026", label: "2026", from, to}] 한 해씩, enbanc: [{id: "2020+"|"2010s", label: "2020년 이후"|"2010년대", from, to}] 시대 탭 — 최신순; 헌법재판소 주요결정·대법원 전원합의체 선고연도 탭}) · `toc` · `cases`. 사건 주요 필드: page, citation("대법원 2026. 7. 22. 선고 2022도5937 전원합의체 판결"), citeShort("대판 2022도5937"),
 
-issues/holdings/facts([{n:"[1]", text}]), statutes, precedents, subjectStatutes, fullText([{heading:"[주 문]", text}]), summaryType(standard|mixed|official|editorial), fieldSources, standardSource, standard(수록 항목별 순서·제외 표시), courtId, caseNumberId, caseId, decisionId, result, annual({year, field, series, article, url} — annual 만).
+issues/holdings/facts([{n:"[1]", text}]), statutes, precedents, subjectStatutes, fullText([{heading:"[주 문]", text}]), summaryType(standard|mixed|official|editorial), summaryPrecedence(이 배치에 적용한 출처 순서, 예 ["official","standard","editorial"]), summarySource(등록부의 덮어쓰기가 있을 때만), fieldSources, standardSource, standard(수록 항목별 순서·제외 표시), standardPlacements(표준판례 페이지 밖의 배치가 표준판례와 같은 재판이면 [{id, page, subject, title, tocPath}] — 배지 링크용), officialSummary(공식 필드 사본), courtId, caseNumberId, caseId, decisionId, result, annual({year, field, series, article, url} — annual 만).
 
 괄호는 화면용 조판에서 `[ ]` 로 통일된다(【 】 금지). 원출처 파일은 보존한다.
 
@@ -313,7 +315,8 @@ issues/holdings/facts([{n:"[1]", text}]), statutes, precedents, subjectStatutes,
 
 - 공식 자료: `{"type":"official","label":...,"url":...}`
 
-- 편집 요약: `{"type":"editorial","label":...}`
+- 편집 요약: `{"type":"editorial","label":"편집 요약","basis":{"label":...,"url":...}}` (`basis` 는 등록부 `editorial.basis` 가 있을 때만; 화면에 "근거:" 로 표시)
+- 보충 자료: `{"type":"supplemental","label":...,"url":...}` (사용자 제공 수록본·포털 등 국가법령정보센터가 아닌 출처의 공식 필드)
 
 - 자료 없음: `{"type":"missing"}`
 

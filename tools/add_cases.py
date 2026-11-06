@@ -14,6 +14,10 @@
   python3 tools/add_cases.py result-import --from reviewed-results.json [--dry-run]
   # 원전(PDF 등)의 대표 사건번호 오기 정정: 재판 ID 를 다시 계산하고 이전 ID 는 identityAliases 로 이어 둔다
   python3 tools/add_cases.py set std-civil-827 --correct-case 2015므8351
+  # 판시사항·요지 출처를 페이지 그룹 기본값(표준판례·판례연구: 표준판례 우선, 최신판례: 공식 우선) 대신 지정 — standard | official | auto(기본값으로 복귀)
+  python3 tools/add_cases.py set cc-2021heolma619 --summary-source standard
+  # 편집 요약 교체(해당 필드에 표준판례·공식 자료가 모두 없을 때만 표시; 근거 자료는 basis 에): {issues, holding, statutes, basis{label,url,note,basedOn}}
+  python3 tools/add_cases.py set cc-2018heolma155 --editorial reviewed/cc-2018heolma155.editorial.json
   # 같은 과목에서 같은 재판을 다른 제목(단원에 맞는 제목)으로 한 번 더 배치하는 것은 허용된다(제목이 같으면 중복)
   # 목차
   python3 tools/add_cases.py toc list --subject civil
@@ -41,6 +45,46 @@ TOC = os.path.join(ROOT, 'data', 'toc.json')
 FETCHED = os.path.join(ROOT, 'data', 'fetched')
 SUBJECTS = SUBJECT_IDS   # tools/subjects.py 가 단일 출처 (지식재산권법 ip 는 표준판례 과목이 아님 → STANDARD_IDS)
 GROUPS = ['standard', 'research', 'annual', 'enbanc', 'ccourt']
+SUMMARY_SOURCES = ('standard', 'official')   # 배치별 판시사항·요지 출처 덮어쓰기(summarySource) — 기본값은 build_data.SUMMARY_PRECEDENCE
+EDITORIAL_FIELDS = ('issues', 'holding', 'facts', 'statutes', 'precedents', 'subjectStatutes')
+EDITORIAL_BASIS_KEYS = ('label', 'url', 'note', 'basedOn', 'retrievedAt')
+
+
+def checked_editorial(value, label='editorial'):
+    """편집 요약(대체문) 구조 검사. 필드는 비어 있지 않은 문자열 배열(또는 번호 표지가 든 한 문자열)이고 'holdings' 는 'holding' 으로 받는다.
+    basis 는 요약의 근거 자료 {label(필수), url, note, basedOn, retrievedAt}. 표기 규칙(【 】·"헌재"·"전합" 약칭 금지)도 검사한다."""
+    if value is None:
+        return {}
+    if not isinstance(value, dict):
+        raise ValueError(f'{label}: 객체여야 합니다')
+    out = {}
+    for key, v in value.items():
+        if key == 'holdings' and 'holding' not in value:
+            key = 'holding'
+        if key in EDITORIAL_FIELDS:
+            texts = [v] if isinstance(v, str) else v
+            if not isinstance(texts, list) or not all(isinstance(x, str) and x.strip() for x in texts):
+                raise ValueError(f'{label}.{key}: 비어 있지 않은 문자열 배열이어야 합니다')
+            for text in texts:
+                if '【' in text or '】' in text:
+                    raise ValueError(f'{label}.{key}: 괄호는 [ ] 를 씁니다(【 】 금지)')
+                if re.search(r'(?<![가-힣])(헌재|전합)(?![가-힣])', text):
+                    raise ValueError(f'{label}.{key}: "헌재"·"전합" 약칭 대신 헌법재판소·전원합의체로 씁니다')
+            out[key] = v
+        elif key == 'basis':
+            if not isinstance(v, dict) or not isinstance(v.get('label'), str) or not v['label'].strip():
+                raise ValueError(f'{label}.basis: 근거 자료 이름 label 이 필요합니다')
+            unknown = [k for k in v if k not in EDITORIAL_BASIS_KEYS]
+            if unknown:
+                raise ValueError(f'{label}.basis: 알 수 없는 키 {", ".join(unknown)} (가능: {", ".join(EDITORIAL_BASIS_KEYS)})')
+            if any(not isinstance(v[k], str) for k in v):
+                raise ValueError(f'{label}.basis: 값은 문자열이어야 합니다')
+            if v.get('url') and not re.match(r'^https?://', v['url']):
+                raise ValueError(f'{label}.basis.url: http(s) 주소여야 합니다')
+            out['basis'] = v
+        else:
+            raise ValueError(f'{label}: 알 수 없는 키 {key} (가능: {", ".join(EDITORIAL_FIELDS)}, basis)')
+    return out
 
 
 def validate_ccourt_source(source, group, court):
@@ -212,6 +256,9 @@ def make_entry(reg, toc, group, subject, case_number, date, title, toc_path=None
     if decision_type:
         e['decisionType'] = decision_type
     try:
+        e['editorial'] = checked_editorial(e.get('editorial'), f'{case_number} editorial')
+        if e.get('summarySource') is not None and e['summarySource'] not in SUMMARY_SOURCES:
+            raise ValueError(f"summarySource 는 {'|'.join(SUMMARY_SOURCES)} 중 하나여야 합니다: {e['summarySource']!r}")
         validate_standard_source(e.get('standardSource'))
         validate_ccourt_source(e.get('ccourtSource'), group, court)
         validate_scourt_source(e.get('scourtSource'), group, court)
@@ -284,7 +331,7 @@ def cmd_add(a):
             if c.get('status') != 'ok':
                 continue
             e = make_entry(reg, toc, group, c.get('subject') or subject, c['caseNumber'], c.get('date'), c.get('title'), c.get('tocPath'), c.get('tags'), c.get('court'), c.get('enBanc'),
-                           year, src.get('article'), src.get('url'), c.get('editorial'), {k: c.get(k) for k in ('selectionReason', 'keywords', 'difficulty', 'memo', 'lawgo', 'decisionType', 'courtId', 'standardSource', 'ccourtSource', 'scourtSource')},
+                           year, src.get('article'), src.get('url'), c.get('editorial'), {k: c.get(k) for k in ('selectionReason', 'keywords', 'difficulty', 'memo', 'lawgo', 'decisionType', 'courtId', 'standardSource', 'ccourtSource', 'scourtSource', 'summarySource')},
                            a.field or c.get('field') or src.get('field'))
             if duplicate(reg, e):
                 print('이미 있음:', c['caseNumber']); continue
@@ -705,6 +752,16 @@ def cmd_set(a):
         c['standardSource'] = read_json(a.standard_source)
         validate_standard_source(c['standardSource'])
     if a.enbanc is not None: c['enBanc'] = a.enbanc == 'yes'
+    if getattr(a, 'summary_source', None) is not None:
+        if a.summary_source == 'auto':
+            c.pop('summarySource', None)   # 페이지 그룹 기본값(build_data.SUMMARY_PRECEDENCE)으로 복귀
+        else:
+            c['summarySource'] = a.summary_source
+    if getattr(a, 'editorial', None):
+        try:
+            c['editorial'] = checked_editorial(read_json(a.editorial))
+        except ValueError as exc:
+            raise SystemExit(f'--editorial {a.editorial}: {exc}') from exc
     for k in ('selectionReason', 'keywords', 'difficulty', 'memo'):
         v = getattr(a, k, None)
         if v is not None:
@@ -928,6 +985,9 @@ def cmd_validate(a):
                 errs.append(f"{c['id']}: 전원합의체는 대법원 사건에만 표시")
             if c['group'] == 'enbanc' and c.get('court') != '대법원':
                 errs.append(f"{c['id']}: enbanc 그룹에 대법원이 아닌 사건")
+            if c.get('summarySource') is not None and c['summarySource'] not in SUMMARY_SOURCES:
+                errs.append(f"{c['id']}: summarySource 는 {'|'.join(SUMMARY_SOURCES)} 중 하나 ({c['summarySource']!r})")
+            checked_editorial(c.get('editorial'), f"{c['id']}: editorial")
         except (ValueError, KeyError) as exc:
             errs.append(f"{c['id']}: {exc}")
         if c['id'] in ids: errs.append(f"중복 id {c['id']}")
@@ -986,7 +1046,10 @@ def main():
     p.add_argument('--standard-source', help='PDF 원문과 대조한 표준판례 발췌 JSON 파일')
     p.add_argument('--selectionReason'); p.add_argument('--keywords'); p.add_argument('--difficulty'); p.add_argument('--memo')
     p.add_argument('--field', type=resolve_field, help='법률신문 분야 (' + ', '.join(ANNUAL_FIELD_IDS) + ') — 과목도 함께 맞춘다')
-    p.add_argument('--year', type=int); p.add_argument('--article'); p.add_argument('--url'); p.set_defaults(fn=cmd_set)
+    p.add_argument('--year', type=int); p.add_argument('--article'); p.add_argument('--url')
+    p.add_argument('--summary-source', choices=list(SUMMARY_SOURCES) + ['auto'], help='판시사항·요지 출처를 페이지 그룹 기본값 대신 지정 (auto = 기본값으로 복귀)')
+    p.add_argument('--editorial', help='편집 요약 JSON 파일({issues, holding, statutes, basis{label,url,note}}) — 해당 필드에 표준판례·공식 자료가 없을 때만 표시된다')
+    p.set_defaults(fn=cmd_set)
     p = sub.add_parser('toc'); p.add_argument('toc_cmd', choices=['list', 'add', 'rename', 'replace']); p.add_argument('--from', dest='from_file', help='replace: 제안 목차 JSON({"proposed": [...]} 또는 배열)'); p.add_argument('--dry-run', action='store_true'); p.add_argument('--subject', choices=STANDARD_IDS); p.add_argument('--parent'); p.add_argument('--id'); p.add_argument('--label'); p.set_defaults(fn=cmd_toc)
     p = sub.add_parser('validate'); p.set_defaults(fn=cmd_validate)
     p = sub.add_parser('research-import'); p.add_argument('--from', dest='from_file', required=True); p.add_argument('--dry-run', action='store_true'); p.set_defaults(fn=cmd_research_import)

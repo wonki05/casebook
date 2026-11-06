@@ -417,8 +417,14 @@ class SharedDecisionTests(unittest.TestCase):
         for item in data['cases']:
             self.assertTrue(item['isStandard'])
             self.assertEqual(item['officialSourceId'], 'standard-existing')
-            self.assertEqual(item['fieldSources']['holdings']['type'], 'standard')
-            self.assertEqual(item['holdings'], standard['standardSource']['holdings'])
+            # 표준판례·판례연구 배치는 검증된 표준판례 발췌를, 최신판례(enbanc) 배치는 공식 요지를 먼저 보인다 (spec/CCOURT-PAGE-SUMMARY.md)
+            if item['id'] == 'latest-one':
+                self.assertEqual(item['fieldSources']['holdings']['type'], 'official')
+                self.assertEqual(item['holdings'], [{'n': '', 'text': '공식 요지'}])
+                self.assertEqual([p['id'] for p in item['standardPlacements']], ['standard-existing'])
+            else:
+                self.assertEqual(item['fieldSources']['holdings']['type'], 'standard')
+                self.assertEqual(item['holdings'], standard['standardSource']['holdings'])
             self.assertEqual(item['officialSummary']['holdings'], [{'n': '', 'text': '공식 요지'}])
             self.assertEqual(item['fullText'], by_id['standard-existing']['fullText'])
             self.assertEqual(item['result'], '상고기각')

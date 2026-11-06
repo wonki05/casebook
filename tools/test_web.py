@@ -142,8 +142,9 @@ async def test_reader(browser, base, data, laws, item, full):
     require(registration['active'] and registration['scope'].endswith('/output/web/'), 'Incorrect PWA scope')
     await page.wait_for_function('!!navigator.serviceWorker.controller', timeout=15000)
     await page.locator('[data-download-offline]').click()
+    # 전문 4,400여 건을 캐시에 저장하는 데 이 PC 에서 약 80초가 걸린다(2026-11 전원합의체 668건 추가 뒤). 60초는 부족해 180초로 둔다.
     await page.wait_for_function('document.querySelector("#dataStatus")?.textContent.includes("개를 저장했습니다.")',
-                                 timeout=60000)
+                                 timeout=180000)
     require(not page_errors, 'Runtime exceptions: ' + repr(page_errors))
     require(not console_errors, 'Unexpected browser errors: ' + repr(console_errors))
     print('webcheck: offline package downloaded', flush=True)
