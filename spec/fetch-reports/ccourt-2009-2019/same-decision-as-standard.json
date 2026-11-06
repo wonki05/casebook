@@ -1,0 +1,995 @@
+[
+ {
+  "id": "cc-2023heolla9",
+  "standard": [
+   "std-constitution-482"
+  ]
+ },
+ {
+  "id": "cc-2017heolga21",
+  "standard": [
+   "std-constitution-423"
+  ]
+ },
+ {
+  "id": "cc-2018heolma730",
+  "standard": [
+   "std-constitution-195",
+   "std-constitution-456"
+  ]
+ },
+ {
+  "id": "cc-2016heolba96",
+  "standard": [
+   "std-criminal-425"
+  ]
+ },
+ {
+  "id": "cc-2017heolma1366",
+  "standard": [
+   "std-constitution-420"
+  ]
+ },
+ {
+  "id": "cc-2017heolma1356",
+  "standard": [
+   "std-constitution-404"
+  ]
+ },
+ {
+  "id": "cc-2018heolma1208",
+  "standard": [
+   "std-constitution-269"
+  ]
+ },
+ {
+  "id": "cc-2018heolma221",
+  "standard": [
+   "std-constitution-175"
+  ]
+ },
+ {
+  "id": "cc-2017heolba127",
+  "standard": [
+   "std-constitution-81"
+  ]
+ },
+ {
+  "id": "cc-2015heolma1204",
+  "standard": [
+   "std-constitution-380"
+  ]
+ },
+ {
+  "id": "cc-2014heolma368",
+  "standard": [
+   "std-constitution-111",
+   "std-constitution-494"
+  ]
+ },
+ {
+  "id": "cc-2015heolga38",
+  "standard": [
+   "std-constitution-182"
+  ]
+ },
+ {
+  "id": "cc-2016heolma344",
+  "standard": [
+   "std-constitution-98",
+   "std-constitution-298"
+  ]
+ },
+ {
+  "id": "cc-2016heolma263",
+  "standard": [
+   "std-constitution-389"
+  ]
+ },
+ {
+  "id": "cc-2014heolba180",
+  "standard": [
+   "std-constitution-447"
+  ]
+ },
+ {
+  "id": "cc-2014heolba148",
+  "standard": [
+   "std-constitution-173"
+  ]
+ },
+ {
+  "id": "cc-2015heolla4",
+  "standard": [
+   "std-constitution-245"
+  ]
+ },
+ {
+  "id": "cc-2016heolga8",
+  "standard": [
+   "std-constitution-123"
+  ]
+ },
+ {
+  "id": "cc-2012heolma191",
+  "standard": [
+   "std-constitution-388"
+  ]
+ },
+ {
+  "id": "cc-2011heolba379",
+  "standard": [
+   "std-constitution-115"
+  ]
+ },
+ {
+  "id": "cc-2014heolma346",
+  "standard": [
+   "std-constitution-96"
+  ]
+ },
+ {
+  "id": "cc-2015heolma994",
+  "standard": [
+   "std-constitution-107"
+  ]
+ },
+ {
+  "id": "cc-2016heolma649",
+  "standard": [
+   "std-constitution-174"
+  ]
+ },
+ {
+  "id": "cc-2016heolma503",
+  "standard": [
+   "std-constitution-381"
+  ]
+ },
+ {
+  "id": "cc-2015heolba239",
+  "standard": [
+   "std-constitution-20"
+  ]
+ },
+ {
+  "id": "cc-2015heolma653",
+  "standard": [
+   "std-constitution-183"
+  ]
+ },
+ {
+  "id": "cc-2016heolna1",
+  "standard": [
+   "std-constitution-458",
+   "std-constitution-478"
+  ]
+ },
+ {
+  "id": "cc-2015heolba63",
+  "standard": [
+   "std-constitution-229"
+  ]
+ },
+ {
+  "id": "cc-2013heolma142",
+  "standard": [
+   "std-constitution-76"
+  ]
+ },
+ {
+  "id": "cc-2014heolma977",
+  "standard": [
+   "std-constitution-448"
+  ]
+ },
+ {
+  "id": "cc-2015heolma1206",
+  "standard": [
+   "std-constitution-125"
+  ]
+ },
+ {
+  "id": "cc-2014heolma797",
+  "standard": [
+   "std-constitution-159"
+  ]
+ },
+ {
+  "id": "cc-2014heolga3",
+  "standard": [
+   "std-constitution-412"
+  ]
+ },
+ {
+  "id": "cc-2015heolba331",
+  "standard": [
+   "std-constitution-220"
+  ]
+ },
+ {
+  "id": "cc-2014heolga9",
+  "standard": [
+   "std-constitution-92"
+  ]
+ },
+ {
+  "id": "cc-2015heolma236",
+  "standard": [
+   "std-constitution-374"
+  ]
+ },
+ {
+  "id": "cc-2015heolma924",
+  "standard": [
+   "std-constitution-109"
+  ]
+ },
+ {
+  "id": "cc-2013heolba370",
+  "standard": [
+   "std-constitution-228"
+  ]
+ },
+ {
+  "id": "cc-2013heolga1",
+  "standard": [
+   "std-constitution-12"
+  ]
+ },
+ {
+  "id": "cc-2015heolla1",
+  "standard": [
+   "std-constitution-199",
+   "std-constitution-485"
+  ]
+ },
+ {
+  "id": "cc-2015heolma1177",
+  "standard": [
+   "std-constitution-158"
+  ]
+ },
+ {
+  "id": "cc-2015heolla5",
+  "standard": [
+   "std-constitution-487"
+  ]
+ },
+ {
+  "id": "cc-2013heolga2",
+  "standard": [
+   "std-constitution-416"
+  ]
+ },
+ {
+  "id": "cc-2013heolba190",
+  "standard": [
+   "std-constitution-363"
+  ]
+ },
+ {
+  "id": "cc-2014heolma367",
+  "standard": [
+   "std-constitution-452"
+  ]
+ },
+ {
+  "id": "cc-2013heolga9",
+  "standard": [
+   "std-constitution-93"
+  ]
+ },
+ {
+  "id": "cc-2013heolma712",
+  "standard": [
+   "std-constitution-443"
+  ]
+ },
+ {
+  "id": "cc-2013heolba259",
+  "standard": [
+   "std-constitution-23"
+  ]
+ },
+ {
+  "id": "cc-2013heolba68",
+  "standard": [
+   "std-constitution-106"
+  ]
+ },
+ {
+  "id": "cc-2013heolba168",
+  "standard": [
+   "std-constitution-131"
+  ]
+ },
+ {
+  "id": "cc-2014heolma1149",
+  "standard": [
+   "std-constitution-259",
+   "std-constitution-451",
+   "std-constitution-493"
+  ]
+ },
+ {
+  "id": "cc-2012heolma940",
+  "standard": [
+   "std-constitution-353"
+  ]
+ },
+ {
+  "id": "cc-2013heolga20",
+  "standard": [
+   "std-constitution-405"
+  ]
+ },
+ {
+  "id": "cc-2012heolba302",
+  "standard": [
+   "std-constitution-442"
+  ]
+ },
+ {
+  "id": "cc-2015heolba35",
+  "standard": [
+   "std-constitution-100"
+  ]
+ },
+ {
+  "id": "cc-2014heolma340",
+  "standard": [
+   "std-constitution-108"
+  ]
+ },
+ {
+  "id": "cc-2013heolba204",
+  "standard": [
+   "std-constitution-464"
+  ]
+ },
+ {
+  "id": "cc-2010heolla2",
+  "standard": [
+   "std-constitution-252"
+  ]
+ },
+ {
+  "id": "cc-2011heolma769",
+  "standard": [
+   "std-constitution-356",
+   "std-constitution-410"
+  ]
+ },
+ {
+  "id": "cc-2011heolma731",
+  "standard": [
+   "std-constitution-105"
+  ]
+ },
+ {
+  "id": "cc-2013heolba129",
+  "standard": [
+   "std-constitution-94"
+  ]
+ },
+ {
+  "id": "cc-2013heolma666",
+  "standard": [
+   "std-constitution-435"
+  ]
+ },
+ {
+  "id": "cc-2013heolma623",
+  "standard": [
+   "std-constitution-190"
+  ]
+ },
+ {
+  "id": "cc-2013heolma214",
+  "standard": [
+   "std-constitution-215"
+  ]
+ },
+ {
+  "id": "cc-2014heolga5",
+  "standard": [
+   "std-constitution-453"
+  ]
+ },
+ {
+  "id": "cc-2014heolba156",
+  "standard": [
+   "std-constitution-89"
+  ]
+ },
+ {
+  "id": "cc-2009heolba17",
+  "standard": [
+   "std-constitution-80"
+  ]
+ },
+ {
+  "id": "cc-2013heolda1",
+  "standard": [
+   "std-constitution-07",
+   "std-constitution-483"
+  ]
+ },
+ {
+  "id": "cc-2012heolma192",
+  "standard": [
+   "std-constitution-10"
+  ]
+ },
+ {
+  "id": "cc-2011heolba129",
+  "standard": [
+   "std-constitution-65",
+   "std-administrative-267",
+   "std-constitution-300"
+  ]
+ },
+ {
+  "id": "cc-2013heolma359",
+  "standard": [
+   "std-constitution-337"
+  ]
+ },
+ {
+  "id": "cc-2011heolma28",
+  "standard": [
+   "std-constitution-387"
+  ]
+ },
+ {
+  "id": "cc-2009heolma256",
+  "standard": [
+   "std-constitution-431"
+  ]
+ },
+ {
+  "id": "cc-2013heolba122",
+  "standard": [
+   "std-administrative-292"
+  ]
+ },
+ {
+  "id": "cc-2012heolma331",
+  "standard": [
+   "std-constitution-113"
+  ]
+ },
+ {
+  "id": "cc-2011heolga29",
+  "standard": [
+   "std-constitution-137"
+  ]
+ },
+ {
+  "id": "cc-2011heolba42",
+  "standard": [
+   "std-constitution-16"
+  ]
+ },
+ {
+  "id": "cc-2014heolma7",
+  "standard": [
+   "std-constitution-239",
+   "std-constitution-314"
+  ]
+ },
+ {
+  "id": "cc-2011heolba174",
+  "standard": [
+   "std-constitution-138"
+  ]
+ },
+ {
+  "id": "cc-2010heolba251",
+  "standard": [
+   "std-constitution-474"
+  ]
+ },
+ {
+  "id": "cc-2012heolma431",
+  "standard": [
+   "std-constitution-15"
+  ]
+ },
+ {
+  "id": "cc-2012heolma409",
+  "standard": [
+   "std-constitution-154"
+  ]
+ },
+ {
+  "id": "cc-2013heolba170",
+  "standard": [
+   "std-constitution-25"
+  ]
+ },
+ {
+  "id": "cc-2011heolma398",
+  "standard": [
+   "std-constitution-382"
+  ]
+ },
+ {
+  "id": "cc-2012heolma271",
+  "standard": [
+   "std-constitution-492"
+  ]
+ },
+ {
+  "id": "cc-2010heolma204",
+  "standard": [
+   "std-constitution-194"
+  ]
+ },
+ {
+  "id": "cc-2012heolla1",
+  "standard": [
+   "std-constitution-209"
+  ]
+ },
+ {
+  "id": "cc-2011heolma122",
+  "standard": [
+   "std-constitution-170"
+  ]
+ },
+ {
+  "id": "cc-2011heolma676",
+  "standard": [
+   "std-constitution-432"
+  ]
+ },
+ {
+  "id": "cc-2011heolba267",
+  "standard": [
+   "std-criminal-172"
+  ]
+ },
+ {
+  "id": "cc-2012heolba54",
+  "standard": [
+   "std-constitution-62"
+  ]
+ },
+ {
+  "id": "cc-2009heolma514",
+  "standard": [
+   "std-constitution-500"
+  ]
+ },
+ {
+  "id": "cc-2010heolba132",
+  "standard": [
+   "std-constitution-207"
+  ]
+ },
+ {
+  "id": "cc-2009heolba129",
+  "standard": [
+   "std-constitution-235"
+  ]
+ },
+ {
+  "id": "cc-2011heolba117",
+  "standard": [
+   "std-constitution-287"
+  ]
+ },
+ {
+  "id": "cc-2010heolga82",
+  "standard": [
+   "std-constitution-21"
+  ]
+ },
+ {
+  "id": "cc-2010heolma153",
+  "standard": [
+   "std-constitution-102"
+  ]
+ },
+ {
+  "id": "cc-2011heolma786",
+  "standard": [
+   "std-constitution-19"
+  ]
+ },
+ {
+  "id": "cc-2008heolma430",
+  "standard": [
+   "std-constitution-336"
+  ]
+ },
+ {
+  "id": "cc-2010heolba220",
+  "standard": [
+   "std-constitution-450"
+  ]
+ },
+ {
+  "id": "cc-2009heolga27",
+  "standard": [
+   "std-constitution-338"
+  ]
+ },
+ {
+  "id": "cc-2010heolma47",
+  "standard": [
+   "std-constitution-127"
+  ]
+ },
+ {
+  "id": "cc-2010heolga65",
+  "standard": [
+   "std-constitution-434"
+  ]
+ },
+ {
+  "id": "cc-2010heolla3",
+  "standard": [
+   "std-constitution-249"
+  ]
+ },
+ {
+  "id": "cc-2010heolma88",
+  "standard": [
+   "std-constitution-499"
+  ]
+ },
+ {
+  "id": "cc-2010heolma475",
+  "standard": [
+   "std-constitution-444"
+  ]
+ },
+ {
+  "id": "cc-2009heolba34",
+  "standard": [
+   "std-constitution-219"
+  ]
+ },
+ {
+  "id": "cc-2011heolma123",
+  "standard": [
+   "std-constitution-192"
+  ]
+ },
+ {
+  "id": "cc-2007heolma1001",
+  "standard": [
+   "std-constitution-132"
+  ]
+ },
+ {
+  "id": "cc-2011heolba122",
+  "standard": [
+   "std-criminal-07"
+  ]
+ },
+ {
+  "id": "cc-2010heolba384",
+  "standard": [
+   "std-constitution-417"
+  ]
+ },
+ {
+  "id": "cc-2010heolba307",
+  "standard": [
+   "std-constitution-376"
+  ]
+ },
+ {
+  "id": "cc-2010heolma68",
+  "standard": [
+   "std-constitution-373"
+  ]
+ },
+ {
+  "id": "cc-2009heolma351",
+  "standard": [
+   "std-constitution-43"
+  ]
+ },
+ {
+  "id": "cc-2010heolma413",
+  "standard": [
+   "std-constitution-103"
+  ]
+ },
+ {
+  "id": "cc-2006heolma788",
+  "standard": [
+   "std-constitution-75",
+   "std-constitution-311"
+  ]
+ },
+ {
+  "id": "cc-2009heolla7",
+  "standard": [
+   "std-constitution-488"
+  ]
+ },
+ {
+  "id": "cc-2009heolma406",
+  "standard": [
+   "std-constitution-351",
+   "std-constitution-430"
+  ]
+ },
+ {
+  "id": "cc-2008heolba166",
+  "standard": [
+   "std-administrative-266"
+  ]
+ },
+ {
+  "id": "cc-2009heolma341",
+  "standard": [
+   "std-constitution-377"
+  ]
+ },
+ {
+  "id": "cc-2008heolba141",
+  "standard": [
+   "std-constitution-22",
+   "std-constitution-288",
+   "std-constitution-296"
+  ]
+ },
+ {
+  "id": "cc-2008heolba56",
+  "standard": [
+   "std-constitution-358"
+  ]
+ },
+ {
+  "id": "cc-2008heolba157",
+  "standard": [
+   "std-constitution-345"
+  ]
+ },
+ {
+  "id": "cc-2008heolla7",
+  "standard": [
+   "std-constitution-250"
+  ]
+ },
+ {
+  "id": "cc-2006heolma328",
+  "standard": [
+   "std-constitution-359"
+  ]
+ },
+ {
+  "id": "cc-2009heolba27",
+  "standard": [
+   "std-constitution-86"
+  ]
+ },
+ {
+  "id": "cc-2008heolma638",
+  "standard": [
+   "std-constitution-408"
+  ]
+ },
+ {
+  "id": "cc-2008heolma514",
+  "standard": [
+   "std-constitution-227",
+   "std-constitution-466"
+  ]
+ },
+ {
+  "id": "cc-2009heolla6",
+  "standard": [
+   "std-constitution-240"
+  ]
+ },
+ {
+  "id": "cc-2007heolla4",
+  "standard": [
+   "std-constitution-66",
+   "std-administrative-388"
+  ]
+ },
+ {
+  "id": "cc-2010heolma418",
+  "standard": [
+   "std-constitution-161"
+  ]
+ },
+ {
+  "id": "cc-2009heolba192",
+  "standard": [
+   "std-constitution-462"
+  ]
+ },
+ {
+  "id": "cc-2009heolga25",
+  "standard": [
+   "std-criminal-14"
+  ]
+ },
+ {
+  "id": "cc-2008heolga4",
+  "standard": [
+   "std-constitution-446"
+  ]
+ },
+ {
+  "id": "cc-2008heolma491",
+  "standard": [
+   "std-constitution-13",
+   "std-constitution-502"
+  ]
+ },
+ {
+  "id": "cc-2005heolma346",
+  "standard": [
+   "std-constitution-41"
+  ]
+ },
+ {
+  "id": "cc-2009heolma340",
+  "standard": [
+   "std-constitution-501"
+  ]
+ },
+ {
+  "id": "cc-2008heolma438",
+  "standard": [
+   "std-constitution-505"
+  ]
+ },
+ {
+  "id": "cc-2007heolma910",
+  "standard": [
+   "std-constitution-461"
+  ]
+ },
+ {
+  "id": "cc-2009heolla11",
+  "standard": [
+   "std-constitution-241"
+  ]
+ },
+ {
+  "id": "cc-2007heolma933",
+  "standard": [
+   "std-constitution-255"
+  ]
+ },
+ {
+  "id": "cc-2009heolma170",
+  "standard": [
+   "std-constitution-375"
+  ]
+ },
+ {
+  "id": "cc-2008heolga23",
+  "standard": [
+   "std-constitution-346"
+  ]
+ },
+ {
+  "id": "cc-2008heolba160",
+  "standard": [
+   "std-constitution-55"
+  ]
+ },
+ {
+  "id": "cc-2008heolma385",
+  "standard": [
+   "std-constitution-352"
+  ]
+ },
+ {
+  "id": "cc-2008heolba58",
+  "standard": [
+   "std-constitution-82"
+  ]
+ },
+ {
+  "id": "cc-2008heolba12",
+  "standard": [
+   "std-constitution-441"
+  ]
+ },
+ {
+  "id": "cc-2007heolma667",
+  "standard": [
+   "std-constitution-101"
+  ]
+ },
+ {
+  "id": "cc-2009heolla8",
+  "standard": [
+   "std-constitution-200",
+   "std-constitution-317"
+  ]
+ },
+ {
+  "id": "cc-2007heolba114",
+  "standard": [
+   "std-administrative-265",
+   "std-constitution-419"
+  ]
+ },
+ {
+  "id": "cc-2006heolma358",
+  "standard": [
+   "std-constitution-181"
+  ]
+ },
+ {
+  "id": "cc-2008heolga14",
+  "standard": [
+   "std-criminal-13"
+  ]
+ },
+ {
+  "id": "cc-2007heolma369",
+  "standard": [
+   "std-constitution-38"
+  ]
+ },
+ {
+  "id": "cc-2006heolma618",
+  "standard": [
+   "std-constitution-78"
+  ]
+ },
+ {
+  "id": "cc-2006heolma285",
+  "standard": [
+   "std-constitution-90"
+  ]
+ },
+ {
+  "id": "cc-2006heolba109",
+  "standard": [
+   "std-constitution-399"
+  ]
+ },
+ {
+  "id": "cc-2006heolla6",
+  "standard": [
+   "std-constitution-253"
+  ]
+ },
+ {
+  "id": "cc-2007heolma843",
+  "standard": [
+   "std-constitution-44"
+  ]
+ },
+ {
+  "id": "cc-2006heolma72",
+  "standard": [
+   "std-constitution-87"
+  ]
+ },
+ {
+  "id": "cc-2005heolma764",
+  "standard": [
+   "std-constitution-347"
+  ]
+ },
+ {
+  "id": "cc-2007heolba27",
+  "standard": [
+   "std-constitution-48"
+  ]
+ },
+ {
+  "id": "cc-2007heolba8",
+  "standard": [
+   "std-constitution-221"
+  ]
+ }
+]
