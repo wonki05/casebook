@@ -958,6 +958,9 @@ def cmd_validate(a):
         except ValueError as exc:
             errs.append(str(exc))
     errs.extend(supplement_errors())
+    # 헌법재판소 결정문 전문이 줄바꿈 없이 한 줄로 수집되었는지(korean-law API 수입본 등) 검사한다.
+    from check_fulltext_lines import validation_errors as fulltext_line_errors
+    errs.extend(fulltext_line_errors(FETCHED))
     for e in errs: print('ERROR -', e)
     for warning in warnings: print('WARN -', warning)
     print(f'{len(reg["cases"])}건 점검, 오류 {len(errs)}개 / 경고 {len(warnings)}개')

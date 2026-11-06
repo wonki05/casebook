@@ -4,6 +4,14 @@
 The input is a retained get_decision_text(..., full=True) tool
 response. Metadata must match the existing target; an abbreviated merged docket
 may contain the target as any explicitly listed member. Registry is read-only.
+
+The API strips every line break from constitutional decision bodies (【주 문】
+and 【이 유】 run on inside one 【전문】 block), so such bodies are rejected by
+default: collect the law.go.kr page with `tools/fetch_lawgo.py --id <id>`
+instead (data/schema.md §3). `allow_flat_text=True` / `--allow-flat-text`
+imports one anyway, marked `retrieval.lineBreaks = "absent"`, and
+`tools/check_fulltext_lines.py` (run by `add_cases.py validate`) keeps
+reporting it until it is re-collected from the page.
 """
 from __future__ import annotations
 
@@ -12,8 +20,10 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import sys
 
 from case_identity import case_number_list, court_id, identity
+from check_fulltext_lines import flat_body, inline_section_markers
 from fetch_lawgo import direct_url, finish
 
 LABELS = {'판시사항': '【판시사항】', '판결요지': '【판결요지】', '결정요지': '【결정요지】',
@@ -74,7 +84,17 @@ def response_text(response):
     return texts[0]
 
 
-def record_from_api(response, target, seq, domain='precedent'):
+def flat_text_problem(full):
+    """Describe a body whose line breaks were removed upstream, else None."""
+    flat = flat_body(full)
+    markers = inline_section_markers(full)
+    if not flat and not markers:
+        return None
+    return '; '.join(filter(None, [flat and ('one line: ' + flat),
+                                   markers and ('order/reasons markers run on: ' + ', '.join(sorted(set(markers)))[:60])]))
+
+
+def record_from_api(response, target, seq, domain='precedent', allow_flat_text=False):
     """Return the ordinary fetched schema; retain source substrings verbatim."""
     if domain not in ('precedent', 'constitutional'):
         raise ValueError('Unsupported Korean-law domain')
@@ -123,6 +143,13 @@ def record_from_api(response, target, seq, domain='precedent'):
     quality = None
     if domain == 'constitutional':
         quality = constitutional_body_quality(full)
+    flat = flat_text_problem(full)
+    if flat and domain == 'constitutional' and not allow_flat_text:
+        raise ValueError('Constitutional API full text has no line breaks (' + flat + '); collect the official '
+                         'law.go.kr page instead: python tools/fetch_lawgo.py --id ' + str(target.get('id')) + ' --force')
+    if flat:
+        print(f"WARN {target.get('id')}: API full text without line breaks ({flat}); "
+              'prefer tools/fetch_lawgo.py page collection', file=sys.stderr)
     sections = []
     markers = list(LABEL_RE.finditer(header))
     for i, marker in enumerate(markers):
@@ -142,6 +169,8 @@ def record_from_api(response, target, seq, domain='precedent'):
                            'sourceTextSha256': hashlib.sha256(text.encode('utf-8')).hexdigest()}
     if quality:
         record['retrieval']['bodyQuality'] = quality
+    if flat:
+        record['retrieval']['lineBreaks'] = 'absent'
     return record
 
 
@@ -153,12 +182,15 @@ def main():
     parser.add_argument('--seq', required=True)
     parser.add_argument('--domain', choices=('precedent', 'constitutional'), default='precedent')
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--allow-flat-text', action='store_true',
+                        help='import a constitutional body without line breaks anyway (marked retrieval.lineBreaks=absent)')
     args = parser.parse_args()
     registry = json.loads(args.registry.read_text(encoding='utf-8'))
     matches = [item for item in registry['cases'] if item['id'] == args.id]
     if len(matches) != 1:
         parser.error('Expected exactly one existing registered target')
-    record = record_from_api(json.loads(args.response.read_text(encoding='utf-8')), matches[0], args.seq, args.domain)
+    record = record_from_api(json.loads(args.response.read_text(encoding='utf-8')), matches[0], args.seq, args.domain,
+                             allow_flat_text=args.allow_flat_text)
     if args.output.exists():
         parser.error('Output already exists; retain the existing source and choose another path')
     args.output.parent.mkdir(parents=True, exist_ok=True)

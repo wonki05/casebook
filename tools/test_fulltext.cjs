@@ -75,6 +75,22 @@ check('2026헌바70 quoted table is not a final annex', () => {
   const {rendered} = reason('cc-2026heolba70');
   for (const title of ['3. 청구인들의 주장', '4. 판단', '5. 결론']) assert(isHeading(rendered, title), title);
 });
+check('Re-collected constitutional decisions keep their top-level outline', () => {
+  // These law.go.kr page texts replaced flat API imports (spec/CCOURT-LINEBREAK-STATUS.md).
+  const expected = {
+    'cc-2020heolga12': ['3. 제청법원의 위헌법률심판 제청이유', '4. 판단', '5. 결론'],
+    'cc-2020heolma1008': ['3. 쟁점 및 관련조항', '4. 판단', '5. 결론'],
+    'cc-2020heolma1204': ['3. 관련 조항', '4. 판단', '5. 결론'],
+    'cc-2018heolba357': ['3. 청구인들의 주장 및 제청법원의 위헌법률심판 제청 이유', '4. 판단', '5. 헌법불합치결정의 필요성', '6. 결론'],
+    'cc-2019heolga30': ['4. 인체면역결핍바이러스 감염실태 및 이에 관한 제도 개관', '5. 쟁점의 정리', '8. 결론'],
+    'cc-2016heolma773': ['4. 심판대상 관련 경과 및 현황', '5. 판단'],
+    'cc-2023heolna3': ['3. 탄핵의 요건', '4. 공통된 인정사실'],
+  };
+  for (const [id, titles] of Object.entries(expected)) {
+    const {rendered} = reason(id);
+    for (const title of titles) assert(isHeading(rendered, title), `${id} ${title}`);
+  }
+});
 check('Quoted item ending in 여부 is not an outline', () => {
   const rendered = api.ftLines('1. 사건개요\n2. 심판대상\n[관련조항]\n제1조(목적)\n3. 심사 여부\n3. 청구인의 주장\n4. 판단', true);
   assert(rendered.includes('<p>3. 심사 여부</p>'));

@@ -279,6 +279,8 @@ XLSX 대조·반영은 `python tools/add_cases.py standard-import --from <원본
 
 - 실패 시 `<id>.missing.json` {id, reason, triedUrls}. 미게재(최근 선고)면 나중에 `--retry-missing`.
 
+- **공식 전문은 law.go.kr 페이지 수집본을 쓴다(API 본문 금지)**: korean-law API(`get_decision_text`)가 돌려주는 헌법재판소 결정문 본문은 줄바꿈이 모두 제거되어 있다(2026-11-07 확인; 재호출해도 같다). 이런 본문은 `【당 사 자】`·`【주 문】`·`【이 유】` 가 하나의 `【전문】` 안에 이어 붙고 판시사항 항목도 "…(적극)2. …" 처럼 붙어, 화면의 문단·[주 문] 조판·전문 개요가 작동하지 않는다. 공식 전문은 `tools/fetch_lawgo.py` 로 law.go.kr 페이지(`detcInfoP.do?detcSeq=…`)에서 수집해 구역별·문단별 줄바꿈을 보존한다. `seq` 를 아는 기존 파일은 `python tools/fetch_lawgo.py --id <id> --force` 가 그 페이지를 바로 다시 받는다(실패하면 기존 파일은 그대로이고 `<id>.missing.json` 이 생기므로, 정상 파일을 남길 때는 그 실패 기록을 지운다). API 수입 도구(`tools/import_lawgo_api.py`, `tools/import_ccourt_api_responses.py`)는 줄바꿈 없는 헌법재판소 본문을 기본으로 거부하고(실패 사유에 `fetch_lawgo.py` 안내), `--allow-flat-text` 로 굳이 수입한 파일은 `retrieval.lineBreaks: "absent"` 로 표시된다. `tools/check_fulltext_lines.py` 는 `kind: "detc"` 수집본에서 전문·이유가 길이에 비해 줄바꿈이 거의 없거나 `【전문】` 안에 주문·이유 표지가 다른 글과 붙어 있는 파일을 찾고, `add_cases.py validate` 와 `tools/test_fulltext_lines.py` 가 같은 검사를 오류로 실행한다. 재수집본과 이전 API 본문의 대조(공백·줄바꿈 제외 글자 동일성, 식별 정보)는 `tools/compare_refetched_text.py` 로 하며 결과는 `spec/CCOURT-LINEBREAK-STATUS.md` 에 있다.
+
 
 
 - **law.go.kr 미게재 사건의 사용자 제공 보충본**(예외): 사용자가 판례 검색 사이트에서 확인해 직접 제공한 텍스트는 같은 스키마로 `fetched/<id>.json` 에 두되 `provider`·`sourceLabel`(화면 출처 표기)·`sourceHeader`(원 사이트 머리글)·`sourceNote`·`suppliedAt` 을 반드시 기록한다. `sourceLabel` 이 있으면 build_data 가 "국가법령정보센터" 대신 그 문구를 출처로 쓰고, 표준판례에 없는 필드는 `fieldSources` 에 `type: "supplemental"` 로 남겨 공식 원문으로 표시하지 않는다. 사이트 부가정보(인용판례·유사판례·인용 문헌 등)는 보존하지 않는다. law.go.kr 에 게재되면 `fetch_lawgo.py --id <id> --force` 로 공식본으로 교체한다.

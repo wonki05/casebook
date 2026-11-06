@@ -2,7 +2,13 @@
 import copy
 import unittest
 
-from import_lawgo_api import record_from_api
+from import_lawgo_api import record_from_api as strict_record_from_api
+
+
+def record_from_api(*args, **kwargs):
+    """Most fixtures reproduce the API's real flat bodies; opt in explicitly."""
+    kwargs.setdefault('allow_flat_text', True)
+    return strict_record_from_api(*args, **kwargs)
 
 
 TARGET = {'id': 'cc-test', 'caseNumber': '2020헌마389', 'lookupKey': '2020헌마389',
@@ -28,6 +34,23 @@ class ImportTests(unittest.TestCase):
             {'heading': '【결정요지】', 'text': '요지 원문\n\n'},
             {'heading': '【전문】', 'text': FULL}])
         self.assertIn('detcSeq=193039', rec['sourceUrl'])
+
+    def test_flat_constitutional_body_rejected_by_default(self):
+        with self.assertRaisesRegex(ValueError, 'no line breaks.*fetch_lawgo.py --id cc-test'):
+            strict_record_from_api(response(), TARGET, '193039', 'constitutional')
+        long_flat = '【주 문】\n기각한다.\n【이 유】\n' + '이유 원문. ' * 800 +'재판관 홍길동 김철수 이영희'
+        with self.assertRaisesRegex(ValueError, 'one line'):
+            strict_record_from_api(response(SOURCE.replace(FULL, long_flat)), TARGET, '1', 'constitutional')
+
+    def test_flat_body_imported_only_on_request_and_marked(self):
+        rec = record_from_api(response(), TARGET, '193039', 'constitutional')
+        self.assertEqual(rec['retrieval']['lineBreaks'], 'absent')
+
+    def test_body_with_line_breaks_needs_no_override(self):
+        body = '【주 문】\n기각한다.\n【이 유】\n이유 원문.\n재판관 홍길동 김철수 이영희'
+        rec = strict_record_from_api(response(SOURCE.replace(FULL, body)), TARGET, '1', 'constitutional')
+        self.assertEqual(rec['sections'][-1]['text'], body)
+        self.assertNotIn('lineBreaks', rec['retrieval'])
 
     def test_truncation_and_cap_rejected_in_all_domains(self):
         for text in (SOURCE + '\n\n⚠️ 응답이 너무 길어 50,000자로 잘렸습니다.',

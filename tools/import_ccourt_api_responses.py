@@ -3,6 +3,10 @@
 
 Dry-run is the default. With --apply, create only absent fetched/missing files;
 existing source files are never overwritten. The registry remains read-only.
+
+The API returns constitutional bodies without line breaks, so such responses
+are recorded as missing (reason names tools/fetch_lawgo.py) unless
+--allow-flat-text is given; official full texts come from the law.go.kr page.
 """
 from __future__ import annotations
 
@@ -52,7 +56,7 @@ def create_only(path, value):
     return True
 
 
-def run(registry, inbox, fetched, apply=False):
+def run(registry, inbox, fetched, apply=False, allow_flat_text=False):
     placements = defaultdict(list)
     for case in read_json(registry)['cases']:
         if case.get('group') == 'ccourt':
@@ -107,7 +111,8 @@ def run(registry, inbox, fetched, apply=False):
                         reason = 'Korean-law API: ' + status
                     else:
                         try:
-                            record = record_from_api(envelope.get('response'), placement, outcome.get('seq'), 'constitutional')
+                            record = record_from_api(envelope.get('response'), placement, outcome.get('seq'), 'constitutional',
+                                                     allow_flat_text=allow_flat_text)
                         except (ValueError, TypeError, KeyError) as error:
                             reason = 'Korean-law API response rejected: ' + str(error)
                     if dest.exists():
@@ -149,6 +154,8 @@ def main():
     parser.add_argument('--inbox', type=Path, default=INBOX)
     parser.add_argument('--fetched', type=Path, default=FETCHED)
     parser.add_argument('--apply', action='store_true')
+    parser.add_argument('--allow-flat-text', action='store_true',
+                        help='accept bodies without line breaks (otherwise recorded as missing; use fetch_lawgo.py)')
     parser.add_argument('--report', type=Path, help='write a JSON report (dry-run otherwise prints only)')
     args = parser.parse_args()
     report_path = args.report or (args.inbox / 'import-report.json' if args.apply else None)
@@ -156,7 +163,7 @@ def main():
         resolved = report_path.resolve()
         if resolved == args.registry.resolve() or resolved.parent == args.fetched.resolve() or resolved.name.startswith('event-'):
             parser.error('Report path must not replace registry, fetched files, or raw envelopes')
-    result = run(args.registry, args.inbox, args.fetched, args.apply)
+    result = run(args.registry, args.inbox, args.fetched, args.apply, args.allow_flat_text)
     payload = json.dumps(result, ensure_ascii=False, indent=2) + '\n'
     if report_path:
         report_path.parent.mkdir(parents=True, exist_ok=True)
