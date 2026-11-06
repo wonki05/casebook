@@ -110,7 +110,9 @@ def parse_list(raw, charset, expected_page):
             parts = re.findall(r"\d+", p.fields.get(name, ""))
             if len(parts) != 3 or f"{int(parts[0]):04d}{int(parts[1]):02d}{int(parts[2]):02d}" != expected:
                 raise ValueError(f"unexpected {name}: {p.fields.get(name)!r}")
-    if p.total is None or not p.cases or any(not event or not case for event, case in p.cases):
+    # A few list rows publish an empty case number; the row is kept (event id intact) and the planner
+    # resolves it from an explicit, verified override instead of dropping the whole page.
+    if p.total is None or not p.cases or any(not event for event, _ in p.cases):
         raise ValueError("list total or case links missing")
     if len({x[0] for x in p.cases}) != len(p.cases):
         raise ValueError("duplicate case identifiers on page")

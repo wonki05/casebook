@@ -17,6 +17,10 @@ from download_ccourt_recent_pages import DEFAULT_OUT, FORM, LIST_URL, parse_list
 
 ROOT = Path(__file__).resolve().parent.parent
 COURT = '헌법재판소'
+# Event id -> verified case number for list rows whose case number cell is empty (see --overrides).
+CASE_NUMBER_OVERRIDES = {}
+# The list sometimes publishes no case name, or a junk one ('~~', '1111-33333'); the case number then stands in.
+JUNK_TITLE = re.compile(r'~|^[\d\s\-]+$')
 
 
 class Entries(HTMLParser):
@@ -81,25 +85,39 @@ def read_page(path, page):
     digest = hashlib.sha256(raw).hexdigest()
     for e in parser.entries:
         date_fields = [x for x in e['infos'] if x.startswith('종국일자')]
-        if len(date_fields) != 1 or not e.get('title'):
-            raise ValueError('missing or ambiguous date/title for event ' + e['eventId'])
+        if len(date_fields) != 1:
+            raise ValueError('missing or ambiguous date for event ' + e['eventId'])
         m = re.fullmatch(r'종국일자\s*\|\s*(\d{4})\.\s*(\d{1,2})\.\s*(\d{1,2})\.', date_fields[0])
         if not m:
             raise ValueError('invalid date for event ' + e['eventId'])
         date = dt.date(*map(int, m.groups())).isoformat()
-        number = e['caseNumber']
-        primary_case_number(number)
+        number = e['caseNumber'] or CASE_NUMBER_OVERRIDES.get(e['eventId'], '')
+        title = e.get('title', '')
+        review = None
+        if not number:
+            review = 'list row has no case number; verify and add it with --overrides'
+        else:
+            primary_case_number(number)
+        if not title or JUNK_TITLE.search(title):
+            title = number + ' 사건' if number else ''
         result_fields = [x for x in e['infos'] if x.startswith('종국결과')]
         if len(result_fields) != 1 or '|' not in result_fields[0]:
             raise ValueError('missing or ambiguous result for event ' + e['eventId'])
         result_text = result_fields[0].partition('|')[2].strip()
-        result.append({'status': 'ok', 'caseNumber': number, 'date': date,
-                       'title': e['title'], 'court': COURT, 'decisionType': '결정',
+        result.append({'status': 'review' if review else 'ok', 'caseNumber': number, 'date': date,
+                       'title': title, 'court': COURT, 'decisionType': '결정',
                        'ccourtSource': {'provider': COURT, 'boardId': '1195',
                            'eventId': e['eventId'], 'listUrl': LIST_URL + '?cbIdx=1195',
                            'sourceUrl': 'https://www.ccourt.go.kr/site/kor/ex/bbs/View.do?cbIdx=1195&bcIdx=' + e['eventId'],
                            'sourceFile': path.name, 'sourceSha256': digest, 'page': page,
                            'result': result_text}})
+        if review:
+            result[-1]['reason'] = review
+        elif e['caseNumber'] == '':
+            result[-1]['caseNumberOverride'] = 'list case number was empty; taken from --overrides'
+        if (e.get('title') or '') != title:
+            result[-1]['listTitle'] = e.get('title') or ''
+            result[-1]['titleNote'] = 'list gave no usable title; case-number placeholder'
     return result, validated.total
 
 
@@ -124,7 +142,9 @@ def plan(candidates, records):
     counts = {'ready': 0, 'existing': 0, 'conflicts': 0}
     for c in candidates:
         event = c['ccourtSource']['eventId']
-        if event in seen_events:
+        if c['status'] == 'review':
+            pass
+        elif event in seen_events:
             c['status'], c['reason'] = 'review', 'duplicate source event across list pages'
         else:
             seen_events.add(event)
@@ -203,6 +223,7 @@ def main():
     ap.add_argument('--input', type=Path, default=DEFAULT_OUT)
     ap.add_argument('--registry', type=Path, default=ROOT / 'data' / 'registry.json')
     ap.add_argument('--output', type=Path, required=True, help='new candidate file; existing files are never overwritten')
+    ap.add_argument('--overrides', type=Path, help='JSON {"<eventId>": "<case number>"} for list rows with an empty case number')
     ap.add_argument('--since', default='2020-01-01')
     ap.add_argument('--through')
     args = ap.parse_args()
@@ -211,6 +232,8 @@ def main():
         through = dt.date.fromisoformat(args.through).isoformat() if args.through else None
         if through and since > through:
             raise ValueError('--since must not be later than --through')
+        if args.overrides:
+            CASE_NUMBER_OVERRIDES.update(json.loads(args.overrides.read_text(encoding='utf-8')))
         records = json.loads(args.registry.read_text(encoding='utf-8'))['cases']
         candidates, report = collect(args.input, since, through)
         if not report['validPages']:
