@@ -2,6 +2,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
+import import_ccourt_recent
 from import_ccourt_recent import collect, plan, read_page
 
 
@@ -38,6 +39,30 @@ class TestRecentImport(unittest.TestCase):
             self.assertEqual(rows[0]['ccourtSource']['result'], '합헌,기각')
             self.assertEqual(len(rows[0]['ccourtSource']['sourceSha256']), 64)
             self.assertNotIn('editorial', rows[0])
+
+    def test_empty_or_junk_title_uses_case_number_placeholder(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            for title in ('', '1111-33333', '국가제정~~'):
+                p = Path(tmp) / 'page-001.html'
+                p.write_text(html().replace('사건명 &amp; 이름', title), encoding='utf-8')
+                rows, _ = read_page(p, 1)
+                self.assertEqual(rows[0]['status'], 'ok')
+                self.assertEqual(rows[0]['title'], '2023헌바1등 사건')
+                self.assertEqual(rows[0]['listTitle'], title)
+
+    def test_empty_case_number_needs_override(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            p = Path(tmp) / 'page-001.html'
+            p.write_text(html(number=''), encoding='utf-8')
+            rows, _ = read_page(p, 1)
+            self.assertEqual(rows[0]['status'], 'review')
+            self.assertEqual(plan(rows, []), {'ready': 0, 'existing': 0, 'conflicts': 1})
+            import_ccourt_recent.CASE_NUMBER_OVERRIDES['1234'] = '2023헌바9등'
+            try:
+                rows, _ = read_page(p, 1)
+            finally:
+                import_ccourt_recent.CASE_NUMBER_OVERRIDES.clear()
+            self.assertEqual((rows[0]['status'], rows[0]['caseNumber']), ('ok', '2023헌바9등'))
 
     def test_failed_page_and_range_are_reported(self):
         with tempfile.TemporaryDirectory() as tmp:
