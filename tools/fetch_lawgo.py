@@ -30,27 +30,41 @@ EXTRACT_JS = r"""
   const root = document.querySelector('#conScroll') || document.querySelector('#contentBody');
   if (!root) return {error:'no root', title: document.title, url: location.href};
   const blocks = new Set(['P','DIV','LI','TR','H1','H2','H3','H4','H5','H6']);
+  // Body <img> (formulas, tables, figures) cannot be turned into text: leave them out of the text and record where they were in omittedImages (MARK is a temporary private-use marker that never reaches the saved text).
+  const MARK = '\ue000', images = [];
+  const attr = (node, name) => (node.getAttribute ? node.getAttribute(name) : '') || '';
   const clean = text => text.replace(/\u00a0/g,' ').replace(/[ \t]+\n/g,'\n').replace(/\n{3,}/g,'\n\n').trim();
   const nodeText = node => {
     if (node.nodeType === 3) return node.nodeValue || '';
     if (node.nodeType !== 1 || ['INPUT','SCRIPT','STYLE'].includes(node.tagName)) return '';
     if (node.tagName === 'BR') return '\n';
+    if (node.tagName === 'IMG') { images.push({src: attr(node, 'src'), alt: attr(node, 'alt')}); return MARK; }
     const value = Array.from(node.childNodes).map(nodeText).join('');
     return blocks.has(node.tagName) ? '\n' + value + '\n' : value;
   };
-  const sections = []; let current = {heading:'', text:''};
+  const sections = [], omitted = []; let current = {heading:'', text:''}, used = 0;
   const flush = () => {
-    current.text = clean(current.text);
+    const marked = clean(current.text);
+    current.text = clean(current.text.split(MARK).join(''));
+    let nonSpace = 0;
+    Array.from(marked).forEach((ch, i) => {
+      if (ch === MARK) {
+        const before = Array.from(marked.slice(0, i).split(MARK).join('').replace(/\s+/g, ' ').trim()).slice(-20).join('');
+        omitted.push(Object.assign({section: current.heading, offset: nonSpace, before}, images[used++]));
+      } else if (/\S/.test(ch)) nonSpace += 1;
+    });
     if (current.heading || current.text) sections.push(current);
   };
   Array.from(root.childNodes).forEach(node => {
     if (node.nodeType === 1 && /^H[1-6]$/.test(node.tagName)) {
       flush(); current = {heading:node.textContent.trim(), text:''};
+      (node.getElementsByTagName ? Array.from(node.getElementsByTagName('img')) : []).forEach(img =>
+        omitted.push({section: current.heading, offset: 0, before: '', inHeading: true, src: attr(img, 'src'), alt: attr(img, 'alt')}));
     } else current.text += nodeText(node);
   });
   flush();
   const h2 = document.querySelector('#contentBody h2'), sub = document.querySelector('#contentBody .subtit1');
-  return {pageTitle:h2?h2.textContent.trim():document.title, citation:sub?sub.textContent.trim():'', url:location.href, sections};
+  return {pageTitle:h2?h2.textContent.trim():document.title, citation:sub?sub.textContent.trim():'', url:location.href, sections, omittedImages: omitted};
 }
 """
 
@@ -129,9 +143,9 @@ def fetch_requests(targets, delay, force):
             root = soup.select_one('#conScroll') or soup.select_one('#contentBody')
             if not root:
                 results.append({'id': t['id'], 'ok': False, 'reason': 'conScroll 없음 — 본문이 JS 로 로드되는 페이지이면 --engine playwright 를 쓰세요', 'triedUrls': tried}); time.sleep(delay); continue
-            sections = soup_sections(root)
+            sections, omitted_images = soup_sections_with_images(root)
             h2 = soup.select_one('#contentBody h2'); sub = soup.select_one('#contentBody .subtit1')
-            data = {'pageTitle': h2.get_text(strip=True) if h2 else soup.title.get_text(strip=True) if soup.title else '', 'citation': sub.get_text(strip=True) if sub else '', 'url': url, 'sections': sections}
+            data = {'pageTitle': h2.get_text(strip=True) if h2 else soup.title.get_text(strip=True) if soup.title else '', 'citation': sub.get_text(strip=True) if sub else '', 'url': url, 'sections': sections, 'omittedImages': omitted_images}
             results.append(finish(t, kind, seq, url, data, tried))
         except Exception as e:
             results.append({'id': t['id'], 'ok': False, 'reason': f'{type(e).__name__}: {e}'[:200], 'triedUrls': tried})
@@ -139,8 +153,13 @@ def fetch_requests(targets, delay, force):
     return results
 
 
-def _soup_node_text(node):
-    """Read every DOM node, keeping inline text adjacent and block boundaries apart."""
+IMG_MARK = ''  # 본문 <img> 자리를 잠시 표시하는 사설 영역 문자(저장하는 글자에는 남지 않는다)
+
+
+def _soup_node_text(node, images=None):
+    """Read every DOM node, keeping inline text adjacent and block boundaries apart.
+
+    images 가 리스트이면 <img> 를 IMG_MARK 한 글자로 바꾸고 src·alt 를 순서대로 모은다(글자에는 남기지 않는다)."""
     from bs4 import Comment, NavigableString
     if isinstance(node, Comment):
         return ''
@@ -151,7 +170,12 @@ def _soup_node_text(node):
         return ''
     if name == 'br':
         return '\n'
-    text = ''.join(_soup_node_text(child) for child in node.children)
+    if name == 'img':
+        if images is None:
+            return ''
+        images.append({'src': node.get('src') or '', 'alt': node.get('alt') or ''})
+        return IMG_MARK
+    text = ''.join(_soup_node_text(child, images) for child in node.children)
     return '\n' + text + '\n' if name in ('p', 'div', 'li', 'tr', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6') else text
 
 
@@ -164,12 +188,31 @@ def soup_text(el):
     return _clean_text(_soup_node_text(el))
 
 
-def soup_sections(root):
-    """Equivalent to EXTRACT_JS, including direct text and inline elements."""
-    sections = []
+def _marked_section(raw, heading, images, cursor):
+    """표지가 든 원문에서 (글자, 생략한 이미지 기록) 을 만든다. 글자는 표지 없이 정리한 결과와 같다.
+
+    offset 은 이 구역 글자 앞쪽의 공백 아닌 글자 수, before 는 그 앞 20자(공백 하나로 접음)다."""
+    marked = _clean_text(raw)
+    omitted, non_space = [], 0
+    for i, ch in enumerate(marked):
+        if ch == IMG_MARK:
+            before = re.sub(r'\s+', ' ', marked[:i].replace(IMG_MARK, '')).strip()[-20:]
+            omitted.append({'section': heading, 'offset': non_space, 'before': before, **images[cursor + len(omitted)]})
+        elif not ch.isspace():
+            non_space += 1
+    return _clean_text(raw.replace(IMG_MARK, '')), omitted
+
+
+def soup_sections_with_images(root):
+    """Equivalent to EXTRACT_JS: (sections, omittedImages). 이미지는 글자로 옮길 수 없어 위치만 기록한다."""
+    sections, omitted, images, cursor = [], [], [], 0
     current = {'heading': '', 'text': ''}
     def flush():
-        current['text'] = _clean_text(current['text'])
+        nonlocal cursor
+        text, found = _marked_section(current['text'], current['heading'], images, cursor)
+        cursor += len(found)
+        omitted.extend(found)
+        current['text'] = text
         if current['heading'] or current['text']:
             sections.append(current)
     for node in root.contents:
@@ -177,10 +220,18 @@ def soup_sections(root):
         if re.fullmatch(r'h[1-6]', name, re.I):
             flush()
             current = {'heading': node.get_text().strip(), 'text': ''}
+            for img in node.find_all('img'):
+                omitted.append({'section': current['heading'], 'offset': 0, 'before': '', 'inHeading': True,
+                                'src': img.get('src') or '', 'alt': img.get('alt') or ''})
         else:
-            current['text'] += _soup_node_text(node)
+            current['text'] += _soup_node_text(node, images)
     flush()
-    return sections
+    return sections, omitted
+
+
+def soup_sections(root):
+    """Equivalent to EXTRACT_JS, including direct text and inline elements."""
+    return soup_sections_with_images(root)[0]
 
 # ---------------- common ----------------
 def citation_identity(citation):
@@ -244,6 +295,11 @@ def finish(t, kind, seq, url, data, tried):
         return {'id': t['id'], 'ok': False, 'reason': reason, 'triedUrls': tried}
     rec = {'id': t['id'], 'caseNumber': t['caseNumber'], 'lookupKey': key, 'kind': kind, 'seq': str(seq), 'sourceUrl': url,
            'pageTitle': data.get('pageTitle', ''), 'citation': data.get('citation', ''), 'sections': data['sections']}
+    images = data.get('omittedImages') or []
+    if images:
+        # 본문 이미지(수식·표·그림)는 글자로 옮길 수 없어 본문에서 빠진다. 공식 문자열 사이에 표식을 끼우지 않고 위치만 남긴다.
+        rec['retrieval'] = {'method': 'law.go.kr-page', 'omittedImageCount': len(images), 'omittedImages': images,
+                            'note': '본문에 포함된 이미지는 글자로 옮길 수 없어 sections 에서 빠졌다. 구역(section)과 그 구역 글자 앞쪽의 공백 아닌 글자 수(offset)·앞 20자(before)로 위치를 남긴다.'}
     return {'id': t['id'], 'ok': True, 'rec': rec, 'chars': sum(len(s.get('text', '')) for s in data['sections'])}
 
 
@@ -260,6 +316,37 @@ def cached_official_location(target, record):
     if not finish(target, kind, seq, url, record, [])['ok']:
         return None
     return {'kind': kind, 'seq': seq}
+
+
+def missing_record_location(target, record):
+    """.missing.json 이 남긴 공식 일련번호(apiSeq: law.go.kr 의 detcSeq/precSeq 와 같은 번호)를 조회 힌트로 쓴다.
+
+    힌트일 뿐이므로 finish() 의 사건번호·선고일·재판유형 검사를 통과해야 저장된다."""
+    if not isinstance(record, dict) or record.get('id') != target['id']:
+        return None
+    seq = str(record.get('apiSeq') or '')
+    if not seq.isdigit():
+        return None
+    return {'kind': 'detc' if is_cc(target['lookupKey']) else 'prec', 'seq': seq}
+
+
+def write_missing(path, result, now=None):
+    """실패 기록을 쓴다. 이전 기록의 부가 필드(apiSource·apiStatus·apiSeq 등)는 지우지 않고 reason 만 갱신한다."""
+    previous = {}
+    if os.path.exists(path):
+        try:
+            previous = json.loads(Path(path).read_text(encoding='utf-8'))
+        except (OSError, ValueError):
+            previous = {}
+    record = dict(previous)
+    if previous.get('reason') and previous.get('reason') != result['reason']:
+        record['previousReason'] = previous['reason']
+    record.update({'id': result['id'], 'reason': result['reason'], 'triedUrls': result.get('triedUrls', [])})
+    record['retriedAt'] = now or time.strftime('%Y-%m-%d')
+    with open(path, 'w', encoding='utf-8') as handle:
+        json.dump(record, handle, ensure_ascii=False, indent=1)
+    return record
+
 
 def main():
     ap = argparse.ArgumentParser()
@@ -299,6 +386,11 @@ def main():
                     lg = cached_official_location(target, json.loads(Path(out).read_text(encoding='utf-8'))) or lg
                 except (OSError, ValueError):
                     pass
+            if not lg.get('seq') and os.path.exists(miss):
+                try:
+                    lg = missing_record_location(target, json.loads(Path(miss).read_text(encoding='utf-8'))) or lg
+                except (OSError, ValueError):
+                    pass
             target.update({'kind': lg.get('kind'), 'seq': lg.get('seq')})
             targets.append(target)
     if not targets:
@@ -316,8 +408,7 @@ def main():
             ok += 1
             print(f"  OK   {r['id']}  {len(r['rec']['sections'])} sections, {r['chars']} chars  {r['rec']['citation']}")
         else:
-            path = os.path.join(FETCHED, r['id'] + '.missing.json')
-            json.dump({'id': r['id'], 'reason': r['reason'], 'triedUrls': r.get('triedUrls', [])}, open(path, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+            write_missing(os.path.join(FETCHED, r['id'] + '.missing.json'), r)
             print(f"  MISS {r['id']}  {r['reason']}")
     print(f'완료: 성공 {ok} / 실패 {len(results) - ok}. 다음: python3 tools/build_data.py && make build check')
 
