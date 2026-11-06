@@ -59,11 +59,11 @@ jobs:
       - name: Test data rules and local server
         run: python -m unittest discover -s tools -p 'test_*.py'
       - name: Validate and build both editions
-        timeout-minutes: 5
+        timeout-minutes: 15
         run: python tools/make.py validate data laws build web
       - name: Verify generated package hashes and references
         id: package
-        timeout-minutes: 2
+        timeout-minutes: 5
         run: |
           python tools/check_web_package.py output/web --registry data/registry.json
           python - <<'PY' >> "$GITHUB_OUTPUT"
@@ -74,7 +74,7 @@ jobs:
           print('shell_sha256=' + hashlib.sha256((web / 'index.html').read_bytes()).hexdigest())
           PY
       - name: Check representative case views and offline updates
-        timeout-minutes: 10
+        timeout-minutes: 25
         env:
           CASEBOOK_SWEEP_SAMPLE_PER_PAGE: '2'
         run: python tools/make.py check webcheck

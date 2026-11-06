@@ -15,7 +15,7 @@ from pathlib import Path
 import threading
 
 from playwright.async_api import async_playwright
-from browser_runtime import launch_chromium
+from browser_runtime import bind_safe_server, launch_chromium
 from serve_web import WebAppHandler
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -143,10 +143,13 @@ async def check_civil_volumes(page, data, items):
 
 async def check_badge(page, item):
     expected = bool(item.get('isStandard')) and item['group'] in ('research', 'annual', 'enbanc', 'ccourt')
+    # 같은 재판의 표준판례 배치마다 배지 하나(링크)가 붙는다; 배치 정보가 없으면 표식 하나만 붙는다.
+    placements = item.get('standardPlacements') or []
+    expected_count = (len(placements) or 1) if expected else 0
     actual = await page.locator('#cs .cite-sub .badge.standard').count()
-    require(actual == int(expected), 'Wrong detail standard badge: ' + item['id'])
+    require(actual == expected_count, f'Wrong detail standard badge: {item["id"]} ({actual} != {expected_count})')
     if expected:
-        metrics = await page.locator('#cs .badge.standard').evaluate('''el => {
+        metrics = await page.locator('#cs .cite-sub .badge.standard').first.evaluate('''el => {
           const style = getComputedStyle(el), probe = document.createElement('span');
           probe.style.color = 'var(--accent-ink)'; document.body.appendChild(probe);
           const themed = style.color === getComputedStyle(probe).color;
@@ -155,7 +158,8 @@ async def check_badge(page, item):
           const canvas = document.createElement('canvas'), ctx = canvas.getContext('2d');
           ctx.fillStyle = style.backgroundColor; ctx.fillRect(0, 0, 1, 1);
           const alpha = ctx.getImageData(0, 0, 1, 1).data[3] / 255;
-          return {text:el.textContent, beforeSubject:el.nextElementSibling?.classList.contains('sub'),
+          let last = el; while (last.nextElementSibling && last.nextElementSibling.classList.contains('standard')) last = last.nextElementSibling;
+          return {text:el.textContent.replace(/[\\s①-⑳]+$/, ''), beforeSubject:last.nextElementSibling?.classList.contains('sub'),
             rounded:parseFloat(style.borderRadius) >= 10, themed, themedBorder,
             opaqueText:style.opacity === '1', translucentFill:alpha >= .34 && alpha <= .36};
         }''')
@@ -292,7 +296,7 @@ async def run(web):
     else:
         data = json.loads((ROOT / 'data/cases.json').read_text(encoding='utf-8'))
     catalog_count = check_catalog_titles(data)
-    server = ThreadingHTTPServer(('127.0.0.1', 0), partial(QuietHandler, directory=str(ROOT)))
+    server = bind_safe_server(lambda: ThreadingHTTPServer(('127.0.0.1', 0), partial(QuietHandler, directory=str(ROOT))))
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
     base = f'http://127.0.0.1:{server.server_port}/output/' + ('web/index.html' if web else 'casebook.html')

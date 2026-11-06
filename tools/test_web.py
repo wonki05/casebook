@@ -15,7 +15,7 @@ from pathlib import Path
 import re
 import threading
 from playwright.async_api import async_playwright
-from browser_runtime import launch_chromium
+from browser_runtime import bind_safe_server, launch_chromium
 from serve_web import WebAppHandler
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -142,9 +142,9 @@ async def test_reader(browser, base, data, laws, item, full):
     require(registration['active'] and registration['scope'].endswith('/output/web/'), 'Incorrect PWA scope')
     await page.wait_for_function('!!navigator.serviceWorker.controller', timeout=15000)
     await page.locator('[data-download-offline]').click()
-    # 전문 4,400여 건을 캐시에 저장하는 데 이 PC 에서 약 80초가 걸린다(2026-11 전원합의체 668건 추가 뒤). 60초는 부족해 180초로 둔다.
+    # 전문 4,400여 건을 캐시에 저장하는 데 이 PC 에서 약 80초가 걸린다(2026-11 전원합의체 668건 추가 뒤). 60초는 부족해 두었고, 2026-11-07 헌법재판소 2009~2019 결정 2,023건 추가 뒤(5,800여 건·220MB)에는 CI 에서도 넉넉하도록 300초로 둔다.
     await page.wait_for_function('document.querySelector("#dataStatus")?.textContent.includes("개를 저장했습니다.")',
-                                 timeout=180000)
+                                 timeout=300000)
     require(not page_errors, 'Runtime exceptions: ' + repr(page_errors))
     require(not console_errors, 'Unexpected browser errors: ' + repr(console_errors))
     print('webcheck: offline package downloaded', flush=True)
@@ -267,7 +267,7 @@ async def run():
     require(checked_fulltext > 0 and len(laws['laws']) > 0, 'No corpus to test')
     item = next(c for c in data['cases'] if c.get('fullTextRef') and c.get('decisionId'))
     full = read_verified(item['fullTextRef'])
-    server = ThreadingHTTPServer(('127.0.0.1', 0), partial(QuietHandler, directory=str(ROOT)))
+    server = bind_safe_server(lambda: ThreadingHTTPServer(('127.0.0.1', 0), partial(QuietHandler, directory=str(ROOT))))
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
     base = f'http://127.0.0.1:{server.server_port}/output/web/index.html'
