@@ -23,7 +23,7 @@ class BatchTests(unittest.TestCase):
         self.target = {'number': '2020헌마389', 'date': '2024-08-29',
                        'did': self.placement['decisionId'], 'event': '123'}
         self.source = ('=== 사건 ===\n기본 정보:\n  사건번호: 2020헌마389\n  종국일자: 20240829\n\n'
-                       '전문:\n[주    문]기각한다.[이    유]결론 주문과 같이 결정한다.')
+                       '전문:\n[주    문]\n기각한다.\n[이    유]\n결론 주문과 같이 결정한다.')
 
     def envelope(self, status='downloaded', text=None, seq='321'):
         value = {'target': self.target, 'outcome': dict(self.target, status=status, seq=seq),
@@ -53,6 +53,18 @@ class BatchTests(unittest.TestCase):
                 missing = json.loads((self.fetched / 'cc-fixture.missing.json').read_text(encoding='utf-8'))
                 self.assertIn('event-123.json', missing['apiSource'])
                 (self.fetched / 'cc-fixture.missing.json').unlink()
+
+    def test_flat_api_body_recorded_missing_unless_allowed(self):
+        self.envelope(text=self.source.replace('\n기각한다.\n[이    유]\n', '기각한다.[이    유]'))
+        result = run(self.registry, self.inbox, self.fetched, True)
+        self.assertEqual(result['counts'], {'missing': 1})
+        self.assertFalse((self.fetched / 'cc-fixture.json').exists())
+        missing = json.loads((self.fetched / 'cc-fixture.missing.json').read_text(encoding='utf-8'))
+        self.assertIn('fetch_lawgo.py --id cc-fixture', missing['reason'])
+        (self.fetched / 'cc-fixture.missing.json').unlink()
+        self.assertEqual(run(self.registry, self.inbox, self.fetched, True, allow_flat_text=True)['counts'], {'accepted': 1})
+        stored = json.loads((self.fetched / 'cc-fixture.json').read_text(encoding='utf-8'))
+        self.assertEqual(stored['retrieval']['lineBreaks'], 'absent')
 
     def test_existing_invalid_source_and_missing_file_are_preserved(self):
         self.envelope()

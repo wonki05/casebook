@@ -156,6 +156,11 @@ def brackets(blocks):
     for b in blocks:
         h = (b.get("heading") or "").replace("【", "[").replace("】", "]").replace("〖", "[").replace("〗", "]")
         t = b.get("text") or ""
+        # 원문 표지가 【주 문〕 처럼 〕 로 닫히면 law.go.kr 페이지가 주문 본문을 제목 요소 안에 넣는다(예 2022헌마1505).
+        # 표지만 [주 문] 으로 맞추고 뒤의 글은 글자 그대로 본문으로 돌린다.
+        m = re.fullmatch(r'(\[[^\]〕\n]{1,12})〕\s*(.*)', h, flags=re.S)
+        if m:
+            h, t = m.group(1) + ']', m.group(2) + ('\n' + t if t.strip() and m.group(2) else t)
         t = re.sub(r'^(\s*)[【〖]([^】〗\n]{1,30})[】〗](\s*)$', r'\1[\2]\3', t, flags=re.M)
         out.append({"heading": h, "text": t})
     return out
