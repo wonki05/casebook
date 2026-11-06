@@ -255,6 +255,10 @@ body.cs-drag{user-select:none;-webkit-user-select:none;cursor:col-resize}
 .badge.sub{color:var(--ink-2)}
 .badge.standard{display:inline-block;border-color:var(--accent);color:var(--accent-ink);background:transparent;background:color-mix(in srgb,var(--accent-soft) 35%,transparent)}
 .entry .m .badge.standard{margin-left:6px;padding:3px 7px;font-size:10.5px;vertical-align:baseline}
+a.badge.standard{cursor:pointer}
+a.badge.standard:hover{background:var(--accent-soft);border-color:var(--accent-ink)}
+a.badge.standard:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.note a{color:var(--accent-ink);text-decoration:underline;text-underline-offset:2px}
 .cite .acts{display:flex;gap:2px;margin-left:4px}
 .cite .ibtn{width:40px;height:40px}
 .tabs{display:flex;gap:16px;border-bottom:1px solid var(--rule);margin:14px 0 0;position:sticky;top:52px;background:var(--paper);z-index:5;overflow-x:auto;scrollbar-width:none;height:38px;box-shadow:0 1px 0 var(--paper);align-items:stretch}
@@ -889,8 +893,17 @@ const hasToc = pg => pg && (pg.group === 'standard' || pg.group === 'research');
 const tocFor = pg => TOC[pg.tocKey || pg.subject] || [];
 const standardRemoved = c => (pageOf(c.page) || {}).group === 'standard' && c.standard?.removed === true;
 const caseTitle = c => String(c.title || '') + (standardRemoved(c) && !String(c.title || '').endsWith('*') ? '*' : '');
-const standardBadge = c => c.isStandard && ['research', 'annual', 'enbanc', 'ccourt'].includes((pageOf(c.page) || {}).group)
-  ? '<span class="badge standard">표준판례</span>' : '';
+const STANDARD_BADGE_GROUPS = ['research', 'annual', 'enbanc', 'ccourt'];   // 표준판례 페이지 밖의 배치에만 표준판례 표식을 단다
+const standardPlacements = c => c.isStandard && STANDARD_BADGE_GROUPS.includes((pageOf(c.page) || {}).group) ? (c.standardPlacements || []) : [];
+const circled = i => String.fromCharCode(0x2460 + i);   // ① ② ③ …
+const standardPlacementPath = p => [(pageOf(p.page) || {}).label, ...tocLabels(p), p.title].filter(Boolean).join(' › ');
+/* 목록에서는 표식(span)만, 상세창(link)에서는 표준판례 페이지의 그 재판 상세창(#/std-<과목>/<id>)으로 가는 링크 — 배치가 여럿이면 ① ② … 로 모두 */
+const standardBadge = (c, link) => {
+  if (!c.isStandard || !STANDARD_BADGE_GROUPS.includes((pageOf(c.page) || {}).group)) return '';
+  const pl = link ? standardPlacements(c) : [];
+  if (!pl.length) return '<span class="badge standard">표준판례</span>';
+  return pl.map((p, i) => `<a class="badge standard" href="#/${esc(p.page)}/${esc(p.id)}" title="${esc('표준판례 수록본 보기: ' + standardPlacementPath(p))}" aria-label="${esc(`표준판례 수록본${pl.length > 1 ? ` ${i + 1}/${pl.length}` : ''} 보기: ${standardPlacementPath(p)}`)}">${pl.length > 1 ? (i ? circled(i) : '표준판례 ' + circled(0)) : '표준판례'}</a>`).join('');
+};
 const tocLabels = c => {
   const out = []; let nodes = tocFor(pageOf(c.page));
   (c.tocPath || []).forEach(id => { const n = nodes.find(x => x.id === id); if (n) { out.push(n.label); nodes = n.children || []; } });
@@ -1436,7 +1449,7 @@ function caseHTML(c) {
     <h1>${esc(caseTitle(c))}</h1>
     ${c.caseName && c.caseName !== c.title ? `<p class="casename">${esc(c.caseName)}</p>` : ''}
     <div class="cite"><div class="cite-main">${courtIcon(c)}<span class="txt">${esc(c.citation)}</span></div>
-      <div class="cite-sub">${c.result ? `<span class="badge">${esc(c.result)}</span>` : ''}${standardBadge(c)}<span class="badge sub">${esc(subjLabel(c.subject))}</span>
+      <div class="cite-sub">${c.result ? `<span class="badge">${esc(c.result)}</span>` : ''}${standardBadge(c, true)}<span class="badge sub">${esc(subjLabel(c.subject))}</span>
       <span class="acts"><button class="ibtn" id="btnCopy" aria-label="인용 표시 복사" title="인용 표시 복사"><svg class="ic"><use href="#i-copy"/></svg></button>
       <button class="ibtn${bm ? ' on' : ''}" id="btnBmCase" data-bm="${c.id}" aria-label="${bm ? '북마크 해제' : '북마크'}" aria-pressed="${bm}" title="북마크"><svg class="ic"${bm ? ' style="fill:currentColor"' : ''}><use href="#i-star"/></svg></button></span></div>
     </div>
@@ -1459,7 +1472,13 @@ function summaryHTML(c) {
   if (c.facts && c.facts.length) h += sec(n++, '사실관계의 요지', itemsHTML(c.facts) + fieldSourceHTML(c, 'facts'));
   h += sec(n++, '판시사항', itemsHTML(c.issues) + fieldSourceHTML(c, 'issues'));
   h += sec(n++, c.holdingLabel || '판결요지', itemsHTML(c.holdings) + fieldSourceHTML(c, 'holdings'));
-  return h + srcHTML(c);
+  return h + standardNoteHTML(c) + srcHTML(c);
+}
+/* 최신판례 페이지(공식 판시사항·요지 우선)에서 같은 재판이 표준판례에도 실려 있으면 단원에 맞춘 표준판례 수록본으로 안내한다 */
+function standardNoteHTML(c) {
+  const pl = standardPlacements(c);
+  if (!pl.length || c.summaryType === 'standard') return '';
+  return `<p class="note standard-note">이 재판은 표준판례에도 수록되어 있습니다. 단원에 맞춘 표준판례의 판시사항·요지: ${pl.map(p => `<a href="#/${esc(p.page)}/${esc(p.id)}">${esc(standardPlacementPath(p))}</a>`).join(' · ')}</p>`;
 }
 function refsHTML(c) {
   let n = 0, h = '';
@@ -1482,8 +1501,13 @@ function fieldSourceHTML(c, field) {
     }).join(' / ');
     return `<p class="note">출처: ${esc(text)} · 표준판례 수록본 우선</p>`;
   }
-  if (type === 'editorial' || (!info && c.summaryType === 'editorial')) return '<p class="note">※ 편집 요약 — 원출처의 판시사항·요지가 아닙니다.</p>';
+  if (type === 'editorial' || (!info && c.summaryType === 'editorial')) {
+    const b = info && info.basis;   // 편집 요약의 근거 자료(헌법재판소 주요결정 게시물·결정문 전문 등)
+    const basis = !b ? '' : ` 근거: ${b.url ? `<a href="${esc(b.url)}" target="_blank" rel="noopener">${esc(b.label || b.url)}</a>` : esc(b.label || '')}${b.note ? ` (${esc(b.note)})` : ''}`;
+    return `<p class="note">※ 편집 요약 — 원출처의 판시사항·요지가 아닙니다.${basis}</p>`;
+  }
   if (type === 'official') return '<p class="note">출처: 국가법령정보센터 공식 수록본</p>';
+  if (type === 'supplemental') return `<p class="note">출처: ${esc(info.label || '보충 자료')}</p>`;
   return '';
 }
 function srcHTML(c) {
