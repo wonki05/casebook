@@ -130,8 +130,8 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          # 5,800여 개 파일(220MB)을 Pages 가 동기화하는 데 기본 10분을 넘길 수 있어 30분까지 기다린다.
-          timeout: 1800000
+          # 5,800여 개 파일(220MB)의 Pages 동기화가 길어질 수 있어 deploy-pages 가 허용하는 최대값(10분)까지 기다린다.
+          timeout: 600000
           error_count: 20
       - name: Verify published data and full text
         timeout-minutes: 2
